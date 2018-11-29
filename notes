@@ -1,0 +1,202 @@
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter
+
+"The edit filter is a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing."
+Current filters: https://en.wikipedia.org/wiki/Special:AbuseFilter
+
+DEF:
+"A filter automatically compares every edit made to Wikipedia against a defined set of conditions. If an edit matches the conditions of a filter, that filter will respond by logging the edit. It may also tag the edit summary, warn the editor, revoke his/her autoconfirmed status, and/or disallow the edit entirely.[2]"
+Footnote 2: "The extension also allows for temporary blocking, but these features are disabled on the English Wikipedia." <-- TODO: Is there wikipedia on which it isn't disallowed?
+
+Software: https://www.mediawiki.org/wiki/Extension:AbuseFilter
+---> enabled on English Wikipedia 2009
+
+On the name:
+"The term "edit filter" rather than "abuse filter" is currently used for user-facing elements of the filter as some of the edits it flags are not harmful;[1] the terms are otherwise synonymous."
+
+"Because even the smallest mistake in editing a filter can disrupt the encyclopedia, only editors who have the required good judgment and technical proficiency are permitted to configure filters."
+--> Who are these editors? Who decides they are qualified enough?
+
+"Filters are created and configured by edit filter managers, but they can be requested by any editor."
+"all administrators can view private filters"
+"This group is assignable by administrators, who may also assign the right to themselves"
+"The assignment of the edit filter manager user right to non-admins is highly restricted. It should only be requested by and given to highly trusted users, when there is a clear and demonstrated need for it."
+"demonstrated knowledge of the extension's syntax and in understanding and crafting regular expressions is absolutely essential"
+"Editors who are not edit filter managers should consider helping out at requested edit filters and troubleshooting at false positives to help gain experience and demonstrate these skills"
+"Requests for assignment of the group to non-admins can be made at the edit filter noticeboard, where a discussion will be held before a decision is made;discussions are normally held open for 7 days."
+"If an edit filter manager is misusing the user right, the concern should first be raised with them directly. If discussion does not resolve the issue, a request for discussion or removal of the user right may be made at the edit filter noticeboard. "
+"If you have the edit filter manager user right, please ensure you follow the Password strength requirements and appropriate personal security practices. Two-factor authentication enrollment is available for edit filter managers. Because edit filters affect every edit made, a compromised account will be blocked and its privileges removed on grounds of site security. In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
+//interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
+
+List of current edit filter managers
+EN: https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter (currently: 155)
+CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
+
+-- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
+-- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
+
+What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
+- disallow -- editor is informed, if their edit is being disallowed and offered the option to report a false positive;
+  "It is also possible to have a user's autoconfirmed status revoked if a user trips the filter."
+  caution to use it seldomly and after a thorough discussion on what is a undesirable edit
+- warn -- editor is informed that their edit may be problematic and given the option to save or abort the edit (and in report the false positive trigerred by the filter)
+- add a tag - "edit is tagged for review by patrollers." -- TODO who are patrollers? are there some in lang versions other than EN?
+  "Patrols are a specialized type of WikiProject used in the English Wikipedia to watch over a class of pages and take any appropriate actions. Most patrol actions are performed by individual Wikipedians, but some are performed by bots—computer programs or preprogrammed scripts that make automated edits without a need for real time human decision-making. " https://en.wikipedia.org/wiki/Wikipedia:Patrols
+- log the edit - "In this case, the edit is merely added to the AbuseLog. When testing new filters, this is the suggested setting to use."
+
+"Except in urgent situations, new edit filters should generally be tested without any actions specified (simply enabled) until a good number of edits have been logged and checked before being implemented in "warn" or "disallow" modes. If the filter is receiving more than a very small percentage of false positives it should usually not be placed in 'disallow' mode."
+
+Alternatives:
+"Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
+
+Exemptions for "urgendt situation" -- what/how are these defined?
+Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
+
+Hidden filters!
+"Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
+// what is "good standing"?
+// what are the arguments for hiding a filter?
+// are users still informed if their edit triggers a hidden filter?
+
+"For all filters, including those hidden from public view, a brief description of what the rule targets is displayed in the log, the list of active filters, and in any error messages generated by the filter. "
+
+"Filters should only be hidden where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it. Filters should not generally be named after abusive editors, but rather with a simple description of the type of abuse, provided not too much information is given away."
+
+"Be careful not to test sensitive parts of private filters in a public test filter (such as Filter 1): use a private test filter (for example Filter 2) if testing is required."
+
+harassment! mailinglist
+"If it would not be desirable to discuss the need for a given edit filter on-wiki, such as where the purpose of the filter is to combat harassment by an abusive banned user who is likely to come across the details of the request, edit filter managers can be emailed directly or on the wikipedia-en-editfilters mailing list at wikipedia-en-editfilters@lists.wikimedia.org."
+
+https://lists.wikimedia.org/mailman/listinfo/wikipedia-en-editfilters
+"private mailing list used by English Wikipedia edit filter managers, "
+"primarily for discussing hidden filters."
+"The mailing list should not be used as a venue for discussions that could reasonably be held on-wiki."
+
+
+batch testing interface
+
+=================================================================
+https://de.wikipedia.org/wiki/Wikipedia:Bearbeitungsfilter
+
+"Der Bearbeitungsfilter (englisch: edit filter; früher: „Missbrauchsfilter“ oder abuse filter) ist ein vielseitig einsetzbares Werkzeug zur Beobachtung und Verhinderung problematischer Bearbeitungen. Dazu gehört die Bekämpfung von Verstößen gegen die Wikipedia-Richtlinien, insbesondere Wikipedia:Vandalismus."
+
+"Derzeit können alle Administratoren Filter bearbeiten."
+--> Unterschied zu EN, ne? Da gibts ne Spezielle Gruppe für? (Aber Admins können da Menschen reinstecken, auch sich selber)
+
+Mögliche Auswirkungen
+"
+* das Verhindern von Edits, die bestimmte Eigenschaften erfüllen
+* das Hinweisen des agierenden Benutzers bei solchen Edits
+* das reine Aufspüren solcher Edits"
+
+"Für jede aktive Filterregel gilt, dass sie begründet sein muss und die Verhältnismäßigkeit durch die konkret anzunehmenden potentiell schädigenden Bearbeitungen gewahrt ist."
+
+"Gründe für den Einsatz des Bearbeitungsfilter können sein:
+* Vandalismus/Sperrumgehungen durch einen Wikipedianer mit wechselnden Benutzerkonten/IP-Adressen oder auf mehreren Seiten, wobei eine konventionelle Artikel- oder Benutzer-Sperre zu viele Nebenwirkungen hätte
+* sonst schwer zu findende (unabsichtliche) Verstöße gegen die Wikipedia-Richtlinien
+* Erstellung von Wartungslisten (wobei versucht werden sollte, hier eher Bots zu nutzen)"
+
+=================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard
+
+According to the Edit filter Notice board:
+"There are currently 196 enabled filters and 13 stale filters with no hits in the past 30 days (Purge). See also the edit filter graphs." (Stand: 24.11.2018)
+"There are currently 198 enabled filters and 11 stale filters with no hits in the past 30 days (Purge). See also the edit filter graphs." (Stand: 25.11.2018, seems to change frequently!)
+
+- discuss current filter behaviour
+- suggest filter for deletion, since it's not particularly helpful: " unnecessary, is preventing good edits, or is otherwise problematic,"
+  (you can also raise the issue directly with the filter manager who created or enabled the filter)
+
+apart from that: current ongoing discussions on single filters/problems that may require a filter
+
+===============================================================
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested
+-- gibts nur noch auf Deutsch
+
+- suggest new filters
+
+"This page is for people without the abusefilter-modify permission or people without sufficient knowledge about the coding involved to make requests to enact edit filters."
+
+There's a "Bear the following in mind:" checklist
+"Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
+- filter, after adding up, make editing slower
+- in depth checks should be done by a separate software that users run on their own machines
+- no trivial errors should be catched by filters (ala style guidelines)
+- there are Titles Blacklist and Link/Spam Blacklist
+
+===============================================================
+https://de.wikipedia.org/wiki/Wikipedia:Bearbeitungsfilter/Antr%C3%A4ge
+DE für  https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested
+
+viel mehr kram auf der oberseite als bei der englischen; diskussionen zu jeden einzelnen(?) filter sind direkt verlinkt
+
+"Auf dieser Seite können Vorschläge für neue Regeln des Bearbeitungsfilters eingereicht werden. Diskussionen zu Filterregeln (z.B. wegen irrtümlichen Blockaden), deren Nummer nicht bekannt ist, werden ebenfalls hier geführt. Zusätzlich gibt es für jede bereits bestehende Regel eine eigene Diskussionsseite. Eine Übersicht zu diesen einzelnen Seiten gibt der Abschnitt #Liste der Diskussionen zu einzelnen Regeln. Im Archiv werden Diskussionen gesammelt, für die keine Regeln erstellt wurden."
+
+Ein Bsp:
+https://de.wikipedia.org/wiki/Wikipedia:Bearbeitungsfilter/271
+https://de.wikipedia.org/wiki/Wikipedia:Vandalismusmeldung/Archiv/2018/11/25#Benutzer:Zollwurf_(erl.)
+-- ich hab mittlerweile den Eindruck, dass so was evtl auf der Engl. Wikipedia nicht öffentlich wäre?
+-- allerdings, ist so ein Problem mit nem Filter zu lösen? Wie kann es sonst gelöst werden?
+
+===============================================================
+https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse
+
+117 active cases [Stand 24.11.2018]
+there's a list available at least for the active cases with detailed abuse reports
+There's also an archive page of abuse cases: https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/Archive (25 entries [Stand 24.11.2018])
+And full list of cases: https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/Full
+
+"This page summarises a limited number of long term abusers, to assist members of the community who believe they may have cause to report another incident. Note that this page is not a noticeboard. Names should only be added for the most egregious and well-attested cases. Most users here will have been banned, some on multiple occasions. "
+
+"Don't provide too much info
+    The text should tread a careful balance between providing useful information and providing enough to obstruct detection. In general such information should only be shared with users of a high level of reputation."
+
+===============================================================
+https://de.wikipedia.org/wiki/Wikipedia:WikiProjekt_Vandalismusbek%C3%A4mpfung/Troll-Dokumentationsseiten
+DE zu https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse
+
+"Hier werden Seiten im Benutzernamensraum gesammelt, auf denen die Aktivitäten unterschiedlicher Wikipediastörer charakterisiert oder dokumentiert werden sollen. "
+!!!"Eine Definition von störendem Verhalten, z. B. in Bezug auf Art, Umfang oder Dauer der Projektstörung, die eine Bezeichnung als „Wikipediatroll“ rechtfertigt, ist in der Autorengemeinschaft umstritten."
+
+sonst eben wieder listen mit bekannten Fällen; kein Count der aktuell aktiven Fällen wie bei der Englischen Seite
+
+===============================================================
+https://en.wikipedia.org/wiki/Special:AbuseFilter/384
+
+bad words in articles and user names filter
+
+===============================================================
+https://en.wikipedia.org/wiki/Special:AbuseLog
+https://de.wikipedia.org/wiki/Spezial:Missbrauchsfilter-Logbuch
+https://es.wikipedia.org/wiki/Especial:RegistroAbusos
+https://ca.wikipedia.org/wiki/Especial:Registre_dels_abusos
+https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%BD%D0%B8:%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8%D0%BA_%D0%BD%D0%B0_%D1%84%D0%B8%D0%BB%D1%82%D1%8A%D1%80%D0%B0
+
+can search for all filter triggers in a period of time/by a specific user
+
+auf der Deutschen Seite ist die Filter-Aktion und -Beschreibung aufgelistet, aber die Filternummer ist nicht verlinkt, also kann man nicht direkt den Quellcode ansehen;
+Außerdem muss man direkt auf die Seite gehen, um die versuchte Änderungen in der Versionsgeschichte anzugucken
+
+die Spanische Seite ist ähnlich aufgebaut wie die Deutsche.
+!!!Da es aber auf Spanisch anscheinend keine "Saved Revisions" (oder wie hieß das nochma) gibt, kann man eigenltich die abusiven Änderungen gar nicht mehr sichten und noch kann man den Filter angucken, der eigentlich getriggered wurde
+
+Katalanisch ist das selbe wie Spanisch, mit dem Unterschied, dass aus irgendeinem Grund (keine Regelmäßigkeit festgestellt), manchmal die Summaries auf Englisch sind, da wird auch ein Diff mit den offending Changes angezeigt.
+
+the Bulgarian page uses the same form as the English one, so source code of the filter as well as diff of the changes can be viewed
+
+===============================================================
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives
+https://es.wikipedia.org/wiki/Wikipedia:Filtro_de_ediciones/Portal/Archivo/Reporte_de_falsos_positivos/Actual
+https://ca.wikipedia.org/wiki/Viquip%C3%A8dia:Filtre_d%27edicions/Falsos_positius
+
+a detailed page with ongoing/recently reported cases
+
+there seems to be no such page for BG and DE --> no possibility to report false positives?
+
+================================================================
+Current status (29.11.2018)
+
+EN: There are currently 201 enabled filters, and 12 stale filters with no hits in the past 30 days (Purge). from https://en.wikipedia.org/wiki/Special:AbuseFilter
+DE: 170 enabled, disabled, privat, öffentlich https://de.wikipedia.org/wiki/Spezial:Missbrauchsfilter/?deletedfilters=hide&limit=250&title=Spezial%3AMissbrauchsfilter%2F
+ES: 92 https://es.wikipedia.org/wiki/Especial:FiltroAntiAbusos/?deletedfilters=hide&limit=100&title=Especial%3AFiltroAntiAbusos%2F
+CA: 24  https://ca.wikipedia.org/wiki/Especial:Filtre_d%27abuses (spannend: man muss sich anmelden um das angucken zu können!)
+BG: 24 https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%BD%D0%B8:%D0%A4%D0%B8%D0%BB%D1%82%D1%8A%D1%80_%D1%81%D1%80%D0%B5%D1%89%D1%83_%D0%B7%D0%BB%D0%BE%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B8
