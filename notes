@@ -77,7 +77,7 @@ What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
 Alternatives:
 "Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
 
-Exemptions for "urgendt situation" -- what/how are these defined?
+Exemptions for "urgent situation" -- what/how are these defined?
 Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
 
 Hidden filters!
