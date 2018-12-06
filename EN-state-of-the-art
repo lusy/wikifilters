@@ -148,6 +148,19 @@ What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
 - "throttle"? (mentioned somewhere else)
 - https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11 mentions "block" as a possible action in the legend
 
+9 different actions possible according to the extention docu
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
+    2.1 Logging
+    2.2 Warning
+    2.3 Throttling
+    2.4 Disallowing
+    2.5 Revoking auto-promoted groups
+    2.6 Blocking
+    2.7 Removing from privileged groups
+    2.8 Range-blocking
+    2.9 Tagging
+
+
 Collaboration with bots:
 "There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
 https://en.wikipedia.org/wiki/User:DatBot/filters
