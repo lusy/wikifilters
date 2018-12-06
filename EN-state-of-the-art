@@ -47,6 +47,8 @@ https://lists.wikimedia.org/mailman/listinfo/wikipedia-en-editfilters
 "primarily for discussing hidden filters."
 "The mailing list should not be used as a venue for discussions that could reasonably be held on-wiki."
 
+There's also separate documentation of long term abuse (see notes)
+
 ## How do edit filters work?
 
 ### Governance/Community Layer
@@ -63,7 +65,15 @@ Discussions may happen postfactum here and filter may be applied before having b
 
 ----
 
-there seems to be a batch testing interface
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested
+"This page is for people without the abusefilter-modify permission or people without sufficient knowledge about the coding involved to make requests to enact edit filters."
+
+There's a "Bear the following in mind:" checklist (see also Alternatives above)
+- "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
+- filters, after adding up, make editing slower
+- in depth checks should be done by a separate software that users run on their own machines
+- no trivial errors should be catched by filters (ala style guidelines)
+- there are Titles Blacklist and Link/Spam Blacklist
 
 * Who can edit filters?
 
@@ -89,13 +99,34 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
 -- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
 -- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
 
+* How are problems with existing filters handled?
+
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard
+- discuss current filter behaviour
+- suggest filter for deletion, since it's not particularly helpful: " unnecessary, is preventing good edits, or is otherwise problematic,"
+  (you can also raise the issue directly with the filter manager who created or enabled the filter)
+
+apart from that: current ongoing discussions on single filters/problems that may require a filter
+
 ### Technical Layer
 
 Software: https://www.mediawiki.org/wiki/Extension:AbuseFilter
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
 
-Flowchart of the filtering process!
+TODO: Flowchart of the filtering process!
 
 * How is a new filter introduced?
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
+
+https://en.wikipedia.org/wiki/Special:AbuseFilter
+"PLEASE be careful. This is potent stuff. Unless it's urgent, always test your filters with no actions enabled first."
+
+there seems to be a batch testing interface
+
+weird? the test interface https://en.wikipedia.org/wiki/Special:AbuseFilter/test
+says: "For security reasons, only users with the right to view private abuse filters or modify filters may use this interface."
+shouldn't all filter editors be able to test??
+
 * What happens when a filter gets triggered?
   * 4 filter actions (are users whose edits tripped the filters notified for all of them?)
 
@@ -108,8 +139,32 @@ What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
 - add a tag - "edit is tagged for review by patrollers." -- TODO who are patrollers? are there some in lang versions other than EN?
   "Patrols are a specialized type of WikiProject used in the English Wikipedia to watch over a class of pages and take any appropriate actions. Most patrol actions are performed by individual Wikipedians, but some are performed by bots—computer programs or preprogrammed scripts that make automated edits without a need for real time human decision-making. " https://en.wikipedia.org/wiki/Wikipedia:Patrols
 - log the edit - "In this case, the edit is merely added to the AbuseLog. When testing new filters, this is the suggested setting to use."
+- "throttle"? (mentioned somewhere else)
+- https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11 mentions "block" as a possible action in the legend
 
-  * what happens afterwards?
+Collaboration with bots:
+"There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
+https://en.wikipedia.org/wiki/User:DatBot/filters
+
+
+* what happens afterwards?
+
+If a user disagrees with the filter decision, they have the posibility of reporting a false positive
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives
+
+* modifying a filter
+each filter has a designated page: e.g. https://en.wikipedia.org/wiki/Special:AbuseFilter/61
+where following information can be viewed:
+Filter id; public description; filter hits; statistics; code (conditions); notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to: last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+Actions to take when matched:
+Trigger actions only if the user trips a rate limit
+Trigger these actions after giving the user a warning
+Prevent the user from performing the action in question
+Revoke the user's autoconfirmed status
+Tag the edit in contributions lists and page histories
+
+and the filter can be modified if the viewing editor has the right permissions
 
 ## Taking stock
 
