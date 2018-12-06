@@ -166,13 +166,53 @@ Tag the edit in contributions lists and page histories
 
 and the filter can be modified if the viewing editor has the right permissions
 
-## Taking stock
+statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is
 
-* a descriptive overview/stats of the current situation
+## Taking stock (a descriptive overview/stats of the current situation)
+
+* how many filters are there (were there over the years)
+
+EN: "There are currently 203 enabled filters, and 11 stale filters with no hits in the past 30 days (Purge). " (06.12.2018)
+
 * and of the development over time
 
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard
+According to the Edit filter Notice board:
+"There are currently 196 enabled filters and 13 stale filters with no hits in the past 30 days (Purge). See also the edit filter graphs." (Stand: 24.11.2018)
+"There are currently 198 enabled filters and 11 stale filters with no hits in the past 30 days (Purge). See also the edit filter graphs." (Stand: 25.11.2018, seems to change frequently!)
+
+EN: There are currently 201 enabled filters, and 12 stale filters with no hits in the past 30 days (Purge). from https://en.wikipedia.org/wiki/Special:AbuseFilter (29.11.2018)
+
+--> upward tendency
+
 * how often were (which) filters triggered
-* how many filters are there (were there over the years)
+https://tools.wmflabs.org/ptwikis/Filters:enwiki
+--> stats for the last 30 days: filters sorted alphabetically, stats according to number of actions of each type (no action match, warn, tag, disallow, block)
+
+https://tools.wmflabs.org/ptwikis/Filters:enwiki:102
+--> for single filters you can view a graph of filter activity for the last year
+
+also possible to compare a small amount of filters on a graph:
+https://tools.wmflabs.org/ptwikis/Filters:enwiki:102&11
+
+https://en.wikipedia.org/wiki/Special:AbuseFilter
+Sortable table of all filters with following columns:
+Filter ID 	Public description 	Actions 	Status 	Last modified 	Visibility 	Hit count
+links to single filters, e.g. --> https://en.wikipedia.org/wiki/Special:AbuseFilter/1 (see bellow for detailed filter page)
+"Actions" is one of: warn | tag | disallow | throttle | ?? (possibly more, not directly visible)
+"Status" is: enabled | disabled
+"Last modified" provides a link to diff between versions and the user who did the modification
+"Visibility" is: private | public
+"Hit count": which period is counted? total number of hits since the filter was enabled? (for all enabled periods, in case it was enabled/disabled multiple times?)
+
+Filter with most hits:
+Filter ID 	Public description 	Actions 	Status 	Last modified 	Visibility 	Hit count
+61 	New user removing references 	Tag 	Enabled 	12:43, 14 May 2017 by Zzuuzz (talk | contribs) 	Public 	1,593,851 hits
+
+https://en.wikipedia.org/wiki/Special:AbuseFilter/61
+statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is
+
 * percentage of triggered filters/all edits
   * break down triggered filters according to typology
 * percentage filters of different types over the years
+
