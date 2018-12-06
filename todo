@@ -22,6 +22,8 @@ https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
 https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism (AIV)
 https://en.wikipedia.org/wiki/Wikipedia:Usernames_for_administrator_attention (UAA)
 https://en.wikipedia.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&hideWikibase=1&tagfilter=abusefilter-condition-limit&limit=50&days=7&urlversion=2
+https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2009-03-23/Abuse_Filter
+https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142 <--- 1st version ever of the Edit_filter page; created 23.06.2008
 
 ## In other languages
 ### Compare colors (actions) in the stats graphs!
@@ -29,6 +31,9 @@ https://tools.wmflabs.org/ptwikis/Filters:bgwiki <-- there are also global filte
 https://tools.wmflabs.org/ptwikis/Filters:cawiki
 https://tools.wmflabs.org/ptwikis/Filters:dewiki
 https://tools.wmflabs.org/ptwikis/Filters:eswiki
+
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
+--> exists interestingly enough in all languages I'm interested in
 
 ## Software
 
