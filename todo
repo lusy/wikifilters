@@ -14,12 +14,21 @@ https://de.wikipedia.org/wiki/Spezial:Missbrauchsfilter
 
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Documentation
 https://en.wikipedia.org/wiki/User:MusikBot/FilterMonitor/Recent_changes
-https://en.wikipedia.org/wiki/Special:AbuseFilter/1
 https://en.wikipedia.org/w/index.php?title=Special:AbuseFilter&dir=prev
 https://de.wikipedia.org/wiki/Hilfe:Bearbeitungsfilter
 https://tools.wmflabs.org/ptwikis/Filters:dewiki
 https://en.wikipedia.org/wiki/Wikipedia:Tags
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
+https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism (AIV)
+https://en.wikipedia.org/wiki/Wikipedia:Usernames_for_administrator_attention (UAA)
+https://en.wikipedia.org/wiki/Special:RecentChanges?hidebots=1&hidecategorization=1&hideWikibase=1&tagfilter=abusefilter-condition-limit&limit=50&days=7&urlversion=2
+
+## In other languages
+### Compare colors (actions) in the stats graphs!
+https://tools.wmflabs.org/ptwikis/Filters:bgwiki <-- there are also global filters listed here! (what's that?)
+https://tools.wmflabs.org/ptwikis/Filters:cawiki
+https://tools.wmflabs.org/ptwikis/Filters:dewiki
+https://tools.wmflabs.org/ptwikis/Filters:eswiki
 
 ## Software
 
@@ -46,3 +55,6 @@ https://de.wikipedia.org/wiki/Wikipedia:Bearbeitungsfilter/Antr%C3%A4ge
 https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse
 https://en.wikipedia.org/wiki/Special:AbuseLog (+DE/ES/CAT/BG)
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives
+https://en.wikipedia.org/wiki/Special:AbuseFilter
+https://en.wikipedia.org/wiki/Special:AbuseFilter/1
+https://tools.wmflabs.org/ptwikis/Filters:enwiki:61
