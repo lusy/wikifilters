@@ -224,8 +224,71 @@ there seems to be no such page for BG and DE --> no possibility to report false 
 ================================================================
 Current status (29.11.2018)
 
-EN: There are currently 201 enabled filters, and 12 stale filters with no hits in the past 30 days (Purge). from https://en.wikipedia.org/wiki/Special:AbuseFilter
+EN: There are currently 201 enabled filters, and 12 stale filters with no hits in the past 30 days (Purge).
+from https://en.wikipedia.org/wiki/Special:AbuseFilter
 DE: 170 enabled, disabled, privat, öffentlich https://de.wikipedia.org/wiki/Spezial:Missbrauchsfilter/?deletedfilters=hide&limit=250&title=Spezial%3AMissbrauchsfilter%2F
 ES: 92 https://es.wikipedia.org/wiki/Especial:FiltroAntiAbusos/?deletedfilters=hide&limit=100&title=Especial%3AFiltroAntiAbusos%2F
 CA: 24  https://ca.wikipedia.org/wiki/Especial:Filtre_d%27abuses (spannend: man muss sich anmelden um das angucken zu können!)
 BG: 24 https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%BD%D0%B8:%D0%A4%D0%B8%D0%BB%D1%82%D1%8A%D1%80_%D1%81%D1%80%D0%B5%D1%89%D1%83_%D0%B7%D0%BB%D0%BE%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B8
+
+=================================================================
+https://en.wikipedia.org/wiki/Special:AbuseFilter
+
+"There are currently 203 enabled filters, and 11 stale filters with no hits in the past 30 days (Purge)."
+
+that's the management interface!
+"Welcome to the Edit Filter management interface. Using the Edit Filter, authorized users can configure a wide range of tests, which may help identify and prevent potentially harmful edits and other activities before they are added to the wiki, and the automatic actions to be taken."
+
+"PLEASE be careful. This is potent stuff. Unless it's urgent, always test your filters with no actions enabled first."
+
+weird? the test interface https://en.wikipedia.org/wiki/Special:AbuseFilter/test
+says: "For security reasons, only users with the right to view private abuse filters or modify filters may use this interface."
+shouldn't all filter editors be able to test??
+
+Collaboration with bots:
+"There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
+https://en.wikipedia.org/wiki/User:DatBot/filters
+
+Sortable table of all filters with following columns:
+Filter ID 	Public description 	Actions 	Status 	Last modified 	Visibility 	Hit count
+links to single filters, e.g. --> https://en.wikipedia.org/wiki/Special:AbuseFilter/1 (see bellow for detailed filter page)
+"Actions" is one of: warn | tag | disallow | throttle | ?? (possibly more, not directly visible)
+"Status" is: enabled | disabled
+"Last modified" provides a link to diff between versions and the user who did the modification
+"Visibility" is: private | public
+"Hit count": which period is counted? total number of hits since the filter was enabled? (for all enabled periods, in case it was enabled/disabled multiple times?)
+
+Filter with most hits:
+Filter ID 	Public description 	Actions 	Status 	Last modified 	Visibility 	Hit count
+61 	New user removing references 	Tag 	Enabled 	12:43, 14 May 2017 by Zzuuzz (talk | contribs) 	Public 	1,593,851 hits
+
+=====================================================================
+https://en.wikipedia.org/wiki/Special:AbuseFilter/1
+
+where following information can be viewed:
+Filter id; public description; filter hits; statistics; code (conditions); notes (left by filter editors to log changes;); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to: last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+
+Actions to take when matched:
+Trigger actions only if the user trips a rate limit
+Trigger these actions after giving the user a warning
+Prevent the user from performing the action in question
+Revoke the user's autoconfirmed status
+Tag the edit in contributions lists and page histories
+
+and the filter can be modified if the viewing editor has the right permissions
+
+statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." (that's filter id 61) // not sure what the condition limit is
+"Of the last 5,616 actions, this filter has matched 0 (0.00%). On average, its run time is 0 ms, and it consumes 0 conditions of the condition limit." (that's filter id 1)
+
+=========================================================================
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history/1
+
+Time 	User 	Public filter description 	Flags 	Actions 	Changes
+
+the link with the timestamp links back to the filter editor (see previous page)
+user links to the user
+changes links to a diff of the current revision with the previous one
+
+=========================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
