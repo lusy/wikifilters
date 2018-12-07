@@ -11,6 +11,9 @@
   https://tools.wmflabs.org/
   https://tools.wmflabs.org/admin/tools
 
+  * create a developer account
+  * ping aaron/amir for access to a backend db to look at filters; explanation how this is helping the community is important
+
 # Interesting pages
 
 ## Edit filters in different languages:
@@ -51,6 +54,7 @@ https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
 
 https://www.mediawiki.org/wiki/Extension:AbuseFilter
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
+https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFilters extention
 
 ## Questions
 
