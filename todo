@@ -1,3 +1,16 @@
+# Next steps
+
+* Look at filters: what different types of filters are there
+* understand how are stats generated
+  * research filter development over time
+
+  https://meta.wikimedia.org/wiki/Research:Quarry
+  https://meta.wikimedia.org/wiki/Toolserver
+  https://quarry.wmflabs.org/query/runs/all?from=7666&limit=50
+  https://upload.wikimedia.org/wikipedia/commons/9/94/MediaWiki_1.28.0_database_schema.svg
+  https://tools.wmflabs.org/
+  https://tools.wmflabs.org/admin/tools
+
 # Interesting pages
 
 ## Edit filters in different languages:
