@@ -304,3 +304,16 @@ http://www.andrewjgarrett.com/
 
 =========================================================================
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
+
+"This section explains how to create a filter with some preliminary testing, so you don't flood the history page."
+- read the docs https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
+- test with debugging tools  https://en.wikipedia.org/wiki/Special:AbuseFilter/tools (visible only for users who are already in the edit filter managers user group)
+- test with batch testing interface (dito)
+- create logging only filter: https://en.wikipedia.org/wiki/Special:AbuseFilter/new (needs permissions)
+- Post a message at WP:EFN (edit filter notice board), so other edit filter managers have a chance to improve it
+- Finally, fully enable your filter, e.g. add warning, prevention, tagging, etc.
+
+tips on controlling efficiency/order of operations
+lazy evaluation: when 1st negative condition is met, filter terminates execution
+
+"You should always order your filters so that the condition that will knock out the largest number of edits is first. Usually this is a user groups or a user editcount check; in general, the last condition should be the regex that is actually looking for the sort of vandalism you're targeting. "
