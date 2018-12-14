@@ -2,6 +2,7 @@
 
 * Look at filters: what different types of filters are there
 * understand how are stats generated
+  * look for db dumps
   * research filter development over time
 
   https://meta.wikimedia.org/wiki/Research:Quarry
@@ -10,6 +11,7 @@
   https://upload.wikimedia.org/wikipedia/commons/9/94/MediaWiki_1.28.0_database_schema.svg
   https://tools.wmflabs.org/
   https://tools.wmflabs.org/admin/tools
+  https://www.mediawiki.org/wiki/API:Main_page
 
   * create a developer account
   * ping aaron/amir for access to a backend db to look at filters; explanation how this is helping the community is important

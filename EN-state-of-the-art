@@ -255,6 +255,16 @@ Filter ID 	Public description 	Actions 	Status 	Last modified 	Visibility 	Hit c
 https://en.wikipedia.org/wiki/Special:AbuseFilter/61
 statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is
 
+List information about filters:
+https://en.wikipedia.org/w/api.php?action=query&list=abusefilters&abfshow=!private&abfprop=id%7Chits
+or in the sandbox:
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&list=abusefilters&abfshow=!private&abfprop=id%7Chits
+
+List instances where actions triggered an abuse filter.
+https://en.wikipedia.org/w/api.php?action=query&list=abuselog&afluser=SineBot&aflprop=ids
+or in the sandbox:
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&list=abuselog&afluser=SineBot&aflprop=ids
+
 * percentage of triggered filters/all edits
   * break down triggered filters according to typology
 * percentage filters of different types over the years

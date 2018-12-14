@@ -317,3 +317,141 @@ tips on controlling efficiency/order of operations
 lazy evaluation: when 1st negative condition is met, filter terminates execution
 
 "You should always order your filters so that the condition that will knock out the largest number of edits is first. Usually this is a user groups or a user editcount check; in general, the last condition should be the regex that is actually looking for the sort of vandalism you're targeting. "
+
+===========================================================================
+https://www.mediawiki.org/wiki/Extension:AbuseFilter
+
+Author(s)
+    Andrew Garrett, <-- lead dev
+    River Tarnell
+    Victor Vasiliev
+    Marius Hoch
+
+a media wiki extention written in php;
+licensed under GPL 2.0
+no further dependencies needed
+
+code repo: https://gerrit.wikimedia.org/g/mediawiki/extensions/AbuseFilter
+issue tracker: https://phabricator.wikimedia.org/tag/abusefilter/
+
+"Once the extension has been installed, filters can be created/tested/changed/deleted and the logs can be accessed from the Abuse filter management page Special:AbuseFilter. "
+
+you can import filters from wikipedia
+
+Creates following tables
+mysql> describe abuse_filter; (https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_table)
++--------------------+---------------------+------+-----+---------+----------------+
+| Field              | Type                | Null | Key | Default | Extra          |
++--------------------+---------------------+------+-----+---------+----------------+
+| af_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| af_pattern         | blob                | NO   |     | NULL    |                |
+| af_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| af_user_text       | varbinary(255)      | NO   |     | NULL    |                |
+| af_timestamp       | binary(14)          | NO   |     | NULL    |                |
+| af_enabled         | tinyint(1)          | NO   |     | 1       |                |
+| af_comments        | blob                | YES  |     | NULL    |                |
+| af_public_comments | tinyblob            | YES  |     | NULL    |                |
+| af_hidden          | tinyint(1)          | NO   |     | 0       |                |
+| af_hit_count       | bigint(20)          | NO   |     | 0       |                |
+| af_throttled       | tinyint(1)          | NO   |     | 0       |                |
+| af_deleted         | tinyint(1)          | NO   |     | 0       |                |
+| af_actions         | varbinary(255)      | NO   |     |         |                |
+| af_global          | tinyint(1)          | NO   |     | 0       |                |
+| af_group           | varbinary(64)       | NO   | MUL | default |                |
++--------------------+---------------------+------+-----+---------+----------------+
+
+mysql> describe abuse_filter_log; https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_log_table
++------------------+---------------------+------+-----+---------+----------------+
+| Field            | Type                | Null | Key | Default | Extra          |
++------------------+---------------------+------+-----+---------+----------------+
+| afl_id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| afl_filter       | varbinary(64)       | NO   | MUL | NULL    |                |
+| afl_user         | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afl_user_text    | varbinary(255)      | NO   |     | NULL    |                |
+| afl_ip           | varbinary(255)      | NO   | MUL | NULL    |                |
+| afl_action       | varbinary(255)      | NO   |     | NULL    |                |
+| afl_actions      | varbinary(255)      | NO   |     | NULL    |                |
+| afl_var_dump     | blob                | NO   |     | NULL    |                |
+| afl_timestamp    | binary(14)          | NO   | MUL | NULL    |                |
+| afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                |
+| afl_title        | varbinary(255)      | NO   |     | NULL    |                |
+| afl_wiki         | varbinary(64)       | YES  | MUL | NULL    |                |
+| afl_deleted      | tinyint(1)          | NO   |     | 0       |                |
+| afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                |
+| afl_rev_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
+| afl_log_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
++------------------+---------------------+------+-----+---------+----------------+
+16 rows in set (0.00 sec)
+
+mysql> describe abuse_filter_history; (from https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_history_table)
++---------------------+---------------------+------+-----+---------+----------------+
+| Field               | Type                | Null | Key | Default | Extra          |
++---------------------+---------------------+------+-----+---------+----------------+
+| afh_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| afh_filter          | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afh_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afh_user_text       | varbinary(255)      | NO   | MUL | NULL    |                |
+| afh_timestamp       | binary(14)          | NO   | MUL | NULL    |                |
+| afh_pattern         | blob                | NO   |     | NULL    |                |
+| afh_comments        | blob                | NO   |     | NULL    |                |
+| afh_flags           | tinyblob            | NO   |     | NULL    |                |
+| afh_public_comments | tinyblob            | YES  |     | NULL    |                |
+| afh_actions         | blob                | YES  |     | NULL    |                |
+| afh_deleted         | tinyint(1)          | NO   |     | 0       |                |
+| afh_changed_fields  | varbinary(255)      | NO   |     |         |                |
+| afh_group           | varbinary(64)       | YES  |     | NULL    |                |
++---------------------+---------------------+------+-----+---------+----------------+
+13 rows in set (0.00 sec)
+
+mysql> describe abuse_filter_action; (from https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_action_table)
++-----------------+---------------------+------+-----+---------+-------+
+| Field           | Type                | Null | Key | Default | Extra |
++-----------------+---------------------+------+-----+---------+-------+
+| afa_filter      | bigint(20) unsigned | NO   | PRI | NULL    |       |
+| afa_consequence | varbinary(255)      | NO   | PRI | NULL    |       |
+| afa_parameters  | tinyblob            | NO   |     | NULL    |       |
++-----------------+---------------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+# API calls
+
+## List information about filters:
+https://en.wikipedia.org/w/api.php?action=query&list=abusefilters&abfshow=!private&abfprop=id%7Chits
+or in the sandbox:
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&list=abusefilters&abfshow=!private&abfprop=id%7Chits
+
+Parameters
+
+    abfstartid: The filter id to start enumerating from
+    abfendid: The filter id to stop enumerating at
+    abfdir: The direction in which to enumerate (older, newer)
+    abfshow: Show only filters which meet these criteria (enabled|!enabled|deleted|!deleted|private|!private)
+    abflimit: The maximum number of filters to list
+    abfprop: Which properties to get (id|description|pattern|actions|hits|comments|lasteditor|lastedittime|status|private)
+
+When filters are private, some of the properties specified with abfprop will be missing unless you have the appropriate user rights.
+
+## List instances where actions triggered an abuse filter.
+https://en.wikipedia.org/w/api.php?action=query&list=abuselog&afluser=SineBot&aflprop=ids
+or in the sandbox:
+https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&list=abuselog&afluser=SineBot&aflprop=ids
+
+Parameters
+
+    aflstart: The timestamp to start enumerating from
+    aflend: The timestamp to stop enumerating at
+    afldir: The direction in which to enumerate (older, newer)
+    afluser: Show only entries where the action was attempted by a given user or IP address.
+    afltitle: Show only entries where the action involved a given page.
+    aflfilter: Show only entries that triggered a given filter ID
+    afllimit: The maximum number of entries to list
+    aflprop: Which properties to get (ids|user|title|action|result|timestamp|details)
+
+
+
+===========================================================================
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
+
+
+===========================================================================
+https://phabricator.wikimedia.org/tag/abusefilter/
