@@ -47,8 +47,6 @@ https://tools.wmflabs.org/ptwikis/Filters:cawiki
 https://tools.wmflabs.org/ptwikis/Filters:dewiki
 https://tools.wmflabs.org/ptwikis/Filters:eswiki
 
-https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
---> exists interestingly enough in all languages I'm interested in
 
 ## Software
 
@@ -81,3 +79,6 @@ https://en.wikipedia.org/wiki/Special:AbuseFilter/1
 https://tools.wmflabs.org/ptwikis/Filters:enwiki:61
 https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2009-03-23/Abuse_Filter
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
+
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
+--> exists interestingly enough in all languages I'm interested in

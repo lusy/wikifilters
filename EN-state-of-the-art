@@ -171,15 +171,18 @@ What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
 
 9 different actions possible according to the extention docu
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
-    2.1 Logging
-    2.2 Warning
-    2.3 Throttling
-    2.4 Disallowing
-    2.5 Revoking auto-promoted groups
-    2.6 Blocking
-    2.7 Removing from privileged groups
-    2.8 Range-blocking
-    2.9 Tagging
+    2.1 Logging: All filter matches are logged in the abuse log. This cannot be turned off.  (so, every filter trigger is always being logged?)
+    2.2 Warning: The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.
+    2.3 Throttling: The filter will only match if a rate limit is tripped. You can specify the number of actions to allow, the period of time in which these actions must occur, and how those actions are grouped.
+
+The groupings are which sets of people should have aggregate (shared) throttles. That is, if you type "user", then the same user must match the filter a certain number of times in a certain period of time. You may also combine groups with commas to specify that throttle matches sharing all criteria will be aggregated. For example, using "ip,page", X filter matches in Y seconds from the same IP address to the same page will be required to trip the remainder of the actions.
+(So this is something like, do this and that if the user has always received X warnings?)
+    2.4 Disallowing: Actions matching the filter will be prevented, and a descriptive error message will be shown.
+    2.5 Revoking auto-promoted groups: Actions matching the filter will cause the user in question to be barred from receiving any extra groups from $wgAutopromote for a period ranging from 3 to 7 days (random). This can be restored at the debug tools page.
+    2.6 Blocking: Users matching the filter will be blocked indefinitely, with a descriptive block summary indicating the rule that was triggered.
+    2.7 Removing from privileged groups: Users matching the filter will be removed from all privileged groups (sysop, bureaucrat, etc). A descriptive summary will be used, detailing the rule that was triggered.
+    2.8 Range-blocking:Somewhat of a "nuclear option", the entire /16 range from which the rule was triggered will be blocked for 1 week.
+    2.9 Tagging: The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.
 
 
 Collaboration with bots:
