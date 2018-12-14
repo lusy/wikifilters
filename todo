@@ -52,8 +52,6 @@ https://tools.wmflabs.org/ptwikis/Filters:eswiki
 
 ## Software
 
-https://www.mediawiki.org/wiki/Extension:AbuseFilter
-https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
 https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFilters extention
 
 ## Questions
@@ -84,3 +82,6 @@ https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
 
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
 --> exists interestingly enough in all languages I'm interested in
+
+https://www.mediawiki.org/wiki/Extension:AbuseFilter
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format

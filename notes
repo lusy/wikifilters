@@ -447,11 +447,10 @@ Parameters
     afllimit: The maximum number of entries to list
     aflprop: Which properties to get (ids|user|title|action|result|timestamp|details)
 
-
-
 ===========================================================================
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
 
+Manual on writing filter rules;
 
 ===========================================================================
 https://phabricator.wikimedia.org/tag/abusefilter/
