@@ -16,6 +16,17 @@
   * create a developer account
   * ping aaron/amir for access to a backend db to look at filters; explanation how this is helping the community is important
 
+* questions from EN-state-of-the-art
+// do the users notice the logging? or only "bigger" actions such as warnings/being blocked, etc.?
+"Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
+// what is "good standing"?
+// what are the arguments for hiding a filter? --> particularly obnoctious vandals can see how their edits are being filtered and circumvent them; (no written quote yet)
+// are users still informed if their edit triggers a hidden filter?
+Exemptions for "urgent situation" -- what/how are these defined?
+Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
+"Because even the smallest mistake in editing a filter can disrupt the encyclopedia, only editors who have the required good judgment and technical proficiency are permitted to configure filters."
+--> Who are these editors? Who decides they are qualified enough?
+
 # Interesting pages
 
 ## Edit filters in different languages:
@@ -52,7 +63,6 @@ https://tools.wmflabs.org/ptwikis/Filters:eswiki
 
 ## Software
 
-https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFilters extention
 
 ## Questions
 
@@ -80,8 +90,11 @@ https://tools.wmflabs.org/ptwikis/Filters:enwiki:61
 https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2009-03-23/Abuse_Filter
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
 
+## Software
+
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
 --> exists interestingly enough in all languages I'm interested in
 
 https://www.mediawiki.org/wiki/Extension:AbuseFilter
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
+https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFilters extention
