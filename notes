@@ -403,6 +403,8 @@ mysql> describe abuse_filter_history; (from https://www.mediawiki.org/wiki/Exten
 +---------------------+---------------------+------+-----+---------+----------------+
 13 rows in set (0.00 sec)
 
+Note! table abuse_filter_history seems to not exist anymore
+
 mysql> describe abuse_filter_action; (from https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_action_table)
 +-----------------+---------------------+------+-----+---------+-------+
 | Field           | Type                | Null | Key | Default | Extra |
@@ -412,6 +414,9 @@ mysql> describe abuse_filter_action; (from https://www.mediawiki.org/wiki/Extens
 | afa_parameters  | tinyblob            | NO   |     | NULL    |       |
 +-----------------+---------------------+------+-----+---------+-------+
 3 rows in set (0.00 sec)
+
+Seems to contain data for currently enabled filters only;
+Question: how do we find data for disabled filters?
 
 # API calls
 
