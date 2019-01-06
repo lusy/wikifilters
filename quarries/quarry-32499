@@ -1,0 +1,7 @@
+use enwiki_p;
+select afl_filter, count(*)
+from abuse_filter_log
+where afl_timestamp > 20151231235959
+and afl_timestamp <= 20161231235959
+group by afl_filter
+order by count(*) desc;

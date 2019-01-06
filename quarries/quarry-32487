@@ -1,0 +1,2 @@
+use enwiki_p;
+select * from abuse_filter_action
