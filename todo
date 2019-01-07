@@ -1,10 +1,16 @@
 # Next steps
 
-* Look at filters: what different types of filters are there
-* understand how are stats generated
-  * look for db dumps
-  * research filter development over time
+* Look at filters: what different types of filters are there? how do we classify them?
+  * syntactic vs semantic vs ? (ALL CAPS is syntactic)
+  * are there ontologies?
+  * how is spam classified for example?
 
+* understand how are stats generated
+  * research filter development over time
+    * plot number of filters over time (maybe grouped by week instead of a year)
+    * get a feeling of the actions the filters triggered over time
+
+  * look for db dumps
   https://meta.wikimedia.org/wiki/Research:Quarry
   https://meta.wikimedia.org/wiki/Toolserver
   https://quarry.wmflabs.org/query/runs/all?from=7666&limit=50
@@ -20,7 +26,7 @@
 // do the users notice the logging? or only "bigger" actions such as warnings/being blocked, etc.?
 "Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
 // what is "good standing"?
-// what are the arguments for hiding a filter? --> particularly obnoctious vandals can see how their edits are being filtered and circumvent them; (no written quote yet)
+// what are the arguments for hiding a filter? --> particularly obnoxious vandals can see how their edits are being filtered and circumvent them; (no written quote yet)
 // are users still informed if their edit triggers a hidden filter?
 Exemptions for "urgent situation" -- what/how are these defined?
 Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
