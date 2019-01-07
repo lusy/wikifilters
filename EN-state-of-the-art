@@ -411,6 +411,16 @@ what do the most active filters do?
 712 "possibly changing date of birth in infobox" ("possibly"? and I thought infoboxes were pre-generated from wikidata?); no actions
 833 "newer user possibly adding a unreferenced or improperly referenced material"; no actions
 
+* get a sense of what gets filtered (more qualitative)
+  vandalism
+  unintentional suboptimal behavior from new users who don't know better (blanking an article/section; creating an article without categories; adding larger texts without references)
+
+* why get certain filters
+(and not others?)
+
+* has the willingness of the community to use filters increased over time?
+looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant
+
 * how often were (which) filters triggered
 https://tools.wmflabs.org/ptwikis/Filters:enwiki
 --> stats for the last 30 days: filters sorted alphabetically, stats according to number of actions of each type (no action match, warn, tag, disallow, block)
