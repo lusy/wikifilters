@@ -5,6 +5,9 @@
   * are there ontologies?
   * how is spam classified for example?
 
+* look at AbuseFilter extention code: how is a filter trigger logged?
+https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
+
 * understand how are stats generated
   * research filter development over time
     * plot number of filters over time (maybe grouped by week instead of a year)
