@@ -17,7 +17,7 @@ def sort_actions(filepath):
 
 def get_filters_actions(in_file, out_file):
     df = pd.read_csv(in_file, sep=',')
-    df_update = df[['af_id', 'af_hidden', 'af_actions', 'af_hit_count', 'af_public_comments']]
+    df_update = df[['af_id', 'af_hidden', 'af_global', 'af_actions', 'af_hit_count', 'af_public_comments']]
     df_update.to_csv(out_file, sep='\t')
     #print(df[['af_id', 'af_hidden', 'af_actions', 'af_hit_count', 'af_public_comments']])
 
