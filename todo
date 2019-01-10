@@ -1,9 +1,22 @@
 # Next steps
 
 * Look at filters: what different types of filters are there? how do we classify them?
+  * classify in "vandalism"|"good_faith"|"biased_edits"|"misc" for now
   * syntactic vs semantic vs ? (ALL CAPS is syntactic)
   * are there ontologies?
   * how is spam classified for example?
+
+* check filter rules for edits in user/talks name spaces (may be indication of filtering harassment)
+* add "af_deleted" column to filter list
+* add also "af_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
+
+* Setup CSCW latex template up
+
+* add a README to github repo
+
+* Read these two pages
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism_types
 
 * look at AbuseFilter extention code: how is a filter trigger logged?
 https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
