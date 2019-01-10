@@ -466,3 +466,27 @@ keep in mind in case of problems
 Google search for something on the quarry.wmflabs.org page
 
 site:quarry.wmflabs.org all tables
+
+===========================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Namespace
+
+Namespaces
+Subject namespaces 	Talk namespaces
+0 	(Main/Article) 	Talk 	1
+2 	User 	        User talk 	3
+4 	Wikipedia 	    Wikipedia talk 	5
+6 	File 	        File talk 	7
+8 	MediaWiki 	    MediaWiki talk 	9
+10 	Template 	    Template talk 	11
+12 	Help 	        Help talk 	13
+14 	Category 	    Category talk 	15
+100 	Portal 	    Portal talk 	101
+108 	Book 	    Book talk 	109
+118 	Draft 	    Draft talk 	119
+710 	TimedText 	TimedText talk 	711
+828 	Module 	    Module talk 	829
+2300 	Gadget 	    Gadget talk 	2301
+2302 	Gadget definition 	Gadget definition talk 	2303
+Virtual namespaces
+-1 	Special
+-2 	Media
