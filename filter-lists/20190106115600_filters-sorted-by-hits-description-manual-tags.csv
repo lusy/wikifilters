@@ -1,0 +1,955 @@
+	af_id	af_hidden	af_global	af_actions	af_hit_count	af_public_comments	manual_tags	notes
+0	61	0	0	tag	1611956	New user removing references	good_faith	probably; it’s called “*new* user ...”
+1	135	0	0	warn,tag	1371361	Repeating characters	vandalism	
+2	527	1	0	throttle	1241576	T34234: log/throttle possible sleeper account creations	vandalism/	needs subtag? Account creation != defacing content
+3	384	0	0	disallow	1159239	Addition of bad words or other vandalism	vandalism	
+4	172	0	0	tag	935925	Section blanking	good_faith	
+5	30	0	0	warn,tag	840871	Large deletion from article by new editors	good_faith	
+6	633	0	0	tag	808716	Possible canned edit summary	good_faith/lazyness	
+7	636	0	0	warn	726764	Unexplained removal of sourced content	vandalism/good_faith	the warning suggests, editors should add edit summary; (which should be reasonable if these are good faith edits)
+8	3	0	0	warn,tag	700522	New user blanking articles	good_faith	
+9	650	0	0		695601	Creation of a new article without any categories	good_faith	
+10	279	0	0	throttle,tag	616212	Repeated attempts to vandalize	vandalism	
+11	432	0	0	warn,tag	558578	Starting new line with lowercase letters	good_faith/lazyness	needs subtag? For people not adhering to grammar/orthography norms/encyclopedia style
+12	225	0	0	disallow	482872	Vandalism in all caps	vandalism	
+13	50	0	0	warn,tag	480960	Shouting	vandalism/good_faith	or other subtag; it’s not necessarily good_faith, but not necessarily vandalism attempt (e.g. someone frustrated); or even harassment
+14	189	0	0	tag	466012	BLP vandalism or libel	vandalism/harassment	
+15	132	0	0	warn,tag	420273	Removal of all categories	vandalism/good_faith	“new editor” may mean good faith (i.e. person not familiar with norms) but also vandalism (freshly created account for the specific purpose of libel)
+16	380	1	0	disallow	394328	Multiple obscenities	vandalism/harassment	since filter is hidden, not clear in which name space are the targeted edits
+17	231	0	0	warn,tag	380302	Long string of characters containing no spaces	vandalism	will not be true for German^^; but none of these filters seem to be global
+18	364	1	0	tag	368604	Changing the name in a BLP infobox	vandalism	no “good_faith” tag since filter is hidden
+19	46	0	0	disallow	356945	"""Poop"" vandalism"	vandalism	
+20	98	0	0	tag	339401	Creating very short new article	good_faith	
+21	220	0	0	warn,tag	303179	Adding external images/links	misc	why is this a problem? Bc external resources may be broken? Or get removed? Or violate copyright (is this a  valid concern for *external* resources?)
+22	260	0	0	disallow	286852	Common vandal phrases	vandalism	
+23	686	0	0		282934	IP adding possibly unreferenced material to BLP	vandalism/harassment/biased_pov	need an extra tag for biased point of view
+24	148	0	0	tag	242321	Users creating autobiographies	biased_pov	
+25	491	0	0	warn,tag	230416	Edits ending with emoticons or !	bad_style	
+26	833	0	0		221466	Newer user possibly adding unreferenced or improperly referenced material	good_faith	
+27	712	0	0		209612	Possibly changing date of birth in infobox	good_faith, misc	
+28	79	0	0	warn,tag	205958	New user removing reference grouping tags	good_faith	what are “reference grouping tasks”?
+29	550	0	0	tag	202352	nowiki tags inserted into an article	misc	what are “nowiki” tags?
+30	149	0	0	warn,tag	194824	User adds link containing username	misc	don’t understand this one either
+31	29	0	0	tag	186026	New user removing speedy deletion templates		
+32	344	0	0	warn	180995	Prevent full page blanking		
+33	180	0	0	tag	175939	Large unwikified new article		
+34	351	0	0	warn,tag	171171	Text added after categories and interwiki		
+35	391	0	0	tag	163579	Changing height/weight in an infobox		
+36	402	0	0		155133	New article without references		
+37	320	0	0	disallow	152994	"""Your mom"" Vandalism"		
+38	39	0	0	warn,tag	150568	School libel and vandalism		
+39	18	0	0		133641	Test type edits from clicking on edit bar		
+40	631	0	0	tag	132044	Extraneous toolbar markup		
+41	12	0	0	disallow	122756	Replacing a page with obscenities		
+42	247	1	0	warn,tag	121192	Adding emails in articles		
+43	80	0	0	throttle,warn,tag	119104	Link spamming		
+44	354	1	0	tag	115814	Promotional text added by user to own user(-talk) page		
+45	11	0	0	warn,tag	109657	You/He/She/It sucks		
+46	499	1	0		106559	Possible spambot or promotional username		
+47	680	0	0	disallow	95242	Adding emoji unicode characters		
+48	34	1	0	disallow	93880	New or unregistered user blanking someone else's user or user talk page		
+49	752	1	0		93854	Possible spamming of references		
+50	271	1	0	warn	91822	Possible spambot		
+51	614	1	0	disallow	90578	Yolo swag and other vandalism trends		
+52	188	0	0		86463	Creating articles with a title containing or contained in username		
+53	339	0	0	tag	86338	Claims of homosexuality, bisexuality, or transexuality in a BLP		
+54	365	0	0	disallow	85470	Unusual changes to featured or good content		
+55	65	0	0		74098	Excessive whitespace		
+56	325	0	0	disallow	73942	!!!!! in the article-space		
+57	285	0	0	disallow	73902	Common Vandalism		
+58	126	0	0		65137	Youtube links		
+59	129	0	0		64869	Possible tireless sock creating film pages of non-existing films		
+60	423	0	0		64591	WikiLove		
+61	33	0	0	warn,tag	60707	Talk page blanking by unregistered/new user		
+62	270	0	0	tag	56352	Interwiki link removal		
+63	867	0	0		51805	Large creations by inexperienced user		
+64	346	0	0	warn,tag	49652	Large non-English contributions		
+65	458	0	0	disallow	46898	Feedback: Extremely short post		
+66	806	1	0	throttle	46840	New account suspicious activity		
+67	803	0	0	disallow	46756	Prevent new users from editing other's user pages		
+68	117	0	0	tag	43822	removal of Category:Living people		
+69	316	1	0	throttle	43756	Subtle changes to articles		
+70	368	0	0	warn	42952	Making large changes when marking the edit as minor		
+71	249	0	0	throttle,tag	41712	New user conducting large scale reverts		
+72	9	0	0		41354	Personal attacks by unregistered or new user		
+73	1	0	0		40258	General test filter		
+74	466	1	0	warn,tag	38064	Userspace & talk page spamming		
+75	753	0	0	tag	36983	wikilinks removed by a new user or IP		
+76	58	1	0	disallow	35223	Long-term pattern abuse		
+77	31	1	0	disallow	34966	ASCII art		
+78	164	0	0	tag	34351	Possible cut and paste moves		
+79	716	0	0		34135	New user tagging or de-tagging article as FA/GA		
+80	96	0	0		33114	Newly created articles that don't mention their subject		
+81	167	0	0	warn	32972	Botched submissions to Articles for creation		
+82	323	0	0	tag	31881	Undoing anti-vandalism bot		
+83	613	0	0	warn,tag	28327	Signing in article		
+84	728	0	0	tag	25869	Huggle		
+85	627	0	0	tag	24764	Promotional text added by user to draft in own user(-talk) page or in draft namespace		
+86	846	0	0	tag	24283	LTA tracking		
+87	623	1	0	disallow	24030	Signing in articles II		
+88	664	0	0	warn	22539	Test edits		
+89	342	0	0		21810	Redirect becoming article		
+90	657	0	0	warn,tag	21684	Adding an external link to a disambiguation page		
+91	113	0	0	warn,tag	20885	Misplaced #redirect in articles		
+92	711	0	0		20699	Dead link replacement		
+93	460	0	0	disallow	20505	Feedback: Foul words		
+94	59	0	0	tag	19938	New user removing templates on image description		
+95	174	0	0	warn,tag	19223	New user removing XfD template		
+96	520	0	0	disallow	18596	Feedback: No punctuation or spaces		
+97	397	1	0	disallow	18114	Userpage vandalism		
+98	155	0	0		17517	Adding links to youtube		
+99	782	0	0	disallow	16702	Content Translation Edits		
+100	655	0	0	tag	16051	Large plot section addition		
+101	602	0	0	warn,tag	15758	Arbitration discretionary sanctions alerts		
+102	205	1	0		15519	Scibaby #1		
+103	106	0	0		14513	Date linking / delinking		
+104	2	1	0		14104	Test filter: for testing private filters		
+105	51	1	0		14060	LTA Username / LTA IP hopping disruption (Oshwah)		
+106	224	0	0	tag	13895	Copyvio tag removal		
+107	420	0	0	throttle,disallow	13874	Large removal of talk page content by IP		
+108	345	0	0	warn,tag	13832	Extraneous formatting from browser extension		
+109	733	0	0		13770	New user creating a page in someone else's userspace		
+110	554	0	0	disallow	13394	top100 blog charts		
+111	630	1	0	tag	13025	New users de-userfying pages		
+112	28	0	0		12264	New user redirecting an existing substantial page or changing a redirect		
+113	366	0	0		12257	Addition of seemingly random characters		
+114	819	1	0	throttle	12207	Derp vandal		
+115	837	0	0		12174	Removal of disambiguation templates by new users		
+116	102	1	0	disallow	11903	Abusive account names		
+117	532	0	0	tag	11857	Interwiki Addition		
+118	559	1	0		11787	archive.is additions		
+119	825	1	0		11749	Descent category added		
+120	77	1	0	warn	11528	Various ASCII Vandals		
+121	76	0	0	warn	11033	Adding email address		
+122	394	0	0		10996	Extremely short article creation		
+123	409	0	0		10880	news sources on BLPs		
+124	773	1	0		9990	TNT's test filter		
+125	890	0	0	warn,disallow	9932	Random typing in username		
+126	697	0	0		9807	User making large contribution with first edits		
+127	218	0	0		9802	User adding xx/xx/xxxx probably a date		
+128	483	1	0		9357	Users creating own talk		
+129	163	0	0	warn,tag	9289	Redirect to non-existent page		
+130	784	0	0	disallow	9265	Harambe vandalism		
+131	735	0	0	tag	9005	Vandalising sport infobox		
+132	531	0	0	tag	8856	Interwiki Removal		
+133	81	0	0		8491	Badcharts		
+134	878	0	0	tag	8290	New user removing COI template		
+135	521	0	0	disallow	8149	Feedback: All caps		
+136	478	1	0	disallow	7862	Talk page abuse		
+137	875	1	0	warn	7585	Derp II		
+138	912	0	0	warn,tag	7505	"Possible ""fortnite"" vandalism"		
+139	643	1	0	throttle	7109	Persistent sockpuppetry		
+140	261	1	0	throttle,disallow	6548	Page creation throttle for new users		
+141	183	0	0	warn	6545	AFC submissions in wrong namespace		
+142	473	0	0	disallow	6369	Feedback: Repeating characters		
+143	410	0	0		6285	blog added to BLPs		
+144	905	0	0		6267	bots that may ping users		
+145	313	0	0	warn	6259	Skype Toolbar Formatting		
+146	425	1	0		6209	Magic/astrology spambots		
+147	796	1	0	throttle,disallow	6029	Possible Ref Desk disruption		
+148	97	0	0		5973	Personal attacks by new user		
+149	869	0	0	warn	5855	"Adding ""Daily Mail"" to articles"		
+150	294	1	0	disallow	5395	Personal attacks		
+151	702	0	0	warn	5302	Warning against clipboard hijacking		
+152	152	0	0		5148	External links with referal tags		
+153	139	1	0	disallow	5135	Fixed position vandalism		
+154	463	1	0	disallow	4965	Feedback: Adding email addresses		
+155	632	0	0	tag	4839	Creating blank pages		
+156	874	1	0	disallow	4745	Long term abuse username / impersonation creations		
+157	894	0	0	warn	4625	Possible Self-Published Sources		
+158	887	0	0	warn,disallow	4589	Excessive repetition in usernames		
+159	895	1	0		4577	Possible spambot username		
+160	5	0	0	warn,tag	4558	User self-renaming or moving user talk pages into article talk space		
+161	524	0	0		4502	Interwiki bot		
+162	435	0	0	warn	4380	Non-confirmed user adding protection template to a page		
+163	789	1	0		4375	BethNaught's test filter		
+164	464	1	0	warn	4290	Possible open proxy		
+165	68	1	0	throttle,disallow	3905	Pagemove throttle for new users		
+166	238	0	0		3857	New article without normal opening sentence		
+167	573	0	0		3718	Multiple blank lines		
+168	497	0	0	disallow	3660	Feedback: Common Vandalism 5		
+169	17	1	0	tag	3563	Prolific socker II		
+170	670	0	0		3514	New user removing references		
+171	860	0	0	disallow	3451	Ryan Ross vandalism		
+172	105	0	0		3379	Hypothetical album releases		
+173	494	0	0	disallow	3325	Feedback: Common Vandalism 2		
+174	502	0	0	disallow	3280	Feedback: Extremely long words		
+175	777	0	0		3149	End date present vandal		
+176	579	1	0		3112	Possible sockpuppet account creations		
+177	850	0	0	warn	3112	New user moving page to project space		
+178	322	1	0	throttle	3091	Null edits by new editors		
+179	289	0	0	warn	3051	New user creating interrogative pages		
+180	268	1	0	warn	2964	Red link vandalism		
+181	264	1	0	disallow	2919	Specific-page vandalism		
+182	52	1	0	disallow	2890	Edit summary vandalism II		
+183	590	0	0		2850	Unicode replacement characters		
+184	176	0	0		2820	user space link added in article space		
+185	721	1	0	disallow	2770	Armenian football vandal or similar		
+186	593	0	0		2764	Monitor addition of archive.org		
+187	495	0	0	disallow	2697	Feedback: Common Vandalism 3		
+188	479	0	0	warn	2692	Adding example.jpg to article space		
+189	783	0	0	warn	2677	Adding {{persondata}}		
+190	496	0	0	disallow	2658	Feedback: Common Vandalism 4		
+191	403	1	0		2605	Inappropriate use of userpage		
+192	53	0	0		2595	trademark/copyright symbols		
+193	840	0	0		2532	Indexing user pages		
+194	242	1	0	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle		
+195	898	1	0		2343	Cyp test filter		
+196	904	0	0		2338	Long edit summaries		
+197	861	0	0		2256	Crow test filter		
+198	732	1	0	disallow	2195	Chinese spam attack?		
+199	233	1	0	disallow	2189	Targeted user talk vandalism		
+200	239	0	0	disallow	2189	Huge repeating/nonsense characters		
+201	159	1	0	throttle,disallow	2171	Mascot Guy Sock Candidates		
+202	472	0	0		2133	Feedback: Addition of bad words		
+203	236	1	0		2116	Wknight94 test filter		
+204	35	0	0		2093	New user changing a redirect		
+205	23	1	0		2075	Some vandal phrases		
+206	935	1	0		2056	"""ntsamr""-pattern spambot filter"		
+207	637	1	0		2040	MusikAnimal test filter		
+208	16	1	0	throttle,disallow	2005	Prolific socker I		
+209	273	1	0	disallow	1980	Repeated obscenities		
+210	813	1	0	disallow	1879	Bee movie script		
+211	766	0	0	warn,tag	1866	Alt-right labeling		
+212	667	1	0		1843	Wikipedia:Long-term abuse/Best known for IP		
+213	768	1	0	disallow	1781	AIV disruption		
+214	826	1	0	throttle,disallow	1748	Image flag vandal		
+215	179	1	0	disallow	1617	Ongoing attacks		
+216	756	1	0	disallow	1601	Banned user vandalism		
+217	926	1	0	disallow	1574	Image vandalism II		
+218	942	0	0		1573	Log edits to protected pages		
+219	577	0	0		1566	VisualEditor bugs: Strange icons		
+220	24	0	0		1538	Sneaky link vandalism		
+221	280	0	0		1525	New user altering images		
+222	257	1	0	disallow	1505	Sonichu and other repeat vandalism		
+223	620	1	0		1498	archive removal by disruptive editors		
+224	740	1	0		1461	Template hijacking		
+225	408	1	0		1441	really long talk post		
+226	921	0	0	tag	1422	Suspicious claims of nazism		
+227	475	0	0		1390	Feedback: Vandalism or libel		
+228	358	1	0		1358	Od Mishehu's test filter		
+229	619	1	0		1326	Possible covert vandalism		
+230	652	1	0	warn,disallow	1326	Jajadelera		
+231	194	0	0		1309	Michael Jackson new page vandalism		
+232	151	0	0		1294	Inappropriate Redirects		
+233	891	0	0	warn,tag	1289	Predatory open access journals		
+234	892	0	0	disallow	1245	RS linked through proxy		
+235	119	0	0		1243	Macedonia naming conflict		
+236	474	0	0	disallow	1222	Feedback: Comment with only obscenities		
+237	47	1	0	disallow	1206	Prolific sockpuppeteers		
+238	684	1	0	disallow	1192	temporary vandalism		
+239	930	0	0	disallow	1165	Prevent indexing userspaces by newer users		
+240	793	1	0	disallow	1155	Common spam/scam phone numbers		
+241	675	0	0	disallow	1107	Thems the facts vandalism		
+242	877	1	0		1084	test filter 4		
+243	253	0	0	warn	1015	Signing a non-discussion page		
+244	134	0	0		991	Template deletion notifications transcluded into articles		
+245	755	1	0		981	LTA trolling		
+246	7	1	0		972	AnonTalk		
+247	834	1	0		961	Possible attacks on other users		
+248	879	0	0	warn	943	Possible malformed edit		
+249	815	1	0	disallow	936	TV vandal		
+250	341	1	0	disallow	925	Persistent talk page abuse from IP ranges		
+251	600	1	0	tag	924	Adding Image to Template		
+252	934	0	0	disallow	915	Unconfirmed users creating mainspace articles		
+253	529	0	0	warn,disallow	913	chartnews		
+254	534	1	0	disallow	912	Preuss filter		
+255	859	1	0	disallow	856	LTA #859		
+256	477	1	0	warn	854	Chinese pattern spambots		
+257	899	0	0		826	"Adding ""The Sun"" or ""Dailystar"" to BLPs"		
+258	739	1	0	disallow	821	User talk vandal		
+259	398	1	0	throttle	802	Test filter 398		
+260	485	0	0	warn	797	Prevent malicious edits by browser extension		
+261	422	1	0	disallow	794	Possible template vandalism		
+262	388	1	0		783	Unusual redirect III		
+263	405	1	0		776	Verizon vandal		
+264	708	0	0		765	SPI page moves		
+265	543	1	0		754	XKCD April Fools' Day 2013 vandalism		
+266	872	1	0	disallow	748	SK Sock		
+267	941	1	0	disallow	747	proxy abuse		
+268	812	0	0	disallow	726	Unreasonably large addition of content		
+269	915	1	0		719	Personal testing filter for Cyberpower678		
+270	762	1	0	disallow,tag	716	TV/Movie spammer		
+271	642	0	0	disallow	712	OTRS template added by non-OTRS member (global)		
+272	146	1	0		710	Keith Bridgeman vandalism		
+273	856	0	0		687	Non-admin removing revdel templates		
+274	99	0	0		686	Edits to an other user's userspace		
+275	651	1	0	warn,disallow	685	AfricaTanz		
+276	433	1	0		684	University of Oklahoma spelling vandal		
+277	624	1	0		680	CheckUser Sock block		
+278	946	1	0	throttle,warn	657	LTA 946		
+279	918	1	0		650	LTA 918		
+280	563	1	0		643	Graham W Phillips		
+281	765	0	0	tag	620	Unnecessary syntax in translated articles		
+282	799	1	0	throttle,disallow	610	Ref Desk Nazi		
+283	601	1	0	disallow	606	Colton Cosmic		
+284	864	1	0	disallow	601	Kargbo Spammer		
+285	123	0	0	warn,disallow	599	New users moving other users' pages		
+286	445	1	0	throttle,disallow	596	Disruptive user threatening self harm		
+287	519	1	0		588	Possible sockpuppets		
+288	587	1	0	warn,disallow	585	Inappropriate external links		
+289	386	1	0	throttle	582	Throttle IP talk page creation		
+290	880	1	0	disallow	572	Vote (X) for Change		
+291	269	1	0	warn,disallow	566	TFA Vandalism		
+292	526	0	0	warn	560	hot100brasil insertions		
+293	436	1	0		557	Sole Soul's test filter		
+294	786	1	0		555	LTA_Check-B13		
+295	26	0	0		548	Large unwikified additions by new user		
+296	369	0	0		545	New user editing AFD discussions		
+297	804	0	0		543	Mentions of Trump by new users		
+298	314	0	0	warn	532	User creates article ending with a /		
+299	82	0	0	disallow	532	Nowiki on urls		
+300	195	0	0		532	Michael Jackson edit vandalism		
+301	489	1	0		530	Long term IP-hopping abuse, more		
+302	828	0	0	disallow	527	Redirecting talk page		
+303	438	0	0	warn	521	Warn if create an article: Enter your new article name here		
+304	847	1	0	disallow	512	Sandbox troll (WP:LTA/SBT)		
+305	661	0	0	warn,disallow	495	unsourced section added to awards article		
+306	215	1	0	throttle,disallow	489	AnonTalk 2		
+307	809	1	0	disallow	487	SPI disruption		
+308	829	1	0		487	Possible article hijacking		
+309	742	1	0	throttle,disallow	487	BT UserTalkPage stalker		
+310	43	0	0		480	New user removing AfD comments		
+311	770	0	0		474	Causing death vandal		
+312	393	0	0		469	Ice hockey statistics		
+313	221	1	0	disallow	469	Japanese police vandal		
+314	738	1	0	disallow	451	Frequently blocked user		
+315	862	0	0		442	Arabic string spam		
+316	835	1	0	disallow	437	Temporary vandalism II		
+317	731	1	0		436	Reference desk trolling		
+318	925	1	0		434	Image vandalism		
+319	541	1	0		429	Open proxies		
+320	759	1	0	disallow	423	Digitalravan‎		
+321	66	0	0		406	poop vandalism (testing for false positives)		
+322	545	1	0		405	British Railways/Bus vandal		
+323	133	0	0		404	Broken references		
+324	919	1	0	disallow	393	Sockpuppetry from EnglishEfternamn		
+325	947	1	0	throttle,warn	393	LTA 947		
+326	931	1	0	throttle,disallow	383	Image vandalism I		
+327	311	1	0	disallow,tag	382	Lewis Hamilton racism		
+328	788	0	0	disallow	374	IP removing report from RFPP		
+329	212	0	0		372	New user placing comments without a header on user talk page		
+330	787	1	0	disallow	370	Spicy boy		
+331	699	1	0		363	3 edit link spam		
+332	751	1	0	disallow	359	Non-notable actor vandal/hoaxer		
+333	295	1	0	disallow	356	Targeted vandalism by specific vandal		
+334	505	0	0		356	Tag mobile edits		
+335	170	1	0		352	Thailand vandal		
+336	578	1	0	disallow	345	Sockpuppet vandalism		
+337	171	0	0		333	Direct use of Template:Dated prod		
+338	470	1	0	disallow	333	Formula One Racing vandal		
+339	948	0	0		331	Long strings of digits/punctuation in usernames		
+340	442	1	0	throttle,disallow	329	Michigan IP hopper		
+341	575	1	0		317	User moved sandbox from user space		
+342	913	1	0		311	Wikipedia:Long-term abuse/Best known for IP (Secondary)		
+343	523	1	0	disallow	306	Page creation spammer		
+344	688	1	0		303	Beals		
+345	909	1	0	disallow	299	Cutler Vandal		
+346	114	1	0	throttle	293	sleeper socks		
+347	937	1	0		291	Qwertywander long-term abuse		
+348	871	1	0	disallow	284	Sock Filter		
+349	461	0	0	disallow	283	Feedback: Vandalism in all caps		
+350	213	1	0	disallow	281	Saban troll		
+351	698	0	0	warn,disallow	277	500 edits / 30 days editing restriction		
+352	10	1	0	warn,disallow	276	Unusual change in title length		
+353	192	0	0		276	Direct use of stub categories in articles		
+354	639	1	0	disallow	272	persistent block evasion		
+355	415	1	0	disallow	270	New user possibly editing an image on a template		
+356	944	1	0	disallow	267	Image vandalism III		
+357	916	1	0	disallow	264	LTA #916		
+358	852	1	0	disallow	261	Birth/death place vandal		
+359	889	1	0	disallow	260	Persistent PA		
+360	389	1	0	throttle,disallow	258	Attacks on user talk pages		
+361	177	1	0		254	User:Television Radio		
+362	709	1	0	disallow	254	LTA filter		
+363	331	1	0	disallow	249	Megafauna vandal		
+364	72	1	0		248	Unusual move throttle		
+365	367	0	0		246	New users adding multiple nowiki groups to articles		
+366	617	0	0	disallow	242	Mathias Sandell		
+367	454	1	0		242	One time account spam bot		
+368	622	1	0	disallow	235	Genre edit-warring		
+369	608	1	0	disallow	232	Banned user		
+370	383	1	0		230	proxy vandalbot		
+371	902	1	0		230	Article creation as newly confirmed editor		
+372	56	1	0	disallow	229	Inappropriate CSS code in article space		
+373	103	0	0	warn	229	Uncyclopedia		
+374	493	1	0		229	New Rochelle Sock		
+375	901	0	0	warn	228	Possible Drumpf plugin		
+376	757	1	0	disallow	228	Persistent IP-hopping troll		
+377	718	1	0	disallow	227	Prolific socker III		
+378	854	0	0	disallow	225	Airport ref removal		
+379	115	1	0	throttle,blockautopromote	225	sleeper socks II		
+380	920	1	0	throttle	225	Possible sockpuppetry from EnglishEfternamn		
+381	200	0	0		224	Removal of PROD templates		
+382	258	1	0		223	General Tojo II		
+383	744	0	0		222	Removal of TemplateData		
+384	19	0	0		221	"Replacement of ""partition of India"" with ""independence of Pakistan"""		
+385	166	1	0	disallow	219	Singapore vandal		
+386	710	1	0	disallow	219	Muhammad vandal		
+387	886	1	0	throttle,disallow	217	LTA socking		
+388	426	1	0		215	TV station sockpuppeteer		
+389	640	0	0	warn,disallow	213	VEVO		
+390	234	1	0	disallow	208	Alexcas11 sockpuppets		
+391	928	0	0	warn	207	Transclusion of userpages		
+392	681	1	0	throttle	206	possible vandalism in NS4		
+393	465	1	0	disallow	201	FIFA IP hopper from Lima, Peru		
+394	648	1	0	disallow	195	Long-term abuse using Korean		
+395	808	1	0	disallow	194	Dead rat/Woomoo vandal		
+396	441	1	0	disallow	194	Sports forum spammer		
+397	210	1	0		193	MGM/other studio		
+398	917	1	0	disallow	192	Prevent the addition of Daniel C. Boyer		
+399	287	1	0	disallow	190	Sanders conspiracies		
+400	885	1	0	disallow	190	LTA 885		
+401	469	1	0		190	Shirik's Test Filter		
+402	811	1	0	disallow	189	Aaron Christopher		
+403	597	1	0	disallow	189	Europefan		
+404	424	1	0		189	Repeatedly blocked user --  testing-only rule for filter 425		
+405	13	1	0	warn,disallow	188	Knave vandalism		
+406	560	0	0	warn	185	"The ""truly"" vandal"		
+407	865	1	0		182	maghsoudi		
+408	377	0	0		175	Large not english contributions 2 (test only)		
+409	866	1	0		173	Temporary article title watch		
+410	666	1	0	disallow	172	Aas Mohammad		
+411	689	0	0	warn,tag	170	Chicken fucker vandalism		
+412	161	0	0		169	Overlinking		
+413	790	1	0		162	Nationality inventions		
+414	798	0	0		162	Possible copyvio for image upload		
+415	676	1	0	disallow	160	Highway vandal		
+416	722	0	0		158	Please Accept		
+417	235	0	0		157	Your mom jokes		
+418	674	0	0	disallow	156	Long term infobox vandal		
+419	906	1	0	disallow	154	Alan Jackson Vandal		
+420	745	1	0		154	Talk page abuse		
+421	63	1	0	disallow	150	Abusive unblock denials		
+422	278	1	0		149	Possible copyright violations		
+423	104	0	0	warn	149	Helpme and Adminhelp		
+424	168	0	0	warn	148	Non-admins responding to unblock requests		
+425	542	1	0		147	Open proxies II		
+426	240	0	0		147	Used lifetime over/with/as well as existing apparatus		
+427	185	0	0		146	Cross-namespace move		
+428	430	1	0	disallow	145	Various socking spammers		
+429	737	1	0	disallow	145	Christ the Logos		
+430	876	1	0	throttle,warn	144	Derp III		
+431	785	1	0		139	Template doc vandalism		
+432	125	0	0		138	Insertion of repeated phrases		
+433	653	1	0	disallow	136	Infobox vandal		
+434	190	1	0	disallow	134	CrabCore (4chan) - [[Special:Contributions/70.122.90.204]]		
+435	743	1	0	disallow	133	Prolific socker IV		
+436	439	1	0	disallow	132	Chaosname		
+437	881	1	0	disallow	131	Excessive scatology		
+438	492	1	0		131	Check for possible persistent IP-hopping abuse		
+439	855	1	0	disallow	129	LTA (Georgia)		
+440	734	1	0	disallow	127	McAusten		
+441	848	0	0		126	Large contributions test filter		
+442	373	1	0		125	Mario96		
+443	767	1	0	disallow	124	Prophecy spam		
+444	564	1	0	disallow	123	block evasion		
+445	513	1	0	disallow	122	Persistent talk page abuse from IP ranges II		
+446	250	1	0	disallow	122	Combined pagemove/edit summary vandalism		
+447	44	1	0		121	MAM vandalism		
+448	144	0	0		120	Hiding content of pages		
+449	838	0	0	warn	119	Main page hello worlds		
+450	453	1	0	warn,disallow	119	Temporary block on making specific kinds of template edits		
+451	596	1	0	disallow	117	Elevator vandal		
+452	281	1	0		115	Unwatched BLPs		
+453	723	1	0		115	MusikAnimal's test filter		
+454	706	1	0	disallow	113	Dutch football vandalism		
+455	455	1	0	disallow	113	Bahrani		
+456	434	1	0		112	Roman vandal		
+457	769	1	0	disallow	110	AfD nomination harassment		
+458	665	1	0	disallow	109	revescom		
+459	797	1	0	disallow	108	Synth LTA		
+460	936	1	0	disallow	108	LTA 936		
+461	604	0	0		107	Keyboard mashing		
+462	663	0	0	disallow	107	Techno genre warrior		
+463	690	0	0	disallow	107	Smoothest Ashu		
+464	201	0	0		106	KoH test filter		
+465	288	1	0	disallow	105	IP reverting/wikistalking by banned user		
+466	266	1	0		104	Anti-fundraising trolling		
+467	506	1	0	disallow	104	Broadway Hoaxer		
+468	507	1	0	disallow	100	Vandalism		
+469	306	1	0	disallow	98	URL obfuscators		
+470	843	0	0	disallow	98	Prevent new users from creating redirects to [[Donald Trump]]		
+471	78	0	0		98	Cross-wiki malbot vandals		
+472	175	1	0		98	pioneer courthouse sockfarm vandalism		
+473	818	1	0	disallow	97	Old enemy		
+474	385	1	0	throttle,disallow	96	Prevent new users from making mass pagemoves		
+475	450	1	0		96	Vandalizing date articles		
+476	509	1	0	disallow	91	Long-term pattern abuse III		
+477	634	1	0	warn,disallow	90	Long-term sock attack		
+478	229	1	0	throttle,warn,disallow	90	Hidden comments by new users		
+479	625	0	0		89	Yolo Swag 2		
+480	516	1	0	disallow	88	Celebrity vandal		
+481	583	1	0		87	Serial sockpuppet article creations		
+482	595	1	0	warn,disallow	86	Animal welfare IP hopper		
+483	71	1	0	throttle	84	Unusually long pagemove edit summaries		
+484	844	1	0	disallow	84	Test filter		
+485	140	1	0	disallow	84	Long-term harassment case		
+486	703	0	0		82	Edit summary only consists of article title		
+487	725	1	0	disallow	82	Long term title vandal		
+488	228	1	0		82	AnonTalk 3		
+489	557	1	0	disallow	80	Freewill vandal		
+490	165	1	0	disallow	79	Image vandalism		
+491	800	1	0	disallow	78	ranpini		
+492	779	1	0	disallow	77	Manga EL spam		
+493	525	1	0	disallow	77	Sock vandal User:Danrolo		
+494	305	1	0	throttle,disallow	77	Potential sleeper accounts		
+495	576	1	0	disallow	77	Dantherocker1		
+496	116	1	0	disallow	77	Persistent vandal creating redirects		
+497	888	1	0	disallow	77	IP bot editing		
+498	131	0	0	warn,disallow	76	Removal of controversial images		
+499	694	0	0	disallow	74	Moves to or from the Module namespace		
+500	585	1	0	disallow	72	New user removing own name from AIV		
+501	868	1	0	disallow	71	Template vandalism		
+502	547	1	0	disallow	70	Cat Creek		
+503	922	1	0	disallow	70	Abusive messages on RfA-related pages		
+504	459	1	0	disallow	70	Long-term block evasion		
+505	584	1	0		65	Improper Template Usage by New User		
+506	567	1	0	disallow	64	Disruptive CSD nominations		
+507	581	1	0		64	Dantherocker1 II		
+508	14	0	0		63	Test to detect new pages by new users		
+509	312	1	0		62	External link removal		
+510	621	1	0	disallow	62	Spambot Filter		
+511	328	1	0		61	Prolific socker III		
+512	660	1	0		61	Possibly JarlaxleArtemis (LTA)		
+513	668	1	0	disallow	61	GP disruption		
+514	226	1	0		61	Johnali123 sockpuppets		
+515	4	1	0		60	Copernicus vandal		
+516	910	0	0		60	Maureen Wroblewitz spammer		
+517	414	1	0	disallow	60	M5 Vandalism		
+518	501	1	0		60	Chinese blogpost spammer		
+519	566	1	0	disallow	57	SPI Impersonation		
+520	635	0	0	warn	57	OTRS template added by non-OTRS member		
+521	419	0	0	disallow	57	User removing himself from AIV		
+522	330	1	0	warn	55	Attacks on editors		
+523	914	1	0	disallow	54	Igor Janev Spammer		
+524	293	1	0	disallow	53	J.delanoy attacks		
+525	193	1	0		53	Wknight94's test filter		
+526	750	0	0		51	Long term film vandal		
+527	263	1	0		50	Serafin - talk page abuse		
+528	510	1	0		50	JonesManorFarm		
+529	778	1	0		48	Ceb sock		
+530	816	1	0	disallow	47	ARBPIA vandal bot		
+531	390	1	0	disallow	47	Dynamic IP vandalism		
+532	204	1	0	disallow	47	Bangladeshi vandal		
+533	467	1	0	disallow	47	Sakaisinai7		
+534	594	1	0	disallow	46	Verizon mobile vandal		
+535	940	1	0	throttle,disallow	46	LTA 940		
+536	178	1	0	disallow	46	Crier attack vandalism		
+537	570	1	0	disallow	45	Checkmarx		
+538	696	1	0		44	Informative link spam		
+539	730	1	0		44	Filter to spot sock		
+540	48	0	0		43	Oft-inappropriate external links		
+541	191	1	0		43	User:ECW500		
+542	309	1	0	throttle	42	Unusual change of URLs		
+543	719	0	0	disallow	42	Empty ref vandal		
+544	480	1	0	disallow	42	Swamilive		
+545	508	1	0	disallow	42	Long-term pattern abuse II		
+546	471	1	0		41	Eurodance vandal		
+547	795	1	0	disallow	40	Ref Desk Troll		
+548	211	0	0		40	Warn users about entering email addresses		
+549	54	1	0		39	Virgin Killer vandalism		
+550	830	1	0	disallow	39	LTA_O_socking		
+551	953	1	0		39	Galobtter test filter		
+552	736	0	0		39	XSS Filter		
+553	629	1	0		38	Possible Spamming		
+554	945	1	0	throttle,disallow	37	proxy talk page abuse		
+555	490	1	0	disallow	37	Beatles IP vandal		
+556	340	1	0		36	Misc Vandalism, Type N+1		
+557	360	1	0	disallow	36	Spam Blacklist Circumvention Attempts		
+558	546	1	0	disallow	35	Disruptive user from Hyogo, Japan		
+559	673	0	0		35	Ankur Mazumder		
+560	896	1	0	disallow	34	ANI trolling		
+561	760	1	0	disallow	34	Sandbox vandal		
+562	154	0	0		33	Macedonia naming conflict 2		
+563	781	1	0	disallow	32	LTA collection 1		
+564	553	1	0		32	The FIFA Vandal from Peru		
+565	821	1	0	disallow	32	Supersonic jet		
+566	678	0	0		32	MOS vandal		
+567	701	0	0		32	Image link spam		
+568	241	1	0		32	Truth Lover sock vandal		
+569	378	1	0	disallow	31	Russian Science		
+570	775	1	0		30	MKUltra Vandal		
+571	792	1	0	disallow	30	Harassment		
+572	107	1	0		30	Continued spam of blacklisted links		
+573	412	1	0		30	Image added		
+574	440	0	0		30	intextual.com markup		
+575	448	1	0	disallow	30	unblock disruption		
+576	746	1	0	disallow	30	Prolific socker IV (B)		
+577	407	1	0	disallow	29	Disruptive block evasion		
+578	437	0	0	warn	29	Title blacklist for TITLES with more than 9 caps		
+579	25	1	0		28	Unusual behavior from new account		
+580	911	1	0	disallow	28	Wrestling social networking spammer		
+581	237	0	0		28	Creating page with maintenance templates		
+582	93	0	0		27	Web links in edit summaries		
+583	863	1	0		27	LGBT LTA		
+584	873	1	0	disallow	27	LTA 873		
+585	933	1	0	disallow	27	Deepak Khumar		
+586	45	1	0		26	Move to title with special characters		
+587	307	1	0	throttle,warn,disallow	26	Redlink/edit summary vandalism by specific user		
+588	609	1	0	disallow	25	Europa Universalis-related disruption		
+589	411	0	0	warn,disallow	25	Edit notices		
+590	199	0	0		25	Unflagged Bots		
+591	209	0	0	disallow	25	arwiki interwiki problem		
+592	370	1	0	throttle,disallow	24	Persistent vandalism		
+593	157	1	0	disallow	24	Greek nationalism		
+594	938	1	0	disallow	24	Targeted abuse		
+595	599	1	0		23	FPV		
+596	94	0	0	warn,disallow	23	San Diego = whale's vagina		
+597	326	1	0	disallow	22	Vandalism-only article names		
+598	845	1	0	warn,disallow	22	Prevention of AIV/UAA hinderance		
+599	361	1	0	disallow	22	"""Scruffy"" vandalism"		
+600	372	1	0	disallow	22	Reference desk vandalism		
+601	375	1	0	disallow	22	9/11 Vandalism		
+602	638	1	0	disallow	22	Stern review		
+603	656	1	0	disallow	22	Driver 3 vandal		
+604	203	1	0	disallow	22	Template spam from 88.105.0.0/16		
+605	488	1	0	disallow	22	Currently active sockmaster		
+606	839	0	0		21	Bad word test		
+607	95	1	0		21	Administrator attack page		
+608	363	1	0	disallow	21	Article becoming redirect to The Game		
+609	112	1	0	disallow	21	Repeated advocacy/spam on Zoophilia		
+610	641	1	0	disallow	21	AP disruption		
+611	141	1	0		21	Abusive unblock denials - new approach		
+612	923	1	0		21	Possible Nigerian phone scams		
+613	417	1	0	disallow	21	Suspected Sockpuppets		
+614	298	1	0	warn	20	Red link vandalism 2		
+615	615	1	0	disallow	20	Reference desk trolling		
+616	618	1	0	disallow	20	Wikipedia space trolling		
+617	726	1	0	disallow	20	Paul Easter		
+618	747	0	0		20	Removal or addition of [[WP:PP-30-500|pp-30-500]] by non-admin		
+619	6	0	0		19	Users editing editnotices of other users		
+620	538	1	0	disallow	19	Possible sockpuppetry		
+621	60	0	0		19	Removing sandbox header		
+622	851	0	0		19	Carlos Gardel vandalism		
+623	101	0	0		19	Fritzl case vandalism		
+624	645	1	0	disallow	19	Camp Half-Blood vandal		
+625	400	1	0	throttle,disallow	19	Prolific socker IV		
+626	763	1	0		19	Persistent vandal		
+627	395	1	0	disallow	18	Topic rangeblocks		
+628	443	1	0		18	Beatles		
+629	456	1	0	throttle,disallow	18	Kay Uwe Böhm		
+630	482	1	0		18	Using comments to evade edit filter		
+631	232	1	0	disallow	18	[[BJCP]]		
+632	255	1	0		18	Rodgarton		
+633	259	1	0		17	Brazil vandal		
+634	55	1	0		17	Signing articles		
+635	832	1	0	disallow	17	Profile sock		
+636	849	1	0		17	Cat Creek II		
+637	137	1	0		17	Copernicus vandal 2		
+638	951	1	0		17	TFA disruption		
+639	186	1	0	disallow	17	INFRINGEMENT vandal - [[Special:Contributions/172.130.240.199]]		
+640	883	0	0		16	Page moves to bad words or other vandalism		
+641	900	1	0		16	David Adam Kess Sock		
+642	447	1	0	disallow	16	Tile join targets		
+643	15	0	0		15	Discussion page vandalism		
+644	544	1	0	disallow	15	Specific-page vandalism by single vandal		
+645	381	1	0	disallow	15	Scientology group		
+646	954	1	0	disallow	15	LTA 954		
+647	503	1	0	disallow	15	GISHWHES		
+648	539	1	0	disallow	14	Lebanese football rangeblock		
+649	37	0	0	warn,disallow	14	"""Ur anus"" joke"		
+650	549	1	0	disallow	14	Airport vandal		
+651	319	1	0	disallow	14	Attacks on User:Rodhullandemu		
+652	359	1	0	disallow	14	Specific-page vandalism 2		
+653	897	0	0	disallow	14	Weird spambot		
+654	949	0	0		14	SQL Testing filter		
+655	217	1	0	warn,disallow	14	Abdul Rahman Al-Sudais anon vandalism		
+656	827	1	0	disallow	13	Abusive username activity		
+657	616	0	0	warn,disallow	13	disruption of music articles		
+658	713	1	0	disallow	13	Lee Corso		
+659	820	1	0	disallow	12	Talk page vandal		
+660	317	1	0	warn,disallow	12	Sentry Gun		
+661	580	1	0	disallow	12	Airport vandal		
+662	333	1	0	disallow	12	Akraj block evasion - IP socks (live test)		
+663	352	1	0	disallow	12	Macedonian language multiple AfDs		
+664	884	1	0	disallow	12	Nsmutte		
+665	654	0	0		12	Jetania vandalism		
+666	929	0	0		12	LTA Hydro		
+667	683	1	0		12	New users removing sections from the Reference Desk		
+668	462	1	0	disallow	12	Serial harassment of MuZemike		
+669	219	0	0		12	Arbcom requested filter (FOFF)		
+670	780	0	0		11	Addition of interlanguage links		
+671	556	1	0	disallow	11	Impersonation usernames		
+672	332	1	0		11	J.delanoy vandal		
+673	598	1	0	warn,disallow	11	Template redirect protection		
+674	158	0	0	disallow	11	Bill Posey = alligator child		
+675	451	1	0	disallow	11	IP attacks		
+676	727	0	0		11	Samwalton9 test filter		
+677	500	1	0	disallow	11	Sock		
+678	758	1	0		11	Block evading editor		
+679	776	1	0	disallow	10	Prolific socker IV (update)		
+680	290	0	0		10	172 Filter		
+681	36	1	0	warn,disallow	10	SEO push University of Atlanta		
+682	817	1	0	disallow	10	Obamacare vandalism		
+683	824	1	0	disallow	10	Zeitgeist		
+684	343	0	0		10	Keemstar vandalism		
+685	603	1	0	warn	10	Special case of reverting XLinkBot reverts		
+686	533	1	0	disallow	9	Balun link spammer		
+687	291	1	0		9	Prolific Seelincolshire Sock puppetry		
+688	810	1	0		9	Suix vandal		
+689	315	1	0		9	Garbled content		
+690	74	0	0		9	Unwikified text added to end of article		
+691	353	1	0	disallow	9	Blackout vandalism		
+692	468	1	0		9	Fixing vandal		
+693	486	1	0	disallow	9	Chilean vandal		
+694	248	1	0	disallow	9	Memphis Music Spam		
+695	764	1	0	disallow	9	Shirik's Refdesk Filter		
+696	530	1	0	disallow	8	Writ Keeper's test filter		
+697	22	1	0	disallow	8	New accounts mentioning the abuse filter		
+698	284	1	0	disallow	8	Image vandalism		
+699	802	1	0		8	Teenage Fairytale Dropouts LTA		
+700	611	1	0	disallow	8	Persistent talk page abuse from IP ranges III		
+701	371	1	0		8	Reference desk trolling		
+702	908	1	0		8	Si Thu Moe Min		
+703	153	1	0	disallow	8	Sock deterrance		
+704	932	0	0		8	"Adding ""theknot.com"" into BLP articles"		
+705	679	1	0		8	Possible offensive redirect		
+706	729	1	0		8	Vandalism from Santa Cruz Coe		
+707	514	0	0	warn	7	Legoktm's test filter		
+708	8	0	0		7	Self-redirect		
+709	324	1	0	disallow	7	Possible edits by Fraberj		
+710	327	1	0	disallow	7	Special TFA filter		
+711	857	1	0	disallow	7	DigitalRavan		
+712	108	0	0		7	Hangon Tag		
+713	927	1	0		7	LTA 927		
+714	695	1	0		7	Long term vandal		
+715	444	1	0	disallow	7	Pezzuto, Ivo references		
+716	208	0	0		7	Removal of WebCite URLs		
+717	245	1	0	disallow	7	AN and AN/I abuse		
+718	275	1	0		6	New users moving featured articles		
+719	38	1	0	warn,disallow	6	Argentina nuclear energy IP hopper		
+720	57	0	0		6	Creation of attack page titles		
+721	70	1	0		6	Unusual move reason		
+722	347	1	0	warn,disallow	6	Yet another test filter		
+723	612	1	0	disallow	6	Wrestling pusher		
+724	870	1	0	disallow	6	nowiki phishing		
+725	903	1	0	disallow	6	neocatechumenal way		
+726	401	0	0	disallow	6	"""Red hair"" vandalism"		
+727	418	1	0	disallow	6	User is Shirik (test filter)		
+728	421	0	0		6	Engvar filter		
+729	428	1	0		6	Image abuse		
+730	207	0	0		6	Non-admins reviewing unblock requests		
+731	214	0	0		6	Creating articles with title contained in username		
+732	512	1	0		5	Long-term pattern abuse IV		
+733	20	0	0		5	"Saying ""The abuse filter will block this"""		
+734	540	1	0	disallow	5	Temporary filter		
+735	801	1	0		5	Prolific_socking_IPs		
+736	49	1	0		5	Hina spam		
+737	571	1	0	disallow	5	Persistent Disruption		
+738	69	1	0		5	Unusual title change 2		
+739	842	1	0	disallow	5	Talk page abuse		
+740	338	0	0		5	Vuvuzela vandalism		
+741	858	0	0		5	Anime vandal filter		
+742	610	1	0	disallow	5	Turkish Vandal		
+743	355	1	0	disallow	5	Misc vandal		
+744	109	1	0	warn,disallow	5	Fleshlight		
+745	392	1	0	disallow	5	/v/		
+746	658	0	0	disallow	5	Disallow moving articles to the Topic namespace		
+747	952	1	0		5	Image vandalism IV		
+748	476	1	0	disallow	5	Kingdom of Sardinia		
+749	748	0	0		5	pp-30-500 editing restriction		
+750	286	1	0	warn,disallow	4	Tokusatsu Vandal		
+751	40	0	0		4	Detect deaths		
+752	318	1	0	disallow	4	School attacks		
+753	348	1	0		4	Rapid insertion of external links		
+754	127	0	0		4	Helpme tag in content namespace		
+755	646	0	0		4	Incorrectly adding images		
+756	924	1	0	disallow	4	Supersonic Transport Vandal		
+757	173	1	0		4	Knave		
+758	429	0	0		4	Possible malware attack		
+759	943	1	0	disallow	4	Prevent special disruption		
+760	693	0	0	disallow	4	Drake Bell attack		
+761	720	0	0		4	Rothwell-Smith spam		
+762	536	1	0		3	Mrpontiac1		
+763	301	1	0		3	Blu Aardvark abusive unblock requests		
+764	574	1	0	disallow	3	Vandalism		
+765	853	1	0	disallow	3	Quick vandalism response		
+766	882	1	0		3	LTA 882		
+767	387	1	0	disallow	3	Fake pagemove edit summaries		
+768	691	0	0		3	Shadows of the Void		
+769	184	1	0	warn,disallow	3	abusive edit summaries		
+770	707	1	0	disallow	3	Edit filter false positives vandalism		
+771	749	1	0		3	SS disruption		
+772	243	1	0		3	WikiMedia Viewer possible malware		
+773	244	0	0		3	Possibly broken proxies		
+774	251	1	0		3	Mark Levin Vandalism		
+775	552	1	0	disallow	2	Wikiassociate rangeblock		
+776	302	0	0		2	Possible COI		
+777	814	1	0		2	More refspam		
+778	73	0	0	throttle,warn,disallow	2	Throttle test		
+779	841	0	0		2	Unofficial sports transaction		
+780	589	0	0		2	Possible recreation of deleted material		
+781	606	0	0	warn	2	ANI restoration bug		
+782	362	0	0		2	New user creating page		
+783	628	1	0	disallow	2	User talk page vandalism by sockpuppets		
+784	118	0	0		2	The final selection of TFA's is made by Raul654, the featured article director		
+785	379	0	0		2	username registrations by trademarkia		
+786	413	1	0		2	Adding images to userspace		
+787	669	0	0		2	Service Kompor		
+788	162	1	0	warn,disallow	2	Thermal bag		
+789	682	1	0	disallow	2	SEO/Attack page		
+790	431	1	0	disallow	2	Malaysian IP hopping vandal		
+791	687	0	0		2	Possible word replacement extension		
+792	714	1	0	disallow	2	Reference desk sexuality trolling		
+793	715	0	0	warn,disallow	2	IP notification on RFP/C		
+794	484	0	0	warn	2	Shutdown of ClueBot by non-admin user		
+795	487	0	0		2	Test filter for feedback tool oversight prevention		
+796	805	1	0		1	Compromised activity		
+797	561	1	0	disallow	1	Chaosname II		
+798	310	1	0	disallow	1	Pagemove vandalism by specific vandal #2		
+799	822	1	0	disallow	1	Shinji		
+800	831	0	0		1	Yanchilin spammer		
+801	334	1	0	disallow,blockautopromote	1	Grawp page move vandalism		
+802	350	1	0		1	Waterspaces candidates		
+803	120	1	0		1	Real life info		
+804	121	1	0		1	Testing filter		
+805	649	1	0		1	SP disruption		
+806	142	1	0	disallow	1	Buddhism and Quantum Physics		
+807	399	1	0	disallow	1	User page vandalism		
+808	145	1	0	disallow	1	Socks abusing talk page privilege		
+809	677	0	0		1	April Fools disruption		
+810	685	1	0		1	HH disruption		
+811	196	1	0		1	Michael Jackson move vandalism		
+812	198	1	0		1	Sock test		
+813	230	1	0	disallow	1	AnonTalk 4		
+814	256	1	0		0	Duran Duran vandal		
+815	515	1	0	warn,disallow	0	More LTA		
+816	771	1	0		0	Orion LTA		
+817	772	0	0		0	Crosses for deceased people		
+818	517	1	0	throttle,disallow	0	Train station removal		
+819	262	1	0		0	If you donate ...		
+820	518	1	0	disallow	0	Hoppity Hooper vandal		
+821	774	1	0		0	Eolgi highway vandal		
+822	265	0	0		0	l337 vandalism		
+823	522	1	0	disallow	0	Prolific Socking		
+824	267	1	0	disallow,blockautopromote	0	Samlaptop		
+825	272	0	0		0	Page author removing CSD tags		
+826	528	1	0	disallow	0	Persistent Abuse		
+827	274	1	0		0	Digimon vandal		
+828	276	1	0		0	scripted anomtalk/spoofed IP vandalism		
+829	21	1	0	blockautopromote	0	"""Ezekiel"" guy"		
+830	277	1	0		0	possible vandalbot		
+831	535	1	0	disallow	0	Voobly spam		
+832	791	1	0		0	Spam(bot|mer)s continuously hitting the spam blacklist		
+833	537	0	0	disallow	0	Transient harassment sites filter		
+834	282	1	0		0	ArbCom filter 1		
+835	794	0	0		0	iPlayer Programme link		
+836	27	0	0		0	New user replacing page content		
+837	283	1	0		0	Copyright violations in edit summaries		
+838	32	0	0		0	Huge additions by new users		
+839	292	0	0		0	Repeating characters in edit summary		
+840	548	1	0	disallow	0	Fort Irwin National Training Center rangeblock		
+841	551	1	0	disallow	0	Leandro Carvalho rangeblock		
+842	807	1	0		0	Ourmine		
+843	296	1	0	disallow	0	Edit summary vandalism III		
+844	41	1	0		0	Pagemove vand		
+845	297	1	0		0	Jeske's Test Filter		
+846	42	1	0	disallow	0	ASCII art Mk.2		
+847	299	1	0	disallow	0	Personal attacks		
+848	555	1	0		0	Aaron spam		
+849	300	1	0		0	Cross-posting		
+850	558	1	0	disallow	0	FIFA West Germany		
+851	303	0	0		0	COI Page Creation		
+852	304	0	0		0	Rayman vandalism		
+853	562	1	0	disallow	0	Hackneyhound		
+854	308	0	0		0	Malformed Mediation Cabal Requests		
+855	565	1	0	warn	0	Cat abuse		
+856	823	1	0		0	Suspicious activity from new account		
+857	568	1	0		0	SPI Clerk impersonation		
+858	569	1	0		0	Texas film fan		
+859	572	1	0	disallow	0	Persistent Disruption II		
+860	62	0	0		0	Deleting the Main Page		
+861	64	1	0		0	Shock sites in edit summaries		
+862	321	1	0		0	Shirik's test filter		
+863	67	0	0	throttle	0	Sockpuppetry at AfD discussions		
+864	836	1	0	disallow	0	ANI / Air India Tehran		
+865	582	0	0		0	IE 8/9 XSS Filter Bug		
+866	329	0	0	warn,disallow	0	SPI disruption		
+867	586	0	0		0	New user reviewing AfC submissions		
+868	75	0	0		0	Blanking Vandalism		
+869	588	1	0		0	Promotional usernames		
+870	335	1	0	disallow	0	Talk page abuse		
+871	591	1	0		0	Christian2941		
+872	336	1	0	disallow	0	Darth Vader		
+873	592	1	0		0	Christian2941 (duplicate)		
+874	337	0	0	warn,disallow	0	Arkansas TV IP vandalism		
+875	83	1	0	disallow	0	Genesis vandal		
+876	84	1	0		0	goatse vandalism		
+877	85	1	0		0	Beetstra - speed testing rules		
+878	86	1	0		0	Argentina nuclear energy IP hopper - Rule 1		
+879	87	1	0		0	Argentina nuclear energy IP hopper - Rule 2		
+880	88	1	0		0	Argentina nuclear energy IP hopper - Rule 3		
+881	89	1	0		0	Argentina nuclear energy IP hopper - Rule 4		
+882	90	1	0		0	Argentina nuclear energy IP hopper - Rule 5		
+883	91	1	0		0	Argentina nuclear energy IP hopper - Rule 6		
+884	92	1	0		0	Argentina nuclear energy IP hopper - Rule 7		
+885	349	1	0	disallow	0	Dudley Attacks		
+886	605	1	0		0	Animal Welfare issues		
+887	607	1	0		0	March 2014 test filter		
+888	100	0	0		0	"""Warren G. Harding"" = Gangsta"		
+889	356	1	0		0	Removal of LGBT project banner with disruptive edit summary		
+890	357	0	0		0	Test pages		
+891	110	0	0	throttle	0	Account creation throttle		
+892	111	0	0		0	Gay or fag		
+893	626	0	0		0	Deletion by a non-administrator		
+894	374	1	0	disallow	0	"""linkless spam"""		
+895	376	1	0		0	InfoCheck Vandalism		
+896	122	0	0		0	Changing Username malformed requests		
+897	124	1	0	warn,disallow	0	hitlerbunker.com		
+898	893	0	0		0	Predatory open access journals.		
+899	382	1	0	disallow	0	Scientology		
+900	128	1	0		0	Vandal accounts		
+901	130	1	0	warn,disallow	0	Kaveh L. Afrasiabi		
+902	644	0	0	disallow	0	Mitrabarun Mitra		
+903	647	0	0		0	New user removing XfD template		
+904	136	0	0		0	Editing the Main Page		
+905	138	1	0		0	Template vandalism		
+906	907	0	0		0	St. Bernard (dog)		
+907	396	0	0		0	Don't delete the main page		
+908	143	1	0	warn,disallow	0	Cases of extreme spam of appropriate links		
+909	147	0	0		0	AfD filter		
+910	659	1	0	throttle	0	Repeat vandal		
+911	404	1	0	disallow	0	Talk page abuse		
+912	150	1	0		0	Pattern vandal on name-dropping		
+913	406	1	0	throttle	0	Prolific socker V		
+914	662	0	0	disallow	0			
+915	156	0	0	disallow	0	"""Power Rangers suck"" vandal"		
+916	671	1	0		0	Raghu Acharya		
+917	160	1	0	warn,disallow	0	Punchbowl, New South Wales		
+918	416	1	0		0	sbl-circumvention		
+919	672	1	0		0	technewsprovider		
+920	169	1	0	disallow	0	WoW Socks		
+921	427	0	0		0	Possible Emergency Reponse Needed		
+922	939	1	0		0	Tracking 201810		
+923	692	0	0		0	New user placing copyviocore template		
+924	181	0	0		0	Stop persistent sockpuppets of banned users		
+925	182	0	0		0	Test filter		
+926	950	1	0		0	LTA circus performers		
+927	187	1	0		0	Gunfu vandal - [[Special:Contributions/69.124.8.165]]		
+928	700	1	0		0	Image redirect vandalism		
+929	446	1	0	disallow	0	Vandal on JW's talk (temporary)		
+930	704	1	0		0	Page spam		
+931	449	1	0		0	Long-term BLP violations		
+932	705	1	0		0	Module vandal		
+933	452	1	0		0	Inserted a spam link to any page		
+934	197	0	0	warn	0	Duplicate section		
+935	457	1	0	throttle,disallow	0	Vandalbots		
+936	202	1	0		0	Masked Rider Blade Knight vandal		
+937	717	1	0	disallow	0	Temporary blacklisted usernames		
+938	206	1	0		0	Scibaby #2		
+939	724	1	0		0	John Galea		
+940	216	1	0		0	Circumcision vandalism 1		
+941	222	1	0	disallow	0	Kamen Rider vandal		
+942	223	1	0	disallow	0	Marco Lupis articles		
+943	481	1	0	disallow	0	Noticeboard Troll		
+944	227	1	0		0	Financial sockfarm		
+945	741	0	0		0	Article to Wikipedia namespace moves		
+946	498	1	0		0	Creator of test pages		
+947	754	1	0		0	Harassment by IP hopper		
+948	246	0	0		0	"""Imma let you finish ..."" new meme"		
+949	504	0	0		0	Costarrica's Top Model sock		
+950	761	1	0		0	High-volume socker		
+951	252	1	0		0	Power rangers vandal		
+952	254	0	0		0	Titles with special search terms		
+953	511	0	0		0	test filter		
