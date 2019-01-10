@@ -412,8 +412,12 @@ what do the most active filters do?
 833 "newer user possibly adding a unreferenced or improperly referenced material"; no actions
 
 * get a sense of what gets filtered (more qualitative)
-  vandalism
-  unintentional suboptimal behavior from new users who don't know better (blanking an article/section; creating an article without categories; adding larger texts without references)
+  * vandalism
+  * unintentional suboptimal behavior from new users who don't know better (blanking an article/section; creating an article without categories; adding larger texts without references); or from users who are too lazy (to write proper edit summaries)
+  * editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to ortography norms; use of emoticons and !; ascii art?)
+  * "unexplained removal of sourced content" (#636) may be an attempt to silence a view point the editor doesn't like
+  * "log/throttle possible sleeper account creations" (#527): attempt to prevent sock-puppeting
+  * 712 is kinda weird^^
 
 * why get certain filters
 (and not others?)
