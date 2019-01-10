@@ -413,11 +413,15 @@ what do the most active filters do?
 
 * get a sense of what gets filtered (more qualitative)
   * vandalism
-  * unintentional suboptimal behavior from new users who don't know better (blanking an article/section; creating an article without categories; adding larger texts without references); or from users who are too lazy (to write proper edit summaries)
+  * unintentional suboptimal behavior from new users who don't know better (blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (#180)); or from users who are too lazy (to write proper edit summaries)
   * editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to ortography norms; use of emoticons and !; ascii art?)
   * "unexplained removal of sourced content" (#636) may be an attempt to silence a view point the editor doesn't like
+  * related: "IP adding possibly unreferenced material to BLP" (#686): similar to previous one; attempt at self-promotion? or libel
+  * and "users creating autobiographies" (#148)
   * "log/throttle possible sleeper account creations" (#527): attempt to prevent sock-puppeting
   * 712 is kinda weird^^
+  * 364 is a hidden filter with "changing the name in a BLP infobox": targeted vandalism?
+  * possible copyright issues/link spam for SEO: "adding external images/links" (#220)
 
 * why get certain filters
 (and not others?)
