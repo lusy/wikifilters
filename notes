@@ -347,7 +347,7 @@ mysql> describe abuse_filter; (https://www.mediawiki.org/wiki/Extension:AbuseFil
 | af_pattern         | blob                | NO   |     | NULL    |                |
 | af_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
 | af_user_text       | varbinary(255)      | NO   |     | NULL    |                |
-| af_timestamp       | binary(14)          | NO   |     | NULL    |                |
+| af_timestamp       | binary(14)          | NO   |     | NULL    |                | // I think that's last modified
 | af_enabled         | tinyint(1)          | NO   |     | 1       |                |
 | af_comments        | blob                | YES  |     | NULL    |                |
 | af_public_comments | tinyblob            | YES  |     | NULL    |                |
