@@ -158,47 +158,47 @@
 156	874	1	0	1	0	0	default	20181219190423	disallow	4745	Long term abuse username / impersonation creations	harassment	hidden;
 157	894	0	0	1	0	0	default	20180913023553	warn	4625	Possible Self-Published Sources	biased_pov	
 158	887	0	0	1	0	0	default	20181105103817	warn,disallow	4589	Excessive repetition in usernames	vandalism?, spam?, sockpuppetry?	
-159	895	1	0	0	0	0	default	20180927230229		4577	Possible spambot username		
-160	5	0	0	1	0	0	default	20181018194804	warn,tag	4558	User self-renaming or moving user talk pages into article talk space		
-161	524	0	0	0	1	0	default	20160614033823		4502	Interwiki bot		
-162	435	0	0	0	1	0	default	20120906154650	warn	4380	Non-confirmed user adding protection template to a page		
-163	789	1	0	0	0	0	default	20180412180509		4375	BethNaught's test filter		
-164	464	1	0	1	0	0	default	20160614010306	warn	4290	Possible open proxy		
-165	68	1	0	1	0	0	default	20181023224224	throttle,disallow	3905	Pagemove throttle for new users		
-166	238	0	0	0	1	0	default	20100217195031		3857	New article without normal opening sentence		
-167	573	0	0	0	1	0	default	20160614034544		3718	Multiple blank lines		
-168	497	0	0	0	1	0	feedback	20130108151106	disallow	3660	Feedback: Common Vandalism 5		
-169	17	1	0	0	1	0	default	20170509184817	tag	3563	Prolific socker II		
-170	670	0	0	0	1	0	default	20150407175738		3514	New user removing references		
-171	860	0	0	1	0	0	default	20181112215348	disallow	3451	Ryan Ross vandalism		
-172	105	0	0	0	1	0	default	20090928191623		3379	Hypothetical album releases		
-173	494	0	0	0	1	0	feedback	20130108151035	disallow	3325	Feedback: Common Vandalism 2		
-174	502	0	0	0	1	0	feedback	20130424011002	disallow	3280	Feedback: Extremely long words		
-175	777	0	0	1	0	0	default	20171210164915		3149	End date present vandal		
-176	579	1	0	1	0	0	default	20180923065811		3112	Possible sockpuppet account creations		
-177	850	0	0	1	0	0	default	20170420153045	warn	3112	New user moving page to project space		
-178	322	1	0	0	1	0	default	20120203223448	throttle	3091	Null edits by new editors		
-179	289	0	0	0	1	0	default	20150212173453	warn	3051	New user creating interrogative pages		
-180	268	1	0	0	1	0	default	20150212173449	warn	2964	Red link vandalism		
-181	264	1	0	1	0	0	default	20170511025503	disallow	2919	Specific-page vandalism		
-182	52	1	0	1	0	0	default	20181006230705	disallow	2890	Edit summary vandalism II		
-183	590	0	0	0	0	0	default	20170414185610		2850	Unicode replacement characters		
-184	176	0	0	0	1	0	default	20090928230931		2820	user space link added in article space		
-185	721	1	0	1	0	0	default	20171002133237	disallow	2770	Armenian football vandal or similar		
-186	593	0	0	0	1	0	default	20140102185042		2764	Monitor addition of archive.org		
-187	495	0	0	0	1	0	feedback	20130108151045	disallow	2697	Feedback: Common Vandalism 3		
-188	479	0	0	0	1	0	default	20160614033123	warn	2692	Adding example.jpg to article space		
-189	783	0	0	1	0	0	default	20170418154458	warn	2677	Adding {{persondata}}		
-190	496	0	0	0	1	0	feedback	20130108151054	disallow	2658	Feedback: Common Vandalism 4		
-191	403	1	0	0	1	0	default	20130404080817		2605	Inappropriate use of userpage		
-192	53	0	0	0	1	0	default	20090423131929		2595	trademark/copyright symbols		
-193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages		
-194	242	1	0	1	0	0	default	20150219194933	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle		
-195	898	1	0	1	0	0	default	20180414083948		2343	Cyp test filter		
-196	904	0	0	0	1	0	default	20180406183614		2338	Long edit summaries		
-197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter		
-198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?		
-199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism		
+159	895	1	0	0	0	0	default	20180927230229		4577	Possible spambot username	misc	hidden, disabled;
+160	5	0	0	1	0	0	default	20181018194804	warn,tag	4558	User self-renaming or moving user talk pages into article talk space	good_faith?	
+161	524	0	0	0	1	0	default	20160614033823		4502	Interwiki bot	test_bot?	deleted
+162	435	0	0	0	1	0	default	20120906154650	warn	4380	Non-confirmed user adding protection template to a page	good_faith	deleted
+163	789	1	0	0	0	0	default	20180412180509		4375	BethNaught's test filter	test	hidden, disabled;
+164	464	1	0	1	0	0	default	20160614010306	warn	4290	Possible open proxy	misc	hidden
+165	68	1	0	1	0	0	default	20181023224224	throttle,disallow	3905	Pagemove throttle for new users	vandalism?	hidden; tagged as “vandalism”, since hidden
+166	238	0	0	0	1	0	default	20100217195031		3857	New article without normal opening sentence	vandalism	deleted
+167	573	0	0	0	1	0	default	20160614034544		3718	Multiple blank lines	good_faith?, bad_style?	deleted
+168	497	0	0	0	1	0	feedback	20130108151106	disallow	3660	Feedback: Common Vandalism 5	vandalism, harassment?	deleted; “Merged back into 460. --mlitn”
+169	17	1	0	0	1	0	default	20170509184817	tag	3563	Prolific socker II	vandalism?, sockpuppetry?	hidden, deleted;
+170	670	0	0	0	1	0	default	20150407175738		3514	New user removing references	test?, good_faith?	deleted
+171	860	0	0	1	0	0	default	20181112215348	disallow	3451	Ryan Ross vandalism	vandalism	
+172	105	0	0	0	1	0	default	20090928191623		3379	Hypothetical album releases	bad_style	deleted; “Detect the addition of hypothetical future album releases that usually violate WP:CRYSTAL and/or WP:V”;
+173	494	0	0	0	1	0	feedback	20130108151035	disallow	3325	Feedback: Common Vandalism 2	vandalism?, harassment?	deleted; “Merged back into 460. --mlitn”
+174	502	0	0	0	1	0	feedback	20130424011002	disallow	3280	Feedback: Extremely long words	vandalism?; good_faith?, bad_style?	deleted
+175	777	0	0	1	0	0	default	20171210164915		3149	End date present vandal	vandalism	
+176	579	1	0	1	0	0	default	20180923065811		3112	Possible sockpuppet account creations	vandalism?, sockpuppetry?	hidden
+177	850	0	0	1	0	0	default	20170420153045	warn	3112	New user moving page to project space	good_faith?	
+178	322	1	0	0	1	0	default	20120203223448	throttle	3091	Null edits by new editors	good_faith?, vandalism?	hidden, deleted;
+179	289	0	0	0	1	0	default	20150212173453	warn	3051	New user creating interrogative pages	good_faith?, bad_style?	deleted
+180	268	1	0	0	1	0	default	20150212173449	warn	2964	Red link vandalism	vandalism	hidden, deleted;
+181	264	1	0	1	0	0	default	20170511025503	disallow	2919	Specific-page vandalism	vandalism	hidden
+182	52	1	0	1	0	0	default	20181006230705	disallow	2890	Edit summary vandalism II	vandalism	hidden
+183	590	0	0	0	0	0	default	20170414185610		2850	Unicode replacement characters	good_faith?, bad_style?	disabled
+184	176	0	0	0	1	0	default	20090928230931		2820	user space link added in article space	good_faith?, bad_style?	deleted
+185	721	1	0	1	0	0	default	20171002133237	disallow	2770	Armenian football vandal or similar	vandalism	hidden
+186	593	0	0	0	1	0	default	20140102185042		2764	Monitor addition of archive.org	misc?	deleted; “Repurposed to monitor anons inserting archive.org links, so that 559 blocks archive.is only, and 593 monitors archive.org”
+187	495	0	0	0	1	0	feedback	20130108151045	disallow	2697	Feedback: Common Vandalism 3	vandalism, harassment?	deleted; “Merged back into 460. --mlitn”
+188	479	0	0	0	1	0	default	20160614033123	warn	2692	Adding example.jpg to article space	good_faith	deleted; “Deleting, superseded by [[Special:AbuseFilter/631]] ~MA 2016.06.13”
+189	783	0	0	1	0	0	default	20170418154458	warn	2677	Adding {{persondata}}	good_faith	according to comments; I don’t quite get what it is
+190	496	0	0	0	1	0	feedback	20130108151054	disallow	2658	Feedback: Common Vandalism 4	vandalism, harassment?	deleted; “Merged back into 460. --mlitn”
+191	403	1	0	0	1	0	default	20130404080817		2605	Inappropriate use of userpage	vandalism?, biased_pov?	hidden, deleted;
+192	53	0	0	0	1	0	default	20090423131929		2595	trademark/copyright symbols	spam?, copyright_violation?	deleted
+193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages	misc	disabled
+194	242	1	0	1	0	0	default	20150219194933	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle	misc, vandalism?	hidden
+195	898	1	0	1	0	0	default	20180414083948		2343	Cyp test filter	test	hidden
+196	904	0	0	0	1	0	default	20180406183614		2338	Long edit summaries	test	deleted
+197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter	test	
+198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?	spam?, vandalism?	hidden, deleted;
+199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism	vandalism?, harassment?	hidden, deleted;
 200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters		
 201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates		
 202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words		
