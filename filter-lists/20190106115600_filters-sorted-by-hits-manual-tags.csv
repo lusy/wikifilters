@@ -32,44 +32,44 @@
 30	149	0	0	1	0	0	default	20171208034036	warn,tag	194824	User adds link containing username	misc	don’t understand this one either
 31	29	0	0	1	0	0	default	20181018234133	tag	186026	New user removing speedy deletion templates	good_faith	
 32	344	0	0	0	1	0	default	20160614031628	warn	180995	Prevent full page blanking	good_faith	Filter is deleted
-33	180	0	0	1	0	0	default	20171025200431	tag	175939	Large unwikified new article		
-34	351	0	0	1	0	0	default	20170514124357	warn,tag	171171	Text added after categories and interwiki		
-35	391	0	0	1	0	0	default	20170514124402	tag	163579	Changing height/weight in an infobox		
-36	402	0	0	0	1	0	default	20130404080808		155133	New article without references		
-37	320	0	0	1	0	0	default	20181023193636	disallow	152994	"""Your mom"" Vandalism"		
-38	39	0	0	1	0	0	default	20181020203444	warn,tag	150568	School libel and vandalism		
-39	18	0	0	0	1	0	default	20120202004352		133641	Test type edits from clicking on edit bar		
-40	631	0	0	1	0	0	default	20170514124409	tag	132044	Extraneous toolbar markup		
-41	12	0	0	1	0	0	default	20170606215509	disallow	122756	Replacing a page with obscenities		
-42	247	1	0	1	0	0	default	20180412174428	warn,tag	121192	Adding emails in articles		
-43	80	0	0	1	0	0	default	20190104180905	throttle,warn,tag	119104	Link spamming		
-44	354	1	0	1	0	0	default	20181125142759	tag	115814	Promotional text added by user to own user(-talk) page		
-45	11	0	0	1	0	0	default	20181018194241	warn,tag	109657	You/He/She/It sucks		
-46	499	1	0	1	0	0	default	20150819133615		106559	Possible spambot or promotional username		
-47	680	0	0	1	0	0	default	20181023195329	disallow	95242	Adding emoji unicode characters		
-48	34	1	0	1	0	0	default	20181018234459	disallow	93880	New or unregistered user blanking someone else's user or user talk page		
-49	752	1	0	1	0	0	default	20170514124428		93854	Possible spamming of references		
-50	271	1	0	0	1	0	default	20181104190824	warn	91822	Possible spambot		
-51	614	1	0	1	0	0	default	20190101052937	disallow	90578	Yolo swag and other vandalism trends		
-52	188	0	0	0	1	0	default	20150212173350		86463	Creating articles with a title containing or contained in username		
-53	339	0	0	1	0	0	default	20170514124352	tag	86338	Claims of homosexuality, bisexuality, or transexuality in a BLP		
-54	365	0	0	1	0	0	default	20181023193820	disallow	85470	Unusual changes to featured or good content		
-55	65	0	0	0	1	0	default	20100106173457		74098	Excessive whitespace		
-56	325	0	0	0	1	0	default	20120808231331	disallow	73942	!!!!! in the article-space		
-57	285	0	0	0	0	0	default	20160911181242	disallow	73902	Common Vandalism		
-58	126	0	0	1	0	0	default	20160713155301		65137	Youtube links		
-59	129	0	0	0	1	0	default	20150212173327		64869	Possible tireless sock creating film pages of non-existing films		
-60	423	0	0	0	1	0	default	20160614032412		64591	WikiLove		
-61	33	0	0	1	0	0	default	20181018234422	warn,tag	60707	Talk page blanking by unregistered/new user		
-62	270	0	0	0	1	0	default	20170509185805	tag	56352	Interwiki link removal		
-63	867	0	0	1	0	0	default	20181018194458		51805	Large creations by inexperienced user		
-64	346	0	0	1	0	0	default	20170514124354	warn,tag	49652	Large non-English contributions		
-65	458	0	0	0	1	1	default	20140303202151	disallow	46898	Feedback: Extremely short post		
+33	180	0	0	1	0	0	default	20171025200431	tag	175939	Large unwikified new article	good_faith	
+34	351	0	0	1	0	0	default	20170514124357	warn,tag	171171	Text added after categories and interwiki	good_faith?	
+35	391	0	0	1	0	0	default	20170514124402	tag	163579	Changing height/weight in an infobox	vandalism	Common form of vandalism for sports people pages
+36	402	0	0	0	1	0	default	20130404080808		155133	New article without references	good_faith	deleted
+37	320	0	0	1	0	0	default	20181023193636	disallow	152994	"""Your mom"" Vandalism"	vandalism	
+38	39	0	0	1	0	0	default	20181020203444	warn,tag	150568	School libel and vandalism	vandalism	
+39	18	0	0	0	1	0	default	20120202004352		133641	Test type edits from clicking on edit bar	lazyness	deleted
+40	631	0	0	1	0	0	default	20170514124409	tag	132044	Extraneous toolbar markup	good_faith	“Filter to detect most commonly seen extraneous markup inserted via the Toolbar from new users, presumably the result of misclicking. Log only”
+41	12	0	0	1	0	0	default	20170606215509	disallow	122756	Replacing a page with obscenities	vandalism	
+42	247	1	0	1	0	0	default	20180412174428	warn,tag	121192	Adding emails in articles	misc?, harassment?	filter is hidden, so not clear whether it’s biased_pov or doxxing
+43	80	0	0	1	0	0	default	20190104180905	throttle,warn,tag	119104	Link spamming	vandalism, biased_pov, seo	
+44	354	1	0	1	0	0	default	20181125142759	tag	115814	Promotional text added by user to own user(-talk) page	biased_pov	
+45	11	0	0	1	0	0	default	20181018194241	warn,tag	109657	You/He/She/It sucks	vandalism, harassment	
+46	499	1	0	1	0	0	default	20150819133615		106559	Possible spambot or promotional username	vandalism, biased_pov, seo	filter is hidden;
+47	680	0	0	1	0	0	default	20181023195329	disallow	95242	Adding emoji unicode characters	good_faith	
+48	34	1	0	1	0	0	default	20181018234459	disallow	93880	New or unregistered user blanking someone else's user or user talk page	good_faith, vandalism	probably at least partially vandalism, since filter is hidden
+49	752	1	0	1	0	0	default	20170514124428		93854	Possible spamming of references	vandalism, biased_pov, seo	hidden
+50	271	1	0	0	1	0	default	20181104190824	warn	91822	Possible spambot	vandalism, biased_pov, seo	
+51	614	1	0	1	0	0	default	20190101052937	disallow	90578	Yolo swag and other vandalism trends	vandalism	tagged as vandalism only, since hidden and not clear
+52	188	0	0	0	1	0	default	20150212173350		86463	Creating articles with a title containing or contained in username	biased_pov?	deleted, bc apparently redundant with 148
+53	339	0	0	1	0	0	default	20170514124352	tag	86338	Claims of homosexuality, bisexuality, or transexuality in a BLP	vandalism, harassment	
+54	365	0	0	1	0	0	default	20181023193820	disallow	85470	Unusual changes to featured or good content	vandalism	Unusual == unusually big (edit_delta > 15000 | edit_delta < -15000)
+55	65	0	0	0	1	0	default	20100106173457		74098	Excessive whitespace	vandalism, good_faith?	deleted
+56	325	0	0	0	1	0	default	20120808231331	disallow	73942	!!!!! in the article-space	misc?, bad_style	new tag needed for “overly agitated person”?; deleted
+57	285	0	0	0	0	0	default	20160911181242	disallow	73902	Common Vandalism	vandalism	disabled; merged into 384
+58	126	0	0	1	0	0	default	20160713155301		65137	Youtube links	misc?	what’s the argumentation here? Youtube not suitable as encyclopedia source?; from the comments “Attempt to design a filter for continuous abuse on a handful of BBC articles Continuous insertion of youtube movies, undoing XLinkBot reverts, etc. etc.”
+59	129	0	0	0	1	0	default	20150212173327		64869	Possible tireless sock creating film pages of non-existing films	vandalism	extra tag for sockpuppeting? Deleted
+60	423	0	0	0	1	0	default	20160614032412		64591	WikiLove	misc	deleted; “Purpose of this filter: Track usage of the WikiLove tool, both by new and experienced users, to watch for use and abuse. We'll have better tracking tools soon, but right now this is a simple solution to watch what's going on. To reduce impact on patrollers, it merely flags the edits. Please discuss with [[User:Eloquence]] if you have comments or questions. Since this filter is in active use by a number of people, please do not disable without discussion. 1908 -- Erik Moeller, WMF, 2011-07-01“
+61	33	0	0	1	0	0	default	20181018234422	warn,tag	60707	Talk page blanking by unregistered/new user	vandalism, good_faith?	
+62	270	0	0	0	1	0	default	20170509185805	tag	56352	Interwiki link removal	vandalism	deleted
+63	867	0	0	1	0	0	default	20181018194458		51805	Large creations by inexperienced user	good_faith	
+64	346	0	0	1	0	0	default	20170514124354	warn,tag	49652	Large non-English contributions	good_faith, vandalism?	
+65	458	0	0	0	1	1	default	20140303202151	disallow	46898	Feedback: Extremely short post	good_faith?	deleted; couple of official WMF people, identified as such, are discussing on the filter in the comments
 66	806	1	0	1	0	0	default	20181012022640	throttle	46840	New account suspicious activity		
 67	803	0	0	1	0	0	default	20181023223916	disallow	46756	Prevent new users from editing other's user pages		
 68	117	0	0	1	0	0	default	20160614004645	tag	43822	removal of Category:Living people		
 69	316	1	0	1	0	0	default	20150218175744	throttle	43756	Subtle changes to articles		
-70	368	0	0	0	1	0	default	20150212173530	warn	42952	Making large changes when marking the edit as minor		
+70	368	0	0	0	1	0	default	20150212173530	warn	42952	Making large changes when marking the edit as minor		deleted
 71	249	0	0	1	0	0	default	20180328195529	throttle,tag	41712	New user conducting large scale reverts		
 72	9	0	0	0	0	0	default	20181018194855		41354	Personal attacks by unregistered or new user		
 73	1	0	0	0	0	0	default	20181017165127		40258	General test filter		
