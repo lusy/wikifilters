@@ -45,7 +45,7 @@
 43	80	0	0	1	0	0	default	20190104180905	throttle,warn,tag	119104	Link spamming	vandalism, biased_pov, seo	
 44	354	1	0	1	0	0	default	20181125142759	tag	115814	Promotional text added by user to own user(-talk) page	biased_pov	
 45	11	0	0	1	0	0	default	20181018194241	warn,tag	109657	You/He/She/It sucks	vandalism, harassment	
-46	499	1	0	1	0	0	default	20150819133615		106559	Possible spambot or promotional username	vandalism, biased_pov, seo	filter is hidden;
+46	499	1	0	1	0	0	default	20150819133615		106559	Possible spambot or promotional username	vandalism, biased_pov, seo	filter is hidden
 47	680	0	0	1	0	0	default	20181023195329	disallow	95242	Adding emoji unicode characters	good_faith	
 48	34	1	0	1	0	0	default	20181018234459	disallow	93880	New or unregistered user blanking someone else's user or user talk page	good_faith, vandalism	probably at least partially vandalism, since filter is hidden
 49	752	1	0	1	0	0	default	20170514124428		93854	Possible spamming of references	vandalism, biased_pov, seo	hidden
@@ -55,109 +55,109 @@
 53	339	0	0	1	0	0	default	20170514124352	tag	86338	Claims of homosexuality, bisexuality, or transexuality in a BLP	vandalism, harassment	
 54	365	0	0	1	0	0	default	20181023193820	disallow	85470	Unusual changes to featured or good content	vandalism	Unusual == unusually big (edit_delta > 15000 | edit_delta < -15000)
 55	65	0	0	0	1	0	default	20100106173457		74098	Excessive whitespace	vandalism, good_faith?	deleted
-56	325	0	0	0	1	0	default	20120808231331	disallow	73942	!!!!! in the article-space	misc?, bad_style	new tag needed for “overly agitated person”?; deleted
-57	285	0	0	0	0	0	default	20160911181242	disallow	73902	Common Vandalism	vandalism	disabled; merged into 384
-58	126	0	0	1	0	0	default	20160713155301		65137	Youtube links	misc?	what’s the argumentation here? Youtube not suitable as encyclopedia source?; from the comments “Attempt to design a filter for continuous abuse on a handful of BBC articles Continuous insertion of youtube movies, undoing XLinkBot reverts, etc. etc.”
+56	325	0	0	0	1	0	default	20120808231331	disallow	73942	!!!!! in the article-space	misc?, bad_style	new tag needed for “overly agitated person”? deleted 
+57	285	0	0	0	0	0	default	20160911181242	disallow	73902	Common Vandalism	vandalism	disabled;  merged into 384 
+58	126	0	0	1	0	0	default	20160713155301		65137	Youtube links	misc?	what’s the argumentation here? Youtube not suitable as encyclopedia source?  from the comments “Attempt to design a filter for continuous abuse on a handful of BBC articles Continuous insertion of youtube movies, undoing XLinkBot reverts, etc. etc.” 
 59	129	0	0	0	1	0	default	20150212173327		64869	Possible tireless sock creating film pages of non-existing films	vandalism	extra tag for sockpuppeting? Deleted
-60	423	0	0	0	1	0	default	20160614032412		64591	WikiLove	misc	deleted; “Purpose of this filter: Track usage of the WikiLove tool, both by new and experienced users, to watch for use and abuse. We'll have better tracking tools soon, but right now this is a simple solution to watch what's going on. To reduce impact on patrollers, it merely flags the edits. Please discuss with [[User:Eloquence]] if you have comments or questions. Since this filter is in active use by a number of people, please do not disable without discussion. 1908 -- Erik Moeller, WMF, 2011-07-01“
+60	423	0	0	0	1	0	default	20160614032412		64591	WikiLove	misc	deleted  “Purpose of this filter: Track usage of the WikiLove tool, both by new and experienced users, to watch for use and abuse. We'll have better tracking tools soon, but right now this is a simple solution to watch what's going on. To reduce impact on patrollers, it merely flags the edits. Please discuss with [[User:Eloquence]] if you have comments or questions. Since this filter is in active use by a number of people, please do not disable without discussion. 1908 -- Erik Moeller, WMF, 2011-07-01“ 
 61	33	0	0	1	0	0	default	20181018234422	warn,tag	60707	Talk page blanking by unregistered/new user	vandalism, good_faith?	
 62	270	0	0	0	1	0	default	20170509185805	tag	56352	Interwiki link removal	vandalism	deleted
 63	867	0	0	1	0	0	default	20181018194458		51805	Large creations by inexperienced user	good_faith	
 64	346	0	0	1	0	0	default	20170514124354	warn,tag	49652	Large non-English contributions	good_faith, vandalism?	
-65	458	0	0	0	1	1	default	20140303202151	disallow	46898	Feedback: Extremely short post	good_faith?	deleted; couple of official WMF people, identified as such, are discussing on the filter in the comments
-66	806	1	0	1	0	0	default	20181012022640	throttle	46840	New account suspicious activity		
-67	803	0	0	1	0	0	default	20181023223916	disallow	46756	Prevent new users from editing other's user pages		
-68	117	0	0	1	0	0	default	20160614004645	tag	43822	removal of Category:Living people		
-69	316	1	0	1	0	0	default	20150218175744	throttle	43756	Subtle changes to articles		
-70	368	0	0	0	1	0	default	20150212173530	warn	42952	Making large changes when marking the edit as minor		deleted
-71	249	0	0	1	0	0	default	20180328195529	throttle,tag	41712	New user conducting large scale reverts		
-72	9	0	0	0	0	0	default	20181018194855		41354	Personal attacks by unregistered or new user		
-73	1	0	0	0	0	0	default	20181017165127		40258	General test filter		
-74	466	1	0	1	0	0	default	20161229063919	warn,tag	38064	Userspace & talk page spamming		
-75	753	0	0	1	0	0	default	20160407115749	tag	36983	wikilinks removed by a new user or IP		
-76	58	1	0	1	0	0	default	20190106084020	disallow	35223	Long-term pattern abuse		
-77	31	1	0	1	0	0	default	20171016132909	disallow	34966	ASCII art		
-78	164	0	0	1	0	0	default	20150218122411	tag	34351	Possible cut and paste moves		
-79	716	0	0	1	0	0	default	20151205214255		34135	New user tagging or de-tagging article as FA/GA		
-80	96	0	0	0	1	0	default	20150212173317		33114	Newly created articles that don't mention their subject		
-81	167	0	0	1	0	0	default	20150724165931	warn	32972	Botched submissions to Articles for creation		
-82	323	0	0	1	0	0	default	20160614005551	tag	31881	Undoing anti-vandalism bot		
-83	613	0	0	0	1	0	default	20160614035203	warn,tag	28327	Signing in article		
-84	728	0	0	0	1	0	default	20151006132227	tag	25869	Huggle		
-85	627	0	0	1	0	0	default	20181125143134	tag	24764	Promotional text added by user to draft in own user(-talk) page or in draft namespace		
-86	846	0	0	1	0	0	default	20170406020700	tag	24283	LTA tracking		
-87	623	1	0	0	1	0	default	20160614035424	disallow	24030	Signing in articles II		
-88	664	0	0	1	0	0	default	20181111001413	warn	22539	Test edits		
-89	342	0	0	0	1	0	default	20160614031603		21810	Redirect becoming article		
-90	657	0	0	1	0	0	default	20150923100538	warn,tag	21684	Adding an external link to a disambiguation page		
-91	113	0	0	1	0	0	default	20181111001344	warn,tag	20885	Misplaced #redirect in articles		
-92	711	0	0	1	0	0	default	20171009011036		20699	Dead link replacement		
-93	460	0	0	0	1	0	default	20140303202225	disallow	20505	Feedback: Foul words		
-94	59	0	0	1	0	0	default	20181018235413	tag	19938	New user removing templates on image description		
-95	174	0	0	1	0	0	default	20170514124342	warn,tag	19223	New user removing XfD template		
-96	520	0	0	0	1	1	default	20140303202339	disallow	18596	Feedback: No punctuation or spaces		
-97	397	1	0	1	0	0	default	20181108195959	disallow	18114	Userpage vandalism		
-98	155	0	0	0	1	0	default	20090928230926		17517	Adding links to youtube		
-99	782	0	0	1	0	0	default	20181023223745	disallow	16702	Content Translation Edits		
-100	655	0	0	1	0	0	default	20160520185734	tag	16051	Large plot section addition		
-101	602	0	0	1	0	0	default	20180331105543	warn,tag	15758	Arbitration discretionary sanctions alerts		
-102	205	1	0	0	1	0	default	20110310110641		15519	Scibaby #1		
-103	106	0	0	0	1	0	default	20090830005331		14513	Date linking / delinking		
-104	2	1	0	0	0	0	default	20181008172604		14104	Test filter: for testing private filters		
-105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)		
-106	224	0	0	1	0	0	default	20170910203050	tag	13895	Copyvio tag removal		
-107	420	0	0	1	0	0	default	20181211033934	throttle,disallow	13874	Large removal of talk page content by IP		
-108	345	0	0	1	0	0	default	20160614031816	warn,tag	13832	Extraneous formatting from browser extension		
-109	733	0	0	1	0	0	default	20151102053740		13770	New user creating a page in someone else's userspace		
-110	554	0	0	1	0	0	default	20181023194722	disallow	13394	top100 blog charts		
-111	630	1	0	1	0	0	default	20150725140936	tag	13025	New users de-userfying pages		
-112	28	0	0	0	1	0	default	20100106173322		12264	New user redirecting an existing substantial page or changing a redirect		
-113	366	0	0	0	1	0	default	20110310111443		12257	Addition of seemingly random characters		
-114	819	1	0	0	0	0	default	20190104180937	throttle	12207	Derp vandal		
-115	837	0	0	1	0	0	default	20170208212523		12174	Removal of disambiguation templates by new users		
-116	102	1	0	1	0	0	default	20181128153750	disallow	11903	Abusive account names		
-117	532	0	0	0	1	0	default	20160614033920	tag	11857	Interwiki Addition		
-118	559	1	0	1	0	0	default	20170514124407		11787	archive.is additions		
-119	825	1	0	0	0	0	default	20180424212713		11749	Descent category added		
-120	77	1	0	0	1	0	default	20160818205501	warn	11528	Various ASCII Vandals		
-121	76	0	0	0	1	0	default	20150212173255	warn	11033	Adding email address		
-122	394	0	0	0	1	0	default	20120808231420		10996	Extremely short article creation		
-123	409	0	0	0	1	0	default	20120808231558		10880	news sources on BLPs		
-124	773	1	0	0	0	0	default	20181220031744		9990	TNT's test filter		
-125	890	0	0	1	0	0	default	20181207113011	warn,disallow	9932	Random typing in username		
-126	697	0	0	0	0	0	default	20151230224636		9807	User making large contribution with first edits		
-127	218	0	0	0	1	0	default	20150212173428		9802	User adding xx/xx/xxxx probably a date		
-128	483	1	0	0	1	0	default	20160614033218		9357	Users creating own talk		
-129	163	0	0	0	1	0	default	20181104190423	warn,tag	9289	Redirect to non-existent page		
-130	784	0	0	1	0	0	default	20170419165539	disallow	9265	Harambe vandalism		
-131	735	0	0	1	0	0	default	20170514124421	tag	9005	Vandalising sport infobox		
-132	531	0	0	0	1	0	default	20160614033912	tag	8856	Interwiki Removal		
-133	81	0	0	0	1	0	default	20150625141029		8491	Badcharts		
-134	878	0	0	1	0	0	default	20180416160027	tag	8290	New user removing COI template		
-135	521	0	0	0	1	0	default	20140303202349	disallow	8149	Feedback: All caps		
-136	478	1	0	1	0	0	default	20181213063717	disallow	7862	Talk page abuse		
-137	875	1	0	0	0	0	default	20190104181008	warn	7585	Derp II		
-138	912	0	0	1	0	0	default	20181230045936	warn,tag	7505	"Possible ""fortnite"" vandalism"		
-139	643	1	0	1	0	0	default	20181127140355	throttle	7109	Persistent sockpuppetry		
-140	261	1	0	0	0	0	default	20170928195215	throttle,disallow	6548	Page creation throttle for new users		
-141	183	0	0	0	0	0	default	20150212182934	warn	6545	AFC submissions in wrong namespace		
-142	473	0	0	0	1	0	default	20140303202257	disallow	6369	Feedback: Repeating characters		
-143	410	0	0	0	1	0	default	20120808231603		6285	blog added to BLPs		
-144	905	0	0	0	1	0	default	20180415235317		6267	bots that may ping users		
-145	313	0	0	0	1	0	default	20150212173457	warn	6259	Skype Toolbar Formatting		
-146	425	1	0	1	0	0	default	20170111031407		6209	Magic/astrology spambots		
-147	796	1	0	1	0	0	default	20190103105102	throttle,disallow	6029	Possible Ref Desk disruption		
-148	97	0	0	0	1	0	default	20090807112403		5973	Personal attacks by new user		
-149	869	0	0	1	0	0	default	20180828225237	warn	5855	"Adding ""Daily Mail"" to articles"		
-150	294	1	0	1	0	0	default	20150818185048	disallow	5395	Personal attacks		
-151	702	0	0	1	0	0	default	20171210235420	warn	5302	Warning against clipboard hijacking		
-152	152	0	0	0	1	0	default	20090928230917		5148	External links with referal tags		
-153	139	1	0	1	0	0	default	20181023224247	disallow	5135	Fixed position vandalism		
-154	463	1	0	0	1	0	default	20140303202236	disallow	4965	Feedback: Adding email addresses		
-155	632	0	0	1	0	0	default	20150714131905	tag	4839	Creating blank pages		
-156	874	1	0	1	0	0	default	20181219190423	disallow	4745	Long term abuse username / impersonation creations		
-157	894	0	0	1	0	0	default	20180913023553	warn	4625	Possible Self-Published Sources		
-158	887	0	0	1	0	0	default	20181105103817	warn,disallow	4589	Excessive repetition in usernames		
+65	458	0	0	0	1	1	default	20140303202151	disallow	46898	Feedback: Extremely short post	good_faith?	deleted  couple of official WMF people, identified as such, are discussing on the filter in the comments 
+66	806	1	0	1	0	0	default	20181012022640	throttle	46840	New account suspicious activity	vandalism?	hidden
+67	803	0	0	1	0	0	default	20181023223916	disallow	46756	Prevent new users from editing other's user pages	vandalism, good_faith	
+68	117	0	0	1	0	0	default	20160614004645	tag	43822	removal of Category:Living people	good_faith?	
+69	316	1	0	1	0	0	default	20150218175744	throttle	43756	Subtle changes to articles	misc?	hidden
+70	368	0	0	0	1	0	default	20150212173530	warn	42952	Making large changes when marking the edit as minor	good_faith?	deleted
+71	249	0	0	1	0	0	default	20180328195529	throttle,tag	41712	New user conducting large scale reverts	good_faith?, vandalism?	
+72	9	0	0	0	0	0	default	20181018194855		41354	Personal attacks by unregistered or new user	harassment	disabled
+73	1	0	0	0	0	0	default	20181017165127		40258	General test filter	test	disabled
+74	466	1	0	1	0	0	default	20161229063919	warn,tag	38064	Userspace & talk page spamming	vandalism?, harassment?	hidden
+75	753	0	0	1	0	0	default	20160407115749	tag	36983	wikilinks removed by a new user or IP	vandalism	Self-identified, talks about “ to flag potential edits by IP hopping redlink removal vandal.”
+76	58	1	0	1	0	0	default	20190106084020	disallow	35223	Long-term pattern abuse	vandalism?	hidden
+77	31	1	0	1	0	0	default	20171016132909	disallow	34966	ASCII art	vandalism?	hidden
+78	164	0	0	1	0	0	default	20150218122411	tag	34351	Possible cut and paste moves	good_faith	
+79	716	0	0	1	0	0	default	20151205214255		34135	New user tagging or de-tagging article as FA/GA	good_faith?, vandalism?	
+80	96	0	0	0	1	0	default	20150212173317		33114	Newly created articles that don't mention their subject	good_faith?	deleted; not quite sure what “not mention title” means anyway..the title wasn’t mentioned where?
+81	167	0	0	1	0	0	default	20150724165931	warn	32972	Botched submissions to Articles for creation	good_faith	
+82	323	0	0	1	0	0	default	20160614005551	tag	31881	Undoing anti-vandalism bot	possible vandalism	
+83	613	0	0	0	1	0	default	20160614035203	warn,tag	28327	Signing in article	good_faith?	deleted
+84	728	0	0	0	1	0	default	20151006132227	tag	25869	Huggle	maintainance	deleted; “This is a filter that marks all edits made by huggle, so that they can be easily filtered out or ignored by other tools”
+85	627	0	0	1	0	0	default	20181125143134	tag	24764	Promotional text added by user to draft in own user(-talk) page or in draft namespace	biased_pov	extra tag for self-promotion? (not every biased_pov is a sales pitch)
+86	846	0	0	1	0	0	default	20170406020700	tag	24283	LTA tracking	vandalism?	
+87	623	1	0	0	1	0	default	20160614035424	disallow	24030	Signing in articles II	misc	deleted, hidden;
+88	664	0	0	1	0	0	default	20181111001413	warn	22539	Test edits	good_faith	
+89	342	0	0	0	1	0	default	20160614031603		21810	Redirect becoming article	good_faith?	deleted;
+90	657	0	0	1	0	0	default	20150923100538	warn,tag	21684	Adding an external link to a disambiguation page	good_faith?	
+91	113	0	0	1	0	0	default	20181111001344	warn,tag	20885	Misplaced #redirect in articles	good_faith	
+92	711	0	0	1	0	0	default	20171009011036		20699	Dead link replacement	seo, vandalism?	
+93	460	0	0	0	1	0	default	20140303202225	disallow	20505	Feedback: Foul words	vandalism, harassment	deleted;
+94	59	0	0	1	0	0	default	20181018235413	tag	19938	New user removing templates on image description	good_faith?	
+95	174	0	0	1	0	0	default	20170514124342	warn,tag	19223	New user removing XfD template	good_faith?, vandalism?	
+96	520	0	0	0	1	1	default	20140303202339	disallow	18596	Feedback: No punctuation or spaces	misc	deleted; throttled
+97	397	1	0	1	0	0	default	20181108195959	disallow	18114	Userpage vandalism	vandalism	hidden
+98	155	0	0	0	1	0	default	20090928230926		17517	Adding links to youtube	misc	deleted; there was another (also deleted?) youtube filter. Still don’t understand the purpose of them
+99	782	0	0	1	0	0	default	20181023223745	disallow	16702	Content Translation Edits	misc	why is this not allowed? Seems to be translating a page from another language version of Wikipedia..
+100	655	0	0	1	0	0	default	20160520185734	tag	16051	Large plot section addition	good_faith?, bad_style?	
+101	602	0	0	1	0	0	default	20180331105543	warn,tag	15758	Arbitration discretionary sanctions alerts	misc	don’t understand this one either
+102	205	1	0	0	1	0	default	20110310110641		15519	Scibaby #1	misc	hidden, deleted;
+103	106	0	0	0	1	0	default	20090830005331		14513	Date linking / delinking	misc	deleted; don’t quite get it...
+104	2	1	0	0	0	0	default	20181008172604		14104	Test filter: for testing private filters	test	hidden, disabled;
+105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)	misc	hidden; what’s LTA?
+106	224	0	0	1	0	0	default	20170910203050	tag	13895	Copyvio tag removal	misc?, copyright?	
+107	420	0	0	1	0	0	default	20181211033934	throttle,disallow	13874	Large removal of talk page content by IP	vandalism?	
+108	345	0	0	1	0	0	default	20160614031816	warn,tag	13832	Extraneous formatting from browser extension	bug?	
+109	733	0	0	1	0	0	default	20151102053740		13770	New user creating a page in someone else's userspace	vandalism, good_faith	
+110	554	0	0	1	0	0	default	20181023194722	disallow	13394	top100 blog charts	seo?, vandalism?, spam?	
+111	630	1	0	1	0	0	default	20150725140936	tag	13025	New users de-userfying pages	misc	hidden; no idea what’s that supposed to mean
+112	28	0	0	0	1	0	default	20100106173322		12264	New user redirecting an existing substantial page or changing a redirect	good_faith?	deleted;
+113	366	0	0	0	1	0	default	20110310111443		12257	Addition of seemingly random characters	vandalism	deleted;
+114	819	1	0	0	0	0	default	20190104180937	throttle	12207	Derp vandal	misc? Vandalism	hidden; possibly referring to https://en.wikipedia.org/wiki/Derp_(hacker_group)
+115	837	0	0	1	0	0	default	20170208212523		12174	Removal of disambiguation templates by new users	good_faith?	
+116	102	1	0	1	0	0	default	20181128153750	disallow	11903	Abusive account names	vandalism?	hidden;
+117	532	0	0	0	1	0	default	20160614033920	tag	11857	Interwiki Addition	misc	deleted, possibly good_faith
+118	559	1	0	1	0	0	default	20170514124407		11787	archive.is additions	misc	hidden;
+119	825	1	0	0	0	0	default	20180424212713		11749	Descent category added	misc	hidden;
+120	77	1	0	0	1	0	default	20160818205501	warn	11528	Various ASCII Vandals	vandalism	hidden, deleted;
+121	76	0	0	0	1	0	default	20150212173255	warn	11033	Adding email address	misc	deleted
+122	394	0	0	0	1	0	default	20120808231420		10996	Extremely short article creation	good_faith?, vandalism?	deleted;
+123	409	0	0	0	1	0	default	20120808231558		10880	news sources on BLPs	biased_pov?	deleted;
+124	773	1	0	0	0	0	default	20181220031744		9990	TNT's test filter	test	hidden;
+125	890	0	0	1	0	0	default	20181207113011	warn,disallow	9932	Random typing in username	vandalism?	“This is fascinating: the lack of output from the previous suggests that people are creating these random-typing accounts, but never using them...  -- The Anome, 19 May 2018”
+126	697	0	0	0	0	0	default	20151230224636		9807	User making large contribution with first edits	good_faith?, vandalism?, biased_pov	disabled
+127	218	0	0	0	1	0	default	20150212173428		9802	User adding xx/xx/xxxx probably a date	misc	deleted
+128	483	1	0	0	1	0	default	20160614033218		9357	Users creating own talk	misc	deleted, hidden; why is this hidden? And why is it problematic so a filter is needed at all?
+129	163	0	0	0	1	0	default	20181104190423	warn,tag	9289	Redirect to non-existent page	good_faith?, vandalism?	deleted;
+130	784	0	0	1	0	0	default	20170419165539	disallow	9265	Harambe vandalism	vandalism	https://en.wikipedia.org/wiki/Killing_of_Harambe
+131	735	0	0	1	0	0	default	20170514124421	tag	9005	Vandalising sport infobox	vandalism	
+132	531	0	0	0	1	0	default	20160614033912	tag	8856	Interwiki Removal	good_faith?, vandalism?	deleted; not feasible to review all the hits
+133	81	0	0	0	1	0	default	20150625141029		8491	Badcharts	seo?, vandalism?, spam?	deleted;
+134	878	0	0	1	0	0	default	20180416160027	tag	8290	New user removing COI template	biased_pov, good_faith	COI=conflict of interest
+135	521	0	0	0	1	0	default	20140303202349	disallow	8149	Feedback: All caps	not_polite/bad_style	deleted;
+136	478	1	0	1	0	0	default	20181213063717	disallow	7862	Talk page abuse	vandalism?, harassment?	hidden;
+137	875	1	0	0	0	0	default	20190104181008	warn	7585	Derp II	misc	hidden; may be vandalism again, vgl #819
+138	912	0	0	1	0	0	default	20181230045936	warn,tag	7505	"Possible ""fortnite"" vandalism"	vandalism	
+139	643	1	0	1	0	0	default	20181127140355	throttle	7109	Persistent sockpuppetry	vandalism?, sockpuppetry?	hidden;
+140	261	1	0	0	0	0	default	20170928195215	throttle,disallow	6548	Page creation throttle for new users	vandalism?	hidden, disabled;
+141	183	0	0	0	0	0	default	20150212182934	warn	6545	AFC submissions in wrong namespace	good_faith	disabled; afc=articles for creation
+142	473	0	0	0	1	0	default	20140303202257	disallow	6369	Feedback: Repeating characters	vandalism?	deleted;
+143	410	0	0	0	1	0	default	20120808231603		6285	blog added to BLPs	misc	deleted; bad_style? Why is this a problem?
+144	905	0	0	0	1	0	default	20180415235317		6267	bots that may ping users	test?	deleted;
+145	313	0	0	0	1	0	default	20150212173457	warn	6259	Skype Toolbar Formatting	bug?	deleted;
+146	425	1	0	1	0	0	default	20170111031407		6209	Magic/astrology spambots	vandalism?, spam?	hidden;
+147	796	1	0	1	0	0	default	20190103105102	throttle,disallow	6029	Possible Ref Desk disruption	misc	hidden;
+148	97	0	0	0	1	0	default	20090807112403		5973	Personal attacks by new user	harassment	deleted; “(merged with 9)”
+149	869	0	0	1	0	0	default	20180828225237	warn	5855	"Adding ""Daily Mail"" to articles"	biased_pov	https://en.wikipedia.org/w/index.php?title=Wikipedia:Administrators%27_noticeboard&oldid=794430458#Daily_Mail_redux
+150	294	1	0	1	0	0	default	20150818185048	disallow	5395	Personal attacks	harassment?	hidden;
+151	702	0	0	1	0	0	default	20171210235420	warn	5302	Warning against clipboard hijacking	biased_pov?, spam?	
+152	152	0	0	0	1	0	default	20090928230917		5148	External links with referal tags	misc	deleted;
+153	139	1	0	1	0	0	default	20181023224247	disallow	5135	Fixed position vandalism	vandalism	hidden;
+154	463	1	0	0	1	0	default	20140303202236	disallow	4965	Feedback: Adding email addresses	harassment	hidden, deleted;
+155	632	0	0	1	0	0	default	20150714131905	tag	4839	Creating blank pages	good_faith, spam	
+156	874	1	0	1	0	0	default	20181219190423	disallow	4745	Long term abuse username / impersonation creations	harassment	hidden;
+157	894	0	0	1	0	0	default	20180913023553	warn	4625	Possible Self-Published Sources	biased_pov	
+158	887	0	0	1	0	0	default	20181105103817	warn,disallow	4589	Excessive repetition in usernames	vandalism?, spam?, sockpuppetry?	
 159	895	1	0	0	0	0	default	20180927230229		4577	Possible spambot username		
 160	5	0	0	1	0	0	default	20181018194804	warn,tag	4558	User self-renaming or moving user talk pages into article talk space		
 161	524	0	0	0	1	0	default	20160614033823		4502	Interwiki bot		
