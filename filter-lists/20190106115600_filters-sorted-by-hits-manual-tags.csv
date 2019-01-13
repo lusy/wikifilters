@@ -230,41 +230,41 @@
 228	358	1	0	0	0	0	default	20151220123259		1358	Od Mishehu's test filter	test	hidden
 229	619	1	0	0	0	0	default	20150204222535		1326	Possible covert vandalism	vandalism	hidden
 230	652	1	0	0	0	0	default	20180412165059	warn,disallow	1326	Jajadelera	misc	hidden
-231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism	vandalism	
-232	151	0	0	0	1	0	default	20150212173345		1294	Inappropriate Redirects		
-233	891	0	0	1	0	0	default	20180328194850	warn,tag	1289	Predatory open access journals		
-234	892	0	0	1	0	0	default	20181023224029	disallow	1245	RS linked through proxy		
-235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict		biased_pov?; political controversy?
-236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities	harassment	
-237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers		
-238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism		
-239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users		
-240	793	1	0	1	0	0	default	20190105142358	disallow	1155	Common spam/scam phone numbers		
-241	675	0	0	0	1	0	default	20160614040653	disallow	1107	Thems the facts vandalism		
-242	877	1	0	0	0	0	default	20180814223233		1084	test filter 4		
-243	253	0	0	0	1	0	default	20091127160929	warn	1015	Signing a non-discussion page		
-244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles		
-245	755	1	0	0	0	0	default	20190104181502		981	LTA trolling		
-246	7	1	0	0	1	0	default	20160812192554		972	AnonTalk		
-247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users		
-248	879	0	0	1	0	0	default	20181219090944	warn	943	Possible malformed edit		
-249	815	1	0	1	0	0	default	20170831173447	disallow	936	TV vandal		
-250	341	1	0	0	1	0	default	20160614031549	disallow	925	Persistent talk page abuse from IP ranges		
-251	600	1	0	0	0	0	default	20150602162717	tag	924	Adding Image to Template		
-252	934	0	0	0	1	0	default	20181107195116	disallow	915	Unconfirmed users creating mainspace articles		
-253	529	0	0	0	1	0	default	20150625141130	warn,disallow	913	chartnews		
-254	534	1	0	0	0	0	default	20151231173918	disallow	912	Preuss filter		
-255	859	1	0	0	1	0	default	20181104194110	disallow	856	LTA #859		
-256	477	1	0	0	1	0	default	20160614032941	warn	854	Chinese pattern spambots		
-257	899	0	0	1	0	0	default	20180412201446		826	"Adding ""The Sun"" or ""Dailystar"" to BLPs"		
-258	739	1	0	1	0	0	default	20170416123534	disallow	821	User talk vandal		
-259	398	1	0	0	0	0	default	20180426150503	throttle	802	Test filter 398		
-260	485	0	0	0	1	0	default	20160614033239	warn	797	Prevent malicious edits by browser extension		
-261	422	1	0	0	0	0	default	20150625143905	disallow	794	Possible template vandalism		
+231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism	vandalism	deleted
+232	151	0	0	0	1	0	default	20150212173345		1294	Inappropriate Redirects	vandalism?, good_faith?	deleted
+233	891	0	0	1	0	0	default	20180328194850	warn,tag	1289	Predatory open access journals	spam?, biased_pov?	
+234	892	0	0	1	0	0	default	20181023224029	disallow	1245	RS linked through proxy	bad_style?, misc?	
+235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict	biased_pov?; political controversy?	deleted;
+236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities	harassment	deleted;
+237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers	sockpuppetry	deleted, hidden;
+238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism	vandalism	hidden;
+239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users	wiki_policy?	https://en.wikipedia.org/wiki/Wikipedia:Controlling_search_engine_indexing
+240	793	1	0	1	0	0	default	20190105142358	disallow	1155	Common spam/scam phone numbers	spam?, vandalism?	hidden
+241	675	0	0	0	1	0	default	20160614040653	disallow	1107	Thems the facts vandalism	vandalism	deleted; “moved to filter 614 ~~MA”
+242	877	1	0	0	0	0	default	20180814223233		1084	test filter 4	test	hidden
+243	253	0	0	0	1	0	default	20091127160929	warn	1015	Signing a non-discussion page	bad_style	deleted
+244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles	bug?	deleted
+245	755	1	0	0	0	0	default	20190104181502		981	LTA trolling	vandalism, harassment?	hidden; LTA=long term abuse
+246	7	1	0	0	1	0	default	20160812192554		972	AnonTalk	misc	hidden, deleted
+247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users	vandalism?, harassment?	hidden, deleted;
+248	879	0	0	1	0	0	default	20181219090944	warn	943	Possible malformed edit	good_faith?	
+249	815	1	0	1	0	0	default	20170831173447	disallow	936	TV vandal	vandalism	hidden
+250	341	1	0	0	1	0	default	20160614031549	disallow	925	Persistent talk page abuse from IP ranges	harassment?, vandalism?	hidden, deleted
+251	600	1	0	0	0	0	default	20150602162717	tag	924	Adding Image to Template	vandalism?	hidden
+252	934	0	0	0	1	0	default	20181107195116	disallow	915	Unconfirmed users creating mainspace articles	wiki_policy?	deleted; https://phabricator.wikimedia.org/T204016
+253	529	0	0	0	1	0	default	20150625141130	warn,disallow	913	chartnews	bad_style?	deleted
+254	534	1	0	0	0	0	default	20151231173918	disallow	912	Preuss filter	misc	hidden
+255	859	1	0	0	1	0	default	20181104194110	disallow	856	LTA #859	vandalism?, harassment?	hidden, deleted
+256	477	1	0	0	1	0	default	20160614032941	warn	854	Chinese pattern spambots	spam?, misc?	hidden, deleted
+257	899	0	0	1	0	0	default	20180412201446		826	"Adding ""The Sun"" or ""Dailystar"" to BLPs"	wiki_policy?, biased_pov?, bad_style?	
+258	739	1	0	1	0	0	default	20170416123534	disallow	821	User talk vandal	vandalism?, harassment?	hidden
+259	398	1	0	0	0	0	default	20180426150503	throttle	802	Test filter 398	test	hidden
+260	485	0	0	0	1	0	default	20160614033239	warn	797	Prevent malicious edits by browser extension	vandalism?, bug?	deleted; “Merged into 345. - KoH“
+261	422	1	0	0	0	0	default	20150625143905	disallow	794	Possible template vandalism	vandalism	
 262	388	1	0	0	1	0	default	20150212173548		783	Unusual redirect III		
-263	405	1	0	0	1	0	default	20160614032241		776	Verizon vandal		
+263	405	1	0	0	1	0	default	20160614032241		776	Verizon vandal	vandalism	
 264	708	0	0	0	0	0	default	20151104174320		765	SPI page moves		
-265	543	1	0	0	1	0	default	20130402134200		754	XKCD April Fools' Day 2013 vandalism		
+265	543	1	0	0	1	0	default	20130402134200		754	XKCD April Fools' Day 2013 vandalism	vandalism	
 266	872	1	0	0	0	0	default	20180711125807	disallow	748	SK Sock		
 267	941	1	0	0	0	0	default	20181114151253	disallow	747	proxy abuse		
 268	812	0	0	1	0	0	default	20161212220959	disallow	726	Unreasonably large addition of content		
