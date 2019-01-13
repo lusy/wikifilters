@@ -309,24 +309,24 @@
 307	809	1	0	1	0	0	default	20181111190314	disallow	487	SPI disruption	misc	hidden
 308	829	1	0	0	0	0	default	20171014180255		487	Possible article hijacking	vandalism?, long_term_abuse?	hidden
 309	742	1	0	0	0	0	default	20190105155622	throttle,disallow	487	BT UserTalkPage stalker	harassment?	hidden
-310	43	0	0	0	1	0	default	20090928191833		480	New user removing AfD comments		
-311	770	0	0	0	0	0	default	20180424233552		474	Causing death vandal	vandalism	
-312	393	0	0	0	1	0	default	20110422015403		469	Ice hockey statistics		
-313	221	1	0	0	1	0	default	20091127160908	disallow	469	Japanese police vandal	vandalism	
-314	738	1	0	1	0	0	default	20181028130738	disallow	451	Frequently blocked user	long_term_abuse? 	
+310	43	0	0	0	1	0	default	20090928191833		480	New user removing AfD comments	wiki_policy?, vandalism?	deleted
+311	770	0	0	0	0	0	default	20180424233552		474	Causing death vandal	vandalism	disabled
+312	393	0	0	0	1	0	default	20110422015403		469	Ice hockey statistics	wiki_policy?	"Deleted; ""WP:HOCKEY has a guideline that strongly discourages mid-season updates to player statistics, for consistency. This filter picks up on changes if the edit is made directly to the stats section by non-autoconfirmed users.”"
+313	221	1	0	0	1	0	default	20091127160908	disallow	469	Japanese police vandal	vandalism	hidden
+314	738	1	0	1	0	0	default	20181028130738	disallow	451	Frequently blocked user	long_term_abuse? 	hidden
 315	862	0	0	1	0	0	default	20180619145747		442	Arabic string spam	spam? 	
-316	835	1	0	1	0	0	default	20181101022927	disallow	437	Temporary vandalism II	vandalism	
-317	731	1	0	0	0	0	default	20160818175917		436	Reference desk trolling		
-318	925	1	0	0	0	0	default	20180910193926		434	Image vandalism	vandalism	
-319	541	1	0	0	1	0	default	20160614034004		429	Open proxies		
-320	759	1	0	0	0	0	default	20180107124939	disallow	423	Digitalravan‎		
-321	66	0	0	0	1	0	default	20160818205325		406	poop vandalism (testing for false positives)		
-322	545	1	0	0	0	0	default	20140102181040		405	British Railways/Bus vandal		
-323	133	0	0	0	1	0	default	20090525144424		404	Broken references		
-324	919	1	0	1	0	0	default	20180929131657	disallow	393	Sockpuppetry from EnglishEfternamn		
-325	947	1	0	1	0	0	default	20181221074306	throttle,warn	393	LTA 947		
-326	931	1	0	1	0	0	default	20190103063839	throttle,disallow	383	Image vandalism I		
-327	311	1	0	0	1	0	default	20160614031414	disallow,tag	382	Lewis Hamilton racism		
+316	835	1	0	1	0	0	default	20181101022927	disallow	437	Temporary vandalism II	vandalism	hidden
+317	731	1	0	0	0	0	default	20160818175917		436	Reference desk trolling	vandalism	hidden
+318	925	1	0	0	0	0	default	20180910193926		434	Image vandalism	vandalism	hidden
+319	541	1	0	0	1	0	default	20160614034004		429	Open proxies	misc	hidden
+320	759	1	0	0	0	0	default	20180107124939	disallow	423	Digitalravan‎	misc	hidden
+321	66	0	0	0	1	0	default	20160818205325		406	poop vandalism (testing for false positives)	vandalism	
+322	545	1	0	0	0	0	default	20140102181040		405	British Railways/Bus vandal	vandalism	hidden
+323	133	0	0	0	1	0	default	20090525144424		404	Broken references	good_faith	deleted
+324	919	1	0	1	0	0	default	20180929131657	disallow	393	Sockpuppetry from EnglishEfternamn	sockpuppetry	hidden
+325	947	1	0	1	0	0	default	20181221074306	throttle,warn	393	LTA 947	long_term_abuse	hidden
+326	931	1	0	1	0	0	default	20190103063839	throttle,disallow	383	Image vandalism I	vandalism	hidden
+327	311	1	0	0	1	0	default	20160614031414	disallow,tag	382	Lewis Hamilton racism	vandalism,	hidden; politically motivated.. 
 328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP		
 329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page		
 330	787	1	0	1	0	0	default	20160814184338	disallow	370	Spicy boy		
