@@ -83,7 +83,7 @@
 81	167	0	0	1	0	0	default	20150724165931	warn	32972	Botched submissions to Articles for creation	good_faith	
 82	323	0	0	1	0	0	default	20160614005551	tag	31881	Undoing anti-vandalism bot	possible vandalism	
 83	613	0	0	0	1	0	default	20160614035203	warn,tag	28327	Signing in article	good_faith?	deleted
-84	728	0	0	0	1	0	default	20151006132227	tag	25869	Huggle	maintainance	deleted; “This is a filter that marks all edits made by huggle, so that they can be easily filtered out or ignored by other tools”
+84	728	0	0	0	1	0	default	20151006132227	tag	25869	Huggle	maintenance	deleted; “This is a filter that marks all edits made by huggle, so that they can be easily filtered out or ignored by other tools”
 85	627	0	0	1	0	0	default	20181125143134	tag	24764	Promotional text added by user to draft in own user(-talk) page or in draft namespace	biased_pov	extra tag for self-promotion? (not every biased_pov is a sales pitch)
 86	846	0	0	1	0	0	default	20170406020700	tag	24283	LTA tracking	vandalism?	
 87	623	1	0	0	1	0	default	20160614035424	disallow	24030	Signing in articles II	misc	deleted, hidden;
@@ -199,43 +199,43 @@
 197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter	test	
 198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?	spam?, vandalism?	hidden, deleted;
 199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism	vandalism?, harassment?	hidden, deleted;
-200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters		
-201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates		
-202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words		
-203	236	1	0	0	1	0	default	20110316135512		2116	Wknight94 test filter		
-204	35	0	0	0	1	0	default	20090511155617		2093	New user changing a redirect		
-205	23	1	0	0	1	0	default	20160812194609		2075	Some vandal phrases		
-206	935	1	0	1	0	0	default	20180923090952		2056	"""ntsamr""-pattern spambot filter"		
-207	637	1	0	0	0	0	default	20190103014127		2040	MusikAnimal test filter		
-208	16	1	0	0	1	0	default	20170509184759	throttle,disallow	2005	Prolific socker I		
-209	273	1	0	0	1	0	default	20120808231233	disallow	1980	Repeated obscenities		
-210	813	1	0	1	0	0	default	20170605190253	disallow	1879	Bee movie script		
-211	766	0	0	1	0	0	default	20181209191741	warn,tag	1866	Alt-right labeling		
-212	667	1	0	1	0	0	default	20181007162410		1843	Wikipedia:Long-term abuse/Best known for IP		
-213	768	1	0	1	0	0	default	20171028174754	disallow	1781	AIV disruption		
-214	826	1	0	1	0	0	default	20170206164424	throttle,disallow	1748	Image flag vandal		
-215	179	1	0	0	1	0	default	20120808231218	disallow	1617	Ongoing attacks		
-216	756	1	0	0	0	0	default	20190104181541	disallow	1601	Banned user vandalism		
-217	926	1	0	1	0	0	default	20190103224137	disallow	1574	Image vandalism II		
-218	942	0	0	1	0	0	default	20181128042048		1573	Log edits to protected pages		
-219	577	0	0	0	1	0	default	20150212173614		1566	VisualEditor bugs: Strange icons		
-220	24	0	0	0	1	0	default	20150212173232		1538	Sneaky link vandalism		
-221	280	0	0	0	1	0	default	20100131230039		1525	New user altering images		
-222	257	1	0	0	1	0	default	20170511024816	disallow	1505	Sonichu and other repeat vandalism		
-223	620	1	0	0	1	0	default	20160614035352		1498	archive removal by disruptive editors		
-224	740	1	0	1	0	0	default	20171106152842		1461	Template hijacking		
-225	408	1	0	0	1	0	default	20120808231552		1441	really long talk post		
-226	921	0	0	1	0	0	default	20180703035104	tag	1422	Suspicious claims of nazism		
-227	475	0	0	0	1	0	feedback	20131003210159		1390	Feedback: Vandalism or libel		
-228	358	1	0	0	0	0	default	20151220123259		1358	Od Mishehu's test filter		
-229	619	1	0	0	0	0	default	20150204222535		1326	Possible covert vandalism		
-230	652	1	0	0	0	0	default	20180412165059	warn,disallow	1326	Jajadelera		
-231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism		
+200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters	vandalism	deleted
+201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates	sockpuppetry?, vandalism	deleted, hidden;
+202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words	vandalism, harassment?	deleted; “Merged to 460. --Reaper 2012-08-17”
+203	236	1	0	0	1	0	default	20110316135512		2116	Wknight94 test filter	test	deleted, hidden;
+204	35	0	0	0	1	0	default	20090511155617		2093	New user changing a redirect	vandalism?, good_faith?	deleted; “Merged to the filter 28 and disabled – Ruslik“
+205	23	1	0	0	1	0	default	20160812194609		2075	Some vandal phrases	vandalism	deleted, hidden;
+206	935	1	0	1	0	0	default	20180923090952		2056	"""ntsamr""-pattern spambot filter"	misc	hidden
+207	637	1	0	0	0	0	default	20190103014127		2040	MusikAnimal test filter	test	hidden
+208	16	1	0	0	1	0	default	20170509184759	throttle,disallow	2005	Prolific socker I	sockpuppetry	hidden, deleted;
+209	273	1	0	0	1	0	default	20120808231233	disallow	1980	Repeated obscenities	vandalism?, harassment?	hidden, deleted;
+210	813	1	0	1	0	0	default	20170605190253	disallow	1879	Bee movie script	misc	hidden
+211	766	0	0	1	0	0	default	20181209191741	warn,tag	1866	Alt-right labeling	vandalism	extra tag for politically motivated discrimination? https://en.wikipedia.org/wiki/Triple_parentheses
+212	667	1	0	1	0	0	default	20181007162410		1843	Wikipedia:Long-term abuse/Best known for IP	vandalism?, harassment?	hidden; is long-term abuse automatically harassment?
+213	768	1	0	1	0	0	default	20171028174754	disallow	1781	AIV disruption	vandalism?	hidden; AIV= Wikipedia:Administrator intervention against vandalism.
+214	826	1	0	1	0	0	default	20170206164424	throttle,disallow	1748	Image flag vandal	vandalism	hidden
+215	179	1	0	0	1	0	default	20120808231218	disallow	1617	Ongoing attacks	vandalism?, harassment?	hidden, deleted;
+216	756	1	0	0	0	0	default	20190104181541	disallow	1601	Banned user vandalism	vandalism	hidden
+217	926	1	0	1	0	0	default	20190103224137	disallow	1574	Image vandalism II	vandalism	hidden
+218	942	0	0	1	0	0	default	20181128042048		1573	Log edits to protected pages	maintenance	
+219	577	0	0	0	1	0	default	20150212173614		1566	VisualEditor bugs: Strange icons	bug	deleted
+220	24	0	0	0	1	0	default	20150212173232		1538	Sneaky link vandalism	vandalism	deleted
+221	280	0	0	0	1	0	default	20100131230039		1525	New user altering images	vandalism?, good_faith?	deleted; “Disabling for now. Too many hits to be useful.“
+222	257	1	0	0	1	0	default	20170511024816	disallow	1505	Sonichu and other repeat vandalism	vandalism	deleted, hidden;
+223	620	1	0	0	1	0	default	20160614035352		1498	archive removal by disruptive editors	vandalism?	deleted, hidden;
+224	740	1	0	1	0	0	default	20171106152842		1461	Template hijacking	vandalism?	hidden
+225	408	1	0	0	1	0	default	20120808231552		1441	really long talk post	misc	hidden, deleted;
+226	921	0	0	1	0	0	default	20180703035104	tag	1422	Suspicious claims of nazism	vandalism?, harassment?	
+227	475	0	0	0	1	0	feedback	20131003210159		1390	Feedback: Vandalism or libel	vandalism, harassment	deleted
+228	358	1	0	0	0	0	default	20151220123259		1358	Od Mishehu's test filter	test	hidden
+229	619	1	0	0	0	0	default	20150204222535		1326	Possible covert vandalism	vandalism	hidden
+230	652	1	0	0	0	0	default	20180412165059	warn,disallow	1326	Jajadelera	misc	hidden
+231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism	vandalism	
 232	151	0	0	0	1	0	default	20150212173345		1294	Inappropriate Redirects		
 233	891	0	0	1	0	0	default	20180328194850	warn,tag	1289	Predatory open access journals		
 234	892	0	0	1	0	0	default	20181023224029	disallow	1245	RS linked through proxy		
-235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict		
-236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities		
+235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict		biased_pov?; political controversy?
+236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities	harassment	
 237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers		
 238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism		
 239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users		
