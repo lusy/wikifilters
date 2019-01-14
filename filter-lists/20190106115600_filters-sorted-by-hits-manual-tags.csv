@@ -327,52 +327,52 @@
 325	947	1	0	1	0	0	default	20181221074306	throttle,warn	393	LTA 947	long_term_abuse	hidden
 326	931	1	0	1	0	0	default	20190103063839	throttle,disallow	383	Image vandalism I	vandalism	hidden
 327	311	1	0	0	1	0	default	20160614031414	disallow,tag	382	Lewis Hamilton racism	vandalism,	hidden; politically motivated.. 
-328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP		
-329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page		
-330	787	1	0	1	0	0	default	20160814184338	disallow	370	Spicy boy		
-331	699	1	0	0	0	0	default	20160218130439		363	3 edit link spam		
-332	751	1	0	1	0	0	default	20160818181044	disallow	359	Non-notable actor vandal/hoaxer		
-333	295	1	0	0	1	0	default	20120808231256	disallow	356	Targeted vandalism by specific vandal		
-334	505	0	0	0	1	0	default	20150212173600		356	Tag mobile edits		
-335	170	1	0	0	1	0	default	20100217194949		352	Thailand vandal		
-336	578	1	0	0	1	0	default	20170402073922	disallow	345	Sockpuppet vandalism		
-337	171	0	0	0	1	0	default	20090708123401		333	Direct use of Template:Dated prod		
-338	470	1	0	0	1	0	default	20140102175918	disallow	333	Formula One Racing vandal		
-339	948	0	0	0	1	0	default	20181219204805		331	Long strings of digits/punctuation in usernames		
-340	442	1	0	0	1	0	default	20120808231813	throttle,disallow	329	Michigan IP hopper		
-341	575	1	0	0	1	0	default	20160614034602		317	User moved sandbox from user space		
-342	913	1	0	0	0	0	default	20180722030313		311	Wikipedia:Long-term abuse/Best known for IP (Secondary)		
-343	523	1	0	0	1	0	default	20160614033813	disallow	306	Page creation spammer		
-344	688	1	0	0	0	0	default	20150910185705		303	Beals		
-345	909	1	0	1	0	0	default	20181218190852	disallow	299	Cutler Vandal		
-346	114	1	0	0	1	0	default	20091127160900	throttle	293	sleeper socks		
-347	937	1	0	1	0	0	default	20181017194051		291	Qwertywander long-term abuse		
-348	871	1	0	1	0	0	default	20180930182420	disallow	284	Sock Filter		
-349	461	0	0	0	1	0	feedback	20130411173111	disallow	283	Feedback: Vandalism in all caps		
-350	213	1	0	0	0	0	default	20141203172039	disallow	281	Saban troll		
-351	698	0	0	0	1	0	default	20170402074230	warn,disallow	277	500 edits / 30 days editing restriction		
-352	10	1	0	0	1	0	default	20120808231116	warn,disallow	276	Unusual change in title length		
-353	192	0	0	0	1	0	default	20090830005509		276	Direct use of stub categories in articles		
-354	639	1	0	1	0	0	default	20181129210721	disallow	272	persistent block evasion		
-355	415	1	0	0	1	0	default	20120808231618	disallow	270	New user possibly editing an image on a template		
-356	944	1	0	1	0	0	default	20190105165750	disallow	267	Image vandalism III		
-357	916	1	0	1	0	0	default	20180727162648	disallow	264	LTA #916		
-358	852	1	0	0	0	0	default	20180503164107	disallow	261	Birth/death place vandal		
-359	889	1	0	1	0	0	default	20190104181037	disallow	260	Persistent PA		
-360	389	1	0	0	1	0	default	20120202004752	throttle,disallow	258	Attacks on user talk pages		
-361	177	1	0	0	1	0	default	20100808082118		254	User:Television Radio		
-362	709	1	0	0	0	0	default	20161113234140	disallow	254	LTA filter		
-363	331	1	0	0	1	0	default	20120202004540	disallow	249	Megafauna vandal		
-364	72	1	0	0	1	0	default	20100808081441		248	Unusual move throttle		
-365	367	0	0	0	1	0	default	20111116104702		246	New users adding multiple nowiki groups to articles		
-366	617	0	0	0	1	0	default	20150628135438	disallow	242	Mathias Sandell		
-367	454	1	0	0	1	0	default	20130404081123		242	One time account spam bot		
-368	622	1	0	0	1	0	default	20160614035415	disallow	235	Genre edit-warring		
-369	608	1	0	0	0	0	default	20140827012916	disallow	232	Banned user		
-370	383	1	0	0	1	0	default	20110419184841		230	proxy vandalbot		
-371	902	1	0	0	0	0	default	20180318173847		230	Article creation as newly confirmed editor		
-372	56	1	0	0	0	0	default	20181018235046	disallow	229	Inappropriate CSS code in article space		
-373	103	0	0	0	1	0	default	20090928230911	warn	229	Uncyclopedia		
+328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP	vandalism	
+329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page	good_faith, vandalism	deleted
+330	787	1	0	1	0	0	default	20160814184338	disallow	370	Spicy boy	misc	hidden
+331	699	1	0	0	0	0	default	20160218130439		363	3 edit link spam	spam? 	hidden
+332	751	1	0	1	0	0	default	20160818181044	disallow	359	Non-notable actor vandal/hoaxer	vandalism?	
+333	295	1	0	0	1	0	default	20120808231256	disallow	356	Targeted vandalism by specific vandal	vandalism	deleted
+334	505	0	0	0	1	0	default	20150212173600		356	Tag mobile edits	maintenance	deleted
+335	170	1	0	0	1	0	default	20100217194949		352	Thailand vandal	vandalism	
+336	578	1	0	0	1	0	default	20170402073922	disallow	345	Sockpuppet vandalism	vandalism, sockpuppetry	
+337	171	0	0	0	1	0	default	20090708123401		333	Direct use of Template:Dated prod	good_faith?	deleted
+338	470	1	0	0	1	0	default	20140102175918	disallow	333	Formula One Racing vandal	vandalism	
+339	948	0	0	0	1	0	default	20181219204805		331	Long strings of digits/punctuation in usernames	vandalism?	
+340	442	1	0	0	1	0	default	20120808231813	throttle,disallow	329	Michigan IP hopper	sockpuppetry?, vandalism	
+341	575	1	0	0	1	0	default	20160614034602		317	User moved sandbox from user space	good_faith?, vandalism?	
+342	913	1	0	0	0	0	default	20180722030313		311	Wikipedia:Long-term abuse/Best known for IP (Secondary)	long_term_abuse	
+343	523	1	0	0	1	0	default	20160614033813	disallow	306	Page creation spammer	spam? 	
+344	688	1	0	0	0	0	default	20150910185705		303	Beals	misc	
+345	909	1	0	1	0	0	default	20181218190852	disallow	299	Cutler Vandal	vandalism	
+346	114	1	0	0	1	0	default	20091127160900	throttle	293	sleeper socks	sockpuppetry	
+347	937	1	0	1	0	0	default	20181017194051		291	Qwertywander long-term abuse	long_term_abuse	
+348	871	1	0	1	0	0	default	20180930182420	disallow	284	Sock Filter	sockpuppetry	
+349	461	0	0	0	1	0	feedback	20130411173111	disallow	283	Feedback: Vandalism in all caps	vandalism, harassment?	
+350	213	1	0	0	0	0	default	20141203172039	disallow	281	Saban troll	vandalism?	
+351	698	0	0	0	1	0	default	20170402074230	warn,disallow	277	500 edits / 30 days editing restriction	wiki_policy?	deleted
+352	10	1	0	0	1	0	default	20120808231116	warn,disallow	276	Unusual change in title length	misc	hidden
+353	192	0	0	0	1	0	default	20090830005509		276	Direct use of stub categories in articles	misc	deleted
+354	639	1	0	1	0	0	default	20181129210721	disallow	272	persistent block evasion	vandalism	
+355	415	1	0	0	1	0	default	20120808231618	disallow	270	New user possibly editing an image on a template	vandalism?, good_faith?	hidden
+356	944	1	0	1	0	0	default	20190105165750	disallow	267	Image vandalism III	vandalism	
+357	916	1	0	1	0	0	default	20180727162648	disallow	264	LTA #916	long_term_abuse	
+358	852	1	0	0	0	0	default	20180503164107	disallow	261	Birth/death place vandal	vandalism	
+359	889	1	0	1	0	0	default	20190104181037	disallow	260	Persistent PA	vandalism?	
+360	389	1	0	0	1	0	default	20120202004752	throttle,disallow	258	Attacks on user talk pages	vandalism, harassment	
+361	177	1	0	0	1	0	default	20100808082118		254	User:Television Radio	misc	hidden
+362	709	1	0	0	0	0	default	20161113234140	disallow	254	LTA filter	long_term_abuse	
+363	331	1	0	0	1	0	default	20120202004540	disallow	249	Megafauna vandal	vandalism	
+364	72	1	0	0	1	0	default	20100808081441		248	Unusual move throttle	vandalism?, good_faith?	hidden
+365	367	0	0	0	1	0	default	20111116104702		246	New users adding multiple nowiki groups to articles	vandalism	deleted
+366	617	0	0	0	1	0	default	20150628135438	disallow	242	Mathias Sandell	vandalism?	deleted
+367	454	1	0	0	1	0	default	20130404081123		242	One time account spam bot	spam? 	hidden
+368	622	1	0	0	1	0	default	20160614035415	disallow	235	Genre edit-warring	edit_war?	hidden
+369	608	1	0	0	0	0	default	20140827012916	disallow	232	Banned user	long_term_abuse? 	hidden
+370	383	1	0	0	1	0	default	20110419184841		230	proxy vandalbot	vandalism?	hidden
+371	902	1	0	0	0	0	default	20180318173847		230	Article creation as newly confirmed editor	vandalism?	hidden
+372	56	1	0	0	0	0	default	20181018235046	disallow	229	Inappropriate CSS code in article space	vandalism?	hidden
+373	103	0	0	0	1	0	default	20090928230911	warn	229	Uncyclopedia	vandalism	
 374	493	1	0	0	1	0	default	20160614033439		229	New Rochelle Sock		
 375	901	0	0	1	0	0	default	20181210211356	warn	228	Possible Drumpf plugin		
 376	757	1	0	1	0	0	default	20160515151910	disallow	228	Persistent IP-hopping troll		
