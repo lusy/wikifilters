@@ -1,0 +1,270 @@
+\documentclass{sigchi}
+
+% Arabic page numbers for submission.  Remove this line to eliminate
+% page numbers for the camera ready copy
+% \pagenumbering{arabic}
+
+% Load basic packages
+\usepackage{balance}       % to better equalize the last page
+\usepackage{graphics}      % for EPS, load graphicx instead
+\usepackage[T1]{fontenc}   % for umlauts and other diaeresis
+\usepackage{txfonts}
+\usepackage{mathptmx}
+\usepackage[pdflang={en-US},pdftex]{hyperref}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{textcomp}
+
+% Some optional stuff you might like/need.
+\usepackage{microtype}        % Improved Tracking and Kerning
+% \usepackage[all]{hypcap}    % Fixes bug in hyperref caption linking
+\usepackage{ccicons}          % Cite your images correctly!
+% \usepackage[utf8]{inputenc} % for a UTF8 editor only
+
+% If you want to use todo notes, marginpars etc. during creation of
+% your draft document, you have to enable the "chi_draft" option for
+% the document class. To do this, change the very first line to:
+% "\documentclass[chi_draft]{sigchi}". You can then place todo notes
+% by using the "\todo{...}"  command. Make sure to disable the draft
+% option again before submitting your final document.
+\usepackage{todonotes}
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired).  Use \emtpyauthor when submitting for review
+% so you remain anonymous.
+\def\plaintitle{Wikipedia's Edit Filters}
+\def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\emptyauthor{}
+\def\plainkeywords{Authors' choice; of terms; separated; by
+  semicolons; include commas, within terms only; required.}
+\def\plaingeneralterms{Documentation, Standardization}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{
+    \def\UrlFont{\sf}
+  }{
+    \def\UrlFont{\small\bf\ttfamily}
+  }}
+\makeatother
+\urlstyle{leo}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, to give it a
+% fighting chance of not being over-written, since its job is to
+% redefine many LaTeX commands.
+\definecolor{linkColor}{RGB}{6,125,233}
+\hypersetup{%
+  pdftitle={\plaintitle},
+% Use \plainauthor for final version.
+%  pdfauthor={\plainauthor},
+  pdfauthor={\emptyauthor},
+  pdfkeywords={\plainkeywords},
+  pdfdisplaydoctitle=true, % For Accessibility
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=linkColor,
+  breaklinks=true,
+  hypertexnames=false
+}
+
+% create a shortcut to typeset table headings
+% \newcommand\tabhead[1]{\small\textbf{#1}}
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{\plaintitle}
+
+\numberofauthors{3}
+\author{%
+  \alignauthor{Leave Authors Anonymous\\
+    \affaddr{for Submission}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{Leave Authors Anonymous\\
+    \affaddr{for Submission}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+  \alignauthor{Leave Authors Anonymous\\
+    \affaddr{for Submission}\\
+    \affaddr{City, Country}\\
+    \email{e-mail address}}\\
+}
+
+\maketitle
+
+\begin{abstract}
+  Abstracts should be about 150 words and
+  are required.
+\end{abstract}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI)}{Miscellaneous} \category{See
+  \url{http://acm.org/about/class/1998/} for the full list of ACM
+  classifiers. This section is required.}{}{}
+
+\keywords{\plainkeywords}
+
+\section{Introduction}
+
+
+\section{Page Size and Columns}
+
+\section{Typeset Text}
+
+\subsection{Title and Authors}
+
+\subsection{Abstract and Keywords}
+
+\subsection{Normal or Body Text}
+
+\subsection{First Page Copyright Notice}
+
+\subsection{Subsequent Pages}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{figures/sigchi-logo}
+  \caption{Insert a caption below each figure. Do not alter the
+    Caption style.  One-line captions should be centered; multi-line
+    should be justified. }~\label{fig:figure1}
+\end{figure}
+
+\subsection{References and Citations}
+
+Use a numbered list of references at the end of the article, ordered
+alphabetically by last name of first author, and referenced by numbers
+in
+brackets~\cite{acm_categories,ethics,Klemmer:2002:WSC:503376.503378}.
+Your references should be published materials accessible to the
+public. Internal technical reports may be cited only if they are
+easily accessible (i.e., you provide the address for obtaining the
+report within your citation) and may be obtained by any reader for a
+nominal fee. Proprietary information may not be cited. Private
+communications should be acknowledged in the main text, not referenced
+(e.g., ``[Borriello, personal communication]'').
+
+References should be in ACM citation format:
+\url{http://acm.org/publications/submissions/latex_style}. This
+includes citations to internet
+resources~\cite{acm_categories,cavender:writing,CHINOSAUR:venue,psy:gangnam}
+according to ACM format, although it is often appropriate to include
+URLs directly in the text, as above.
+
+\begin{table}
+  \centering
+  \begin{tabular}{l r r r}
+    % \toprule
+    & & \multicolumn{2}{c}{\small{\textbf{Test Conditions}}} \\
+    \cmidrule(r){3-4}
+    {\small\textit{Name}}
+    & {\small \textit{First}}
+      & {\small \textit{Second}}
+    & {\small \textit{Final}} \\
+    \midrule
+    Marsden & 223.0 & 44 & 432,321 \\
+    Nass & 22.2 & 16 & 234,333 \\
+    Borriello & 22.9 & 11 & 93,123 \\
+    Karat & 34.9 & 2200 & 103,322 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{Table captions should be placed below the table. We
+    recommend table lines be 1 point, 25\% black. Minimize use of
+    table grid lines.}~\label{tab:table1}
+\end{table}
+
+\section{Sections}
+
+\subsection{Subsections}
+
+\subsubsection{Sub-subsections}
+
+\section{Figures/Captions}
+
+Place figures and tables at the top or bottom of the appropriate
+column or columns, on the same page as the relevant text (see
+Figure~\ref{fig:figure1}). A figure or table may extend across both
+columns to a maximum width of 17.78 cm (7 in.).
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=1.75\columnwidth]{figures/map}
+  \caption{In this image, the map maximizes use of space. You can make
+    figures as wide as you need, up to a maximum of the full width of
+    both columns. Note that \LaTeX\ tends to render large figures on a
+    dedicated page. Image: \ccbynd~ayman on
+    Flickr.}~\label{fig:figure2}
+\end{figure*}
+
+\section{Conclusion}
+
+It is important that you write for the SIGCHI audience. Please read
+previous years' proceedings to understand the writing style and
+conventions that successful authors have used. It is particularly
+important that you state clearly what you have done, not merely what
+you plan to do, and explain how your work is different from previously
+published work, i.e., the unique contribution that your work makes to
+the field. Please consider what the reader will learn from your
+submission, and how they will find your work useful. If you write with
+these questions in mind, your work is more likely to be successful,
+both in being accepted into the conference, and in influencing the
+work of our field.
+
+\section{Acknowledgments}
+
+Sample text: We thank all the volunteers, and all publications support
+and staff, who wrote and provided helpful comments on previous
+versions of this document. Authors 1, 2, and 3 gratefully acknowledge
+the grant from NSF (\#1234--2012--ABC). \textit{This whole paragraph is
+  just an example.}
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+\balance{}
+
+% BALANCE COLUMNS
+\balance{}
+
+% REFERENCES FORMAT
+% References must be the same font size as other body text.
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{literature}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
