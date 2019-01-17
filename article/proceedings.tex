@@ -232,6 +232,13 @@ Rules format: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_fo
 
 TODO: Flowchart of the filtering process!
 
+relevant dbs:
+abuse\_filter
+abuse\_filter\_log
+abuse\_filter\_action
+
+there used to be an abuse\_filter\_history, but it seems to not exist anymore
+
 \subsection{How is a new filter introduced?}
 //maybe move to governance?
 
@@ -318,15 +325,222 @@ statistics are info such as "Of the last 1,728 actions, this filter has matched 
 
 \section{Edit filters on the English Wikipedia: State of the art}
 
-* how many filters are there (were there over the years)
-* what do the most active filters do?
-* get a sense of what gets filtered (more qualitative)
-* has the willingness of the community to use filters increased over time?
-looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant
-* how often were (which) filters triggered
-* percentage of triggered filters/all edits
-  * break down triggered filters according to typology
-* percentage filters of different types over the years
+\textbf{Interesting questions}
+\begin{itemize}
+    \item how many filters are there (were there over the years)
+    \item what do the most active filters do?
+    \item get a sense of what gets filtered (more qualitative)
+    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant
+    \item how often were (which) filters triggered
+    \item percentage of triggered filters/all edits; break down triggered filters according to typology
+    \item percentage filters of different types over the years
+\end{itemize}
+
+\textbf{Questions on abuse\_filter table}
+\begin{itemize}
+    \item how many filters are there altogether
+    \item how many are enabled/disabled?
+    \item how many hidden filters? how many of them are enabled
+    \item how many are marked as deleted? (how many of them are hidden?)
+    \item how many global? (what does global mean?)
+    \item how many throttled? (what does this mean?)
+    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
+    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
+    \item what are the values in the "group" column? what do they mean?
+    \item which are the most frequently triggered filters of all time?
+    \item is it new filters that get triggered most frequently? or are there also very active old ones?
+\end{itemize}
+
+\textbf{Questions on abuse\_filter\_log table}
+
+\textbf{Questions on abuse\_filter\_action table}
+
+\textbf{Number of unique filters that were triggered each year since 2009:}
+owing to quarries we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018 with their corresponding number of times being triggered:
+\begin{table}
+  \centering
+  \begin{tabular}{l r }
+    % \toprule
+    Year & Num of distinct filters \\  
+    \hline
+    2009 & 220 \\
+    2010 & 163 \\
+    2011 & 161 \\
+    2012 & 170 \\
+    2013 & 178 \\
+    2014 & 154 \\
+    2015 & 200 \\
+    2016 & 204 \\
+    2017 & 231 \\
+    2018 & 254 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{Count of distinct filters that got triggered each year}~\label{tab:active-filters-count}
+\end{table}
+
+data is still not enough for us to talk about a tendency towards introducing more filters (after the initial dip)
+
+
+\textbf{Most frequently triggered filters for each year:}
+10 most active filters per year:
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\  
+    \hline
+    135 & 175455 \\
+    30 & 160302 \\
+    61 & 147377 \\
+    18 & 133640 \\
+    3 & 95916 \\
+    172 & 89710 \\
+    50 & 88827 \\
+    98 & 80434 \\
+    65 & 74098 \\
+    132 & 68607 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2009}~\label{tab:most-active-2009}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\  
+    \hline
+    61 & 245179 \\
+    135 & 242018 \\
+    172 & 148053 \\
+    30 & 119226 \\
+    225 & 109912 \\
+    3 & 105376 \\
+    50 & 101542 \\
+    132 & 78633 \\
+    189 & 74528 \\
+    98 & 54805 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2010}~\label{tab:most-active-2010}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\  
+    \hline
+    61 & 218493 \\
+    135 & 185304 \\
+    172 & 119532 \\
+    402 & 109347 \\
+    30 & 89151 \\
+    3 & 75761 \\
+    384 & 71911 \\
+    225 & 68318 \\
+    50 & 67425 \\
+    432 & 66480 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2011}~\label{tab:most-active-2011}
+\end{table}
+
+\begin{comment}
+
+==> quarry-32493-en-wp_-all-abuse-filter-log-entries-in-2012-run318778.csv <==
+afl_filter,count(*)
+135,173830
+384,144202
+432,126156
+172,105082
+30,93718
+3,90724
+380,67814
+351,59226
+279,58853
+225,58352
+
+==> quarry-32495-en-wp_-all-abuse-filter-log-entries-in-2013-run318779.csv <==
+afl_filter,count(*)
+135,133309
+384,129807
+432,94017
+172,92871
+30,85722
+279,76738
+3,70067
+380,58668
+491,55454
+225,48390
+
+==> quarry-32496-en-wp_-all-abuse-filter-log-entries-in-2014-run318780.csv <==
+afl_filter,count(*)
+384,111570
+135,111173
+279,97204
+172,82042
+432,75839
+30,62495
+3,60656
+636,52639
+231,39693
+380,39624
+
+==> quarry-32497-en-wp_-all-abuse-filter-log-entries-in-2015-run318782.csv <==
+afl_filter,count(*)
+650,226460
+61,196986
+636,191320
+527,189911
+633,162319
+384,141534
+279,110137
+135,99057
+686,95356
+172,82874
+
+==> quarry-32499-en-wp_-all-abuse-filter-log-entries-in-2016-run318789.csv <==
+afl_filter,count(*)
+527,437099
+61,274945
+650,229083
+633,218696
+636,179948
+384,179871
+279,106699
+135,95131
+172,79843
+30,68968
+
+==> quarry-32500-en-wp_-all-abuse-filter-log-entries-in-2017-run318797.csv <==
+afl_filter,count(*)
+61,250394
+633,218146
+384,200748
+527,192441
+636,156409
+650,151604
+135,80056
+172,70837
+712,59537
+833,58133
+
+==> quarry-32503-en-wp_-all-abuse-filter-log-entries-in-2018-run318831.csv <==
+afl_filter,count(*)
+527,358210
+61,234867
+633,201400
+384,177543
+833,161030
+636,144674
+650,79381
+135,75348
+686,70550
+172,64266
+\end{comment}
+
+\textbf{what do the most active filters do?}
 
 \subsection{Types of edit filters}
 
