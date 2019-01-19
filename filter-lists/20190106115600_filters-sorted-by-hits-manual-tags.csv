@@ -406,22 +406,22 @@
 404	424	1	0	0	1	0	default	20110828130927		189	Repeatedly blocked user --  testing-only rule for filter 425	test	
 405	13	1	0	0	1	0	default	20160812192945	warn,disallow	188	Knave vandalism	vandalism	
 406	560	0	0	0	0	0	default	20150212181334	warn	185	"The ""truly"" vandal"	vandalism	
-407	865	1	0	1	0	0	default	20170718220342		182	maghsoudi		
-408	377	0	0	0	1	0	default	20110107070532		175	Large not english contributions 2 (test only)		
-409	866	1	0	0	0	0	default	20180424212727		173	Temporary article title watch		
-410	666	1	0	0	0	0	default	20160628072635	disallow	172	Aas Mohammad		
-411	689	0	0	0	1	0	default	20160614040958	warn,tag	170	Chicken fucker vandalism		
-412	161	0	0	0	1	0	default	20090617131429		169	Overlinking		
-413	790	1	0	0	0	0	default	20170325041629		162	Nationality inventions		
-414	798	0	0	1	0	0	default	20161010230835		162	Possible copyvio for image upload		
-415	676	1	0	0	0	0	default	20180222215913	disallow	160	Highway vandal		
-416	722	0	0	0	0	0	default	20170207181842		158	Please Accept		
-417	235	0	0	0	1	0	default	20090928231159		157	Your mom jokes		
-418	674	0	0	0	0	0	default	20161015072323	disallow	156	Long term infobox vandal		
-419	906	1	0	1	0	0	default	20180721164347	disallow	154	Alan Jackson Vandal		
-420	745	1	0	0	0	0	default	20170228011409		154	Talk page abuse		
+407	865	1	0	1	0	0	default	20170718220342		182	maghsoudi	unknown	
+408	377	0	0	0	1	0	default	20110107070532		175	Large not english contributions 2 (test only)	test	
+409	866	1	0	0	0	0	default	20180424212727		173	Temporary article title watch	unknown	
+410	666	1	0	0	0	0	default	20160628072635	disallow	172	Aas Mohammad	unknown	
+411	689	0	0	0	1	0	default	20160614040958	warn,tag	170	Chicken fucker vandalism	vandalism	
+412	161	0	0	0	1	0	default	20090617131429		169	Overlinking	misc	“ Disabled, per RAF, too many false positives to be useful. -DF”
+413	790	1	0	0	0	0	default	20170325041629		162	Nationality inventions	vandalism?	
+414	798	0	0	1	0	0	default	20161010230835		162	Possible copyvio for image upload	copyright	
+415	676	1	0	0	0	0	default	20180222215913	disallow	160	Highway vandal	vandalism	
+416	722	0	0	0	0	0	default	20170207181842		158	Please Accept	good_faith?	disabled
+417	235	0	0	0	1	0	default	20090928231159		157	Your mom jokes	vandalism?	
+418	674	0	0	0	0	0	default	20161015072323	disallow	156	Long term infobox vandal	vandalism, long_term_abuse?	
+419	906	1	0	1	0	0	default	20180721164347	disallow	154	Alan Jackson Vandal	vandalism	
+420	745	1	0	0	0	0	default	20170228011409		154	Talk page abuse	vandalism	
 421	63	1	0	0	1	0	default	20091127160855	disallow	150	Abusive unblock denials		
-422	278	1	0	0	1	0	default	20120202004634		149	Possible copyright violations		
+422	278	1	0	0	1	0	default	20120202004634		149	Possible copyright violations	copyright	
 423	104	0	0	0	1	0	default	20150212173322	warn	149	Helpme and Adminhelp		
 424	168	0	0	0	1	0	default	20090830005433	warn	148	Non-admins responding to unblock requests		
 425	542	1	0	0	1	0	default	20160614034012		147	Open proxies II		
