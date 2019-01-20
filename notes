@@ -366,15 +366,15 @@ mysql> describe abuse_filter_log; https://www.mediawiki.org/wiki/Extension:Abuse
 +------------------+---------------------+------+-----+---------+----------------+
 | afl_id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
 | afl_filter       | varbinary(64)       | NO   | MUL | NULL    |                |
-| afl_user         | bigint(20) unsigned | NO   | MUL | NULL    |                |
-| afl_user_text    | varbinary(255)      | NO   |     | NULL    |                |
+| afl_user         | bigint(20) unsigned | NO   | MUL | NULL    |                | \\User ID of the author of the action.
+| afl_user_text    | varbinary(255)      | NO   |     | NULL    |                | \\User name of the author of the action.
 | afl_ip           | varbinary(255)      | NO   | MUL | NULL    |                |
-| afl_action       | varbinary(255)      | NO   |     | NULL    |                |
-| afl_actions      | varbinary(255)      | NO   |     | NULL    |                |
-| afl_var_dump     | blob                | NO   |     | NULL    |                |
+| afl_action       | varbinary(255)      | NO   |     | NULL    |                | \\The action which triggered the filter. Values can include the following values: edit, delete, createaccount, move, upload, autocreateaccount, stashupload
+| afl_actions      | varbinary(255)      | NO   |     | NULL    |                | \\What the filter made about the action
+| afl_var_dump     | blob                | NO   |     | NULL    |                | \\Value of the variables of the filter that matched the edit, stored as a serialized PHP array.
 | afl_timestamp    | binary(14)          | NO   | MUL | NULL    |                |
-| afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                |
-| afl_title        | varbinary(255)      | NO   |     | NULL    |                |
+| afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                | \\Target Namespace of the filtered action.
+| afl_title        | varbinary(255)      | NO   |     | NULL    |                | \\Target title of the filter action.
 | afl_wiki         | varbinary(64)       | YES  | MUL | NULL    |                |
 | afl_deleted      | tinyint(1)          | NO   |     | 0       |                |
 | afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                |
