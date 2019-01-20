@@ -420,43 +420,44 @@
 418	674	0	0	0	0	0	default	20161015072323	disallow	156	Long term infobox vandal	vandalism, long_term_abuse?	
 419	906	1	0	1	0	0	default	20180721164347	disallow	154	Alan Jackson Vandal	vandalism	
 420	745	1	0	0	0	0	default	20170228011409		154	Talk page abuse	vandalism	
-421	63	1	0	0	1	0	default	20091127160855	disallow	150	Abusive unblock denials		
+421	63	1	0	0	1	0	default	20091127160855	disallow	150	Abusive unblock denials	vandalism?, abuse?	Hidden; what would be the difference between an “abuse” and a “vandalism” tag?
 422	278	1	0	0	1	0	default	20120202004634		149	Possible copyright violations	copyright	
-423	104	0	0	0	1	0	default	20150212173322	warn	149	Helpme and Adminhelp		
-424	168	0	0	0	1	0	default	20090830005433	warn	148	Non-admins responding to unblock requests		
-425	542	1	0	0	1	0	default	20160614034012		147	Open proxies II		
-426	240	0	0	0	1	0	default	20091127160918		147	Used lifetime over/with/as well as existing apparatus		
-427	185	0	0	0	1	0	default	20181104190717		146	Cross-namespace move		
-428	430	1	0	0	1	0	default	20130404080919	disallow	145	Various socking spammers		
-429	737	1	0	0	0	0	default	20180314041327	disallow	145	Christ the Logos		
-430	876	1	0	0	0	0	default	20190104181014	throttle,warn	144	Derp III		
-431	785	1	0	0	0	0	default	20160818213434		139	Template doc vandalism		
-432	125	0	0	0	1	0	default	20090429124019		138	Insertion of repeated phrases		
-433	653	1	0	0	0	0	default	20150730223741	disallow	136	Infobox vandal		
-434	190	1	0	0	1	0	default	20091218070146	disallow	134	CrabCore (4chan) - [[Special:Contributions/70.122.90.204]]		
-435	743	1	0	0	0	0	default	20180212172048	disallow	133	Prolific socker IV		
-436	439	1	0	0	1	0	default	20130404080945	disallow	132	Chaosname		
-437	881	1	0	1	0	0	default	20180420054127	disallow	131	Excessive scatology		
-438	492	1	0	0	1	0	default	20120924064810		131	Check for possible persistent IP-hopping abuse		
-439	855	1	0	0	1	0	default	20181104193922	disallow	129	LTA (Georgia)		
-440	734	1	0	0	0	0	default	20171204231846	disallow	127	McAusten		
-441	848	0	0	0	0	0	default	20170505042534		126	Large contributions test filter		
-442	373	1	0	0	1	0	default	20120807052549		125	Mario96		
-443	767	1	0	1	0	0	default	20181219232350	disallow	124	Prophecy spam		
-444	564	1	0	0	1	0	default	20140102181617	disallow	123	block evasion		
-445	513	1	0	0	1	0	default	20160929181639	disallow	122	Persistent talk page abuse from IP ranges II		
-446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism		
-447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism		
-448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages		
-449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds		
+423	104	0	0	0	1	0	default	20150212173322	warn	149	Helpme and Adminhelp	good_faith?	“Disabled per talk page discussion. Very expensive and by their nature the helpme tags will draw users' attention to their erroneous usage. -x”
+424	168	0	0	0	1	0	default	20090830005433	warn	148	Non-admins responding to unblock requests	good_faith	"according to comments; “Unneeded, already seen by a bot. Disabled. -Prodego”
+"
+425	542	1	0	0	1	0	default	20160614034012		147	Open proxies II	misc	
+426	240	0	0	0	1	0	default	20091127160918		147	Used lifetime over/with/as well as existing apparatus	misc	I don’t really get this. Using “lifetime” although a person’s not dead?
+427	185	0	0	0	1	0	default	20181104190717		146	Cross-namespace move	maintenance	“ :Non admins do this all the time. Disabled. Talk to me please. -Prodego”
+428	430	1	0	0	1	0	default	20130404080919	disallow	145	Various socking spammers	sockpuppetry	
+429	737	1	0	0	0	0	default	20180314041327	disallow	145	Christ the Logos	unknown	probably vandalism related to religion
+430	876	1	0	0	0	0	default	20190104181014	throttle,warn	144	Derp III	misc/vandalism?	could be vandalism, since there’s a hidden filter called “derp vandalism”
+431	785	1	0	0	0	0	default	20160818213434		139	Template doc vandalism	vandalism	
+432	125	0	0	0	1	0	default	20090429124019		138	Insertion of repeated phrases	vandalism	deleted
+433	653	1	0	0	0	0	default	20150730223741	disallow	136	Infobox vandal	vandalism	
+434	190	1	0	0	1	0	default	20091218070146	disallow	134	CrabCore (4chan) - [[Special:Contributions/70.122.90.204]]	vandalism	https://en.wikipedia.org/wiki/Special:Contributions/70.122.90.204
+435	743	1	0	0	0	0	default	20180212172048	disallow	133	Prolific socker IV	sockpuppetry	
+436	439	1	0	0	1	0	default	20130404080945	disallow	132	Chaosname	unknown	refine misc from unknown
+437	881	1	0	1	0	0	default	20180420054127	disallow	131	Excessive scatology	vandalism	
+438	492	1	0	0	1	0	default	20120924064810		131	Check for possible persistent IP-hopping abuse	sockpuppetry?	
+439	855	1	0	0	1	0	default	20181104193922	disallow	129	LTA (Georgia)	long_term_abuse	
+440	734	1	0	0	0	0	default	20171204231846	disallow	127	McAusten	unknown	hidden
+441	848	0	0	0	0	0	default	20170505042534		126	Large contributions test filter	test	
+442	373	1	0	0	1	0	default	20120807052549		125	Mario96	sockpuppetry?	probably targeted at banned user https://en.wikipedia.org/wiki/User:Mario96; “This account has been blocked indefinitely because CheckUser evidence confirms that the operator has abusively used multiple accounts.”
+443	767	1	0	1	0	0	default	20181219232350	disallow	124	Prophecy spam	spam? 	
+444	564	1	0	0	1	0	default	20140102181617	disallow	123	block evasion	vandalism?, long_term_abuse?, abuse?	
+445	513	1	0	0	1	0	default	20160929181639	disallow	122	Persistent talk page abuse from IP ranges II	harassment?, vandalism?, abuse?	hidden
+446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism	vandalism	
+447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism	vandalism	
+448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages	vandalism?, biased_pov?	deleted; “5076 Only catches a few bad-faith edits per month.  Disabling.  -Wknight94” “Filter to (eventually) disallow attempts to hide the content of a page with HTML tags. Will trip for new and unregistered users. - Hersfold “
+449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds	vandalism?, maintenance? 	“Multiple sources seem to have published a link to the english wikipedia to write via the api sandbox. -- Xaosflux”
 450	453	1	0	0	1	0	default	20130404081115	warn,disallow	119	Temporary block on making specific kinds of template edits		
-451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal		
+451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal	vandalism	
 452	281	1	0	0	1	0	default	20100108215922		115	Unwatched BLPs		
-453	723	1	0	0	0	0	default	20160914172157		115	MusikAnimal's test filter		
-454	706	1	0	0	0	0	default	20160925183649	disallow	113	Dutch football vandalism		
+453	723	1	0	0	0	0	default	20160914172157		115	MusikAnimal's test filter	test	
+454	706	1	0	0	0	0	default	20160925183649	disallow	113	Dutch football vandalism	vandalism	
 455	455	1	0	0	1	0	default	20120602063353	disallow	113	Bahrani		
-456	434	1	0	0	1	0	default	20160614032622		112	Roman vandal		
-457	769	1	0	0	0	0	default	20180403064325	disallow	110	AfD nomination harassment		
+456	434	1	0	0	1	0	default	20160614032622		112	Roman vandal	vandalism	
+457	769	1	0	0	0	0	default	20180403064325	disallow	110	AfD nomination harassment	harassment	
 458	665	1	0	0	0	0	default	20150807184304	disallow	109	revescom		
 459	797	1	0	1	0	0	default	20161009215924	disallow	108	Synth LTA		
 460	936	1	0	1	0	0	default	20181014164944	disallow	108	LTA 936		
