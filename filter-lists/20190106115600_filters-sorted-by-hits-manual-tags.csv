@@ -499,26 +499,26 @@
 496	116	1	0	0	1	0	default	20170402073422	disallow	77	Persistent vandal creating redirects	vandalism	hidden
 497	888	1	0	0	0	0	default	20181208131357	disallow	77	IP bot editing	vandalism?	hidden
 498	131	0	0	0	1	0	default	20091127160905	warn,disallow	76	Removal of controversial images	religious_vandalism?	“People tend to watch controversial images, so this shouldn't be needed. Rarely triggered too. Disabled. -Prodego”
-499	694	0	0	1	0	0	default	20181023223653	disallow	74	Moves to or from the Module namespace		
-500	585	1	0	0	1	0	default	20140102182111	disallow	72	New user removing own name from AIV		
-501	868	1	0	1	0	0	default	20180809162025	disallow	71	Template vandalism		
-502	547	1	0	0	0	0	default	20170605190343	disallow	70	Cat Creek		
-503	922	1	0	0	0	0	default	20181104190106	disallow	70	Abusive messages on RfA-related pages		
-504	459	1	0	0	0	0	default	20160718155146	disallow	70	Long-term block evasion		
-505	584	1	0	0	1	0	default	20160614034706		65	Improper Template Usage by New User		
-506	567	1	0	0	1	0	default	20160614034452	disallow	64	Disruptive CSD nominations		
-507	581	1	0	0	1	0	default	20160614034647		64	Dantherocker1 II		
-508	14	0	0	0	1	0	default	20090325102514		63	Test to detect new pages by new users		
-509	312	1	0	0	1	0	default	20150212173501		62	External link removal		
-510	621	1	0	0	1	0	default	20160614035403	disallow	62	Spambot Filter		
-511	328	1	0	0	1	0	default	20130404080744		61	Prolific socker III		
-512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)		
-513	668	1	0	0	0	0	default	20150429015714	disallow	61	GP disruption		
-514	226	1	0	0	1	0	default	20091003121354		61	Johnali123 sockpuppets		
-515	4	1	0	0	1	0	default	20160812192142		60	Copernicus vandal		
-516	910	0	0	0	1	0	default	20180714091120		60	Maureen Wroblewitz spammer		
-517	414	1	0	0	1	0	default	20160904150257	disallow	60	M5 Vandalism		
-518	501	1	0	0	1	0	default	20160614033558		60	Chinese blogpost spammer		
+499	694	0	0	1	0	0	default	20181023223653	disallow	74	Moves to or from the Module namespace	good_faith	“These types of moves don't do what users expect”; “Module namespace (prefix Module:): contains Scribunto modules – Lua scripts implementing special-purpose parser functions for use in templates, beyond the basic set included with MediaWiki and its extensions.”
+500	585	1	0	0	1	0	default	20140102182111	disallow	72	New user removing own name from AIV	vandalism?	AIV=Administrator Intervention Against Vandalism
+501	868	1	0	1	0	0	default	20180809162025	disallow	71	Template vandalism	vandalism	
+502	547	1	0	0	0	0	default	20170605190343	disallow	70	Cat Creek	unknown	hidden
+503	922	1	0	0	0	0	default	20181104190106	disallow	70	Abusive messages on RfA-related pages	vandalism?, abuse?	
+504	459	1	0	0	0	0	default	20160718155146	disallow	70	Long-term block evasion	long_term_abuse? 	
+505	584	1	0	0	1	0	default	20160614034706		65	Improper Template Usage by New User	good_faith?, vandalism?	probably rather vandalism, since filter is hidden
+506	567	1	0	0	1	0	default	20160614034452	disallow	64	Disruptive CSD nominations	vandalism?, harassment?	CSD=Criteria for Speedy Deletion
+507	581	1	0	0	1	0	default	20160614034647		64	Dantherocker1 II	sockpuppetry?	https://en.wikipedia.org/wiki/User:Dantherocker1
+508	14	0	0	0	1	0	default	20090325102514		63	Test to detect new pages by new users	test	
+509	312	1	0	0	1	0	default	20150212173501		62	External link removal	vandalism?, biased_pov?	hidden
+510	621	1	0	0	1	0	default	20160614035403	disallow	62	Spambot Filter	spam? 	hidden
+511	328	1	0	0	1	0	default	20130404080744		61	Prolific socker III	sockpuppetry	
+512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)	long_term_abuse, vandalism, religious/political vandalism, harassment	https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/JarlaxleArtemis; “Cross-wiki harassment and threats of death and violence; criticism of liberals, the far-left and SJWs; criticism of anything not involving two clearly defined genders; criticism of Islam and anything not supporting Israel and Judaism; and usage of open proxies.”
+513	668	1	0	0	0	0	default	20150429015714	disallow	61	GP disruption	vandalism?	hidden
+514	226	1	0	0	1	0	default	20091003121354		61	Johnali123 sockpuppets	sockpuppetry	
+515	4	1	0	0	1	0	default	20160812192142		60	Copernicus vandal	vandalism	
+516	910	0	0	0	1	0	default	20180714091120		60	Maureen Wroblewitz spammer	spam?, seo, self_promotion	https://en.wikipedia.org/w/index.php?title=Wikipedia:Administrators%27_noticeboard/Incidents&oldid=834165578#Special:Contributions/171.248.246.158
+517	414	1	0	0	1	0	default	20160904150257	disallow	60	M5 Vandalism	vandalism	
+518	501	1	0	0	1	0	default	20160614033558		60	Chinese blogpost spammer	spam? 	
 519	566	1	0	0	1	0	default	20140102181650	disallow	57	SPI Impersonation		
 520	635	0	0	0	1	0	default	20180817210724	warn	57	OTRS template added by non-OTRS member		
 521	419	0	0	0	1	0	default	20120808231716	disallow	57	User removing himself from AIV		
