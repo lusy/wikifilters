@@ -1,0 +1,3 @@
+use enwiki_p;
+select * from abuse_filter_log
+where afl_id=1;
