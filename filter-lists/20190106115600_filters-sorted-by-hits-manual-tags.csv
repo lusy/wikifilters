@@ -519,14 +519,14 @@
 516	910	0	0	0	1	0	default	20180714091120		60	Maureen Wroblewitz spammer	spam?, seo, self_promotion	https://en.wikipedia.org/w/index.php?title=Wikipedia:Administrators%27_noticeboard/Incidents&oldid=834165578#Special:Contributions/171.248.246.158
 517	414	1	0	0	1	0	default	20160904150257	disallow	60	M5 Vandalism	vandalism	
 518	501	1	0	0	1	0	default	20160614033558		60	Chinese blogpost spammer	spam? 	
-519	566	1	0	0	1	0	default	20140102181650	disallow	57	SPI Impersonation		
-520	635	0	0	0	1	0	default	20180817210724	warn	57	OTRS template added by non-OTRS member		
-521	419	0	0	0	1	0	default	20120808231716	disallow	57	User removing himself from AIV		
-522	330	1	0	0	1	0	default	20110310111130	warn	55	Attacks on editors		
-523	914	1	0	1	0	0	default	20180422210717	disallow	54	Igor Janev Spammer		
-524	293	1	0	0	1	0	default	20160824183539	disallow	53	J.delanoy attacks		
-525	193	1	0	0	1	0	default	20090928230945		53	Wknight94's test filter		
-526	750	0	0	0	0	0	default	20160823102448		51	Long term film vandal		
+519	566	1	0	0	1	0	default	20140102181650	disallow	57	SPI Impersonation	sockpuppetry?	Hidden;SPI= Sock Puppet Investigation?https://en.wikipedia.org/wiki/Wikipedia:Dispute_resolution_requests/SPI
+520	635	0	0	0	1	0	default	20180817210724	warn	57	OTRS template added by non-OTRS member	good_faith?	"succeeded by 642; Open-source Ticket Request System (""OTRS"")"
+521	419	0	0	0	1	0	default	20120808231716	disallow	57	User removing himself from AIV	vandalism, edit_warring?	"“""Following a short discussion on <http://en.wikipedia.org/w/index.php?title=Wikipedia:Administrators%27_noticeboard/Incidents&oldid=434279319#edit war at the vandalism board!> I am creating this abusefilter to stop vandals from removing themselves from AIV.”"
+522	330	1	0	0	1	0	default	20110310111130	warn	55	Attacks on editors	harassment	
+523	914	1	0	1	0	0	default	20180422210717	disallow	54	Igor Janev Spammer	spam? 	
+524	293	1	0	0	1	0	default	20160824183539	disallow	53	J.delanoy attacks	harassment?	https://en.wikipedia.org/wiki/User:J.delanoy -←- a very active wikipedian
+525	193	1	0	0	1	0	default	20090928230945		53	Wknight94's test filter	test	
+526	750	0	0	0	0	0	default	20160823102448		51	Long term film vandal	long_term_abuse	
 527	263	1	0	0	1	0	default	20100808082040		50	Serafin - talk page abuse		
 528	510	1	0	0	1	0	default	20160614033645		50	JonesManorFarm		
 529	778	1	0	0	1	0	default	20160722100644		48	Ceb sock		
