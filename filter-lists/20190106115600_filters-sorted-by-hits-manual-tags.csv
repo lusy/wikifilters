@@ -527,48 +527,48 @@
 524	293	1	0	0	1	0	default	20160824183539	disallow	53	J.delanoy attacks	harassment?	https://en.wikipedia.org/wiki/User:J.delanoy -←- a very active wikipedian
 525	193	1	0	0	1	0	default	20090928230945		53	Wknight94's test filter	test	
 526	750	0	0	0	0	0	default	20160823102448		51	Long term film vandal	long_term_abuse	
-527	263	1	0	0	1	0	default	20100808082040		50	Serafin - talk page abuse		
-528	510	1	0	0	1	0	default	20160614033645		50	JonesManorFarm		
-529	778	1	0	0	1	0	default	20160722100644		48	Ceb sock		
-530	816	1	0	0	1	0	default	20170120213621	disallow	47	ARBPIA vandal bot		
-531	390	1	0	0	1	0	default	20160614032112	disallow	47	Dynamic IP vandalism		
-532	204	1	0	0	1	0	default	20091023011806	disallow	47	Bangladeshi vandal		
-533	467	1	0	0	1	0	default	20160614032854	disallow	47	Sakaisinai7		
-534	594	1	0	0	1	0	default	20160614034809	disallow	46	Verizon mobile vandal		
-535	940	1	0	0	0	0	default	20181109181811	throttle,disallow	46	LTA 940		
-536	178	1	0	0	1	0	default	20090812211459	disallow	46	Crier attack vandalism		
-537	570	1	0	0	1	0	default	20160614034517	disallow	45	Checkmarx		
-538	696	1	0	0	0	0	default	20150714000934		44	Informative link spam		
-539	730	1	0	0	0	0	default	20160107192810		44	Filter to spot sock		
-540	48	0	0	0	1	0	default	20090325083005		43	Oft-inappropriate external links		
-541	191	1	0	0	1	0	default	20160820181202		43	User:ECW500		
-542	309	1	0	0	1	0	default	20100920023439	throttle	42	Unusual change of URLs		
-543	719	0	0	0	0	0	default	20150818174227	disallow	42	Empty ref vandal		
-544	480	1	0	0	1	0	default	20160911183305	disallow	42	Swamilive		
-545	508	1	0	0	1	0	default	20160614033626	disallow	42	Long-term pattern abuse II		
-546	471	1	0	0	1	0	default	20131003210147		41	Eurodance vandal		
-547	795	1	0	0	1	0	default	20170402074826	disallow	40	Ref Desk Troll		
-548	211	0	0	0	1	0	default	20090928231057		40	Warn users about entering email addresses		
-549	54	1	0	0	1	0	default	20100808081238		39	Virgin Killer vandalism		
-550	830	1	0	0	0	0	default	20190104180947	disallow	39	LTA_O_socking		
-551	953	1	0	0	0	0	default	20190104181712		39	Galobtter test filter		
-552	736	0	0	0	0	0	default	20151203092828		39	XSS Filter		
-553	629	1	0	0	0	0	default	20180403031050		38	Possible Spamming		
-554	945	1	0	1	0	0	default	20181205003231	throttle,disallow	37	proxy talk page abuse		
-555	490	1	0	0	1	0	default	20160911190243	disallow	37	Beatles IP vandal		
-556	340	1	0	0	1	0	default	20150212173520		36	Misc Vandalism, Type N+1		
-557	360	1	0	0	1	0	default	20110310111414	disallow	36	Spam Blacklist Circumvention Attempts		
-558	546	1	0	0	1	0	default	20160614034041	disallow	35	Disruptive user from Hyogo, Japan		
-559	673	0	0	0	0	0	default	20160128121223		35	Ankur Mazumder		
-560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling		
-561	760	1	0	0	0	0	default	20160628012842	disallow	34	Sandbox vandal		
-562	154	0	0	0	1	0	default	20090807113207		33	Macedonia naming conflict 2		
-563	781	1	0	0	0	0	default	20161103144540	disallow	32	LTA collection 1		
-564	553	1	0	0	1	0	default	20130611050053		32	The FIFA Vandal from Peru		
-565	821	1	0	0	0	0	default	20180725014748	disallow	32	Supersonic jet		
-566	678	0	0	0	0	0	default	20151223104143		32	MOS vandal		
-567	701	0	0	0	0	0	default	20150829164145		32	Image link spam		
-568	241	1	0	0	1	0	default	20091003121014		32	Truth Lover sock vandal		
+527	263	1	0	0	1	0	default	20100808082040		50	Serafin - talk page abuse	abuse?, harassment?	Hidden; maybe related to this https://en.wikipedia.org/wiki/User:Serafin
+528	510	1	0	0	1	0	default	20160614033645		50	JonesManorFarm	sockpuppetry?	Hidden; https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations/JonesManorFarm
+529	778	1	0	0	1	0	default	20160722100644		48	Ceb sock	sockpuppetry	hidden
+530	816	1	0	0	1	0	default	20170120213621	disallow	47	ARBPIA vandal bot	vandalism?, biased_pov?, political vandalism?	hidden;https://en.wikipedia.org/w/index.php?title=Wikipedia:ARBPIA&redirect=no Arbitration Israel-Palestina
+531	390	1	0	0	1	0	default	20160614032112	disallow	47	Dynamic IP vandalism	vandalism	hidden
+532	204	1	0	0	1	0	default	20091023011806	disallow	47	Bangladeshi vandal	vandalism	hidden
+533	467	1	0	0	1	0	default	20160614032854	disallow	47	Sakaisinai7	Sockpuppetry?, abuse	hidden; https://en.wikipedia.org/wiki/User:Sakaisinai7
+534	594	1	0	0	1	0	default	20160614034809	disallow	46	Verizon mobile vandal	vandalism	hidden
+535	940	1	0	0	0	0	default	20181109181811	throttle,disallow	46	LTA 940	long_term_abuse	hidden
+536	178	1	0	0	1	0	default	20090812211459	disallow	46	Crier attack vandalism	vandalism	hidden
+537	570	1	0	0	1	0	default	20160614034517	disallow	45	Checkmarx	unknown	hidden
+538	696	1	0	0	0	0	default	20150714000934		44	Informative link spam	Spam?, seo?	hidden
+539	730	1	0	0	0	0	default	20160107192810		44	Filter to spot sock	sockpuppetry	hidden
+540	48	0	0	0	1	0	default	20090325083005		43	Oft-inappropriate external links	spam? 	deleted; targets youtube, myspace + blog links. Why are they inappropriate?
+541	191	1	0	0	1	0	default	20160820181202		43	User:ECW500	abuse?, sockpuppetry?	Hidden; user is banned; https://en.wikipedia.org/wiki/User:ECW500
+542	309	1	0	0	1	0	default	20100920023439	throttle	42	Unusual change of URLs	vandalism?, spam?	hidden; deleted
+543	719	0	0	0	0	0	default	20150818174227	disallow	42	Empty ref vandal	vandalism?	"disabled; “Ongoing vandal from Belgrade, Serbia entering only """"<ref></ref>"""" into articles until they are blocked. Should be temporary"""
+544	480	1	0	0	1	0	default	20160911183305	disallow	42	Swamilive	vandalism, sockpuppetry, harassment	From https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/Swamilive “He will attack any page he can, although his sock puppets will only target a specific type of page. He creates hoax articles, and will insert long diatribes of nonsense [1]. His socks, when cornered, will eventually confess, [2], and like most vandals- he will disappear and reappear across long time spans. He will also vandalize the talk pages of anyone who bothers him. “
+545	508	1	0	0	1	0	default	20160614033626	disallow	42	Long-term pattern abuse II	long_term_abuse	hidden
+546	471	1	0	0	1	0	default	20131003210147		41	Eurodance vandal	vandalism	hidden
+547	795	1	0	0	1	0	default	20170402074826	disallow	40	Ref Desk Troll	vandalism	extra tag for trolling? What would be the exact def?
+548	211	0	0	0	1	0	default	20090928231057		40	Warn users about entering email addresses	can’t decide	not sure what the idea is: warn people not to enter own/others’ email addresses to prevent harassment
+549	54	1	0	0	1	0	default	20100808081238		39	Virgin Killer vandalism	vandalism	
+550	830	1	0	0	0	0	default	20190104180947	disallow	39	LTA_O_socking	long_term_abuse, sockpuppetry	
+551	953	1	0	0	0	0	default	20190104181712		39	Galobtter test filter	test	
+552	736	0	0	0	0	0	default	20151203092828		39	XSS Filter	bug	cross site scripting;https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested/Archive_7#XSS_Filter_detect “Task: Block Internet Explorer 8+ users from saving edits that triggered the XSS Filter (Bug 32013). The XSS Filter transforms periods, bracket, and parentheses to the Number sign. One simple implementation might be ##[^{|}<\n>[\];:*]{5,255}?##”
+553	629	1	0	0	0	0	default	20180403031050		38	Possible Spamming	spam? 	
+554	945	1	0	1	0	0	default	20181205003231	throttle,disallow	37	proxy talk page abuse	abuse?, harassment?	
+555	490	1	0	0	1	0	default	20160911190243	disallow	37	Beatles IP vandal	vandalism	
+556	340	1	0	0	1	0	default	20150212173520		36	Misc Vandalism, Type N+1	vandalism	
+557	360	1	0	0	1	0	default	20110310111414	disallow	36	Spam Blacklist Circumvention Attempts	spam?, abuse?	
+558	546	1	0	0	1	0	default	20160614034041	disallow	35	Disruptive user from Hyogo, Japan	vandalism	
+559	673	0	0	0	0	0	default	20160128121223		35	Ankur Mazumder	sockpuppetry, self_promotion?	“Created per request. Prolific sockpuppeteer who repeatedly makes biographies about himself. Log only for now. --Samwalton9, 29 March 2015”
+560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling	trolling?, vandalism?	Hidden; what’s ANI?
+561	760	1	0	0	0	0	default	20160628012842	disallow	34	Sandbox vandal	vandalism	hidden
+562	154	0	0	0	1	0	default	20090807113207		33	Macedonia naming conflict 2	politically_motivated?, vandalism	deleted; “Collection of terms used in the Macedonian naming conflict that are usually considered pejorative, and hence are unlikely to be appropriate in articles.”
+563	781	1	0	0	0	0	default	20161103144540	disallow	32	LTA collection 1	long_term_abuse	hidden
+564	553	1	0	0	1	0	default	20130611050053		32	The FIFA Vandal from Peru	vandalism	
+565	821	1	0	0	0	0	default	20180725014748	disallow	32	Supersonic jet	unknown	hidden
+566	678	0	0	0	0	0	default	20151223104143		32	MOS vandal	vandalism	
+567	701	0	0	0	0	0	default	20150829164145		32	Image link spam	spam? 	
+568	241	1	0	0	1	0	default	20091003121014		32	Truth Lover sock vandal	sockpuppetry	
 569	378	1	0	0	1	0	default	20120202004442	disallow	31	Russian Science		
 570	775	1	0	0	1	0	default	20160723173128		30	MKUltra Vandal		
 571	792	1	0	0	0	0	default	20181230215124	disallow	30	Harassment		
