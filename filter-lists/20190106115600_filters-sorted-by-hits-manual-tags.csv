@@ -575,33 +575,34 @@
 572	107	1	0	0	1	0	default	20090807112653		30	Continued spam of blacklisted links	spam?, vandalism?	hidden
 573	412	1	0	0	1	0	default	20110518202040		30	Image added	spam? 	hidden
 574	440	0	0	0	1	0	default	20120719063817		30	intextual.com markup	good_faith?, bug?	“Based on filter 345. Search for intextual.com inline HTML markup. -- Gogo Dodo” and 345 is marked as bug
-575	448	1	0	0	1	0	default	20130404081056	disallow	30	unblock disruption		
+575	448	1	0	0	1	0	default	20130404081056	disallow	30	unblock disruption	vandalism?	hidden; if it was good faith it wouldn’t be hidden
 576	746	1	0	0	0	0	default	20160208201022	disallow	30	Prolific socker IV (B)	sockpuppetry	
-577	407	1	0	0	1	0	default	20120808231546	disallow	29	Disruptive block evasion		
-578	437	0	0	0	1	0	default	20120808231808	warn	29	Title blacklist for TITLES with more than 9 caps		
-579	25	1	0	0	1	0	default	20090318150015		28	Unusual behavior from new account		
-580	911	1	0	0	1	0	default	20180724113113	disallow	28	Wrestling social networking spammer		
-581	237	0	0	0	1	0	default	20091003121439		28	Creating page with maintenance templates		
-582	93	0	0	0	1	0	default	20090708124036		27	Web links in edit summaries		
+577	407	1	0	0	1	0	default	20120808231546	disallow	29	Disruptive block evasion	vandalism?	hidden
+578	437	0	0	0	1	0	default	20120808231808	warn	29	Title blacklist for TITLES with more than 9 caps	bad_style; vandalism	deleted
+579	25	1	0	0	1	0	default	20090318150015		28	Unusual behavior from new account	vandalism?	hidden
+580	911	1	0	0	1	0	default	20180724113113	disallow	28	Wrestling social networking spammer	spam? 	hidden
+581	237	0	0	0	1	0	default	20091003121439		28	Creating page with maintenance templates	vandalism (template vandalism)?, good_faith?	"“Disabling - this is mostly redundant to filter 164; will modify that one to catch the few articles this catches that 164 doesn't - ThaddeusB
+Marked as deleted. - Ruslik"","
+582	93	0	0	0	1	0	default	20090708124036		27	Web links in edit summaries	spam? Link vandalism?	Deleted; “Meant to catch User:ByAppointmentTo socks putting pornsite links in edit summaries (see for example User:One Way Motorway).”
 583	863	1	0	0	0	0	default	20180403030800		27	LGBT LTA	long_term_abuse, politically_motivated?	
 584	863	1	0	0	0	0	default	20171118220117	disallow	27	LTA 873	long_term_abuse	
-585	933	1	0	1	0	0	default	20181001034355	disallow	27	Deepak Khumar		
-586	45	1	0	0	1	0	default	20090322043601		26	Move to title with special characters		
-587	307	1	0	0	1	0	default	20100404201317	throttle,warn,disallow	26	Redlink/edit summary vandalism by specific user		
-588	609	1	0	0	0	0	default	20140801184723	disallow	25	Europa Universalis-related disruption		
-589	411	0	0	0	1	0	default	20110521082446	warn,disallow	25	Edit notices		
-590	199	0	0	0	1	0	default	20160820181339		25	Unflagged Bots		
-591	209	0	0	0	1	0	default	20090928231104	disallow	25	arwiki interwiki problem		
-592	370	1	0	0	1	0	default	20110310111524	throttle,disallow	24	Persistent vandalism		
-593	157	1	0	0	1	0	default	20160820180542	disallow	24	Greek nationalism		
-594	938	1	0	1	0	0	default	20181022180632	disallow	24	Targeted abuse		
-595	599	1	0	0	1	0	default	20160614034844		23	FPV		
-596	94	0	0	0	1	0	default	20090807112502	warn,disallow	23	San Diego = whale's vagina		
-597	326	1	0	0	1	0	default	20160904150103	disallow	22	Vandalism-only article names		
-598	845	1	0	0	0	0	default	20170421164626	warn,disallow	22	Prevention of AIV/UAA hinderance		
-599	361	1	0	0	1	0	default	20160904150215	disallow	22	"""Scruffy"" vandalism"		
-600	372	1	0	0	1	0	default	20110310111536	disallow	22	Reference desk vandalism		
-601	375	1	0	0	1	0	default	20120202004431	disallow	22	9/11 Vandalism		
+585	933	1	0	1	0	0	default	20181001034355	disallow	27	Deepak Khumar	unknown	hidden
+586	45	1	0	0	1	0	default	20090322043601		26	Move to title with special characters	vandalism?	hidden
+587	307	1	0	0	1	0	default	20100404201317	throttle,warn,disallow	26	Redlink/edit summary vandalism by specific user	vandalism	hidden
+588	609	1	0	0	0	0	default	20140801184723	disallow	25	Europa Universalis-related disruption	vandalism?	hidden; Europa Universallis is a video game
+589	411	0	0	0	1	0	default	20110521082446	warn,disallow	25	Edit notices	not sure	Deleted; “Account creators shouldn't be creating edit notices! -P”; https://en.wikipedia.org/wiki/Wikipedia:Editnotice
+590	199	0	0	0	1	0	default	20160820181339		25	Unflagged Bots	maintenance	deleted; tried to find accounts with “bot” in their name; deemed an inappropriate use of an edit filter
+591	209	0	0	0	1	0	default	20090928231104	disallow	25	arwiki interwiki problem	maintenance	“Bot problem removing valid arwiki interwiki links due to pywikipedia bug.” Is this a proper use of an edit filter though? This case should be discussed at the bot talk page or not?
+592	370	1	0	0	1	0	default	20110310111524	throttle,disallow	24	Persistent vandalism	vandalism	hidden
+593	157	1	0	0	1	0	default	20160820180542	disallow	24	Greek nationalism	vandalism?, biased_pov?, politically motivated	hidden
+594	938	1	0	1	0	0	default	20181022180632	disallow	24	Targeted abuse	abuse?, harassment?	hidden
+595	599	1	0	0	1	0	default	20160614034844		23	FPV	unknown	hidden
+596	94	0	0	0	1	0	default	20090807112502	warn,disallow	23	San Diego = whale's vagina	vandalism	deleted
+597	326	1	0	0	1	0	default	20160904150103	disallow	22	Vandalism-only article names	vandalism	hidden
+598	845	1	0	0	0	0	default	20170421164626	warn,disallow	22	Prevention of AIV/UAA hinderance	vandalism	Administrator Intervention against Vandalism
+599	361	1	0	0	1	0	default	20160904150215	disallow	22	"""Scruffy"" vandalism"	vandalism	hidden
+600	372	1	0	0	1	0	default	20110310111536	disallow	22	Reference desk vandalism	vandalism	hidden
+601	375	1	0	0	1	0	default	20120202004431	disallow	22	9/11 Vandalism	vandalism, politically motivated?	hidden
 602	638	1	0	0	1	0	default	20170402074101	disallow	22	Stern review		
 603	656	1	0	0	1	0	default	20160614040359	disallow	22	Driver 3 vandal		
 604	203	1	0	0	1	0	default	20110310110538	disallow	22	Template spam from 88.105.0.0/16		
