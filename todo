@@ -4,6 +4,7 @@
   * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
   * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
   (Abuse of tags; Account creation, malicious; Avoidant vandalism; Blanking, illegitimate; Copyrighted material, repeated uploading of; Edit summary vandalism; Format vandalism; Gaming the system; Hidden vandalism; Hoaxing vandalism; Image vandalism; Link vandalism; Page creation, illegitimate; Page lengthening; Page-move vandalism; Silly vandalism; Sneaky vandalism; Spam external linking; Stockbroking vandalism; talk page vandalism; Template vandalism; User and user talk page vandalism; Vandalbots;)
+  * consider also other forms of (unintenionally) disruptive behaviour: boldly editing; copyright violation disruptive editing or stubbornness --> edit warring; edit summary omission; editing tests by experimenting users; harassment or personal attacks; Incorrect wiki markup and style; lack of understanding of the purpose of wikipedia; misinformation, accidental; NPOV contraventions (Neutral point of view); nonsense, accidental; Policy and guideline pages, good-faith changes to; Reversion or removal of unencyclopedic material, or of edits covered under the biographies of living persons policy; Deletion nominations;
   -----
   * classify in "vandalism"|"good_faith"|"biased_edits"|"misc" for now
   * syntactic vs semantic vs ? (ALL CAPS is syntactic)
@@ -16,7 +17,6 @@
 * add a README to github repo
 
 * Read these two pages
-https://en.wikipedia.org/wiki/Wikipedia:Vandalism
 https://en.wikipedia.org/wiki/Wikipedia:Vandalism_types
 https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism
 https://en.wikipedia.org/wiki/Wikipedia:Disruptive_editing
@@ -39,8 +39,11 @@ https://en.wikipedia.org/wiki/Wikipedia:Counter-Vandalism_Unit
 https://en.wikipedia.org/wiki/Wikipedia:Counter-Vandalism_Unit/Academy
 https://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism
 https://en.wikipedia.org/wiki/Category:Wikipedia_counter-vandalism_tools
+https://en.wikipedia.org/wiki/Vandalism_on_Wikipedia
+https://meta.wikimedia.org/wiki/Vandalbot
 
 https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
+https://en.wikipedia.org/wiki/Wikipedia:Purpose
 
 * look at AbuseFilter extention code: how is a filter trigger logged?
 https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
@@ -138,6 +141,10 @@ https://en.wikipedia.org/wiki/Special:AbuseFilter/1
 https://tools.wmflabs.org/ptwikis/Filters:enwiki:61
 https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2009-03-23/Abuse_Filter
 https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions
+
+## Vandalism
+
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism
 
 ## Software
 
