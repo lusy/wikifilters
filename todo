@@ -7,10 +7,7 @@
   * how is spam classified for example?
 
 * check filter rules for edits in user/talks name spaces (may be indication of filtering harassment)
-* add "af_deleted" column to filter list
 * add also "af_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
-
-* Setup CSCW latex template up
 
 * add a README to github repo
 
@@ -123,3 +120,8 @@ https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions
 https://www.mediawiki.org/wiki/Extension:AbuseFilter
 https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format
 https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFilters extention
+
+# Done
+
+* Setup CSCW latex template up
+* add "af_deleted" column to filter list
