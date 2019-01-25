@@ -1,6 +1,10 @@
 # Next steps
 
 * Look at filters: what different types of filters are there? how do we classify them?
+  * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
+  * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
+  (Abuse of tags; Account creation, malicious; Avoidant vandalism; Blanking, illegitimate; Copyrighted material, repeated uploading of; Edit summary vandalism; Format vandalism; Gaming the system; Hidden vandalism; Hoaxing vandalism; Image vandalism; Link vandalism; Page creation, illegitimate; Page lengthening; Page-move vandalism; Silly vandalism; Sneaky vandalism; Spam external linking; Stockbroking vandalism; talk page vandalism; Template vandalism; User and user talk page vandalism; Vandalbots;)
+  -----
   * classify in "vandalism"|"good_faith"|"biased_edits"|"misc" for now
   * syntactic vs semantic vs ? (ALL CAPS is syntactic)
   * are there ontologies?
