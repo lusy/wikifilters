@@ -14,6 +14,29 @@
 * Read these two pages
 https://en.wikipedia.org/wiki/Wikipedia:Vandalism
 https://en.wikipedia.org/wiki/Wikipedia:Vandalism_types
+https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism
+https://en.wikipedia.org/wiki/Wikipedia:Disruptive_editing
+https://en.wikipedia.org/wiki/Wikipedia:Requests_for_page_protection
+https://en.wikipedia.org/wiki/Wikipedia:Offensive_material
+
+https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view
+https://en.wikipedia.org/wiki/Wikipedia:No_original_research
+https://en.wikipedia.org/wiki/Wikipedia:Harassment
+https://en.wikipedia.org/wiki/Wikipedia:Edit_warring
+https://en.wikipedia.org/wiki/Wikipedia:Blocking_policy#Evasion_of_blocks
+https://en.wikipedia.org/wiki/Wikipedia:Sock_puppetry
+https://en.wikipedia.org/wiki/Wikipedia:Blocking_IP_addresses
+https://en.wikipedia.org/wiki/Wikipedia:Counter-Vandalism_Unit/Vandalism_studies
+https://en.wikipedia.org/wiki/Wikipedia:Long_term_abuse
+https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism
+https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations
+
+https://en.wikipedia.org/wiki/Wikipedia:Counter-Vandalism_Unit
+https://en.wikipedia.org/wiki/Wikipedia:Counter-Vandalism_Unit/Academy
+https://en.wikipedia.org/wiki/Wikipedia:Cleaning_up_vandalism
+https://en.wikipedia.org/wiki/Category:Wikipedia_counter-vandalism_tools
+
+https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
 
 * look at AbuseFilter extention code: how is a filter trigger logged?
 https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
