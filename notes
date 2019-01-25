@@ -490,3 +490,93 @@ Subject namespaces 	Talk namespaces
 Virtual namespaces
 -1 	Special
 -2 	Media
+
+============================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism
+
+"This is not a noticeboard for vandalism. Report vandalism from specific users at Wikipedia:Administrator intervention against vandalism, or Wikipedia:Requests for page protection for specific pages.
+Not to be confused with Wikipedia:Disruptive editing."
+
+"This page documents an English Wikipedia policy."
+
+"This page in a nutshell: Intentionally making abusive edits to Wikipedia will result in a block."
+
+DEF Vandalism:
+"On Wikipedia, vandalism has a very specific meaning: editing (or other behavior) deliberately intended to obstruct or defeat the project's purpose, which is to create a free encyclopedia, in a variety of languages, presenting the sum of all human knowledge."
+"The malicious removal of encyclopedic content, or the changing of such content beyond all recognition, without any regard to our core content policies of neutral point of view (which does not mean no point of view), verifiability and no original research, is a deliberate attempt to damage Wikipedia. There, of course, exist more juvenile forms of vandalism, such as adding irrelevant obscenities or crude humor to a page, illegitimately blanking pages, and inserting obvious nonsense into a page. Abusive creation or usage of user accounts and IP addresses may also constitute vandalism."
+
+Consequences of vandalism, vandalism management
+"Vandalism is prohibited. While editors are encouraged to warn and educate vandals, warnings are by no means a prerequisite for blocking a vandal (although administrators usually only block when multiple warnings have been issued). "
+
+"Even if misguided, willfully against consensus, or disruptive, any good-faith effort to improve the encyclopedia is not vandalism."
+"For example, edit warring over how exactly to present encyclopedic content is not vandalism." !!!
+"Careful consideration may be required to differentiate between edits that are beneficial, edits that are detrimental but well-intentioned, and edits that are vandalism."
+"If it is clear that the editor in question is intending to improve Wikipedia, those edits are not vandalism, even if they violate some other core policy of Wikipedia."
+"When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"
+
+Handling
+"Upon discovering vandalism, revert such edits, using the undo function or an anti-vandalism tool. Once the vandalism is undone, warn the vandalizing editor. Notify administrators at the vandalism noticeboard of editors who continue to vandalize after multiple warnings, and administrators should intervene to preserve content and prevent further disruption by blocking such editors. Users whose main or sole purpose is clearly vandalism may be blocked indefinitely without warning."
+
+"examples of suspicious edits are those performed by IP addresses, red linked, or obviously improvised usernames"
+
+One of the strategies to spot vandalism is "Watching for edits tagged by the abuse filter. However, many tagged edits are legitimate, so they should not be blindly reverted. That is, do not revert without at least reading the edit."
+
+"Warn the vandal. Access the vandal's talk page and warn them. A simple note explaining the problem with their editing is sufficient. If desired, a series of warning templates exist to simplify the process of warning users, but these templates are not required. These templates include
+
+    Level one: {{subst:uw-vandalism1}} This is a gentle caution regarding unconstructive edits; it encourages new editors to use a sandbox for test edits. This is the mildest warning.
+    Level two: {{subst:uw-vandalism2}} This warning is also fairly mild, though it explicitly uses the word 'vandalism' and links to this Wikipedia policy.
+    Level three: {{subst:uw-vandalism3}} This warning is sterner. It is the first to warn that further disruptive editing or vandalism may lead to a block.
+    Level four: {{subst:uw-vandalism4}} This is the sharpest vandalism warning template, and indicates that any further disruptive editing may lead to a block without warning."
+
+Types of vandalism:
+"
+* Abuse of tags: Bad-faith placing of non-content tags such as {{afd}}, {{db}}, {{sprotected}}, or other tags on pages that do not meet such criteria. This includes baseless removal of {{policy}} and related tags.
+
+* Account creation, malicious: Creating accounts with usernames that contain deliberately offensive or disruptive terms is considered vandalism, whether the account is used or not. For Wikipedia's policy on what is considered inappropriate for a username, see Wikipedia:Username policy. See also Wikipedia:Sock puppetry.
+
+* Avoidant vandalism: Removing {{afd}}, {{copyvio}} and other related tags in order to conceal deletion candidates or avert deletion of such content. However, this is often mistakenly done by new users who are unfamiliar with AfD procedures and such users should be given the benefit of the doubt and pointed to the proper page to discuss the issue.
+
+* Blanking, illegitimate
+For legitimate cases of blanking articles, see Wikipedia:Redirect § Redirects that replace previous articles.
+
+Removing encyclopedic content without any reason, or replacing such content with nonsense. Content removal is not considered to be vandalism when the reason for the removal of the content is readily apparent by examination of the content itself, or where a non-frivolous explanation for the removal of apparently legitimate content is provided, linked to, or referenced in an edit summary.
+
+Blanking that could be legitimate includes blanking all or part of a biography of a living person. Wikipedia is especially concerned about providing accurate and unbiased information on the living; blanking may be an effort to remove inaccurate or biased material. Due to the possibility of unexplained good-faith content removal, {{uw-test1}} or {{uw-delete1}}, as appropriate, should be used as initial warnings for content removals without more descriptive edit summaries.
+
+* Copyrighted material, repeated uploading of: Uploading or using material on Wikipedia in ways which violate Wikipedia's copyright policies after having been warned is vandalism. Because users may be unaware that the information is copyrighted, or of Wikipedia policies on how such material may and may not be used, such action only becomes vandalism if it continues after the copyrighted nature of the material and relevant policy restricting its use have been communicated to the user.
+
+* Edit summary vandalism: Making offensive edit summaries in an attempt to leave a mark that cannot be easily expunged from the record (edit summaries cannot simply be "reverted" and require administrative action if they have to be removed from a page's history). Often combined with malicious account creation.
+
+* Format vandalism: Changing the formatting of a page unreasonably and maliciously. But many times, editors might just make an unintended mistake or are testing how the wikicode works. Sometimes it might be a bug in the Wikipedia software. Some changes to the format are not vandalism, but rather either good faith edits of editors who don't know the guidelines or simply a different opinion on how the format should look, in which case it is just a disputed edit.
+
+* Gaming the system: Deliberate attempts to circumvent enforcement of Wikipedia policies, guidelines, and procedures by causing bad faith edits to go unnoticed. Includes marking bad faith edits as minor to get less scrutiny, making a minor edit following a bad faith edit so it won't appear on all watchlists, recreating previously deleted bad faith creations under a new title, use of the {{construction}} tag to prevent deletion of a page that would otherwise be a clear candidate for deletion, or use of sock puppets.
+
+* Hidden vandalism: Any form of vandalism that makes use of embedded text, which is not visible to the final rendering of the article but visible during editing. This includes link vandalism, or placing malicious, offensive, or otherwise disruptive or irrelevant messages or spam in hidden comments for editors to see.
+
+* Hoaxing vandalism: Deliberately adding falsities to articles, particularly to biographies of living people, with hoax information is considered vandalism.
+
+* Image vandalism: Uploading shock images, inappropriately placing explicit images on pages, or simply using any image in a way that is disruptive. Please note though that Wikipedia is not censored for the protection of minors and that explicit images may be uploaded and/or placed on pages for legitimate reasons (that is, if they have encyclopedic value).
+
+* Link vandalism: Adding or changing internal or external links on a page to disruptive, irrelevant, or inappropriate targets while disguising them with mislabeling.
+
+* Page creation, illegitimate: Creating new pages with the sole intent of malicious behavior. It also includes personal attack pages (articles written to disparage the subject), hoaxes and other intentionally inaccurate pages. There are many other types of pages that merit deletion, even speedy deletion, but which are not vandalism. New users sometimes create test pages containing nonsense or even autobiographies, and doing so is not vandalism; such pages can also be moved to become their sandbox or userpage. Pages on non-notable topics are not vandalism. Blatant advertising pages, and blatant POV pushes, are not vandalism, but frequently happen and often lead to editors being blocked. It's important that people creating inappropriate pages be given appropriate communication; even if they aren't willing to edit within our rules, they are more likely to go away quietly if they understand why their page has been deleted.
+
+* Page lengthening: Adding very large (measured by the number of bytes) amounts of bad-faith content to a page so as to make the page's load time abnormally long or even make the page impossible to load on some computers without the browser or machine crashing. Adding large amounts of good-faith content is not vandalism, though prior to doing so, one should consider if splitting a long page may be appropriate (see Wikipedia:Article size).
+
+* Page-move vandalism: Changing the names of pages to disruptive, irrelevant, or otherwise inappropriate names. Only autoconfirmed or confirmed users can move pages.
+
+* Silly vandalism: Adding profanity, graffiti, or patent nonsense to pages; creating nonsensical and obviously unencyclopedic pages, etc. It is one of the most common forms of vandalism. However, the addition of random characters to pages is often characteristic of an editing test and, though impermissible, may not be malicious.
+
+* Sneaky vandalism: Vandalism that is harder to spot, or that otherwise circumvents detection, including adding plausible misinformation to articles (such as minor alteration of facts or additions of plausible-sounding hoaxes), hiding vandalism (such as by making two bad edits and only reverting one), simultaneously using multiple accounts or IP addresses to vandalize, abuse of maintenance and deletion templates, or reverting legitimate edits with the intent of hindering the improvement of pages. Impersonating other users by signing an edit with a different username or IP address also constitutes sneaky vandalism, but take care not to confuse this with appropriately correcting an unsigned edit made by another user. Some vandals even follow their vandalism with an edit that states "Rv vandalism" in the edit summary in order to give the appearance the vandalism was reverted.
+
+* Spam external linking: Adding or continuing to add spam external links is vandalism if the activity continues after a warning. A spam external link is one added to a page mainly for the purpose of promoting a website, product or a user's interests rather than to improve the page editorially.
+
+* Stockbroking vandalism: Adding information to pages about quoted companies concerning forthcoming mergers, announcements, and the like. The vandal's intent is to provide credibility to their attempt to promote shares.
+
+* Talk page vandalism: Illegitimately deleting or editing other users' comments. However, it is acceptable to blank comments constituting vandalism, internal spam, or harassment or a personal attack. It is also acceptable to identify an unsigned comment. Users are also permitted to remove comments from their own user talk pages. A policy of prohibiting users from removing warnings from their own talk pages was considered and rejected on the grounds that it would create more issues than it would solve.
+
+* Template vandalism: Modifying the wiki language or text of a template in a harmful or disruptive manner. This is especially serious, because it will negatively impact the appearance of multiple pages. Some templates appear on hundreds or thousands of pages, so they are permanently protected from editing to prevent vandalism.
+
+* User and user talk page vandalism: Unwelcome, illegitimate edits to another person's user page may be considered vandalism. User pages are regarded as within the control of their respective users and generally should not be edited without permission of the user to whom they belong. See WP:UP#OWN. Related is Wikipedia:No personal attacks.
+
+* Vandalbots: A script or "robot" that attempts to vandalize or add spam to a mass of pages."
