@@ -569,22 +569,22 @@
 566	678	0	0	0	0	0	default	20151223104143		32	MOS vandal	vandalism	
 567	701	0	0	0	0	0	default	20150829164145		32	Image link spam	spam? 	
 568	241	1	0	0	1	0	default	20091003121014		32	Truth Lover sock vandal	sockpuppetry	
-569	378	1	0	0	1	0	default	20120202004442	disallow	31	Russian Science		
-570	775	1	0	0	1	0	default	20160723173128		30	MKUltra Vandal		
-571	792	1	0	0	0	0	default	20181230215124	disallow	30	Harassment		
-572	107	1	0	0	1	0	default	20090807112653		30	Continued spam of blacklisted links		
-573	412	1	0	0	1	0	default	20110518202040		30	Image added		
-574	440	0	0	0	1	0	default	20120719063817		30	intextual.com markup		
+569	378	1	0	0	1	0	default	20120202004442	disallow	31	Russian Science	unknown	hidden
+570	775	1	0	0	1	0	default	20160723173128		30	MKUltra Vandal	vandalism	hidden
+571	792	1	0	0	0	0	default	20181230215124	disallow	30	Harassment	harassment	hidden
+572	107	1	0	0	1	0	default	20090807112653		30	Continued spam of blacklisted links	spam?, vandalism?	hidden
+573	412	1	0	0	1	0	default	20110518202040		30	Image added	spam? 	hidden
+574	440	0	0	0	1	0	default	20120719063817		30	intextual.com markup	good_faith?, bug?	“Based on filter 345. Search for intextual.com inline HTML markup. -- Gogo Dodo” and 345 is marked as bug
 575	448	1	0	0	1	0	default	20130404081056	disallow	30	unblock disruption		
-576	746	1	0	0	0	0	default	20160208201022	disallow	30	Prolific socker IV (B)		
+576	746	1	0	0	0	0	default	20160208201022	disallow	30	Prolific socker IV (B)	sockpuppetry	
 577	407	1	0	0	1	0	default	20120808231546	disallow	29	Disruptive block evasion		
 578	437	0	0	0	1	0	default	20120808231808	warn	29	Title blacklist for TITLES with more than 9 caps		
 579	25	1	0	0	1	0	default	20090318150015		28	Unusual behavior from new account		
 580	911	1	0	0	1	0	default	20180724113113	disallow	28	Wrestling social networking spammer		
 581	237	0	0	0	1	0	default	20091003121439		28	Creating page with maintenance templates		
 582	93	0	0	0	1	0	default	20090708124036		27	Web links in edit summaries		
-583	863	1	0	0	0	0	default	20180403030800		27	LGBT LTA		
-584	873	1	0	0	0	0	default	20171118220117	disallow	27	LTA 873		
+583	863	1	0	0	0	0	default	20180403030800		27	LGBT LTA	long_term_abuse, politically_motivated?	
+584	863	1	0	0	0	0	default	20171118220117	disallow	27	LTA 873	long_term_abuse	
 585	933	1	0	1	0	0	default	20181001034355	disallow	27	Deepak Khumar		
 586	45	1	0	0	1	0	default	20090322043601		26	Move to title with special characters		
 587	307	1	0	0	1	0	default	20100404201317	throttle,warn,disallow	26	Redlink/edit summary vandalism by specific user		
