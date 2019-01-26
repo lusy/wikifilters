@@ -603,35 +603,35 @@ Marked as deleted. - Ruslik"","
 599	361	1	0	0	1	0	default	20160904150215	disallow	22	"""Scruffy"" vandalism"	vandalism	hidden
 600	372	1	0	0	1	0	default	20110310111536	disallow	22	Reference desk vandalism	vandalism	hidden
 601	375	1	0	0	1	0	default	20120202004431	disallow	22	9/11 Vandalism	vandalism, politically motivated?	hidden
-602	638	1	0	0	1	0	default	20170402074101	disallow	22	Stern review		
-603	656	1	0	0	1	0	default	20160614040359	disallow	22	Driver 3 vandal		
-604	203	1	0	0	1	0	default	20110310110538	disallow	22	Template spam from 88.105.0.0/16		
-605	488	1	0	0	1	0	default	20160911190128	disallow	22	Currently active sockmaster		
-606	839	0	0	0	0	0	default	20170221004051		21	Bad word test		
-607	95	1	0	0	1	0	default	20090419183716		21	Administrator attack page		
-608	363	1	0	0	1	0	default	20110310104458	disallow	21	Article becoming redirect to The Game		
-609	112	1	0	0	1	0	default	20090830005339	disallow	21	Repeated advocacy/spam on Zoophilia		
-610	641	1	0	0	1	0	default	20160614040013	disallow	21	AP disruption		
-611	141	1	0	0	1	0	default	20090409111815		21	Abusive unblock denials - new approach		
-612	923	1	0	1	0	0	default	20180620111016		21	Possible Nigerian phone scams		
-613	417	1	0	0	1	0	default	20160904150318	disallow	21	Suspected Sockpuppets		
-614	298	1	0	0	1	0	default	20100301152737	warn	20	Red link vandalism 2		
-615	615	1	0	0	1	0	default	20160614035243	disallow	20	Reference desk trolling		
-616	618	1	0	0	0	0	default	20150203031455	disallow	20	Wikipedia space trolling		
-617	726	1	0	0	0	0	default	20151216152913	disallow	20	Paul Easter		
-618	747	0	0	0	1	0	default	20160420045711		20	Removal or addition of [[WP:PP-30-500|pp-30-500]] by non-admin		
-619	6	0	0	0	1	0	default	20090718184557		19	Users editing editnotices of other users		
-620	538	1	0	0	1	0	default	20160614033954	disallow	19	Possible sockpuppetry		
-621	60	0	0	0	1	0	default	20090319175424		19	Removing sandbox header		
-622	851	0	0	0	0	0	default	20180312212211		19	Carlos Gardel vandalism		
-623	101	0	0	0	1	0	default	20090807112431		19	Fritzl case vandalism		
-624	645	1	0	0	1	0	default	20160614040149	disallow	19	Camp Half-Blood vandal		
-625	400	1	0	0	1	0	default	20120808231520	throttle,disallow	19	Prolific socker IV		
-626	763	1	0	0	0	0	default	20161111052036		19	Persistent vandal		
-627	395	1	0	0	1	0	default	20120808231426	disallow	18	Topic rangeblocks		
-628	443	1	0	0	1	0	default	20130404081000		18	Beatles		
-629	456	1	0	0	1	0	default	20130404081129	throttle,disallow	18	Kay Uwe Böhm		
-630	482	1	0	0	1	0	default	20120802134516		18	Using comments to evade edit filter		
+602	638	1	0	0	1	0	default	20170402074101	disallow	22	Stern review	unknown	hidden
+603	656	1	0	0	1	0	default	20160614040359	disallow	22	Driver 3 vandal	vandalism	hidden
+604	203	1	0	0	1	0	default	20110310110538	disallow	22	Template spam from 88.105.0.0/16	template_spam	hidden
+605	488	1	0	0	1	0	default	20160911190128	disallow	22	Currently active sockmaster	sockpuppetry	hidden
+606	839	0	0	0	0	0	default	20170221004051		21	Bad word test	test	"“Test complete, merged into 384, disabled. --Someguy1221"",”"
+607	95	1	0	0	1	0	default	20090419183716		21	Administrator attack page	vandalism?, abuse?	hidden
+608	363	1	0	0	1	0	default	20110310104458	disallow	21	Article becoming redirect to The Game	unknown	hidden
+609	112	1	0	0	1	0	default	20090830005339	disallow	21	Repeated advocacy/spam on Zoophilia	spam? 	hidden
+610	641	1	0	0	1	0	default	20160614040013	disallow	21	AP disruption	vandalism	Hidden; AP probably= Arbitration Policy
+611	141	1	0	0	1	0	default	20090409111815		21	Abusive unblock denials - new approach	abuse?, vandalism?	hidden
+612	923	1	0	1	0	0	default	20180620111016		21	Possible Nigerian phone scams	abuse?	hidden
+613	417	1	0	0	1	0	default	20160904150318	disallow	21	Suspected Sockpuppets	sockpuppetry	hidden
+614	298	1	0	0	1	0	default	20100301152737	warn	20	Red link vandalism 2	vandalism	hidden
+615	615	1	0	0	1	0	default	20160614035243	disallow	20	Reference desk trolling	trolling?, vandalism?	hidden
+616	618	1	0	0	0	0	default	20150203031455	disallow	20	Wikipedia space trolling	trolling?, vandalism?	hidden
+617	726	1	0	0	0	0	default	20151216152913	disallow	20	Paul Easter	sockpuppetry?	hidden; probably https://en.wikipedia.org/wiki/User:Paul_Easter
+618	747	0	0	0	1	0	default	20160420045711		20	Removal or addition of [[WP:PP-30-500|pp-30-500]] by non-admin	vandalism?, abuse_of_tags_vandalism?	{{pp-30-500}} is template for page protection
+619	6	0	0	0	1	0	default	20090718184557		19	Users editing editnotices of other users	good_faith	deleted; “Something I used to see all the time when doing redirect work - people would move articles written at [[user:foo]] to [[foo]], unknowingly taking [[user talk:foo]] with history along for the ride.”
+620	538	1	0	0	1	0	default	20160614033954	disallow	19	Possible sockpuppetry	sockpuppetry	
+621	60	0	0	0	1	0	default	20090319175424		19	Removing sandbox header	good_faith?, vandalism?	
+622	851	0	0	0	0	0	default	20180312212211		19	Carlos Gardel vandalism	vandalism, hoaxing?	“No hits since October 2017. Disabling ~MA”
+623	101	0	0	0	1	0	default	20090807112431		19	Fritzl case vandalism	vandalism, hoaxing?	deleted
+624	645	1	0	0	1	0	default	20160614040149	disallow	19	Camp Half-Blood vandal	vandalism	hidden
+625	400	1	0	0	1	0	default	20120808231520	throttle,disallow	19	Prolific socker IV	sockpuppetry	hidden
+626	763	1	0	0	0	0	default	20161111052036		19	Persistent vandal	vandalism	hidden
+627	395	1	0	0	1	0	default	20120808231426	disallow	18	Topic rangeblocks	vandalism?	hidden
+628	443	1	0	0	1	0	default	20130404081000		18	Beatles	unknown	hidden
+629	456	1	0	0	1	0	default	20130404081129	throttle,disallow	18	Kay Uwe Böhm	unknown	hidden
+630	482	1	0	0	1	0	default	20120802134516		18	Using comments to evade edit filter	vandalism, avoidant_vandalism	hidden
 631	232	1	0	0	1	0	default	20110310110732	disallow	18	[[BJCP]]		
 632	255	1	0	0	1	0	default	20100106173931		18	Rodgarton		
 633	259	1	0	0	1	0	default	20100106173841		17	Brazil vandal		
