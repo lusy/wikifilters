@@ -632,22 +632,22 @@ Marked as deleted. - Ruslik"","
 628	443	1	0	0	1	0	default	20130404081000		18	Beatles	unknown	hidden
 629	456	1	0	0	1	0	default	20130404081129	throttle,disallow	18	Kay Uwe Böhm	unknown	hidden
 630	482	1	0	0	1	0	default	20120802134516		18	Using comments to evade edit filter	vandalism, avoidant_vandalism	hidden
-631	232	1	0	0	1	0	default	20110310110732	disallow	18	[[BJCP]]		
-632	255	1	0	0	1	0	default	20100106173931		18	Rodgarton		
-633	259	1	0	0	1	0	default	20100106173841		17	Brazil vandal		
-634	55	1	0	0	1	0	default	20100808082207		17	Signing articles		
-635	832	1	0	0	0	0	default	20171018033635	disallow	17	Profile sock		
-636	849	1	0	1	0	0	default	20190104233809		17	Cat Creek II		
-637	137	1	0	0	1	0	default	20160818210043		17	Copernicus vandal 2		
-638	951	1	0	0	0	0	default	20181218185129		17	TFA disruption		
-639	186	1	0	0	1	0	default	20090928231112	disallow	17	INFRINGEMENT vandal - [[Special:Contributions/172.130.240.199]]		
-640	883	0	0	1	0	0	default	20171014154339		16	Page moves to bad words or other vandalism		
-641	900	1	0	1	0	0	default	20180126234203		16	David Adam Kess Sock		
-642	447	1	0	0	1	0	default	20130404081024	disallow	16	Tile join targets		
-643	15	0	0	0	1	0	default	20090319005312		15	Discussion page vandalism		
-644	544	1	0	0	1	0	default	20161012202424	disallow	15	Specific-page vandalism by single vandal		
-645	381	1	0	0	1	0	default	20120202004457	disallow	15	Scientology group		
-646	954	1	0	1	0	0	default	20190103221750	disallow	15	LTA 954		
+631	232	1	0	0	1	0	default	20110310110732	disallow	18	[[BJCP]]	unknown	hidden
+632	255	1	0	0	1	0	default	20100106173931		18	Rodgarton	sockpuppetry?	hidden; probably https://en.wikipedia.org/wiki/User:Rodgarton
+633	259	1	0	0	1	0	default	20100106173841		17	Brazil vandal	vandalism	hidden
+634	55	1	0	0	1	0	default	20100808082207		17	Signing articles	guideline_vio?; bad_style	hidden; vgl “When editing a page, main namespace articles should not be signed, because the article is a shared work, based on the contributions of many people, and one editor should not be singled out above others.” https://en.wikipedia.org/wiki/Wikipedia:Signatures
+635	832	1	0	0	0	0	default	20171018033635	disallow	17	Profile sock	sockpuppetry	hidden
+636	849	1	0	1	0	0	default	20190104233809		17	Cat Creek II	unknown	hidden
+637	137	1	0	0	1	0	default	20160818210043		17	Copernicus vandal 2	vandalism	hidden
+638	951	1	0	0	0	0	default	20181218185129		17	TFA disruption	abuse?	hidden; TFA is probably “Today’s Featured Article”. No way to know for sure though
+639	186	1	0	0	1	0	default	20090928231112	disallow	17	INFRINGEMENT vandal - [[Special:Contributions/172.130.240.199]]	vandalism	hidden
+640	883	0	0	1	0	0	default	20171014154339		16	Page moves to bad words or other vandalism	page_move_vandalism	“This is just filter 384, except that it&apos;s for page moves.”
+641	900	1	0	1	0	0	default	20180126234203		16	David Adam Kess Sock	sockpuppetry	hidden
+642	447	1	0	0	1	0	default	20130404081024	disallow	16	Tile join targets	unknown	hidden
+643	15	0	0	0	1	0	default	20090319005312		15	Discussion page vandalism	vandalism	
+644	544	1	0	0	1	0	default	20161012202424	disallow	15	Specific-page vandalism by single vandal	vandalism	
+645	381	1	0	0	1	0	default	20120202004457	disallow	15	Scientology group	unknown	hidden
+646	954	1	0	1	0	0	default	20190103221750	disallow	15	LTA 954	long_term_abuse	hidden
 647	503	1	0	0	1	0	default	20160614033605	disallow	15	GISHWHES		
 648	539	1	0	0	1	0	default	20140102175832	disallow	14	Lebanese football rangeblock		
 649	37	0	0	0	1	0	default	20090404190702	warn,disallow	14	"""Ur anus"" joke"		
