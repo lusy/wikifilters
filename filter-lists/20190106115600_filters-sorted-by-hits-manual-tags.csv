@@ -327,7 +327,7 @@
 325	947	1	0	1	0	0	default	20181221074306	throttle,warn	393	LTA 947	long_term_abuse	hidden
 326	931	1	0	1	0	0	default	20190103063839	throttle,disallow	383	Image vandalism I	vandalism	hidden
 327	311	1	0	0	1	0	default	20160614031414	disallow,tag	382	Lewis Hamilton racism	vandalism,	hidden; politically motivated.. 
-328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP	vandalism	
+328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP	vandalism	RFP = Request for page protection
 329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page	good_faith, vandalism	deleted
 330	787	1	0	1	0	0	default	20160814184338	disallow	370	Spicy boy	misc	hidden
 331	699	1	0	0	0	0	default	20160218130439		363	3 edit link spam	spam? 	hidden
@@ -794,7 +794,7 @@ Marked as deleted. - Ruslik"","
 790	431	1	0	0	1	0	default	20110903105437	disallow	2	Malaysian IP hopping vandal		
 791	687	0	0	0	1	0	default	20160614040910		2	Possible word replacement extension		
 792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling		
-793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C		
+793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C		RFP = Request for page protection
 794	484	0	0	0	1	0	default	20150212172634	warn	2	Shutdown of ClueBot by non-admin user		
 795	487	0	0	0	1	0	default	20140303202310		2	Test filter for feedback tool oversight prevention		
 796	805	1	0	0	1	0	default	20161213162528		1	Compromised activity		
