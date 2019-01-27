@@ -648,19 +648,19 @@ Marked as deleted. - Ruslik"","
 644	544	1	0	0	1	0	default	20161012202424	disallow	15	Specific-page vandalism by single vandal	vandalism	
 645	381	1	0	0	1	0	default	20120202004457	disallow	15	Scientology group	unknown	hidden
 646	954	1	0	1	0	0	default	20190103221750	disallow	15	LTA 954	long_term_abuse	hidden
-647	503	1	0	0	1	0	default	20160614033605	disallow	15	GISHWHES		
-648	539	1	0	0	1	0	default	20140102175832	disallow	14	Lebanese football rangeblock		
-649	37	0	0	0	1	0	default	20090404190702	warn,disallow	14	"""Ur anus"" joke"		
-650	549	1	0	0	1	0	default	20140102181348	disallow	14	Airport vandal		
-651	319	1	0	0	1	0	default	20101208223054	disallow	14	Attacks on User:Rodhullandemu		
-652	359	1	0	0	1	0	default	20160904150143	disallow	14	Specific-page vandalism 2		
-653	897	0	0	1	0	0	default	20180123142941	disallow	14	Weird spambot		
-654	949	0	0	0	1	0	default	20181225000531		14	SQL Testing filter		
-655	217	1	0	0	1	0	default	20090928231047	warn,disallow	14	Abdul Rahman Al-Sudais anon vandalism		
-656	827	1	0	0	1	0	default	20170305092905	disallow	13	Abusive username activity		
-657	616	0	0	0	1	0	default	20150628135346	warn,disallow	13	disruption of music articles		
-658	713	1	0	0	0	0	default	20150805150247	disallow	13	Lee Corso		
-659	820	1	0	0	0	0	default	20170102113336	disallow	12	Talk page vandal		
+647	503	1	0	0	1	0	default	20160614033605	disallow	15	GISHWHES	unknown	hidden
+648	539	1	0	0	1	0	default	20140102175832	disallow	14	Lebanese football rangeblock	unknown	hidden
+649	37	0	0	0	1	0	default	20090404190702	warn,disallow	14	"""Ur anus"" joke"	silly_vandalism	deleted
+650	549	1	0	0	1	0	default	20140102181348	disallow	14	Airport vandal	vandalism	hidden
+651	319	1	0	0	1	0	default	20101208223054	disallow	14	Attacks on User:Rodhullandemu	harassment	hidden
+652	359	1	0	0	1	0	default	20160904150143	disallow	14	Specific-page vandalism 2	vandalism	hidden
+653	897	0	0	1	0	0	default	20180123142941	disallow	14	Weird spambot	spam, vandalbot	
+654	949	0	0	0	1	0	default	20181225000531		14	SQL Testing filter	test	
+655	217	1	0	0	1	0	default	20090928231047	warn,disallow	14	Abdul Rahman Al-Sudais anon vandalism	vandalism	hidden
+656	827	1	0	0	1	0	default	20170305092905	disallow	13	Abusive username activity	username_vandalism?	hidden
+657	616	0	0	0	1	0	default	20150628135346	warn,disallow	13	disruption of music articles	vandalism	deleted
+658	713	1	0	0	0	0	default	20150805150247	disallow	13	Lee Corso	unknown	hidden
+659	820	1	0	0	0	0	default	20170102113336	disallow	12	Talk page vandal	vandalism	hidden
 660	317	1	0	0	1	0	default	20100413092702	warn,disallow	12	Sentry Gun		
 661	580	1	0	0	1	0	default	20160614034639	disallow	12	Airport vandal		
 662	333	1	0	0	1	0	default	20110310111140	disallow	12	Akraj block evasion - IP socks (live test)		
@@ -671,7 +671,7 @@ Marked as deleted. - Ruslik"","
 667	683	1	0	0	1	0	default	20160614040802		12	New users removing sections from the Reference Desk		
 668	462	1	0	0	1	0	default	20120820155230	disallow	12	Serial harassment of MuZemike		
 669	219	0	0	0	1	0	default	20090803161738		12	Arbcom requested filter (FOFF)		
-670	780	0	0	0	0	0	default	20160812030457		11	Addition of interlanguage links		
+670	780	0	0	0	0	0	default	20160812030457		11	Addition of interlanguage links		hidden
 671	556	1	0	0	1	0	default	20161012202550	disallow	11	Impersonation usernames		
 672	332	1	0	0	1	0	default	20100522071643		11	J.delanoy vandal		
 673	598	1	0	0	1	0	default	20140102175720	warn,disallow	11	Template redirect protection		
