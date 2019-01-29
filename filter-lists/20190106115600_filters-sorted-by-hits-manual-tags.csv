@@ -682,40 +682,40 @@ Marked as deleted. - Ruslik"","
 678	758	1	0	0	0	0	default	20160426065334		11	Block evading editor	vandalism?	hidden
 679	776	1	0	0	1	0	default	20160829162005	disallow	10	Prolific socker IV (update)	sockpuppetry	hidden
 680	290	0	0	0	1	0	default	20100312022427		10	172 Filter	vandalism, sockpuppetry, personal_attacks	“The following is a discussion about ongoing AOL vandalism, and what to do about it. There has been a proposal to softblock the entire 172.x range of AOL.”; “Disabled since the pages are protected. False positives suggest we should expect 1-4 per day if this were to go live. While the pages are protected, there is no reason to leave this active. -- Shirik 14 Feb 2010”
-681	36	1	0	0	1	0	default	20090830005032	warn,disallow	10	SEO push University of Atlanta		
-682	817	1	0	0	0	0	default	20170104011726	disallow	10	Obamacare vandalism		
-683	824	1	0	0	0	0	default	20170418153256	disallow	10	Zeitgeist		
-684	343	0	0	0	1	0	default	20100920023444		10	Keemstar vandalism		
-685	603	1	0	0	0	0	default	20160405110310	warn	10	Special case of reverting XLinkBot reverts		
-686	533	1	0	0	1	0	default	20160614033928	disallow	9	Balun link spammer		
-687	291	1	0	0	1	0	default	20100808081955		9	Prolific Seelincolshire Sock puppetry		
-688	810	1	0	0	1	0	default	20161213162548		9	Suix vandal		
-689	315	1	0	0	1	0	default	20100808081913		9	Garbled content		
-690	74	0	0	0	1	0	default	20090320212342		9	Unwikified text added to end of article		
-691	353	1	0	0	1	0	default	20100819063503	disallow	9	Blackout vandalism		
-692	468	1	0	0	1	0	default	20160614032907		9	Fixing vandal		
-693	486	1	0	0	1	0	default	20160614033248	disallow	9	Chilean vandal		
-694	248	1	0	0	1	0	default	20110310110852	disallow	9	Memphis Music Spam		
-695	764	1	0	0	1	0	default	20170402074700	disallow	9	Shirik's Refdesk Filter		
-696	530	1	0	0	1	0	default	20130228170555	disallow	8	Writ Keeper's test filter		
-697	22	1	0	0	1	0	default	20160812194447	disallow	8	New accounts mentioning the abuse filter		
-698	284	1	0	0	1	0	default	20100214192857	disallow	8	Image vandalism		
-699	802	1	0	0	0	0	default	20170716170553		8	Teenage Fairytale Dropouts LTA		
-700	611	1	0	0	1	0	default	20160818174003	disallow	8	Persistent talk page abuse from IP ranges III		
-701	371	1	0	0	1	0	default	20110310111531		8	Reference desk trolling		
-702	908	1	0	0	0	0	default	20180809162142		8	Si Thu Moe Min		
-703	153	1	0	0	1	0	default	20090928230922	disallow	8	Sock deterrance		
-704	932	0	0	1	0	0	default	20180912225448		8	"Adding ""theknot.com"" into BLP articles"		
-705	679	1	0	0	1	0	default	20150518215516		8	Possible offensive redirect		
-706	729	1	0	0	0	0	default	20160126162749		8	Vandalism from Santa Cruz Coe		
-707	514	0	0	0	1	0	default	20170402073819	warn	7	Legoktm's test filter		
-708	8	0	0	0	1	0	default	20090819175717		7	Self-redirect		
-709	324	1	0	0	1	0	default	20160904145949	disallow	7	Possible edits by Fraberj		
-710	327	1	0	0	1	0	default	20101107191330	disallow	7	Special TFA filter		
-711	857	1	0	0	1	0	default	20170522203213	disallow	7	DigitalRavan		
-712	108	0	0	0	1	0	default	20090327021159		7	Hangon Tag		
-713	927	1	0	1	0	0	default	20181028205638		7	LTA 927		
-714	695	1	0	0	1	0	default	20181104191958		7	Long term vandal		
+681	36	1	0	0	1	0	default	20090830005032	warn,disallow	10	SEO push University of Atlanta	seo	deleted; hidden
+682	817	1	0	0	0	0	default	20170104011726	disallow	10	Obamacare vandalism	vandalism	hidden
+683	824	1	0	0	0	0	default	20170418153256	disallow	10	Zeitgeist	unknown	hidden
+684	343	0	0	0	1	0	default	20100920023444		10	Keemstar vandalism	vandalism	hidden;
+685	603	1	0	0	0	0	default	20160405110310	warn	10	Special case of reverting XLinkBot reverts	vandalism?	hidden; disabled; who’s reverting the bots reverts? The admins with help from the filter, or a vandal whose edits are being filtered? Probably last one, since filter action is set to warn
+686	533	1	0	0	1	0	default	20160614033928	disallow	9	Balun link spammer	spam,	hidden
+687	291	1	0	0	1	0	default	20100808081955		9	Prolific Seelincolshire Sock puppetry	sockpuppetry	hidden
+688	810	1	0	0	1	0	default	20161213162548		9	Suix vandal	vandalism	hidden
+689	315	1	0	0	1	0	default	20100808081913		9	Garbled content	vandalism, silly_vandalism?	hidden
+690	74	0	0	0	1	0	default	20090320212342		9	Unwikified text added to end of article	good_faith	
+691	353	1	0	0	1	0	default	20100819063503	disallow	9	Blackout vandalism	vandalism	hidden
+692	468	1	0	0	1	0	default	20160614032907		9	Fixing vandal	vandalism	hidden
+693	486	1	0	0	1	0	default	20160614033248	disallow	9	Chilean vandal	vandalism	hidden
+694	248	1	0	0	1	0	default	20110310110852	disallow	9	Memphis Music Spam	spam,	hidden
+695	764	1	0	0	1	0	default	20170402074700	disallow	9	Shirik's Refdesk Filter	unknown	hidden
+696	530	1	0	0	1	0	default	20130228170555	disallow	8	Writ Keeper's test filter	test	
+697	22	1	0	0	1	0	default	20160812194447	disallow	8	New accounts mentioning the abuse filter	unknown	hidden
+698	284	1	0	0	1	0	default	20100214192857	disallow	8	Image vandalism	image_vandalism	hidden
+699	802	1	0	0	0	0	default	20170716170553		8	Teenage Fairytale Dropouts LTA	long_term_abuse	hidden
+700	611	1	0	0	1	0	default	20160818174003	disallow	8	Persistent talk page abuse from IP ranges III	abuse?, take_page_vandalism	hidden
+701	371	1	0	0	1	0	default	20110310111531		8	Reference desk trolling	trolling?, vandalism?	hidden
+702	908	1	0	0	0	0	default	20180809162142		8	Si Thu Moe Min	sockpuppetry?	hidden; probably https://en.wikipedia.org/wiki/User:Si_Thu_Moe_Min
+703	153	1	0	0	1	0	default	20090928230922	disallow	8	Sock deterrance	sockpuppetry?	hidden
+704	932	0	0	1	0	0	default	20180912225448		8	"Adding ""theknot.com"" into BLP articles"	seo?, vandalism?, spam?	
+705	679	1	0	0	1	0	default	20150518215516		8	Possible offensive redirect	vandalism	hidden
+706	729	1	0	0	0	0	default	20160126162749		8	Vandalism from Santa Cruz Coe	vandalism	hidden
+707	514	0	0	0	1	0	default	20170402073819	warn	7	Legoktm's test filter	test	
+708	8	0	0	0	1	0	default	20090819175717		7	Self-redirect	vandalism?, good_faith?, bug?	
+709	324	1	0	0	1	0	default	20160904145949	disallow	7	Possible edits by Fraberj	sockpuppetry?	hidden; see https://en.wikipedia.org/wiki/User:Fraberj
+710	327	1	0	0	1	0	default	20101107191330	disallow	7	Special TFA filter	unknown	Hidden; TFA = Today’s featured article
+711	857	1	0	0	1	0	default	20170522203213	disallow	7	DigitalRavan	unknown	hidden
+712	108	0	0	0	1	0	default	20090327021159		7	Hangon Tag	good_faith	deleted; “Its very common for new users who'se articles have been tagged for speedy deltion and gotten a talk page message about it to add the hangon tag there rather than on the article itself,”
+713	927	1	0	1	0	0	default	20181028205638		7	LTA 927	long_term_abuse	
+714	695	1	0	0	1	0	default	20181104191958		7	Long term vandal	long_term_abuse	
 715	444	1	0	0	1	0	default	20130404081005	disallow	7	Pezzuto, Ivo references		
 716	208	0	0	0	1	0	default	20090830005614		7	Removal of WebCite URLs		
 717	245	1	0	0	1	0	default	20110310110845	disallow	7	AN and AN/I abuse		
