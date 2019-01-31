@@ -716,45 +716,46 @@ Marked as deleted. - Ruslik"","
 712	108	0	0	0	1	0	default	20090327021159		7	Hangon Tag	good_faith	deleted; “Its very common for new users who'se articles have been tagged for speedy deltion and gotten a talk page message about it to add the hangon tag there rather than on the article itself,”
 713	927	1	0	1	0	0	default	20181028205638		7	LTA 927	long_term_abuse	
 714	695	1	0	0	1	0	default	20181104191958		7	Long term vandal	long_term_abuse	
-715	444	1	0	0	1	0	default	20130404081005	disallow	7	Pezzuto, Ivo references		
-716	208	0	0	0	1	0	default	20090830005614		7	Removal of WebCite URLs		
-717	245	1	0	0	1	0	default	20110310110845	disallow	7	AN and AN/I abuse		
-718	275	1	0	0	1	0	default	20100329231511		6	New users moving featured articles		
-719	38	1	0	0	1	0	default	20090807112247	warn,disallow	6	Argentina nuclear energy IP hopper		
-720	57	0	0	0	1	0	default	20090327103250		6	Creation of attack page titles		
-721	70	1	0	0	1	0	default	20090321081152		6	Unusual move reason		
-722	347	1	0	0	1	0	default	20190105155520	warn,disallow	6	Yet another test filter		
-723	612	1	0	0	1	0	default	20140602034412	disallow	6	Wrestling pusher		
-724	870	1	0	0	0	0	default	20180821180549	disallow	6	nowiki phishing		
-725	903	1	0	0	0	0	default	20181108021307	disallow	6	neocatechumenal way		
-726	401	0	0	0	1	0	default	20120808231528	disallow	6	"""Red hair"" vandalism"		
-727	418	1	0	0	1	0	default	20170402073605	disallow	6	User is Shirik (test filter)		
-728	421	0	0	0	1	0	default	20120808231722		6	Engvar filter		
-729	428	1	0	0	1	0	default	20120808231734		6	Image abuse		
-730	207	0	0	0	1	0	default	20090830005600		6	Non-admins reviewing unblock requests		
-731	214	0	0	0	1	0	default	20090728230153		6	Creating articles with title contained in username		
-732	512	1	0	0	1	0	default	20160614033654		5	Long-term pattern abuse IV		
-733	20	0	0	0	1	0	default	20160812193140		5	"Saying ""The abuse filter will block this"""		
-734	540	1	0	0	1	0	default	20130329222146	disallow	5	Temporary filter		
-735	801	1	0	0	1	0	default	20161113203914		5	Prolific_socking_IPs		
-736	49	1	0	0	1	0	default	20160813234857		5	Hina spam		
-737	571	1	0	0	1	0	default	20160614034525	disallow	5	Persistent Disruption		
-738	69	1	0	0	1	0	default	20090321185406		5	Unusual title change 2		
-739	842	1	0	0	0	0	default	20170314161944	disallow	5	Talk page abuse		
-740	338	0	0	0	1	0	default	20100618045125		5	Vuvuzela vandalism		
-741	858	0	0	0	1	0	default	20181211182505		5	Anime vandal filter		
-742	610	1	0	0	0	0	default	20160818173520	disallow	5	Turkish Vandal		
-743	355	1	0	0	1	0	default	20110310111343	disallow	5	Misc vandal		
-744	109	1	0	0	1	0	default	20090617081623	warn,disallow	5	Fleshlight		
-745	392	1	0	0	1	0	default	20150212181750	disallow	5	/v/		
-746	658	0	0	0	1	0	default	20150123194720	disallow	5	Disallow moving articles to the Topic namespace		
-747	952	1	0	0	1	0	default	20181230215051		5	Image vandalism IV		
-748	476	1	0	0	1	0	default	20160614032919	disallow	5	Kingdom of Sardinia		
-749	748	0	0	0	1	0	default	20160420045626		5	pp-30-500 editing restriction		
-750	286	1	0	0	1	0	default	20100204022213	warn,disallow	4	Tokusatsu Vandal		
-751	40	0	0	0	1	0	default	20090325082823		4	Detect deaths		
-752	318	1	0	0	1	0	default	20100416220302	disallow	4	School attacks		
-753	348	1	0	0	1	0	default	20100801172202		4	Rapid insertion of external links		
+715	444	1	0	0	1	0	default	20130404081005	disallow	7	Pezzuto, Ivo references	unknown	hidden
+716	208	0	0	0	1	0	default	20090830005614		7	Removal of WebCite URLs	vandalism?, biased_pov?	deleted
+717	245	1	0	0	1	0	default	20110310110845	disallow	7	AN and AN/I abuse	abuse?	hidden; AN=Administrators Noticeboard, AN/I=Administrators Noticeboard/Incidents
+718	275	1	0	0	1	0	default	20100329231511		6	New users moving featured articles	page_move_vandalism?	hidden
+719	38	1	0	0	1	0	default	20090807112247	warn,disallow	6	Argentina nuclear energy IP hopper	unknown; abuse?	hidden
+720	57	0	0	0	1	0	default	20090327103250		6	Creation of attack page titles	personal_attacks, doxxing?	deleted
+721	70	1	0	0	1	0	default	20090321081152		6	Unusual move reason	unknown?, page_move_vandalism?	hidden
+722	347	1	0	0	1	0	default	20190105155520	warn,disallow	6	Yet another test filter	test	hidden
+723	612	1	0	0	1	0	default	20140602034412	disallow	6	Wrestling pusher	unknown	hidden
+724	870	1	0	0	0	0	default	20180821180549	disallow	6	nowiki phishing	phishing?	hidden
+725	903	1	0	0	0	0	default	20181108021307	disallow	6	neocatechumenal way	unknown; religious_vandalism?	hidden; https://en.wikipedia.org/wiki/Neocatechumenal_Way
+726	401	0	0	0	1	0	default	20120808231528	disallow	6	"""Red hair"" vandalism"	silly_vandalism	deleted
+727	418	1	0	0	1	0	default	20170402073605	disallow	6	User is Shirik (test filter)	test	hidden
+728	421	0	0	0	1	0	default	20120808231722		6	Engvar filter	good_faith?	deleted; “Testing a filter to log/tag changes between accepted styles by new users.” hää was?
+729	428	1	0	0	1	0	default	20120808231734		6	Image abuse	image_vandalism	hidden
+730	207	0	0	0	1	0	default	20090830005600		6	Non-admins reviewing unblock requests	avoidant_vandalism?	deleted; “Copy of another one we disabled. Unneeded, a bot already sees this. -Prodego”
+731	214	0	0	0	1	0	default	20090728230153		6	Creating articles with title contained in username	self_promotion?	"deleted; “merged in 188, no longer needed – Cen"";"
+732	512	1	0	0	1	0	default	20160614033654		5	Long-term pattern abuse IV	long_term_abuse	hidden
+733	20	0	0	0	1	0	default	20160812193140		5	"Saying ""The abuse filter will block this"""	good_faith?, vandalism?	
+734	540	1	0	0	1	0	default	20130329222146	disallow	5	Temporary filter	unknown	hidden
+735	801	1	0	0	1	0	default	20161113203914		5	Prolific_socking_IPs	sockpuppetry	hidden
+736	49	1	0	0	1	0	default	20160813234857		5	Hina spam	spam,	hidden
+737	571	1	0	0	1	0	default	20160614034525	disallow	5	Persistent Disruption	abuse?	hidden
+738	69	1	0	0	1	0	default	20090321185406		5	Unusual title change 2	page_move_vandalism?	hidden
+739	842	1	0	0	0	0	default	20170314161944	disallow	5	Talk page abuse	talk_page_vandalism	hidden; (talk page vandalism is a type of vandalism according to https://en.wikipedia.org/wiki/Wikipedia:Vandalism
+740	338	0	0	0	1	0	default	20100618045125		5	Vuvuzela vandalism	silly_vandalism	"“Disabled, insufficient activity to warrant a filter. -- Shirik 18 June 2010"""
+741	858	0	0	0	1	0	default	20181211182505		5	Anime vandal filter	hoaxing?, vandalism	“Merged to Special:AbuseFilter/58 ~MA”
+742	610	1	0	0	0	0	default	20160818173520	disallow	5	Turkish Vandal	vandalism	hidden
+743	355	1	0	0	1	0	default	20110310111343	disallow	5	Misc vandal	vandalism	hidden
+744	109	1	0	0	1	0	default	20090617081623	warn,disallow	5	Fleshlight	unknown	hidden
+745	392	1	0	0	1	0	default	20150212181750	disallow	5	/v/	unknown	hidden
+746	658	0	0	0	1	0	default	20150123194720	disallow	5	Disallow moving articles to the Topic namespace	bug	"“– Simple condition: no one should move pages to the Topic namespace at the momen     t, since moving pages *from* the namespace isn't supported.
+ – Fix has been deployed, so the filter's no longer necessary."
+747	952	1	0	0	1	0	default	20181230215051		5	Image vandalism IV	image_vandalism	hidden
+748	476	1	0	0	1	0	default	20160614032919	disallow	5	Kingdom of Sardinia	unknown	hidden
+749	748	0	0	0	1	0	default	20160420045626		5	pp-30-500 editing restriction	Vandalism?; politically_motivated?	
+750	286	1	0	0	1	0	default	20100204022213	warn,disallow	4	Tokusatsu Vandal	vandalism	hidden
+751	40	0	0	0	1	0	default	20090325082823		4	Detect deaths	vandalism, hoaxing?, personal_attacks?	deleted; not very skillful
+752	318	1	0	0	1	0	default	20100416220302	disallow	4	School attacks	harassment?	hidden
+753	348	1	0	0	1	0	default	20100801172202		4	Rapid insertion of external links	spam? 	hidden
 754	127	0	0	0	1	0	default	20090402212520		4	Helpme tag in content namespace		
 755	646	0	0	0	1	0	default	20141202045818		4	Incorrectly adding images		
 756	924	1	0	0	1	0	default	20180719144037	disallow	4	Supersonic Transport Vandal		
