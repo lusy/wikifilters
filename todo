@@ -1,5 +1,9 @@
 # Next steps
 
+* Think about: what's the computer science take on the field? How can we design a "better"/more efficient/more user friendly system? A system that reflects particular values (vgl Code 2.0, Chapter 3, p.34)?
+  * go over notes in the filter classification and think about interesting controversies, things that attract the attention
+  * what are useful categories
+  * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
 * Look at filters: what different types of filters are there? how do we classify them?
   * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
   * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
