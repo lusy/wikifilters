@@ -29,7 +29,7 @@
 27	712	0	0	1	0	0	default	20170514124418		209612	Possibly changing date of birth in infobox	good_faith, misc	
 28	79	0	0	1	0	0	default	20170514124330	warn,tag	205958	New user removing reference grouping tags	good_faith	what are “reference grouping tasks”?
 29	550	0	0	1	0	0	default	20180412174000	tag	202352	nowiki tags inserted into an article	misc	what are “nowiki” tags?
-30	149	0	0	1	0	0	default	20171208034036	warn,tag	194824	User adds link containing username	misc	don’t understand this one either
+30	149	0	0	1	0	0	default	20171208034036	warn,tag	194824	User adds link containing username	misc	don’t understand this one either; self_promotion?
 31	29	0	0	1	0	0	default	20181018234133	tag	186026	New user removing speedy deletion templates	good_faith	
 32	344	0	0	0	1	0	default	20160614031628	warn	180995	Prevent full page blanking	good_faith	Filter is deleted
 33	180	0	0	1	0	0	default	20171025200431	tag	175939	Large unwikified new article	good_faith	
@@ -58,7 +58,7 @@
 56	325	0	0	0	1	0	default	20120808231331	disallow	73942	!!!!! in the article-space	misc?, bad_style	new tag needed for “overly agitated person”? deleted 
 57	285	0	0	0	0	0	default	20160911181242	disallow	73902	Common Vandalism	vandalism	disabled;  merged into 384 
 58	126	0	0	1	0	0	default	20160713155301		65137	Youtube links	misc?	what’s the argumentation here? Youtube not suitable as encyclopedia source?  from the comments “Attempt to design a filter for continuous abuse on a handful of BBC articles Continuous insertion of youtube movies, undoing XLinkBot reverts, etc. etc.” 
-59	129	0	0	0	1	0	default	20150212173327		64869	Possible tireless sock creating film pages of non-existing films	vandalism	extra tag for sockpuppeting? Deleted
+59	129	0	0	0	1	0	default	20150212173327		64869	Possible tireless sock creating film pages of non-existing films	vandalism, sockpuppetry	extra tag for sockpuppeting? Deleted
 60	423	0	0	0	1	0	default	20160614032412		64591	WikiLove	misc	deleted  “Purpose of this filter: Track usage of the WikiLove tool, both by new and experienced users, to watch for use and abuse. We'll have better tracking tools soon, but right now this is a simple solution to watch what's going on. To reduce impact on patrollers, it merely flags the edits. Please discuss with [[User:Eloquence]] if you have comments or questions. Since this filter is in active use by a number of people, please do not disable without discussion. 1908 -- Erik Moeller, WMF, 2011-07-01“ 
 61	33	0	0	1	0	0	default	20181018234422	warn,tag	60707	Talk page blanking by unregistered/new user	vandalism, good_faith?	
 62	270	0	0	0	1	0	default	20170509185805	tag	56352	Interwiki link removal	vandalism	deleted
@@ -104,7 +104,7 @@
 102	205	1	0	0	1	0	default	20110310110641		15519	Scibaby #1	misc	hidden, deleted;
 103	106	0	0	0	1	0	default	20090830005331		14513	Date linking / delinking	misc	deleted; don’t quite get it...
 104	2	1	0	0	0	0	default	20181008172604		14104	Test filter: for testing private filters	test	hidden, disabled;
-105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)	misc	hidden; what’s LTA?
+105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)	long_term_abuse	hidden; LTA=long term abuse
 106	224	0	0	1	0	0	default	20170910203050	tag	13895	Copyvio tag removal	misc?, copyright?	
 107	420	0	0	1	0	0	default	20181211033934	throttle,disallow	13874	Large removal of talk page content by IP	vandalism?	
 108	345	0	0	1	0	0	default	20160614031816	warn,tag	13832	Extraneous formatting from browser extension	bug?	
