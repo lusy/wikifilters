@@ -756,43 +756,46 @@ Marked as deleted. - Ruslik"","
 751	40	0	0	0	1	0	default	20090325082823		4	Detect deaths	vandalism, hoaxing?, personal_attacks?	deleted; not very skillful
 752	318	1	0	0	1	0	default	20100416220302	disallow	4	School attacks	harassment?	hidden
 753	348	1	0	0	1	0	default	20100801172202		4	Rapid insertion of external links	spam? 	hidden
-754	127	0	0	0	1	0	default	20090402212520		4	Helpme tag in content namespace		
-755	646	0	0	0	1	0	default	20141202045818		4	Incorrectly adding images		
-756	924	1	0	0	1	0	default	20180719144037	disallow	4	Supersonic Transport Vandal		
-757	173	1	0	0	1	0	default	20090807113129		4	Knave		
-758	429	0	0	0	1	0	default	20110822003015		4	Possible malware attack		
-759	943	1	0	0	0	0	default	20181221050308	disallow	4	Prevent special disruption		
-760	693	0	0	0	0	0	default	20150625151023	disallow	4	Drake Bell attack		
-761	720	0	0	0	0	0	default	20151231175642		4	Rothwell-Smith spam		
-762	536	1	0	0	1	0	default	20130317180029		3	Mrpontiac1		
-763	301	1	0	0	1	0	default	20100321234837		3	Blu Aardvark abusive unblock requests		
-764	574	1	0	0	1	0	default	20130718094758	disallow	3	Vandalism		
-765	853	1	0	0	0	0	default	20170512133620	disallow	3	Quick vandalism response		
-766	882	1	0	0	1	0	default	20171010005143		3	LTA 882		
-767	387	1	0	0	1	0	default	20160904150238	disallow	3	Fake pagemove edit summaries		
-768	691	0	0	0	0	0	default	20150618161603		3	Shadows of the Void		
-769	184	1	0	0	1	0	default	20090620043823	warn,disallow	3	abusive edit summaries		
-770	707	1	0	0	0	0	default	20150719124707	disallow	3	Edit filter false positives vandalism		
-771	749	1	0	0	0	0	default	20160111160718		3	SS disruption		
-772	243	1	0	0	1	0	default	20150212173432		3	WikiMedia Viewer possible malware		
-773	244	0	0	0	1	0	default	20091003125413		3	Possibly broken proxies		
-774	251	1	0	0	1	0	default	20160820181913		3	Mark Levin Vandalism		
-775	552	1	0	0	1	0	default	20160614034140	disallow	2	Wikiassociate rangeblock		
-776	302	0	0	0	1	0	default	20100317030333		2	Possible COI		
-777	814	1	0	0	1	0	default	20170402072733		2	More refspam		
-778	73	0	0	0	1	0	default	20090320200641	throttle,warn,disallow	2	Throttle test		
-779	841	0	0	0	1	0	default	20170224013137		2	Unofficial sports transaction		
-780	589	0	0	0	1	0	default	20160614034734		2	Possible recreation of deleted material		
-781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug		
-782	362	0	0	0	1	0	default	20100922082300		2	New user creating page		
-783	628	1	0	0	1	0	default	20160614035602	disallow	2	User talk page vandalism by sockpuppets		
-784	118	0	0	0	1	0	default	20090423050115		2	The final selection of TFA's is made by Raul654, the featured article director		
-785	379	0	0	0	1	0	default	20110119220533		2	username registrations by trademarkia		
-786	413	1	0	0	1	0	default	20120808231609		2	Adding images to userspace		
-787	669	0	0	0	1	0	default	20160614040618		2	Service Kompor		
-788	162	1	0	0	1	0	default	20090517140757	warn,disallow	2	Thermal bag		
-789	682	1	0	0	1	0	default	20181104191913	disallow	2	SEO/Attack page		
-790	431	1	0	0	1	0	default	20110903105437	disallow	2	Malaysian IP hopping vandal		
+754	127	0	0	0	1	0	default	20090402212520		4	Helpme tag in content namespace	good_faith?	"“Oops, yes it can. I'll disable this and copy things over to 104. - Hersfold
+ Deleted, merge complete – Hersfold”"
+755	646	0	0	0	1	0	default	20141202045818		4	Incorrectly adding images	good_faith, vandalism	"deleted; “Already exists with filter 220""; “his happens frequently. A new user is unfamiliar with mediawiki image syntax and thinks they can just add the URL (and sometimes the file location on their computer!). Often associated with outright vandalism, the effectiveness of this filter may be twofold.”"
+756	924	1	0	0	1	0	default	20180719144037	disallow	4	Supersonic Transport Vandal	vandalism	hidden
+757	173	1	0	0	1	0	default	20090807113129		4	Knave	unknown	hidden
+758	429	0	0	0	1	0	default	20110822003015		4	Possible malware attack	spam, vandalism?, malware?	“Deleting, FPs. --Reaper”; viewing diff is suppressed
+759	943	1	0	0	0	0	default	20181221050308	disallow	4	Prevent special disruption	vandalism?	hidden
+760	693	0	0	0	0	0	default	20150625151023	disallow	4	Drake Bell attack	personal_attacks	“Disabled. Terribly-designed filter. --Reaper 02-06-2015”
+761	720	0	0	0	0	0	default	20151231175642		4	Rothwell-Smith spam	spam,	“Disabled, four hits total, and none in over 3 months ~MA 2015.12.31”
+762	536	1	0	0	1	0	default	20130317180029		3	Mrpontiac1	unknown	hidden
+763	301	1	0	0	1	0	default	20100321234837		3	Blu Aardvark abusive unblock requests	abuse?	hidden
+764	574	1	0	0	1	0	default	20130718094758	disallow	3	Vandalism	vandalism	hidden
+765	853	1	0	0	0	0	default	20170512133620	disallow	3	Quick vandalism response	vandalism?	hidden
+766	882	1	0	0	1	0	default	20171010005143		3	LTA 882	long_term_abuse	hidden
+767	387	1	0	0	1	0	default	20160904150238	disallow	3	Fake pagemove edit summaries	vandalism	hidden
+768	691	0	0	0	0	0	default	20150618161603		3	Shadows of the Void	vandalism?	“Disabling, not worth continuing. --Samwalton9, 18 June 2015”
+769	184	1	0	0	1	0	default	20090620043823	warn,disallow	3	abusive edit summaries	vandalism	hidden
+770	707	1	0	0	0	0	default	20150719124707	disallow	3	Edit filter false positives vandalism	not sure	hidden
+771	749	1	0	0	0	0	default	20160111160718		3	SS disruption	not sure	hidden
+772	243	1	0	0	1	0	default	20150212173432		3	WikiMedia Viewer possible malware	malware	
+773	244	0	0	0	1	0	default	20091003125413		3	Possibly broken proxies	bug?	“might get around to finishing this one day. deleted –zzuuzz”
+774	251	1	0	0	1	0	default	20160820181913		3	Mark Levin Vandalism	vandalism	hidden
+775	552	1	0	0	1	0	default	20160614034140	disallow	2	Wikiassociate rangeblock	vandalism?	hidden
+776	302	0	0	0	1	0	default	20100317030333		2	Possible COI	conflict_of_interest, biased_pov, stockbrocker_vandalism	“Insufficient activity to justify; disabled/deleted -- Shirik 16 Mar 2010”
+777	814	1	0	0	1	0	default	20170402072733		2	More refspam	spam? 	hidden
+778	73	0	0	0	1	0	default	20090320200641	throttle,warn,disallow	2	Throttle test	test	"“""Is the throttle working at all?  What does it log
+ Just a note how the throttling works. No action is taken until the throttle is hit. Then whatever options are selected are taken (e.g. warn, disallow, etc) -Prodego
+Also important, no action is LOGGED until the throttle is hit.  -DF”"
+779	841	0	0	0	1	0	default	20170224013137		2	Unofficial sports transaction	conflict_of_interest?, bad_style? (information not confirmed?)	https://en.wikipedia.org/w/index.php?oldid=766713936#Unofficial%20sports%20transaction
+780	589	0	0	0	1	0	default	20160614034734		2	Possible recreation of deleted material	bug?, maintainance?, bot..?	"“""(user_name = """"AnomieBOT"""")”; “""Logs talk pages created by the bot.”"
+781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug	bug	
+782	362	0	0	0	1	0	default	20100922082300		2	New user creating page	unclear	“Creating log-only mode to check how common this is and if it is useful.”
+783	628	1	0	0	1	0	default	20160614035602	disallow	2	User talk page vandalism by sockpuppets	sockpuppetry	
+784	118	0	0	0	1	0	default	20090423050115		2	The final selection of TFA's is made by Raul654, the featured article director	vandalism?, wiki_policy?	"“Too specific, disabling, performance -Prodego""”"
+785	379	0	0	0	1	0	default	20110119220533		2	username registrations by trademarkia	not sure	“Too specific, 2 hits ever, and condition lim is being hit -P”
+786	413	1	0	0	1	0	default	20120808231609		2	Adding images to userspace	unknown	hidden
+787	669	0	0	0	1	0	default	20160614040618		2	Service Kompor	sockpuppetry, spam	https://en.wikipedia.org/wiki/Wikipedia:Sockpuppet_investigations/Service_kompor_gas/Archive
+788	162	1	0	0	1	0	default	20090517140757	warn,disallow	2	Thermal bag	unknown	hidden
+789	682	1	0	0	1	0	default	20181104191913	disallow	2	SEO/Attack page	seo, abuse?	hidden
+790	431	1	0	0	1	0	default	20110903105437	disallow	2	Malaysian IP hopping vandal	vandalism, sockpuppetry?	
 791	687	0	0	0	1	0	default	20160614040910		2	Possible word replacement extension		
 792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling		
 793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C		RFP = Request for page protection
