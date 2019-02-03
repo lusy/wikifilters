@@ -796,33 +796,33 @@ Also important, no action is LOGGED until the throttle is hit.  -DF”"
 788	162	1	0	0	1	0	default	20090517140757	warn,disallow	2	Thermal bag	unknown	hidden
 789	682	1	0	0	1	0	default	20181104191913	disallow	2	SEO/Attack page	seo, abuse?	hidden
 790	431	1	0	0	1	0	default	20110903105437	disallow	2	Malaysian IP hopping vandal	vandalism, sockpuppetry?	
-791	687	0	0	0	1	0	default	20160614040910		2	Possible word replacement extension		
-792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling		
-793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C		RFP = Request for page protection
-794	484	0	0	0	1	0	default	20150212172634	warn	2	Shutdown of ClueBot by non-admin user		
-795	487	0	0	0	1	0	default	20140303202310		2	Test filter for feedback tool oversight prevention		
-796	805	1	0	0	1	0	default	20161213162528		1	Compromised activity		
-797	561	1	0	0	1	0	default	20160614034418	disallow	1	Chaosname II		
-798	310	1	0	0	1	0	default	20160824183625	disallow	1	Pagemove vandalism by specific vandal #2		
-799	822	1	0	0	0	0	default	20170130055044	disallow	1	Shinji		
-800	831	0	0	0	0	0	default	20170418152852		1	Yanchilin spammer		
-801	334	1	0	0	1	0	default	20100531204443	disallow,blockautopromote	1	Grawp page move vandalism		
-802	350	1	0	0	1	0	default	20110310111326		1	Waterspaces candidates		
-803	120	1	0	0	1	0	default	20160818205831		1	Real life info		
-804	121	1	0	0	1	0	default	20090331035312		1	Testing filter		
-805	649	1	0	0	1	0	default	20160614040218		1	SP disruption		
-806	142	1	0	0	1	0	default	20090525134153	disallow	1	Buddhism and Quantum Physics		
-807	399	1	0	0	1	0	default	20120808231514	disallow	1	User page vandalism		
-808	145	1	0	0	1	0	default	20090501020009	disallow	1	Socks abusing talk page privilege		
-809	677	0	0	0	1	0	default	20150401165223		1	April Fools disruption		
-810	685	1	0	0	1	0	default	20160614040844		1	HH disruption		
-811	196	1	0	0	1	0	default	20150212173405		1	Michael Jackson move vandalism		
-812	198	1	0	0	1	0	default	20090704200951		1	Sock test		
-813	230	1	0	0	1	0	default	20160820181534	disallow	1	AnonTalk 4		
-814	256	1	0	0	1	0	default	20091127160945		0	Duran Duran vandal		
-815	515	1	0	0	1	0	default	20121219184028	warn,disallow	0	More LTA		
-816	771	1	0	0	1	0	default	20160701154055		0	Orion LTA		
-817	772	0	0	0	1	0	default	20160703161546		0	Crosses for deceased people		
+791	687	0	0	0	1	0	default	20160614040910		2	Possible word replacement extension	silly_vandalism	deleted
+792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling	vandalism?, trolling?	deleted
+793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C	not sure	RFP = Request for page protection
+794	484	0	0	0	1	0	default	20150212172634	warn	2	Shutdown of ClueBot by non-admin user	vandalism?	ClueBot generates heuristics that should facilitate vandalism prevention
+795	487	0	0	0	1	0	default	20140303202310		2	Test filter for feedback tool oversight prevention	test	
+796	805	1	0	0	1	0	default	20161213162528		1	Compromised activity	unclear	hidden
+797	561	1	0	0	1	0	default	20160614034418	disallow	1	Chaosname II	unknown	hidden
+798	310	1	0	0	1	0	default	20160824183625	disallow	1	Pagemove vandalism by specific vandal #2	page_move_vandalism	
+799	822	1	0	0	0	0	default	20170130055044	disallow	1	Shinji	unknown	hidden
+800	831	0	0	0	0	0	default	20170418152852		1	Yanchilin spammer	spam,	https://en.wikipedia.org/w/index.php?oldid=761642496#Spammer
+801	334	1	0	0	1	0	default	20100531204443	disallow,blockautopromote	1	Grawp page move vandalism	page_move_vandalism	
+802	350	1	0	0	1	0	default	20110310111326		1	Waterspaces candidates	unknown	
+803	120	1	0	0	1	0	default	20160818205831		1	Real life info	doxxing?	hidden
+804	121	1	0	0	1	0	default	20090331035312		1	Testing filter	test	
+805	649	1	0	0	1	0	default	20160614040218		1	SP disruption	vandalism	SP=Subpages
+806	142	1	0	0	1	0	default	20090525134153	disallow	1	Buddhism and Quantum Physics	unknown	hidden
+807	399	1	0	0	1	0	default	20120808231514	disallow	1	User page vandalism	vandalism	
+808	145	1	0	0	1	0	default	20090501020009	disallow	1	Socks abusing talk page privilege	sockpuppetry	
+809	677	0	0	0	1	0	default	20150401165223		1	April Fools disruption	vandalism	
+810	685	1	0	0	1	0	default	20160614040844		1	HH disruption	vandalism	
+811	196	1	0	0	1	0	default	20150212173405		1	Michael Jackson move vandalism	vandalism	
+812	198	1	0	0	1	0	default	20090704200951		1	Sock test	test	
+813	230	1	0	0	1	0	default	20160820181534	disallow	1	AnonTalk 4	unknown	hidden
+814	256	1	0	0	1	0	default	20091127160945		0	Duran Duran vandal	vandalism	
+815	515	1	0	0	1	0	default	20121219184028	warn,disallow	0	More LTA	long_term_abuse	
+816	771	1	0	0	1	0	default	20160701154055		0	Orion LTA	long_term_abuse	
+817	772	0	0	0	1	0	default	20160703161546		0	Crosses for deceased people	unclear	" No hits, marking for deletion --Samtar 03/07/16 16:15"""
 818	517	1	0	0	1	0	default	20160614033741	throttle,disallow	0	Train station removal		
 819	262	1	0	0	1	0	default	20091116214938		0	If you donate ...		
 820	518	1	0	0	1	0	default	20160614033748	disallow	0	Hoppity Hooper vandal		
