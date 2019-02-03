@@ -4,6 +4,20 @@
   * go over notes in the filter classification and think about interesting controversies, things that attract the attention
   * what are useful categories
   * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
+
+
+* What can we study?
+  * Discussions on filter patterns? On filter repercussions?
+  * Whether filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefullness is questionable?
+  * Question: Is it worth it to use a filter which has many side effects?
+  * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
+
+
+* Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
+
+* There was the section of what are filters suitable for; should we check filters against this list?
+
+
 * Look at filters: what different types of filters are there? how do we classify them?
   * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
   * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
