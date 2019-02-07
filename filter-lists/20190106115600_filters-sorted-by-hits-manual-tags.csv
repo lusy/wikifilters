@@ -263,7 +263,7 @@
 261	422	1	0	0	0	0	default	20150625143905	disallow	794	Possible template vandalism	vandalism	
 262	388	1	0	0	1	0	default	20150212173548		783	Unusual redirect III	misc	hidden
 263	405	1	0	0	1	0	default	20160614032241		776	Verizon vandal	vandalism	
-264	708	0	0	0	0	0	default	20151104174320		765	SPI page moves	misc	
+264	708	0	0	0	0	0	default	20151104174320		765	SPI page moves	misc	SPI=Sock puppet investigations
 265	543	1	0	0	1	0	default	20130402134200		754	XKCD April Fools' Day 2013 vandalism	vandalism	misc, hidden
 266	872	1	0	0	0	0	default	20180711125807	disallow	748	SK Sock	sockpuppetry	hidden
 267	941	1	0	0	0	0	default	20181114151253	disallow	747	proxy abuse	vandalism?	hidden
@@ -306,7 +306,7 @@
 304	847	1	0	1	0	0	default	20181104193816	disallow	512	Sandbox troll (WP:LTA/SBT)	long_term_abuse?, vandalism?	hidden
 305	661	0	0	0	1	0	default	20150625135307	warn,disallow	495	unsourced section added to awards article	biased_pov, bad_style	“Filter deleted. Completely inappropriate use of edit filter. --Reaper 2015-06-25” //Why?
 306	215	1	0	0	1	0	default	20100502011708	throttle,disallow	489	AnonTalk 2	misc	hidden
-307	809	1	0	1	0	0	default	20181111190314	disallow	487	SPI disruption	misc	hidden
+307	809	1	0	1	0	0	default	20181111190314	disallow	487	SPI disruption	misc	hidden; SPI = Sock Puppet Investigations
 308	829	1	0	0	0	0	default	20171014180255		487	Possible article hijacking	vandalism?, long_term_abuse?	hidden
 309	742	1	0	0	0	0	default	20190105155622	throttle,disallow	487	BT UserTalkPage stalker	harassment?	hidden
 310	43	0	0	0	1	0	default	20090928191833		480	New user removing AfD comments	wiki_policy?, vandalism?	deleted
@@ -560,7 +560,7 @@
 557	360	1	0	0	1	0	default	20110310111414	disallow	36	Spam Blacklist Circumvention Attempts	spam?, abuse?	
 558	546	1	0	0	1	0	default	20160614034041	disallow	35	Disruptive user from Hyogo, Japan	vandalism	
 559	673	0	0	0	0	0	default	20160128121223		35	Ankur Mazumder	sockpuppetry, self_promotion?	“Created per request. Prolific sockpuppeteer who repeatedly makes biographies about himself. Log only for now. --Samwalton9, 29 March 2015”
-560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling	trolling?, vandalism?	Hidden; what’s ANI?
+560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling	trolling?, vandalism?	Hidden; what’s ANI=Administrators Noticeboard Incidents
 561	760	1	0	0	0	0	default	20160628012842	disallow	34	Sandbox vandal	vandalism	hidden
 562	154	0	0	0	1	0	default	20090807113207		33	Macedonia naming conflict 2	politically_motivated?, vandalism	deleted; “Collection of terms used in the Macedonian naming conflict that are usually considered pejorative, and hence are unlikely to be appropriate in articles.”
 563	781	1	0	0	0	0	default	20161103144540	disallow	32	LTA collection 1	long_term_abuse	hidden
@@ -786,7 +786,7 @@ Marked as deleted. - Ruslik"","
 Also important, no action is LOGGED until the throttle is hit.  -DF”"
 779	841	0	0	0	1	0	default	20170224013137		2	Unofficial sports transaction	conflict_of_interest?, bad_style? (information not confirmed?)	https://en.wikipedia.org/w/index.php?oldid=766713936#Unofficial%20sports%20transaction
 780	589	0	0	0	1	0	default	20160614034734		2	Possible recreation of deleted material	bug?, maintainance?, bot..?	"“""(user_name = """"AnomieBOT"""")”; “""Logs talk pages created by the bot.”"
-781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug	bug	
+781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug	bug	ANI=Administrators’ Noticeboard Incidents
 782	362	0	0	0	1	0	default	20100922082300		2	New user creating page	unclear	“Creating log-only mode to check how common this is and if it is useful.”
 783	628	1	0	0	1	0	default	20160614035602	disallow	2	User talk page vandalism by sockpuppets	sockpuppetry	
 784	118	0	0	0	1	0	default	20090423050115		2	The final selection of TFA's is made by Raul654, the featured article director	vandalism?, wiki_policy?	"“Too specific, disabling, performance -Prodego""”"
@@ -846,65 +846,70 @@ Also important, no action is LOGGED until the throttle is hit.  -DF”"
 837	283	1	0	0	1	0	default	20100118222848		0	Copyright violations in edit summaries	copyright	
 838	32	0	0	0	1	0	default	20090511155725		0	Huge additions by new users	vandalism?	“Disabled. No hits in more than three weeks. - Ruslik”
 839	292	0	0	0	1	0	default	20100212192820		0	Repeating characters in edit summary	vandalism, lazyness	
-840	548	1	0	0	1	0	default	20160614034107	disallow	0	Fort Irwin National Training Center rangeblock		
-841	551	1	0	0	1	0	default	20160614034132	disallow	0	Leandro Carvalho rangeblock		
-842	807	1	0	0	1	0	default	20161213162516		0	Ourmine		
-843	296	1	0	0	1	0	default	20160824183554	disallow	0	Edit summary vandalism III		
-844	41	1	0	0	1	0	default	20090318131947		0	Pagemove vand		
-845	297	1	0	0	1	0	default	20100304052321		0	Jeske's Test Filter		
-846	42	1	0	0	1	0	default	20090408124340	disallow	0	ASCII art Mk.2		
-847	299	1	0	0	1	0	default	20100226033620	disallow	0	Personal attacks		
-848	555	1	0	0	1	0	default	20160614034308		0	Aaron spam		
-849	300	1	0	0	1	0	default	20100304052339		0	Cross-posting		
-850	558	1	0	0	1	0	default	20160614034337	disallow	0	FIFA West Germany		
-851	303	0	0	0	1	0	default	20100312024806		0	COI Page Creation		
-852	304	0	0	0	1	0	default	20100320185413		0	Rayman vandalism		
-853	562	1	0	0	1	0	default	20160614034426	disallow	0	Hackneyhound		
-854	308	0	0	0	1	0	default	20100323215045		0	Malformed Mediation Cabal Requests		
-855	565	1	0	0	1	0	default	20170509185916	warn	0	Cat abuse		
-856	823	1	0	0	0	0	default	20170115205517		0	Suspicious activity from new account		
-857	568	1	0	0	1	0	default	20160614034501		0	SPI Clerk impersonation		
-858	569	1	0	0	1	0	default	20160614034508		0	Texas film fan		
-859	572	1	0	0	1	0	default	20170419224852	disallow	0	Persistent Disruption II		
-860	62	0	0	0	1	0	default	20170511125337		0	Deleting the Main Page		
-861	64	1	0	0	1	0	default	20160818205234		0	Shock sites in edit summaries		
-862	321	1	0	0	1	0	default	20100425083044		0	Shirik's test filter		
-863	67	0	0	0	1	0	default	20090408124418	throttle	0	Sockpuppetry at AfD discussions		
-864	836	1	0	0	0	0	default	20170302013108	disallow	0	ANI / Air India Tehran		
-865	582	0	0	0	1	0	default	20160614034657		0	IE 8/9 XSS Filter Bug		
-866	329	0	0	0	1	0	default	20100511004040	warn,disallow	0	SPI disruption		
-867	586	0	0	0	1	0	default	20160614034715		0	New user reviewing AfC submissions		
-868	75	0	0	0	1	0	default	20090321080048		0	Blanking Vandalism		
-869	588	1	0	0	1	0	default	20160614034723		0	Promotional usernames		
-870	335	1	0	0	1	0	default	20101107190843	disallow	0	Talk page abuse		
-871	591	1	0	0	0	0	default	20140422022459		0	Christian2941		
-872	336	1	0	0	1	0	default	20100902044736	disallow	0	Darth Vader		
-873	592	1	0	0	1	0	default	20140422022515		0	Christian2941 (duplicate)		
-874	337	0	0	0	1	0	default	20110310111239	warn,disallow	0	Arkansas TV IP vandalism		
-875	83	1	0	0	1	0	default	20090408124448	disallow	0	Genesis vandal		
-876	84	1	0	0	1	0	default	20090323041819		0	goatse vandalism		
-877	85	1	0	0	1	0	default	20090323174915		0	Beetstra - speed testing rules		
-878	86	1	0	0	1	0	default	20090323164705		0	Argentina nuclear energy IP hopper - Rule 1		
-879	87	1	0	0	1	0	default	20090323164702		0	Argentina nuclear energy IP hopper - Rule 2		
-880	88	1	0	0	1	0	default	20090323164659		0	Argentina nuclear energy IP hopper - Rule 3		
-881	89	1	0	0	1	0	default	20090323164656		0	Argentina nuclear energy IP hopper - Rule 4		
-882	90	1	0	0	1	0	default	20090323164654		0	Argentina nuclear energy IP hopper - Rule 5		
-883	91	1	0	0	1	0	default	20090323164655		0	Argentina nuclear energy IP hopper - Rule 6		
-884	92	1	0	0	1	0	default	20090323164725		0	Argentina nuclear energy IP hopper - Rule 7		
-885	349	1	0	0	1	0	default	20100809145939	disallow	0	Dudley Attacks		
-886	605	1	0	0	1	0	default	20160614035004		0	Animal Welfare issues		
-887	607	1	0	0	0	0	default	20160818172941		0	March 2014 test filter		
-888	100	0	0	0	1	0	default	20090429123827		0	"""Warren G. Harding"" = Gangsta"		
-889	356	1	0	0	1	0	default	20110310111353		0	Removal of LGBT project banner with disruptive edit summary		
-890	357	0	0	0	1	0	default	20100902060504		0	Test pages		
-891	110	0	0	0	1	0	default	20090408124254	throttle	0	Account creation throttle		
-892	111	0	0	0	1	0	default	20090327010201		0	Gay or fag		
-893	626	0	0	0	1	0	default	20160614035502		0	Deletion by a non-administrator		
-894	374	1	0	0	1	0	default	20120808231359	disallow	0	"""linkless spam"""		
-895	376	1	0	0	1	0	default	20110310111547		0	InfoCheck Vandalism		
-896	122	0	0	0	1	0	default	20090429123937		0	Changing Username malformed requests		
-897	124	1	0	0	1	0	default	20090525134106	warn,disallow	0	hitlerbunker.com		
-898	893	0	0	0	1	0	default	20171206121123		0	Predatory open access journals.		
+840	548	1	0	0	1	0	default	20160614034107	disallow	0	Fort Irwin National Training Center rangeblock	vandalism?	hidden
+841	551	1	0	0	1	0	default	20160614034132	disallow	0	Leandro Carvalho rangeblock	vandalism?	hidden
+842	807	1	0	0	1	0	default	20161213162516		0	Ourmine	unknown	hidden; may refer to this: https://en.wikipedia.org/wiki/OurMine : “OurMine was a hacker group based in Saudi Arabia[3] who compromise system or network security. OurMine have hacked celebrity internet accounts, often causing cybervandalism, to advertise their commercial services”
+843	296	1	0	0	1	0	default	20160824183554	disallow	0	Edit summary vandalism III	vandalism	hidden
+844	41	1	0	0	1	0	default	20090318131947		0	Pagemove vand	page_move_vandalism	hidden
+845	297	1	0	0	1	0	default	20100304052321		0	Jeske's Test Filter	test	hidden
+846	42	1	0	0	1	0	default	20090408124340	disallow	0	ASCII art Mk.2	bad_style	hidden
+847	299	1	0	0	1	0	default	20100226033620	disallow	0	Personal attacks	personal_attacks	hidden
+848	555	1	0	0	1	0	default	20160614034308		0	Aaron spam	spam,	hidden
+849	300	1	0	0	1	0	default	20100304052339		0	Cross-posting	unclear	hidden
+850	558	1	0	0	1	0	default	20160614034337	disallow	0	FIFA West Germany	unknown	hidden
+851	303	0	0	0	1	0	default	20100312024806		0	COI Page Creation	conflict_of_interest, biased_pov, stockbrocker_vandalism	COI=conflict of interest
+852	304	0	0	0	1	0	default	20100320185413		0	Rayman vandalism	vandalism, sockpuppetry, hoax	“Per WP:EF/R, prolific sock introducing deliberate inaccuracies. Log only for testing. -- Shirik 11 Mar 2010”
+853	562	1	0	0	1	0	default	20160614034426	disallow	0	Hackneyhound	unknown	hidden
+854	308	0	0	0	1	0	default	20100323215045		0	Malformed Mediation Cabal Requests	unclear	“The abusefilter is intended to stop abusive edits. This is neither problematic, nor abusive. Disable – P”
+855	565	1	0	0	1	0	default	20170509185916	warn	0	Cat abuse	vandalism	
+856	823	1	0	0	0	0	default	20170115205517		0	Suspicious activity from new account	vandalism?	
+857	568	1	0	0	1	0	default	20160614034501		0	SPI Clerk impersonation	impersonation	SPI=Sock puppet investigations
+858	569	1	0	0	1	0	default	20160614034508		0	Texas film fan	unknown	hidden
+859	572	1	0	0	1	0	default	20170419224852	disallow	0	Persistent Disruption II	vandalism	hidden
+860	62	0	0	0	1	0	default	20170511125337		0	Deleting the Main Page	vandalism?, good_faith?	
+861	64	1	0	0	1	0	default	20160818205234		0	Shock sites in edit summaries	vandalism	
+862	321	1	0	0	1	0	default	20100425083044		0	Shirik's test filter	test	hidden
+863	67	0	0	0	1	0	default	20090408124418	throttle	0	Sockpuppetry at AfD discussions	sockpuppetry	“0 hits, disabled, performance -Prodego“
+864	836	1	0	0	0	0	default	20170302013108	disallow	0	ANI / Air India Tehran	unknown	ANI=Administrators’ Noticeboard Incidents
+865	582	0	0	0	1	0	default	20160614034657		0	IE 8/9 XSS Filter Bug	bug	“See https://bugzilla.wikimedia.org/show_bug.cgi?id=32013”
+866	329	0	0	0	1	0	default	20100511004040	warn,disallow	0	SPI disruption	vandalism, sockpuppetry?	SPI=Sock puppet investigations
+867	586	0	0	0	1	0	default	20160614034715		0	New user reviewing AfC submissions	vandalism?	AFC=Articles for Creation
+868	75	0	0	0	1	0	default	20090321080048		0	Blanking Vandalism	vandalism	the pattern is weird though “(new_size <= 200) & old_size >= 1000 & ('NEEGAR' in ccnorm(added_lines) )” but nevermind since it was never really triggered^^
+869	588	1	0	0	1	0	default	20160614034723		0	Promotional usernames	conflict_of_interest, biased_pov, stockbrocker_vandalism	hidden
+870	335	1	0	0	1	0	default	20101107190843	disallow	0	Talk page abuse	talk_page_vandalism	
+871	591	1	0	0	0	0	default	20140422022459		0	Christian2941	sockpuppetry?	hidden; https://en.wikipedia.org/wiki/User:Christian2941
+872	336	1	0	0	1	0	default	20100902044736	disallow	0	Darth Vader	unknown	hidden
+873	592	1	0	0	1	0	default	20140422022515		0	Christian2941 (duplicate)	sockpuppetry?	hidden; https://en.wikipedia.org/wiki/User:Christian2941
+874	337	0	0	0	1	0	default	20110310111239	warn,disallow	0	Arkansas TV IP vandalism	vandalism	
+875	83	1	0	0	1	0	default	20090408124448	disallow	0	Genesis vandal	vandalism	
+876	84	1	0	0	1	0	default	20090323041819		0	goatse vandalism	vandalism	
+877	85	1	0	0	1	0	default	20090323174915		0	Beetstra - speed testing rules	test	
+878	86	1	0	0	1	0	default	20090323164705		0	Argentina nuclear energy IP hopper - Rule 1	sockpuppetry?	
+879	87	1	0	0	1	0	default	20090323164702		0	Argentina nuclear energy IP hopper - Rule 2	sockpuppetry?	
+880	88	1	0	0	1	0	default	20090323164659		0	Argentina nuclear energy IP hopper - Rule 3	sockpuppetry?	
+881	89	1	0	0	1	0	default	20090323164656		0	Argentina nuclear energy IP hopper - Rule 4	sockpuppetry?	
+882	90	1	0	0	1	0	default	20090323164654		0	Argentina nuclear energy IP hopper - Rule 5	sockpuppetry?	
+883	91	1	0	0	1	0	default	20090323164655		0	Argentina nuclear energy IP hopper - Rule 6	sockpuppetry?	
+884	92	1	0	0	1	0	default	20090323164725		0	Argentina nuclear energy IP hopper - Rule 7	sockpuppetry?	
+885	349	1	0	0	1	0	default	20100809145939	disallow	0	Dudley Attacks	unknown	hidden
+886	605	1	0	0	1	0	default	20160614035004		0	Animal Welfare issues	unknown	hidden
+887	607	1	0	0	0	0	default	20160818172941		0	March 2014 test filter	test	
+888	100	0	0	0	1	0	default	20090429123827		0	"""Warren G. Harding"" = Gangsta"	vandalism	"what I don’t get is, the comments say “""Filters out recurring vandalism inspired by TV show.  Added paren to reflect what I believe is the intended operation order.  -DF”
+ But hitcount=0 ??
+"
+889	356	1	0	0	1	0	default	20110310111353		0	Removal of LGBT project banner with disruptive edit summary	vandalism, politically motivated?	
+890	357	0	0	0	1	0	default	20100902060504		0	Test pages	test	
+891	110	0	0	0	1	0	default	20090408124254	throttle	0	Account creation throttle	unclear	"“:Disable.  The software is not populating user_groups during account creation.  -DF
+Marked as deleted. - Ruslik""”"
+892	111	0	0	0	1	0	default	20090327010201		0	Gay or fag	personal_attacks, vandalism	“Never mind, I just found filter 97 covers this. - Mindmatrix”
+893	626	0	0	0	1	0	default	20160614035502		0	Deletion by a non-administrator	good_faith?, vandalism?	
+894	374	1	0	0	1	0	default	20120808231359	disallow	0	"""linkless spam"""	spam,	
+895	376	1	0	0	1	0	default	20110310111547		0	InfoCheck Vandalism	vandalism	
+896	122	0	0	0	1	0	default	20090429123937		0	Changing Username malformed requests	good_faith?, bug?, maintenance?	“-Too specific, disabled and deleted, performance. -Prodego”
+897	124	1	0	0	1	0	default	20090525134106	warn,disallow	0	hitlerbunker.com	spam? 	looks like a conspiracy theory^^
+898	893	0	0	0	1	0	default	20171206121123		0	Predatory open access journals.	good_faith, bad_style	"“https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter/Requested&oldid=814008367#Predatory_open_access_journals”
+“Continual good-faith addition of material sourced to predatory open access journals. I remove these almost daily”
+Def predatory open access: also not listed in the Directory of Open Access Journals; no review and editorial process. See also https://en.wikipedia.org/wiki/Predatory_open-access_publishing"
 899	382	1	0	0	1	0	default	20120202004509	disallow	0	Scientology		
 900	128	1	0	0	1	0	default	20090404113726		0	Vandal accounts		
 901	130	1	0	0	1	0	default	20090617092044	warn,disallow	0	Kaveh L. Afrasiabi		
