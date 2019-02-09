@@ -680,3 +680,62 @@ https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view
 "The best name to use for a topic may depend on the context in which it is mentioned; it may be appropriate to mention alternative names and the controversies over their use, particularly when the topic in question is the main topic being discussed."
 
 "Try not to quote directly from participants engaged in a heated dispute; instead, summarize and present the arguments in an impartial tone."
+
+==============================================================
+Filters manual tags evaluation
+
+Following filter categories have been identified (sometimes, a filter was labeled with more than one tag):
+
+- Vandalism
+  - hoaxing
+  - silly vandalism (e.g. repeating characters, inserting swear words)
+  - spam
+  - sockpuppetry
+  - long term abuse
+  - harassment/personal attacks
+    - doxxing
+    - impersonation
+  - trolling
+  - copyright violation
+
+  Labeled along the vandalism typology (check above)
+  - link vandalism
+  - abuse of tags
+  - username vandalism
+  - image vandalism
+  - avoidant vandalism
+  - talk page vandalism
+  - page move vandalism
+  - template vandalism
+  - vandalbots
+
+  Kind of similar:
+  - seo
+  - stockbroker vandalism
+  - biased pov
+  - self promotion
+  - conflict of interest
+
+Inbetween
+- edit warring
+- political controversy
+- politically/religiously motivated hate
+
+- Good faith
+  - bad style ("unencyclopedic edits" e.g. citing a blog or mentioning a hypothetical future album release)
+  - lazyness
+
+
+- Maintenance
+  - bugs
+  - wiki policy (compliance therewith)
+  - test filters
+
+
+A lot of filters are disabled/deleted bc:
+* they hit too many false positives
+* they were implemented to target specific incidents and these vandalism attempts stopped
+* they were tested and merged into other filters
+* there were too few hits and the conditions were too expensive
+
+Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
