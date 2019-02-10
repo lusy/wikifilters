@@ -1,6 +1,6 @@
 # Wikifilters
 
-This repository contains an inquiry into Wikipedia's edit filter system.
+This repository contains an inquiry into EN Wikipedia's edit filter system.
 
 ## Structure
 

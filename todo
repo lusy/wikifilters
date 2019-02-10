@@ -20,24 +20,11 @@
 
 * There was the section of what are filters suitable for; should we check filters against this list?
 
-
-* Look at filters: what different types of filters are there? how do we classify them?
-  * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
-  * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
-  (Abuse of tags; Account creation, malicious; Avoidant vandalism; Blanking, illegitimate; Copyrighted material, repeated uploading of; Edit summary vandalism; Format vandalism; Gaming the system; Hidden vandalism; Hoaxing vandalism; Image vandalism; Link vandalism; Page creation, illegitimate; Page lengthening; Page-move vandalism; Silly vandalism; Sneaky vandalism; Spam external linking; Stockbroking vandalism; talk page vandalism; Template vandalism; User and user talk page vandalism; Vandalbots;)
-  * consider also other forms of (unintenionally) disruptive behaviour: boldly editing; copyright violation disruptive editing or stubbornness --> edit warring; edit summary omission; editing tests by experimenting users; harassment or personal attacks; Incorrect wiki markup and style; lack of understanding of the purpose of wikipedia; misinformation, accidental; NPOV contraventions (Neutral point of view); nonsense, accidental; Policy and guideline pages, good-faith changes to; Reversion or removal of unencyclopedic material, or of edits covered under the biographies of living persons policy; Deletion nominations;
-  -----
-  * classify in "vandalism"|"good_faith"|"biased_edits"|"misc" for now
-  * syntactic vs semantic vs ? (ALL CAPS is syntactic)
-  * are there ontologies?
-  * how is spam classified for example?
-
 * check filter rules for edits in user/talks name spaces (may be indication of filtering harassment)
 * add also "af_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
 
-* add a README to github repo
 
-* Read these two pages
+* Read these pages
 
 https://en.wikipedia.org/wiki/Wikipedia:No_original_research
 https://en.wikipedia.org/wiki/Wikipedia:Harassment
@@ -80,7 +67,6 @@ https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includ
   * ping aaron/amir for access to a backend db to look at filters; explanation how this is helping the community is important
 
 * questions from EN-state-of-the-art
-// do the users notice the logging? or only "bigger" actions such as warnings/being blocked, etc.?
 "Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
 // what is "good standing"?
 // what are the arguments for hiding a filter? --> particularly obnoxious vandals can see how their edits are being filtered and circumvent them; (no written quote yet)
@@ -180,3 +166,18 @@ https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFil
 
 * Setup CSCW latex template up
 * add "af_deleted" column to filter list
+
+* Look at filters: what different types of filters are there? how do we classify them?
+  * add a special tag for filters targeting spam bots? (!!! important: do research on distinction/collaboration bots/filters)
+  * consider all types of vandalism (https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism) when refining the self assigned tags
+  (Abuse of tags; Account creation, malicious; Avoidant vandalism; Blanking, illegitimate; Copyrighted material, repeated uploading of; Edit summary vandalism; Format vandalism; Gaming the system; Hidden vandalism; Hoaxing vandalism; Image vandalism; Link vandalism; Page creation, illegitimate; Page lengthening; Page-move vandalism; Silly vandalism; Sneaky vandalism; Spam external linking; Stockbroking vandalism; talk page vandalism; Template vandalism; User and user talk page vandalism; Vandalbots;)
+  * consider also other forms of (unintenionally) disruptive behaviour: boldly editing; copyright violation disruptive editing or stubbornness --> edit warring; edit summary omission; editing tests by experimenting users; harassment or personal attacks; Incorrect wiki markup and style; lack of understanding of the purpose of wikipedia; misinformation, accidental; NPOV contraventions (Neutral point of view); nonsense, accidental; Policy and guideline pages, good-faith changes to; Reversion or removal of unencyclopedic material, or of edits covered under the biographies of living persons policy; Deletion nominations;
+  -----
+  * classify in "vandalism"|"good_faith"|"biased_edits"|"misc" for now
+  * syntactic vs semantic vs ? (ALL CAPS is syntactic)
+  * are there ontologies?
+  * how is spam classified for example?
+
+* add a README to github repo
+
+// do the users notice the logging? or only "bigger" actions such as warnings/being blocked, etc.?
