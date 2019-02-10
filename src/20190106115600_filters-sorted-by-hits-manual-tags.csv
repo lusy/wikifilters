@@ -449,7 +449,7 @@
 446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism	vandalism	
 447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism	vandalism	
 448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages	vandalism?, biased_pov?	deleted; “5076 Only catches a few bad-faith edits per month.  Disabling.  -Wknight94” “Filter to (eventually) disallow attempts to hide the content of a page with HTML tags. Will trip for new and unregistered users. - Hersfold “
-449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds	vandalism?, maintenance? 	“Multiple sources seem to have published a link to the english wikipedia to write via the api sandbox. -- Xaosflux”
+449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds	vandalism?, maintenance?	“Multiple sources seem to have published a link to the english wikipedia to write via the api sandbox. -- Xaosflux”
 450	453	1	0	0	1	0	default	20130404081115	warn,disallow	119	Temporary block on making specific kinds of template edits	vandalism?	hidden
 451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal	vandalism	
 452	281	1	0	0	1	0	default	20100108215922		115	Unwatched BLPs	unknown	hidden
@@ -512,7 +512,7 @@
 509	312	1	0	0	1	0	default	20150212173501		62	External link removal	vandalism?, biased_pov?	hidden
 510	621	1	0	0	1	0	default	20160614035403	disallow	62	Spambot Filter	spam?	hidden
 511	328	1	0	0	1	0	default	20130404080744		61	Prolific socker III	sockpuppetry	
-512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)	long_term_abuse, vandalism, religious, politically_motivated, harassment	https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/JarlaxleArtemis; “Cross-wiki harassment and threats of death and violence; criticism of liberals, the far-left and SJWs; criticism of anything not involving two clearly defined genders; criticism of Islam and anything not supporting Israel and Judaism; and usage of open proxies.”
+512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)	long_term_abuse, vandalism, religious_vandalism, politically_motivated, harassment	https://en.wikipedia.org/wiki/Wikipedia:Long-term_abuse/JarlaxleArtemis; “Cross-wiki harassment and threats of death and violence; criticism of liberals, the far-left and SJWs; criticism of anything not involving two clearly defined genders; criticism of Islam and anything not supporting Israel and Judaism; and usage of open proxies.”
 513	668	1	0	0	0	0	default	20150429015714	disallow	61	GP disruption	vandalism?	hidden
 514	226	1	0	0	1	0	default	20091003121354		61	Johnali123 sockpuppets	sockpuppetry	
 515	4	1	0	0	1	0	default	20160812192142		60	Copernicus vandal	vandalism	
@@ -670,12 +670,12 @@ Marked as deleted. - Ruslik"","
 666	929	0	0	1	0	0	default	20180826201614		12	LTA Hydro	long_term_abuse, bad_style?	“long term editor attempting to use WP as a soap box for a domain name dispute”
 667	683	1	0	0	1	0	default	20160614040802		12	New users removing sections from the Reference Desk	vandalism?	hidden
 668	462	1	0	0	1	0	default	20120820155230	disallow	12	Serial harassment of MuZemike	harassment	hidden
-669	219	0	0	0	1	0	default	20090803161738		12	Arbcom requested filter (FOFF)	silly_vandalism, personal_attack?	filters “fuck you” and “fuck off”
+669	219	0	0	0	1	0	default	20090803161738		12	Arbcom requested filter (FOFF)	silly_vandalism, personal_attacks?	filters “fuck you” and “fuck off”
 670	780	0	0	0	0	0	default	20160812030457		11	Addition of interlanguage links	maintenance, vandalism?	hidden; “Reason: Interwikis are now handled by Wikidata.”; “Disabling. Too infrequent and for the good-faith edits I'm not too happy with even throwing a warning ~MA 2016.08.11”
 671	556	1	0	0	1	0	default	20161012202550	disallow	11	Impersonation usernames	vandalism, harassment?	hidden
 672	332	1	0	0	1	0	default	20100522071643		11	J.delanoy vandal	vandalism	hidden
 673	598	1	0	0	1	0	default	20140102175720	warn,disallow	11	Template redirect protection	vandalism?	hidden
-674	158	0	0	0	1	0	default	20090617081158	disallow	11	Bill Posey = alligator child	silly_vandalism?, personal_attack?	deleted
+674	158	0	0	0	1	0	default	20090617081158	disallow	11	Bill Posey = alligator child	silly_vandalism?, personal_attacks?	deleted
 675	451	1	0	0	1	0	default	20130404081107	disallow	11	IP attacks	vandalism?	hidden
 676	727	0	0	0	0	0	default	20160126000441		11	Samwalton9 test filter	test	hidden
 677	500	1	0	0	1	0	default	20160929181057	disallow	11	Sock	sockpuppetry	hidden
