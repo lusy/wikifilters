@@ -899,3 +899,33 @@ TODO: Questions to ask of a text (p.39-40):
 * What kinds of comparisons can you make between texts? Between different texts on the same topic? Similar texts at different times such as organizational annual reports? Between different authors who address the same questions?
 * Who benefits from the text? Why?
 "
+
+================================================================
+https://en.wikipedia.org/w/api.php?action=help&modules=main
+
+action
+
+    Which action to perform.
+
+    abusefiltercheckmatch
+        Check to see if an AbuseFilter matches a set of variables, an edit, or a logged AbuseFilter event.
+    abusefilterchecksyntax
+        Check syntax of an AbuseFilter filter.
+    abusefilterevalexpression
+        Evaluates an AbuseFilter expression.
+    abusefilterunblockautopromote
+        Unblocks a user from receiving autopromotions due to an abusefilter consequence.
+
+================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Database_download
+
+
+================================================================
+https://stats.wikimedia.org/v2
+
+To generate stats for different wiki projects
+
+=====================================================================
+Claudia: * A focus on the Good faith policies/guidelines is a historical development. After the huge surge in edits Wikipedia experienced starting 2005 the community needed a means to handle these (and the proportional amount of vandalism). They opted for automatisation. Automated system branded a lot of good faith edits as vandalism, which drove new comers away. A policy focus on good faith is part of the intentions to fix this.
+
+
