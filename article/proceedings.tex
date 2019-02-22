@@ -130,6 +130,11 @@ TO WIKIPEDIA, THE ONE SURPRISE THAT TEACHES MORE THAN EVERYTHING HERE." (p.v)~\c
 
 When and why were Wikipedia edit filters introduced?
 
+Edit filters were first introduced on the English Wikipedia in 2009 under the name ``abuse filters''.
+Their clear purpose was to cope with the rising(syn) amount of vandalism as well as ``common newbie mistakes'' the encyclopedia faced. (quote!)
+
+
+
 "The AbuseFilter extension was enabled on the English Wikipedia in 2009."
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 
@@ -423,6 +428,11 @@ What is the best place herefor?
 
 \textbf{Definition}
 
+According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing.
+[1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.'' (\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}).
+
+Interestingly, 
+
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 "The edit filter is a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing.
 [1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove."
@@ -436,6 +446,24 @@ Footnote 2: "The extension also allows for temporary blocking, but these feature
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 
 \textbf{Example of a filter}
+
+For illustration purposes/better understanding, let us have a closer look at what a single edit filter looks like.
+Edit filter with ID 365 is public and currently enabled.
+It public comment (``name'') reads ``Unusual changes to featured or good content''.
+The regex filter pattern is:
+\begin{verbatim}
+"page_namespace == 0 &
+!(""confirmed"" in user_groups) &
+old_size > 20000 & (
+    ""#redirect"" in lcase(added_lines) |
+    edit_delta < -15000 |
+    edit_delta > 15000
+) &
+old_wikitext rlike ""\{\{([Ff]eatured|[Gg]ood)\s?article\}\}"""
+\end{verbatim}
+And the currently configured filter actions are: ``disallow''.
+(quote source, also refer to \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365})
+
 
 \textbf{Difference bot/filter}
 
@@ -509,6 +537,11 @@ apart from that: current ongoing discussions on single filters/problems that may
 \section{Technical layer}
 
 \subsection{The edit filter mediawiki extention}
+
+At the end, from a technical perspective Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a regular expression before it's published.
+Every time a filter is triggered, the edit that triggered it, as well as further data such as .. is logged.
+Possibly, a further filter action is invoked as well.
+The plugin defines following possible(syn) filter actions:
 
 Software: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter}\\
 Rules format: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}
