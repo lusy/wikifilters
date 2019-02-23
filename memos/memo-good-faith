@@ -1,4 +1,4 @@
-# Good faith
+# Good faith edits
 
 Good faith is a term used by the Wikipedia community itself.
 Most prominently in the phrase "Always assume good faith".
@@ -16,3 +16,30 @@ Not all disruptive behaviour is vandalism, the guidelines suggest (quote).
 Examples of "good faith" edits that are non the less disruptive are not complying with Wiki syntax (mostly because of being unfamiliar with it), deleting a page instead of moving it, using improper redirects or publishing test changes.
 
 Edit warring is not vandalism either.
+
+Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
+Based on content of the edit alone, it might be frankly impossible.
+Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor.
+Only if the disrupting editor proves to be uncooperating, ignores warnings and continues disruptive behaviour, their edits are to be labelled "vandalism".
+
+## Properties/Characteristics
+
+- mostly done by new editors, not familiar with syntax, norms, guidelines
+- result in:
+  - broken syntax
+  - disregarding established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.)
+  - non encyclopedic edits (e.g. without sources/with improper sourcers; badly styled; or with a skewed point of view)
+
+- there is also the guideline "be bold" (or similar), so one could expect to be able to for example add unwikified text, which is then corrected by somebody else
+
+## Examples
+
+Some of the filters in the "good faith" category target (public comment of the filter):
+- test edits
+- misplaced "#redirect" in articles
+- moves to or from Module namespace
+- Adding emoji unicode characters
+- Large creations by inexperienced users
+- creation of a new article without any categories
+- new user removing references
+- Adding "example.jpg" to article space
