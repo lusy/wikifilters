@@ -4,7 +4,7 @@
 2	527	1	0	1	0	0	default	20161204020134	throttle	1241576	T34234: log/throttle possible sleeper account creations	vandalism	needs subtag? Account creation != defacing content
 3	384	0	0	1	0	0	default	20181018171832	disallow	1159239	Addition of bad words or other vandalism	vandalism	
 4	172	0	0	1	0	0	default	20170514124339	tag	935925	Section blanking	good_faith	
-5	30	0	0	1	0	0	default	20181018234235	warn,tag	840871	Large deletion from article by new editors	good_faith	
+5	30	0	0	1	0	0	default	20181018234235	warn,tag	840871	Large deletion from article by new editors	good_faith, vandalism	
 6	633	0	0	1	0	0	default	20181218191236	tag	808716	Possible canned edit summary	good_faith, lazyness	
 7	636	0	0	1	0	0	default	20181231024947	warn	726764	Unexplained removal of sourced content	vandalism, good_faith	the warning suggests, editors should add edit summary
 8	3	0	0	1	0	0	default	20181018194624	warn,tag	700522	New user blanking articles	good_faith	
