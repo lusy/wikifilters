@@ -245,12 +245,22 @@ examples of disruptive editing:
 
 \section{Data}
 
-What is the best place herefor?
+%What is the best place herefor?
 
+The data upon which the current analysis builds presently consists of 2 sets/data base tables.
+These are \emph{abuse\_filter} and \emph{abuse\_filter\_action} from \emph{enwiki\_p}, downloaded on 6.01.2019 via quarry~\footnote{\url{https://quarry.wmflabs.org/}}.
+The complete files can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
+
+These tables, along with \emph{abuse\_filter\_log}, are created and used by the AbuseFilter MediaWiki extention (quote!) % TODO: is that really so
+.
+A fourth table appears to have existed (\emph{abuse\_filter\_history}, quote!), but unfortunately this is no longer the case. (However, I suspect that same data can be obtained by joining \emph{abuse\_filter\_log} and \emph{abuse\_filter\_action}, and querriyng cleverly, not quite sure though.)
+
+\begin{comment}
 * Describe analysed filter data set
-  * Where does it come from? How was it obtained? For what purpose does it exist? How does it look like?
+  * How does it look like? : describe schema?
 * What other data sources can I explore?
   * Interview with filter managers? with admins? with new editors?
+\end{comment}
 
 %************************************************************************
 
