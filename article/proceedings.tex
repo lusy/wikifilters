@@ -177,7 +177,7 @@ What can we study?
 \section{Algorithmic quality-control mechanisms on Wikipedia}
 %Context
 
-%Literature review!
+%TODO Literature review!
 
 \subsection{Vandalism on Wikipedia}
 
@@ -303,6 +303,10 @@ old_wikitext rlike
 \end{verbatim}
 And the currently configured filter actions are: ``disallow''.
 (quote source, also refer to \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365})
+
+So, if a user whose status is not confirmed yet tries to edit a page in the article namespace which contains ``Featured'' or ``Good article'' and they either insert a redirect, deletes 3/4 of the content or adds 3/4 on top, the edit is automatically disallowed.
+
+Note that an edit filter editor can easily change the action of the filter. (Or the pattern, as a matter of fact.)
 
 
 \textbf{Difference bot/filter}
