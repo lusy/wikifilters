@@ -392,10 +392,11 @@ mysql> describe abuse_filter_log; https://www.mediawiki.org/wiki/Extension:Abuse
 | afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                | \\Target Namespace of the filtered action.
 | afl_title        | varbinary(255)      | NO   |     | NULL    |                | \\Target title of the filter action.
 | afl_wiki         | varbinary(64)       | YES  | MUL | NULL    |                |
-| afl_deleted      | tinyint(1)          | NO   |     | 0       |                |
-| afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                |
-| afl_rev_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
-| afl_log_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
+| afl_deleted      | tinyint(1)          | NO   |     | 0       |                | \\"Whether the AbuseLog entry was suppressed. 1 if suppressed, 0 otherwise.
+" ohm, that means, that if 1, the rest of the line would be empty?
+| afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                | \\unused
+| afl_rev_id       | int(10) unsigned    | YES  | MUL | NULL    |                | \\Foreign key to revision.rev_id, only populated for saved edits in order to show a diff link. I've got the feeling, it is also unused, for filter id 23 it is empty for all log entries
+| afl_log_id       | int(10) unsigned    | YES  | MUL | NULL    |                | \\unused
 +------------------+---------------------+------+-----+---------+----------------+
 16 rows in set (0.00 sec)
 

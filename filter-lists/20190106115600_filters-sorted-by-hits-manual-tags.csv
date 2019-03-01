@@ -270,7 +270,8 @@
 268	812	0	0	1	0	0	default	20161212220959	disallow	726	Unreasonably large addition of content	vandalism?	
 269	915	1	0	1	0	0	default	20190104181216		719	Personal testing filter for Cyberpower678	test	
 270	762	1	0	1	0	0	default	20180126230139	disallow,tag	716	TV/Movie spammer	vandalism, spam?	
-271	642	0	0	1	0	0	default	20181023194832	disallow	712	OTRS template added by non-OTRS member (global)	good_faith?,	from comments: “This filter is easy to subvert so assume we are mainly looking at good faith, or naive bad faith edits.
+271	642	0	0	1	0	0	default	20181023194832	disallow	712	OTRS template added by non-OTRS member (global)	good_faith?,	"from comments: “This filter is easy to subvert so assume we are mainly looking at good faith, or naive bad faith edits.
+OTRS = Open Technology Real Services (OTRS), was Open Ticket Request System"
 272	146	1	0	0	1	0	default	20120808231158		710	Keith Bridgeman vandalism	vandalism	
 273	856	0	0	1	0	0	default	20180412170902		687	Non-admin removing revdel templates	good_faith?, vandalism?	
 274	99	0	0	0	1	0	default	20090408125315		686	Edits to an other user's userspace	good_faith?, vandalism?	deleted
