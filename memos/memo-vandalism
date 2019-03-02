@@ -10,6 +10,9 @@ Although this clashes with the overall *transparency* of the project (is there a
 There are also private filters targetting personal attack or abuse cases.
 Here, filters are private in order to protect affected person(s).
 
+The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
+In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extention, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
+
 According to https://en.wikipedia.org/wiki/Wikipedia:Vandalism following (mostly disruptive) behaviours are **not vandalism**:
 - boldly editing
 - copyright violation
