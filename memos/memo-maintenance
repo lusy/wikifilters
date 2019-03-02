@@ -1,0 +1,22 @@
+# Filters with maintenance purpose
+
+Some of the encountered edit filters on the EN Wikipedia were targeting neither vandalism nor good faith edits.
+These had rather their focus on (semi-)automating routine (clean up) tasks.
+
+Some of the filters I labeled as "maintenance" were for instance recording cases of broken syntax caused by a faulty browser extention. (filter id!)
+Others were targeting bugs such as.. 
+
+577 -> "VisualEditor bugs: Strange icons"
+345 -> "Extraneous formatting from browser extension"
+313 -> "Skype Toolbar Formatting"
+199 -> "Unflagged Bots"
+505 -> "Tag mobile edits"
+728 -> "Huggle"
+209 -> "arwiki interwiki problem"
+
+The maintenance parent category differs conceptually from the other 2 in so far that filters in it don't target particular **intents** of the editors whose edits are triggering the filter, but rather "side"-occurances that mostly went wrong.
+
+## Bugs
+
+There are some 10 or so filters I manually labeled as targeting "bugs".
+Most of them do log only.
