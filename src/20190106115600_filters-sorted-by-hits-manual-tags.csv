@@ -192,7 +192,8 @@
 190	496	0	0	0	1	0	feedback	20130108151054	disallow	2658	Feedback: Common Vandalism 4	vandalism, harassment?	deleted; “Merged back into 460. --mlitn”
 191	403	1	0	0	1	0	default	20130404080817		2605	Inappropriate use of userpage	vandalism?, biased_pov?	hidden, deleted;
 192	53	0	0	0	1	0	default	20090423131929		2595	trademark/copyright symbols	spam?, copyright?	deleted
-193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages	misc	disabled
+193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages	good_faith, wiki_policy, seo	"disabled; indexing – search engine indexing;
+https://en.wikipedia.org/wiki/Wikipedia:Controlling_search_engine_indexing"
 194	242	1	0	1	0	0	default	20150219194933	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle	misc, vandalism?	hidden
 195	898	1	0	1	0	0	default	20180414083948		2343	Cyp test filter	test	hidden
 196	904	0	0	0	1	0	default	20180406183614		2338	Long edit summaries	test	deleted
@@ -238,12 +239,13 @@
 236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities	harassment	deleted;
 237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers	sockpuppetry	deleted, hidden;
 238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism	vandalism	hidden;
-239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users	wiki_policy?	https://en.wikipedia.org/wiki/Wikipedia:Controlling_search_engine_indexing
+239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users	wiki_policy, good_faith, seo	"https://en.wikipedia.org/wiki/Wikipedia:Controlling_search_engine_indexing
+ similar to 840"
 240	793	1	0	1	0	0	default	20190105142358	disallow	1155	Common spam/scam phone numbers	spam?, vandalism?	hidden
 241	675	0	0	0	1	0	default	20160614040653	disallow	1107	Thems the facts vandalism	vandalism	deleted; “moved to filter 614 ~~MA”
 242	877	1	0	0	0	0	default	20180814223233		1084	test filter 4	test	hidden
 243	253	0	0	0	1	0	default	20091127160929	warn	1015	Signing a non-discussion page	bad_style	deleted
-244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles	bug?	deleted
+244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles	unclear	deleted
 245	755	1	0	0	0	0	default	20190104181502		981	LTA trolling	vandalism, harassment?	hidden; LTA=long term abuse
 246	7	1	0	0	1	0	default	20160812192554		972	AnonTalk	misc	hidden, deleted
 247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users	vandalism?, harassment?	hidden, deleted;
@@ -328,7 +330,7 @@
 326	931	1	0	1	0	0	default	20190103063839	throttle,disallow	383	Image vandalism I	vandalism	hidden
 327	311	1	0	0	1	0	default	20160614031414	disallow,tag	382	Lewis Hamilton racism	vandalism	hidden; politically motivated.. 
 328	788	0	0	1	0	0	default	20170309083707	disallow	374	IP removing report from RFPP	vandalism	RFP = Request for page protection
-329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page	good_faith, vandalism	deleted
+329	212	0	0	0	1	0	default	20090830005619		372	New user placing comments without a header on user talk page	good_faith, vandalism, bad_style, personal_attack	deleted
 330	787	1	0	1	0	0	default	20160814184338	disallow	370	Spicy boy	misc	hidden
 331	699	1	0	0	0	0	default	20160218130439		363	3 edit link spam	spam?	hidden
 332	751	1	0	1	0	0	default	20160818181044	disallow	359	Non-notable actor vandal/hoaxer	vandalism?	
@@ -448,7 +450,7 @@
 445	513	1	0	0	1	0	default	20160929181639	disallow	122	Persistent talk page abuse from IP ranges II	harassment?, vandalism?, abuse?	hidden
 446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism	vandalism	
 447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism	vandalism	
-448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages	vandalism?, biased_pov?	deleted; “5076 Only catches a few bad-faith edits per month.  Disabling.  -Wknight94” “Filter to (eventually) disallow attempts to hide the content of a page with HTML tags. Will trip for new and unregistered users. - Hersfold “
+448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages	vandalism	deleted; “5076 Only catches a few bad-faith edits per month.  Disabling.  -Wknight94” “Filter to (eventually) disallow attempts to hide the content of a page with HTML tags. Will trip for new and unregistered users. - Hersfold “
 449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds	vandalism?, maintenance?	“Multiple sources seem to have published a link to the english wikipedia to write via the api sandbox. -- Xaosflux”
 450	453	1	0	0	1	0	default	20130404081115	warn,disallow	119	Temporary block on making specific kinds of template edits	vandalism?	hidden
 451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal	vandalism	
