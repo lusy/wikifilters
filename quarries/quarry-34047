@@ -1,0 +1,6 @@
+use enwiki_p;
+select left(afl_timestamp, 6) LogMonth, afl_actions FilterActions, count(*) Freq
+from abuse_filter_log
+group by left(afl_timestamp, 6), afl_actions
+order by 1 desc;
+
