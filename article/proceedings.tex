@@ -133,7 +133,7 @@ TO WIKIPEDIA, THE ONE SURPRISE THAT TEACHES MORE THAN EVERYTHING HERE." (p.v)~\c
 Edit filters were first introduced on the English Wikipedia in 2009 under the name ``abuse filters''.
 Their clear purpose was to cope with the rising(syn) amount of vandalism as well as ``common newbie mistakes'' the encyclopedia faced~\cite{Signpost2009}.
 
-% TODO: when and why was the extention renamed
+% TODO: when and why was the extension renamed
 
 %************************************************************************
 
@@ -267,7 +267,7 @@ The data upon which the current analysis builds presently consists of 2 sets/dat
 These are \emph{abuse\_filter} and \emph{abuse\_filter\_action} from \emph{enwiki\_p}, downloaded on 6.01.2019 via quarry~\footnote{\url{https://quarry.wmflabs.org/}}.
 The complete files can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
 
-These tables, along with \emph{abuse\_filter\_log}, are created and used by the AbuseFilter MediaWiki extention (quote!) % TODO: is that really so
+These tables, along with \emph{abuse\_filter\_log}, are created and used by the AbuseFilter MediaWiki extension (quote!) % TODO: is that really so
 .
 A fourth table appears to have existed (\emph{abuse\_filter\_history}, quote!), but unfortunately this is no longer the case. (However, I suspect that same data can be obtained by joining \emph{abuse\_filter\_log} and \emph{abuse\_filter\_action}, and querriyng cleverly, not quite sure though.)
 
@@ -289,7 +289,7 @@ According to EN Wikipedia's own definition, an edit filter is ``a tool that allo
 %TODO how to quote an excerpt containing a footnote?
 
 Interestingly, at its introduction, the mechanism was called ``Abuse Filter'' and was later renamed to ``edit filter''.
-We can observe the legacy name in the name of the MediaWiki extention for instance.
+We can observe the legacy name in the name of the MediaWiki extension for instance.
 The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{WikipediaEditFilter}.
 %TODO what was the motivation behind the rename? signaling it's not only targeting vandals but also intending to assist good faith editors?
 
@@ -400,7 +400,7 @@ apart from that: current ongoing discussions on single filters/problems that may
 
 \section{Technical layer}
 
-\subsection{The edit filter mediawiki extention}
+\subsection{The edit filter mediawiki extension}
 
 At the end, from a technical perspective Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a regular expression before it's published.
 Every time a filter is triggered, the edit that triggered it, as well as further data such as .. is logged.
@@ -460,7 +460,7 @@ What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
 - "throttle"? (mentioned somewhere else)
 - \url{https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11} mentions "block" as a possible action in the legend
 
-9 different actions possible according to the extention docu (are users whose edits tripped the filters notified for all of them?)
+9 different actions possible according to the extension docu (are users whose edits tripped the filters notified for all of them?)
 \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions}
     2.1 Logging: All filter matches are logged in the abuse log. This cannot be turned off.  (so, every filter trigger is always being logged?)
     2.2 Warning: The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.
