@@ -331,7 +331,8 @@ Note that an edit filter editor can easily change the action of the filter. (Or 
 
 \section{Edit filter governance}
 
-\textbf{Interesting questions:}
+In this section, we contemplate(syn) the edit filter system from a community/governance perspective.
+We address following relevant questions:
 
 \begin{itemize}
     \item who can propose a filter?
@@ -341,33 +342,26 @@ Note that an edit filter editor can easily change the action of the filter. (Or 
 \end{itemize}
 
 \subsection{How is a new filter introduced?}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"Except in urgent situations, new edit filters should generally be tested without any actions specified (simply enabled) until a good number of edits have been logged and checked before being implemented in "warn" or "disallow" modes. If the filter is receiving more than a very small percentage of false positives it should usually not be placed in 'disallow' mode."
 
-\textbf{Alternatives:}
-
-"Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
-
-Exemptions for "urgent situation" -- what/how are these defined?
-Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
-
-
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
-"This page is for people without the abusefilter-modify permission or people without sufficient knowledge about the coding involved to make requests to enact edit filters."
-
-There's a "Bear the following in mind:" checklist (see also Alternatives above)
-- "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
-- filters, after adding up, make editing slower
-- in depth checks should be done by a separate software that users run on their own machines
-- no trivial errors should be catched by filters (ala style guidelines)
-- there are Titles Blacklist and Link/Spam Blacklist
+Anyone can propose a new edit filter.
+An editor who notices problematic/weird/.. behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
+The request can then be approved and implemented by an edit filter manager (mostly after a discussion/clarification of the details).
+The Edit Filters Requests page also asks users to go through following checklist before requesting a filter:
+\begin{itemize}
+    \item "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
+    \item filters, after adding up, make editing slower
+    \item in depth checks should be done by a separate software that users run on their own machines
+    \item no trivial errors should be catched by filters (ala style guidelines)
+    \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
+\end{itemize}
 
 \subsection{Who can edit filters?}
 
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"Because even the smallest mistake in editing a filter can disrupt the encyclopedia, only editors who have the required good judgment and technical proficiency are permitted to configure filters."
---> Who are these editors? Who decides they are qualified enough?
+In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abuselfilter-modify} permission.
+Accoring to \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
+%TODO Who are these editors? Who decides they are qualified enough?
 
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 "Filters are created and configured by edit filter managers, but they can be requested by any editor."
 "all administrators can view private filters"
 "This group is assignable by administrators, who may also assign the right to themselves"
@@ -378,6 +372,9 @@ There's a "Bear the following in mind:" checklist (see also Alternatives above)
 "If an edit filter manager is misusing the user right, the concern should first be raised with them directly. If discussion does not resolve the issue, a request for discussion or removal of the user right may be made at the edit filter noticeboard. "
 "If you have the edit filter manager user right, please ensure you follow the Password strength requirements and appropriate personal security practices. Two-factor authentication enrollment is available for edit filter managers. Because edit filters affect every edit made, a compromised account will be blocked and its privileges removed on grounds of site security. In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
 //interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
+
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"Except in urgent situations, new edit filters should generally be tested without any actions specified (simply enabled) until a good number of edits have been logged and checked before being implemented in "warn" or "disallow" modes. If the filter is receiving more than a very small percentage of false positives it should usually not be placed in 'disallow' mode."
 
 \textbf{List of current edit filter managers}
 
@@ -395,6 +392,13 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
   (you can also raise the issue directly with the filter manager who created or enabled the filter)
 
 apart from that: current ongoing discussions on single filters/problems that may require a filter
+
+\textbf{Alternatives:}
+
+"Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
+
+Exemptions for "urgent situation" -- what/how are these defined?
+Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
 
 %************************************************************************
 
@@ -416,8 +420,7 @@ relevant dbs:
 abuse\_filter
 abuse\_filter\_log
 abuse\_filter\_action
-
-there used to be an abuse\_filter\_history, but it seems to not exist anymore
+abuse\_filter\_history
 
 \subsection{How is a new filter introduced?}
 //maybe move to governance?
