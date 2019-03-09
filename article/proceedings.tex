@@ -382,17 +382,22 @@ According to EN Wikipedia's own definition, an edit filter is ``a tool that allo
 [1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.''~\cite{WikipediaEditFilter}.
 %TODO how to quote an excerpt containing a footnote?
 
+Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
+If there is a match, the edit in question is logged and potentially, additional actions such as tagging the edit summary, issuing a warning or disallowing the edit are invoked.
+The full range of actions which the AbuseFilter extension allows are discussed in section~\label{sec:technical-layer}.
+
 Interestingly, at its introduction, the mechanism was called ``Abuse Filter'' and was later renamed to ``edit filter''.
 We can observe the legacy name in the name of the MediaWiki extension for instance.
 The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{WikipediaEditFilter}.
 %TODO what was the motivation behind the rename? signaling it's not only targeting vandals but also intending to assist good faith editors?
 
 
+\begin{comment}
 %TODO: rephrase this as a second paragraph
 "A filter automatically compares every edit made to Wikipedia against a defined set of conditions. If an edit matches the conditions of a filter, that filter will respond by logging the edit. It may also tag the edit summary, warn the editor, revoke his/her autoconfirmed status, and/or disallow the edit entirely.[2]"
 Footnote 2: "The extension also allows for temporary blocking, but these features are disabled on the English Wikipedia." <-- TODO: Is there wikipedia on which it isn't disallowed?
 // do the users notice the logging? or only "bigger" actions such as warnings/being blocked, etc.?
-
+\end{comment}
 
 \textbf{Example of a filter}
 
@@ -497,6 +502,7 @@ Discussions may happen postfactum here and filter may be applied before having b
 %************************************************************************
 
 \section{Technical layer}
+~\label{sec:technical-layer}
 
 \subsection{The edit filter mediawiki extension}
 
