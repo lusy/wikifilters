@@ -267,9 +267,12 @@ The data upon which the current analysis builds presently consists of 2 sets/dat
 These are \emph{abuse\_filter} and \emph{abuse\_filter\_action} from \emph{enwiki\_p}, downloaded on 6.01.2019 via quarry~\footnote{\url{https://quarry.wmflabs.org/}}.
 The complete files can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
 
-These tables, along with \emph{abuse\_filter\_log}, are created and used by the AbuseFilter MediaWiki extension (quote!) % TODO: is that really so
-.
-A fourth table appears to have existed (\emph{abuse\_filter\_history}, quote!), but unfortunately this is no longer the case. (However, I suspect that same data can be obtained by joining \emph{abuse\_filter\_log} and \emph{abuse\_filter\_action}, and querriyng cleverly, not quite sure though.)
+These tables, along with \emph{abuse\_filter\_log} and \emph{abuse\_filter\_history}, are created and used by the AbuseFilter MediaWiki extension~\cite{gerrit-abusefilter}.
+Selected queries have been run against the \emph{abuse\_filter\_log} table as well.
+Unfortunately, currently the \emph{abuse\_filter\_history} table is not exposed to the public due to security/privacy concerns.
+We hope to be shortly able to access a view of this table in order to conduct historic inquirements.
+
+The schemas of these tables can be viewed in~\ref{fig:db-schemas}.
 
 \begin{comment}
 * Describe analysed filter data set
