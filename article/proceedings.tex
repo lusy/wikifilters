@@ -142,7 +142,6 @@ Their clear purpose was to cope with the rising(syn) amount of vandalism as well
 
 What do we want to know?
 
-Context of work: algorithmic quality-control mechanisms (bots, ORES, humans) → filter?
 
 \begin{itemize}
     \item Description of how filters integrate into the algorithmic quality control mechanism in Wikipedia
@@ -192,8 +191,10 @@ What can we study?
 
 \section{Algorithmic quality-control mechanisms on Wikipedia}
 %Context
+Context of work: algorithmic quality-control mechanisms (bots, ORES, humans) → filter?
 
 %TODO Literature review!
+Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted?
 
 \subsection{Vandalism on Wikipedia}
 
@@ -379,7 +380,7 @@ abuse_filter_action
 \textbf{Definition}
 
 According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing.
-[1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.''~\cite{WikipediaEditFilter}.
+[1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.''~\cite{Wikipedia:EditFilter}.
 %TODO how to quote an excerpt containing a footnote?
 
 Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
@@ -388,7 +389,7 @@ The full range of actions which the AbuseFilter extension allows are discussed i
 
 Interestingly, at its introduction, the mechanism was called ``Abuse Filter'' and was later renamed to ``edit filter''.
 We can observe the legacy name in the name of the MediaWiki extension for instance.
-The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{WikipediaEditFilter}.
+The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{Wikipedia:EditFilter}.
 %TODO what was the motivation behind the rename? signaling it's not only targeting vandals but also intending to assist good faith editors?
 
 
@@ -421,9 +422,6 @@ And the currently configured filter actions are: ``disallow''.
 So, if a user whose status is not confirmed yet tries to edit a page in the article namespace which contains ``Featured'' or ``Good article'' and they either insert a redirect, delete 3/4 of the content or add 3/4 on top, the edit is automatically disallowed.
 
 Note that an edit filter editor can easily change the action of the filter. (Or the pattern, as a matter of fact.)
-
-
-\textbf{Difference bot/filter}
 
 %************************************************************************
 
@@ -491,6 +489,11 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
 
 apart from that: current ongoing discussions on single filters/problems that may require a filter
 
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"If an edit filter manager is misusing the user right, the concern should first be raised with them directly. If discussion does not resolve the issue, a request for discussion or removal of the user right may be made at the edit filter noticeboard. "
+"If you have the edit filter manager user right, please ensure you follow the Password strength requirements and appropriate personal security practices. Two-factor authentication enrollment is available for edit filter managers. Because edit filters affect every edit made, a compromised account will be blocked and its privileges removed on grounds of site security. In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
+//interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
+
 \textbf{Alternatives:}
 
 "Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
@@ -547,6 +550,9 @@ so, you should already be aproved as a filter manager in order to test?
 shouldn't all filter editors be able to test??
 
 same goes for the debugging tools: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/tools}
+
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"Except in urgent situations, new edit filters should generally be tested without any actions specified (simply enabled) until a good number of edits have been logged and checked before being implemented in "warn" or "disallow" modes. If the filter is receiving more than a very small percentage of false positives it should usually not be placed in 'disallow' mode."
 
 \subsection{What happens when a filter gets triggered?}
 
@@ -609,7 +615,6 @@ statistics are info such as "Of the last 1,728 actions, this filter has matched 
 "There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
 \url{https://en.wikipedia.org/wiki/User:DatBot/filters}
 
-Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted?
 
 
 \section{Impact on editors}
@@ -995,6 +1000,9 @@ data is still not enough for us to talk about a tendency towards introducing mor
 "For all filters, including those hidden from public view, a brief description of what the rule targets is displayed in the log, the list of active filters, and in any error messages generated by the filter. "
 
 "Be careful not to test sensitive parts of private filters in a public test filter (such as Filter 1): use a private test filter (for example Filter 2) if testing is required."
+
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"all administrators can view private filters"
 
 harassment! mailinglist
 "If it would not be desirable to discuss the need for a given edit filter on-wiki, such as where the purpose of the filter is to combat harassment by an abusive banned user who is likely to come across the details of the request, edit filter managers can be emailed directly or on the wikipedia-en-editfilters mailing list at wikipedia-en-editfilters@lists.wikimedia.org."
