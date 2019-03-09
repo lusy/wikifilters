@@ -455,34 +455,35 @@ The Edit Filters Requests page also asks users to go through following checklist
 
 \subsection{Who can edit filters?}
 
-In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abuselfilter-modify} permission.
-Accoring to \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
-%TODO Who are these editors? Who decides they are qualified enough?
+In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
+According to ~\cite{Wikipedia:EditFilter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
+Further down on the page it is clarified that it's administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
+If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
 
+The formal process for requesting the \emph{abusefilter-modify} permission is to raise it to the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
+A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
+
+\begin{comment}
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"Filters are created and configured by edit filter managers, but they can be requested by any editor."
-"all administrators can view private filters"
-"This group is assignable by administrators, who may also assign the right to themselves"
 "The assignment of the edit filter manager user right to non-admins is highly restricted. It should only be requested by and given to highly trusted users, when there is a clear and demonstrated need for it."
+    // does the 2. sentence refer to highly trusted users outside of the sysop group, or generally to highly trusted users? (although better everyone in sysop be "highly trusted"!)
+
 "demonstrated knowledge of the extension's syntax and in understanding and crafting regular expressions is absolutely essential"
-"Editors who are not edit filter managers should consider helping out at requested edit filters and troubleshooting at false positives to help gain experience and demonstrate these skills"
-"Requests for assignment of the group to non-admins can be made at the edit filter noticeboard, where a discussion will be held before a decision is made;discussions are normally held open for 7 days."
-"If an edit filter manager is misusing the user right, the concern should first be raised with them directly. If discussion does not resolve the issue, a request for discussion or removal of the user right may be made at the edit filter noticeboard. "
-"If you have the edit filter manager user right, please ensure you follow the Password strength requirements and appropriate personal security practices. Two-factor authentication enrollment is available for edit filter managers. Because edit filters affect every edit made, a compromised account will be blocked and its privileges removed on grounds of site security. In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
-//interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
+\end{comment}
 
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"Except in urgent situations, new edit filters should generally be tested without any actions specified (simply enabled) until a good number of edits have been logged and checked before being implemented in "warn" or "disallow" modes. If the filter is receiving more than a very small percentage of false positives it should usually not be placed in 'disallow' mode."
+A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
+As of March 9, 2019, there are 152 users in the ``edit filter managers'' group (for comparison, as of the same date there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}).
 
-\textbf{List of current edit filter managers}
-
-EN: https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter (currently: 155)
+\begin{comment}
 CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
 
 -- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
 -- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
+Probably it's simply admins who can modify the filters there.
+    If I understood correctly, on EN Wiki it's also mostly admins who have the \emph{abusefilter-modify} permission, although it's far from all of them who have it.
+\end{comment}
 
-\subsection{How are problems with existing filters handled?}
+\subsection{How are problems handled?}
 
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}
 - discuss current filter behaviour
