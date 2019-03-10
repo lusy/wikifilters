@@ -503,13 +503,18 @@ If such an account is compromised, it loses its edit filter manager rights and g
 //interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
 \end{comment}
 
+\subsection{Alternatives}
+%TODO: where should this go?
 
-\textbf{Alternatives:}
+Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is signaled to edit filter managers and editors proposing new filters.
+%TODO: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
+"Each filter takes time to run, making editing (and to some extent other things) slightly slower. The time is only a few milliseconds per filter, but with enough filters that adds up. When the system is near its limit, adding a new filter may require removing another filter in order to keep the system within its limits."
+\end{comment}
+For example, there is the page protection mechanism that addresses problems on a single page.
+Also, title and spam blacklists exist and these might be the way to handle problems with page titles or link spam~\cite{Wikipedia:EditFilter}.
 
-"Edit filter managers should be familiar with alternatives that might be more appropriate in a given situation. For example, problems on a single page might be better served with page protection, and problems with page titles or link spam may find the title blacklist and spam blacklist more effective respectively. Because edit filters check every edit in some way, filters that are tripped only rarely are discouraged. "
-
-Exemptions for "urgent situation" -- what/how are these defined?
-Discussions may happen postfactum here and filter may be applied before having been thoroughly tested; in this case the corresponding editor is responsible for checking the logs regularly and making sure the filter acts as desired
 
 %************************************************************************
 
