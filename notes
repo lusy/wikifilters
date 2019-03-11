@@ -1145,3 +1145,39 @@ Indirection and accountability
 structures of constraint to effect a constraint it could impose directly, it mud-
 dies the responsibility for that constraint and so undermines political
 accountability." (p.133)
+
+=====================================================================
+
+Toolforge links:
+https://wikitech.wikimedia.org/wiki/Help:Toolforge#Troubleshooting_2
+https://wikitech.wikimedia.org/wiki/Help:Toolforge#Contact
+https://wikitech.wikimedia.org/wiki/Analytics#Contact
+https://www.mediawiki.org/wiki/Toolserver:Main_Page
+
+Abuse Filter Project on Phabricator
+https://phabricator.wikimedia.org/project/view/217/
+
+Abuse Filter git repo
+https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/AbuseFilter/+/489705/3/includes/AbuseFilter.php
+
+Evidence abuse filter history still exists
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history
+
+====================================================================
+
+Get hold of abuse_filter_history
+
+https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/production/modules/profile/templates/labs/db/views/maintain-views.yaml
+https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master/abusefilter.tables.sql#63
+https://phabricator.wikimedia.org/T123978
+
+"
+there'll be such a table, I don't think there's a view for it to expose it to the public
+it's not in https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/production/modules/profile/templates/labs/db/views/maintain-views.yaml
+I don't know enough about AbuseFilter to know how easy it would be to write a view for this table
+https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master/abusefilter.tables.sql#63
+you'd probably need to respect afh_deleted, and join against abuse_filter to check filter visibility?
+in order to expose a view?
+aha: https://phabricator.wikimedia.org/T123978
+yes
+"
