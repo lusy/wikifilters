@@ -420,7 +420,7 @@ mysql> describe abuse_filter_history; (from https://www.mediawiki.org/wiki/Exten
 +---------------------+---------------------+------+-----+---------+----------------+
 13 rows in set (0.00 sec)
 
-Note! table abuse_filter_history seems to not exist anymore
+Note! no public view of table abuse_filter_history at the moment
 
 mysql> describe abuse_filter_action; (from https://www.mediawiki.org/wiki/Extension:AbuseFilter/abuse_filter_action_table)
 +-----------------+---------------------+------+-----+---------+-------+
