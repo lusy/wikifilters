@@ -453,6 +453,8 @@ The Edit Filters Requests page also asks users to go through following checklist
     \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
 \end{itemize}
 
+According to the best practices, any new filter should be announced on the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}} in order for other filter managers and the community to be able to review the filter and voice concerns~\cite{Wikipedia:EditFilter}.
+
 \subsection{Who can edit filters?}
 
 In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
@@ -508,10 +510,10 @@ If such an account is compromised, it loses its edit filter manager rights and g
 
 There are several provisions for urgent situations (which I think should be scrutinised extra carefully since ``urgent situations'' have historically always been an excuse for cuts in civil liberties).
 For instance, generally, every new filter should be tested extensively in logging mode only (without any further actions) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
+As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
 Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
 In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
 Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
-
 
 \subsection{Alternatives}
 %TODO: where should this go?
@@ -611,6 +613,10 @@ The groupings are which sets of people should have aggregate (shared) throttles.
 Note: Frequently, what action a particular filter triggers changes over time.
 Usually, all filters start as "log only", and when deemed that they do what they are intended to do, additional actions are added.
 Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to "warn" or "disallow" and the actions are removed again as soon as the filter is no tripped very frequently anymore.
+
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+Edit filters should only be set to disallow to prevent edits that substantially all good-faith editors would agree are undesirable, or where a clear consensus has been reached that a specific type of edit should not be allowed. Any doubts regarding setting a filter to disallow should be discussed with other edit filter managers.
+
 
 \subsection{what happens afterwards}
 
