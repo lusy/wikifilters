@@ -137,9 +137,11 @@ https://tools.wmflabs.org/ptwikis/Filters:eswiki
 
 * When did you join the edit filter group?
 * How? (What was the process for joining)?
+* Why?
 * How active were you/what have you been doing since joining?
 * What is an example of a typical case for which you will implement a filter?
 * What is an example for a case you'd rather not implement a filter for but apply another process? Which process?
+* Why does the edit filter mechanism exist? Aren't bots and ORES and semi-automatic tools such as Huggle or Twinkle enough for combating vandalism?
 
 ==========================================================
 
