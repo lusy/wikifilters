@@ -456,6 +456,7 @@ The Edit Filters Requests page also asks users to go through following checklist
 According to the best practices, any new filter should be announced on the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}} in order for other filter managers and the community to be able to review the filter and voice concerns~\cite{Wikipedia:EditFilter}.
 
 \subsection{Who can edit filters?}
+\label{subsection:who-can-edit}
 
 In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
 According to ~\cite{Wikipedia:EditFilter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
@@ -640,6 +641,19 @@ If a user disagrees with the filter decision, they have the posibility of report
 
 \subsection{modifying a filter}
 
+As pointed out in section~\ref{subsection:who-can-edit}, editors with the \emph{abusefilter-modify} permission can modify filters.
+They can do so on the detailed page of a filter.
+(For example that is \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61} for filter with ID 61.)
+
+For each filter, a detailed page exists where following information can be viewed (by everybody for public filters and by editors with proper rights for hidden filters):
+filter id; public description; filter hits; some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes); code (conditions) of the filter; notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+and actions to take when the filter matches;
+%TODO: screenshot on a big screen!
+
+\begin{comment}
+%TODO not sure whether that's the proper place for the description of a filter details page.
+% and if not whether this subsection should exist at all
 each filter has a designated page: e.g. \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61}
 where following information can be viewed:
 Filter id; public description; filter hits; statistics; code (conditions); notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
@@ -653,7 +667,8 @@ Tag the edit in contributions lists and page histories
 
 and the filter can be modified if the viewing editor has the right permissions
 
-statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58\%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is
+statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58\%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is; is it per filter or for all enabled filters together?
+\end{comment}
 
 \subsection{Collaboration with bots}
 
@@ -667,12 +682,11 @@ statistics are info such as "Of the last 1,728 actions, this filter has matched 
 What happens when an editor triggers an edit filter? Do they notice this at all?
 
 As described in the previous section, a variety of different actions may occur when a filter gets tripped.
-These include: disallow, warn, tag, throttle, log..
-For the more severe ones, the editor is notified that they hit a filter (see~\ref{fig:screenshot-warn-disallow}):
-a warning message is displayed if the filter action was set to disallow/warn.
+If a filter is set to ``warn'' or ``disallow'', the editor is notified that they hit a filter by a warning message (see~\ref{fig:screenshot-warn-disallow}).
 These warnings describe the problem that occurred and present the editor with possible actions:
 complain on the FalsePositives page (\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}) in case of a disallow,
 or, complain on the FalsePositives page and publish the change anyway in case of a warning.
+(Of course, in case of a warning, the editor can modify their edit before publishing it.)
 On the other hand, when the filter action is set to "tag" or "log" only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
 Tagged edits are marked as such in the page's revision history (see~\ref{fig:tags-in-history})
 and all edits that trigger an edit filter are listed in the AbuseLog (\url{https://en.wikipedia.org/wiki/Special:AbuseLog}) (see~\ref{fig:screenshot-abuse-log}).
@@ -695,8 +709,6 @@ If the filter is set to disallow, a specific template is shown to the editor: "A
 
 The edit is not saved.
 
-So far, I haven't managed to trigger a filter with a different action.
-
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{figures/screenshots-filter-trigger/Screenshot-trigger-warning-filter.png}
@@ -704,7 +716,7 @@ So far, I haven't managed to trigger a filter with a different action.
 \end{figure}
 
 \subsection{TOR}
-(Interesting side note: editing via TOR is disallowed: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
+(Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
 
 
 %************************************************************************
