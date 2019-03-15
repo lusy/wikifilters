@@ -1,0 +1,4 @@
+use enwiki_p;
+select count(*) Num
+from abuse_filter_log
+where afl_user != 0;
