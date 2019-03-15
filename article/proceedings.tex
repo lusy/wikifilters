@@ -725,13 +725,16 @@ The edit is not saved.
 
 \textbf{Interesting questions}
 \begin{itemize}
-    \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?
+    \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?; This includes deleted filters
     \item what do the most active filters do?: see~\ref{tab:most-active-actions}
     \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
+        Interestingly, there was a guideline somewhere stating that no trivial behaviour should trip filters (e.g. starting every paragraph with a small letter;) I actually think, a bot fixing this would be more appropriate.
     \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
+        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
+        Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
     \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
     \item percentage of triggered filters/all edits; break down triggered filters according to typology: TODO still need the complete abuse\_filter\_log table!; and probably further dumps in order to know total number of edits
-    \item percentage filters of different types over the years: TODO according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags (finish tagging!)
+    \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
     \item what gets classified as vandalism? has this changed over time? TODO: (look at words and patterns triggered by the vandalism filters; read vandalism policy page); pay special attention to filters labeled as vandalism by the edit filter editors (i.e. in the public description) vs these I labeled as vandalism
 \end{itemize}
 
@@ -755,7 +758,7 @@ The edit is not saved.
 \textbf{Questions on abuse\_filter\_log table}
 \begin{itemize}
     \item how often were filters with different actions triggered? (afl\_actions)
-    \item what types of users trigger the filters (IPs? registered?)
+    \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
     \item on what articles filters get triggered most frequently (afl\_title)
     \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
     \item in which namespaces get filters triggered most frequently?
