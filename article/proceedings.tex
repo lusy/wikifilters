@@ -1047,6 +1047,15 @@ data is still not enough for us to talk about a tendency towards introducing mor
   \caption{What do most active filters do?}~\label{tab:most-active-actions}
 \end{table*}
 
+A lot of filters are disabled/deleted bc:
+* they hit too many false positives
+* they were implemented to target specific incidents and these vandalism attempts stopped
+* they were tested and merged into other filters
+* there were too few hits and the conditions were too expensive
+
+Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
+
+
 \subsection{Types of edit filters}
 
 We can sort filters into categories along various criteria.
@@ -1070,7 +1079,7 @@ There is also a designated mailing list for discussing these: wikipedia-en-editf
 It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
 It is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
 
-begin{comment}
+\begin{comment}
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 "Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
 // what is "good standing"?
@@ -1088,12 +1097,27 @@ begin{comment}
 Apart from filter typologies that can be derived directly from the DB schema (available fields/existing features), we propose a manual classification of the types of edits edit filters found on the EN Wikipedia target (there are edit filters with different purposes).
 
 Based on the GT methodology, we scrutinised all filters, with their patterns, comments and actions.
-We found 3 big groups of filters that we named ``vandalism'', ``good faith'' and ``maintenance''.
+We found 3 big clusters of filters that we labeled ``vandalism'', ``good faith'' and ``maintenance''.
+It was not always a straightforward desicion to determine what type of edits a certain filter is targeting.
+This was of course, particularly challenging for private filters where only the public comment (name) of the filter was there to guide us.
+On the other hand, guidelines state up-front that filters should be hidden only in cases of particularly persistent vandalism, in so far it is probably safe to establish that all hidden filters target some type of vandalism.
+However, the classification was difficult for public filters as well, since oftentimes what makes the difference between a good-faith and a vandalism edit is not the content of the edit but the intention of the editor.
+While there are cases of juvenile vandalism (putting random swear words in articles) or characters repetiton vandalism which are pretty obvious, that is not the case for sections or articles blanking for example.
+In such ambiguous cases, we can be guided by the action the filter triggers (if it is ``disallow'' the filter is most probably targeting vandalism).
+At the end, we labeled most ambiguous cases with both ``vandalism'' and ``good faith''.
 
-Filters manual tags evaluation
+In the subsections that follow we discuss the salient properties of each manually labeled category.
+
+%TODO: develop and include memos
+\subsubsection{Vandalism}
+
+\subsubsection{Good Faith}
+
+\subsubsection{Maintenance}
+
 
 Following filter categories have been identified (sometimes, a filter was labeled with more than one tag):
-
+%TODO make a diagramm with these
 - Vandalism
   - hoaxing
   - silly vandalism (e.g. repeating characters, inserting swear words)
@@ -1139,23 +1163,13 @@ Inbetween
   - wiki policy (compliance therewith)
   - test filters
 
-
-A lot of filters are disabled/deleted bc:
-* they hit too many false positives
-* they were implemented to target specific incidents and these vandalism attempts stopped
-* they were tested and merged into other filters
-* there were too few hits and the conditions were too expensive
-
-Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
-
-%TODO: develop and include memos
-
 \section{Discussion}
 
 * why get certain filters (and not others?)
-* do filter solve effectively the task they were conjured up to life to fulfil?
+* do filters solve effectively the task they were conjured up to life to fulfil?
 * what kinds of biases/problems are there?
 * who is allowed to edit edit filters?
+
 \subsection{The bigger picture: Upload filters}
 
 \section{Conclusion}
