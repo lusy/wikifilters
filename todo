@@ -40,7 +40,6 @@ Claudia: * A focus on the Good faith policies/guidelines is a historical develop
 
 * Read these pages
 
-https://en.wikipedia.org/wiki/Wikipedia:Harassment
 https://en.wikipedia.org/wiki/Wikipedia:Edit_warring
 https://en.wikipedia.org/wiki/Wikipedia:Blocking_policy#Evasion_of_blocks
 https://en.wikipedia.org/wiki/Wikipedia:Sock_puppetry
@@ -58,6 +57,13 @@ https://meta.wikimedia.org/wiki/Vandalbot
 
 https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
 https://en.wikipedia.org/wiki/Wikipedia:Purpose
+https://en.wikipedia.org/wiki/Wikipedia:Oversight
+https://en.wikipedia.org/wiki/Wikipedia:Revision_deletion
+https://en.wikipedia.org/wiki/Wikipedia:Linking_to_external_harassment
+https://en.wikipedia.org/wiki/Wikipedia:Personal_security_practices
+https://en.wikipedia.org/wiki/Wikipedia:On_privacy,_confidentiality_and_discretion
+https://en.wikipedia.org/wiki/Wikipedia:How_to_not_get_outed_on_Wikipedia
+https://en.wikipedia.org/wiki/Wikipedia:No_personal_attacks
 
 * look at AbuseFilter extention code: how is a filter trigger logged?
 https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
@@ -176,6 +182,8 @@ https://en.wikipedia.org/wiki/Wikipedia:Disruptive_editing
 https://en.wikipedia.org/wiki/Wikipedia:Requests_for_page_protection
 https://en.wikipedia.org/wiki/Wikipedia:Offensive_material
 https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view
+
+https://en.wikipedia.org/wiki/Wikipedia:Harassment
 
 ## Software
 
