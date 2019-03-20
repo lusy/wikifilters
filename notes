@@ -1171,6 +1171,7 @@ https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/pr
 https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master/abusefilter.tables.sql#63
 https://phabricator.wikimedia.org/T123978
 
+#wikimedia-cloud
 "
 there'll be such a table, I don't think there's a view for it to expose it to the public
 it's not in https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/production/modules/profile/templates/labs/db/views/maintain-views.yaml
@@ -1240,3 +1241,20 @@ Off Wiki harassment
 https://en.wikipedia.org/wiki/Wikipedia:Responding_to_threats_of_harm
 
 emergency response page
+
+
+=====================================================
+\cite{MuellerBirn2014}
+
+Interesting info, not sure what to do with it
+
+2010: 40% of newcommers' contributions rejected based on automatic tools <---
+counter productive in engaging new contributors
+
+=====================================================
+\cite{GeiHal2017}
+
+Claudia's paper:
+"“In both cases of algorithmic governance
+– software features and bots – making rules part of the infrastructure, to a certain extent, makes
+them harder to change and easier to enforce” (p. 87)"
