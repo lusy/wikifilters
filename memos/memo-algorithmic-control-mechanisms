@@ -1,0 +1,150 @@
+# Algorithmic Quality Control Mechanisms
+
+Edit filters can be situated in a broader echo-system of algorithmic quality control mechanisms on Wikipedia.
+Other mechanisms are bots, semi-automatic tools for combating vandalism such as Huggle or Twinkle, as well as Wikimedia's machine learning service ORES.
+
+## What is algorithmic quality control
+
+Sounds to me like it has something to do with **algorithmic governance**.
+
+**Transparency**
+\cite{DanaherEtAl2017} signal lack of transparency in bottom-up governance approaches such as machine learning (or maybe not in general for bottom-up approaches, but for machine learning in particular?)
+compare also with Lessigs argument about importance of transparency (chapter 7?) and open code and transparency (chapter 8?)
+
+Also important: **for whom** is it transparent? A lot of technical/context knowledge required in order to understand how the system works (both for Wikipedia and FLOSS projects).
+"These bots, scripts, tools, plugins, and dashboards make Wikipedia more efficient for those who know how
+to work with them, but like all organizational culture, newcomers must learn them if they want to fully participate."~\cite{Geiger2017}.
+
+Compare~\cite{Geiger2017} other key concepts: **accountability**, **fairness**.
+
+\cite{Geiger2017}
+"But I realized that the more interesting question is why I had so internalized this socio-techni-
+cal assemblage and the values it enacts." // People internalise the way a system works and stop questioning it!!
+--> code is law.
+
+"Wikipedia demonstrates how the issues in and around
+algorithmic systems are as much social as they are tech-
+nical, going far beyond the opacities that arise around
+proprietary source code. My argument extends Burrell’s
+(2016) discussion of three different forms of opacity in
+machine learning: intentional secrecy (proprietary
+source code), technical literacy (such as learning to
+read code), and opacities inherent in machine learning
+(such as issues of interpretability). To these forms, I add
+another: the opacities in learning a particular institu-
+tional or organizational culture that is supported by
+algorithmic systems."
+// source is open, but who can actually read it? and is willing to invest the time and energy in order to hold the system accountable?
+// vgl auch Gedanke von Claudia: "Wikipedia is spannend, weil wir daran das erforschen können, was wir an Facebook nicht können. Und weil die ein Abbild der Gesellschaft im Kleinen ist."
+// vgl auch Web Science def: observe micro behaviours in order to study macro phenomenons (governance, ..)
+
+Def "algorithmic": "as involving encoded proced-
+ures, which are typically—but not exclusively—compu-
+tationally implemented."
+
+"the algorithmic
+systems themselves are constructed, negotiated, contex-
+tualized, and differently interpreted and enacted." // aber wer kann beim Aushandeln mitmachen?
+
+## What it the contribution of classic rule-based system such as the edit filters? Are they still needed alongside several others or are they a legacy mechanism?
+
+Hypothesis:
+Enabled edit filters check **every** edit before it is published.
+All other mechanisms react to already published edits.
+In that sense, edit filters are particularly suitable and useful for frequently occuring problems.
+This is also signaled by documentation pages advising editors to choose an alternative mechanism, if the problem they are targeting is not occuring often or concerns a single page (quote!).
+
+So, analysing edit filters we can infer what phenomena are apparently (at least according to perception of edit filter editors) common.
+
+Another insteresting thought: there is a difference between having your edit deleted (e.g. by a bot) or not being allowed to publish it at all.
+
+## What are the particular purposes and areas of use of other mechanisms
+
+### Bots
+
+Bots are automated script containers on Wikipedia that carry out various tasks.
+Before a bot can be run on Wikipedia, a request should be made in front of the Bot Approval Group (BAG), detailing the purpose of the bot the scope on which it will operate, time frame and if possible sample edits already done by the bot.
+If the request is approved, the bot can carry out the task.
+Examples of tasks bots take care of include: fixing double redirects, removing interwiki links, updating article notification templates, moving categories, ...
+
+It may be interesting to compare who can edit bots and who can edit filters.
+While editors need a particular permission (the \emph{abusefilter-modify}) in order to implement edit filters (which is assigned to very few selected individuals), bots are allowed on per bot basis.
+Anyone(?) can propose a bot in front of the Bot Approval Group and if the proposal gets approved the bot can be run.
+
+\begin{comment}
+\cite{MuellerBirn2014}
+2 main groups:
+- community services : create reports
+- guidelines/policies : adding templates to pages
+
+up-to-date (when?) 3 categories of research on bots:
+- used as a tool for collecting data
+- installed to reach Wikipedia editors in an automatic way to influence their
+  editing behaviour
+- bots considered as noise on the data/not important for further analysis
+
+"Bots as community servers and rule enforcers"
+"Bots are responsible that existing guidelines and policies are enforced at a
+large scale."
+
+\cite{MueDoHer2013}
+Bot taxonomy: (vgl. Halfaker et al. [12]):
+"(1) bots that transfer data from pub-
+lic databases (e.g., census data) into articles,
+(2) bots that monitor and curate articles,
+(3) bots that extend the existing software func-
+tionality of Wikipedia’s underlying MediaWiki software (e.g., by
+converting an ordinary page into a dynamic, priority-based discus-
+sion queue), and
+(4) bots that protect against malicious activities."
+\end{comment}
+
+### Semi-automated tools for fighting vandalism (Huggle,Twinkle)
+
+check again \cite{GeiRib2011} for more details:
+the tools (Huggle and Twinkle) issue warnings with automatically decided warning level
+
+### ORES
+
+As a machine-learning web service ORES is in fact quite general purpose.
+
+
+## Algorithmic vs social governance mechanisms
+
+This comparison is interesting and worth to contemplate.
+One of the leading guidelines of Wikipedia reads "Ignore all the rules" (quote!).
+And while social guidelines can be easily ignored, this is not the case for algorithmically implemented ones which are embedded into the architecture of the space.
+(I think, there were others who made this point, check! --> yes,~\cite{MueDoHer2013} down below)
+
+\begin{comment}
+\cite{MueDoHer2013}
+Research question: "how a community’s
+consensus gradually converts social mechanisms into algorithmic
+mechanisms."
+
+Ideosyncracies of both (social and algorithmic governance mechanisms):
+* "algorithmic mechanisms scale up well but
+social mechanisms do not."
+* "social mechanisms
+handle exceptions better than technical mechanisms"
+* "algorithmic mechanisms ensure that arbi-
+trary behavior can be reduced, for example in terms of this handling
+of exceptions."
+
+Code is law:
+"In a way, software features represent the “hard law” of Wikipedia
+[17]. While policies and guidelines may be ignored"
+"it is much more difficult if not impossible to
+ignore rules implemented in the form of software functions."
+"In both cases of algorithmic governance - software features and
+bots - making rules part of the infrastructure, to a certain extent,
+makes them harder to change and easier to enforce."
+"The conversion of
+socially developed rules into source code makes norms even less
+transparent because only a small group of users can read source
+code [26]."
+"Additionally, users take bot edits for granted, and they
+do not question them, which is reflected in their absence from the
+article edit log (in the normal mode)."
+// das ist doch anders rum: niemand hinterfragt sie, weil sie niemand sieht. 
+\end{comment}
