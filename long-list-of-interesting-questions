@@ -1,0 +1,5 @@
+* What are the differences between how filters are governed on EN Wikipedia compared to other language versions?
+* Are there filters targetting harassment?
+* Ethnographic analysis (e.g. IVs with edit filter managers would be really interesting)
+* What is to be learned from studying the regex patterns in more detail?
+* what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
