@@ -1,0 +1,76 @@
+\cite{WulThaDix2017}
+
+personal attacks
+
+methodology: crowd-sourcing + machine learning
+looked at comments on Wikipedia talk pages
+100k human labeled comments
+63k machine labeled (classifier)
+generated data set:
+https://figshare.com/articles/Wikipedia_Detox_Data/4054689
+
+analysed time period: 2004-2015
+
+"The primary contribution of this paper is a methodology for quan-
+titative, large-scale, longitudinal analysis of a large corpus of on-
+line comments."
+
+Questions:
+"What is the impact of allowing anonymous contributions, namely those from unregistered users?
+How do attacks vary with the quantity of a user’s contributions?
+Are attacks concentrated among a few users?
+When do attacks result in a moderator action?
+And is there a pattern to the timing of personal attacks?"
+
+"the majority of personal attacks on Wikipedia are not
+the result of a few malicious users, nor primarily the consequence
+of allowing anonymous contributions from unregistered users"
+
+"Report highlights that 73% of adult internet users have seen some-
+one harassed online, and 40% have personally experienced it [5]."
+
+"Platforms combat this with policies"
+"Wikipedia has a policy of “Do not make personal attacks
+anywhere in Wikipedia”[33] and notes that attacks may be removed
+and the users who wrote them blocked. 1"
+
+classifier: "character-level n-
+grams result in an impressively flexible and performant classifier
+for a variety of abusive language in English."
+
+"The Wikimedia Foundation found that
+54% of those who had experienced online harassment expressed
+decreased participation in the project where they experienced the
+harassment [23]"
+
+"Through labeling
+a random sample, we discovered that the overall prevalence of per-
+sonal attacks on Wikipedia talk pages is around 1% (see Section
+5.1)."
+
+"Annotators whose accuracy on these test questions fell below a 70%
+threshold would be removed from the task."
+"This allows us to aggregate judgments
+from 10 separate people when constructing a single label for each
+comment. We chose 10 judgments based on experiments in Sec. 4.3"
+
+note: the annotators could be biased and their judgement on what is a personal attack may differ from this of the Wikipedian community
+
+"approximately 30% of attacks
+come from registered users with over 100 contributions."
+"that less than a fifth of personal attacks currently trigger any action
+for violating Wikipedia’s policy."
+"personal attacks clus-
+ter in time - perhaps because one personal attacks triggers another.
+If so, early intervention by a moderator could have a disproportion-
+ately beneficial impact."
+
+discussion:
+"While there are many such questions to analyze,
+some notable examples include:
+1. What is the impact of personal attacks on a user’s future con-
+tributions?
+2. What interventions can reduce the level of personal attacks
+on a conversation?
+3. What are the triggers for personal attacks in Wikipedia com-
+ments?"
