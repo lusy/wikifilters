@@ -74,3 +74,144 @@ tributions?
 on a conversation?
 3. What are the triggers for personal attacks in Wikipedia com-
 ments?"
+
+======================================================
+\cite{Geiger2011}
+
+discusses the acceptance, coming into existence and live cycle of bots
+begins by a story of elections for the Arbitration Committee (ArbCom), where a bot was nominated, which was taken with different degrees of seriousness (and frustration) by different editors
+then discusses at length the discussions around the HagermanBot (signing discussion entries)
+and the eventually created opt-out possibilities when it comes to be processed by a bot
+
+touches on philosophical and moral discussions about what is a bot, what rights a bot has and what rights of human editors must be put first
+
+touches on ANT when justifying the need to discuss bots as actors on the same level as humans
+
+"Tawker,
+speaking through his bot, was ironically claiming that computerized editors ought to have the
+same sociopolitical rights and responsibilities as human editors,"
+"I argue (with all seriousness) that these automated software
+agents already have a similar level of influence on how Wikipedia as a free and open ency-
+clopedia project is constituted."
+"we must be careful not to fall into familiar narra-
+tives of technological determinism when asking who – or what – actually controls Wikipedia."
+
+cites some stats to underline the (growing) importance of bots
+then discusses previous research which seem not to pay the due attention to bots (sometimes with the justification bots are not important enough which lies on old data and sometimes with no justification at all)
+
+"While bots were
+originally built to perform repetitive editorial tasks that humans were already doing, they are
+growing increasingly sophisticated and have moved into administrative spaces. Bots now po-
+lice not only the encyclopedic nature of content contributed to articles, but also the sociality
+of users who participate in the community."
+
+"Administrative Intervention against Vandalism, or AIV),
+bots make about 50% of all edits, and users with semi-automated editing tools make another
+30%"
+
+"My goal in this chapter is to describe the complex social and technical environment in which
+bots exist in Wikipedia, emphasizing not only how bots produce order and enforce rules, but
+also how humans produce bots and negotiate rules around their operation."
+
+"Operators of bots have also expressed
+frustration when their bots become naturalized, that is, when users assume that the bot’s
+actions are features of the project’s software instead of work performed by their diligent
+computerized workers. In general, bots tend to be taken for granted, and when they are
+discussed, they are not largely differentiated from human editors"
+
+"We must pay close attention to both the material and semiotic conditions
+in which bots emerge within the complex collective of editors, administrators, committees,
+discussions, procedures, policies, and shared understandings that make up the social world
+of Wikipedia."
+
+"Bots, like infrastructures in general, 23 simultaneously produce and rely upon
+a particular vision of how the world is and ought to be, a regime of delegation that often
+sinks into the background – that is, until they do not perform as expected and generate
+intense controversies."
+//important! signal when discussing filters as well!
+//quotes Star 1999 "The Ethnography of Infrastructure"
+
+". This controversy illustrated that a particular kind of normative enforce-
+ment and correction, while acceptable when casually performed on a fraction of violations
+sometimes days or weeks after, became quite different when universally and immediately
+implemented by a bot."
+
+high level issues of rights and responsibilities emerged
+"social understanding that ‘bots ought to be better behaved than people’,"
+
+HagermanBot
+- explains the origins of the signatures guideline
+
+criticism of the HagermanBot:
+- "For these editors, HagermanBot’s message was ‘embarrassing’, as one editor stated, making them ap-
+pear as if they had blatantly violated the Signatures guideline"
+- "Others did not want bots editing messages other users left for them on their own user talk pages as a matter of principle,"
+- "and an equally vocal group did not want the bots adding signatures to their own comments."
+
+Reasons for
+"it seemed that Hagerman had a strong set of allies: a growing number of
+enthusiastic supporters, the BAG, the Signatures guideline, ideals of openness and transpar-
+ency, visions of an ideal discursive space, the {{unsigned}} template, and a belief that signing
+unsigned comments was a routine act that had long been performed by humans."
+
+objections
+"Yet for some reason, a growing number of editors objected to this typical, uncontroversial practice
+when HagermanBot performed it."
+"they portrayed as an unfair imposition of what they believed
+ought to be optional guidelines. The anti-HagermanBot group was diverse in their stated ra-
+tionales and suggested solutions, but all objected to the bot’s operation on some level."
+
+"In the ensuing discussion – which was comprised of BAG members, administrators, and
+other Wikipedians – it became clear that this was not simply a debate about signatures and
+timestamps."
+"full-blown controversy about the morality of delegat-
+ing social tasks to technologies,"
+
+Supporters:
+"claiming that HagermanBot was only acting in line with a
+well-established and agreed-upon understanding that the community had reached regarding
+the importance of signatures in discussion spaces. For them, the burden was on the critics
+to reach a consensus to amend the Signatures guideline if they wanted to stop the bot from
+operating."
+"placing strong moral emphasis on the role of signatures
+and timestamps in maintaining discursive order and furthering the ideals of openness and
+verifiability."
+
+Opposers:
+"did not directly contest the
+claims made regarding the importance of signatures, discussion pages, and communicative
+conventions."
+"opposing view of how users, and
+especially bot operators, ought to act toward each other in Wikipedia, a view that drew heavily
+on notions of mutual respect:"
+
+"botophobia"
+
+end of the discussion: the HagermanBot should allow an opt-out mechanism
+
+"Declarations of either side’s entitlements, largely articulated in the language of positive rights,
+were displaced by the notion of responsibility, good behavior, and mutual respect."
+
+"However, a
+much stronger ally proved to be the opt-out list through which angry editors could be made to
+lose interest in the debate altogether."
+"The strength of the opt-out list was its flexibility in rebutting the objections from two kinds of
+arguments: first, the largely under-articulated claims that the bot was annoying or trouble-
+some to them; and second, the ideological or rights-based arguments that the bot was acting
+against fundamental principles of the project’s normative structure."
+
+an extention of the opt-out mechanism to all bots:
+"However, seeing a need for extending this functionality to all possible bots, he [Rich Farmbrough]
+created a template called {{nobots}}, which was to perform the same function as Hagerman-
+Bot’s exclusion tag, except apply to all compliant bots."
+"with no actual technical ability to restrict non-compliant bots from editing."
+
+but the BAG can require a bot to comply with {{nobots}} in order to allow its operation
+
+the compliance then found place in standard bot building toolkits
+
+"The case of HagermanBot shows us how a weak but pre-existing social norm was controver-
+sially reified into a technological actor."
+
+"In all, bots defy simple single-sided categorizations: they are both editors and software, social
+and technical, discursive and material, as well as assembled and autonomous."
