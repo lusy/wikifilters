@@ -99,15 +99,24 @@ sion queue), and
 (4) bots that protect against malicious activities."
 \end{comment}
 
+https://en.wikipedia.org/wiki/User:ClueBot_NG
+
 ### Semi-automated tools for fighting vandalism (Huggle,Twinkle)
 
 check again \cite{GeiRib2011} for more details:
 the tools (Huggle and Twinkle) issue warnings with automatically decided warning level
 
+https://en.wikipedia.org/wiki/Wikipedia:STiki
+https://en.wikipedia.org/wiki/Wikipedia:Huggle
+
+How long have all of these existed?
+
 ### ORES
 
 As a machine-learning web service ORES is in fact quite general purpose.
 
+https://www.mediawiki.org/wiki/ORES
+see also literature/notes
 
 ## Algorithmic vs social governance mechanisms
 

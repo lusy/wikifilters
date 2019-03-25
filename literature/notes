@@ -215,3 +215,35 @@ sially reified into a technological actor."
 
 "In all, bots defy simple single-sided categorizations: they are both editors and software, social
 and technical, discursive and material, as well as assembled and autonomous."
+
+============================================
+\cite{HalTar2015}
+
+"Today, we’re announcing the release of a new artificial intelligence service designed **to improve the way editors maintain the quality** of Wikipedia" (emphsis mine)
+" This service empowers Wikipedia editors by helping them discover damaging edits and can be used to immediately “score” the quality of any Wikipedia article."
+
+"these specs actually work to highlight potentially damaging edits for editors. This allows editors to triage them from the torrent of new edits and review them with increased scrutiny. " (probably triage the edits, not the specs)
+
+"By combining open data and open source machine learning algorithms, our goal is to make quality control in Wikipedia more transparent, auditable, and easy to experiment with."
+
+//so, purpose of ORES is quality control
+
+"Our hope is that ORES will enable critical advancements in how we do quality control—changes that will both make quality control work more efficient and make Wikipedia a more welcoming place for new editors."
+
+"ORES brings automated edit and article quality classification to everyone via a set of open Application Programming Interfaces (APIs). The system works by training models against edit- and article-quality assessments made by Wikipedians and generating automated scores for every single edit and article."
+
+"English Wikipedians have long had automated tools (like Huggle and STiki ) and bots (like ClueBot NG) based on damage-detection AI to reduce their quality control workload.  While these automated tools have been amazingly effective at maintaining the quality of Wikipedia, they have also (inadvertently) exacerbated the difficulties that newcomers experience when learning about how to contribute to Wikipedia. "
+"These tools encourage the rejection of all new editors’ changes as though they were made in bad faith," //NB!!!
+"Despite evidence on their negative impact on newcomers, Huggle, STiki and ClueBot NG haven’t changed substantially since they were first introduced and no new tools have been introduced. " //what about the edit filters? when were Huggle,STiki and ClueBotNG introduced?
+
+"decoupling the damage prediction from the quality control process employed by Wikipedians, we hope to pave the way for experimentation with new tools and processes that are both efficient and welcoming to new editors. "
+
+caution: biases in AI
+" An algorithm that flags edits as subjectively “good” or “bad”, with little room for scrutiny or correction, changes the way those contributions and the people who made them are perceived."
+
+"Examples of ORES usage. WikiProject X’s uses the article quality model (wp10) to help WikiProject maintainers prioritize work (left). Ra·un uses an edit quality model (damaging) to call attention to edits that might be vandalism (right)." //interesting for the memo
+
+"Popular vandal fighting tools, like the aforementioned Huggle, have already adopted our revision scoring service."
+
+further ORES applications:
+"  But revision quality scores can be used to do more than just fight vandalism. For example, Snuggle uses edit quality scores to direct good-faith newcomers to appropriate mentoring spaces,[4] and dashboards designed by the Wiki Education Foundation use automatic scoring of edits to surface the most valuable contributions made by students enrolled in the education program"
