@@ -274,3 +274,153 @@ caution: biases in AI
 
 further ORES applications:
 "  But revision quality scores can be used to do more than just fight vandalism. For example, Snuggle uses edit quality scores to direct good-faith newcomers to appropriate mentoring spaces,[4] and dashboards designed by the Wiki Education Foundation use automatic scoring of edits to surface the most valuable contributions made by students enrolled in the education program"
+
+==========================================================
+\cite{Kitchin2017}
+
+importance of studying algorithms
+viewpoints/perspectives/scientific traditions from which algorithms can be studied
+challenges researchers face when trying to study algorithms
+strategies for studying algorithms
+
+"largely black boxed and beyond query or question"
+
+common def of algorithms:
+"set of defined steps to produce particular outputs"
+"What constitutes an algorithm has changed over time"
+
+different lenses to study them:
+"technically, computationally, mathematically, politically, culturally, economically, contex-
+tually, materially, philosophically, ethically and so on"
+
+"formulation of an algorithm is, in theory at least, independent of programming languages"
+
+translation challenges of coding
+"translating a task or problem into a structured formula with an appropriate rule set (pseudo-code)."
+"translating this pseudo-code into source code that when compiled will perform the task"
+
+"The consequences of mistranslating
+the problem and/or solution are erroneous outcomes and random uncertainties (Drucker,2013)."
+
+"The processes of translation are often portrayed as technical, benign and commonsensical."
+
+"As Montfort et al. (2012, p. 3) note, ‘[c]ode is not purely abstract and mathemat-
+ical; it has significant social, political, and aesthetic dimensions,’"
+
+"Nor can they escape factors such as available
+resources and the choice and quality of training data; requirements relating to standards,
+protocols and the law; and choices and conditionalities relating to hardware, platforms,
+bandwidth and languages"
+
+"algorithms are created for purposes that are often far from neutral"
+
+algorithms change!
+"creating an algorithm
+unfolds in context through processes such as trial and error, play, collaboration, discussion
+and negotiation. They are ontogenetic in nature (always in a state of becoming)"
+
+"always somewhat uncertain, provisional and messy fragile accomplishments"
+
+algorithms are not "stand-alone little boxes", but a socio-technical assemblage:
+"complemented by many others, such
+as researching the concept, selecting and cleaning data, tuning parameters, selling the idea
+and product, building coding teams, raising finance and so on"
+
+"reifying traditional pathologies, rather than reforming them"
+
+not linear/predictable, bc
+- part of a wider network
+- have side effects
+- subverting of computations made public
+
+challenges:
+- access/black boxed
+  "Coding often happens in private settings, such as within companies"
+  "since it is often a company’s algorithms that provide it with a competitive
+advantage and they are reluctant to expose their intellectual property even with non-dis-
+closure agreements in place."
+
+- heterogeneous and embedded
+  "rarely straightforward to deconstruct"
+  "algorithms are usually woven together with hundreds of other algorithms"
+  "it is unlikely that any one programmer has a complete understanding of a system, especially large, complex ones"
+
+- ontogenetic, performative and contigent (always changing)
+  "rarely fixed in form"
+  "algorithms and their instantiation in
+code are often being refined, reworked, extended and patched, iterating through various
+versions"
+  "no guarantee that the version a user interacts with at one moment in time is the same
+as five seconds later"
+  randomness might be built in
+  "outcomes are sometimes not easily anticipated"
+
+Approaches to studying algorithms
+- Examining pseudo-code/source code
+  "carefully deconstruct the pseudo-code and/or source code, teasing apart the
+rule set to determine how the algorithm works to translate input to produce an outcome"
+  "carefully siftign through documentation, code and programmer comments"
+  "map out a genealogy of how an algorithm mutates and
+evolves over time as it is tweaked and rewritten across different versions of code."
+  "examine how the same task is translated into various software languages and how it
+runs across different platforms."
+
+  Limitations:
+  not straightforward
+  "Even those that have produced it can find it very difficult to unpack its algorithms and routines"
+  "it requires that
+the researcher is both an expert in the domain to which the algorithm refers and possesses
+sufficient skill and knowledge as a programmer that they can make sense of a ‘Big Ball of
+Mud’"
+  "these approaches largely decontextualise the algorithm from its wider socio-technical assem-
+blage and its use."
+
+- Reflexively producing code
+  "auto-ethnographies of translating tasks into pseudo-code"
+  "researcher reflects on and critically interrogates their own experi-
+ences of translating and formulating an algorithm."
+
+  Limitations:
+  "difficulties of detaching oneself and gaining critical distance"
+  "excludes any non-representational, unconscious acts from analysis."
+  "one generally wants to study algorithms and code that have real concrete effects on peoples’ everyday lives,"
+
+- Reverse engineering
+  "While software producers might desire their products to remain opaque, each pro-
+gramme inherently has two openings that enable lines of enquiry: input and output"
+  "carefully selected dummy data and seeing what is outputted under different scenarios"
+  "follow debates on online forums by users about how they perceive an algorithm works"
+
+  Limitations:
+  "generally cannot do so with any specificity"
+  "fuzzy glimpses"
+  employ bots to test more systematically, many (proprietary) systems "seek to identify and block bot users."
+
+- Interviewing designers or conducting an ethnography of a coding team
+  "uncovering the story behind the production
+of an algorithm and to interrogate its purpose and assumptions."
+  "respondents are questioned as to how they framed objectives, created
+pseudo-code and translated this into code,"
+  "researcher seeks to spend time within a coding team,"
+
+  Limitations
+  "neither case are the specificities of algorithms and their
+work unpacked and detailed."
+
+- Unpacking the full socio-technical assemblage of algorithms
+  "form part of a technological stack that includes infrastructure/hardware, code platforms, data and
+interfaces, and are framed and conditions by forms of knowledge, legalities, governmen-
+talities, institutions, marketplaces, finance and so on."
+  "Interviews and ethnographies of coding projects, and the wider institutional apparatus
+surrounding them (e.g., management and institutional collaboration)"
+
+  Limitations:
+  a lot of work!
+  "manageable as a large case study,
+especially if undertaken by a research team rather than a single individual."
+
+- Examining how algorithms do work in the world
+  "how they are deployed within different domains to perform a multitude of tasks."
+  "what an algorithm is designed to do in theory and what it actually does in practice do not always correspond"
+  "algorithms perform in context – in collaboration with data, technologies, people, etc. under varying conditions"
+  "producing localised and situated outcomes."
