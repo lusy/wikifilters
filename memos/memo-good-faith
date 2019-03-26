@@ -5,21 +5,22 @@ Most prominently in the phrase "Always assume good faith".
 
 As I recently learned, apparently this guideline (Gebot!) arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
 It rather arose at a time when, after a significant growth in Wikipedia, it wasn't manageable to govern the project (and most importantly fight emergent vandalism which grew proportionally to the project's growth) manually anymore.
-To counteract vandalism, a number of automatic measures was applied.
-These, however, had also unforseen negative consequences: they drove newcomers away (quote literature) (since their edits were often classified as "vandalism", because they were not familiar with guidelines / wiki syntax / etc.)
+To counteract vandalism, a number of automated measures was applied.
+These, however, had also unforseen negative consequences: they drove newcomers away~\cite{HalKitRied2011}(quote literature) (since their edits were often classified as "vandalism", because they were not familiar with guidelines / wiki syntax / etc.)
 In an attempt to fix this issue, "Assume good faith" rose to a prominent position among Wikipedia's Guidelines.
 
-Today, in vandalism comabting (?), there are cautious guidelines and several escalation levels, before an editor is banned.
+Today, in vandalism comabting (?), there are cautious guidelines and several escalation levels, before an editor is banned. (TODO: elaborate, maybe move to vandalism)
 Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
-Not all disruptive behaviour is vandalism, the guidelines suggest (quote).
+("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
+Not all disruptive behaviour is vandalism, the guidelines suggest~\cite{Wikipedia:Vandalism}.
 
 Examples of "good faith" edits that are non the less disruptive are not complying with Wiki syntax (mostly because of being unfamiliar with it), deleting a page instead of moving it, using improper redirects or publishing test changes.
 
-Edit warring is not vandalism either.
+Edit warring is not vandalism either~\cite{Wikipedia:Vandalism}.
 
 Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
 Based on content of the edit alone, it might be frankly impossible.
-Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor.
+Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor. (TODO: where is this suggested?)
 Only if the disrupting editor proves to be uncooperating, ignores warnings and continues disruptive behaviour, their edits are to be labelled "vandalism".
 
 ## Properties/Characteristics
@@ -38,7 +39,6 @@ Some of the filters in the "good faith" category target (public comment of the f
 - test edits
 - misplaced "#redirect" in articles
 - moves to or from Module namespace
-- Adding emoji unicode characters // although, I recently checked this one, and in the majority of cases these are vandalism edits
 - Large creations by inexperienced users
 - creation of a new article without any categories
 - new user removing references

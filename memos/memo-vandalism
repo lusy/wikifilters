@@ -6,9 +6,9 @@ In principle, one can open quite a few subcategories here (also check https://en
 Some vandalism types seem to be more severe than others (*sock puppetry* or persistant *long term* vandals).
 For these, often times, the implemented filters are **private**.
 This means, only edit filter editors can view the exact filter pattern or the comments of these.
-Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value?), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it.
+Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}.
 There are also private filters targetting personal attack or abuse cases.
-Here, filters are private in order to protect affected person(s).
+Here, filters are private in order to protect affected person(s)~\cite{Wikipedia:EditFilter}.
 
 The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
 In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extention, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
@@ -33,7 +33,6 @@ Several of these behaviours could actually be conceived as **good faith** edits.
 And, for several of them (as noted in the **good faith memo**), it is not immediately distinguishable whether it's a **good faith** or a **vandalism** edit.
 Ultimately, the "only" difference between the two arises from the motivation/context of the edit.
 
-
 ## Properties/Characteristics
 
 - maliciously intended disruptive editing
@@ -43,3 +42,24 @@ motivations:
 - misusing the encyclopedia for own purposes (self-promotion, seo..)
 - spreading wrong information
 - defacing topics
+
+## DEF Vandalism, according to Wikipedia
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism
+"On Wikipedia, vandalism has a very specific meaning: editing (or other behavior) deliberately intended to obstruct or defeat the project's purpose, which is to create a free encyclopedia, in a variety of languages, presenting the sum of all human knowledge."
+"The malicious removal of encyclopedic content, or the changing of such content beyond all recognition, without any regard to our core content policies of neutral point of view (which does not mean no point of view), verifiability and no original research, is a deliberate attempt to damage Wikipedia. There, of course, exist more juvenile forms of vandalism, such as adding irrelevant obscenities or crude humor to a page, illegitimately blanking pages, and inserting obvious nonsense into a page. Abusive creation or usage of user accounts and IP addresses may also constitute vandalism."
+
+## Consequences of vandalism, vandalism management
+https://en.wikipedia.org/wiki/Wikipedia:Vandalism
+"Vandalism is prohibited. While editors are encouraged to warn and educate vandals, warnings are by no means a prerequisite for blocking a vandal (although administrators usually only block when multiple warnings have been issued). "
+
+"Upon discovering vandalism, revert such edits, using the undo function or an anti-vandalism tool. Once the vandalism is undone, warn the vandalizing editor. Notify administrators at the vandalism noticeboard of editors who continue to vandalize after multiple warnings, and administrators should intervene to preserve content and prevent further disruption by blocking such editors. Users whose main or sole purpose is clearly vandalism may be blocked indefinitely without warning."
+
+One of the strategies to spot vandalism is "Watching for edits tagged by the abuse filter. However, many tagged edits are legitimate, so they should not be blindly reverted. That is, do not revert without at least reading the edit." //mention of filters!
+
+"Warn the vandal. Access the vandal's talk page and warn them. A simple note explaining the problem with their editing is sufficient. If desired, a series of warning templates exist to simplify the process of warning users, but these templates are not required. These templates include
+
+    Level one: {{subst:uw-vandalism1}} This is a gentle caution regarding unconstructive edits; it encourages new editors to use a sandbox for test edits. This is the mildest warning.
+    Level two: {{subst:uw-vandalism2}} This warning is also fairly mild, though it explicitly uses the word 'vandalism' and links to this Wikipedia policy.
+    Level three: {{subst:uw-vandalism3}} This warning is sterner. It is the first to warn that further disruptive editing or vandalism may lead to a block.
+    Level four: {{subst:uw-vandalism4}} This is the sharpest vandalism warning template, and indicates that any further disruptive editing may lead to a block without warning."
+
