@@ -1,3 +1,30 @@
+\cite{MuellerBirn2014}
+
+Interesting info, not sure what to do with it
+
+2010: 40% of newcommers' contributions rejected based on automatic tools <---
+counter productive in engaging new contributors
+
+=====================================================
+\cite{GeiHal2017}
+
+Claudia's paper:
+"“In both cases of algorithmic governance
+– software features and bots – making rules part of the infrastructure, to a certain extent, makes
+them harder to change and easier to enforce” (p. 87)"
+
+=====================================================
+\cite{MueDoHer2013}
+1st major difference EN/DE Wikipedia:
+- automated vandal fighting not permitted in DE Wikipedia (ist es immer noch
+  so?)
+"algorithmic tools are only intended to support editors in identify-
+ing possible malicious edits, but automated assessments are not
+accepted"
+"Fighting vandals is seen as a form of handling excep-
+tions and should therefore be based upon human evaluation."
+
+Hoe? DE Wikipedia has also edit filters which is an automatic assessment of what to disallow.
 \cite{WulThaDix2017}
 
 personal attacks
@@ -7,7 +34,7 @@ looked at comments on Wikipedia talk pages
 100k human labeled comments
 63k machine labeled (classifier)
 generated data set:
-https://figshare.com/articles/Wikipedia_Detox_Data/4054689
+https://figshare.com/Grticles/Wikipedia_Detox_Data/4054689
 
 analysed time period: 2004-2015
 
