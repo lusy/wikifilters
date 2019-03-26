@@ -55,7 +55,7 @@ https://en.wikipedia.org/wiki/Category:Wikipedia_counter-vandalism_tools
 https://en.wikipedia.org/wiki/Vandalism_on_Wikipedia
 https://meta.wikimedia.org/wiki/Vandalbot
 
-https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
+https://en.wikipedia.org/wiki/Wikipedia:Dispute_resolution
 https://en.wikipedia.org/wiki/Wikipedia:Purpose
 https://en.wikipedia.org/wiki/Wikipedia:Oversight
 https://en.wikipedia.org/wiki/Wikipedia:Revision_deletion
@@ -64,6 +64,8 @@ https://en.wikipedia.org/wiki/Wikipedia:Personal_security_practices
 https://en.wikipedia.org/wiki/Wikipedia:On_privacy,_confidentiality_and_discretion
 https://en.wikipedia.org/wiki/Wikipedia:How_to_not_get_outed_on_Wikipedia
 https://en.wikipedia.org/wiki/Wikipedia:No_personal_attacks
+https://en.wikipedia.org/wiki/Wikipedia:Newbies_aren%27t_always_clueless
+https://en.wikipedia.org/wiki/Wikipedia:On_assuming_good_faith
 
 * look at AbuseFilter extention code: how is a filter trigger logged?
 https://github.com/wikimedia/mediawiki-extensions-AbuseFilter/blob/master/includes/AbuseFilter.php
@@ -184,6 +186,7 @@ https://en.wikipedia.org/wiki/Wikipedia:Offensive_material
 https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view
 
 https://en.wikipedia.org/wiki/Wikipedia:Harassment
+https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
 
 ## Software
 
