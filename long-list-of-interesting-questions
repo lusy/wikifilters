@@ -3,3 +3,4 @@
 * Ethnographic analysis (e.g. IVs with edit filter managers would be really interesting)
 * What is to be learned from studying the regex patterns in more detail?
 * what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
+* (how) has the notion of "vandalism" on Wikipedia evolved over time (when looking at the regex patterns)
