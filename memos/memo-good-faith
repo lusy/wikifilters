@@ -3,11 +3,13 @@
 Good faith is a term used by the Wikipedia community itself.
 Most prominently in the phrase "Always assume good faith".
 
-As I recently learned, apparently this guideline (Gebot!) arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
+As I recently learned, apparently this guideline arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
 It rather arose at a time when, after a significant growth in Wikipedia, it wasn't manageable to govern the project (and most importantly fight emergent vandalism which grew proportionally to the project's growth) manually anymore.
 To counteract vandalism, a number of automated measures was applied.
 These, however, had also unforseen negative consequences: they drove newcomers away~\cite{HalKitRied2011}(quote literature) (since their edits were often classified as "vandalism", because they were not familiar with guidelines / wiki syntax / etc.)
 In an attempt to fix this issue, "Assume good faith" rose to a prominent position among Wikipedia's Guidelines.
+(Specifically, the page was created on March 3rd, 2004 and was originally refering to good faith during edit wars.
+An expansion of the page from December 29th 2004 starts refering to vandalism. https://en.wikipedia.org/w/index.php?title=Wikipedia:Assume_good_faith&oldid=8915036)
 
 Today, in vandalism comabting (?), there are cautious guidelines and several escalation levels, before an editor is banned. (TODO: elaborate, maybe move to vandalism)
 Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
