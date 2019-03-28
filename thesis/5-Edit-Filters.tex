@@ -1,0 +1,343 @@
+\chapter{Edit Filters}
+\label{chap:filters}
+
+
+\textbf{Definition}
+
+According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing.
+[1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.''~\cite{Wikipedia:EditFilter}.
+%TODO how to quote an excerpt containing a footnote?
+
+Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
+If there is a match, the edit in question is logged and potentially, additional actions such as tagging the edit summary, issuing a warning or disallowing the edit are invoked.
+The full range of actions which the AbuseFilter extension allows are discussed in section~\label{sec:technical-layer}.
+
+Interestingly, at its introduction, the mechanism was called ``Abuse Filter'' and was later renamed to ``edit filter''.
+We can observe the legacy name in the name of the MediaWiki extension for instance.
+The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{Wikipedia:EditFilter}.
+%TODO what was the motivation behind the rename? signaling it's not only targeting vandals but also intending to assist good faith editors?
+
+
+\begin{comment}
+%TODO: rephrase this as a second paragraph
+"A filter automatically compares every edit made to Wikipedia against a defined set of conditions. If an edit matches the conditions of a filter, that filter will respond by logging the edit. It may also tag the edit summary, warn the editor, revoke his/her autoconfirmed status, and/or disallow the edit entirely.[2]"
+Footnote 2: "The extension also allows for temporary blocking, but these features are disabled on the English Wikipedia." <-- TODO: Is there wikipedia on which it isn't disallowed?
+\end{comment}
+
+\textbf{Example of a filter}
+
+For illustration purposes/better understanding, let us have a closer look at what a single edit filter looks like.
+Edit filter with ID 365 is public and currently enabled.
+Its public comment (``name'') reads ``Unusual changes to featured or good content''.
+The regex filter pattern is:
+\begin{verbatim}
+"page_namespace == 0 &
+!(""confirmed"" in user_groups) &
+old_size > 20000 & (
+    ""#redirect"" in lcase(added_lines) |
+    edit_delta < -15000 |
+    edit_delta > 15000
+) &
+old_wikitext rlike
+""\{\{([Ff]eatured|[Gg]ood)\s?article\}\}"""
+\end{verbatim}
+And the currently configured filter actions are: ``disallow''.
+(quote source, also refer to \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365})
+
+So, if a user whose status is not confirmed yet tries to edit a page in the article namespace which contains ``Featured'' or ``Good article'' and they either insert a redirect, delete 3/4 of the content or add 3/4 on top, the edit is automatically disallowed.
+
+Note that an edit filter editor can easily change the action of the filter. (Or the pattern, as a matter of fact.)
+
+%************************************************************************
+
+\section{Edit filter governance}
+
+In this section, we contemplate(syn) the edit filter system from a community/governance perspective.
+We address following relevant questions:
+
+\begin{itemize}
+    \item who can propose a filter?
+    \item who can introduce a new filter?
+    \item what happens in case of false positives
+    \item Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
+\end{itemize}
+
+\subsection{How is a new filter introduced?}
+
+Anyone can propose a new edit filter.
+An editor who notices problematic/weird/.. behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
+The request can then be approved and implemented by an edit filter manager (mostly after a discussion/clarification of the details).
+The Edit Filters Requests page also asks users to go through following checklist before requesting a filter:
+\begin{itemize}
+    \item "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
+    \item filters, after adding up, make editing slower
+    \item in depth checks should be done by a separate software that users run on their own machines
+    \item no trivial errors should be catched by filters (ala style guidelines)
+    \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
+\end{itemize}
+
+According to the best practices, any new filter should be announced on the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}} in order for other filter managers and the community to be able to review the filter and voice concerns~\cite{Wikipedia:EditFilter}.
+
+\subsection{Who can edit filters?}
+\label{subsection:who-can-edit}
+
+In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
+According to ~\cite{Wikipedia:EditFilter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
+Further down on the page it is clarified that it's administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
+If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
+
+The formal process for requesting the \emph{abusefilter-modify} permission is to raise it to the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
+A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
+
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"The assignment of the edit filter manager user right to non-admins is highly restricted. It should only be requested by and given to highly trusted users, when there is a clear and demonstrated need for it."
+    // does the 2. sentence refer to highly trusted users outside of the sysop group, or generally to highly trusted users? (although better everyone in sysop be "highly trusted"!)
+
+"demonstrated knowledge of the extension's syntax and in understanding and crafting regular expressions is absolutely essential"
+\end{comment}
+
+A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
+As of March 9, 2019, there are 152 users in the ``edit filter managers'' group (for comparison, as of the same date there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}).
+
+\begin{comment}
+CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
+
+-- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
+-- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
+Probably it's simply admins who can modify the filters there.
+    If I understood correctly, on EN Wiki it's also mostly admins who have the \emph{abusefilter-modify} permission, although it's far from all of them who have it.
+\end{comment}
+
+\subsection{How are problems handled?}
+
+There are several pages where problematic behaviour concerning edit filters as well as potential solutions are discussed.
+
+For instance, current filter behaviour is discussed on the Edit Filter Noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
+Issues handled here include changing the edit filter action of single filters, changing edit filter warning templates, problems with specific regexes or variables and proposals for filter deletions.
+Furthermore, on the noticeboard discussions take place about giving edit filter manager rights to users, or withdrawing these if a misuse was observed and raising the issue with the editor directly didn't resolve the problem~\cite{Wikipedia:EditFilter}.
+
+False positives among the filter hits are reported and discussed on a separate page~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}}.
+Edit filter managers monitor this page and improve filters based on true false positives, give advice to good faith editors who tripped a filter or discourage authors of vandalism edits to continue with them.
+
+Moreover, edit filter managers are advised to consult and comply with personal security best practices (such as choosing a strong password and using two-factor authentication).
+If such an account is compromised, it loses its edit filter manager rights and gets blocked, since this threatens site security~\cite{Wikipedia:EditFilter}.
+
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
+//interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
+\end{comment}
+
+
+\subsection{Urgent situations}
+
+There are several provisions for urgent situations (which I think should be scrutinised extra carefully since ``urgent situations'' have historically always been an excuse for cuts in civil liberties).
+For instance, generally, every new filter should be tested extensively in logging mode only (without any further actions) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
+As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
+Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
+In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
+Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
+
+\subsection{Alternatives}
+%TODO: where should this go?
+
+Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is signaled to edit filter managers and editors proposing new filters.
+%TODO: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
+"Each filter takes time to run, making editing (and to some extent other things) slightly slower. The time is only a few milliseconds per filter, but with enough filters that adds up. When the system is near its limit, adding a new filter may require removing another filter in order to keep the system within its limits."
+\end{comment}
+For example, there is the page protection mechanism that addresses problems on a single page.
+Also, title and spam blacklists exist and these might be the way to handle problems with page titles or link spam~\cite{Wikipedia:EditFilter}.
+
+%************************************************************************
+
+\section{Technical layer}
+~\label{sec:technical-layer}
+
+\subsection{The edit filter mediawiki extension}
+
+At the end, from a technical perspective Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a regular expression before it's published.
+Every time a filter is triggered, the action that triggered it as well as further data such as the user who triggered the filter, their ip address, and a diff of the edit (if it was an edit) is logged.
+Possibly, a further filter action is invoked as well.
+The plugin defines following possible(syn) filter actions: %TODO finish
+
+The documentation page of the extention is here: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter}
+and the code is hosted on gerrit, Wikimedia's git repository hosting service of choice: \url{https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master}.
+
+The rules format can be viewed under \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}.
+
+%TODO: Flowchart of the filtering process!
+
+Data generated by the extension in stored in following database tables: \emph{abuse\_filter}, \emph{abuse\_filter\_log}, \emph{abuse\_filter\_action} and \emph{abuse\_filter\_history}~\cite{gerrit-abusefilter}.
+
+\subsection{How is a new filter introduced?}
+//maybe move to governance?
+
+The best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
+According to the page, these steps should be followed:
+\begin{itemize}
+    \item read the docs: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}
+    \item test with debugging tools: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/tools} (visible only for users who are already in the edit filter managers user group)
+    \item test with batch testing interface (dito)
+    \item create logging only filter: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/new} (needs permissions)
+    \item announce the filter at the edit filter notice board~\cite{Wikipedia:EditFilterNoticeboard}, so other edit filter managers can comment on it
+    \item finally, fully enable the filter by adding an appropriate edit filter action.
+\end{itemize}
+
+Performance/efficiency seem to be fairly important for the edit filter system;
+on multiple occasions, there are notes on recommended order of operations, so that the filter evaluates as resource sparing as possible~\cite{Wikipedia:EditFilterInstructions} or invitations to consider whether an edit filter is the most suitable mechanism for solving a particular issue at all~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterRequested}.
+
+
+\subsection{What happens when a filter gets triggered?}
+
+There are several actions by editors that may trigger an edit filter.
+Editing is the most common of them, but there are also filters targetting account creation, deletions, moving pages or uploading content. %TODO src? other than entries from the abuse_filter_log table?
+
+When an edit filter's regex pattern matches an editor's action, an entry is created in the \emph{abuse\_filter\_log} table and an additional action (or actions) may be invoked.
+The documentation of the Abuse Filter extension provides us a complete list of the possible edit filter actions~\cite{Mediawiki:AbuseFilterActions}:
+\begin{itemize}
+    \item Logging: ``All filter matches are logged in the abuse log. This cannot be turned off.''
+    \item Warning: ``The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.'' A link to the false positives page~\cite{Wikipedia:EditFilterFalsePositives} is also provided.
+    \item Throttling: ``The filter will only match if a rate limit is tripped. You can specify the number of actions to allow, the period of time in which these actions must occur, and how those actions are grouped.
+         The groupings are which sets of people should have aggregate (shared) throttles. That is, if you type "user", then the same user must match the filter a certain number of times in a certain period of time. You may also combine groups with commas to specify that throttle matches sharing all criteria will be aggregated. For example, using "ip,page", X filter matches in Y seconds from the same IP address to the same page will be required to trip the remainder of the actions.''
+         (So this is something like, do this and that if a user edits a particular page X times for a Y period of time. In this sense: throttling always has to be paired with another action?)
+    \item Disallowing: ``Actions matching the filter will be prevented, and a descriptive error message will be shown.'' The editor is provided the opportunity to report a false positive
+    \item Revoking auto-promoted groups: ``Actions matching the filter will cause the user in question to be barred from receiving any extra groups from \$wgAutopromote for a period ranging from 3 to 7 days (random). This can be restored at the debug tools page.''
+    \item Blocking: ``Users matching the filter will be blocked indefinitely, with a descriptive block summary indicating the rule that was triggered.''
+    \item Removing from privileged groups: ``Users matching the filter will be removed from all privileged groups (sysop, bureaucrat, etc). A descriptive summary will be used, detailing the rule that was triggered.''
+    \item Range-blocking: ``Somewhat of a "nuclear option", the entire /16 range from which the rule was triggered will be blocked for 1 week.''
+    \item Tagging: ``The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.''
+\end{itemize}
+
+It is not uncommon, that the action(s) a particular filter triggers change over time.
+As of the guidelines for introducing new filters, every filter should be enabled in ``log only'' mode at the beginning.
+When it was deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
+Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
+
+Range-blocking, blocking, removing from priviledged groups and revoking autopromoted groups haven't been used on the EN Wikipedia for the last year. %TODO: why?
+To be more precise, the last time a filter action other than ``log only'', ``tag'', ``warn'' or ``disallow'' was triggered on the EN Wikipedia was in 2012.
+There are two distinct filter actions in the \emph{abuse\_filter\_log} table: ``blockautopromote'' and ``aftv5flagabuse''.
+No idea what exactly they mean.
+
+Guidelines specifically call for careful use of ``disallow''.
+Only severe cases for which ``substantially all good-faith editors would agree are undesirable'' or specific cases for which consensus has been reached should be disallowed~\cite{Wikipedia:EditFilter}.
+
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
+- disallow -- editor is informed, if their edit is being disallowed and offered the option to report a false positive;
+  "It is also possible to have a user's autoconfirmed status revoked if a user trips the filter."
+  caution to use it seldomly and after a thorough discussion on what is a undesirable edit
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+Edit filters should only be set to disallow to prevent edits that substantially all good-faith editors would agree are undesirable, or where a clear consensus has been reached that a specific type of edit should not be allowed. Any doubts regarding setting a filter to disallow should be discussed with other edit filter managers.
+- warn -- editor is informed that their edit may be problematic and given the option to save or abort the edit (and in report the false positive trigerred by the filter)
+- add a tag - "edit is tagged for review by patrollers." -- TODO who are patrollers? are there some in lang versions other than EN?
+  "Patrols are a specialized type of WikiProject used in the English Wikipedia to watch over a class of pages and take any appropriate actions. Most patrol actions are performed by individual Wikipedians, but some are performed by bots—computer programs or preprogrammed scripts that make automated edits without a need for real time human decision-making. " https://en.wikipedia.org/wiki/Wikipedia:Patrols
+- log the edit - "In this case, the edit is merely added to the AbuseLog. When testing new filters, this is the suggested setting to use."
+- "throttle"
+- \url{https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11} mentions "block" as a possible action in the legend
+
+9 different actions possible according to the extension docu (are users whose edits tripped the filters notified for all of them?)
+\url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions}
+    2.1 Logging: All filter matches are logged in the abuse log. This cannot be turned off.  (so, every filter trigger is always being logged?)
+    2.2 Warning: The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.
+    2.3 Throttling: The filter will only match if a rate limit is tripped. You can specify the number of actions to allow, the period of time in which these actions must occur, and how those actions are grouped.
+
+The groupings are which sets of people should have aggregate (shared) throttles. That is, if you type "user", then the same user must match the filter a certain number of times in a certain period of time. You may also combine groups with commas to specify that throttle matches sharing all criteria will be aggregated. For example, using "ip,page", X filter matches in Y seconds from the same IP address to the same page will be required to trip the remainder of the actions.
+(So this is something like, do this and that if the user has always received X warnings?)
+    2.4 Disallowing: Actions matching the filter will be prevented, and a descriptive error message will be shown.
+    2.5 Revoking auto-promoted groups: Actions matching the filter will cause the user in question to be barred from receiving any extra groups from \$wgAutopromote for a period ranging from 3 to 7 days (random). This can be restored at the debug tools page.
+    2.6 Blocking: Users matching the filter will be blocked indefinitely, with a descriptive block summary indicating the rule that was triggered.
+    2.7 Removing from privileged groups: Users matching the filter will be removed from all privileged groups (sysop, bureaucrat, etc). A descriptive summary will be used, detailing the rule that was triggered.
+    2.8 Range-blocking:Somewhat of a "nuclear option", the entire /16 range from which the rule was triggered will be blocked for 1 week.
+    2.9 Tagging: The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.
+\end{comment}
+
+
+
+\subsection{what happens afterwards}
+
+If a user disagrees with the filter decision, they have the posibility of reporting a false positive
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}
+
+\subsection{modifying a filter}
+
+As pointed out in section~\ref{subsection:who-can-edit}, editors with the \emph{abusefilter-modify} permission can modify filters.
+They can do so on the detailed page of a filter.
+(For example that is \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61} for filter with ID 61.)
+
+For each filter, a detailed page exists where following information can be viewed (by everybody for public filters and by editors with proper rights for hidden filters):
+filter id; public description; filter hits; some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes); code (conditions) of the filter; notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+and actions to take when the filter matches;
+%TODO: screenshot on a big screen!
+
+\begin{comment}
+%TODO not sure whether that's the proper place for the description of a filter details page.
+% and if not whether this subsection should exist at all
+each filter has a designated page: e.g. \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61}
+where following information can be viewed:
+Filter id; public description; filter hits; statistics; code (conditions); notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to: last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+Actions to take when matched:
+Trigger actions only if the user trips a rate limit
+Trigger these actions after giving the user a warning
+Prevent the user from performing the action in question
+Revoke the user's autoconfirmed status
+Tag the edit in contributions lists and page histories
+
+and the filter can be modified if the viewing editor has the right permissions
+
+statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58\%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is; is it per filter or for all enabled filters together?
+\end{comment}
+
+\subsection{Collaboration with bots}
+
+"There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
+\url{https://en.wikipedia.org/wiki/User:DatBot/filters}
+
+
+
+\section{Impact on editors}
+
+What happens when an editor triggers an edit filter? Do they notice this at all?
+
+As described in the previous section, a variety of different actions may occur when a filter gets tripped.
+If a filter is set to ``warn'' or ``disallow'', the editor is notified that they hit a filter by a warning message (see~\ref{fig:screenshot-warn-disallow}).
+These warnings describe the problem that occurred and present the editor with possible actions:
+complain on the FalsePositives page (\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}) in case of a disallow,
+or, complain on the FalsePositives page and publish the change anyway in case of a warning.
+(Of course, in case of a warning, the editor can modify their edit before publishing it.)
+On the other hand, when the filter action is set to "tag" or "log" only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
+Tagged edits are marked as such in the page's revision history (see~\ref{fig:tags-in-history})
+and all edits that trigger an edit filter are listed in the AbuseLog (\url{https://en.wikipedia.org/wiki/Special:AbuseLog}) (see~\ref{fig:screenshot-abuse-log}).
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/screenshots-filter-trigger/Screenshot-tags-in-revision-history.png}
+  \caption{Tagged edits are marked as such in a page's revision history}~\label{fig:tags-in-history}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/screenshots-filter-trigger/Screenshot-abuse-log.png}
+  \caption{Abuse Log showing all filter triggers by User Schnuppi4223}~\label{fig:screenshot-abuse-log}
+\end{figure}
+
+If the filter is set to disallow, a specific template is shown to the editor: "An automated filter has identified this edit as potentially unconstructive, so it has been disallowed. If this edit is constructive, please report this error. Disruptive editing may result in a block from editing."
+"report this error" links to the FalsePositives page: \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}
+"block from editing" links to \url{https://en.wikipedia.org/wiki/Wikipedia:Blocking_policy}
+
+The edit is not saved.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/screenshots-filter-trigger/Screenshot-trigger-warning-filter.png}
+  \caption{Editor gets notified their edit triggered multiple edit filters}~\label{fig:screenshot-warn-disallow}
+\end{figure}
+
+\subsection{TOR}
+(Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
+

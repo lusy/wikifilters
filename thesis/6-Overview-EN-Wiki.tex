@@ -1,0 +1,442 @@
+\chapter{Descriptive overview of Edit Filters on the English Wikipedia}
+\label{chap:overview-en-wiki}
+
+\textbf{Interesting questions}
+\begin{itemize}
+    \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?; This includes deleted filters
+    \item what do the most active filters do?: see~\ref{tab:most-active-actions}
+    \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
+        Interestingly, there was a guideline somewhere stating that no trivial behaviour should trip filters (e.g. starting every paragraph with a small letter;) I actually think, a bot fixing this would be more appropriate.
+    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
+        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
+        Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
+    \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
+    \item percentage of triggered filters/all edits; break down triggered filters according to typology: TODO still need the complete abuse\_filter\_log table!; and probably further dumps in order to know total number of edits
+    \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
+    \item what gets classified as vandalism? has this changed over time? TODO: (look at words and patterns triggered by the vandalism filters; read vandalism policy page); pay special attention to filters labeled as vandalism by the edit filter editors (i.e. in the public description) vs these I labeled as vandalism
+\end{itemize}
+
+\textbf{Questions on abuse\_filter table}
+\begin{itemize}
+    \item how many filters are there altogether
+    \item how many are enabled/disabled?
+    \item how many hidden filters? how many of them are enabled
+    \item how many are marked as deleted? (how many of them are hidden?)
+    \item how many global? (what does global mean?)
+    \item how many throttled? (what does this mean?)
+    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
+    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
+    \item what are the values in the "group" column? what do they mean?
+    \item which are the most frequently triggered filters of all time?
+    \item is it new filters that get triggered most frequently? or are there also very active old ones?
+    \item how many different edit filter editors are there (af\_user)?
+    \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
+\end{itemize}
+
+\textbf{Questions on abuse\_filter\_log table}
+\begin{itemize}
+    \item how often were filters with different actions triggered? (afl\_actions)
+    \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
+    \item on what articles filters get triggered most frequently (afl\_title)
+    \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
+    \item in which namespaces get filters triggered most frequently?
+\end{itemize}
+
+\textbf{Questions on abuse\_filter\_action table}
+\begin{itemize}
+    \item how many filters trigger any particular action (at the moment)?
+    \item how many different parameters are there (i.e. tags when tagging, or templates to show upon a warning)?
+\end{itemize}
+
+\textbf{Number of unique filters that were triggered each year since 2009:}
+owing to quarries we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018 with their corresponding number of times being triggered:
+\begin{table}
+  \centering
+  \begin{tabular}{l r }
+    % \toprule
+    Year & Num of distinct filters \\
+    \hline
+    2009 & 220 \\
+    2010 & 163 \\
+    2011 & 161 \\
+    2012 & 170 \\
+    2013 & 178 \\
+    2014 & 154 \\
+    2015 & 200 \\
+    2016 & 204 \\
+    2017 & 231 \\
+    2018 & 254 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{Count of distinct filters that got triggered each year}~\label{tab:active-filters-count}
+\end{table}
+
+data is still not enough for us to talk about a tendency towards introducing more filters (after the initial dip)
+
+
+\textbf{Most frequently triggered filters for each year:}
+10 most active filters per year:
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    135 & 175455 \\
+    30 & 160302 \\
+    61 & 147377 \\
+    18 & 133640 \\
+    3 & 95916 \\
+    172 & 89710 \\
+    50 & 88827 \\
+    98 & 80434 \\
+    65 & 74098 \\
+    132 & 68607 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2009}~\label{tab:most-active-2009}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    61 & 245179 \\
+    135 & 242018 \\
+    172 & 148053 \\
+    30 & 119226 \\
+    225 & 109912 \\
+    3 & 105376 \\
+    50 & 101542 \\
+    132 & 78633 \\
+    189 & 74528 \\
+    98 & 54805 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2010}~\label{tab:most-active-2010}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    61 & 218493 \\
+    135 & 185304 \\
+    172 & 119532 \\
+    402 & 109347 \\
+    30 & 89151 \\
+    3 & 75761 \\
+    384 & 71911 \\
+    225 & 68318 \\
+    50 & 67425 \\
+    432 & 66480 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2011}~\label{tab:most-active-2011}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    135 & 173830 \\
+    384 & 144202 \\
+    432 & 126156 \\
+    172 & 105082 \\
+    30 & 93718 \\
+    3 & 90724 \\
+    380 & 67814 \\
+    351 & 59226 \\
+    279 & 58853 \\
+    225 & 58352 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2012}~\label{tab:most-active-2012}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    135 & 133309 \\
+    384 & 129807 \\
+    432 & 94017 \\
+    172 & 92871 \\
+    30 & 85722 \\
+    279 & 76738 \\
+    3 & 70067 \\
+    380 & 58668 \\
+    491 & 55454 \\
+    225 & 48390 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2013}~\label{tab:most-active-2013}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    384 & 111570 \\
+    135 & 111173 \\
+    279 & 97204 \\
+    172 & 82042 \\
+    432 & 75839 \\
+    30 & 62495 \\
+    3 & 60656 \\
+    636 & 52639 \\
+    231 & 39693 \\
+    380 & 39624 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2014}~\label{tab:most-active-2014}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    650 & 226460 \\
+    61 & 196986 \\
+    636 & 191320 \\
+    527 & 189911 \\
+    633 & 162319 \\
+    384 & 141534 \\
+    279 & 110137 \\
+    135 & 99057 \\
+    686 & 95356 \\
+    172 & 82874 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2015}~\label{tab:most-active-2015}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    527 & 437099 \\
+    61 & 274945 \\
+    650 & 229083 \\
+    633 & 218696 \\
+    636 & 179948 \\
+    384 & 179871 \\
+    279 & 106699 \\
+    135 & 95131 \\
+    172 & 79843 \\
+    30 & 68968 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2016}~\label{tab:most-active-2016}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    61 & 250394 \\
+    633 & 218146 \\
+    384 & 200748 \\
+    527 & 192441 \\
+    636 & 156409 \\
+    650 & 151604 \\
+    135 & 80056 \\
+    172 & 70837 \\
+    712 & 59537 \\
+    833 & 58133 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2017}~\label{tab:most-active-2017}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{r r }
+    % \toprule
+    Filter ID & Hitcount \\
+    \hline
+    527 & 358210 \\
+    61 & 234867 \\
+    633 & 201400 \\
+    384 & 177543 \\
+    833 & 161030 \\
+    636 & 144674 \\
+    650 & 79381 \\
+    135 & 75348 \\
+    686 & 70550 \\
+    172 & 64266 \\
+    % \bottomrule
+  \end{tabular}
+  \caption{10 most active filters in 2018}~\label{tab:most-active-2018}
+\end{table}
+
+\textbf{what do the most active filters do?}
+
+\begin{table*}
+  \centering
+    \begin{tabular}{r p{10cm} p{5cm} }
+    % \toprule
+    Filter ID & Publicly available description & Actions \\
+    \hline
+      135 & repeating characters & tag, warn \\
+      30 & "large deletion from article by new editors" & tag, warn \\
+      61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & tag \\
+      18 & "test type edits from clicking on edit bar" (people don't replace Example texts when click-editing) & deleted in Feb 2012 \\
+      3 & "new user blanking articles" & tag, warn \\
+      172 & "section blanking" & tag \\
+      50 & "shouting" (contribution consists of all caps, numbers and punctuation) & tag, warn \\
+      98 & "creating very short new article" & tag \\
+      65 & "excessive whitespace" (note: "associated with ascii art and some types of vandalism") & deleted in Jan 2010 \\
+      132 & "removal of all categories" & tag, warn \\
+      225 & "vandalism in all caps" (difference to 50? seems to be swear words, but shouldn't they be catched by 50 anyway?) & disallow \\
+      189 & "BLP vandalism or libel" & tag \\
+      402 & "new article without references" & deleted in Apr 2013, before that disabled with comment "disabling, no real use" \\
+      384 & "addition of bad words or other vandalism" (seems to be a blacklist) & disallow \\
+      432 & "starting new line with lower case letters" & tag, warn //I recall there was a rule of thumb recommending not to user filters for style things? although that's not really style, but rather wrong grammar.. \\
+      380 & hidden; public comment "multiple obscenities" & disallow \\
+      351 & "text added after categories and interwiki" & tag, warn \\
+      279 & "repeated attempts to vandalise" & tag, throttle (triggered when someone hits "edit" repeatedly in a short ammount of time) \\
+      491 & "edits ending with emoticons or !" & tag, warn \\
+      636 & "unexplained removal of sourced content" & warn (that, together with 634 and 635 refutes my theory that warn always goes together with tag) \\
+      231 & "long string of characters containing no spaces" (that's surely english though^^) & tag, warn \\
+      650 & "creation of a new article without any categories" & (log only) \\
+      527 & hidden; public comments "T34234: log/throttle possible sleeper account creations" & throttle \\
+      633 & "possible canned edit summary" (apparently pre-filled on mobile though) & tag \\
+      686 & "IP adding possible unreferenced material to BLP" (BLP= biography of living people? I thought, it was forbidden to edit them without a registered account) & (log only) \\
+      712 & "possibly changing date of birth in infobox" ("possibly"? and I thought infoboxes were pre-generated from wikidata?) & (log only) \\
+      833 & "newer user possibly adding a unreferenced or improperly referenced material" & (log only) \\
+  \end{tabular}
+  \caption{What do most active filters do?}~\label{tab:most-active-actions}
+\end{table*}
+
+A lot of filters are disabled/deleted bc:
+* they hit too many false positives
+* they were implemented to target specific incidents and these vandalism attempts stopped
+* they were tested and merged into other filters
+* there were too few hits and the conditions were too expensive
+
+Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
+
+
+\subsection{Types of edit filters}
+
+We can sort filters into categories along various criteria.
+
+\subsubsection{Public and Hidden Filters}
+
+The first noticeable typology is along the line public/private filters.
+
+It is calling attention that nearly 2/3 of all edit filters are not viewable by the general public.
+
+The guidelines call for hiding filters ``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
+Further, they suggest caution in filter naming and giving just simple description of the overall disruptive behaviour rather than naming specificuser that is causing the disruptions.
+(The later is not always complied with, there are indeed filters named after the accounts causing a disruption.)
+
+Only edit filter editors (who have the \emph{abusefilter-modify} permission) and editors with the \emph{abusefilter-view-private} permission can view hidden filters.
+The later is given to edit filter helpers - editors interested in helping with edit filters who still do not meet certain criteria in order to be granted the full \emph{abusefilter-modify} permission, editors working with edit filters on other wikis interested in learning from the filter system on English Wikipedia, and Sockpuppet investigation clerks~\cite{Wikipedia:EditFilterHelper}.
+As of March 17, 2019, there are 16 edit filter helpers on EN Wikipedia~\footnote{\url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter-helper}}.
+Also, all administrators are able to view hidden filters.
+
+There is also a designated mailing list for discussing these: wikipedia-en-editfilters@lists.wikimedia.org.
+It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
+It is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
+
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
+"Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
+// what is "good standing"?
+// what are the arguments for hiding a filter? --> particularly obnoctious vandals can see how their edits are being filtered and circumvent them; security through obscurity
+// are users still informed if their edit triggers a hidden filter? - most certainly; the warnings logic has nothing to do with whether the filter is hidden or not
+
+"For all filters, including those hidden from public view, a brief description of what the rule targets is displayed in the log, the list of active filters, and in any error messages generated by the filter. " //yeah, well, that's the public comment, aka name of the filter
+
+"Be careful not to test sensitive parts of private filters in a public test filter (such as Filter 1): use a private test filter (for example Filter 2) if testing is required."
+
+\end{comment}
+
+\subsection{Types of edit filters: Manual Classification}
+
+Apart from filter typologies that can be derived directly from the DB schema (available fields/existing features), we propose a manual classification of the types of edits edit filters found on the EN Wikipedia target (there are edit filters with different purposes).
+
+Based on the GT methodology, we scrutinised all filters, with their patterns, comments and actions.
+We found 3 big clusters of filters that we labeled ``vandalism'', ``good faith'' and ``maintenance''.
+It was not always a straightforward desicion to determine what type of edits a certain filter is targeting.
+This was of course, particularly challenging for private filters where only the public comment (name) of the filter was there to guide us.
+On the other hand, guidelines state up-front that filters should be hidden only in cases of particularly persistent vandalism, in so far it is probably safe to establish that all hidden filters target some type of vandalism.
+However, the classification was difficult for public filters as well, since oftentimes what makes the difference between a good-faith and a vandalism edit is not the content of the edit but the intention of the editor.
+While there are cases of juvenile vandalism (putting random swear words in articles) or characters repetiton vandalism which are pretty obvious, that is not the case for sections or articles blanking for example.
+In such ambiguous cases, we can be guided by the action the filter triggers (if it is ``disallow'' the filter is most probably targeting vandalism).
+At the end, we labeled most ambiguous cases with both ``vandalism'' and ``good faith''.
+
+In the subsections that follow we discuss the salient properties of each manually labeled category.
+
+%TODO: develop and include memos
+\subsubsection{Vandalism}
+
+\subsubsection{Good Faith}
+
+\subsubsection{Maintenance}
+
+
+Following filter categories have been identified (sometimes, a filter was labeled with more than one tag):
+%TODO make a diagramm with these
+- Vandalism
+  - hoaxing
+  - silly vandalism (e.g. repeating characters, inserting swear words)
+  - spam
+  - sockpuppetry
+  - long term abuse // there seems to be separate documentation for this, see notes;
+  - harassment/personal attacks
+    - doxxing
+    - impersonation
+  - trolling
+  - copyright violation
+
+  Labeled along the vandalism typology (check above)
+  - link vandalism
+  - abuse of tags
+  - username vandalism
+  - image vandalism
+  - avoidant vandalism
+  - talk page vandalism
+  - page move vandalism
+  - template vandalism
+  - vandalbots
+
+  Kind of similar:
+  - seo
+  - stockbroker vandalism
+  - biased pov
+  - self promotion
+  - conflict of interest
+
+Inbetween
+- edit warring
+- political controversy
+- politically/religiously motivated hate
+
+- Good faith
+  - bad style ("unencyclopedic edits" e.g. citing a blog or mentioning a hypothetical future album release)
+  - lazyness
+
+
+- Maintenance
+  - bugs
+  - wiki policy (compliance therewith)
+  - test filters

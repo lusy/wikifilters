@@ -1,0 +1,248 @@
+% ---------------------------------------------------
+% ----- Main document of the template
+% ----- for Bachelor-, Master thesis and class papers
+% ---------------------------------------------------
+%  Created by C. Müller-Birn on 2012-08-17, CC-BY-SA 3.0.
+%  Last upadte: C. Müller-Birn 2015-11-27
+%  Freie Universität Berlin, Institute of Computer Science, Human Centered Computing.
+
+\documentclass[pdftex,a4paper,12pt,DIV=calc,BCOR5mm,english,twoside,smallheadings,titlepage]{scrbook}
+% ----- weitere Optionen
+%draft,			% Entwurfsmodus zum Anzeigen zu leerer/voller Boxen
+%DIV=calc
+%DIV12,			% Seitengröße (siehe Koma Skript Dokumentation !)
+%BCOR5mm,		% Zusätzlicher Rand auf der Innenseite
+%twoside,		% Seitenränder werden an doppelseitig angepasst
+%fleqn,			% Formeln werden linksbündig (und nicht zentriert) angezeigt
+%titlepage,		% Titel wird in einer 'titlepage' Umgebung gesetzt
+%bigheadings,	% Große Überschriften (normal, small-headings)
+%halfparskip-	% Absatz wird nicht eingerückt, dafür aber um eine halbe Zeile nach unten gerückt
+%
+%---------------------------------------------------
+%----- Packages
+%---------------------------------------------------
+%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{ae}
+\usepackage{bibgerm}
+
+\usepackage{fancyhdr} % Define simple headings
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{listings}
+%\usepackage{vmargin} % Adjust margins in a simple way
+%
+\usepackage{amsmath}
+%
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref} % turn all your internal references into hyperlinks
+%\usepackage[pdfstartview=FitH,pdftitle={<<Titel der Arbeit>>}, pdfauthor={<<Autor>>}, pdfkeywords={<<Schlüsselwörter>>}, pdfsubject={<<Titel der Arbeit>>}, colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black, hypertexnames=false, bookmarksnumbered=true, bookmarksopen=true, pdfborder = {0 0 0}]{hyperref}
+%
+% table settings
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{multirow} %multi row
+\usepackage{rotating} %for rotating table
+
+\usepackage{verbatim}
+%
+%---------------------------------------------------
+%----- PDF and document setup
+%---------------------------------------------------
+%
+\hypersetup{
+	pdftitle={<My title>},  % please, add the title of your thesis
+    pdfauthor={<Author>},   % please, add your name
+    pdfsubject={<<Bachelor/Master thesis>, Institute of Computer Science, Freie Universität Berlin>}, % please, select the type of this document
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdfnewwindow=true, 		% links in new window
+    colorlinks=false,  		% false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+%
+%---------------------------------------------------
+%----- Customize page size
+%---------------------------------------------------
+\usepackage[top=3cm,right=3cm,bottom=4cm,left=4cm]{geometry}
+%
+%---------------------------------------------------
+%----- Customize header and footer\pagestyle{fancy}
+%---------------------------------------------------
+\pagestyle{fancy}
+
+\fancyhf{}  % delete all existing header formating
+
+\fancyhead[LE]{\leftmark}  % represent the current chapter heading in uppercase
+\renewcommand{\chaptermark}[1]{ % adapt the shown chapter name: show it in lower case and with chapter number
+\markboth{\thechapter.\ #1}{}}
+
+\fancyhead[RO]{\rightmark}   % % represent the current section heading in uppercase
+\renewcommand{\sectionmark}[1]{% adapt the shown section name: show it in lower case and with section number
+\markboth{\thesection.\ #1}{}}
+
+\renewcommand{\headrulewidth}{0pt} % remove lines from header
+\renewcommand{\footrulewidth}{0pt} % remove lines from header
+
+\fancyfoot{} % delete all existing footer formating
+\fancyfoot[LE,RO]{\thepage} % put page number on the left on even page and right on odd page
+%
+%---------------------------------------------------
+%----- Settings for word separation
+%---------------------------------------------------
+% Help for separation (from package babel, section 22)):
+% In german package the following hints are additionally available:
+% "- = an explicit hyphen sign, allowing hyphenation in the rest of the word
+% "| = disable ligature at this position. (e.g., Schaf"|fell)
+% "~ = for a compound word mark without a breakpoint (e.g., bergauf und "~ab)
+% "= = for a compound word mark with a breakpoint, allowing hyphenation in the composing words
+% "" = like "-, but producing no hyphen sign (e.g., und/""oder)
+%
+% Describe separation hints here:
+\hyphenation{
+% Pro-to-koll-in-stan-zen
+% Ma-na-ge-ment  Netz-werk-ele-men-ten
+% Netz-werk Netz-werk-re-ser-vie-rung
+% Netz-werk-adap-ter Fein-ju-stier-ung
+% Da-ten-strom-spe-zi-fi-ka-tion Pa-ket-rumpf
+% Kon-troll-in-stanz
+}
+%
+%---------------------------------------------------
+%----- Restricting including files
+%---------------------------------------------------
+% Only files listed here will be included in the PDF document!
+% In order to only partially translate the document, for example for bug-fixing,
+% it might be useful to comment out some of the documents.
+\includeonly{
+title,
+declaration,
+abstract_en,
+abstract_de,
+preface,
+introduction,
+2-Background,
+3-Methods,
+4-Data,
+5-Edit-Filters,
+6-Overview-EN-Wiki,
+7-Discussion,
+conclusion,
+appendix
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The content part of the documentent starts here! %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%---------------------------------------------------
+%----- Listing and color definition
+%---------------------------------------------------
+\definecolor{red}{rgb}{.8,.1,.2}
+\definecolor{blue}{rgb}{.2,.3,.7}
+\definecolor{lightyellow}{rgb}{1.,1.,.97}
+\definecolor{gray}{rgb}{.7,.7,.7}
+\definecolor{darkgreen}{rgb}{0,.5,.1}
+\definecolor{darkyellow}{rgb}{1.,.7,.3}
+\lstloadlanguages{C++,[Objective]C}
+\lstset{
+		escapeinside={§§}{§§},
+        basicstyle=\ttfamily\footnotesize\mdseries,
+        columns=fullflexible,% typewriter font look better with fullflex
+        keywordstyle=\bfseries\color{blue},
+%		identifierstyle=\bfseries,
+        commentstyle=\color{darkgreen},
+        stringstyle=\color{red},
+        numbers=left,
+        numberstyle=\ttfamily\scriptsize\color{gray},
+%       stepnumber=5,
+%       numberfirstline=true,
+        breaklines=true,
+%		prebreak=\\,
+        showstringspaces=true,
+        tabsize=4,
+        captionpos=b,
+%		framexrightmargin=-.2\textwidth,
+        float=htb,
+		frame=tb,
+		frameshape={RYR}{n}{n}{RYR},
+		rulecolor=\color{darkyellow},
+        xleftmargin=15pt,
+        xrightmargin=4pt,
+        aboveskip=\bigskipamount,
+        belowskip=\bigskipamount,
+		backgroundcolor=\color{lightyellow},
+		extendedchars=true,
+       	belowcaptionskip=15pt
+}
+
+%---------------------------------------------------
+%----- Title and declaration
+%---------------------------------------------------
+\pagenumbering{alph} % even though, these page numbers are not visible there are necessary to have unique page numbers
+\include{title}
+\include{declaration}
+
+%---------------------------------------------------
+%----- Abstracts in English and German
+%---------------------------------------------------
+
+\include{abstract_en}
+\include{abstract_de}
+
+%---------------------------------------------------
+%----- Directories
+%---------------------------------------------------
+
+\frontmatter
+\pagenumbering{roman}
+
+\tableofcontents
+\setcounter{tocdepth}{3}   % reduce the included sections in the table of content
+
+\listoffigures
+\listoftables
+
+%---------------------------------------------------
+%----- Main part
+%---------------------------------------------------
+\mainmatter
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+\include{preface}
+
+\include{introduction}
+\include{2-Background} %Vandalism, Alg. quality control mechanisms, what gap is there in the research
+\include{3-Methods} %Trace ethnography, GT, ..
+\include{4-Data}
+\include{5-Edit-Filters} %Governance, Technic
+\include{6-Overview-EN-Wiki}
+\include{7-Discussion} %and limitations
+\include{conclusion}
+
+
+%---------------------------------------------------
+%----- Bibliography
+%---------------------------------------------------
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{alpha}
+\bibliography{references.bib}
+
+
+%---------------------------------------------------
+%----- Appendix
+%---------------------------------------------------
+\backmatter
+\include{appendix}
+
+\end{document}
