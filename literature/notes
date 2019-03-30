@@ -467,3 +467,80 @@ kinds of edits"
 less like the fully-automated counter-vandalism bots and
 closer to batch scripts that routinely perform cleanup,
 administrative, and categorization tasks."
+
+===========================================================
+\cite{HalRied2012}
+
+"The first tools to redefine the
+way Wik ipedia dea lt with va n-
+dalism were AntiVandalBot and
+VandalProof."
+
+"AntiVandalBot used a simple set
+of rules and heuristics to monitor
+changes made to articles, identify the
+most obvious cases of vandalism, and
+automatically revert them"
+
+1st vandalism fighting bot:
+"this bot made it possible, for the first
+time, for the Wikipedia community
+to protect the encyclopedia from
+damage without wasting the time
+and energy of good-faith editors"
+
+"it
+wasn’t very intelligent and could only
+correct the most egregious instances
+of vandalism."
+
+"VandalProof, an early cyborg
+technology, was a graphical user
+interface written in Visual Basic that
+let trusted editors monitor article
+edits as fast as they happened in
+Wikipedia and revert unwanted
+contributions in one click."
+
+"Several years and many iterations later [...] these tools have had an
+increa sing role in ma int a ining
+article quality on Wikipedia."
+
+"ClueBot _ NG ha s replaced
+AntiVandalBot’s simple rules"
+
+"Huggle has replaced VandalProof with
+a slick user interface, configurablity,
+and an intelligent system for sorting
+edits by vandalistic likelihood"
+
+"Huggle, one of the most popular
+antivanda lism editing tools on
+Wikipedia, is written in C#.NET
+and any user can download and
+install it. Huggle lets editors roll back
+changes with a single mouse click,
+but because the tool is so powerful,
+rollback permission is restricted to
+administrators and a few thousand
+other Wikipedia users."
+"Huggle makes it easy to review
+a series of recent revisions by
+filtering them according to the
+user’s preferences."
+
+huggle also sends out warnings to the offending editor on revert
+
+"Some Wikipedians feel that such
+motivational measures have gone
+too far in making Wikipedia like a
+game rather than a serious project.
+One humorous entry even argues that
+Wikipedia has become a MMORPG—
+a massively multiplayer online role-
+playing game—with “monsters”
+(va nda ls) to slay, “experience”
+(edit or revert count) to earn, and
+“overlords” (administrators) to submit
+to (http://en.wikipedia.org/wiki/
+Wikipedia:MMORPG)."
