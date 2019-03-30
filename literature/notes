@@ -424,3 +424,46 @@ especially if undertaken by a research team rather than a single individual."
   "what an algorithm is designed to do in theory and what it actually does in practice do not always correspond"
   "algorithms perform in context – in collaboration with data, technologies, people, etc. under varying conditions"
   "producing localised and situated outcomes."
+
+===========================================================
+\cite{GeiHal2013}
+
+studies (EN) Wikipedia's quality control processes
+in particular for 4 periods in 2011 when ClueBot NG (leading bot in vandalism fighting) was down
+propose a typology of vandal fighting mechanisms:
+* fully automated bots
+* automation aided humans ("cyborgs") (e.g. human editors reverting vandalism via Huggle or STiki)
+* manually editing humans (using the revert button or actually editing the article in a browser and clicking "save")
+* batch scripts run for a particular occasion (e.g. revert all edits of malfunctioning bot or of a malicious editor)
+
+time-to-revert is their primary metric
+finds that median times to revert nearly doubled for the periods ClueBot NG was down
+(also that Wikipedia editing activity is periodic, with uneven distribution of activity throughout a week, there are daily and weekly cycles)
+also finds that more or less same amount of malicious edits were *eventually* reverted when the bot was down, it just took longer
+(warns however, that they didn't study these situations further, e.g. by interviewing vandal fighters or similar, so it's unclear whether editors were putting in an extraordinary effort in order to maintain Wikipedia quality in an emergency situation and for how long this is possible)
+
+ClueBot NG:
+"to scan every edit made to Wikipedia in real time"
+"Built on Bayesian neural networks and trained with data
+about what kind of edits Wikipedians regularly revert as
+vandalism"
+
+"refining an edit is not considered a revert, and Wikipedians
+are discouraged from excessively reverting edits made in
+good faith. As such, reverts are the predominant
+mechanism used to remove undesirable material, notably
+vandalism and spam"
+
+"Huggle, the most widely-used, fully assisted, counter-
+vandalism tool, were made within 1 minute of the
+offending edit. It is interesting that reverts with STiki, a
+newer and more sophisticated queue-based vandal fighting
+tool, are more often made to somewhat older edits, with a
+time-to-revert distribution that is closer to unassisted edits.
+This suggests that Huggle and STiki are targeting different
+kinds of edits"
+
+"bots like AWB, DumbBOT, and EmausBot are
+less like the fully-automated counter-vandalism bots and
+closer to batch scripts that routinely perform cleanup,
+administrative, and categorization tasks."
