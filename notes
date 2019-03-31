@@ -1341,4 +1341,30 @@ Vandalism comes from:
     Trolls, sock puppets, etc. - disgruntled "power users"
 "
 
+=======================================================================================
+https://en.wikipedia.org/wiki/Wikipedia:STiki
 
+"STiki is a tool available to trusted users that is used to detect and revert vandalism, spam, and other types of unconstructive edits made at Wikipedia. "
+
+"STiki chooses edits to show to end users; if a displayed edit is judged to be vandalism, spam, etc., STiki streamlines the reversion and warning process. STiki facilitates collaboration in reverting vandalism; a centrally stored lists of edits to be inspected are served to STiki users to reduce redundant effort."
+
+"STiki may only be used by editors with a Wikipedia account. Additionally, the account must meet some qualifications to reduce the probability of users misidentifying vandalism."
+
+"The account must have any one of: (1) the rollback permission/right, (2) at least 1000 article edits (in the article namespace, not to talk/user pages), or (3) special permission via the talk page. We emphasize that users must take responsibility for their actions with STiki. "
+
+"After login, users primarily interact with the GUI tool by classifying edits into one of four categories:
+vandalism
+good faith revert
+pass
+innocent "
+//interestingly, at the initial tool presentation~\cite{WestKanLee2010}, there was no "good faith" option. It seemed to have been added quite promptly after though, since the screenshot of the tool on the page has the button already and claims to have been made on 28 February 2010
+
+"Uncertainty over malice: It can be tricky to differentiate between vandalism and good-faith edits that are nonetheless unconstructive. "
+
+============================================================================
+https://en.wikipedia.org/wiki/Wikipedia:STiki/leaderboard
+
+"Above all else, it should be emphasized that STiki is not a competition."
+//compare also~\cite{HalRied2012} who warn against Wikipedia becoming gamified with vandals being "monsters"
+
+" STiki users who operate the tool recklessly in the hope of inflating their statistics are not helping themselves or the project "

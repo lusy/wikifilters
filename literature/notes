@@ -544,3 +544,19 @@ playing game—with “monsters”
 “overlords” (administrators) to submit
 to (http://en.wikipedia.org/wiki/
 Wikipedia:MMORPG)."
+
+==========================================
+\cite{WestKanLee2010}
+
+"STiki is an anti-vandalism tool for Wikipedia. Unlike similar tools, STiki does not rely on natural language
+processing (NLP) over the article or diff text to locate vandalism"
+
+"STiki leverages spatio-temporal properties of revision metadata."
+"The feasibility of utilizing such properties was demonstrated in our prior
+work, which found they perform comparably to NLP-efforts while being more efficient, robust to evasion, and
+language independent."
+
+"It consists of, (1) a server-side
+processing engine that examines revisions, scoring the likelihood each is vandalism, and, (2) a client-side GUI
+that presents likely vandalism to end-users for definitive classiffcation (and if necessary, reversion on
+Wikipedia"
