@@ -62,7 +62,52 @@ These dedicated vandal fighters mostly do so with the aid of some (semi or fully
 Context of work: algorithmic quality-control mechanisms (bots, ORES, humans) -> filter?
 
 %TODO Literature review!
+% How: within the subsections? as a separate section?
 Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted?
+
+\cite{GeiRib2010}
+Partial explanation why literature paid little attention to (semi-)automated tools up to this date:
+- old data according to which bots accounted for a very little amount of edits (2-4%)
+  ("that this number has grown
+dramatically: at present, bots make 16.33% of all edits.")
+- "largely involved in single-use tasks like importing public domain material" (so not the case anymore, check e.g. MusikBot)
+- "characterized in the literature as mere force-multipliers,
+increasing the speed with which editors perform their work
+while generally leaving untouched the nature of the tasks
+themselves"
+
+!! tools not only speed up the process but:
+"These tools greatly lower certain barriers to participation and render editing
+activity into work that can be performed by „average
+volunteers‟ who may have little to no knowledge of the
+content of the article at hand"
+
+critical discussion
+"Such acts of inclusion and exclusion may be necessary, but
+they are inherently moral in quality, speaking to questions of
+who is left out and what knowledge is erased."
+
+"It is for
+this reason that the argument that bots and assisted editing
+tools are merely force multipliers is narrow and dangerous"
+
+"In and outside of the Wikipedian community, tools
+like Huggle are often compared with video games in both
+serious critiques and humorous commentaries:"
+
+"We should not fall into the trap of speaking of bots and
+assisted editing tools as constraining the moral agency of
+editors"
+
+"these tools makes certain pathways of action easier for vandal
+fighters and others harder"
+
+"Ultimately, these tools take their users
+through standardized scripts of action in which it always
+possible to act otherwise, but such deviations demand
+inventiveness and time."
+
+---
 
 socio-technical assemblages (see Geiger)
 
@@ -77,10 +122,17 @@ According to research focusing on vandalism fighting, the amount/share/proportio
 
 \url{https://en.wikipedia.org/wiki/Wikipedia:Recent_changes_patrol}
 
+\cite{GeiRib2010}
+Check Figure 1: Edits to AIV by tool (in the meantime 10 years old. is there newer data on the topic??)
+
 \subsection{Semi-automated tools}
+
+%TODO consider adding screenshots
 
 Huggle, Twinkle, STiki~\cite{WestKanLee2010}
 \url{http://en.wikipedia.org/wiki/Wikipedia:STiki}
+
+also ARV, AIVer
 
 \url{https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser}
 
@@ -119,7 +171,86 @@ user’s preferences."~\cite{HalRied2012}
 
 huggle also sends out warnings to the offending editor on revert~\cite{HalRied2012}
 
+\cite{GeiRib2010}
+huggle description
+"edits are contextually
+presented in queues as they are made, and the user can
+perform a variety of actions (including revert and warn) with
+a single click. The software‟s built-in queuing mechanism,
+which by default ranks edits according to a set of vandalism-
+identification algorithms,"
+
+"Users of Huggle‟s automatic
+ranking mechanisms do not have to decide for themselves
+which edit they will view next"
+
+huggle's ranking heuristics:
+"in the default „filtered‟ queue, edits that contain a significant removal of content are placed
+higher; those that completely replace a page with blank text
+are even marked in the queue with a red „X‟."
+"anonymous users are viewed as more suspicious than
+registered users, and edits by bots and Huggle users are not
+even viewed at all."
+"Users whose edits have been previously
+reverted by a number of assisted users are viewed as even
+more suspicious, and those who have been left warnings on
+their user talk page (a process explained below) are
+systematically sent to the top of the queue."
+
+"This edit was placed into the queues of many
+Huggle users, as the software prioritizes mass removal of
+content by anonymous users who have vandalism warnings
+left for them. In fact, a green “1” appeared next to the
+article‟s name in the edit queue, indicating that a first-level
+warning had been issued."
+
+"In reporting the anonymous user to
+AIV, the Huggle program collected three edits which had been
+marked as vandalism in the previously-issued warnings."
+
+"The Huggle software took note of the
+fact that a report existed for this user at AIV, and asked the
+administrator if he wished to issue a temporary block."
+
+"Yet with four warnings and an active report at AIV, there was
+nothing else Huggle could do in the name of this non-
+administrator except append this incident of vandalism to his
+original report, further attempting to enroll a willing
+administrator into the ad-hoc vandal fighting network."
+
+\cite{GeiRib2010}
+"often-unofficial technologies have fundamentally
+transformed the nature of editing and administration in
+Wikipedia"
+"Of note is the fact that these tools are largely
+unofficial and maintained by members of the Wikipedia
+community."
+//refers also to bots
+
+\cite{GeiRib2010}
+Twinkle description:
+"user interface extension that runs inside
+of a standard web browser. Twinkle adds contextual links to
+pages in Wikipedia allowing editors to perform complex tasks
+with the click of a button – such as rolling back multiple edits
+by a single user, reporting a problematic user to
+administrators, nominating an article for deletion, and
+temporarily blocking a user (for administrators only)."
+
+Lupin's anti-vandal tool
+"provides a real-
+time in-browser feed of edits made matching certain
+algorithms"
+
 \subsection{Bots}
+
+\cite{GeiRib2010}
+BotDef
+"Bots – short for „robots‟ – are fully-automated software
+agents that perform algorithmically-defined tasks involved
+with editing, maintenance, and administration in Wikipedia."
+
+---
 
 ClueBot NG
 "ClueBot_NG uses state-of-the-art machine learning techniques to review all contributions to
@@ -137,6 +268,10 @@ AntiVandalBot~\cite{HalRied2012}
 Bots not patrolling constantly but instead doing batch cleanup works~\cite{GeiHal2013}:
 AWB, DumbBOT, EmausBot
 (also from figures: VolkovBot, WikitanvirBot, Xqbot)
+
+\cite{GeiRib2010}
+"“HBC AIV helperbot7” – automatically
+removed the third vandal fighter‟s now-obsolete report."
 
 \subsection{ORES}
 

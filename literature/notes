@@ -560,3 +560,207 @@ language independent."
 processing engine that examines revisions, scoring the likelihood each is vandalism, and, (2) a client-side GUI
 that presents likely vandalism to end-users for definitive classiffcation (and if necessary, reversion on
 Wikipedia"
+
+==========================================
+\cite{GeiRib2010}
+
+revealing invisible infrastructures via trace ethnography
+reconstruct the collaboration between bots, editors using semi-automated tools and administrators for banning a vandal
+
+"often-unofficial technologies have fundamentally
+transformed the nature of editing and administration in
+Wikipedia"
+"Of note is the fact that these tools are largely
+unofficial and maintained by members of the Wikipedia
+community."
+
+"„vandal fighting‟ as an
+epistemic process of distributed cognition,"
+
+"From autonomous
+software agents and semi-automated programs to user
+interface enhancements and visualization tools[...]
+Together, they make possible a
+kind of epistemological enforcement that often requires little
+to no specific knowledge about a given article."
+
+"we claim that in same way that the navigator of
+a ship can know trajectories only through the work of dozens
+of crew members, so is the blocking of a vandal a cognitive
+process made possible by a complex network of interactions
+between humans, encyclopedia articles, software systems, and
+databases."
+
+Partial explanation why literature paid little attention to (semi-)automated tools up to this date:
+- old data according to which bots accounted for a very little amount of edits (2-4%)
+  ("that this number has grown
+dramatically: at present, bots make 16.33% of all edits.")
+- "largely involved in single-use tasks like importing public domain material" (so not the case anymore, check e.g. MusikBot)
+- "characterized in the literature as mere force-multipliers,
+increasing the speed with which editors perform their work
+while generally leaving untouched the nature of the tasks
+themselves"
+
+BotDef
+"Bots – short for „robots‟ – are fully-automated software
+agents that perform algorithmically-defined tasks involved
+with editing, maintenance, and administration in Wikipedia."
+
+"At present, some of the most
+active bots are those that review every edit made in real time,
+using sophisticated heuristics to revert blatant incidents of
+spam and vandalism."
+
+Check Figure 1: Edits to AIV by tool (in the meantime 10 years old. is there newer data on the topic??)
+
+huggle description
+"edits are contextually
+presented in queues as they are made, and the user can
+perform a variety of actions (including revert and warn) with
+a single click. The software‟s built-in queuing mechanism,
+which by default ranks edits according to a set of vandalism-
+identification algorithms,"
+
+"Users of Huggle‟s automatic
+ranking mechanisms do not have to decide for themselves
+which edit they will view next"
+
+huggle's ranking heuristics:
+"in the default „filtered‟ queue, edits that contain a significant removal of content are placed
+higher; those that completely replace a page with blank text
+are even marked in the queue with a red „X‟."
+"anonymous users are viewed as more suspicious than
+registered users, and edits by bots and Huggle users are not
+even viewed at all."
+"Users whose edits have been previously
+reverted by a number of assisted users are viewed as even
+more suspicious, and those who have been left warnings on
+their user talk page (a process explained below) are
+systematically sent to the top of the queue."
+
+"This edit was placed into the queues of many
+Huggle users, as the software prioritizes mass removal of
+content by anonymous users who have vandalism warnings
+left for them. In fact, a green “1” appeared next to the
+article‟s name in the edit queue, indicating that a first-level
+warning had been issued."
+
+"In reporting the anonymous user to
+AIV, the Huggle program collected three edits which had been
+marked as vandalism in the previously-issued warnings."
+
+"The Huggle software took note of the
+fact that a report existed for this user at AIV, and asked the
+administrator if he wished to issue a temporary block."
+
+"Yet with four warnings and an active report at AIV, there was
+nothing else Huggle could do in the name of this non-
+administrator except append this incident of vandalism to his
+original report, further attempting to enroll a willing
+administrator into the ad-hoc vandal fighting network."
+
+"“HBC AIV helperbot7” – automatically
+removed the third vandal fighter‟s now-obsolete report."
+
+Standard procedure for blocking:
+"Generally, administrators will not temporarily
+block users from editing if they have not received four
+warnings."
+
+"The work performed by many distinct vandal
+fighters can be collated and then compressed into a single
+number, visible to a wide array of human and non-human
+actors."
+
+Twinkle description:
+"user interface extension that runs inside
+of a standard web browser. Twinkle adds contextual links to
+pages in Wikipedia allowing editors to perform complex tasks
+with the click of a button – such as rolling back multiple edits
+by a single user, reporting a problematic user to
+administrators, nominating an article for deletion, and
+temporarily blocking a user (for administrators only)."
+
+Lupin's anti-vandal tool
+"provides a real-
+time in-browser feed of edits made matching certain
+algorithms"
+
+"user‟s talk page, which was more of database for other
+vandal fighters than a space for dialogue with the anonymous
+editor."
+
+"While each editor made local
+judgments as to the veracity or appropriateness of specific
+contextualized edits, they collectively came to identify users
+who were problematic and thus deserving of a temporary ban."
+
+!! tools not only speed up the process but:
+"These tools greatly lower certain barriers to participation and render editing
+activity into work that can be performed by „average
+volunteers‟ who may have little to no knowledge of the
+content of the article at hand"
+
+"Such a reviewing process is in
+stark contrast to the more traditional forms of professional
+and academic knowledge production"
+
+"The domain expertise of vandal fighters is in the use of the
+assisted editing tools themselves, and the kinds of
+commonsensical judgment those tools enable."
+
+Importance of diffs
+"the edits in question
+were rendered visibly suspicious because they were displayed
+in such a manner."
+"removal of entire
+sections is a common form of vandalism that is difficult to
+detect by merely reading the article."
+
+"The Huggle program‟s queuing mechanism is another way in
+which edits are further transformed, contextualized, and
+abstracted"
+
+"one does not need to have the
+technical, literary, or academic skills or motivations to author
+an article in order to patrol it."
+
+"other users do not
+have to trawl through the user‟s recent contributions: unassisted
+vandal fighters can visit the user talk page to see previous
+warnings, and assisted users simply have the software
+automatically incorporate this information into its decision-
+making process."
+
+critical discussion
+"Such acts of inclusion and exclusion may be necessary, but
+they are inherently moral in quality, speaking to questions of
+who is left out and what knowledge is erased."
+
+"It is for
+this reason that the argument that bots and assisted editing
+tools are merely force multipliers is narrow and dangerous"
+
+"In and outside of the Wikipedian community, tools
+like Huggle are often compared with video games in both
+serious critiques and humorous commentaries:"
+
+"We should not fall into the trap of speaking of bots and
+assisted editing tools as constraining the moral agency of
+editors"
+
+"these tools makes certain pathways of action easier for vandal
+fighters and others harder"
+
+"Similarly, users can
+reconfigure their queues to not view anonymous edits as more
+suspicious,"
+
+"While these and many other workarounds are possible,
+they require a greater effort and a certain technical savvy on
+the part of their users."
+
+"Ultimately, these tools take their users
+through standardized scripts of action in which it always
+possible to act otherwise, but such deviations demand
+inventiveness and time."
