@@ -1467,3 +1467,50 @@ Zudem sieht der Entwurf „proaktive Maßnahmen“ vor, also Uploadfilter, mit d
 "Die kaum umsetzbare Löschfrist würde zudem insbesondere kleinere Anbieter hart treffen und neben befürchteten „Overblocking“-Effekten auch „große multinationale Plattformen“ stärken"
 
 " Darüber hinaus riskiere der Einsatz der bis auf Weiteres mangelhaften Technologie das Unterdrücken wichtiger Nachrichten, etwa Zeitungsartikel oder Berichterstattung aus Kriegsgebieten."
+
+==================================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism
+
+"This page is intended only for reports about active, obvious, and persistent vandals and spammers. "
+"Don't forget that blocking is a last resort;"
+"if there is a less restrictive way to solve the problem, please pursue it."
+
+"Checklist:
+1.The edits of the reported user must be obvious vandalism or obvious spam.
+2.Except for egregious cases, the user must have been given enough warning(s) to stop their disruptive behavior.
+3.The warning(s) must have been given recently and there must be reasonable grounds to believe the user(s) will further disrupt the site in the immediate future.
+4.The appropriate vandal template should be used if you decide that a report should be filed.
+  * For logged-in users only: It should look like: *{{vandal|Example user}} concise reason e.g. vandalised past 4th warning. ~~~~
+  * For IP users only: it should look like: *{{IPvandal|192.0.2.16}} concise reason e.g. vandalised past 4th warning. ~~~~
+5.Requests for further sanctions against a blocked user (e.g., talk page, e-mail blocks) should be made at Wikipedia:Administrators' noticeboard/Incidents, as a bot automatically removes reports made here about accounts that are blocked.
+6.Reports of sockpuppetry should be made at Wikipedia:Sockpuppet investigations unless the connection between the accounts is obvious and disruption is recent and ongoing."
+
+There are user reported and bot reported section
+
+================================================================================
+https://en.wikipedia.org/wiki/Wikipedia:Guide_to_administrator_intervention_against_vandalism
+
+"This help page is a how-to guide.
+It details processes or procedures of some aspect(s) of Wikipedia's norms and practices. It is not one of Wikipedia's policies or guidelines, as it has not been thoroughly vetted by the community."
+
+"This guide is intended to prevent invalid reports that needlessly take up administrators' time,"
+
+"Administrator intervention against vandalism is for reporting users currently engaging in persistent, clear vandalism or spamming."
+
+"Report only clear violations that do not require discussion or detailed explanations. If there is a reasonable chance that something may not be vandalism, it probably should be reported elsewhere, or not at all. "
+
+"Vandals should always receive enough warnings before being reported unless they are vandalism-only accounts. What constitutes "enough" is left to your best judgment. "
+
+"Consider the user's past edits, warnings and blocks, the severity of their offense, the likelihood that their edit(s) could have been made in error or otherwise in good faith, and the type of user in question (IP addresses may be shared or dynamic, and old warnings could be irrelevant to the current situation). "
+
+!!"Blocking is meant to be preventive, not punitive."
+"Therefore, the user must show a strong likelihood of making further disruptive edits despite warnings and being informed of the blocking policy. "
+"Always give a final warning, and report only if the vandal has vandalized at least once after that."
+
+"When reporting at AIV is not appropriate
+
+    Any vandal who hasn't been warned properly should not be reported.
+    Violations of the three-revert rule should be reported to Wikipedia:Administrators' noticeboard/3RR
+    If you suspect someone of sockpuppetry, file a report at Wikipedia:Sockpuppet investigations. Obvious and malicious sockpuppets engaging in vandalism may be reported to AIV. A link to the sockpuppetry report should be included in the reason for reporting.
+    Usernames that clearly violate username policy should be reported at Wikipedia:Usernames for administrator attention.
+    Do not report edit wars or other disruptive behavior that doesn't fit the description at Wikipedia:Vandalism. These can instead be reported to the administrators' noticeboard or its incidents subpage. AIV deals mainly with obviously malicious edits that require no discussion; complex cases should usually be referred to other boards."
