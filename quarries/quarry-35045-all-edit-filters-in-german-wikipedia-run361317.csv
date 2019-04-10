@@ -1,0 +1,1000 @@
+	af_id,	af_pattern,	af_user,	af_user_text,	af_timestamp,	af_enabled,	af_comments,	af_public_comments,	af_hidden,	af_hit_count,	af_throttled,	af_deleted,	af_actions,	af_global,	af_group
+10,"	action == ""edit"" & article_namespace == 0 & user_groups == ""*"" & summary rlike ""^\s*(?:/\*.*\*/)?\s*$""",1859,	Filzstift,	20130605150032,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert
+
+""Warnung: Dieser Filter wurde sicherheitshalber automatisch deaktiviert. Er hat mehr als die definierte Obergrenze von 5,00 % der Aktionen erkannt."" => deaktiviert Hozro, 20. Juli 2011
+
+Eingerichtet als Alternative zu Wikipedia:Meinungsbilder/Hinweis auf Notwendigkeit der Angabe von Zusammenfassung und Quellen
+http://de.wikipedia.org/w/index.php?title=Wikipedia:Missbrauchsfilter/Antr%C3%A4ge&oldid=61011113#Zusammenfassung_und_Quellen",	Nicht bearbeitete Zusammenfassung,0,244584,1,1,,0,	default
+6,"	article_namespace==0
+& action==""edit""
+& added_lines rlike ""(?:'''Fetter Text'''|''Kursiver
+Text''|\[http:\/\/www\.example\.com Link-Text]|Datei:Beispiel\.jpg|== (?:Überschrift|Kopfzeile)
+==|\[\[(?:Link-Text|Media:Beispiel\.ogg)]]|# Nummerierter Listeneintrag|:Eingerückte Zeile|<math>Formel
+hier einfügen<\/math>|<nowiki>Hier unformatierten Text eingeben<\/nowiki>|<big>Großer Text<\/big>|<small>Kleiner Text<\/small>|<sup>Hochgestellter Text<\/sup>|<sub>Tiefgestellter Text<\/sub>)""",1160488,	Hephaion,	20130605163406,1,"	5. Juni 2013: Auf Verbieten gestellt, da Versehen in Kombination mit der Systemnachricht ausgeschlossen ist -- Hephaion
+
+
+[[Wikipedia:Missbrauchsfilter/6]]",	Wikisyntax aus der Zeichenleiste hinzugefügt,0,54803,0,0,"	warn,disallow,tag",0,	default
+70,"	article_namespace >= 2
+& article_namespace <= 3
+& action==""edit""
+& ( user_editcount < 3
+  & user_age != 0
+  & (summary rlike ""\b\w+\.\w{2,4}\b"" | added_links > 0)
+  | added_lines = ""(font-color: transparent|rayban)""
+)",35543,	Lustiger seth,	20181226195714,1,"	Loggen, wenn ein neuer Weblink von neuangemeldeten Benutzern (<6 Beiträge) im Benutzernamensraum angelegt wird. Grund ist folgende Diskussion: https://de.wikipedia.org/wiki/Wikipedia:Administratoren/Notizen/Archiv/2011/01#Website_in_Wikipedia_-_Social_Bookmark_Backlink_SEO_PR8_.2F_Einbremsen_von_Ebay-Gesch.C3.A4ftemachern
+2017-01-30 xqt: Weblinks in ZQ ebenfalls loggen
+2018-12-26 seth: syntaxfix, so oder so waren die klammern unsinnig",	Verdacht auf Linkspam im Benutzernamensraum,0,40841,0,0,,0,	default
+37,"	(article_namespace == 0 | article_namespace == 10 | article_namespace == 14)
+& action == ""edit""
+& !(""sysop"" in user_groups)
+& contains_any(lcase(summary), ""revert"", ""rückgängig"", ""zurückgesetzt"", ""verworfen"")",2379,	Seewolf,	20140810113523,0,"	siehe [[WP:Missbrauchsfilter/37]]
+2014-08-10: abgeschaltet. Seewolf",	Edit-War-Protektor: Blendet Warnhinweis [[MediaWiki:abusefilter-warning-editwar]] ein,0,22216,0,0,"	throttle,warn",0,	default
+107,"	action==""edit""
+& (((user_age == 0 | user_editcount < 12)
+& (article_namespace == 2 | article_namespace == 3 | article_namespace == 0)
+& substr(article_text, 0, length(user_name)) != user_name
+& ( length(user_name) == length(article_text) 
+  | substr(article_text, length(user_name), 1) != ""/""
+)
+& ! (lcase(article_text) rlike ""^(?:[0-9.]+|(?:[0-9a-f]{0,4}:)+)[0-9a-f]{1,4}$"")
+& ( (old_size > 500 & new_size <= 70) 
+  | (old_size > 0   & new_size == 0)
+)
+)
+|
+ ((user_age == 0 | user_editcount < 12)
+& (article_namespace == 2 | article_namespace == 3 | article_namespace == 0)
+& substr(article_text, 0, length(user_name)) != user_name
+& ( length(user_name) == length(article_text) 
+  | substr(article_text, length(user_name), 1) != ""/""
+)
+& ! (lcase(article_text) rlike ""^(?:[0-9.]+|(?:[0-9a-f]{0,4}:)+)[0-9a-f]{1,4}$"")
+& ( (old_size > 500 & new_size <= 70) 
+  | (old_size > 0   & new_size == 0)
+)
+))
+| user_name =""Живот""",2379,	Seewolf,	20181030043715,1,"	2014-02-04, Wnme: da vermehrt nicht eingeloggte user in im BNR editieren Warnung angepasst
+2014-01-25, Wnme: nach erfolgreicher Testphase aktiviert
+2014-01-03, seth: nach neuem request re-aktiviert, allerdings nur fuer user namespace. und erst mal logging-only
+2013-06-05, Filzstift: als gelöscht markiert, da seit langem deaktiviert
+
+2011-11-14, seth: die summary-bedingung bedeutet etwa: wenn summary == """" oder "" "" oder ""/* irgendwas */""
+
+2011-09-28, Seewolf: Dieser Filter soll größere Löschungen durch IPs ohne weitere Eingaben in der Zusammenfassungszeile protokollieren und später warnen.",	Große Löschungen durch IP,0,20322,0,0,	disallow,0,	default
+202,"	(
+summary contains ""Die Seite wurde ohne Inhalt angelegt."" 
+| (new_size <7 & old_size = 0)
+)
+& (user_age == 0 | user_editcount <12)",2379,	Seewolf,	20170201172523,1,"	2015-05-29, Wnme: Filter angelegt, um herauszufinden, wie häufig Seiten ohne Inhalt angelegt werden und ob hierbei Vandalismus eine Rolle spielt
+2015-06-06, Wnme: nur für IPs und neue User
+2017-01-30, xqt: im eigenen BNR ausschließen
+2017-02-01, seewolf: Gerade im eigenen BNR erkennt man die Trolle",	Anlage leerer Seiten,0,16893,0,0,,0,	default
+49,"	article_namespace == 0
+& ! (""bot"" in user_groups )
+& added_lines rlike '\[\[\s*(?i:category|kategorie):\s*[Gg]estorben[\s|_]2015\s*(?:\|[^\]]*)?\]\]'",35543,	Lustiger seth,	20160102231016,0,	siehe [[Wikipedia:Bearbeitungsfilter/49]],	Gestorben eingefügt,0,14433,0,1,	tag,0,	default
+102,,1859,	Filzstift,	20190326075656,1,,	Nicht hilfreiche Bearbeitungen,1,12133,0,0,	disallow,0,	default
+248,,2379,	Seewolf,	20190409094213,1,,	Verdacht auf Sperrumgehung durch Bertramzwo,1,10059,0,0,,0,	default
+66,,1859,	Filzstift,	20190325125023,1,,	Verdacht auf Sperrumgehung: GLGermann,1,9265,0,0,	disallow,0,	default
+4,"	article_namespace==0
+& action==""edit""
+& user_age > 0
+& !user_groups contains ""editor""
+& user_editcount < 50
+& edit_delta > -40
+& edit_delta < 40
+& ( rcount(""\Bendete"",added_lines) < rcount(""\Bendete"",removed_lines)
+  | count(""bayrisch"",added_lines) < count(""bayrisch"",removed_lines)
+  | count(""destotrotz"",added_lines) < count(""destotrotz"",removed_lines)
+  | count(""er-Jahr"",added_lines) < count(""er-Jahr"",removed_lines)
+  | count(""gleich"",added_lines) < count(""gleich"",removed_lines)
+  | rcount(""[hH]erren"",added_lines) < rcount(""[hH]erren"",removed_lines)
+  | count(""ithilfe"",added_lines) < count(""ithilfe"",removed_lines)
+  | count(""verschiedenste"",added_lines) < count(""verschiedenste"",removed_lines)
+  | count(""zeitgleich"",added_lines) < count(""zeitgleich"",removed_lines)
+  | count(""hl."",added_lines) < count(""hl."",removed_lines) & count(""Hl."",added_lines) > count(""Hl."",removed_lines)
+  | count(""heilige"",added_lines) < count(""heilige"",removed_lines) & count(""Heilige"",added_lines) > count(""Heilige"",removed_lines)
+  | lcase(summary) rlike ""dumpf(?:backe|i\b)|blödsinn|chwachsinn|kacke|hausmeister""
+  | removed_lines rlike ""(?:Guerr?ill|[eE]vakuier|Ausfallswinkel)""
+)",35543,	Lustiger seth,	20181125143358,0,"	siehe [[WP:Missbrauchsfilter/4]]
+taggen unnoetig wegen recht vieler false positives
+2018-11-25 seth: sieht nicht so aus, als waere bechterev noch aktiv. :-) deswegen deaktiviert",	Logging von möglichen Aktivitäten durch Bechterev zur Optimierung entsprechender Block-Filter,0,8782,0,0,,0,	default
+253,,2379,	Seewolf,	20190109131327,1,,	Bitte nicht so schnell,1,7728,0,0,"	throttle,disallow",0,	default
+84,"	article_namespace == 0 
+& user_age < 3600
+& added_lines irlike ""\bdein{1,2}e[mr]? mudd+(a+|er|\b)""",39066,	MBq,	20181003091616,1,	[[Wikipedia:Bearbeitungsfilter/84]],	„Deine Mudda“-Artikel,0,7720,0,0,	disallow,0,	default
+2,"	article_namespace % 2 == 1 
+& edit_delta > 50 
+& action == ""edit"" 
+& ! (""autoconfirmed"" in user_groups )
+& ! ( summary rlike ""\b[rR](?:ückgängig|evert)""
+  | ""~~~~"" in added_lines)",492187,	Inkowik,	20150217162538,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert",	Unterschrift vergessen,0,7475,0,1,,0,	default
+62,"	user_editcount < 500
+& article_namespace == 0
+& action == ""edit""
+& ! ""bot"" in user_groups
+& (  rcount(""[sS]chweizbezogen"", added_lines) != rcount(""[sS]chweizbezogen"", removed_lines) 
+   | rcount(""[öÖ]sterreichbezogen"", added_lines) != rcount(""[öÖ]sterreichbezogen"", removed_lines)
+   | rcount(""[lL]iechtensteinbezogen"", added_lines) != rcount(""[lL]iechtensteinbezogen"", removed_lines)
+)",39066,	MBq,	20151120123337,0,"	Hinzufügen oder Entfernen von <!--schweizbezogen--> loggen, um potentielle Konfliktherde oder Men on a Mission frühzeitig zu erkennen.
+
+auf Benutzer mit weniger als 500 edits limitiert, bis dahin sollte ein MoM erkannt sein.
+
+vorübergehend deaktiviert wg. Bot on a Mission Hozro 4/12/2011
+österreich|liechtenstein ergänzt, Bots ignorierend - xqt 31/01/2012
+
+deaktiviert, siehe disk - MBq 20.11.2015",	schweiz|österreich|liechtensteinbezogen,0,7235,0,0,,0,	default
+94,,35543,	Lustiger seth,	20151106113012,0,,	Logging für Astronomie-Artikel,1,6725,0,1,,0,	default
+67,,2379,	Seewolf,	20181021175532,1,,	Einschränkung für neuangemeldete Benutzer auf Seiten mit hohem Trollaufkommen (sogenannte Honeypots),1,6616,0,0,"	warn,disallow",0,	default
+14,,287832,	Xqt,	20190321132554,1,,	Benutzerkonto-Neuanlagen: Ungeeigneter Benutzername,1,5414,0,0,	disallow,0,	default
+163,"	action == ""edit""
+& article_namespace == 0
+& edit_delta < 250
+& !(user_groups contains ""bot"")
+& (pattern:=""\bfacebook\.(?:com|de|at)|\bbeuth.de\b"";
+   added_lines rlike pattern
+   & rcount(pattern, added_links) > rcount(pattern, removed_links)
+  )",35543,	Lustiger seth,	20181226192724,0,"	siehe [[Wikipedia:Missbrauchsfilter/163]]
+und siehe [[WP:SBL#beuth.de]]
+2018-12-26 seth: performance von *_links ist laut manual kacke, deswegen vorher added_lines-check","	Untauglicher externer Link (Facebook, Beuth)",0,5202,0,0,,0,	default
+242,,2379,	Seewolf,	20190102155457,1,,	Bitte nicht so schnell,1,4859,0,0,"	throttle,disallow",0,	default
+236,"	article_namespace==0
+& action==""edit""
+& added_lines rlike ""<nowiki *>ISBN:? +[0-9\-xX]+</? *nowiki *>""",2379,	Seewolf,	20161004134152,1,	03.10.2016 xqt: Warnung bei in <nowiki>-Tag eingebundener ISBN,	Falsches ISBN-Format,0,4397,0,0,	tag,0,	default
+148,,45468,	PDD,	20150125134446,0,,	Linux-Editwars,1,3806,0,0,"	warn,disallow",0,	default
+199,"	article_namespace == 0
+& ! ( ""bot"" in user_groups )
+& rcount('\[\[\s*(?i:category|kategorie):\s*[Gg]estorben[\s|_]2015\s*(?:\|[^\]]*)?\]\]', added_lines) > rcount('\[\[\s*(?i:category|kategorie):\s*[Gg]estorben[\s|_]2015\s*(?:\|[^\]]*)?\]\]', removed_lines)",35543,	Lustiger seth,	20160313160159,0,"	siehe [[Wikipedia:Bearbeitungsfilter/222]]
+
+bitte diesen Filter **nicht** im Jahr 2016 umbenennen, sondern einen neuen anlegen (es ändern sich zur Zeit nach der Umbenennung auch die alten Logeinträge und sorgen für Irritation). PDD",	Gestorben 2015,0,3272,0,1,	tag,0,	default
+250,,2379,	Seewolf,	20180919160948,0,,	Massenanmeldungen,1,3213,0,0,	throttle,0,	default
+178,"	action == ""edit"" 
+& article_namespace = 0
+& user_editcount < 500
+& ! (""bot"" in user_groups)
+&(
+  (  count(""†"", removed_lines) > count(""†"", added_lines)
+   & rcount(""\bgest(?:orben|\.)"", removed_lines) < rcount(""\bgest(?:orben|\.)"", added_lines)
+  )|(count(""†"", removed_lines) < count(""†"", added_lines)
+   & rcount(""\bgest(?:orben|\.)"", removed_lines) > rcount(""\bgest(?:orben|\.)"", added_lines)
+  )|(rcount(""[( ]\*"", removed_lines) > rcount(""[( ]\*"", added_lines)
+   & rcount(""\bgeb(?:oren|\.)"", removed_lines) < rcount(""\bgeb(?:oren|\.)"", added_lines)
+  )|(rcount(""[( ]\*"", removed_lines) < rcount(""[( ]\*"", added_lines)
+   & rcount(""\bgeb(?:oren|\.)"", removed_lines) > rcount(""\bgeb(?:oren|\.)"", added_lines)
+  )
+)",35543,	Lustiger seth,	20151014211858,1,	siehe [[Wikipedia:Bearbeitungsfilter/178]],	Umstrittene genealogische Zeichen,0,3053,0,0,,0,	default
+35,,2379,	Seewolf,	20121202140843,0,,"	Sperrumgehung, keine Besserung erkennbar: Mutter Erde",1,2720,0,1,"	warn,disallow",0,	default
+28,"	action == ""edit""
+& (article_namespace == 0 | article_namespace == 6)
+& !(""bot"" in user_groups)
+& (pattern:=""\b(?:dbpedia\.org|docplayer\.|grin\.(?:com|de)|gutefrage\.net/(?:frage|tipp)|hausarbeiten\.de|kathpedia.com|webcache\.googleusercontent\.com|(?:docs|drive|images)\.google\.com(?!/viewer)|deacademic\.com)"";
+   added_lines irlike pattern
+   & rcount(pattern, added_links) > rcount(pattern, removed_links)
+  )
+& !user_name rlike ""J. Patrick Fischer""",35543,	Lustiger seth,	20190407214620,1,"	siehe: [[Wikipedia:Missbrauchsfilter/28]]
+2015-10-31 xqt: Bots ausgeklammert
+2018-10-03 seth: docplayer\. hinzugefuegt
+2018-12-26 seth: performance von *_links ist laut manual kacke, deswegen vorher added_lines-check
+2019-04-07 seth: 1. + images.google.com; 2. + file-namespace",	Untauglicher externer Link (erfüllt WP:EL bzw. WP:Q nicht),0,2601,0,0,	warn,0,	default
+55,"	article_namespace==0
+& action==""edit""
+& rcount(""(?<!\.)\b31\.(?:&nbsp;| )?(?:Feb|Apr|Jun|Sep|Nov|0?[2469]\.|11\.)|(?<!\.)\b30\.(?:&nbsp;| )?(?:Feb|0?2\.)|-(?:0[2469]|11)-31\b(?!-)|-02-30\b(?!-)"",added_lines) 
+> rcount(""(?<!\.)\b31\.(?:&nbsp;| )?(?:Feb|Apr|Jun|Sep|Nov|0?[2469]\.|11\.)|(?<!\.)\b30\.(?:&nbsp;| )?(?:Feb|0?2\.)|-(?:0[2469]|11)-31\b(?!-)|-02-30\b(?!-)"",removed_lines)",35543,	Lustiger seth,	20190324185127,1,"	siehe [[Wikipedia:Bearbeitungsfilter/55]]
+
+2014-12-10, seth: falsche DOI-eintraege koennen zu false positives fuehren, deswegen jetzt pruefung, ob vor der 31 oder 30 kein punkt kommt.
+2019-03-09, seth: ""-02-30\b"" alleine ist zu ungenau; versucht mit -02-30\b(?!-) weiter einzugrenzen",	nicht existentes Datum,0,2550,0,0,	warn,0,	default
+197,"	article_namespace == 0
+& action == ""edit""
+& old_wikitext contains ""Personendaten""
+& old_wikitext contains ""amerikanisch""
+& count(""amerikanisch"", old_wikitext) == count(""amerikanisch"", new_wikitext)
+& rcount(""(?i:US)-amerikanisch"", old_wikitext) < rcount(""(?i:US)-amerikanisch"", new_wikitext)",35543,	Lustiger seth,	20150918215649,1,	siehe #196,	amerikanisch → US-amerikanisch ([[WP:RS#Korrektoren]]),0,2525,0,0,,0,	default
+43,"	article_namespace==0
+& action==""edit""
+& (
+  rcount('<a class=""(?:inlineAdmedialink|ktg6us78hf8vdu7)"" href=""[^""]*"">', added_lines) > 
+  rcount('<a class=""(?:inlineAdmedialink|ktg6us78hf8vdu7)"" href=""[^""]*"">', removed_lines)
+  | count('class=""google-src-text', added_lines) > count('class=""google-src-text', removed_lines)
+)",35543,	Lustiger seth,	20130727225022,1,"	Wo auch immer das Zeug herkommt, es hat in einer Enzyklopädie nix verloren, siehe [[Wikipedia:Missbrauchsfilter/43]]",	Überflüssige HTML/JS-Codefragmente von Drittsoftware,0,2439,0,0,"	warn,disallow",0,	default
+65,,2379,	Seewolf,	20150131141821,0,,"	Sperrumgehung, keine Besserung erkennbar: GLGermann",1,2342,0,1,	disallow,0,	default
+196,"	article_namespace == 0
+& action == ""edit""
+& old_wikitext contains ""Personendaten""
+& old_wikitext contains ""amerikanisch""
+& count(""amerikanisch"", old_wikitext) == count(""amerikanisch"", new_wikitext)
+& count(""US-amerikanisch"", old_wikitext) > count(""US-amerikanisch"", new_wikitext)",45468,	PDD,	20150125113849,1,,	US-amerikanisch → amerikanisch ([[WP:RS#Korrektoren]]),0,2056,0,0,,0,	default
+160,"	article_namespace == 6
+& action == ""edit""
+& lcase(removed_lines) rlike '{{(?:düp|dateiüberprüfung|otrs in arbeit)[\|}/]'
+& !(""sysop"" in user_groups)
+& !(""bot"" in user_groups)
+& !(""editor"" in user_groups)",1859,	Filzstift,	20190326074810,1,"	2019-03-26: Filter auf public, kein Grund zum Verstecken (wird eh nur geloggt)",	Entfernung des DÜP-Bausteins durch Nicht-Sichter bzw. Nicht-Administratoren,0,1966,0,0,,0,	default
+261,,2379,	Seewolf,	20190112212429,1,,	Youtube-Link-Entfernungen,1,1880,0,0,	disallow,0,	default
+85,,1859,	Filzstift,	20190326075439,1,,	Verdacht auf Sperrumgehung: Liechtensteiner50,1,1761,0,0,	disallow,0,	default
+172,,2379,	Seewolf,	20190127105142,1,,	potentielle Sperrumgehung Fussball- und Politiktroll,1,1722,0,0,	disallow,0,	default
+234,,2379,	Seewolf,	20170409061448,0,,	Friedjof,1,1704,0,1,,0,	default
+182,"	action == ""edit""
+& article_namespace rlike ""^(?:0|6|10|14)$""
+& added_links rlike ""https?://\barchive.(?:today|is)/\w{5,8}(?:#selection|$)""",35543,	Lustiger seth,	20181229200718,0,	[[WP:Bearbeitungsfilter/182]],	Untauglicher externer Link (archive.is bzw. archive.today),0,1670,0,1,,0,	default
+170,,2379,	Seewolf,	20170505104813,0,,	Messina 4,1,1668,0,0,,0,	default
+149,,278315,	Koenraad,	20150304144129,0,,	Logging von möglichen Aktivitäten durch Dribbler auf Nicht-ANR-Seiten zur Optimierung Filter 155-157,1,1574,0,0,,0,	default
+16,,35543,	Lustiger seth,	20180609113414,0,,	LA-Bremse,1,1464,0,1,,0,	default
+54,,35543,	Lustiger seth,	20151201223726,0,,"	Sperrumgehung, keine Besserung erkennbar: angel54",1,1335,0,1,	disallow,0,	default
+88,,2379,	Seewolf,	20190213123828,1,,	Astronomiebereich,1,1206,0,0,,0,	default
+185,,2379,	Seewolf,	20190328133426,1,,	Spielwiesenschutz,1,1150,0,0,	disallow,0,	default
+122,"	article_namespace = 0 &
+added_lines rlike ""\[https?://de\.wikipedia\.org/wiki/(\S+)\s+\1\s?\]""",35543,	Lustiger seth,	20150103162836,0,,	Weblinks auf Wikipedia-Artikel im ANR,0,1042,0,1,,0,	default
+45,"	action == ""edit"" 
+& article_articleid == 0 
+& article_namespace >= 2
+& article_namespace <= 3
+& ! (article_text contains ""/"")
+& new_wikitext rlike ""\{\{[Gg](?:b|esperrter Benutzer)\}\}""",39066,	MBq,	20150512131302,0,"	siehe [[Wikipedia:Bearbeitungsfilter/45]]
+
+Benutzerunterseiten (für PDDsche monobook.js u.ä.) ausgenommen --CoE 18. April 2010",	Nutzungseinschränkung für [[Vorlage:Gesperrter Benutzer]],0,1001,0,0,"	warn,tag",0,	default
+263,"	user_age==0
+& article_namespace==2
+& !(article_text contains 'stube') /* Benutzer:Artikelstube und Benutzer:Wartungsstube ausgenommen */
+& old_size==0
+& action=='edit'",1859,	Filzstift,	20190326074300,1,"	[[Wikipedia:Bearbeitungsfilter/263]]
+———
+2019-3-26 Filzstift: Filter public (gegenwärtig kein Grund zum Verstecken)
+2018-10-3 MBq: Diskseiten wieder frei, keine Treffer mehr
+2018-4-8 MBq: Zeile 3 ergänzt das aktuelle Trollverhalten
+2018-4-7 MBq: 
+https://de.wikipedia.org/w/index.php?title=Wikipedia:Administratoren/Anfragen&oldid=178875979#Sockenpuppe",	Benutzerseiten können nur angemeldet angelegt werden,0,997,0,0,	disallow,0,	default
+19,,2379,	Seewolf,	20161020215719,0,,"	Sperrumgehung, keine Besserung erkennbar: Thomas7",1,983,0,0,	disallow,0,	default
+34,,2379,	Seewolf,	20181201132903,0,,	Sperrumgehung user:Hans Rosenthal,1,976,0,0,	disallow,0,	default
+115,"	article_namespace == 0
+& action == ""edit""
+& (rcount(""mw-collapsible"",added_lines) > rcount(""mw-collapsible"",removed_lines))",35543,	Lustiger seth,	20150507063512,0,	siehe Wikipedia:Missbrauchsfilter/Anträge#Klappbare Inhalte,"	""mw-collapsible"" im ANR",0,948,0,0,,0,	default
+198,,608538,	Schniggendiller,	20181215230047,0,,	Benutzer:Politik 1,1,871,0,0,	disallow,0,	default
+211,,2379,	Seewolf,	20190408095614,0,,	Verdacht auf Sperrumgehung Bertram,1,788,0,1,,0,	default
+8,,1859,	Filzstift,	20190326075353,0,,	Verdacht auf Sperrumgehung: Werddemer,1,763,0,0,	disallow,0,	default
+74,,2379,	Seewolf,	20181114094123,0,,"	Sperrumgehung, keine Besserung erkennbar: Arcy",1,758,0,0,	disallow,0,	default
+213,,2379,	Seewolf,	20190318122112,1,,	Verdacht auf Sperrumgehung Operation Saba,1,730,0,0,	disallow,0,	default
+48,,39066,	MBq,	20141103122920,0,,	Schutz vor Stalking: Kopilot,1,714,0,0,	disallow,0,	default
+25,,35543,	Lustiger seth,	20151201224823,0,,	Benutzerkonto-Neuanlagen: Diesel-Accounts,1,710,0,1,"	warn,disallow",0,	default
+156,,2379,	Seewolf,	20181024122540,0,,"	Sperrumgehung, keine Besserung erkennbar: Dribbler",1,695,0,1,,0,	default
+63,,1859,	Filzstift,	20190326075033,1,,	E-Mails auf bestimmten Seiten im Wikipedia-Namensraum verhindern,1,673,0,0,	warn,0,	default
+31,"	user_editcount <= 10
+& action = ""move""
+& user_age > 0
+& user_age < 3456000",93464,	Ra'ike,	20190322174227,1,"	2019-03-03 Seewolf: 40 Tage dürfte einige Vandalen von globalen Umbenennern unterscheiden.
+Verschiebeschutz / Bremspedal gegen Verschiebevandalen.
+
+2019-03-22 Ra'ike: Syntaxfehler am Beginn der Zeile 4. '>' durch '&' ersetzt",	Schutz vor Massenverschiebungen,0,656,0,0,"	throttle,disallow",0,	default
+200,,1859,	Filzstift,	20190325124804,1,,	Verdacht auf Sperrumgehung: Werddemer,1,654,0,0,,0,	default
+241,,39066,	MBq,	20180912051640,1,,	Zufallsverlinkung,1,641,0,0,	disallow,0,	default
+116,,2379,	Seewolf,	20140708093039,0,,	Logging von möglichen Aktivitäten durch TJMD auf BNR- und WNR-Seiten zur Optimierung Filter 118,1,639,0,0,,0,	default
+121,,45468,	PDD,	20150125133213,0,,"	Sperrumgehung, keine Besserung erkennbar: blietz",1,627,0,0,	disallow,0,	default
+222,"	article_namespace == 0
+& ! ( ""bot"" in user_groups )
+& rcount('\[\[\s*(?i:category|kategorie):\s*[Gg]estorben[\s|_]2016\s*(?:\|[^\]]*)?\]\]', added_lines) > rcount('\[\[\s*(?i:category|kategorie):\s*[Gg]estorben[\s|_]2016\s*(?:\|[^\]]*)?\]\]', removed_lines)",35543,	Lustiger seth,	20160313155815,0,"	siehe [[Wikipedia:Bearbeitungsfilter/222]]
+
+bitte diese Regel _nicht_ im Jahr 2017 umbenennen, sondern eine neue anlegen (es ändern sich zur Zeit nach der Umbenennung auch die alten Logeinträge und sorgen für Irritation).",	Gestorben 2016,0,622,0,0,	tag,0,	default
+11,"	ip_in_range(user_name, ""217.224.192.0/18"")
+& action == ""edit""
+& (
+  ( article_namespace == 0
+    & ( 
+        ( bc_n := count(""'''"", added_lines);
+          bc_o := count(""'''"", removed_lines);
+          bc_n > bc_o & (edit_delta == bc_n-bc_o | edit_delta == (bc_n-bc_o) * 3)
+        ) 
+        |
+        ( lc_n := count(""[["", added_lines);
+          lc_o := count(""[["", removed_lines);
+          lc_n > lc_o & edit_delta == (lc_n-lc_o) * 4
+        ) 
+        |
+        ( pat1 := ""\[\[[^]|]*(Sprache|[Ll]atein)\|[^]|]+\]\]"";
+          c_n := rcount(pat1, added_lines);
+          c_o := rcount(pat1, removed_lines);
+          c_n > c_o
+        )
+        |
+        ( pat2 := ""(?:{{[a-zA-Z]+?S\||\[\[.+?\|)"";
+          s_n := rcount(pat2, added_lines);
+          s_o := rcount(pat2, removed_lines);
+          s_n > s_o
+        )
+      )
+  )
+  |
+  ( article_namespace==1
+    & 
+    ( 
+      added_lines rlike ""Verlink(un)?g|verlinken|verli?nkt\s+werden|weitergel|Weiterl(tg)?\.|(k?eine|die) WL|k.*?pl.+?Name|an(zu)?klick|(z.{1,3}|das\s+)Lemma|lemmagerecht|nicht (direct|verli?nkt)|vermisse ich""
+     |
+      lcase(added_lines) rlike ""falsche einwohner|(alte|neuere) daten""
+    )
+  )
+  | 
+  ( article_namespace==3 & ! user_name == article_text 
+    & 
+    lcase(added_lines) rlike ""bergner|verfolger|mobbing|verlink""
+  )
+)",39066,	MBq,	20170203185354,0,"	2009 gelöscht
+2015-01-18, WolfgangRieger: als Filter #195 neu angelegt (Logging only):
+	Werddemer-Edits, die ausschließlich aus 
+	* Fettungen, 
+	* Einfügen von Links 
+	oder aus
+	* Verlinkungen der Form ""[[*Sprache|*]]""
+	bestehen.
+
+2015-01-20, WolfgangRieger: Filter #195 nach #11 kopiert, da an alter Position nicht ausgeführt
+2015-01-22, WolfgangRieger: umgestellt auf Blocking
+
+2015-01-26, xqt: * Sprachverlinkungen der Form {{<lang>S|
+2015-01-26, WolfgangRieger: Spez. Diskussionsbeiträge
+2015-01-27, WolfgangRieger: Bearb. d. eig. Disk. erlaubt
+2015-02-05, xqt: Verlinkung mit Pipelinks (2. Teil im pat2)
+2015-02-05, xqt: Diskussionsbeiträge mit ""weitergel""
+2015-02-08, xqt: Diskussionsbeiträge mit ""Weiter.""
+2015-02-09, xqt: Diskussionsbeiträge mit ""Verlinkung""
+2015-02-13, xqt: Diskussionsbeiträge mit ""kpl. Name""
+2015-02-14, xqt: Diskussionsbeiträge mit ""an(zu)klick""
+2015-02-17, xqt: Diskussionsbeiträge mit ""z(um)|das Lemma""
+2015-02-20, xqt: Diskussionsbeiträge mit ""nicht direct""
+2015-03-08, xqt: Diskussionsbeiträge mit ""lemmagerecht""
+2015-03-11, xqt: Diskussionsbeiträge mit ""falsche einwohner"" und ""vermisse ich""
+2015-03-16, xqt: Diskussionsbeiträge mit ""neuere|alte daten
+2017-2-3 MBq derzeit nur falsch-positive",	Werddemer (Block 2),0,616,0,0,	disallow,0,	default
+47,,35543,	Lustiger seth,	20131228205540,0,,"	Sperrumgehung, keine Besserung erkennbar: Die Winterreise",1,595,0,1,"	warn,disallow",0,	default
+269,"	action = ""edit""
+& added_lines rlike ""WEITERLEITUNG \[\[""
+& new_size > 400
+& user_age < 100
+| (ip_in_range(user_name, ""84.143.32.0/19"") & added_lines irlike ""weiterleitung|beispiel|gallery"")
+| (user_name rlike ""2003:E0:67.*"" & added_lines irlike ""weiterleitung|beispiel|gallery"")
+| user_name rlike ""2003:E0:6733:53.*""
+| user_name rlike ""93.239.85.42""
+& page_namespace < 2",1859,	Filzstift,	20190325122201,1,,	Einfügen nicht hilfreicher Weiterleitungen,0,590,0,0,	disallow,0,	default
+76,,35543,	Lustiger seth,	20181005095219,0,,	unerwuenschte Weiterleitung,1,567,0,0,,0,	default
+173,,2379,	Seewolf,	20181022095003,1,,	Priesterbeleidiger,1,567,0,0,	disallow,0,	default
+40,"	article_namespace == 6
+& action == ""edit""
+& added_lines  rlike '\{\{[\s_]*(?:(?i:Template|Vorlage)[\s_]*:[\s_]*)?[Gg]eprüfte[\s_]+Datei[\s_]*(?:\|[^}]*)?\}\}'
+& !(removed_lines contains '{{Geprüfte Datei')
+& !(""sysop"" in user_groups)
+& !(""bot"" in user_groups)
+& ( !(""editor"" in user_groups)
+  | !(user_name rlike 'Brackenheim|Chaddy|ChrisiPK|Emha|Guandalug|Gruß Tom|Historiograf|Ireas|JuTa|Leyo|Ralf Roletschek|Saibo|Suhadi Sadono|Wikijunkie|Yellowcard|Abbottbot|PerfektesChaos')
+)",35543,	Lustiger seth,	20150517111339,1,"	[[Wikipedia:Bearbeitungsfilter/40]]
+
+Benutzerliste in http://de.wikipedia.org/wiki/Benutzer:Ireas/bilderpruefen.js sollte ebenfalls aktualisiert werden
+
+2011-11-17 ianusius entfernt, nach mehreren Sperren nun erneut indefinite Sperre",	Geprüfte Datei,0,566,0,0,,0,	default
+26,,35543,	Lustiger seth,	20151201224825,0,,	Benutzerkonto-Neuanlagen: Ungeeigneter Benutzername,1,553,0,1,	disallow,0,	default
+110,"	action == ""edit"" 
+& user_editcount < 40
+& !(""bot"" in user_groups)
+& user_age != 0
+& article_namespace >= 0
+& article_prefixedtext rlike ""^(?:Wikipedia:(?:Neuen Artikel anlegen|Über Wikipedia)|Hilfe:(?:Neuen Artikel anlegen|Einstellungen))$""",35543,	Lustiger seth,	20150922223347,1,"	Neuer Filter für Hilfeseiten, die häufig von nicht mehr ganz so neuen Neulingen irtümlich bearbeitet werden, ergänzend zur Halbsperre",	Einschränkung für neuangemeldete Benutzer auf zentralen Projektseiten,0,549,0,0,"	warn,disallow",0,	default
+112,,24241,	Eike sauer,	20150713143844,0,,	Schutz vor Stalking: diverse,1,549,0,0,"	warn,disallow",0,	default
+227,"	user_editcount < 4
+& article_namespace = 2 
+& (contains_any(lcase(added_lines) + lcase(summary), ""also visit"", "" buy "", ""feel free to surf"", ""home town"", ""i life in"", ""<br><br>my"", ""my blog post"", ""my homepage"", ""my website [http"", ""my web site"", ""my web-site"",""my web blog"",""my weblog"",""my web page"",""my webpage"", ""much to say about me"", ""part of this site"", ""payday loans"", ""Post code"", ""write about me"")
+  | lcase(added_lines) rlike ""(not much|nothing) to (say|tell) about (me|myself)|a part of .*\.de\.wikipedia\.org|(?:here is|look at|look into|surf to|visit) my (?:blog|page|site|web)""
+  )",1859,	Filzstift,	20190325121557,1,"	Imported from Wikidata filter 22.
+2016-04-20 Testweise übernommen. XenonX3
+2019-02-17 seth: "" buy "" ergaenzt; syntax korrigiert; sortiert; formatiert
+2019-02-17 seth: blogspot komplett zu sperren, ist zu krass, siehe [[Special:AbuseFilter/examine/log/601133]]
+2019-02-17 seth: ergaenzt: ""visit my site"", ""look at my page"", etc., vgl. [[Special:DeletedContributions/178.133.85.104]], [[Special:DeletedContributions/ValorieWhittell]]
+2019-02-19 seth: blogspot wieder raus wegen false positives; vermutlich wird #273 das meiste abfangen.",	Verdacht auf Spamming im Benutzernamensraum,0,533,0,0,	disallow,0,	default
+3,"	user_name rlike ""^(?:84\.167\.(?:12[89]|1[3-9]\d|2\d\d)|87\.184\.2[2-5]\d|93\.207\.(?:\d\d|1[01]\d|12[0-7]))\.""
+& article_namespace==0
+& edit_delta > -50
+& edit_delta < 50
+& ( count(""%"",added_lines) < count(""%"",removed_lines)
+  | count(""%ig"",added_lines) < count(""%ig"",removed_lines)
+  | rcount(""[;,]\n"",added_lines) > rcount(""[;,]\n"",removed_lines)
+  | rcount(""\b[A-Z]-förmig"",added_lines) < rcount(""\b[A-Z]-förmig"",removed_lines)
+  | rcount(""[au]s'(?!')"",added_lines) > rcount(""[au]s'(?!')"",removed_lines)
+  | rcount(""\(sic!?\)"",added_lines) > rcount(""\(sic!?\)"",removed_lines)
+  | count(""'sch"",added_lines) < count(""'sch"",removed_lines)
+  | rcount(""\b1\b"",added_lines) < rcount(""\b1\b"",removed_lines) & rcount(""\b[eE]in"",added_lines) > rcount(""\b[eE]in"",removed_lines)
+  | rcount(""\Bendete"",added_lines) < rcount(""\Bendete"",removed_lines)
+  | count(""er-Jahr"",added_lines) < count(""er-Jahr"",removed_lines)
+)",35543,	Lustiger seth,	20181125140415,0,"	siehe [[WP:Bearbeitungsfilter/3]]
+2017-02-03 MBq: letzter Treffer vor 1 a
+2018-02-14 seth: das heisst bei diesem vandalen noch nichts; ich stelle mal auf logging-only.
+2018-11-25 seth: ok, vielleicht isser wirklich weg, ich deaktiviere mal.",	Aehnlicher Edit wie von User Bechterev (Block 1),0,522,0,0,	disallow,0,	default
+111,,2379,	Seewolf,	20151111090333,0,,	Kochtroll,1,520,0,0,,0,	default
+36,"	(article_namespace == 0) & (action == ""edit"")& !(""bot"" in user_groups)
+& ((article_text == 'Soziale Marktwirtschaft'  | article_text == 'Initiative Neue Soziale Marktwirtschaft' | article_text == 'Marktwirtschaft' | article_text == 'Walter Eucken' | article_text == 'Rechte Esoterik‎' | article_text == 'Scientology' | article_text == 'Eugenik' | article_text == 'Zeugen Jehovas' | article_text == 'Neoliberalismus' | article_text == 'Marktversagen' |article_text == 'Deutsche Burschenschaft' | article_text == 'Marburger Burschenschaft Rheinfranken' | article_text == 'Ordoliberalismus' | article_text == 'Bürger in Wut' ))",35543,	Lustiger seth,	20190324182736,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert (Meinungsbild)
+
+Edit-War drosseln
+Beim Eintragen eines Artikel in diesen Filter immer auch MediaWiki:Editnotice-0/Seite/ARTIKELNAME mit dem Inhalt {{MediaWiki:Abusefilter-editwar-info}} anlegen (bzw. beim Austragen löschen)
+----
+Deaktiviert gemäß [[Wikipedia:Meinungsbilder/Abschaffung Missbrauchsfilter 36]].",	Edit-War-Protektor,0,514,0,1,"	throttle,warn,disallow",0,	default
+165,,608538,	Schniggendiller,	20181225165729,0,,	potentielle Sperrumgehung Akkaly,1,507,0,0,	disallow,0,	default
+73,,1859,	Filzstift,	20140415095654,0,,"	Sperrumgehung, keine Besserung erkennbar: Jerry Dandridge",1,502,0,1,,0,	default
+226,,2379,	Seewolf,	20190111160704,1,,	Stalking durch Styron111,1,461,0,0,	disallow,0,	default
+188,,2379,	Seewolf,	20150203161735,0,,	Rezepttrollerei,1,435,0,0,	disallow,0,	default
+12,"	summary rlike '^Bot:.*(?:Ändere|Entferne):.*\[\[(?:hi|cdo):'
+& user_name != 'MerlIwBot'",287832,	Xqt,	20130601154902,0,"	Botprobleme bei hi- und cdo-Interwikis
+Alle Änderungen verbieten, deren py-Version > 2.6.5 ist",	disallow hi|cdo interwiki removing (bot bug #3181100),0,433,0,1,	disallow,0,	default
+249,,1558630,	Holmium,	20190211213330,1,,	Verdacht auf Sperrumgehung Kleiner Timmy,1,418,0,0,	disallow,0,	default
+158,,35543,	Lustiger seth,	20160304204542,0,,"	Sperrumgehung Watzlaf u. Stalking Turnstange, CherryX",1,402,0,1,,0,	default
+243,,287832,	Xqt,	20171121182340,0,,	Neuanmeldung Sockenzoo,1,391,0,1,"	throttle,disallow",0,	default
+157,,2379,	Seewolf,	20181024122535,0,,"	Sperrumgehung, keine Besserung erkennbar: Dribbler",1,379,0,1,	disallow,0,	default
+5,"	article_namespace==0
+& action==""edit""
+& user_name rlike ""^93\.207\.(?:\d\d|1[01]\d|12[0-7])\.""
+& edit_delta > -50
+& edit_delta < 50
+& ( removed_lines rlike ""(?:Guerr?ill|[eE]vakuier|(?:Ein|Aus)fallswinkel)""
+  | lcase(summary) rlike ""(?:\bblöd|chwach|\bun)sinn|\b(?i:un|dumm)fug\b|kacke\b|hausmeister|\bquatsch\b|nominalstil|rückgängig gemacht""
+) | ( user_editcount < 10
+    & summary rlike ""\b(?:Dumpfbacke|Hirnumgehung\b)""
+)",35543,	Lustiger seth,	20181125144753,0,"	siehe [[WP:Missbrauchsfilter/3]]
+2018-11-25 seth: vermutlich ist der user nicht mehr da. dewswegen deaktiviert",	Aehnlicher Edit wie von User Bechterev (Block 2),0,378,0,0,	disallow,0,	default
+93,,2379,	Seewolf,	20140528153757,0,,"	Sperrumgehung, keine Besserung erkennbar: Yves18",1,360,0,0,,0,	default
+57,,39066,	MBq,	20141119155214,0,,	Suchhilfe-Schutz,1,355,0,0,"	warn,disallow",0,	default
+240,,2379,	Seewolf,	20190207190925,1,,	Youtube-Spam in Artikel Altschauerberg,1,336,0,0,	disallow,0,	default
+86,,35543,	Lustiger seth,	20160304222929,0,,	PS-Vandalismus/ex-sbl-umgehung,1,332,0,1,	disallow,0,	default
+180,,2379,	Seewolf,	20151113160421,0,,	Sperrumgehung: FBE2005,1,326,0,0,	disallow,0,	default
+17,"	article_namespace==0
+& action==""edit""
+& edit_delta > -50
+& edit_delta < 50
+& user_name rlike ""^93\.207\.(?:\d\d|1[01]\d|12[0-7])\.""
+& ( rcount(""[aA]bfotografier"",added_lines) < rcount(""[aA]bfotografier"",removed_lines)
+  | count(""auf Grund"",added_lines) < count(""auf Grund"",removed_lines)
+  | count(""Ausfallswinkel"",added_lines) < count(""Ausfallswinkel"",removed_lines)
+  | count(""Batterie"",added_lines) < count(""Batterie"",removed_lines)
+  | count(""bayrisch"",added_lines) < count(""bayrisch"",removed_lines)
+  | count(""cm"",added_lines) < count(""cm"",removed_lines)
+  | count(""einmal mehr"",added_lines) < count(""einmal mehr"",removed_lines)
+  | count(""ebendies"",added_lines) < count(""ebendies"",removed_lines)
+  | count(""elisabethanisch"",added_lines) < count(""elisabethanisch"",removed_lines)
+  | count(""gesogen"",added_lines) < count(""gesogen"",removed_lines)
+  | count(""gleich"",added_lines) < count(""gleich"",removed_lines)
+  | count(""grammatisch"",added_lines) < count(""grammatisch"",removed_lines)
+)",35543,	Lustiger seth,	20181125184122,0,"	siehe [[WP:Missbrauchsfilter/3]]
+2018-11-25 seth: user vermutlich nicht mehr aktiv, deshalb regel deaktiviert",	Aehnlicher Edit wie von User Bechterev (Block 3),0,313,0,0,	disallow,0,	default
+147,"	!(""autoconfirmed"" in user_groups) & 
+(lcase(new_wikitext) rlike ""(\s+|^)(?![\S]*(https?|ftp)://)[a-zA-Z0-9]{30,}"")",35543,	Lustiger seth,	20190324193157,0,"	Spun of filter 497 into 2 smaller filters, this being one of them (and the original being the other). -mlitn
+
+The filter has tagged http://en.wikipedia.org/wiki/Special:AbuseFilter/examine/log/7627528 because the 30+ char string didn't start with ""http"" but with ""(http"" (notice the parentheses); updated the filter to ust check for http:// occurrences inside the 30+ char string and not expect it to be at the very beginning. -mlitn
+
+Made filter name more descriptive (if matched, filter name will be displayed to show what's wrong with the feedback) --mlitn
+
+Updated filter to:
+* start detecting extremely long words at start of contribution as well as after whitespace
+* only flag extremely long alphanumeric entries (it was long,pieces,of,text,like,this,where,there,is,no,whitespace,but,was,well-intended,and,useful)
+-- mlitn
+
+Import von XenonX3 aus 2013-01-17
+Anzeige der neu erstellten Warnung MediaWiki:Abusefilter-aft-warning-lange-wörter Wnme 2013-01-19
+
+neue Feedbacks können nicht mehr abgegeben werden, daher deaktiviert Wnme 2013-07-12
+
+2019-03-24 seth: sollte die regel je wiederbelegt werden, bitte die warning message nach Abusefilter-warning-aft-lange-wörter verschieben und neuformatieren (analog zu den anderen warnings).",	Artikel-Feedback-Tool: Verhindern von extrem langen Wörtern,0,304,0,1,"	warn,disallow",0,	default
+216,,2379,	Seewolf,	20160109023143,0,,	Kommunismustroll,1,304,0,0,	disallow,0,	default
+89,,35543,	Lustiger seth,	20140528144013,0,,	Grössere Änderungen an Diskografie-Seiten protokollieren,1,302,0,0,,0,	default
+231,,2379,	Seewolf,	20181201101132,0,,	Leertroll,1,295,0,0,,0,	default
+79,,2379,	Seewolf,	20150130121316,0,,"	Sperrumgehung, keine Besserung erkennbar: angel54",1,285,0,1,"	warn,disallow",0,	default
+208,,2379,	Seewolf,	20181016155103,1,,	Verdacht auf Sperrumgehung Nay-Fan,1,283,0,0,	disallow,0,	default
+78,,35543,	Lustiger seth,	20151201223515,0,,	Phimose-Socken,1,280,0,0,,0,	default
+155,,2379,	Seewolf,	20190404112937,1,,"	Sperrumgehung, keine Besserung erkennbar: Dribbler",1,269,0,0,	disallow,0,	default
+252,,2379,	Seewolf,	20180824090754,0,,	Anführungszeichentroll,1,254,0,0,,0,	default
+175,,1859,	Filzstift,	20190325124920,1,,	Verdacht auf Sperrumgehung: Messina,1,247,0,0,,0,	default
+207,"	action = ""edit""
+& article_namespace = 0
+& rcount(""\{\{#(?i:invoke:Wikidata|property):"", added_lines) > rcount(""\{\{#(?i:invoke:Wikidata |property):"", removed_lines)",1859,	Filzstift,	20190325124013,1,	siehe [[Wikipedia:Bearbeitungsfilter/207]],	Umsetzung des Wikidata-Meinungsbildes: Warnung vor Wikidata-Einbindungen im Artikelsnamensraum,0,236,0,0,	warn,0,	default
+60,"	article_namespace==0
+& action==""edit""
+& !""bot"" in user_groups
+& lcase(added_lines) rlike "".*(alphascript|betascript|surhone|alensias|doyen verlag|fastbook|books llc|ella-luise von welfesholz|katharina c. van eycken|hans von prittwitz|calixt prinz biron|frederic p. miller|agnes a. vandome|vdm publishing|sademon).*""
+& ! article_text = ""VDM Publishing Group""",35543,	Lustiger seth,	20190324190243,0,"	2014-11-19 MBq - gelöscht, keine Treffer mehr seit 2012
+
+2012-07 - VDM Publishing wieder rein, da auch reine Haus-/Magisterarbeiten veröffentlicht werden",	Betascript et. al.,0,230,0,1,	warn,0,	default
+29,"	article_namespace==0
+& action==""edit""
+& edit_delta > -50
+& edit_delta < 50
+& user_name rlike ""^93\.207\.(?:\d\d|1[01]\d|12[0-7])\.""
+& ( count(""Reflekt"",added_lines) < count(""Reflekt"",removed_lines)
+  | count(""Sankt "",added_lines) < count(""Sankt "",removed_lines)
+  | count(""St. "",added_lines) < count(""St. "",removed_lines)
+  | count(""selbig"",added_lines) < count(""selbig"",removed_lines)
+  | count(""St. "",added_lines) < count(""St. "",removed_lines)
+  | rcount(""\bstylisch"",added_lines) < rcount(""\bstylisch"",removed_lines)
+  | count(""nter anderem"",added_lines) < count(""nter anderem"",removed_lines)
+  | count(""verschiedenste"",added_lines) < count(""verschiedenste"",removed_lines)
+  | count(""Verwendung"",added_lines) < count(""Verwendung"",removed_lines)
+  | count(""weiterhin"",added_lines) < count(""weiterhin"",removed_lines)
+  | count(""wäre"",added_lines) < count(""wäre"",removed_lines)
+  | rcount(""[wW]eiters\b"",added_lines) < rcount(""[wW]eiters\b"",removed_lines)
+)",35543,	Lustiger seth,	20181125184346,0,"	siehe [[WP:Missbrauchsfilter/3]]
+2018-11-25 seth: user vermutlich inaktiv, deswegen regel deaktiviert.",	Aehnlicher Edit wie von User Bechterev (Block 5),0,221,0,0,	disallow,0,	default
+153,"	action = ""edit""
+& user_editcount < 1
+& summary == ""Foto zur Seite hinzugefügt""",35543,	Lustiger seth,	20150103220454,0,,	potentielle Urheberrechtsverletzung,0,206,0,1,"	warn,disallow",0,	default
+224,"	action == ""edit""
+& ( article_namespace == 0
+  & rcount(""forbes.com/(?:profile|billionaires/list)|celebritynetworth|\[\[Quelle:|==\s*Vermögen\s*=="", added_lines) > rcount(""forbes.com/(?:profile|billionaires/list)|celebritynetworth|\[\[Quelle:|==\s*Vermögen\s*=="", removed_lines)
+  & ( (user_editcount < 4 & user_age != 0)
+    | ip_in_range(user_name, ""79.208.0.0/18"")
+  ) | (
+    article_prefixedtext = ""Wikipedia:Gesichtete Versionen/Anfragen""
+    & ip_in_range(user_name, ""79.208.0.0/18"")
+  )
+)",1859,	Filzstift,	20190325123801,1,"	siehe [[Wikipedia:Bearbeitungsfilter/224]]
+beispiel-IP-adressen:
+79.208.4.114
+79.208.14.241
+79.208.20.14
+79.208.25.234
+79.208.29.237
+
+2016-07-30: erstmal zurück auf Version vom 10.4.: produziert offenbar nur noch false positives
+2016-07-31, seth: repariert","	Untauglicher externer Link (forbes.com, celebritynetworth.com)",0,201,0,0,	disallow,0,	default
+24,,1859,	Filzstift,	20130605150239,0,,	Massenreverts von IP-Edits,1,200,1,1,,0,	default
+210,,2379,	Seewolf,	20190112094243,1,,	Verdacht auf Sperrumgehung Gordito1869,1,199,0,0,	disallow,0,	default
+56,"	article_namespace != 8 
+& !""bot"" in user_groups & (
+   formatting := ""(Proxy-Connection: keep-alive|notranslate|myEventWatcherDiv|QuickiWiki Look Up|application/x-datavault|end_of_the_skype_highlighting|inlineAdmedialink|_clearly_component|ktg6us78hf8vdu7|xunlei_com_thunder_helper_plugin)"";
+  added_lines rlike formatting & (
+    !removed_lines rlike formatting
+  )
+)",35543,	Lustiger seth,	20181202190841,1,"	[[Wikipedia:Bearbeitungsfilter/56]]
+Code von http://en.wikipedia.org/wiki/Special:AbuseFilter/345",	QuickiWiki Look Up-Filter,0,190,0,0,"	warn,disallow",0,	default
+150,,2379,	Seewolf,	20151112053206,0,,	Raum-Frankfurt-IP gemäss SG-Entscheid [[Wikipedia:Schiedsgericht/Anfragen/Raum-Frankfurt-IP#Zusammenfassung_der_Entscheidung]],1,183,0,0,	disallow,0,	default
+132,,35543,	Lustiger seth,	20160304204505,0,"	23.07.2013/Filzstift, ursprünglich ipv6-Edits-Markierungen, jetzt frei",	ipv6 Edits markieren,0,175,0,1,,0,	default
+273,,35543,	Lustiger seth,	20190330105712,1,,	zu viele externe Links in nicht-wiki-artigem Text (vermuteter Link-Spam),1,171,0,0,	disallow,0,	default
+27,"	action == 'edit' 
+& article_namespace == 0
+& added_links rlike ""^(?:.(?!archive\.org))+\bgeocities\.(?!(?:co\.)jp|ws)""",1859,	Filzstift,	20130605150228,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert
+
+siehe http://de.wikipedia.org/w/index.php?title=Wikipedia:Missbrauchsfilter/Anträge&oldid=65705279#Geocities",	geocities-Abschaltung,0,162,0,1,	warn,0,	default
+101,,35543,	Lustiger seth,	20151201224128,0,,"	Sperrumgehung, keine Besserung erkennbar: Anomalie01",1,156,0,0,	disallow,0,	default
+106,,1859,	Filzstift,	20190325125355,0,,"	Sperrumgehung, keine Besserung erkennbar: noebse",1,145,0,1,,0,	default
+44,"	action == ""edit""
+& article_namespace == 0
+& (user_age == 0 | user_age < 1000000)
+& rcount(""lexikon-der-wehrmacht\.de"",added_lines) != rcount(""lexikon-der-wehrmacht\.de"",removed_lines)",35543,	Lustiger seth,	20150127210222,1,	ab 2011-05-08: siehe [[MediaWiki_Diskussion:Spam-blacklist/Archiv/2011#lexikon-der-wehrmacht.de]],	Untauglicher externer Link (zweifelhafte Quellen durch Neuaccounts),0,141,0,0,"	warn,disallow",0,	default
+21,"	action==""edit""
+& article_namespace==0
+& ( ip_in_range(user_name, ""83.76.128.0/17"")
+  | ip_in_range(user_name, ""83.77.128.0/17"")
+  | ip_in_range(user_name, ""83.78.0.0/16"") 
+  | ip_in_range(user_name, ""83.79.0.0/16"") 
+  | ip_in_range(user_name, ""85.0.128.0/17"") 
+  | ip_in_range(user_name, ""85.1.0.0/16"") 
+  | ip_in_range(user_name, ""85.3.0.0/16"") 
+  | ( user_groups contains ""user"" 
+    & user_editcount < 10)
+)
+& ( removed_lines contains ""[[Kategorie:Ort im Elsass]]""
+  | ( old_wikitext rlike ""insee\s*=\s*6[78]""
+    & added_lines rlike ""{|.*1999.*|}"")
+)",35543,	Lustiger seth,	20140530163707,0,"	* betrifft Ranges von Edgar von Webern und neue Konten mit weniger als 10 Beiträgen, die unsinnige Kategorisierungen massenhaft vornehmen, vgl. http://de.wikipedia.org/wiki/Spezial:Beitr%C3%A4ge/83.76.151.1 und http://de.wikipedia.org/wiki/Wikipedia:Checkuser/Anfragen/Archiv/2009-1#.2815._Februar.29_-_Nachfolgeanfrage_zur_Abfrage_vom_9._Februar_2008_.28Sonja_Sunkist_VI.2FEdgar_von_Webern.29
+
+* Da er jetzt die Ziele variiert, mal das Entfernen von 'Ort im Elsass' verboten.
+
+* Einfügen von Bevölkerungstabellen verboten, vgl. http://de.wikipedia.org/wiki/Spezial:Beiträge/Bergholtz
+
+auf nur Loggen, siehe http://de.wikipedia.org/w/index.php?title=Benutzer_Diskussion:Entlinkt&curid=2489244&diff=88113009&oldid=87559195
+Hozro 25/04/2011","	Sperrumgehung, keine Besserung erkennbar: Edgar von Webern",0,136,0,0,,0,	default
+238,"	action = ""edit""
+&
+ (ip_in_range(user_name, ""101.182.0.0/16"") |
+  ip_in_range(user_name, ""117.53.138.161/32"") |
+  ip_in_range(user_name, ""202.45.119.0/24""))
+& ( summary irlike ""system of a down""
+  |  old_wikitext irlike ""(diskogra(f|ph)ie|studioalben|livealben)"")",2379,	Seewolf,	20161115041909,1,,	Diskografiefälscher,0,133,0,0,	disallow,0,	default
+203,,39066,	MBq,	20180706082905,0,,	Krankenkassenblock,1,130,0,1,	disallow,0,	default
+104,,2379,	Seewolf,	20151209105452,0,,	Guildo Horn-Troll,1,126,0,1,,0,	default
+176,,2379,	Seewolf,	20180414074434,0,,	Messina 3,1,126,0,0,	disallow,0,	default
+169,,2379,	Seewolf,	20181203002607,0,,	Orientalist hinterhereditieren,1,123,0,0,	disallow,0,	default
+53,,1859,	Filzstift,	20130605150146,0,,	Mach mal langsam,1,121,0,1,"	throttle,disallow",0,	default
+97,,2379,	Seewolf,	20150103180830,0,,	Spielwiesenvandale,1,119,0,0,,0,	default
+151,,35543,	Lustiger seth,	20151116214241,0,,"	Sperrumgehung, keine Besserung erkennbar: Ekkenekepen sowie Nüdli",1,117,0,0,	disallow,0,	default
+13,,39066,	MBq,	20180706082936,0,,	Propaganda,1,116,0,1,	disallow,0,	default
+18,"	article_namespace==0
+& action==""edit""
+& edit_delta > -50
+& edit_delta < 50
+& user_name rlike ""^93\.207\.(?:\d\d|1[01]\d|12[0-7])\.""
+& ( count(""größer"",added_lines) < count(""größer"",removed_lines)
+  | count(""handle"",added_lines) < count(""handle"",removed_lines)
+  | rcount(""[hH]erren"",added_lines) < rcount(""[hH]erren"",removed_lines)
+  | count(""hl."",added_lines) < count(""hl."",removed_lines)
+  | rcount(""[kK]idnap"",added_lines) < rcount(""[kK]idnap"",removed_lines)
+  | count("" Kirche"",added_lines) < count("" Kirche"",removed_lines)
+  | count(""konzeptionier"",added_lines) < count(""konzeptionier"",removed_lines)
+  | rcount("" Mal\b"",added_lines) < rcount("" Mal\b"",removed_lines)
+  | count(""ithilfe"",added_lines) < count(""ithilfe"",removed_lines)
+  | count(""destotrotz"",added_lines) < count(""destotrotz"",removed_lines)
+  | count(""öfters"",added_lines) < count(""öfters"",removed_lines)
+  | rcount(""P[Kk][Ww]s"",added_lines) < rcount(""P[Kk][Ww]s"",removed_lines)
+)",35543,	Lustiger seth,	20181125184319,0,"	siehe [[WP:Missbrauchsfilter/3]]
+2018-11-25 seth: user vermutlich inaktiv, deshalb regel deaktiviert.",	Aehnlicher Edit wie von User Bechterev (Block 4),0,108,0,0,	disallow,0,	default
+152,"	article_namespace = 4
+& article_text = ""Gesichtete Versionen/Anfragen""
+& action = ""edit""
+& added_lines contains ""{{Sichten|Artikelname}}""",35543,	Lustiger seth,	20151208221426,0,	[[WP:Missbrauchsfilter/152]],	fehlerhafter Sichtungs-Request,0,105,0,1,,0,	default
+233,"	action == 'edit' 
+&   user_name == 'AsuraBot'  
+&   article_prefixedtext == 'Wikipedia:Spielwiese'",24551,	Doc Taxon,	20160717213455,0,"	die nicht ganz korrekten Spielwiese-Rücksetzungen von AsuraBot werden unterdrückt, bis er auf die Ansprachen reagiert. Dadurch entstand BotWar mit TaxonBot, da er den Job übernommen hat, denn AsuraBot/sitic meldet sich eigentlich nie zurück und die Spielwiese steht lange ohne Rücksetzungen da",	Spielwiese BotWar,0,99,0,0,	disallow,0,	default
+99,,1859,	Filzstift,	20190326075623,1,,	Verdacht auf Sperrumgehung: Jerry Dandridge,1,98,0,0,	disallow,0,	default
+7,,1859,	Filzstift,	20130605150204,0,,	Namensnennung,1,97,0,1,	disallow,0,	default
+138,,45468,	PDD,	20150125133707,0,,	Schutz vor Stalking: Fröhlicher Türke/JosFritz/Fiona Baine,1,96,0,0,	disallow,0,	default
+186,,35543,	Lustiger seth,	20151116220429,1,,	Jux undTrollerei in Marc-Uwe Kling,1,95,0,0,	disallow,0,	default
+272,,608538,	Schniggendiller,	20190121203750,1,,	möglicherweise unerwünschte Verschiebung,1,94,0,0,,0,	default
+141,,45468,	PDD,	20150125133844,0,,"	Sperrumgehung, keine Besserung erkennbar: Revisionismus-Troll",1,93,0,0,,0,	default
+46,"	action==""edit""
+& article_namespace==4
+& article_text contains ""Qualitätssicherung""
+& (added_lines rlike ""[^|\[:][Ww]ikify"" | added_lines rlike ""[^|\[:]Vollprogramm""  | added_lines rlike ""[^|\[:][Ww]ikifizieren""  
+ | added_lines rlike ""[^|\[:][CcKk]ats"" | added_lines rlike ""[^|\[:]URV"" )",492187,	Inkowik,	20150217162145,0,"	Freundlicher Hinweis beim Eintragen in die QS, dass nicht jeder den Wikipedia-Slang versteht",	Wikipedia-Slang-Hinweis,0,88,1,1,,0,	default
+83,,1859,	Filzstift,	20190325125411,0,,	Phimose-Socken 2,1,84,0,1,"	warn,disallow",0,	default
+100,,1859,	Filzstift,	20130605145853,0,,"	Sperrumgehung, keine Besserung erkennbar: Anomalie01",1,82,0,1,"	warn,disallow",0,	default
+91,,2379,	Seewolf,	20111008091137,0,,"	Sperrumgehung, keine Besserung erkennbar: Vanillaninjafan",1,81,0,1,"	warn,disallow",0,	default
+190,,39066,	MBq,	20151019122702,0,,	Rezepttrollblockade auf einigen Meta- und Benutzerseiten,1,81,0,0,	disallow,0,	default
+96,,35543,	Lustiger seth,	20151116214434,0,,	Schutz vor Stalking (vor Virus11),1,80,0,0,"	warn,disallow",0,	default
+118,,2379,	Seewolf,	20151112052744,0,,"	Sperrumgehung, keine Besserung erkennbar: TJMD",1,79,0,0,,0,	default
+259,,608538,	Schniggendiller,	20181004060325,1,,	unerwünschte externe Links auf der Spielwiese,1,76,0,0,	disallow,0,	default
+87,,1859,	Filzstift,	20130605150851,0,,"	Du bist nicht berechtigt, die Seite zu bearbeiten. Grund:",1,76,0,1,	disallow,0,	default
+129,,1859,	Filzstift,	20130605151045,0,,	Sperrumgehung Alofok,1,74,0,1,,0,	default
+174,,2379,	Seewolf,	20161010135845,0,,	Messina 1,1,74,0,1,	disallow,0,	default
+258,,1859,	Filzstift,	20190325124606,1,,	Verdacht auf Sperrumgehung: Großer Hund,1,72,0,0,	disallow,0,	default
+159,,1027462,	Ryan Kaldari (WMF),	20160818193047,0,,	Benutzerkonto-Neuanlagen: Schniggendiller-Troll,1,71,0,0,	disallow,0,	default
+1,"	action == ""edit""
+& user_name == ""seewolf""
+& added_lines rlike ""seewolf""",2379,	Seewolf,	20140121152552,0,"	Testfilter
+
+regel deaktiviert, da sie sonst nur unnoetig performance frisst. sie kann ja bei bedarf wieder aktiviert (und anschliessend wieder deaktiviert!) werden.",	Testfilter,0,70,0,1,,0,	default
+265,,2379,	Seewolf,	20180715172238,1,,	Verdacht auf Putsch-Trollerei,1,67,0,0,	disallow,0,	default
+105,,1859,	Filzstift,	20190325125252,0,,"	Sperrumgehung, keine Besserung erkennbar: Kurzzeitsperrenfan",1,67,0,1,"	warn,disallow",0,	default
+98,,2379,	Seewolf,	20121004085003,0,,"	Sperrumgehung, keine Besserung erkennbar: Tram fan",1,66,0,1,"	warn,disallow",0,	default
+130,,39066,	MBq,	20141103125606,0,,"	Sperrumgehung, keine Besserung erkennbar: Brummfuss",1,66,0,0,"	warn,disallow",0,	default
+144,,1859,	Filzstift,	20140415095830,0,,	Haar-Troll,1,66,0,1,	warn,0,	default
+80,,39066,	MBq,	20140531140353,0,,"	Sperrumgehung, keine Besserung erkennbar: Dr.-Volkmar-Weiss-Nachfolger",1,65,0,0,,0,	default
+140,,2379,	Seewolf,	20150130121907,0,,	Anlage unerwünschter Artikel und Weiterleitungen,1,64,0,0,	disallow,0,	default
+167,,2379,	Seewolf,	20151111090542,0,,	Erlösertroll,1,64,0,0,	disallow,0,	default
+215,,2379,	Seewolf,	20181126094239,0,,	Verdacht auf Sperrumgehung Gonzo Greyskull,1,61,0,0,	disallow,0,	default
+142,,35543,	Lustiger seth,	20160304204736,0,,	wow,1,57,0,1,,0,	default
+145,,668530,	Wnme,	20130712160829,0,,"	Artikel-Feedback-Tool: Verhindern, dass E-Mail-Adressen hinzugefügt werden",1,55,0,1,"	warn,disallow,aftv5hide,aftv5request",0,	feedback
+52,,2379,	Seewolf,	20121202141245,0,,	Auskunftstroll II,1,53,0,1,"	warn,disallow",0,	default
+139,,2379,	Seewolf,	20151112053009,0,,"	Sperrumgehung, keine Besserung erkennbar: CAD-Troll",1,52,0,0,,0,	default
+72,,2379,	Seewolf,	20150625082928,0,,"	Sperrumgehung, keine Besserung erkennbar: Diesel bzw. Diesel-Nachahmer",1,49,0,0,	disallow,0,	default
+179,,2379,	Seewolf,	20151113160154,0,,	Sperrumgehung ReaperAlarm,1,47,0,0,	disallow,0,	default
+126,"	action==""edit""
+& ((user_age != 0 & user_editcount < 3) |
+   (user_age == 0 & ip_in_range(user_name, ""84.58.192.0/19""))
+  )
+& (article_text rlike ""(Transrapid.*|.*Chemnitz.*|.+Hauptbahnhof|.*Zwickau.*)"" &
+  (added_lines  rlike ""(Transrapid(strecke)?|[Ss]trecke).*(Chemnitz|Zwickau|Dresden)"")
+  )",39066,	MBq,	20170111211051,0,,	Transrapid-Vandale,0,46,0,1,"	warn,disallow",0,	default
+64,,1859,	Filzstift,	20130605150116,0,,"	Sperrumgehung, keine Besserung erkennbar: Auskunftstroll 1a",1,45,0,1,"	warn,disallow",0,	default
+120,,2379,	Seewolf,	20150103090245,0,,"	Sperrumgehung, keine Besserung erkennbar: GG-Troll",1,42,0,1,"	warn,disallow",0,	default
+191,"	!(""otrs-member"" in global_user_groups)
+&!(user_name = 'Wdwdbot')
+& (action == 'edit' | action == 'upload')
+& (article_namespace == 6 | article_namespace == 1)
+&!(lcase(old_wikitext) rlike '\{\{[\s_]*otrs[\s_]*(\}\}|\|)')
+& lcase(new_wikitext) rlike '\{\{[\s_]*otrs[\s_]*(\}\}|\|)'",594114,	Krd,	20180817173057,1,"	2014-11-27 angelegt analog zu Filter 69 auf Commons. (Krd)
+2016-02-25 Sichtbarkeit öffentlich, da keine Umgehungsmöglichkeit (Yellowcard)",	OTRS-Freigabe durch nicht-OTRS-Mitarbeiter hinzugefügt,0,42,0,0,,0,	default
+223,"	!(""otrs-member"" in global_user_groups)
+& action == 'edit'
+& article_namespace == 2
+&!(lcase(old_wikitext) rlike '\{\{[\s_]*(benutzerkonto[\s_]*verifiziert|otrs[\s_]*benutzerkonto[\s_]*geprüft)[\s_]*(\}\}|\|)')
+&  lcase(new_wikitext) rlike '\{\{[\s_]*(benutzerkonto[\s_]*verifiziert|otrs[\s_]*benutzerkonto[\s_]*geprüft)[\s_]*(\}\}|\|)'",594114,	Krd,	20180817173332,1,"	2016-02-17 angelegt analog zu Filter 191 (krd)
+2016-02-25: Sichtbarkeit öffentlich, da keine Umgehungsmöglichkeit (Yellowcard)",	OTRS-Benutzerverifizierung durch nicht-OTRS-Mitarbeiter hinzugefügt,0,42,0,0,,0,	default
+229,,10166,	J budissin,	20170130193614,0,,"	Verhinderung von Kommentaren im Artikeltext (Kosovo, Serbien, Ukraine)",1,42,0,0,	disallow,0,	default
+146,,2379,	Seewolf,	20150101141616,0,,"	Sperrumgehung, keine Besserung erkennbar:Liesbeth",1,39,0,1,	disallow,0,	default
+220,,608538,	Schniggendiller,	20170114235326,1,,	Unsachliche Ergaenzung,1,39,0,0,	disallow,0,	default
+127,,2379,	Seewolf,	20140602092256,0,,	SF-Troll,1,38,0,0,"	warn,disallow",0,	default
+274,,2379,	Seewolf,	20190406190006,1,,	Unerwünschte Beiträge im Stadionbereich,1,37,0,0,	disallow,0,	default
+260,"	action= ""upload""
+& user_editcount < 4
+& article_text rlike ""\.(?:mp3|ogg|flac)\b""",1859,	Filzstift,	20190325122522,1,"	2019-03-25 Filter auf public gestellt (auf Grund Beschreibung eh klar, was Filter tut)",	Kein Hochladen von Audio-Dateien durch neue Benutzer,0,35,0,0,	disallow,0,	default
+42,,1859,	Filzstift,	20130605150217,0,,	Neue-Nachrichten-Vandalismus,1,35,0,1,	disallow,0,	default
+128,,45468,	PDD,	20150127192654,0,,"	Sperrumgehung, keine Besserung erkennbar: Filliou",1,35,0,0,,0,	default
+257,,1859,	Filzstift,	20190325124625,1,,	Verdacht auf Sperrumgehung: Drüfft,1,33,0,0,"	warn,disallow",0,	default
+71,,2379,	Seewolf,	20121202140501,0,,"	Sperrumgehung, keine Besserung erkennbar: EvW",1,33,0,1,"	warn,disallow",0,	default
+82,,35543,	Lustiger seth,	20170428224224,0,,	JavaScript-Linkspam,1,33,0,0,	disallow,0,	default
+51,"	action==""edit""
+& article_namespace == 0
+& ip_in_range(user_name, ""79.226.0.0/16"")
+& removed_lines contains ""Warschauer Pakt""",1859,	Filzstift,	20130605150047,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert
+
+Der Warschauer Pakt / Vertrag - Troll (Seit April kein Einschlag, also erst mal aus).
+
+Komplettsperre aller mit dem Warschauer Pakt verbundenen Seiten (ANR) für die /16er Range. Jetzt mit Warnung (Netzbereichssperre). 
+
+Unschöne Side-Effects, aber immer noch besser als die Vollsperre der Range",	Warschauer Pakt,0,32,0,1,"	warn,disallow",0,	default
+201,,608538,	Schniggendiller,	20180526223851,0,,	Bajotz-Troll,1,31,0,0,	disallow,0,	default
+181,,226562,	XenonX3,	20150211094504,0,,	Fast-Leerung der Phineas-und-Ferb-Episodenliste,1,30,0,0,	disallow,0,	default
+77,,283913,	Hozro,	20110905085118,0,,"	Sperrumgehung, keine Besserung erkennbar: Florian Keßler/Hermes",1,29,0,1,,0,	default
+90,,1859,	Filzstift,	20130605145832,0,,"	Sperrumgehung, keine Besserung erkennbar: Boris F.",1,29,0,1,,0,	default
+164,,35543,	Lustiger seth,	20151110221738,0,,	Einschränkung für neu angemeldete Benutzer beim Hinzufügen von provokanten Bildern (Nr. 2),1,29,0,0,	disallow,0,	default
+114,"	article_namespace==0
+& action==""edit""
+& edit_delta > -50
+& edit_delta < 50
+& user_name rlike ""^93\.207\.(?:\d\d|1[01]\d|12[0-7])\.""
+& ( (count(""welche"",added_lines) < count(""welche"",removed_lines))
+  | (count(""wohl fühle"",added_lines) < count(""wohl fühle"",removed_lines)) 
+  | (count(""zum Einsatz "",added_lines) < count(""zum Einsatz "",removed_lines)) 
+  | (count(""zu Nutze"",added_lines) < count(""zu Nutze"",removed_lines)) 
+  | (count(""Zürcher"",added_lines) < count(""Zürcher"",removed_lines)) 
+)",35543,	Lustiger seth,	20181005095055,0,	siehe [[WP:Missbrauchsfilter/3]],	Aehnlicher Edit wie von User Bechterev (Block 6),0,28,0,0,	disallow,0,	default
+254,,2379,	Seewolf,	20181215153620,1,,	Spambots,1,28,0,0,	warn,0,	default
+95,,2379,	Seewolf,	20130203124815,0,,"	Sperrumgehung, keine Besserung erkennbar: Hixteilchen/Gomez33/Thunderbolts",1,27,0,1,,0,	default
+124,"	action == ""edit""
+& article_namespace == 0
+& !""sysop"" in user_groups
+& (pattern:=""\[\s*([Cc]ategory|[Kk]ategorie)\:[Tt]echnik und Bewaffnung \(NVA\)\s*[\]\|]"";
+   rcount(pattern, added_lines) != rcount(pattern, removed_lines)
+)",35543,	Lustiger seth,	20141123225104,0,"	2014-11-03 MBq: deaktivert
+
+http://de.wikipedia.org/w/index.php?title=Wikipedia:Vandalismusmeldung&oldid=99327051#Benutzer:D.W._.28erl..29",	VM-Auflage zu Kategorie:Technik und Bewaffnung (NVA),0,27,0,0,"	warn,disallow",0,	default
+270,"	user_name == ""Seeler09""
+& article_namespace == 0
+& count(""www."",added_lines) < count(""www."",removed_lines)",35543,	Lustiger seth,	20181123165922,1,	siehe [[Wikipedia:Bearbeitungsfilter/270]],"	user:Seeler09 soll keine ""www."" aus website-namen entfernen",0,26,0,0,	disallow,0,	default
+239,,287832,	Xqt,	20181203143151,0,,	Bwbuz-Nachstellung,1,26,0,1,	disallow,0,	default
+113,,1859,	Filzstift,	20130605145824,0,,"	Sperrumgehung, keine Besserung erkennbar: evw",1,24,0,1,"	warn,disallow",0,	default
+232,"	action in ['edit', 'move'] 
+&   !(user_name in ['TaxonBot', 'Luke081515'] 
+  |   'sysop' in user_groups) 
+&    (MOVED_FROM_prefixedtext == 'Benutzer:Luke081515Bot/NoImport' 
+  |   article_prefixedtext == 'Benutzer:Luke081515Bot/NoImport')",1859,	Filzstift,	20190325123442,1,	filter due to complex restrictions of edit and move permissions of 'Benutzer:Luke081515Bot/NoImport',"	Einschränkung [[Benutzer:Luke081515Bot/NoImport]] auf Administratoren, TaxonBot und Luke081515.",0,24,0,0,	disallow,0,	default
+154,,35543,	Lustiger seth,	20160304204401,0,"	[[WP:Missbrauchsfilter/154]]
+deaktiviert wg. False positives - xqt",	Beleidigung,0,22,0,1,,0,	default
+81,"	action == ""edit""
+& article_namespace == 6
+& user_age==0
+& edit_delta > 25
+& rcount(""\{\{\s*(?:subst:|ers:|safesubst:)?\s*[Nn]ach[ _]Commons[ _]verschieben"",added_lines) > rcount(""\{\{\s*(?:subst:|ers:|safesubst:)?\s*[Nn]ach[ _]Commons[ _]verschieben"",removed_lines)",35543,	Lustiger seth,	20160304204342,0,"	Siehe: [[Wikipedia:Commons-Transfer_per_Bot#MBF81]].
+Erlaubt sollen für IPs maximal pro Tag 5 Setzungen der Vorlage  <nowiki>{{subst:Nach Commons verschieben|1=Name auf Commons.ext}}</nowiki> sein. Weitere sollen verboten werden und ein Hinweis gezeigt werden.
+
+Wegen technischer Schwierigkeiten dies umzusetzen, ist eine andere Art der Drosselung unten gewählt.
+
+2014-04-18/Ireas:  Wegen Ende des Projekts CTB Filter deaktiviert",	Commons-Transfer per Bot - Anzahlbeschränkung,0,21,0,1,"	throttle,warn,disallow",0,	default
+117,,35543,	Lustiger seth,	20141123225027,0,,	Schutz vor Stalking: TAM,1,21,0,0,,0,	default
+251,,39066,	MBq,	20171113123059,0,,	pseudo sig,1,21,0,0,,0,	default
+20,"	('bot' in user_groups )
+&
+(article_namespace == 0)
+&
+(summary rlike '^Bot:.*Entferne:.*ar:(ملحق:)?[0-9]+')",502606,	Guandalug,	20090728132022,0,"	die arWP hat ihren Jahresartikeln einen eigenen namespace (104) gegönnt. Einige Bots sehen die IW-Links deshalb als ungültig an und entfernen sie, andere setzen sie ein. Erst mal Stop mit entfernen.
+
+Nicht über die Syntax wundern - diese LTR-zeichen machen das etwas konfus, in Wahrheit ist die Regel ordentlich",	IW-Bots-Editwar: Jahreszahlen in ar:,0,20,0,1,	disallow,0,	default
+59,,2379,	Seewolf,	20121202141205,0,,"	Sperrumgehung, keine Besserung erkennbar: Mutter Erde",1,16,0,1,"	warn,disallow",0,	default
+134,,35543,	Lustiger seth,	20181205000226,0,,	VM-Troll,1,16,0,1,	disallow,0,	default
+206,"	article_namespace==0
+& action==""edit""
+& edit_delta > -50
+& edit_delta < 50
+& user_name rlike ""^89\.183\.(?:\d\d|1[01]\d|12[0-7])\.""
+& ( count(""weit gehend"",added_lines) < count(""weit gehend"",removed_lines)
+  | count(""Account"",added_lines) < count(""Account"",removed_lines)
+  | count(""aufgrund"",added_lines) < count(""aufgrund"",removed_lines)
+  | count(""gleich"",added_lines) < count(""gleich"",removed_lines)
+  | count(""jahre"",added_lines) < count(""jahre"",removed_lines)
+  | count("" müssen"",added_lines) < count("" müssen"",removed_lines)
+  | count(""probabilisti"",added_lines) < count(""probabilisti"",removed_lines)
+  | count(""User"",added_lines) < count(""User"",removed_lines)
+  | count(""so dass"",added_lines) < count(""so dass"",removed_lines)
+)",35543,	Lustiger seth,	20181201102931,0,"	siehe [[WP:Missbrauchsfilter/206]]
+
+2015-12-01:
+  count(""Weiteren"",added_lines) < count(""Weiteren"",removed_lines)
+entfernt wegen false positive [[Special:AbuseLog/459580]]
+  count(""verfügt"",added_lines) < count(""verfügt"",removed_lines)
+entfernt wegen false positive [[Special:AbuseLog/456838]]
+  count("" muss"",added_lines) < count("" muss"",removed_lines)
+entfernt wegen false positive [[Special:AbuseLog/456075]]
+  count(""komplett"",added_lines) < count(""komplett"",removed_lines)
+entfernt wegen false positive [[Special:AbuseLog/458217]]",	wiederholter Verstoss gegen [[WP:RS#Korrektoren]],0,16,0,0,	disallow,0,	default
+230,"	(action == ""edit""
+&
+user_age > 0
+&
+user_editcount < 5
+&
+added_lines irlike ""(braveheart|no(w|v)otny|slartibertfass|blechturmgasse)""
+)
+|
+(action == 'createaccount'
+&  accountname irlike ""(braveheart|no(w|v)otny|slartibertfass)""
+)",2379,	Seewolf,	20161024092854,0,,	Nowotny-Troll,0,16,0,0,,0,	default
+247,,287832,	Xqt,	20170726081526,1,,	Unerwünschte Seiten,1,16,0,0,	disallow,0,	default
+23,,39066,	MBq,	20141119154721,0,,	Schutz vor Stalking (vor RL und DWR),1,15,0,1,	disallow,0,	default
+133,,2379,	Seewolf,	20150103115807,0,,"	Sperrumgehung, keine Besserung erkennbar: Ü+- bzw. U-PLUS-Troll",1,15,0,1,"	warn,disallow",0,	default
+235,,2379,	Seewolf,	20181215153538,0,,	Redirect-Troll 3,1,15,0,0,	disallow,0,	default
+75,,35543,	Lustiger seth,	20160304204305,0,,	Literaturspam,1,14,0,1,,0,	default
+177,"	action == ""move""
+&
+moved_from_namespace == 2
+&
+lcase(moved_from_text) like ""messina/*""
+&
+!(""sysop"" in user_groups | user_name = ""Messina"")",2379,	Seewolf,	20170426160704,0,"	Unterseiten von Messina dürfen nur von Admins verschoben werden, siehe [[Wikipedia:Bearbeitungsfilter/177]]
+
+2014-03-26/Ireas:  Angelegt (inaktiv)
+2014-03-27/-jkb-: nach zwei erfolgten Verschiebungen aktiviert
+2014-07-27/Ireas:  „article_namespace“ und „article_text“ auf „moved_from_namespace“ und „moved_from_text“ geändert, siehe [[Spezial:PermanentLink/132553064#Kann_sich_irgendwer_erinnern...]]",	Verschiebeschutz Messina-Unterseiten,0,14,0,1,	disallow,0,	default
+61,,1859,	Filzstift,	20130605150103,0,,"	Sperrumgehung, keine Besserung erkennbar: 79.247.0.0/18",1,13,0,1,"	warn,disallow",0,	default
+183,,35543,	Lustiger seth,	20151110220730,0,,	Open Proxy im Amokmodus,1,12,0,1,	disallow,0,	default
+38,,127709,	DerHexer,	20130608124445,0,,	Autogroups entfernen,1,11,0,1,"	disallow,blockautopromote",0,	default
+39,"	(action == 'createaccount') &
+(accountname rlike ""Rotz"")",35543,	Lustiger seth,	20110531203720,0,	dafuer gibt's die tbl,	Rotzbremse,0,11,0,1,,0,	default
+68,,1859,	Filzstift,	20130605150055,0,,"	Sperrumgehung, keine Besserung erkennbar: Boris F.",1,11,0,1,"	warn,disallow",0,	default
+69,,35543,	Lustiger seth,	20141026185034,0,,	Einschränkung für neuangemeldete Benutzer auf Benutzerseiten mit hohem Trollaufkommen,1,11,0,0,"	warn,disallow",0,	default
+195,,35543,	Lustiger seth,	20160304204233,0,,	Werddemer (Block 2),1,11,0,1,,0,	default
+262,,1062982,	Ptolusque,	20180630012120,1,,	URV-Troll,1,10,0,0,	disallow,0,	default
+9,,35543,	Lustiger seth,	20141026190338,0,,	inline-css vandalismus,1,10,0,0,	disallow,0,	default
+267,,2379,	Seewolf,	20181202124233,1,,	potentieller Verstoß gegen [[WP:ANON]],1,10,0,0,	disallow,0,	default
+189,,608538,	Schniggendiller,	20150619092008,0,,	Vandalismus im Artikel Dakota Goyo,1,10,0,0,	disallow,0,	default
+162,,35543,	Lustiger seth,	20160304204158,0,,"	Sperrumgehung, keine Besserung erkennbar: PimboliDD",1,9,0,1,"	warn,disallow",0,	default
+228,"	user_name = 'MerlBot'
+& summary = 'NullEdit'",56380,	Flominator,	20160919195148,0,"	Alternative zu [https://de.wikipedia.org/w/index.php?title=Wikipedia:Administratoren/Anfragen&oldid=154132895#Bitte um Entzug des Sichtungsrechts für MerlBot], vorgeschlagen von [[Benutzer:Luke081515]]: Durch einen MediaWiki-Bug sind die Nulledits vom MerlBot gelegentlich keine Null-Edits, sondern überschreiben eine aktuelle Version mit der letzten. Dieser Filter verhindert diese Edits, erzeugt aber hoffentlich keine Probleme bei ""echten"" Null-Edits.",	Nicht-Null-Edits von Merlbot,0,9,0,1,	disallow,0,	default
+22,,1859,	Filzstift,	20130605150514,0,,	Benutzerkonto-Neuanlagen: Edgar-Accounts,1,8,0,1,	disallow,0,	default
+58,,1859,	Filzstift,	20130605150120,0,,"	Sperrumgehung, keine Besserung erkennbar: Gordito 1869",1,8,0,1,,0,	default
+136,,35543,	Lustiger seth,	20150103091426,0,,	Einschränkung für neu angemeldete Benutzer beim Hinzufügen von provokanten Bildern (Nr. 1),1,8,0,0,	disallow,0,	default
+193,"	action == ""edit""
+& article_namespace == 0
+& ip_in_range(user_name, ""79.214.128.0/17"")
+& rcount(""dreadcentral\.com|bloody-disgusting\.com"", added_lines) > rcount(""dreadcentral\.com|bloody-disgusting\.com"", removed_lines)",35543,	Lustiger seth,	20150719210634,0,"	2014-12-20, seth: dreadcentral.com und bloody-disgusting.com, siehe [[WP:SBL#dreadcentral.com & bloody-disgusting.com]]",	Umstrittener externer Link,0,8,0,0,	disallow,0,	default
+204,"	(
+  ip_in_range(user_name, ""172.56.0.0/23"") |
+  ip_in_range(user_name, ""172.56.32.0/23"") |
+  ip_in_range(user_name, ""208.54.32.0/24"") |
+  ip_in_range(user_name, ""208.54.64.0/24"")
+) 
+& action==""edit""
+& article_namespace==1
+& (
+  lcase(article_text) contains ""boxen"" |
+  lcase(article_text) contains ""kampfsport"" |
+  article_text contains ""Rocky"" |
+  article_text = ""Muay Thai"" |
+  article_text = ""Muhammad Ali"" |
+  article_Text = ""Marciano""
+)",287832,	Xqt,	20170130052453,0,"	2015-06-01/xqt: siehe obige Diskussionsseiten
+2017-01-30/xqt: deaktiviert nach 13 Monaten ohne Treffer",	Kampfsport-Spammer,0,8,0,0,	disallow,0,	default
+266,"	action in ['edit', 'move'] 
+&   user_name in ['Alexpl', 'Kopilot'] 
+&   article_prefixedtext == 'Flüchtlingskrise in Europa ab 2015'",24551,	Doc Taxon,	20180814213005,1,"	Filter scharf, zur Abarbeitung der anlastenden VM werden Benutzer:Alexpl und Benutzer:Kopilot so lange von der Bearbeitung des Artikels gesperrt, bis eine Einigung auf der Diskussionsseite zu 'Flüchtlingskrise in Europa ab 2015' erzielt werden konnte.",	Bearbeitungsausschluss Flüchtlingskrise in Europa ab 2015,0,7,0,0,	disallow,0,	default
+33,,127709,	DerHexer,	20130608124443,0,,	Böblingen-Vandalismus,1,7,0,1,"	disallow,blockautopromote",0,	default
+212,"	(user_editcount < 3
+& user_age != 0
+& added_lines irlike "".*(onion).*""
+)
+| 
+(user_name rlike ""Ich will nur eine Antwort Dan höre ich auch auf"")",608538,	Schniggendiller,	20160103195236,0,"	3.1.2016: deaktiviert (wohl ’ne Eintagsfliege im Oktober, dafür heute false positives)",	Zwiebeltroll,0,7,0,0,	disallow,0,	default
+219,,35543,	Lustiger seth,	20160208232133,0,,	Range-Sperre,1,7,0,1,	disallow,0,	default
+194,"	(action==""edit"" | action==""createaccount"")
+& (ip_in_range(user_name, ""77.211.1.1/16"") |
+   ip_in_range(user_name, ""178.139.1.1/16"") )",39066,	MBq,	20150606134223,0,"	2015-06-06 deaktiviert, keine passenden treffer mehr seit april
+2014-01-04 auf 'verbieten' gestellt, wieder verstärkte sockenanlagen",	Cronista-Verdacht,0,6,0,0,	disallow,0,	default
+108,"	user_name == ""Fasten"" 
+& action == ""edit""
+& article_text == ""HRS (Unternehmen)""",35543,	Lustiger seth,	20190324191120,0,"	Artikel und DS verhindern
+Deaktiviert, kommt schon lange nichts mehr. -- xwt 20130608",	POV-Edits,0,5,0,1,	disallow,0,	default
+143,,35543,	Lustiger seth,	20190324193643,0,,"	Sperrumgehung, keine Besserung erkennbar: Anton-Josef",1,5,0,1,	disallow,0,	default
+168,,35543,	Lustiger seth,	20181005095101,0,,	Aehnlicher Edit wie von User Bechterev (Block 7),1,5,0,0,	disallow,0,	default
+192,,24241,	Eike sauer,	20141219163141,0,,	Auskunftsproblem,1,5,0,1,,0,	default
+205,"	action == ""edit""
+& article_text rlike ""(Auskunft)""
+&
+(
+  ip_in_range(user_name, ""178.0.249.52/16"") |
+  ip_in_range(user_name, ""178.12.123.147/16"") |
+  ip_in_range(user_name, ""188.103.247.255/16"") |
+  ip_in_range(user_name, ""188.106.212.21/16"") |
+)
+& user_editcount < 10",24241,	Eike sauer,	20150607094210,0,,	vorübergehender PA-Befall in der Auskunft,0,5,0,0,"	warn,disallow",0,	default
+92,,2379,	Seewolf,	20120429182338,0,,"	Sperrumgehung, keine Besserung erkennbar: Vanillaninjafan",1,3,0,1,"	warn,disallow",0,	default
+109,"	action == ""edit"" &
+""bot"" in user_groups &
+new_size < 0.1 * old_size &
+user_name != 'MerlIwBot' &
+summary irlike ""(ergänze|ändere|entferne):""",287832,	Xqt,	20130605025906,0,	Unverträglichkeit von pywikibot mit mw 1.18,	interwiki.py removing page text bug #3414669,0,3,0,1,,0,	default
+119,,2379,	Seewolf,	20120429182511,0,,	H.B.,1,3,0,1,"	warn,disallow",0,	default
+184,,35543,	Lustiger seth,	20151108214706,0,,	Südpolarforscher,1,3,0,1,	disallow,0,	default
+256,"	action == ""edit""
+& article_namespace == 0
+& (ip_in_range(user_name, ""77.179.0.0/16"")
+  | ip_in_range(user_name, ""77.180.0.0/16"")
+)
+& count(""geni.com"", added_lines) > count(""geni.com"", removed_lines)",35543,	Lustiger seth,	20181202192222,0,	siehe [[Wikipedia:Bearbeitungsfilter/256]] und [[WP:SBL#geni.com]],	Links auf geni.com,0,2,0,1,	disallow,0,	default
+271,"	user_name == ""Zollwurf""
+& page_namespace == 0
+& (page_first_contributor == ""Jamiri"" | page_first_contributor == ""Roland Rattfink"")",1859,	Filzstift,	20190325122051,1,"	2018-11-25 seth: siehe [[Wikipedia:Bearbeitungsfilter/271]]
+2018-12-26 seth: ""Try to put conditions more likely evaluate to false before page_first_contributor, to avoid unnecessarily running the query."" (manual)
+2019-02-18: afborchert: ergänzt um die Artikel von Roland Rattfink",	Kontaktsperre: Zollwurf in von Jamiri bzw. Roland Rattfink bereits bearbeiteten Artikeln,0,2,0,0,	disallow,0,	default
+41,"	action == ""edit""
+& article_namespace == 0
+& added_links rlike ""kostenlose-urteile\.de""",1859,	Filzstift,	20130605150136,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert
+
+http://de.wikipedia.org/wiki/Portal_Diskussion:Recht#Belege_mittels_kostenlose-urteile.de_--_Blacklist.3F",	Weblink-Spam,0,2,0,1,"	warn,disallow",0,	default
+103,,1859,	Filzstift,	20130605145932,0,,	Barcelona-Troll,1,2,0,1,	disallow,0,	default
+125,,287832,	Xqt,	20130608125357,0,,"	Sperrumgehung, keine Besserung erkennbar: LZ6387-Stalker",1,2,0,1,"	warn,disallow",0,	default
+275,,39066,	MBq,	20190407062428,1,,	Kabelsenderwerbung,1,1,0,0,	disallow,0,	default
+187,,608538,	Schniggendiller,	20150624212525,0,,	Lurzmann,1,1,0,0,	disallow,0,	default
+264,,39066,	MBq,	20180726130111,0,,	Deutsche-Biographie-Getrolle,1,0,0,1,	disallow,0,	default
+268,,2379,	Seewolf,	20180912181402,0,,	potentieller Verstoß gegen [[WP:ANON]],1,0,0,1,,0,	default
+15,,1859,	Filzstift,	20130605150127,0,,	Verschiebeschutz,1,0,0,1,,0,	default
+30,,1859,	Filzstift,	20130605150452,0,,	Schutz vor Stalking: Pittimann,1,0,0,1,"	warn,disallow",0,	default
+32,,108107,	Euku,	20100417094035,0,,	MB-stalking,1,0,0,1,,0,	default
+50,"	article_prefixedtext rlike ""^Diskussion:Bastian Sick""
+& user_name rlike ""^91.40.1[68]\d""",1859,	Filzstift,	20130605150154,0,"	05.06.2013: als gelöscht markiert, da seit langem deaktiviert
+
+stoerungen auf der diskussionsseite; sollte nur temporaer (wenige wochen) noetig sein.",	diskussionsseitenschutz,0,0,0,1,	disallow,0,	default
+123,"	action == ""edit""
+& article_namespace == 0
+& length(added_links) > 0
+& added_lines rlike ""\\bhttps?://[^][<>\\x22\\x00-\\x20\\x7F\\p{Zs}]+\\[|\\[https?://[^][]+\\[""",287832,	Xqt,	20130608125238,0,"	mittel gegen die vielleicht meistgestellte FZW-frage, siehe http://de.wikipedia.org/wiki/Wikipedia:Missbrauchsfilter/Antr%C3%A4ge#Weblinks_mit_.5B_.5D
+
+war nie aktiv - als gelöscht markiert --xqt 20130608",	eckige klammern in links,0,0,0,1,,0,	default
+131,"	action == ""createaccount""
+& (user_editcount < 10)
+& (user_name rlike ""\b(?i:iste)\b"")",1859,	Filzstift,	20190325125340,0,	siehe [[Wikipedia:Missbrauchsfilter/Anträge#aehnlichkeit zu bestehenden user names]],	Benutzerkonto-Neuanlagen: Ähnlichkeit zu Iste,0,0,0,1,,0,	default
+135,"	user_name = ""Rechtschreibkontrolle""
+& (rcount(""\b[zZ].(?:\s|&(?:nbsp|#160);)?B."",added_lines) < rcount(""\b[zZ].(?:\s|&(?:nbsp|#160);)?B."",removed_lines))",1859,	Filzstift,	20190325125327,0,"	siehe [[WP:Missbrauchsfilter/135]]
+zu user:Rechtschreibkontrolle: https://de.wikipedia.org/w/index.php?title=Benutzer_Diskussion:Rechtschreibkontrolle&diff=106783948&oldid=106782912",	Absichtliche Verstösse gegen [[WP:RS]],0,0,0,1,	disallow,0,	default
+137,"	article_namespace == 6
+& action == ""edit""
+& added_lines  rlike '\{\{[\s_]*(?:(?i:Template|Vorlage)[\s_]*:[\s_]*)?Nach+Commons+verschieben+(bestätigt)*(?:\|[^}]*)?\}\}'
+& !(removed_lines contains '{{Geprüfte Datei')
+& !(""sysop"" in user_groups)
+& !(""bot"" in user_groups)
+& ( !(""editor"" in user_groups)
+  | !(user_name rlike 'Brackenheim|Chaddy|ChrisiPK|Emha|Guandalug|Gruß Tom|Historiograf|Ireas|JuTa|Leyo|Ralf Roletschek|Saibo|Suhadi Sadono|Wikijunkie|Yellowcard')
+)",1859,	Filzstift,	20140415095801,0,"	http://de.wikipedia.org/wiki/Wikipedia_Diskussion:Commons-Transfer_per_Bot#BD:Alofok.23WP:CTB
+
+Benutzerliste in http://de.wikipedia.org/wiki/Benutzer:Ireas/bilderpruefen.js sollte ebenfalls aktualisiert werden
+
+Am 15. April 2014 gelöscht, da seit 2012 deaktiviert. Bei Bedarf kann es wiederhergestellt werden. Filzstift.",	Commons-Transfer per Bot,0,0,0,1,	disallow,0,	default
+161,"	article_namespace == 6
+& action == ""edit""
+& lcase(removed_lines) rlike '{{(?:düp|dateiüberprüfung)[\|}/]'
+& !(""sysop"" in user_groups)
+& !(""bot"" in user_groups)
+& !(""editor"" in user_groups)",287832,	Xqt,	20130610091846,0,,	DÜP,0,0,0,1,,0,	default
+166,,35543,	Lustiger seth,	20140528191639,0,,	Wiedereinstellung von unpassenden Diskussionsbeitraegen,1,0,0,0,	disallow,0,	default
+171,,39066,	MBq,	20141021144958,0,,	Mentorengesuch an Nicht-Mentor,1,0,0,0,,0,	default
+209,,2379,	Seewolf,	20151106141553,0,,	Alkim-Bremse,1,0,0,0,,0,	default
+214,"	(ip_in_range(user_name, ""85.197.0.0/18"")|
+ip_in_range(user_name, ""89.0.192.0/18""))
+&
+(""kopilot"" in article_recent_contributors
+|
+article_text rlike "".*(Daniele Ganser|Benutzer Diskussion:Phi).*""
+)",2379,	Seewolf,	20151022095025,0,,	Verdacht auf Sperrumgehung Operation Saba,0,0,0,1,,0,	default
+217,,2379,	Seewolf,	20151111140308,0,,,0,0,0,1,,0,	default
+218,"	user_name == (""[]"")
+& !(article_prefixedtext = ""Wikipedia:Sperrprüfung""
+    |
+    (pattern1:=user_name; pattern2:=""Benutzer Diskussion:""; article_prefixedtext == pattern2+pattern1)
+   )",2379,	Seewolf,	20151111140239,0,"	In der ersten Zeile zwischen den eckigen Klammern wird der oder die Sperrprüfungsbegehrende eingetragen, mehrere werden mit ""|"" getrennt.
+Bei Nichtbenutzung Filter deaktivieren.
+
+Hier aktuelle Einträge:
+Benutzername, Ende der Sperrfrist",	Schranken für Sperrprüfungsbegehrende,0,0,0,0,,0,	default
+221,"	article_articleid == 3935139
+& user_name == 'AsuraBot'
+& new_size == old_size",35543,	Lustiger seth,	20160102230906,0,"	2015-12-13: Endlosschleife AsuraBot. Damit andere Aufgaben erhalten bleiben.
+siehe Benutzer_Diskussion:Sitic#Botproblem_bei_Sumdisc_-_Bot_aktualisiert_gerade_in_Dauerschleife  
+Special:Permalink/148956336#Botproblem_bei_Sumdisc_-_Bot_aktualisiert_gerade_in_Dauerschleife",	Bot Probleme,0,0,0,1,	disallow,0,	default
+225,"	((ip_in_range(user_name, ""217.233.128.0/18"")|
+ip_in_range(user_name, ""217.238.0.0/18""))
+& added_lines contains ""otberg"" 
+)|(
+user_age < 6
+& added_lines contains ""mari otberg"" 
+)",287832,	Xqt,	20170130051432,0,	20170130 xqt: Nach 10 Monaten ohne Treffer deaktiviert,	Verdacht auf Sperrumgehung Sendker,0,0,0,0,	disallow,0,	default
+237,,608538,	Schniggendiller,	20181202202831,0,,	Spielwiesenschutz 2,1,0,0,0,,0,	default
+244,,2379,	Seewolf,	20170410100039,0,,	Emskirchen-Trollerei,1,0,0,1,	disallow,0,	default
+245,,2379,	Seewolf,	20181215153110,0,,	Potentielle Sperrumgehung Alfred Grudszus,1,0,0,0,,0,	default
+246,,2379,	Seewolf,	20181215153827,0,,	Sperrumgehung Spion aka Liuthar,1,0,0,0,,0,	default
+255,,608538,	Schniggendiller,	20181004060129,0,,	Not-Aus (Kurland-IPs),1,0,0,0,	disallow,0,	default
