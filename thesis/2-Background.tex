@@ -1,32 +1,58 @@
 \chapter{Background}
 \label{chap:background}
 
+The present work can be embedded in the context of (algorithmic) quality-control mechanisms on Wikipedia.
+There is a whole ecosystem (syn?) of actors struggling to maintain the anyone-can-edit encyclopedia as good^^ and vandalism free as possible.
+We want to be able to better understand the role of edit filters in the vandal fighting network of humans, bots, semi-automated tools, and the machine learning framework ORES.
+To this end, in the current chapter we investigate vandalism and vandalism fighting guidelines, as well as the mechanisms mentioned above.
+
 \section{Vandalism on Wikipedia}
 
-According to Wikipedia's newspaper, the Signpost, edit filters were initially introduced as a vandalism prevention mechanism (one of several)~\cite{Signpost2009}.
-The aim of this section is to provide a better understanding of vandalism on Wikipedia. (What is vandalism, and what not; who engages in vandalism; who is striving to prevent it and with what means)
+According to Wikipedia's newspaper, the Signpost, edit filters were initially introduced as a vandalism prevention mechanism~\cite{Signpost2009}.
+The aim of this section is to provide a better understanding of vandalism on Wikipedia: What is vandalism, and what not; who engages in vandalism; who is striving to prevent it and with what means?
 
-%What is vandalism
+\subsection{What is vandalism}
 
 According to EN Wikipedia's policy~\cite{Wikipedia:Vandalism}, vandalism means ``intentionally making abusive edits to Wikipedia'' or, more specifically ``editing (or other behavior) deliberately intended to obstruct or defeat the project's purpose, which is to create a free encyclopedia''.
 Vandalism includes ``malicious removal of encyclopedic content, or the changing of such content beyond all recognition, without any regard to our core content policies of neutral point of view (which does not mean no point of view), verifiability and no original research''
 as well as ``adding irrelevant obscenities or crude humor to a page, illegitimately blanking pages, and inserting obvious nonsense into a page''
 and ``[a]busive creation or usage of user accounts and IP addresses''.
 
-Wikipedians have elaborated a whole vandalism typology~\cite{Wikipedia:Vandalism}, illustrated by figure~\ref{fig:vandalism-typology}.
-\begin{comment}
-Types of vandalism \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism#Types_of_vandalism}:
-  (Abuse of tags; Account creation, malicious; Avoidant vandalism; Blanking, illegitimate; Copyrighted material, repeated uploading of; Edit summary vandalism; Format vandalism; Gaming the system; Hidden vandalism; Hoaxing vandalism; Image vandalism; Link vandalism; Page creation, illegitimate; Page lengthening; Page-move vandalism; Silly vandalism; Sneaky vandalism; Spam external linking; Stockbroking vandalism; talk page vandalism; Template vandalism; User and user talk page vandalism; Vandalbots;)
-\end{comment}
+Wikipedians have elaborated following vandalism typology~\cite{Wikipedia:Vandalism}:
+\begin{itemize}
+    \item  Abuse of tags
+    \item  Account creation, malicious
+    \item  Avoidant vandalism
+    \item  Blanking, illegitimate
+    \item  Copyrighted material, repeated uploading of
+    \item  Edit summary vandalism
+    \item  Format vandalism
+    \item  Gaming the system
+    \item  Hidden vandalism
+    \item  Hoaxing vandalism
+    \item  Image vandalism
+    \item  Link vandalism
+    \item  Page creation, illegitimate
+    \item  Page lengthening
+    \item  Page-move vandalism
+    \item  Silly vandalism
+    \item  Sneaky vandalism
+    \item  Spam external linking
+    \item  Stockbroking vandalism
+    \item  talk page vandalism
+    \item  Template vandalism
+    \item  User and user talk page vandalism
+    \item  Vandalbots
+\end{itemize}
 
-%What is not vandalism
+\subsection{What is not vandalism}
 
-There are different types of edits viewed as disruptive by the Wikipedia community.
+Additionally, there are different types of edits viewed as disruptive by the Wikipedia community.
 Edit warring and pushing a single point of view and disregarding community feedback are examples here of. %TODO what are other examples?
-Nevertheless, the guidelines caution that ``[d]isruptive editing is not vandalism, though vandalism is disruptive''~\cite{Wikipedia:DisruptiveEditing}.
+Nevertheless, the guidelines warn that ``[d]isruptive editing is not vandalism, though vandalism is disruptive''~\cite{Wikipedia:DisruptiveEditing}.
 And that different procedures should be adopted by editors in both cases.
 
-The vandalism policy also cautions about using the ``vandalism'' label since it tends to drive contributors away and prevent constructive discussions~\cite{Wikipedia:Vandalism}.
+The vandalism policy also cautions against using the ``vandalism'' label unless absolutely necessary since it tends to drive contributors away and prevent constructive discussions~\cite{Wikipedia:Vandalism}.
 %TODO vgl good faith memo
 
 \begin{comment}
@@ -42,24 +68,23 @@ Okay what are disruptive edits that are not vandalism? (apart from edit wars)
 "Engages in "disruptive cite-tagging"; adds unjustified {{citation needed}} tags to an article when the content tagged is already sourced, uses such tags to suggest that properly sourced article content is questionable."
 \end{comment}
 
-%Who engages in vandalism (and why?)
+\subsection{Who engages in vandalism (and why?)}
 
 The policy signals clearly that editors repeatedly engaging in vandalism are subject to banning.
 Furthermore, it is explained that although warnings for vandalism are issued in general, these are not a prerequisite for banning~\cite{Wikipedia:Vandalism}.
 %TODO: still not explained who and why
 
-%Who is striving to prevent vandalism? How do they go about it?
+\subsection{Who is striving to prevent vandalism? How do they go about it?}
 
 Since Wikipedia is a ``do-it-yourself'' project, every editor who notices vandalism is called upon to help fixing it.
-There is a formal process for reporting users who engage in vandalism %TODO look up Administrator intervention against vandalism
-and requesting page protection for frequently vandalised pages. %TODO quote
+There is a formal process for reporting users who persistently continue to engage in vandalism despite warnings~\cite{Wikipedia:AIV}, %TODO go into more detail?
+as well as for requesting page protection for frequently vandalised pages~\cite{Wikipedia:PageProtection}.
 And there are also users who specifically dedicate substantial amount of their Wikipedia contributions to fighting vandalism.
 
-These dedicated vandal fighters mostly do so with the aid of some (semi or fully) automated tools which significally speeds up the process (see below).
+These dedicated vandal fighters mostly do so with the aid of some (semi or fully) automated tools which not only significantly speeds up the process (see below),
+but, according to research, fundamentally changes the nature of the encyclopedia and its collaboration ecosystem~\cite{GeiRib2010}.
 
 \section{Quality-control mechanisms on Wikipedia}
-%Context
-Context of work: algorithmic quality-control mechanisms (bots, ORES, humans) -> filter?
 
 %TODO Literature review!
 % How: within the subsections? as a separate section?
@@ -78,8 +103,8 @@ themselves"
 
 !! tools not only speed up the process but:
 "These tools greatly lower certain barriers to participation and render editing
-activity into work that can be performed by „average
-volunteers‟ who may have little to no knowledge of the
+activity into work that can be performed by "average
+volunteers" who may have little to no knowledge of the
 content of the article at hand"
 
 critical discussion
@@ -156,7 +181,7 @@ VandalProof~\cite{HalRied2012}
 
 "Huggle, one of the most popular
 antivanda lism editing tools on
-Wikipedia, is written in C#.NET
+Wikipedia, is written in C\#.NET
 and any user can download and
 install it. Huggle lets editors roll back
 changes with a single mouse click,
@@ -176,18 +201,18 @@ huggle description
 "edits are contextually
 presented in queues as they are made, and the user can
 perform a variety of actions (including revert and warn) with
-a single click. The software‟s built-in queuing mechanism,
+a single click. The software's built-in queuing mechanism,
 which by default ranks edits according to a set of vandalism-
 identification algorithms,"
 
-"Users of Huggle‟s automatic
+"Users of Hugglei's automatic
 ranking mechanisms do not have to decide for themselves
 which edit they will view next"
 
 huggle's ranking heuristics:
-"in the default „filtered‟ queue, edits that contain a significant removal of content are placed
+"in the default „filtered" queue, edits that contain a significant removal of content are placed
 higher; those that completely replace a page with blank text
-are even marked in the queue with a red „X‟."
+are even marked in the queue with a red "X"."
 "anonymous users are viewed as more suspicious than
 registered users, and edits by bots and Huggle users are not
 even viewed at all."
@@ -201,7 +226,7 @@ systematically sent to the top of the queue."
 Huggle users, as the software prioritizes mass removal of
 content by anonymous users who have vandalism warnings
 left for them. In fact, a green “1” appeared next to the
-article‟s name in the edit queue, indicating that a first-level
+article's name in the edit queue, indicating that a first-level
 warning had been issued."
 
 "In reporting the anonymous user to
@@ -246,14 +271,14 @@ algorithms"
 
 \cite{GeiRib2010}
 BotDef
-"Bots – short for „robots‟ – are fully-automated software
+"Bots – short for „robots" – are fully-automated software
 agents that perform algorithmically-defined tasks involved
 with editing, maintenance, and administration in Wikipedia."
 
 ---
 
 ClueBot NG
-"ClueBot_NG uses state-of-the-art machine learning techniques to review all contributions to
+"ClueBot\_NG uses state-of-the-art machine learning techniques to review all contributions to
 articles and to revert vandalism,"~\cite{HalRied2012}
 XLinkBot
 "XLinkBot reverts contributions that create links to
@@ -271,7 +296,7 @@ AWB, DumbBOT, EmausBot
 
 \cite{GeiRib2010}
 "“HBC AIV helperbot7” – automatically
-removed the third vandal fighter‟s now-obsolete report."
+removed the third vandal fighter's now-obsolete report."
 
 \subsection{ORES}
 
