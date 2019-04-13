@@ -122,7 +122,7 @@ This also gives us a hint as to what type of quality control work humans take ov
 
 \subsection{Semi-automated tools}
 
-Semi-automated tools used for vandalism fighting on Wikipedia were discussed by:
+Semi-automated tools used for vandalism fighting on Wikipedia are discussed by:
 more popular/widely used:
 STiki~\cite{WestKanLee2010}
 \url{http://en.wikipedia.org/wiki/Wikipedia:STiki}
@@ -134,23 +134,23 @@ less popular/older, mentioned in older accounts or not discussed at all (there a
 VandalProof~\cite{HalRied2012}
 ARV
 AIV
-Lupin's Anti-vandal tool
+Lupin's Anti-vandal tool~\cite{GeiRib2010}
 \url{https://en.wikipedia.org/wiki/User:Lupin/Anti-vandal_tool}
 "Please be aware that the original author of AVT (Lupin) is no longer active on Wikipedia. The script is very old and might stop working at any time."
 "By using the RC feed to check a wiki-page's differences against a list of common vandal terms, this tool will detect many of the commonly known acts of online vandalism. "
 
 In general, previous research seems to make a distinction of degree? between ``more'' automated tools such as Huggle and STiki and ``less'' automated ones such as Twikle~\cite{GeiHal2013}.
 
-\cite{GeiHal2013}
-"Huggle, the most widely-used, fully assisted, counter-
-vandalism tool, were made within 1 minute of the
-offending edit. It is interesting that reverts with STiki, a
-newer and more sophisticated queue-based vandal fighting
-tool, are more often made to somewhat older edits, with a
-time-to-revert distribution that is closer to unassisted edits.
-This suggests that Huggle and STiki are targeting different
-kinds of edits"
+Editors seem(check whether for which it's true) seem to need the ``rollback'' permission in order to use these tools(for Huggle:~\cite{HalRied2012}).
+Huggle presents a pre-curated queue of edits to the user which can be classified as vandalism by a single mouse click which simultaneously take action accordingly: the edit is reverted, the offending editor is warned.
+Moreover, Huggle is able to parse the talk page of the offending user where warnings are placed in order to issue a warning of suitable degree.
+The software uses a set of heuristics for compiling the queue with potentially offending edits.
+These are configurable, however, some technical savvy and motivation is need and thus, as~\.. warn, it makes certain paths of action easier to take than others.
 
+According to~\cite{GeiHal2013} Huggle and STiki complement each other in their tasks, with Huggle users making swifter reverts and STiki users taking care of older edits.
+
+
+%Huggle (note, current version is written in C++/Javascript)
 "Huggle, one of the most popular
 antivandalism editing tools on
 Wikipedia, is written in C\#.NET
@@ -177,7 +177,7 @@ a single click. The software's built-in queuing mechanism,
 which by default ranks edits according to a set of vandalism-
 identification algorithms,"
 
-"Users of Hugglei's automatic
+"Users of Huggle's automatic
 ranking mechanisms do not have to decide for themselves
 which edit they will view next"
 
@@ -215,7 +215,23 @@ administrator except append this incident of vandalism to his
 original report, further attempting to enroll a willing
 administrator into the ad-hoc vandal fighting network."
 
+%STiki
+\cite{WestKanLee2010}
 
+"STiki is an anti-vandalism tool for Wikipedia. Unlike similar tools, STiki does not rely on natural language
+processing (NLP) over the article or diff text to locate vandalism"
+
+"STiki leverages spatio-temporal properties of revision metadata."
+"The feasibility of utilizing such properties was demonstrated in our prior
+work, which found they perform comparably to NLP-efforts while being more efficient, robust to evasion, and
+language independent."
+
+"It consists of, (1) a server-side
+processing engine that examines revisions, scoring the likelihood each is vandalism, and, (2) a client-side GUI
+that presents likely vandalism to end-users for definitive classiffcation (and if necessary, reversion on
+Wikipedia"
+
+%Twinkle
 \cite{GeiRib2010}
 Twinkle description:
 "user interface extension that runs inside
@@ -226,10 +242,21 @@ by a single user, reporting a problematic user to
 administrators, nominating an article for deletion, and
 temporarily blocking a user (for administrators only)."
 
-Lupin's anti-vandal tool
+%Lupin's anti-vandal tool
+\cite{GeiRib2010}
 "provides a real-
 time in-browser feed of edits made matching certain
 algorithms"
+
+%VandalProof
+\cite{HalRied2012}
+"VandalProof, an early cyborg
+technology, was a graphical user
+interface written in Visual Basic that
+let trusted editors monitor article
+edits as fast as they happened in
+Wikipedia and revert unwanted
+contributions in one click."
 
 \subsection{Bots}
 
@@ -241,18 +268,51 @@ with editing, maintenance, and administration in Wikipedia."
 
 ---
 
-ClueBot NG
+%ClueBot NG
 "ClueBot\_NG uses state-of-the-art machine learning techniques to review all contributions to
+
+ClueBot NG:
+\cite{GeiHal2013}
+"to scan every edit made to Wikipedia in real time"
+"Built on Bayesian neural networks and trained with data
+about what kind of edits Wikipedians regularly revert as
+vandalism"
 articles and to revert vandalism,"~\cite{HalRied2012}
-XLinkBot
+
+%XLinkBot
 "XLinkBot reverts contributions that create links to
 blacklisted domains as a way of quickly and permanently dealing with spammers."~\cite{HalRied2012}
-HBC AIV Helperbots and MartinBot
+
+%HBC AIV Helperbots and MartinBot
 "AIV Helperbot turns a simple page into a dynamic
 priority-based discussion queue to support administrators in their work of identifying and
 blocking vandals"~\cite{HalRied2012}
 
-AntiVandalBot~\cite{HalRied2012}
+
+%AntiVandalBot
+~\cite{HalRied2012}
+"The first tools to redefine the
+way Wikipedia dealt with van-
+dalism were AntiVandalBot and
+VandalProof."
+
+"AntiVandalBot used a simple set
+of rules and heuristics to monitor
+changes made to articles, identify the
+most obvious cases of vandalism, and
+automatically revert them"
+
+1st vandalism fighting bot:
+"this bot made it possible, for the first
+time, for the Wikipedia community
+to protect the encyclopedia from
+damage without wasting the time
+and energy of good-faith editors"
+"it
+wasn’t very intelligent and could only
+correct the most egregious instances
+of vandalism."
+
 
 Bots not patrolling constantly but instead doing batch cleanup works~\cite{GeiHal2013}:
 AWB, DumbBOT, EmausBot
@@ -299,9 +359,3 @@ further ORES applications:
 \section{Algorithmic Governance}
 
 maybe move it to edit filters chapter
-
-\begin{itemize}
-    \item Hier sollte enthalten sein, welche Anwendungen in diesem Bereich bereits existieren und warum bei diesen ein Defizit besteht.
-    \item Falls genutzt, sollten hier die entsprechenden Algorithmen erläutert werden.
-    \item Es sollten die Ziele der Anwendungsentwicklung, d.h. die Anforderungen herausgearbeitet werden. Dabei sollte die bestehende Literatur geeignet integriert werden.
-\end{itemize}
