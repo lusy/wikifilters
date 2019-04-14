@@ -127,7 +127,9 @@ more popular/widely used:
 STiki~\cite{WestKanLee2010}
 \url{http://en.wikipedia.org/wiki/Wikipedia:STiki}
 Huggle~\cite{GeiHal2013},~\cite{HalRied2012},\cite{GeiRib2010}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Huggle}
 Twinkle
+\url{https://en.wikipedia.org/wiki/Wikipedia:Twinkle}
 AWB
 \url{https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser}
 less popular/older, mentioned in older accounts or not discussed at all (there are also more tools, see for example \url{https://en.wikipedia.org/wiki/Category:Wikipedia_counter-vandalism_tools})
@@ -141,122 +143,42 @@ Lupin's Anti-vandal tool~\cite{GeiRib2010}
 
 In general, previous research seems to make a distinction of degree? between ``more'' automated tools such as Huggle and STiki and ``less'' automated ones such as Twikle~\cite{GeiHal2013}.
 
-Editors seem(check whether for which it's true) seem to need the ``rollback'' permission in order to use these tools(for Huggle:~\cite{HalRied2012}).
-Huggle presents a pre-curated queue of edits to the user which can be classified as vandalism by a single mouse click which simultaneously take action accordingly: the edit is reverted, the offending editor is warned.
-Moreover, Huggle is able to parse the talk page of the offending user where warnings are placed in order to issue a warning of suitable degree.
+%Huggle
+Huggle was initially released in 2008~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Huggle}}.
+In order to use Huggle, editors need the ``rollback'' permission~\cite{HalRied2012}.
+Huggle presents a pre-curated queue of edits to the user which can be classified as vandalism by a single mouse click which simultaneously takes action accordingly: the edit is reverted, the offending editor is warned~\cite{HalRied2012}.
+Moreover, Huggle is able to parse the talk page of the offending user where warnings are placed in order to issue a next warning of suitable degree and also makes automated reports to AIV (Administrators Intervention Against Vandalism, explain!) if the user has exhausted the warning limit.
 The software uses a set of heuristics for compiling the queue with potentially offending edits.
-These are configurable, however, some technical savvy and motivation is need and thus, as~\.. warn, it makes certain paths of action easier to take than others.
+The defaults include placing higher edits containing large removal of content or complete blankings of a page, edits made by anonymous users or users whose edits have been reverted in the past.
+Edits by users with warnings on their user talk page are sent to the top of the queue, while edits made by bots and other Huggle users are ignored altogether\cite{GeiRib2010}.
+One can reconfigure the queue, however, some technical savvy and motivation is need for this and thus, as~\cite{GeiRib2010} warn, it makes certain paths of action easier to take than others.
+
+%STiki
+STiki was introduced by Andrew G. West in June 2010~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:STiki}}.
+Its defining characteristic is relying on ``spatio-temporal properties of revision metadata''~\cite{WestKanLee2010} for deciding the likelihood of an edit to be vandalism.
+According to the authors, this makes the tool's vandalism detection more robust and language independent.
+One of the following conditions must be fulfilled for an editor to obtain a permission to use STiki:
+(1) they must have the rollback permission, or
+(2) they must have made at least 1000 article edits, or
+(3) they must have obtained a special permission via their talk page~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:STiki}}.
 
 According to~\cite{GeiHal2013} Huggle and STiki complement each other in their tasks, with Huggle users making swifter reverts and STiki users taking care of older edits.
 
-
-%Huggle (note, current version is written in C++/Javascript)
-"Huggle, one of the most popular
-antivandalism editing tools on
-Wikipedia, is written in C\#.NET
-and any user can download and
-install it. Huggle lets editors roll back
-changes with a single mouse click,
-but because the tool is so powerful,
-rollback permission is restricted to
-administrators and a few thousand
-other Wikipedia users."
-"Huggle makes it easy to review
-a series of recent revisions by
-filtering them according to the
-user’s preferences."~\cite{HalRied2012}
-
-huggle also sends out warnings to the offending editor on revert~\cite{HalRied2012}
-
-\cite{GeiRib2010}
-huggle description
-"edits are contextually
-presented in queues as they are made, and the user can
-perform a variety of actions (including revert and warn) with
-a single click. The software's built-in queuing mechanism,
-which by default ranks edits according to a set of vandalism-
-identification algorithms,"
-
-"Users of Huggle's automatic
-ranking mechanisms do not have to decide for themselves
-which edit they will view next"
-
-huggle's ranking heuristics:
-"in the default „filtered" queue, edits that contain a significant removal of content are placed
-higher; those that completely replace a page with blank text
-are even marked in the queue with a red "X"."
-"anonymous users are viewed as more suspicious than
-registered users, and edits by bots and Huggle users are not
-even viewed at all."
-"Users whose edits have been previously
-reverted by a number of assisted users are viewed as even
-more suspicious, and those who have been left warnings on
-their user talk page (a process explained below) are
-systematically sent to the top of the queue."
-
-"This edit was placed into the queues of many
-Huggle users, as the software prioritizes mass removal of
-content by anonymous users who have vandalism warnings
-left for them. In fact, a green “1” appeared next to the
-article's name in the edit queue, indicating that a first-level
-warning had been issued."
-
-"In reporting the anonymous user to
-AIV, the Huggle program collected three edits which had been
-marked as vandalism in the previously-issued warnings."
-
-"The Huggle software took note of the
-fact that a report existed for this user at AIV, and asked the
-administrator if he wished to issue a temporary block."
-
-"Yet with four warnings and an active report at AIV, there was
-nothing else Huggle could do in the name of this non-
-administrator except append this incident of vandalism to his
-original report, further attempting to enroll a willing
-administrator into the ad-hoc vandal fighting network."
-
-%STiki
-\cite{WestKanLee2010}
-
-"STiki is an anti-vandalism tool for Wikipedia. Unlike similar tools, STiki does not rely on natural language
-processing (NLP) over the article or diff text to locate vandalism"
-
-"STiki leverages spatio-temporal properties of revision metadata."
-"The feasibility of utilizing such properties was demonstrated in our prior
-work, which found they perform comparably to NLP-efforts while being more efficient, robust to evasion, and
-language independent."
-
-"It consists of, (1) a server-side
-processing engine that examines revisions, scoring the likelihood each is vandalism, and, (2) a client-side GUI
-that presents likely vandalism to end-users for definitive classiffcation (and if necessary, reversion on
-Wikipedia"
-
 %Twinkle
-\cite{GeiRib2010}
-Twinkle description:
-"user interface extension that runs inside
-of a standard web browser. Twinkle adds contextual links to
-pages in Wikipedia allowing editors to perform complex tasks
-with the click of a button – such as rolling back multiple edits
-by a single user, reporting a problematic user to
-administrators, nominating an article for deletion, and
-temporarily blocking a user (for administrators only)."
+Twinkle, a javascript based ``user interface extension that runs inside of a standard web browser''~\cite{GeiRib2010} seems to be less automated than the previous tools~\cite{GeiHal2013}.
+It adds contextual links to other parts of Wikipedia which facilitates fulfilling particular tasks (rollback multiple edits, report problematic users to AIV, nominate an article for deletion) with a single click~\cite{GeiRib2010}.
+A prerequisite for using Twinkle is being an autoconfirmed registered user~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Twinkle}}.
+
+%TODO decide whether to elaborate more via https://en.wikipedia.org/wiki/Wikipedia:Twinkle/doc
 
 %Lupin's anti-vandal tool
-\cite{GeiRib2010}
-"provides a real-
-time in-browser feed of edits made matching certain
-algorithms"
-
 %VandalProof
-\cite{HalRied2012}
-"VandalProof, an early cyborg
-technology, was a graphical user
-interface written in Visual Basic that
-let trusted editors monitor article
-edits as fast as they happened in
-Wikipedia and revert unwanted
-contributions in one click."
+Older tools which are not much used anymore include Lupin's anti-vandal tool which
+``provides a real-time in-browser feed of edits made matching certain algorithms''~\cite{GeiRib2010}
+and VandalProof which
+``let[s] trusted editors monitor article edits as fast as they happened in Wikipedia and revert unwanted contributions in one click''~\cite{HalRied2012}.
+
+%TODO: Note on collaboration semi-automated tools/edit filters. Maybe not the suitable chapter
 
 \subsection{Bots}
 
@@ -321,6 +243,8 @@ AWB, DumbBOT, EmausBot
 \cite{GeiRib2010}
 "“HBC AIV helperbot7” – automatically
 removed the third vandal fighter's now-obsolete report."
+
+%Note on collaboration bots/edit filters. Maybe not the suitable chapter
 
 \subsection{ORES}
 
