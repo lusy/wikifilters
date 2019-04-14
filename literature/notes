@@ -936,3 +936,54 @@ rather because bots support more complex kinds of gov-
 ernance practices in Wikipedia, and complex govern-
 ance practices are difficult for newcomers."
 
+==========================================================
+\cite{AstHal2018}
+
+introduce algorithmically aided method for quality control/review of newly created articles, for which a bottleneck seems to exist
+
+compare quality control/revision mechanisms for
+newly created articles with <-- huge backlog, overwhelmed editors
+new edits (on existing articles) <-- seem to have a more elaborate funnel workflow which filters out more blatant ofensive edits among the way and make work for human editors easier
+
+propose an algorithm based on topic models computed from WikiProjects categories (compare linear SVM classification, Random Forrests and Gradient Boosting Classifiers)
+(discarded the idea of using the category system of Wikipedia, because it was lacking proper hierarchy between categories)
+"WikiProjects are subject-focused working groups – the kind of subject-interested working groups
+we wanted to target with our topic modeling. These working groups tag articles that fall within
+the scope of their projects."
+"The WikiProjects Directory 13 provides a convenient intermediate ontology of WikiProjects that
+starts with four broad topics: Culture, Geography, History & Society and Science, Technology and
+Mathematics (STEM) (Fig. 2). From there, the directory drills down into sub-topics and eventually
+specific WikiProjects."
+"We utilized the well defined hierarchy of the directory pages to group WikiProjects under 43
+different mid level categories which formed our prediction space."
+
+aim: predict topic of a new article in order to give it to a patroller with expertise on the topic
+"Our work is focused on making it possible to implement
+AI-augmented multi-stage review processes for new article review that lessens the burden of TCJCs
+on current patrollers by routing new pages to subject matter experts."
+
+"Wikipedia flips the traditional publication review process–publish first and ask questions later." xD
+
+they have a diagram on what happens with new edits (Fig.1). However, filters are missing altogether.
+
+Argument for machine support in creating topic labels:
+"rather than having the authors tag the topics because 1)
+newcomers would be inconsistent with tagging and their tags would likely not match Wikipedia’s
+existing ontology, 2) we have a huge backlog of untagged drafts that needs addressal, 3) with a
+model, changes to the tagging ontology can be automatically propagated to all drafts."
+
+"the Scoring Platform team at the Wikimedia Foundation
+released "draftquality" 8 model that is designed to detect "vandalism", "spam", and "personal attack"
+articles for quick deletion. Predictions of all of these models can be accessed by the ORES[8]
+webservice that the Wikimedia Foundation provides via public apis."
+
+"There’s no such alternative that exists for new article creations since an editor can’t "watch" an
+article before it is created. Therefore, we seek to find a signal for the topic space of new article
+creations such that interested editors can watch new page creations too"
+
+warn against possible biases, since WikiProjects are assigned manually by editors.
+Also point out that article's belonging to categories is not exhaustive and oftentimes the proposed method finds topics an article logically belongs to but which was never assigned.
+
+"This observation about missing labels suggests that the fitness
+measurements are generally conservative. It also suggests that there is a surprising utility to our
+topic model: It can be used to predict missing topics for existing full-fledged articles!"

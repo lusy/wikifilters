@@ -10,13 +10,18 @@ To this end, in the current chapter we study scientific literature on vandalism 
 \section{Vandalism on Wikipedia}
 %TODO put here papers on vandalism
 
+Papers discussing vandalism detection from IR/ML perspective:
+- Martin Potthast, Benno Stein, and Robert Gerling. 2008. Automatic vandalism detection in Wikipedia. In European conference on information retrieval. Springer, 663–668.
+
 \section{Quality-control mechanisms on Wikipedia}
 
 %TODO Literature review!
 % How: within the subsections? as a separate section?
 
-% Aim: I want to know why are there filters?
+% Aim: I want to know why are there filters? How do they fit in the quality control ecosystem?
 Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted?
+
+\cite{AstHal2018} have a diagram describing the new edit review pipeline. Filters are absent.
 
 Why is it important we study these mechanisms?
 - their relative usage increases/has increased since they were first introduced
@@ -115,7 +120,7 @@ Despite steady increase of the proportion of fully and semi-automated tools usag
 some of the quality control work is still done ``manually'' by humand editors.
 These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
 On the other hand, there are also editors who engage with the classical/standard encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the editor which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
-When editors use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question. %TODO: quote watchlist, current paper by Halfaker
+When editors use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question via the so-called watchlists~\cite{AstHal2018}. %TODO: quote watchlist, current paper by Halfaker
 This also gives us a hint as to what type of quality control work humans take over: less obvious and less rapid, editors who patrol pages via watchlists have some relationship to/deeper expertise on the topic. %TODO quote needed.
 %TODO vgl also funnel diagram incoming edits quality assurance by Halfaker
 
@@ -280,6 +285,11 @@ further ORES applications:
 "  But revision quality scores can be used to do more than just fight vandalism. For example, Snuggle uses edit quality scores to direct good-faith newcomers to appropriate mentoring spaces,[4] and dashboards designed by the Wiki Education Foundation use automatic scoring of edits to surface the most valuable contributions made by students enrolled in the education program"
 
 
+\cite{AstHal2018}
+"the Scoring Platform team at the Wikimedia Foundation
+released "draftquality" 8 model that is designed to detect "vandalism", "spam", and "personal attack"
+articles for quick deletion. Predictions of all of these models can be accessed by the ORES[8]
+webservice that the Wikimedia Foundation provides via public apis."
 \section{Algorithmic Governance}
 
 maybe move it to edit filters chapter
