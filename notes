@@ -1514,3 +1514,54 @@ It details processes or procedures of some aspect(s) of Wikipedia's norms and pr
     If you suspect someone of sockpuppetry, file a report at Wikipedia:Sockpuppet investigations. Obvious and malicious sockpuppets engaging in vandalism may be reported to AIV. A link to the sockpuppetry report should be included in the reason for reporting.
     Usernames that clearly violate username policy should be reported at Wikipedia:Usernames for administrator attention.
     Do not report edit wars or other disruptive behavior that doesn't fit the description at Wikipedia:Vandalism. These can instead be reported to the administrators' noticeboard or its incidents subpage. AIV deals mainly with obviously malicious edits that require no discussion; complex cases should usually be referred to other boards."
+
+=================================================================================
+https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1
+
+"What is the intent of the filter? We can't possible expect it to block all malicious edits. That's absurd. Do we expect it to block the sort of edits now automatically detected by bots? in other words, do we expect to lower the workload for vandal patrollers and return WP to a state where most vandal patrolling is done via Recent changes? Or do we expect the filter to block more sophisticated attempts at vandalism?"
+// unfortunately, there's no direct answer to this
+
+"Now, suppose that the configuration is public. I'm still not sure I see the point. Anti-vandal bots are well suited for this work. They're more flexible than anything you can write in an extension. Their code can be changed more easily, because it can be tweaked live by someone a) dedicated to the specific project and b) without root database access. Their configuration can also probably be changed more easily. There's a good chance that any change to this configuration will require endless community discussion and bickering and polls and consensus and who knows what. Look at how enwiki deals with questions like changing autoconfirmed criteria, which is more or less a much narrower version of the same thing. A bot operator, on the other hand, can make a change immediately if it appears to be a good idea. If the community then objects, of course, they can be forced to change it back or have their bot blocked.
+
+So overall, I oppose this proposal unconditionally if any steps are taken to hide the configuration, and seriously question whether it's a good or useful idea in any event. —Simetrical (talk • contribs) 18:50, 24 June 2008 (UTC)
+
+    So you're saying if it performs the same job as an anti-vandal bot with a low or no false positive rate and ALL of the heuristics are public you wouldn't support the project? Let's presume it just blocks edits that include "PENNIISSSSSSSS!!!!!!!" by IP's on articles. The only impact there is removing the workload from editors who are currently patrolling with bots. Protonk (talk) 19:33, 24 June 2008 (UTC)
+
+        I might be fine with that, yes. Assuming all configuration and logs were public, I would not necessarily oppose. I might or might not, depending on details, but probably not very strongly in any event. —Simetrical (talk • contribs) 22:00, 25 June 2008 (UTC)
+"
+
+// sofar, community members participating in the discussion are not sure either what the difference from bots and the need for filters is.
+// okay, so according to Protonk 24.08.2008 19:33, filters remove workload from editors patrolling with bots; so bot patrolling is viewed still as a somewhat "manual" process. but in what sense are then edit filters different? there's still the need for human editors to update them, the same way as it is with bots, if vandalism patterns change..
+
+"Simetrical, I don't think you quite understand what this extension is all about. It's not about targetting bog-standard vandalism. It's not about targetting any significant proportion of vandalism, but about targetting very specific behaviours, like certain page-move vandals, and so on. You can read more about this by reading my comment prior to yours, and on the accompanying page to this talk page. It's about finding a real solution to vandalism, doing more intelligent things than increase the requirements for moving pages, and reactive checkusers. And so, by targetting specific behaviours, like moving userspace pages as your tenth edit, to some long title like User:Werdna is a big meanie, and an asshole, and he made my mummy cry, we can eliminate the 'shotgun' method of simply requiring twenty edits and seven days rather than four edits and ten days to move pages. It gives us the opportunity to lighten the hard restrictions we put on all users, instead placing tougher restrictions on those who are actually causing the problem. In comparison to this goal, certainly a worthy one, I cannot see the merit in your argument, which, to me, seems largely ideological, with very little basis in the practicalities and mechanics of dealing with these sorts of problems. — Werdna talk 10:40, 25 June 2008 (UTC)"
+// "targetting very specific behaviours..."
+
+answer to previous comment:
+"You say that it's to be used for targeting very specific behaviors, but you aren't going to be able to enforce that once it's enabled. It's going to be used for whatever people want to use it for, and depending on who controls the buttons, it may or may not be restricted to your original idea. You should know perfectly well how commonly software features are used for totally different things from their intended purpose. And if the configuration isn't public, we won't even know what it's being used for.
+
+As for how well it addresses your goal ― even leaving aside, for a moment, how it will inevitably be used to further other goals ― you've failed to make it clear to me how it's any more useful than an admin-bot. Your rationale for the proposal does not even include the word "bot" except when listing user groups. Anyone, including you, could run a bot to do exactly the same, with the only difference being that all actions would be logged in the normal fashion, instead of in some secret log viewable only to sysops or whatever. You'd also have to get it admin status, but that should be no harder than getting this proposal approved, if there's any reason in people's decision-making here. (And if there's not, software workarounds for that aren't the way to deal with it.)
+[...]
+Your implication that this proposal is an alternative to stricter autoconfirmation is a false dichotomy. FlaggedRevs, for one, will greatly reduce the need for things like outright semi-protection, in a much more contributor-friendly fashion. Moreover, as I emphasize above, a bot could serve the same purpose, and if you want this enabled you should make it clear what its advantages are over an admin bot.
+"
+
+"    So as I understand it, this process is going to completely automate the role of the administrator. I say go for it! But the process should be open and transparent:
+
+        If some sanction is imposed on you, then you should be able to see that it was imposed by an automated process, and likewise, if your edits are reverted, you should be able to see that it was an automated process that reverted them, and in any case, appeal to any administrator; and
+        all administrators should have read-access to the rules. Why do you suppose that it is so hard to become an administrator? It's because it is a position of trust. Anybody who has earned that trust should be able to see what the rules say. I take a moderate position on security through obscurity, but I am not a big fan of it.
+
+    The first point above I am sure is already part of the plan; the second is my point of view only. Please feel free to comment. Bwrs (talk) 20:11, 26 June 2008 (UTC)"
+
+continue at https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Status_of_proposal:_Secrecy
+
+=======================================================================
+https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
+
+Justification for filters:
+
+"This gives us the opportunity to prevent damage from vandals with very specific modi operandi. For instance, we can quite easily zero in on Willy on Wheels copycats by looking at edit-counts, the rate at which actions are going through, the age of the accounts, the types of edits made previously, keywords in move-to titles, other accounts created on the same day from the same range, and so on.
+
+I submit to the community that this gives us an extraordinary opportunity to disallow some of the worst and most annoying types of vandalism which occur on Wikipedia, and to refocus our efforts into doing other, more productive things than cleaning up after page-move vandalism. "
+
+"The second concern I foresee with this extension, is that it promotes a kind of cabal, which may abuse the AbuseFilter extension (if you will pardon the pun), to further their own ends on Wikipedia. I emphatically reject any suggestion of this. I doubt that users who abuse this extension will be able to do so a second time, and I stress that it is to be used only for targetting blatant, widespread vandalism, with a recognisable modus operandi. This would include characteristic pagemove vandalism (such as the user who we refer to as 'Grawp'), certain meme vandalism which is easily identified, and some vandalism which would indicate a compromised account (for instance, attempting to delete the main page, which is currently prevented by the software, but which might act as a useful honeypot for desysopping and blocking compromised administrator accounts early). I whole-heartedly accept any solution which promotes the group's accountability in its use of this tool, without compromising specific filters to circumvention. I would welcome, for instance, the oversight of members of the arbitration committee, who could ensure that the policies and practices for this tool's use are being complied with fully.
+
+In closing, I will summarise my main points: I have developed a MediaWiki extension which, if enabled on English Wikipedia, would afford us extraordinary power in preventing editing abuse. Unfortunately, to be fully effective, we will need to be a little secretive about the way it's been set up, so as not to make circumvention too easy. The tool's use would need to be very carefully monitored to prevent use for any other reason than preventing blatant vandalism with few false positives. However, if we can get this set up correctly, we would have an unprecedented ability to prevent abuse of Wikipedia for vandalism and so on. "
