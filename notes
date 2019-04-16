@@ -1551,7 +1551,62 @@ Your implication that this proposal is an alternative to stricter autoconfirmati
 
     The first point above I am sure is already part of the plan; the second is my point of view only. Please feel free to comment. Bwrs (talk) 20:11, 26 June 2008 (UTC)"
 
-continue at https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Status_of_proposal:_Secrecy
+"Given the concerns of editors who, rightly, have concerns about the need for secrecy with this extension, I've decided to relax my proposed secrecy provisions, after considering the cost/benefit.
+
+Therefore, with recent modifications to the software, I propose to require all filters to have an accurate short description of them, which will be publically visible, and included in block summaries, in the abuse log (which will be open for viewing to all users), and the relevant logs.
+
+In addition, I've added a feature which allows specific filters to be hidden from public view. I intend to allow administrators to view all filters, except those which have been hidden (which would be visible only to those with permission to edit them). I am open to implementing a feature which allows unhidden filters to be disabled by administrators (but not edited in any other way), if this would make the feature more palatable to the community.
+
+I hope that this will allay some of the concerns which have been put forward. — Werdna talk 13:17, 29 June 2008 (UTC) "
+//more or less the current status
+
+"This is something that needs to be discussed in more detail, but I can't see any reason why the right to edit the filters should not be a sysop permission. Admins already have access to a number of blacklists; there is nothing that the extension does (to my knowledge) that a bot-literate admin cannot already do, with the sole exception of invoking rights changes. I think that this extension has enormous potential, but it needs to be able to be adapted quickly to evolution in attack algorithms: tightly restricting access to it is not the best way to get full use of it, IMO. More (and separate) discussion needed. Happy‑melon 16:19, 29 June 2008 (UTC)
+[...]
+ If this ends up like oversight or checkuser, it's going to be almost useless (and the strongest wiki-cabal we've ever seen). Happy‑melon 10:54, 30 June 2008 (UTC)
+"
+
+"My concern is that it is not beyond some of our more dedicated trolls to "work accounts up" to admins, and then use them for their own purposes. Compare with, for instance, Runcorn, who developed an admin account, and used it to change blocks on tor. Compare with, for instance, the constant leaks to Wikitruth of deleted articles, and so on. — Werdna talk 00:50, 30 June 2008 (UTC) "
+// my 2 cents: then is pretty much any technical protection useless; trolls can "work up" their account to get an "abusefilter-modify" permission as well
+
+"is it possible to block an edit similar to the spam-block-fliter? "abusefilter-blockreason" appears to be something like that.
+e.g. in the german wikipedia we have a user, which performs a lot (!) of unuseful edits like changing "das gleiche" ("the equal one") to "dasselbe" ("the same one"). however, would it be possible to prevent this user, who often uses open proxies, from making such nonsens?
+áis it possible, to restrict the blocking to specific ip-ranges? -- seth (talk) 13:43, 6 July 2008 (UTC)
+
+This is not the intended purpose of the extension, and the extension's code includes mechanisms which actively prevent the use of the extension to apply restrictions to particular users or pages. In particular, it is not possible to target specific IP ranges (as this presents a hazard of releasing private data). — Werdna • talk 10:15, 7 July 2008 (UTC) "
+//this has changed as well though, hasn't it?
+
+"For the record, by the way, I'm happy to proceed with a lower level of privacy than I originally intended, and, if it becomes a problem, we'll see about having another poll on that. I have to write a bit more of a paper trail now (gasp, revisions of it). — Werdna • talk 06:43, 8 July 2008 (UTC) "
+"I know that my opinion isn't really the say so upon which this project rests ( :) ), but I do think this is a very good idea, divorced from the obscurity idea. Even if implemented as an elaborate "editprotected" type system (where dedicated vandals can avoid it with effort but 99% of IP vandals are stymied), we can see a huge ROI. I think that we get into serious diminishing returns as we attempt to eliminate the more persistent vandalism. Let's consider the huggle/twinkle userhours we save that can be diverted to other uses in just stemming IP vandalism. Protonk (talk) 04:17, 9 July 2008 (UTC) "
+//so, someone hopes/understands that the extention will help to "reduce huggle/twinkle working hours"
+
+"I encourage the development and implementation of automated defensive software to counter automated attacks on the integrity of the information in Wikipedia. One fast-typing goon or one automated attack can create so much mischief that it takes a dozen admins a long time to correct it. If there is a willingness on the part of Werdna to tweak the filters to reduce any false positives, I do not see a downside. Why would any new user find it necessary to do a great many page moves in a short time? Edison (talk) 04:56, 9 July 2008 (UTC) "
+// "tweak the filters to reduce false positives", huh? sounds like matter of 2 hours.
+
+So, slowly, I have the overall impression that the perceived problem is that blatant vandalism doesn't get reversed fast enough and occupies a lot of people
+But it's so far not been clearly stated what exactly the problem is the extention is trying to solve and why it isn't addressed by the existing mechanisms.
+
+"Small points of clarification: it's a not a bot, it's a proposed extension to the software."
+
+"Well, yes, I'm not suggesting that rogue admins are a huge problem that needs this extension to be fixed. But, if it comes for free when we solve a problem that DOES exist, and IS causing serious damage (Grawp), then we're all the better for it. — Werdna talk 07:42, 24 June 2008 (UTC) "
+// Werdna mentions Grawp several times when arguing in favour..
+
+So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
+Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
+
+Discussion continues... and not everyone is convinced; (compare also "botophobia")
+"No no no, we have more than enough problems with automatic responses for the existing bots, almost all of which I'd like to see scaled back considerably to require manual confirmation. We have over a hundred thousand reasonably active editors, and all they need is help in watching things. A report is quite another matter--certainly we can have reports of actions that merit investigation. I would never call them anythign so derogatory as "abuse reports" -- we AGF in our users. The mostthey will be is worth investigating, at various levels of priority. DGG (talk) 18:44, 23 June 2008 (UTC) "
+
+a problem with bots; however, the editor uses this also as a argument against (blackbox) edit filters
+"My initial reaction is much the same as DGG. Currently I don't really have a great deal of trust in the bot community. It's been unresponsive to many reasonable requests and done a bad job cleaning its own house. The community has, unfortunately, shown itself unfit for this level of responsibility: it has operated numerous unapproved adminbots--sometimes even to carry out completely pointless tasks--sometimes even over community objection--and sometimes failed to really communicate about it. "
+
+"Firstly, I must note that the code of the extension itself will be public in the MediaWiki subversion repository, that the filters will be editable by anyone with the appropriate privileges, and that it would be very simple to disable any user's use of the filtering system, any particular filter, or, indeed, the entire extension. This is quite different from, say, an anti-vandalism adminbot. The code is private, and, in any case, too ugly for anybody to know how to use it properly. The code can only be stopped in real terms if somebody blocks and desysops the bot, and the bot is controlled by a private individual, with no testing.
+
+In this case, there are multiple hard-coded safeguards on the false positive rate of individual filters, and the extension itself will be well-tested. In addition, I suggest that a strong policy would be developed on what the filters can be used to do, and on what conditions they can match on: I've developed a little system which tests a filter on the last several thousand edits before allowing it to be applied globally.
+
+So I stress that, unlike unauthorised adminbots, there are numerous safeguards, checks and balances, which allow it to appropriately target behaviours such as blocks and desysoppings — if you don't intend to delete the main page, or mess around with moving several other users' userpages in quick succession as a new account, you probably don't have anything to worry about. — Werdna talk 07:41, 24 June 2008 (UTC) "
+// so there's general discontent with bots (bot governance) that has motivated the creation of this extention?
+// the argument "bots are poorly tested and this is not is absurd before anything has happened."
+// when was the BAG and the formal process there created?
 
 =======================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
