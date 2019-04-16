@@ -1620,3 +1620,16 @@ I submit to the community that this gives us an extraordinary opportunity to dis
 "The second concern I foresee with this extension, is that it promotes a kind of cabal, which may abuse the AbuseFilter extension (if you will pardon the pun), to further their own ends on Wikipedia. I emphatically reject any suggestion of this. I doubt that users who abuse this extension will be able to do so a second time, and I stress that it is to be used only for targetting blatant, widespread vandalism, with a recognisable modus operandi. This would include characteristic pagemove vandalism (such as the user who we refer to as 'Grawp'), certain meme vandalism which is easily identified, and some vandalism which would indicate a compromised account (for instance, attempting to delete the main page, which is currently prevented by the software, but which might act as a useful honeypot for desysopping and blocking compromised administrator accounts early). I whole-heartedly accept any solution which promotes the group's accountability in its use of this tool, without compromising specific filters to circumvention. I would welcome, for instance, the oversight of members of the arbitration committee, who could ensure that the policies and practices for this tool's use are being complied with fully.
 
 In closing, I will summarise my main points: I have developed a MediaWiki extension which, if enabled on English Wikipedia, would afford us extraordinary power in preventing editing abuse. Unfortunately, to be fully effective, we will need to be a little secretive about the way it's been set up, so as not to make circumvention too easy. The tool's use would need to be very carefully monitored to prevent use for any other reason than preventing blatant vandalism with few false positives. However, if we can get this set up correctly, we would have an unprecedented ability to prevent abuse of Wikipedia for vandalism and so on. "
+
+========================================================================
+
+Timeline
+
+   Oct 2001 : automatically import entries from Easton’s Bible Dictionary by a script
+   Oct 2002 : RamBot
+13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
+21 Jan 2007 : Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007
+16 Jan 2008 : Huggle Page is first published (empty)
+18 Jan 2008 : Huggle Page is first filled with content
+23 Jun 2008 : 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention
+20 Oct 2010 : ClueBot NG page is created
