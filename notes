@@ -1589,6 +1589,7 @@ But it's so far not been clearly stated what exactly the problem is the extentio
 
 "Well, yes, I'm not suggesting that rogue admins are a huge problem that needs this extension to be fixed. But, if it comes for free when we solve a problem that DOES exist, and IS causing serious damage (Grawp), then we're all the better for it. — Werdna talk 07:42, 24 June 2008 (UTC) "
 // Werdna mentions Grawp several times when arguing in favour..
+// According to next note (see below), grawp is "This would include characteristic pagemove vandalism (such as the user who we refer to as 'Grawp')"; however here https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Biggest_problems_on_wikis_are_not_obvious_vandalisms, User:William_Ortiz gives a bunch of silly vandalism examples (such as misspelling, putting random, easily spotable, sometimes profane stuff in articles) as examples for "grawp"
 
 So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
 Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
@@ -1607,6 +1608,37 @@ So I stress that, unlike unauthorised adminbots, there are numerous safeguards, 
 // so there's general discontent with bots (bot governance) that has motivated the creation of this extention?
 // the argument "bots are poorly tested and this is not is absurd before anything has happened."
 // when was the BAG and the formal process there created?
+
+"I agree with Mr. Z-man: maybe preventing specific types of vandalism such as page-moves would be useful, but preventing too much vandalism will shift their attention to other types of more difficult to recognise vandalism. --Steven Fruitsmaak (Reply) 07:31, 9 July 2008 (UTC) "
+// so "grawp" == page move vandalism?
+
+"The filters would then be a work in progress, just like the rest of Wikipedia. I don't consider that this will diminish the tool's effectiveness, as surely most of the vandals targeted are idiots/bored kids, who are not going to take the time and effort to understand the detail of comprehensive filters in order to circumvent them? Rjwilmsi 07:00, 9 July 2008 (UTC)
+
+    We're not targetting the 'idiots and bored kids' demographic, we're targetting the 'persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic. — Werdna • talk 07:28, 9 July 2008 (UTC)"
+// who do the filters target!
+
+"Many coming here seem to be under the impression that the purpose of this extension is to prevent common, garden-variety vandalism. This is not the case.
+
+The abuse filter is designed with specific vandalism in mind. For instance, adding something about elephants because of what you saw on Stephen Colbert, or moving pages to 'ON WHEELS!', or whatever.
+
+It is designed to target repeated behaviour, which is unequivocally vandalism. For instance, making huge numbers of page moves right after your tenth edit. For instance, moving pages to titles with 'HAGGER?' in them. All of these things are currently blocked by sekrit adminbots. This extension promises to block these things in the software, allowing us zero latency in responding, and allowing us to apply special restrictions, such as revoking a users' autoconfirmed status for a period of time.
+
+It is not, as some seem to believe, intended to block profanity in articles (that would be extraordinarily dim), nor even to revert page-blankings. That's what we have ClueBot and TawkerBot for, and they do a damn good job of it. This is a different tool, for different situations, which require different responses. I conceive that filters in this extension would be triggered fewer times than once every few hours. — Werdna • talk 13:23, 9 July 2008 (UTC) "
+// longer clarification what is to be targeted. interestingly enough, I think the bulk of the things that are triggered today are precisely the ones Werdna points out as "we are not targeting them".
+
+// interestingly, here someone is also under the impression, these are the types of vandalism that will be targeted
+"The filters Werdna proposes sound like obvious stuff everyone looks for anyway, which in its simplest form is if the account appears to be single-purpose or not. But this filter does not sound like it will find any subtle inaccuracies or subtle vandalism, just obvious vandalism."
+
+//and one more user under the same impression
+"The fact that Grawp-style vandalism is easily noticeable and revertible is precisely why we need this extension: because currently we have a lot of people spending a lot of time finding and fixing this stuff when we all have better things to be doing. If we have the AbuseFilter dealing with this simple, silly, yet irritating, vandalism; that gives us all more time to be looking for and fixing the subtle vandalism you mention. This extension is not designed to catch the subtle vandalism, because it's too hard to identify directly. It's designed to catch the obvious vandalism to leave the humans more time to look for the subtle stuff. Happy‑melon 16:35, 9 July 2008 (UTC) "
+// and this is the most sensible explaination so far
+
+"Indeed. Happy is correct. While subtle vandalism is more difficult to detect, it also has two other properties that make it a whole different matter: 1)Anyone can revert it easily. and 2)It is impossible to auto-block. In contrast, vandalism such as the above is difficult to revert and often an admin must be found to clean up. Also, this type of vandalism can be auto-blocked and I think it should because doing this will free the rest of us to clean up the subtle vandalism without worrying about hundreds of pages being moved in a few seconds. Thingg⊕⊗ 23:06, 9 July 2008 (UTC)"
+
+"It's not really for that. The idea is to automatically deal with the very blatant, serial pagemovers for instance, freeing up human resources to deal with the less blatant stuff. SQLQuery me! 20:13, 9 July 2008 (UTC)"
+// and one more user whose claims about the purpose of the filters partially clash with these of the core developer
+
+https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#a_problem,_but_not_a_solution_to_it
 
 =======================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
@@ -1629,6 +1661,7 @@ Timeline
    Oct 2002 : RamBot
 13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
 21 Jan 2007 : Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007
+24 Jul 2007 : Request for Approval of original ClueBot
 16 Jan 2008 : Huggle Page is first published (empty)
 18 Jan 2008 : Huggle Page is first filled with content
 23 Jun 2008 : 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention
