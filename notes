@@ -1638,7 +1638,24 @@ It is not, as some seem to believe, intended to block profanity in articles (tha
 "It's not really for that. The idea is to automatically deal with the very blatant, serial pagemovers for instance, freeing up human resources to deal with the less blatant stuff. SQLQuery me! 20:13, 9 July 2008 (UTC)"
 // and one more user whose claims about the purpose of the filters partially clash with these of the core developer
 
-https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#a_problem,_but_not_a_solution_to_it
+"Do we really need this extension, after all we have our bots, our admins, and dedicated antivandal fighters... all this effort doesn't seem worth it, since the troublemakers are only a small percentage of the users. NanohaA'sYuriTalk, My master 00:54, 10 July 2008 (UTC)
+
+    I'm inclined to disagree. I think the idea is that the filters act as a passive vandal-fighter, allowing less manpower to be eaten up on vandals, so (hopefully) more could be spent on other activities. I believe this could be a useful feature. -FrankTobia (talk) 01:17, 10 July 2008 (UTC)"
+// still, someone has to maintain the filters; it may be not comparable to bot maintenance but it's still work that requires humans
+
+"Automatic censorship won't work on a wiki. " // so, people already perceive this as censorship; user goes on to basically provide all the reasons why upload filters are bad idea (Interlanguage problems, no recognition of irony, impossibility to discuss controversial issues); they also have a problem with being blocked by a technology vs a real person
+
+" This extension has zero latency: when an edit pattern like this is detected, the account will be blocked instantly, with no time to cause disruption." //which doesn't happen (any more); no block action is active on EN WP
+
+"This extension has zero latency: when an edit pattern like this is detected, the account will be blocked instantly, with no time to cause disruption. Similarly, any questionable edit to the main page should incite a block-first-ask-questions-later approach. It's things like this that the extension is designed for, not to replace Clue Bot, VoABot, etc. I can make a personal promise that I will immediately remove any filter that triggers on the use of the word "nigger" - that would be foolish beyond belief. I could not agree more that secret settings are totaly incompatible with the wiki philosophy; but this extension is most definitely not. Happy‑melon 15:58, 2 July 2008 (UTC) "
+// for the record, such filter exists and is active today, id=384
+
+"All of these measures are already in force: the restriction for autoconfirmed status, which allows moving pages, is 4 days and ten edits. The reason we need this extension is because simple, sweeping heuristics like these just don't work. It's far too easy to get around them, and we can't make them more restrictive without an unacceptable level of false-positives. "
+// but the filters are also simple heuristics with regexes at the end; getting around them is somewhat harder in the case of hidden filters when you cannot check the filter pattern directly
+
+"But with this extension comes the ability to make more intelligent decisions. For instance, the most common way of bypassing the editcount restriction is by making trivial edits to a userpage: with this extension, we could set a pagemove filter that was independent of autoconfirmed status, requiring the ten edits to be to separate pages, to have provided substantial content, or not to have been reverted."
+
+https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Reciprocity_on_Sanctions
 
 =======================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
@@ -1659,6 +1676,7 @@ Timeline
 
    Oct 2001 : automatically import entries from Easton’s Bible Dictionary by a script
    Oct 2002 : RamBot
+       2006 : BAG was first formed
 13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
 21 Jan 2007 : Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007
 24 Jul 2007 : Request for Approval of original ClueBot
