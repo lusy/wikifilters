@@ -987,3 +987,51 @@ Also point out that article's belonging to categories is not exhaustive and ofte
 "This observation about missing labels suggests that the fitness
 measurements are generally conservative. It also suggests that there is a surprising utility to our
 topic model: It can be used to predict missing topics for existing full-fledged articles!"
+
+====================================================
+\cite{Livingstone2016}
+
+Background on bots, bot policies, governance, etc
+IV with Ram-Man
+
+https://stats.wikimedia.org/EN/BotActivityMatrixEdits.htm
+// stats about bot edits; not clear for me which period is covered
+
+Bot Def
+"bots are processes that run in the background, are normally
+invisible, react to their environment, and most importantly, run autonomously. Leonard (1997) claims autonomy
+is the “crucial variable”"
+
+Concerns with the rambot (and bots in general):
+"1. It affected performance. // wikipedia resided on one server at the time; at the end an edit rate limit of 1 edit/sec was established
+2. The percentage of articles got skewed. This directly affected “Random Page.”
+3. It cluttered up the “Recent Changes.”
+4. It generated lots of discussion on the merits of the articles themselves and the various camps all came
+out to play (Deletionists, Inclusionists, etc.).
+5. People started to be concerned about how a bot could be used to “mess up” the project." //"botophobia"
+
+Ram-Man authored the original bot policy (so that he can be "left alone")
+
+"In 2006, the Bots Approval Group (BAG) was formed on the English Wikipedia to review Bot Request for
+Approvals (BRFA) (Figure 2). Consisting of experienced bot operators, the group would both review the
+soundness of a bot request and determine if there was community consensus for the task. By 2007, the BAG
+was facing accusations of being a technical cabal on the site, making decisions on bots without fully gauging
+community consensus, and adding unnecessary bureaucracy and process to the site (Wikipedia, 2016e)."
+"BAG stood by the fact that the BRFA process is always open to the broader community, but few outside
+contributors regularly participated in the process."
+
+One of the reasons for bot policy:
+Bug in the MediaWiki software that was counting every bot edit as a new article, which distorted the stats and public and private perception of Wikipedia
+
+bot flag was developed in order to be able to filter out bot edits from the recent changes logs (were flooded) so that editors can watch for vandalism
+
+Bot policy was in place before BAG was first created
+
+"What is a bot?
+In the Wikimedia software, there are tasks that do all sorts of things, like count pages, count orphan pages, etc.
+If these things are not in the software, an external bot could do them. It is just a small step to editing pages. The
+main difference is where it runs and who runs it."
+
+problem with BAG: not enough people participate
+"the management of bots was a largely ignored and thankless job."
+a (probably) wrong perception by the community how the BAG worked, so it was criticised and challenged for being a cabal
