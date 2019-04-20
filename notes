@@ -1569,7 +1569,40 @@ It is not, as some seem to believe, intended to block profanity in articles (tha
 
 "But with this extension comes the ability to make more intelligent decisions. For instance, the most common way of bypassing the editcount restriction is by making trivial edits to a userpage: with this extension, we could set a pagemove filter that was independent of autoconfirmed status, requiring the ten edits to be to separate pages, to have provided substantial content, or not to have been reverted."
 
-https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Reciprocity_on_Sanctions
+People have really strong opinions on (agains) using filters to block editors.
+
+". While blocks may generally not be punitive, blocks shouldn't made by machines, either. This is a very special case. "
+
+Freedom of speech concerns
+" Do we think that automatons have the judgement to apply prior restraint to speech? Do we think they should be allowed to do so even if they can be imbued with excellent judgement? We don't allow the government to apply prior restrain to speech, why would we build robots to do it? Laziness?
+
+TheNameWithNoMan (talk) 17:39, 9 July 2008 (UTC)"
+
+"This extension is designed to be used for vandals like the ones I link to below: intelligent, aggressive, destructive editors who aim to do as much damage as possible to the wiki and the people who edit it. It's not on the main field that we need this extension: the anti-vandal bots do a stunning job, and they do it at just the right level of efficiency. It's on the constant skirmishes against the handful of intelligent and malicious persistent vandals that we need every tool available just to stay ahead of their game. These are the editors who would, in the real world, be tried for crimes against humanity - the users who have demonstrated time and time again that all they want to do is do as much damage as possible. Do we allow ourselves to use prior restraint against them? No, because we don't need to - they've already done enough harm to condemn themselves many times over. Happy‑melon 21:07, 9 July 2008 (UTC)"
+
+" And yet it's not good enough - within those few seconds, damage is caused that takes ten minutes or more to clear up. With this extension, we have zero latency: we can do the same job that's being done already, without having to have a user running a script on a paid-for server that has to fetch the block token every twenty seconds to make sure it can respond as fast as inhumanly possible; and we can do it instantly, cleanly, and without any fuss"
+
+Happy-melon explains again what kind of vandalism the filters are supposed to target (in their view):
+"I think a lot of people misunderstand the speed of response that's required to effectively stop the sort of vandalism that this extension is designed to combat. The users I linked to above were blocked by an adminbot script within five seconds of beginning to edit disruptively, and look at the mess they were allowed to make. No matter how efficiently ANI posts are processed, no matter how little time a human needs to review the situation, it's too long. These vandals are either using carefully-prepared tabbed browsers, or fully-automated vandalbots, which have been specifically designed to cause as much damage as possible in as short a space of time as possible. "
+
+Discussion on permissions
+"abusefilter-view
+
+It sounds like this permission, and abusefilter-modify, might be in the process of being converted into an array similar to the edit-protected system: with different levels of access available as different permissions. However, it seems that a consensus has developed above that at least the majority of filters should be available in their entirety for all users to view, which corresponds to abusefilter-view → '*'. Comments? Happy‑melon 16:53, 29 June 2008 (UTC)
+
+    I'd disagree with this. Would prefer abusefilter-view → 'sysop', per above. — Werdna talk 00:52, 30 June 2008 (UTC) "
+
+"I think here we need to remember what this extension is supposed to be used for: its primary advantage is that, being part of the site software, it has zero-latency: Misza13's anti-Grawp script can slam in a block token just 5 seconds after detecting a heuristic-matching edit pattern, but this extension can do it before the first vandal action has even been completed. It has no real advantages over anti-vandal bots other than speed and tidiness: the majority of its functions can be performed just as well by a well-written script running on an admin account. However, there are some functions, most notably rights changes, which are way beyond what an admin can imitate. I have a suspicion that a filter could easily be implemented to desysop any specific user on their next edit; or (worse still) desysop all admins as-and-when they edit. Even granting this permission only to bureucrats would be giving them a right that they don't currently have - full access to this extension gives users half the power of a steward. Consequently, the ability to set filters which invoke rights changes should, in my opinion, be assigned separately to the other permissions, and only to completely trusted users. I would say give it only to the stewards, but they do not have a local right on en.wiki that the extension can check; my second choice would be those already trusted to the level of 'oversight', which is essentially the ArbCom (and stewards if necessary). Everything else the extension offers can already be done by admins, and I can see no reason not to give them all the tools available. My personal preference, therefore, would be abusefilter-modify → 'sysop' and abusefilter-modify-rights → oversight. I'm especially keen to hear other people's views on this area. Happy‑melon 16:53, 29 June 2008 (UTC) "
+
+"Well, we can, of course, disable the 'desysop' action on Wikimedia quite simply. I think that may be the way to go for the moment — I included it only for completeness, and took care that it could be easily disabled. That said, I would still like to restrict modification of filters to a smaller group (and viewing of hidden filters is the same right), although I suppose restricting it to 'admins' would be better than nothing. The reason I suggest this is my above comments — we have lots of admins, and lots of precedents for disgruntled admins doing some leaking. — Werdna talk 00:56, 30 June 2008 (UTC"
+//corresponds to current situation
+
+"I don't agree that hiding heuristics from the public is a problematic form of 'security through obscurity'. The point of AbuseFilter is to target vandalism with specific modi operandi — for instance, Willy on Wheels, Stephen Colbert, and meme vandalism. By their nature, many of these vandals will be quite determined, and, therefore, if we expose the heuristics we use to detect them, they will simply move to other forms of vandalism which aren't targetted by the filters. If, however, we pose a barrier, even as low as needing a sysop to leak the filter's information, or getting a proxy IP blocked, or something, then the user's ability to determine what's in the filters is limited, and so they can't simply circumvent the filter by changing individual aspects of their behaviour. SQL has told me that he has had instances of vandals following his subversion commits to determine ways to circumvent restrictions on use of the account-creation tool. In short, I don't think open viewing is going to cut it. — Werdna talk 11:54, 30 June 2008 (UTC) "
+// so, according to Werdna, main targetted group are especially determined vandals in which case it makes sense to hide filters' heuristics from them. Which would also explain why 2/3 of the filters are hidden
+
+ideological and practical concerns mix
+
+https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Security_through_private_obscurity_-_mbots
 
 =======================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
@@ -1592,6 +1625,7 @@ Timeline
    Oct 2002 : RamBot
        2006 : BAG was first formed
 13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
+28 Jul 2006 : VoABot II ("In the case were banned users continue to use sockpuppet accounts/IPs to add edits clearly rejected by consensus to the point were long term protection is required, VoABot may be programmed to watch those pages and revert those edits instead. Such edits are considered blacklisted. IP ranges can also be blacklisted. This is reserved only for special cases.")
 21 Jan 2007 : Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007
 24 Jul 2007 : Request for Approval of original ClueBot
 16 Jan 2008 : Huggle Page is first published (empty)
