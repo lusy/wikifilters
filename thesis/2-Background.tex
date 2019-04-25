@@ -4,8 +4,9 @@
 The present work can be embedded in the context of (algorithmic) quality-control mechanisms on Wikipedia.
 There is a whole ecosystem (syn?) of actors struggling to maintain the anyone-can-edit encyclopedia as good^^ and vandalism free as possible.
 We want to be able to better understand the role of edit filters in the vandal fighting network of humans, bots, semi-automated tools, and the machine learning framework ORES.
-After all, edit filters were introduced to Wikipedia quite late, compared to the remaining mechanisms: in 2009. %TODO: when was the other stuff introduced
-To this end, in the current chapter we study scientific literature on vandalism in Wikipedia and the quality control mechanisms mentioned above.
+After all, edit filters were introduced to Wikipedia quite late, compared to bots and semi-automated tools: in 2009 (compare timeline, Twinkle's page is from Jan 2007, Huggle's from beginning of 2008; bot's have been around longer, but first records, at least by me so far, of vandal fighting bots come from 2006 ). %TODO: when was the other stuff introduced
+Moreover, there seems to be a gap in the scientific literature on the subject.
+To this end, in the current chapter we study scientific literature on vandalism in Wikipedia and the quality control mechanisms mentioned above in an attempt to determine the role of edit filters.
 
 \section{Vandalism on Wikipedia}
 %TODO put here papers on vandalism
@@ -13,33 +14,13 @@ To this end, in the current chapter we study scientific literature on vandalism 
 Papers discussing vandalism detection from IR/ML perspective:
 - Martin Potthast, Benno Stein, and Robert Gerling. 2008. Automatic vandalism detection in Wikipedia. In European conference on information retrieval. Springer, 663–668.
 
-\begin{comment}
-\url{http://www.aaronsw.com/weblog/whorunswikipedia}
-"But what’s less well-known is that it’s also the site that anyone can run. The vandals aren’t stopped because someone is in charge of stopping them; it was simply something people started doing. And it’s not just vandalism: a “welcoming committee” says hi to every new user, a “cleanup taskforce” goes around doing factchecking. The site’s rules are made by rough consensus. Even the servers are largely run this way — a group of volunteer sysadmins hang out on IRC, keeping an eye on things. Until quite recently, the Foundation that supposedly runs Wikipedia had no actual employees.
-This is so unusual, we don’t even have a word for it. It’s tempting to say “democracy”, but that’s woefully inadequate. Wikipedia doesn’t hold a vote and elect someone to be in charge of vandal-fighting. Indeed, “Wikipedia” doesn’t do anything at all. Someone simply sees that there are vandals to be fought and steps up to do the job."
-
-\end{comment}
-
 \section{Quality-control mechanisms on Wikipedia}
 
 %TODO Literature review!
 % How: within the subsections? as a separate section?
 
 % Aim: I want to know why are there filters? How do they fit in the quality control ecosystem?
-Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted?
-
-So, after reading quite some of the discussion surrounding the introduction of the edit filter MediaWiki extention (\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1}),
-I think motivation for the filters was following:
-bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
-(It seemed to be not completely clear what types of vandalism these were.
-As far as I understood, and what made more sense to me, above all, it was about mostly obvious but pervasive vandalism, possibly aided by bots/scripts itself, that was immediately recognisable as vandalism, but take some time to clean up.
-Motivation of extention's devs was that if a filter just disallows such vandalism, vandal fighters could use their time for checking less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.)
-The extention's developers felt that admins and vandal fighters could use this valuable time more productively.
-Examples of type of edits that are supposed to be targeted:
-\url{https://en.wikipedia.org/wiki/Special:Contributions/Omm_nom_nom_nom}
-* often: page redirect to some nonsence name
-\url{https://en.wikipedia.org/wiki/Special:Contributions/AV-THE-3RD}
-\url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}
+Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted? %TODO: good question, but move to analysis, since we won't be able to answer this on grounds of literature review only
 
 \cite{AstHal2018} have a diagram describing the new edit review pipeline. Filters are absent.
 
