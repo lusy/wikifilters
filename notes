@@ -1602,7 +1602,16 @@ It sounds like this permission, and abusefilter-modify, might be in the process 
 
 ideological and practical concerns mix
 
-https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1#Security_through_private_obscurity_-_mbots
+"My reading of this page is that the most frequently mentioned advantage of the proposed anti-vandalism Mediawiki extension, is speed of response compared to similar private bots. The major improvement over bots seems to be that of amplifying speed-of-response.
+Why not create the mediawiki extension as an amplifier toolkit for "bots"? "
+
+"owever, my proposal is to "increase" the effectiveness of our handling, by targetting the vandals before they can vandalise, and by placing restrictions on their accounts and IP addresses when they try, resulting in zero actual vandalism, and all of the admin and checkuser work automated by software. This is an effective system.
+
+You cannot possibly be suggesting that, because our current handling of repeat vandals does eventually reverse and prevent some vandalism, we should rest on our laurels and do what we currently do because it's "not broken". Here, we have an opportunity to improve the effectiveness of our handling of repeat vandals. Let us not ignore it because our current system is "not broke". - —Preceding unsigned comment added by Werdna (talk • contribs) 02:07, 16 July 2008 "
+
+A lot of controversy along the lines of
+* public/private filters
+* what actions exactly are ok to be taken by the filters; strong objections from community members about filters blocking/taking away rights etc. from editors; and although (both?) of theses functionalities ended up being implmented actually none of them is being actively used on the EN WP (where the "strictest" action applied is "disallow" and the last time a filter took an action different from disallow/tag/warn/log was "blockautopromote" and "aftv5flagabuse" (not sure what exactly this is) in 2012, see ipnb)
 
 =======================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221994491
