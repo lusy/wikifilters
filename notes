@@ -1631,6 +1631,7 @@ In closing, I will summarise my main points: I have developed a MediaWiki extens
 Timeline
 
    Oct 2001 : automatically import entries from Easton’s Bible Dictionary by a script
+29 Mar 2002 : First version of https://en.wikipedia.org/wiki/Wikipedia:Vandalism (WP Vandalism is published)
    Oct 2002 : RamBot
        2006 : BAG was first formed
 13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
@@ -1640,4 +1641,101 @@ Timeline
 16 Jan 2008 : Huggle Page is first published (empty)
 18 Jan 2008 : Huggle Page is first filled with content
 23 Jun 2008 : 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention
+ 2 Oct 2008 : https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter was first archived; its last topic was the voting for/against the extention which seemed to have ended end of Sep 2008
 20 Oct 2010 : ClueBot NG page is created
+11 Jan 2015 : 1st commit to github ORES repository
+30 Nov 2015 : ORES paper is published
+
+========================================================================
+https://en.wikipedia.org/wiki/Vandalism_on_Wikipedia
+
+"Vandalism includes the addition, removal, or modification of the text or other material that is either humorous, nonsensical, a hoax, or that is an offensive, humiliating, or otherwise degrading nature."
+
+"Vandalism is easy to commit on Wikipedia because anyone can edit the site,[2][3] with the exception of articles that are currently semi-protected, which means that new and unregistered users cannot edit them. "
+
+"
+# Fighting vandalism
+
+There are various measures taken by Wikipedia to prevent or reduce the amount of vandalism. These include:
+
+    Using Wikipedia's history functionality, which retains all prior versions of an article, restoring the article to the last version before the vandalism occurred; this is called reverting vandalism.[4] The majority of vandalism on Wikipedia is reverted quickly.[9] There are various ways in which the vandalism gets detected so it can be reverted:
+        Bots: In many cases, the vandalism is automatically detected and reverted by a bot. The vandal is always warned with no human intervention.
+        Recent changes patrol: Wikipedia has a special page that lists all the most recent changes. Some editors will monitor these changes for possible vandalism.[10]
+        Watchlists: Any registered user can watch a page that they have created or edited or that they otherwise have an interest in. This functionality also enables users to monitor a page for vandalism.[10]
+        Incidental discovery: Any reader who comes across vandalism by chance can revert it. In 2008 it was reported that the rarity of such incidental discovery indicated the efficacy of the other methods of vandalism removal.[10]
+    Locking articles so only established users, or in some cases, only administrators can edit them.[4] Semi-protected articles are those that can only be edited by those with an account that is considered to be autoconfirmed – an account that is at least 4 days old with at least 10 edits, for most accounts. Fully protected articles are those that can only be edited by administrators. Protection is generally instituted after one or more editors makes a request on a special page for that purpose, and an administrator familiar with the protection guidelines chooses whether or not to fulfill this request based on the guidelines.
+    Blocking and banning those who have repeatedly committed acts of vandalism from editing for a period of time or in some cases, indefinitely.[4] Vandals are not blocked as an act of punishment – the purpose of the block is simply to prevent further damage.[11]
+    The "abuse filter" extension, which uses regular expressions to detect common vandalism terms.[12]
+
+Editors are generally warned prior to being blocked. Wikipedia employs a 4-stage warning process up to a block. This includes:[13]
+
+    The first warning assumes good faith and takes a relaxed approach to the user. (in some cases, this level can be skipped if the editor assumes the user is acting in bad faith[14]).
+    The second warning does not assume any faith and is an actual warning (in some cases, this level may also be skipped).
+    The third warning assumes bad faith and is the first to warn the user that continued vandalism may result in a block.
+    The fourth warning is a final warning, stating that any future acts of vandalism will result in a block.
+    After this, other users may place additional warnings, though only administrators can actually carry out the block.
+
+In 2005, the English Wikipedia started to require those who create new articles to have a registered account in an effort to fight vandalism. This occurred after inaccurate information was added to Wikipedia in which a journalist was accused of taking part in Kennedy's assassination.[2]
+
+Wikipedia has experimented with systems in which edits to some articles, especially those of living people, are delayed until it can be reviewed and determined that they are not vandalism, and in some cases, that a source to verify accuracy is provided. This is in an effort to prevent inaccurate and potentially damaging information about living people from appearing on the site.[15][16] "
+
+Title blacklist
+Spam blacklist
+Bad image list
+"The entirety of the MediaWiki namespace, the main page, and high risk templates are protected "
+
+===================================================
+https://en.wikipedia.org/wiki/User:TheBuddy92/Willy_on_Wheels:_A_Case_Study
+
+"Why did Willy stop? It seems that he was flustered at the futility of his vandalism and he was contemplating more effective methods, for five days later emerged User:The Willy on Wheels. This new incarnation of Willy proceeded to move random articles to random names, usually by adding "on wheels" or incorporating "Willy", drawing attention to himself, as can be seen on one of his sock's contributions. These changes were just as obvious as his previous changes, but at the time they were impossible for anyone but administrators to reverse, because moving a page leaves a redirect at the previous name, and the page could not be moved back without first deleting that redirect. This technique, called high-speed page move vandalism, strained the relatively small number of administrators who cleaned up vandalism and increased revert times. The account was banned almost instantly, but the damage was done. "
+//I'd say, edit filters were implemented to counteract these types of vandalism
+
+"One of our best sources of information on Willy is an old revision of User:WoW. This shows that Willy's ultimate goal is to vandalize as many pages as he possibly can before being banned. He is constantly attempting to innovate new techniques toward this end, and sees it as a competition. He claims affiliation with troll groups like the GNAA and the "anti-cabal" movement against the leadership of Wikipedia. There may even be multiple Willies competing for this "honor", as suggested by his proposal for a competition. "
+
+"He despises the power structure of Wikipedia, as evidenced by his proclaimed affiliation with anti-cabal groups - this strongly suggests that he is not in fact an admin at all, but may have been a registered user."
+
+========================================================
+https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Documentation
+
+"The extension defines a domain-specific language solely to write filter rules. Since the language is not Turing complete, it cannot replace bots for more complex tasks. "
+
+"Actions which can be assigned in response to filtered edits
+
+If a user triggers a filter, the edit filter can apply any of the following sanctions based on the severity of the offense:
+
+    All actions triggering a filter are logged at a special page.
+    The user's action can be tagged for further review.
+    The user can be warned that their actions may be unconstructive.
+    The user's action may be disallowed.
+    The user's autoconfirmed status may be revoked (or delayed if the user doesn't hold it).
+
+The following actions are currently not available on this wiki:
+
+    The user's account may be blocked from editing, along with all IP addresses used in the last 7 days.
+    The user's account may be removed from all privileged groups (such as sysop, bot, rollbacker).
+
+Note: Individual sanctions can be disabled selectively. Any edit filter manager can restore autoconfirmed status in case of an error. "
+
+"Condition limit
+
+The condition limit is a limit imposed by the software on the total number of conditions that can be evaluated by the filters. It is arbitrarily fixed at 1,000. While the aim of this limit is to avoid performance issues, it should be noted that this isn't a good metric of how heavy a filter is: for instance, a filter using dozens of simple comparisons (and thus dozens of conditions) is much lighter than one using a single check on the all_links variable. See mw:Extension:AbuseFilter/Conditions and mw:Extension:AbuseFilter/Rules format#Performance for more details. "
+
+"Safeguards
+
+To protect the wiki against poorly configured filters, a technical limit is imposed on the maximum percentage of actions that will trigger a given filter. Other technical limits are in the process of being written. "
+
+==========================================================================
+https://www.mediawiki.org/wiki/Extension:AbuseFilter/Conditions
+
+"Essay: The condition limiter is a somewhat ad hoc tool for preventing performance problems. To the extent that you want to worry about performance, execution times are generally better measure to be thinking about. The per filter time and conditions numbers are somewhat broken (race conditions can cause them to be off), but most of the time they should be good enough to rely on.
+
+The condition limit is (more or less) tracking the number of comparison operators + number of function calls entered. "
+
+========================================================================
+https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_3#Request_for_name_change
+
+"Could the name of this log be changed, please? I just noticed the other day that I have entries in an "abuse" log for linking to YouTube and for creating articles about Michael Jackson, which triggered a suspicion of vandalism. A few other people are voicing the same concern at AN/I, and someone suggested posting the request here. SlimVirgin talk|contribs 18:11, 2 July 2009 (UTC) "
+
+"    I would support a name change on all public-facing parts of this extension to "Edit filter". Even after we tell people that "Entries in this list do not necessarily mean the edits were abusive.", they still worry about poisoning of their well. –xenotalk 18:14, 2 July 2009 (UTC)"
+
+as well as several more comments in favour
