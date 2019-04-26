@@ -38,9 +38,23 @@ Their clear purpose was to cope with the rising(syn) amount of vandalism as well
 \end{itemize}
 %************************************************************************
 
+The present work can be embedded in the context of (algorithmic) quality-control mechanisms on Wikipedia.
+There is a whole ecosystem (syn?) of actors struggling to maintain the anyone-can-edit encyclopedia as good^^ and vandalism free as possible.
+We want to be able to better understand the role of edit filters in the vandal fighting network of humans, bots, semi-automated tools, and the machine learning framework ORES.
+After all, edit filters were introduced to Wikipedia quite late, compared to bots and semi-automated tools: in 2009 (compare timeline, Twinkle's page is from Jan 2007, Huggle's from beginning of 2008; bot's have been around longer, but first records, at least by me so far, of vandal fighting bots come from 2006 ). %TODO: when was the other stuff introduced
+Moreover, there seems to be a gap in the scientific literature on the subject.
+
 \section{Aims of this work}
 %alt title: \section{Intended Contributions}
 %Epistemological interest
+
+The aim of this work is to find out why edit filters were introduced on Wikipedia and how these fit in Wikipedia's quality control ecosystem.
+More precisely, we want to unearth the tasks taken over by filters in contrast to other quality control meachanisms
+and understand how different users of Wikipedia (admins/sysops, regular editors, readers) interact with these and what repercussions the filters have on them.
+To this end, we study the academic contributions on Wikipedia's vandal fighting and quality control mechanisms and give a descriptive overview of the adoption process as well as the current state of edit filters on EN Wikipedia.
+
+
+\begin{comment}
 \begin{itemize}
 	\item Was sind die mit dieser Arbeit verfolgten Ziele? Welches Problem soll gelöst werden?
 	\item Eine Beschreibung der ersten Ideen, der vorgeschlagene Ansatz und die aktuell erreichten Resultate
@@ -48,62 +62,9 @@ Their clear purpose was to cope with the rising(syn) amount of vandalism as well
 	\item Eine Diskussion, wie die vorgeschlagene Lösung sich von bestehenden unterscheidet, was ist neu oder besser?
 \end{itemize}
 
-
-What do we want to know?
-
-Core questions:
-
-We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
-
-Which type of tasks do these filters take over in comparison to the other mechanisms? How these tasks evolve over time (are they changes in the type, number, etc.)?
-
-Since filters are classical rule-based systems, what are suitable areas of application for such rule-based system in contrast to the other ML-based approaches.
-
-
-\begin{itemize}
-    \item Description of how filters integrate into the algorithmic quality control mechanism in Wikipedia
-    \item Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?
-    \item What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
-    \item Filter are classical rule-based systems. What are suitable areas of application for such rule-based system in contrast to ML systems?
-\end{itemize}
-
-
-What can we study?
-
-\begin{itemize}
-    \item Discussions on filter patterns? On filter repercussions?
-    \item Whether filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefullness is questionable?
-    \item What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
-    \item add also "af\_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
-\end{itemize}
-
-
-\begin{comment}
 * Think about: what's the computer science take on the field? How can we design a "better"/more efficient/more user friendly system? A system that reflects particular values (vgl Code 2.0, Chapter 3, p.34)?
-  * go over notes in the filter classification and think about interesting controversies, things that attract the attention
-  * what are useful categories
   * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
-
-* What can we study?
-  * Question: Is it worth it to use a filter which has many side effects?
-  * Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?
-  * Precision/Recall: False Positives? were filters shut down, bc they matched more False positives than they had real value?
-  * How has the notion of vandalism changed over time (not particularly computer sciency..)?
-  * What are disallow/block filters doing? Is it too great an intervention that drives new editors away? (Can we answer that?)
-  * Is it worth it to use a filter which has many side effects?
-  * What are discussions on filter patterns? On filter repercussions?
-  * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
-  * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
-
-## TODO
-
-* How can we improve it from a computer scientist's/engineer's perspective?
-* What task do the edit filters try to solve? Why does this task exist?/Why is it important?
-* Why are there mechanisms triggered befor an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
-* I want to help people to do their work better using a technical system (e.g. the edit filters). How can I do this?
-* The edit filter system can be embedded in the vandalism prevention frame. Are there other contexts/frames for which it is relevant?
 \end{comment}
-Im folgenden werden Ihnen Hinweise zur Strukturierung und zum Inhalt des ersten Kapitels gegeben.
 
 %************************************************************
 
@@ -117,11 +78,3 @@ Im folgenden werden Ihnen Hinweise zur Strukturierung und zum Inhalt des ersten 
 
 \section{Structure}
 
-\begin{figure}[!ht]
-	% Mit [!h] wird die Position der Grafik bestimmt. So bedeutet h=here und mit dem "!" (Ausrufezeichen) wird dieser Befehl verstärkt. Weitere Möglichkeiten sind : t=top und b=bottom. Zumeist wird angegeben, in welcher Reihenfolge LaTeX versuchen soll das Bild einzufügen, z.B. [!htb].
-	\centering
-		\includegraphics[width=0.95\textwidth]{pics/structure.pdf}
-	\caption[Beispiel einer möglichen Darstellung zum Aufbau der Arbeit]{Beispiel einer möglichen Darstellung zum Aufbau der Arbeit (vgl. Beschreibung Abschnitt  \ref{chap:chapters}).}
-	% Mit Hilfe von caption wird die Bildunterschrift erzeugt. Der Text in geschweiften Klammern erscheint im Text, während der Text in eckigen Klammern sich dann empfiehlt, wenn die Beschreibung besonders lang ist, denn diese wird dann im Bildverzeichnis verwendet. Diese Kurzbeschreibung kann auch weggelassen werden.
-	\label{fig:structurethesis}
-\end{figure}
