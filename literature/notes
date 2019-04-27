@@ -1143,3 +1143,49 @@ ical, courts step away from resolving it." (p.167)
 Chapter 11
 
 "technology enables perpetual and cheap monitoring of behavior" (p.200)
+
+======================================================================
+\cite{Geiger2014}
+
+bespoke = custom taylored
+
+bespoke code - runs alongside the "official system", on separate technical infrastructure
+bots on Wikipedia are an example for bespoke code, since they are not part of the core MediaWiki software, often run on private desktops of their developers and can disappear at any moment
+Wikipedia is often black-boxed, i.e. people from outside don't see the tons of bespoke code that make Wikipedia what it is and oftentimes bots performing vital tasks (for example in vandal fighting) are taken for granted (for their developers' aggravation)
+
+"Most people think that to understand law, you need to understand a set of rules. That’s a mistake ...
+The law is best understood through stories – stories that teach what is later summarized in a catalog of
+rules. (Lawrence Lessig, Code and Other Laws of Cyberspace)"
+
+Def:
+"runs alongside a platform or system, rather than being integrated into server-side codebases by
+individuals with privileged access to the server. Bespoke code complicates the common
+metaphors of platforms and sovereignty that we typically use to discuss the governance and
+regulation of software systems through code."
+"must be continuously operated on computers that are independent from the servers
+hosting the site, they involve alternative relations of power and code"
+"I define the term bespoke code as a software code that runs alongside a platform or system, in
+contrast to code that is integrated into server-side codebases and runs on the same servers that
+host the platform or system."
+
+
+"focus on the materiality of code"
+"examine not only the software code itself, but also the concrete, historically
+contingent material conditions under which this code is run"
+
+Wikipedia has custom extentions that are not part of "stock" MediaWiki
+
+"By my estimate, the code that runs alongside the official platform rather than
+being directly integrated into MediaWiki is easily an order of magnitude larger than the
+∼600,000 lines of code that comprise MediaWiki. This code – some of which fundamentally
+changes how the wiki operates as a wiki – takes many forms, including PHP extensions, template
+scripts, user scripts, standalone tools, browser extensions, and fully automated bots. This code is
+written in a multitude of programming languages, coded in a variety of environments, and is often
+executed on computers that are relatively independent from those run by the Wikimedia Foun-
+dation to host Wikipedia."
+
+"Bots aren’t usually part of some master plan – if they were, they probably wouldn’t be bots."
+"And when you first see a bot, you may not be sure how to react, or even what it is you’re
+looking at"
+
+"together, bots and software platforms like MediaWiki are more than the sum of their parts."
