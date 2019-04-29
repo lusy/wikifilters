@@ -1168,6 +1168,13 @@ hosting the site, they involve alternative relations of power and code"
 contrast to code that is integrated into server-side codebases and runs on the same servers that
 host the platform or system."
 
+(
+fun fact: vgl Aaron Swartz: volunteers also run the servers, but that's not really the case anymore;
+http://www.aaronsw.com/weblog/whorunswikipedia
+Wikimedia Foundation was founded 2003
+there was one server till 2004 (https://en.wikipedia.org/wiki/Wikimedia_Foundation)
+
+)
 
 "focus on the materiality of code"
 "examine not only the software code itself, but also the concrete, historically
@@ -1189,3 +1196,196 @@ dation to host Wikipedia."
 looking at"
 
 "together, bots and software platforms like MediaWiki are more than the sum of their parts."
+
+"Many of the commonplace socio-technical practices that Wikipedians have developed to help
+them collaboratively build an encyclopaedia – even the code that supports leaving the famous
+[citation needed] tag in articles – are not supported in the stock version of the MediaWiki plat-
+form. The [citation needed] tag is supported by a relatively simple template script, of which
+there are over one hundred thousand in the English-language version alone (Lanzara & Patriotta,
+2007)"
+
+Examples of bespoke code on wikipedia:
+bots
+templates
+semi-automated tools
+
+Different bots' roles:
+"help create new articles, edit existing articles, enforce rules and standards, patrol for
+spam and vandalism, and generally work to support encyclopaedic or administrative work"
+
+"Because bots are built to algorithmically enact a particular vision of what
+encyclopaedia articles or wiki-based collaboration is and ought to be, they have profound influ-
+ence on what Wikipedia is and how it operates, both an encyclopaedia and a community."
+
+"bots make it possible to achieve a certain level of uniformity in style and
+content" (vgl aaron swartz comment on content and format http://www.aaronsw.com/weblog/whowriteswikipedia)
+
+"Bots also serve key gov-
+ernance roles, independently enforcing discursive and epistemological norms, particularly for
+newcomers"
+
+"bots should not just be seen as force multipliers that merely operate on content"
+"Bots also dramatically extend the functionality of MediaWiki as a platform"
+
+"many bureaucratic and formalized
+procedures in place that make up ‘the hidden order of Wikipedia’ (Wattenberg, Viegas, &
+McKeon, 2007). Much of this work is supported by code not built into the MediaWiki platform,
+notably template scripts, tools, and bots."
+
+"In some cases, these
+bots subvert the fundamental idea that wiki pages are documents that users edit, using these
+flat text files as semi-structured databases. For example, bots implement queuing mechanisms
+for processing and distributing administrative requests, such as requests to block a particular
+user for vandalism."
+
+AfDStatBot: Geiger's first bot
+"created for my quantitative research purposes,
+to archive and capture statistics on these deletion discussions in real time"
+"It generated a near real-time notice-
+board of active and recently closed deletion discussions, with statistics such as how long the dis-
+cussion had been open, how many Wikipedians were in favor of keeping vs. deleting the article,
+when the last comment was made, and so on. Then for the few who opted in, it curated person-
+alized watchlists"
+
+ontological argument, materiality of software, bots are more than code:
+"software cannot be reduced to code and divorced
+from the conditions under which it is developed and deployed. It is a materialist argument, oppos-
+ing the ‘trope of immateriality’ (Blanchette, 2011, p. 3), a discourse that alternatively celebrates or
+laments the disembodied nature of information technology."
+
+"Hayles in arguing that this trope in which digital information is proclaimed to be ‘free
+from the material constraints that govern the material world’ (Hayles, 1999, p. 13) is not just a
+casual metaphor of technologists but a fundamental assumption in contemporary post-human
+society."
+
+"The ways in which the artificial agent
+appears to the user are just as important and essential as the code behind it."
+//for instance, does the user get it, it's an artificial agent at all?
+
+"scholars have interrogated
+the material infrastructures and artefacts that are taken for granted in a variety of social insti-
+tutions: prisons (Foucault, 1977), museums and art galleries (Becker, 1982; Star & Griesemer,
+1989), hospitals (Garfinkel, 1967), scientific research (Latour & Woolgar, 1986; Shapin & Schaf-
+fer, 1985), public infrastructure (Winner, 1986), economic markets (Mackenzie, 2006), and
+organizations and firms (Orlikowski & Scott, 2008),"
+
+"Abstract, high-level, see-
+mingly immaterial entities like art, culture, discipline, science, truth, value, power, or profit all
+rely on materially existing infrastructures, artefacts, people, and practices – often operating
+behind the scenes"
+//vgl Code is Law: regulating behaviour via architecture
+
+"‘Platforms’ obscure bespoke code"
+"instead run by developers on servers that are often independent of those used to run the website."
+
+"Bots problematize what I call the discourse of platform sovereignty, in which platforms are cast as
+spatially bounded territories, code is cast as having the force of law over such territories, devel-
+opers are cast as sovereigns who govern territories with code-as-law, and users are cast as subjects" //vgl also Lessig's accounts of AOL, Second Life, etc.
+
+"have implications for how we understand the nature of authority. The discourses of ‘platforms’
+work to obscure and consolidate a variety of assumptions, practices, and ideologies (Gillespie,
+2010), particularly the material conditions necessary for the code to operate as a kind of
+architecture."
+
+"At the heart of this assumption of sovereignty is a fetishization of Lessig’s famous ‘code is
+law’ (Lessig, 1999) slogan, one that sees code as abstract rules that autonomously govern and
+regulate according to their own immaterial logic. This abstraction of code into law separates
+code from the material conditions under which it was not only produced, but also put into
+force;"
+// is that so? I read this as, among other things, material conditions/physical constraints being "law"
+
+", thinking of platforms as governed by code-as-law can obscure the con-
+ditions under which that code-as-law comes to be run at all"
+
+"bot operators in Wikipedia occasionally lament how their bots become invis-
+ible and taken for granted, as users see them as always existing inherent features that were written
+once and forever built into MediaWiki, rather than code that must be constantly run on their own
+servers."
+//bots taken for granted --> rendered invisible
+
+"obscure the specific work that is done to make the platform
+appear to be a stable, coherent infrastructure – and the more successful infrastructures are, the
+more invisible they become (Star, 1999)"
+
+critique of the term "platform"
+"‘platform’ is increasingly deployed in ways that silently consoli-
+date a number of otherwise disparate technical and political concepts, implicitly erasing the ten-
+sions"
+"the term ‘platform’ had political, archi-
+tectural, and figural implications long before it was a computational term."
+
+"critiques of ‘digital dualism’"
+"discourses that draw sharp boundaries between the
+‘online’ and the ‘offline’ world – particularly those that deploy a moralistic argument claiming
+what occurs ‘in real life’ is inherently more social, substantive, significant, and healthy than
+what occurs in ‘the virtual world’"
+
+networks vs bounded spatiality
+
+"the idea that Wikipedia only takes place on wiki-
+pedia.org – or even entirely on the Internet – is a huge misunderstanding (Konieczny, 2009;
+Reagle, 2010). Wikipedia is not a virtual world, especially one located entirely on the wiki."
+e.g. in order to get hold of abuse_filter_history I had to engage with
+- wikipedia.org
+- mediawiki.org
+- irc channels
+- phabricator
+- gerrit
+- toolserver/cloudservices
+----
+other spaces Wikipedia takes place
+- mailinglists
+- WomenEdit/offenes Editieren @Wikimedia
+- Wikimania
+- Wikimedia's office and daily work
+
+"In Wikipedia, what comes to look like a unified
+platform that structures and governs interaction is actually the product of a wide variety of
+code running on a multitude of different servers. This has specific consequences for those who
+are concerned with how these systems operate, particularly because as part of this assemblage,
+bespoke code can break or disappear in ways that platform code typically cannot."
+
+"when the volunteer-run servers hosting the counter-
+vandalism bot ClueBot NG – which in January 2011 was singlehandedly responsible for
+making 13.7% of all reverts (or rejections of a change to an article) – inexplicably went down
+for days at a time in Spring 2011." //see also Aaron Swartz's blog (Who runs Wikipedia)
+
+"The discourse of platform sovereignty arises at the intersection of two pervasive metaphors:
+sovereignty derives from the familiar ‘code as law’ metaphor from Lessig, while the concept
+of platforms is based on spatial metaphors of ‘cyberspace’, in which interaction is seen as
+taking place in a territory."
+
+"Early writings about governance and the Internet explicitly made such compari-
+sons, most notably Barlow’s ‘Declaration of the Independence of Cyberspace’ (Barlow, 1996)."
+
+" history of spatial metaphors"
+"casting the Internet as an unregulated territorial space
+emerged alongside discourse that framed the Internet as a problem of governance for states."
+
+"Lessig’s famous ‘code as law’ (Lessig, 1999) slogan often undergirds contemporary dis-
+courses of platform sovereignty, although Lessig has a much more materialist foundation to his
+analysis of code" //yup, I think so as well
+
+". Lessig’s writ-
+ings in Code implicitly cast cyberspace as governed territory, but Code 2.0 (Lessig, 2006) not only
+defends but also embraces these territorial metaphors as productive ways of talking about the
+implications of where code is run from."
+
+", Lessig’s argument and his use of discourse of platform sover-
+eignty is actually a materialist one at its most fundamental level, as it is based on the implications
+that arise from the historically contingent fact that websites and other Internet-mediated platforms
+are regulated by code that runs on servers owned and operated by specific individuals or firms."
+
+"For Lessig, code has the power to regulate because the people who own the servers have
+sovereign control over what code is run, "
+
+"What if, from the beginning, I had decided to run my bot on the toolserver, a
+shared server funded and maintained by a group of German Wikipedians for all kinds of pur-
+poses, including bots? If so, the bot may have run the same code in the same way, producing
+the same effects in Wikipedia, but it would have been a different thing entirely."
+"when life got in the way, it was something I literally pulled the plug on
+without so much as a second thought."
+
+"Taking the platform for granted submerses all the work performed by these
+bespoke codes into the infrastructure, making Wikipedia seem like the kind of community in
+which everything spontaneously self-organizes out with little to no rules or regulatory structures."
