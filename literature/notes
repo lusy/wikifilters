@@ -1389,3 +1389,54 @@ without so much as a second thought."
 "Taking the platform for granted submerses all the work performed by these
 bespoke codes into the infrastructure, making Wikipedia seem like the kind of community in
 which everything spontaneously self-organizes out with little to no rules or regulatory structures."
+
+============================================================================
+\cite{HalGeiTer2014}
+
+"In 2005, Wikipedia’s volunteer editor community and the size
+of the encyclopedia began growing exponentially[35]. Dur-
+ing this time Wikipedia faced a series of crises in the public
+sphere over its trustworthiness and legitimacy. Wikipedia’s
+“vandal fighters” came to see Wikipedia as a firehose of ed-
+its needing constant surveillance. By 2007, they had devel-
+oped quality control practices around a suite of standards, dis-
+courses, procedures, and roles. To make their work practical,
+they formalized the practice of reviewing edits around a suite
+of algorithmically-assisted, semi-automated tools[15]."
+
+"Tools like Huggle raise practical design challenges and eth-
+ical issues for HCI researchers. In previous work, we have
+critiqued the “professional vision”[17] they enact and the as-
+sumptions and values they embody: most tools situate users
+as police, not mentors, affording rejection and punishment."
+
+=======================================================================
+\cite{KitSuhPenChi2007}
+
+"First we demonstrate that at the global level, conflict and
+coordination costs in Wikipedia are growing. Specifically,
+direct work (on articles) is decreasing, while indirect work
+such as discussion, procedure, user coordination, and
+maintenance activity (such as reverts and anti-vandalism) is
+increasing."
+
+"As social collaborative knowledge systems grow, so do
+opportunities for conflict and coordination costs. In the first
+part of this article we demonstrate a way to quantify these
+costs at the global level that provides insights into how
+growth in Wikipedia is occurring. We show that, even
+though Wikipedia continues to grow exponentially, the rate
+of creation of new articles and content is decreasing, while
+levels of maintenance and indirect work are increasing.
+These results provide the first comprehensive view of this
+phenomenon, and reflect the entire history of all Wikipedia
+articles rather than a small sampling of pages."
+"These data are consistent with the findings from studies of
+group work systems which suggest that, to keep functioning,
+a group must engage in both task-focused and group
+Continued growth in
+maintenance activity [4][10].
+Wikipedia is not maintained merely by an increase in articles
+and quality content; the sophisticated procedures developed
+for coordinating users and dealing with conflict are vital for a
+community where people may not agree on everything."
