@@ -33,39 +33,9 @@ for fun
 
 # Next steps
 
-Do smth with this info:
-Claudia: * A focus on the Good faith policies/guidelines is a historical development. After the huge surge in edits Wikipedia experienced starting 2005 the community needed a means to handle these (and the proportional amount of vandalism). They opted for automatisation. Automated system branded a lot of good faith edits as vandalism, which drove new comers away. A policy focus on good faith is part of the intentions to fix this.
-* We need a description of the technical workings of the edit filter system!
-* How can we improve it from a computer scientist's/engineer's perspective?
-* What task do the edit filters try to solve? Why does this task exist?/Why is it important?
-* Why are there mechanisms triggered befor an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
+* Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
 * I want to help people to do their work better using a technical system (e.g. the edit filters). How can I do this?
 * The edit filter system can be embedded in the vandalism prevention frame. Are there other contexts/frames for which it is relevant?
-
-* Think about: what's the computer science take on the field? How can we design a "better"/more efficient/more user friendly system? A system that reflects particular values (vgl Code 2.0, Chapter 3, p.34)?
-  * go over notes in the filter classification and think about interesting controversies, things that attract the attention
-  * what are useful categories
-  * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
-
-* https://ifex.org/international/2019/02/21/technology-block-internet/ <-- filters
-
-* What can we study?
-  * Discussions on filter patterns? On filter repercussions?
-  * Whether filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefullness is questionable?
-  * Question: Is it worth it to use a filter which has many side effects?
-  * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
-
-
-* What other data sources can I explore?
-  * Interview with filter managers? with admins? with new editors?
-
-* Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
-
-* There was the section of what are filters suitable for; should we check filters against this list?
-
-* check filter rules for edits in user/talks name spaces (may be indication of filtering harassment)
-* add also "af_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
-
 
 * Read these pages
 
@@ -262,3 +232,31 @@ https://phabricator.wikimedia.org/project/view/217/ <-- project tickets AbuseFil
   https://www.mediawiki.org/wiki/API:Main_page
 
   * create a developer account
+
+Do smth with this info:
+Claudia: * A focus on the Good faith policies/guidelines is a historical development. After the huge surge in edits Wikipedia experienced starting 2005 the community needed a means to handle these (and the proportional amount of vandalism). They opted for automatisation. Automated system branded a lot of good faith edits as vandalism, which drove new comers away. A policy focus on good faith is part of the intentions to fix this.
+* We need a description of the technical workings of the edit filter system!
+* How can we improve it from a computer scientist's/engineer's perspective?
+* What task do the edit filters try to solve? Why does this task exist?/Why is it important?
+
+* Think about: what's the computer science take on the field? How can we design a "better"/more efficient/more user friendly system? A system that reflects particular values (vgl Code 2.0, Chapter 3, p.34)?
+  * go over notes in the filter classification and think about interesting controversies, things that attract the attention
+  * what are useful categories
+  * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
+* What can we study?
+  * Discussions on filter patterns? On filter repercussions?
+  * Whether filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefullness is questionable?
+  * Question: Is it worth it to use a filter which has many side effects?
+  * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
+
+* What other data sources can I explore?
+  * Interview with filter managers? with admins? with new editors?
+
+* check filter rules for edits in user/talks name spaces (may be indication of filtering harassment)
+
+* There was the section of what are filters suitable for; should we check filters against this list?
+* add also "af_enabled" column to filter list; could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
+
+* https://ifex.org/international/2019/02/21/technology-block-internet/ <-- filters
+
+
