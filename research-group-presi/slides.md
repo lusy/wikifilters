@@ -4,7 +4,7 @@
 
 ---
 
-# Edit filter, an example
+## Edit filter, an example
 
 <img src="images/Screenshot-trigger-disallow.png" height="500" alt="screenshot-filter-disallow-message">
 
@@ -43,7 +43,10 @@ Def:
 
 ---
 
-examples, tralala
+## Examples
+
+<img src="images/example-vandalism-veganism-1.png" height="300" width="400" alt="example-vandalism-veganism-1">
+<img src="images/example-vandalism-veganism-2.png" height="300" width="400" alt="example-vandalims-veganism-2">
 
 ---
 
@@ -69,7 +72,7 @@ One thing is ostentatiously missing: edit filters
 # Data
 
 wikipedia's pages (policies, guidelines, etc.), most prominently: ...
-abuse filters extention tables
+abuse filter extention tables
 
 ---
 
@@ -82,6 +85,23 @@ abuse filters extention tables
 ---
 
 ## Timeline
+
+    Oct 2001 : automatically import entries from Easton’s Bible Dictionary by a script
+    29 Mar 2002 : First version of https://en.wikipedia.org/wiki/Wikipedia:Vandalism (WP Vandalism is published)
+    Oct 2002 : RamBot
+    2006 : BAG was first formed
+    13 Mar 2006 : 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded
+    28 Jul 2006 : VoABot II ("In the case were banned users continue to use sockpuppet accounts/IPs to add edits clearly rejected by consensus to the point were long term protection is required, VoABot may be programmed to watch those pages and revert those edits instead. Such edits are considered blacklisted. IP ranges can also be blacklisted. This is reserved only for special cases.")
+    21 Jan 2007 : Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007
+    24 Jul 2007 : Request for Approval of original ClueBot
+    16 Jan 2008 : Huggle Page is first published (empty)
+    18 Jan 2008 : Huggle Page is first filled with content
+    23 Jun 2008 : 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention
+     2 Oct 2008 : https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter was first archived; its last topic was the voting for/against the extention which seemed to have ended end of Sep 2008
+    Jun 2010 : STiki initial release
+    20 Oct 2010 : ClueBot NG page is created
+    11 Jan 2015 : 1st commit to github ORES repository
+    30 Nov 2015 : ORES paper is published
 
 ---
 
@@ -99,7 +119,10 @@ Data analysis
 
 ---
 
-# Bigger picture: Upload filters
+## Bigger picture: Upload filters
+
+<img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019">
+<small>[https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png](https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png)</small>
 
 ---
 
@@ -112,7 +135,13 @@ Data analysis
 
 # Beyond the thesis
 
-(long list of interesting questions)
+* What are the differences between how filters are governed on EN Wikipedia compared to other language versions?
+* Are there filters targetting harassment?
+* Ethnographic analysis (e.g. IVs with edit filter managers/admins/users whose edits have been disallowed would be really interesting)
+* (how) has the notion of "vandalism" on Wikipedia evolved over time (when looking at the regex patterns)
+* Precision/Recall: False Positives? were filters shut down, bc they matched more False positives than they had real value?
+* Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?
+* What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
 
 ---
 
