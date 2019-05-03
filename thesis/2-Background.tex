@@ -285,37 +285,19 @@ removed the third vandal fighter's now-obsolete report."
 
 \subsection{ORES}
 
-ORES is an API based FLOSS? machine learning service ``designed to improve the way editors maintain the quality of Wikipedia''~\cite{HalTar2015} and increase transparency of the quality control process.
-It uses learning models to predict a quality score for each article and edit (based on edit/article quality assessments manually assigned by Wikipedians).
+ORES is an API based FLOSS? machine learning service ``designed to improve the way editors maintain the quality of Wikipedia''~\cite{HalTar2015} and increase the transparency of the quality control process.
+It uses learning models to predict a quality score for each article and edit based on edit/article quality assessments manually assigned by Wikipedians.
 Potentially damaging edits are highlighted which allows editors who engage in vandal fighting to examine them in greater detail.
-The service was officially introduced in November 2015 by Aaron Halfaker (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli (who was Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}. %TODO footnote https://wikimediafoundation.org/role/staff-contractors/
+The service was officially introduced in November 2015 by Aaron Halfaker (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}. %TODO footnote https://wikimediafoundation.org/role/staff-contractors/
 % http://nitens.org/taraborelli/cv
+Its development is ongoing, coordinated and advanced by Wikimedia's Scoring Platform team.
 Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores or, new models can be trained and made available for everyone to use.
-The Scoring platform team reports that popular vandal fighting tools(syn?) such as Huggle have already adopted ORES for the compilation of their queues~\cite{HalTar2015}.
-ORES development is ongoing, following people are involved: (Wikimedia Scoring Platform team).
+The Scoring platform team reports that popular vandal fighting tools(syn?) such as Huggle have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
 What is unique about ORES is that all the algorithms, models, training data, and code are public, so everyone (with sufficient knowledge of the matter) can scrutinise them and reconstruct what is going on.
 This is certainly not true for machine learning services applied by commercial companies who have interest in keeping their models secret.
-
-
-\cite{HalTar2015}
-
-"Our hope is that ORES will enable critical advancements in how we do quality control—changes that will both make quality control work more efficient and make Wikipedia a more welcoming place for new editors."
-
-"ORES brings automated edit and article quality classification to everyone via a set of open Application Programming Interfaces (APIs). The system works by training models against edit- and article-quality assessments made by Wikipedians and generating automated scores for every single edit and article."
-
-"English Wikipedians have long had automated tools (like Huggle and STiki ) and bots (like ClueBot NG) based on damage-detection AI to reduce their quality control workload.  While these automated tools have been amazingly effective at maintaining the quality of Wikipedia, they have also (inadvertently) exacerbated the difficulties that newcomers experience when learning about how to contribute to Wikipedia. "
-"These tools encourage the rejection of all new editors’ changes as though they were made in bad faith," //NB!!!
-"Despite evidence on their negative impact on newcomers, Huggle, STiki and ClueBot NG haven’t changed substantially since they were first introduced and no new tools have been introduced. " //what about the edit filters? when were Huggle,STiki and ClueBotNG introduced?
-
-"decoupling the damage prediction from the quality control process employed by Wikipedians, we hope to pave the way for experimentation with new tools and processes that are both efficient and welcoming to new editors. "
-
-caution: biases in AI
-" An algorithm that flags edits as subjectively “good” or “bad”, with little room for scrutiny or correction, changes the way those contributions and the people who made them are perceived."
-
-"Examples of ORES usage. WikiProject X’s uses the article quality model (wp10) to help WikiProject maintainers prioritize work (left). Ra·un uses an edit quality model (damaging) to call attention to edits that might be vandalism (right)." //interesting for the memo
-
-further ORES applications:
-"  But revision quality scores can be used to do more than just fight vandalism. For example, Snuggle uses edit quality scores to direct good-faith newcomers to appropriate mentoring spaces,[4] and dashboards designed by the Wiki Education Foundation use automatic scoring of edits to surface the most valuable contributions made by students enrolled in the education program"
+Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers
+(crucial, there is a body of research demonstrating how the automated quality control mechanisms drive new editors away; present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith).
+The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
 
 
 \section{Algorithmic Governance}

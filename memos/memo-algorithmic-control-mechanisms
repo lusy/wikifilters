@@ -133,6 +133,9 @@ As a machine-learning web service ORES is in fact quite general purpose.
 https://www.mediawiki.org/wiki/ORES
 see also literature/notes
 
+\cite{HalTar2015}
+"Examples of ORES usage. WikiProject X’s uses the article quality model (wp10) to help WikiProject maintainers prioritize work (left). Ra·un uses an edit quality model (damaging) to call attention to edits that might be vandalism (right)." //interesting for the memo
+
 ## Algorithmic vs social governance mechanisms
 
 This comparison is interesting and worth to contemplate.
