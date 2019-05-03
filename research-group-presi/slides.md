@@ -4,19 +4,42 @@
 
 ---
 
+# Edit filter, an example
+
+<img src="images/Screenshot-trigger-disallow.png" height="500" alt="screenshot-filter-disallow-message">
+
+---
+
 # Motivation
 
+What are edit filters?
 Why are there edit filters?
-What task do they take care of?
+What task(s) do they take care of?
 How are they different from other existing mechanisms?
+
+---
+
+> "The edit filter is a tool that allows editors in the *edit filter manager* group to set controls mainly to address common patterns of harmful editing."
+
+<small>[https://en.wikipedia.org/wiki/Wikipedia:Edit_filter](https://en.wikipedia.org/wiki/Wikipedia:Edit_filter)</small>
 
 ---
 
 # Structure
 
+(of the presi? or of the thesis?)
+
 ---
 
 # Vandalism on Wikipedia
+
+---
+
+Def:
+
+> "On Wikipedia, vandalism has a very specific meaning: editing (or other behavior) deliberately intended to obstruct or defeat the project's purpose, which is to create a free encyclopedia, in a variety of languages, presenting the sum of all human knowledge."
+
+<small>[https://en.wikipedia.org/wiki/Wikipedia:Vandalism](https://en.wikipedia.org/wiki/Wikipedia:Vandalism)</small>
 
 ---
 
