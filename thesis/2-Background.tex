@@ -106,16 +106,95 @@ is_bot	edits	Percentage of all edits
 1	    292274	7.8592
 \end{verbatim}
 
+\subsection{Bots}
 
-\subsection{Humans}
+%todo also mention bot papers that discuss more general aspects of bots?
+According to literature, bots constitute the first line of defence against malicious edits. %TODO quote
+They are also undoubtedly the vandal fighting mechanism studied most in depth by the scientific community.
+Following papers study(syn!) bots on Wikipedia (vandal fighting frame):
+~\cite{GeiRib2010},
+...
 
-Despite steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism %TODO quote!
-some of the quality control work is still done ``manually'' by humand editors.
-These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
-On the other hand, there are also editors who engage with the classical/standard encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the editor which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
-When editors use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question via the so-called watchlists~\cite{AstHal2018}. %TODO: quote watchlist, current paper by Halfaker
-This also gives us a hint as to what type of quality control work humans take over: less obvious and less rapid, editors who patrol pages via watchlists have some relationship to/deeper expertise on the topic. %TODO quote needed.
-%TODO vgl also funnel diagram incoming edits quality assurance by Halfaker
+Geiger and Ribes~\cite{GeiRib2010} define bots as
+``fully-automated software
+agents that perform algorithmically-defined tasks involved
+with editing, maintenance, and administration in Wikipedia.''
+
+%todo summarise aspects of bot papers:
+trace enthnography and banning of vandals~\cite{GeiRib2010}
+indepth analysis of ClueBot NG, and its place within vandal fighting infrastructure~\cite{GeiHal2013}
+historical review of bots' and semi-automated tools' involvement in vandal fighting\cite{HalRied2012}
+... (smth else??)
+
+Further bots involved in vandal fighting discussed by the literature include (ClueBot NG~\cite{GeiHal2013},~\cite{HalRied2012},)
+XLinkBot~\cite{HalRied2012},
+HBC AIV Helperbots~\cite{HalRied2012},~\cite{GeiRib2010},
+MartinBot, AntiVandalBot~\cite{HalRied2012},
+AWB, DumbBOT, EmausBot~\cite{GeiHal2013}.
+
+Very crucial for the current analysis will also be Livingstone's observation in the preamble to his interview with the first large scale bot operator Ram-man that
+``In the Wikimedia software, there are tasks that do all sorts of things [...].
+If these things are not in the software, an external bot could do them. [...]
+The main difference is where it runs and who runs it.''~\cite{Livingstone2016}
+
+This thought/note is also scrutinised by Geiger~\cite{Geiger2014} who examines in detail what the difference and repercussions are of code that is part of the core software and code that run alongside it (such as bots). %TODO more detail: so what are they?
+
+\begin{comment}
+%ClueBot NG
+"ClueBot\_NG uses state-of-the-art machine learning techniques to review all contributions to
+
+ClueBot NG:
+\cite{GeiHal2013}
+"to scan every edit made to Wikipedia in real time"
+"Built on Bayesian neural networks and trained with data
+about what kind of edits Wikipedians regularly revert as
+vandalism"
+articles and to revert vandalism,"~\cite{HalRied2012}
+
+%XLinkBot
+"XLinkBot reverts contributions that create links to
+blacklisted domains as a way of quickly and permanently dealing with spammers."~\cite{HalRied2012}
+
+%HBC AIV Helperbots and MartinBot
+"AIV Helperbot turns a simple page into a dynamic
+priority-based discussion queue to support administrators in their work of identifying and
+blocking vandals"~\cite{HalRied2012}
+
+
+%AntiVandalBot
+~\cite{HalRied2012}
+"The first tools to redefine the
+way Wikipedia dealt with van-
+dalism were AntiVandalBot and
+VandalProof."
+
+"AntiVandalBot used a simple set
+of rules and heuristics to monitor
+changes made to articles, identify the
+most obvious cases of vandalism, and
+automatically revert them"
+
+1st vandalism fighting bot:
+"this bot made it possible, for the first
+time, for the Wikipedia community
+to protect the encyclopedia from
+damage without wasting the time
+and energy of good-faith editors"
+"it
+wasn’t very intelligent and could only
+correct the most egregious instances
+of vandalism."
+
+
+Bots not patrolling constantly but instead doing batch cleanup works~\cite{GeiHal2013}:
+AWB, DumbBOT, EmausBot
+(also from figures: VolkovBot, WikitanvirBot, Xqbot)
+
+\cite{GeiRib2010}
+"“HBC AIV helperbot7” – automatically
+removed the third vandal fighter's now-obsolete report."
+
+\end{comment}
 
 
 \subsection{Semi-automated tools}
@@ -206,92 +285,6 @@ and VandalProof which
 
 %TODO: Note on collaboration semi-automated tools/edit filters. Maybe not the suitable chapter
 
-\subsection{Bots}
-
-Bots are undoubtedly the vandal fighting mechanism studied most in depth by the scientific community.
-Following papers study(syn!) bots on Wikipedia (vandal fighting frame):
-~\cite{GeiRib2010},
-...
-
-Geiger and Ribes~\cite{GeiRib2010} define bots as
-``fully-automated software
-agents that perform algorithmically-defined tasks involved
-with editing, maintenance, and administration in Wikipedia.''
-
-%todo summarise aspects of bot papers:
-trace enthnography and banning of vandals~\cite{GeiRib2010}
-indepth analysis of ClueBot NG, and its place within vandal fighting infrastructure~\cite{GeiHal2013}
-... (smth else??)
-
-Further bots discussed by the literature include (ClueBot NG~\cite{GeiHal2013},~\cite{HalRied2012},)
-XLinkBot~\cite{HalRied2012},
-HBC AIV Helperbots~\cite{HalRied2012},~\cite{GeiRib2010},
-MartinBot, AntiVandalBot~\cite{HalRied2012},
-AWB, DumbBOT, EmausBot~\cite{GeiHal2013}.
-
-Very crucial for the current analysis will be also Livingstone's observation in the preamble to his interview with the first large scale bot operator Ram-man that
-``In the Wikimedia software, there are tasks that do all sorts of things [...].
-If these things are not in the software, an external bot could do them. [...]
-The main difference is where it runs and who runs it.''~\cite{Livingstone2016}
-
-\begin{comment}
-%ClueBot NG
-"ClueBot\_NG uses state-of-the-art machine learning techniques to review all contributions to
-
-ClueBot NG:
-\cite{GeiHal2013}
-"to scan every edit made to Wikipedia in real time"
-"Built on Bayesian neural networks and trained with data
-about what kind of edits Wikipedians regularly revert as
-vandalism"
-articles and to revert vandalism,"~\cite{HalRied2012}
-
-%XLinkBot
-"XLinkBot reverts contributions that create links to
-blacklisted domains as a way of quickly and permanently dealing with spammers."~\cite{HalRied2012}
-
-%HBC AIV Helperbots and MartinBot
-"AIV Helperbot turns a simple page into a dynamic
-priority-based discussion queue to support administrators in their work of identifying and
-blocking vandals"~\cite{HalRied2012}
-
-
-%AntiVandalBot
-~\cite{HalRied2012}
-"The first tools to redefine the
-way Wikipedia dealt with van-
-dalism were AntiVandalBot and
-VandalProof."
-
-"AntiVandalBot used a simple set
-of rules and heuristics to monitor
-changes made to articles, identify the
-most obvious cases of vandalism, and
-automatically revert them"
-
-1st vandalism fighting bot:
-"this bot made it possible, for the first
-time, for the Wikipedia community
-to protect the encyclopedia from
-damage without wasting the time
-and energy of good-faith editors"
-"it
-wasn’t very intelligent and could only
-correct the most egregious instances
-of vandalism."
-
-
-Bots not patrolling constantly but instead doing batch cleanup works~\cite{GeiHal2013}:
-AWB, DumbBOT, EmausBot
-(also from figures: VolkovBot, WikitanvirBot, Xqbot)
-
-\cite{GeiRib2010}
-"“HBC AIV helperbot7” – automatically
-removed the third vandal fighter's now-obsolete report."
-
-bots and bespoke code!~\cite{Geiger2014}
-\end{comment}
-
 
 \subsection{ORES}
 
@@ -308,6 +301,17 @@ This is certainly not true for machine learning services applied by commercial c
 Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers
 (crucial, there is a body of research demonstrating how the automated quality control mechanisms drive new editors away; present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith).
 The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
+
+\subsection{Humans}
+
+Despite steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism %TODO quote!
+some of the quality control work is still done ``manually'' by humand editors.
+These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
+On the other hand, there are also editors who engage with the classical/standard encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the editor which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
+When editors use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question via the so-called watchlists~\cite{AstHal2018}.
+This also gives us a hint as to what type of quality control work humans take over: less obvious and less rapid, editors who patrol pages via watchlists have some relationship to/deeper expertise on the topic. %TODO quote needed.
+%TODO vgl also funnel diagram incoming edits quality assurance by Halfaker
+
 
 
 \section{Algorithmic Governance}
