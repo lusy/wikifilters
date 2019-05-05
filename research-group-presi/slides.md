@@ -54,8 +54,36 @@ Def:
 
 ---
 
-Lit review
+Literature review:
+
 bots, semi-automated tools, ores, humans
+
+---
+
+## Bots
+
+* 1st line of defence
+* fastest revert time
+* ClueBot NG, ...
+
+---
+
+## Semi-automated tools
+
+* Huggle, Twinkle, STiki, ..
+
+---
+
+## ORES
+
+* can be used by bots or semi-automated tools
+
+---
+
+## Humans
+
+* watchlists
+* manual reverts of chance discoveries
 
 ---
 
@@ -71,8 +99,12 @@ One thing is ostentatiously missing: edit filters
 
 # Data
 
-wikipedia's pages (policies, guidelines, etc.), most prominently: ...
-abuse filter extention tables
+* wikipedia's pages (policies, guidelines, etc.), most prominently: ...
+* abuse filter extention tables
+
+---
+
+# Descriptive Overview. What is an edit filter?
 
 ---
 
@@ -81,6 +113,8 @@ abuse filter extention tables
 ---
 
 ## Motivations for introducing the abuse filter extention
+
+Quote from EditFilter discussion archive
 
 ---
 
@@ -115,17 +149,6 @@ Data analysis
 
 ---
 
-# Current Limitations
-
----
-
-## Bigger picture: Upload filters
-
-<img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019">
-<small>[https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png](https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png)</small>
-
----
-
 # Next steps for finishing the thesis
 
 * abuse_filter_history table (ping Aaron)
@@ -142,6 +165,20 @@ Data analysis
 * Precision/Recall: False Positives? were filters shut down, bc they matched more False positives than they had real value?
 * Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?
 * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
+
+---
+
+# Current Limitations
+
+* Only EN Wikipedia
+* manual filter classification only conducted by me
+
+---
+
+# Bigger picture: Upload filters
+
+<img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019">
+<small>[https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png](https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png)</small>
 
 ---
 
