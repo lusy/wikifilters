@@ -15,48 +15,36 @@ Papers discussing vandalism detection from IR/ML perspective:
 
 \section{Quality-control mechanisms on Wikipedia}
 
+At first, scientific studies on Wikipedia largely ignored algorithmic quality control mechanisms.
+Their contribution to the encyclopedia and therefore their impact were considered insignificant.
+This has gradually changed since around 2009 when the first papers specifically dedicated to bots (and later semi-automated tools) were published.
+In 2010, Geiger and Ribes insistently highlighted that the scientific community could no longer ingore(syn) these mechanisms as insignificant(syn) or noise in the data~\cite{GeiRib2010}.
+For one, their (the mechanisms') relative usage has continued to increase since they were first introduced, and in 2010 (check!) bots made 16.33\% of all edits~\cite{GeiRib2010}.
 
-Why is it important we study these mechanisms?
+Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``\[k\]eeping traces obscure help\[ed\] the powerful to remain in power''~\cite{ForGei2012} but entry barriers for new users were gradually set higher, since they not only had to learn to use/interact with a myriad of technical tools/.. (learn wikisyntax, ..) but also navigate their ground in a complex system with a decentralised mode of governance.
+Ford and Geiger even cite a case where an editor was not sure whether a person deleted their articles or a bot~\cite{ForGei2012}.
+
+What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in matter of scale (using bots/tools is faster, hence more reverts are possible) but in matter of substance: how everything interacts with each other~\cite{GeiRib2010}.
+On the grounds of quality control specifically, the introduction of tools (and bots) was fairly revolutionary (actually that's true for diffs already %TODO: reformulate
+: they enabled efficient patrolling of articles by users with little to no knowledge about the particular topic (thanks to their representation of the edits/information: e.g. diffs)
+
+\begin{comment}
+%Why is it important we study these mechanisms?
 - their relative usage increases/has increased since they were first introduced
     \cite{GeiRib2010}
     "at present, bots make 16.33\% of all edits."
-    %TODO more recent data? the last month argument via recentchanges (vgl \cite{Geiger2017}) doesn't hold here
+    %TODO more recent data? the last month argument via recentchanges (vgl \cite{Geiger2017}) doesn't hold here; couldn't find anything useful unfortunately :(
 - the whole ecosystem is not transparent, especially for new users (see~\cite{ForGei2012}: "As it is, Kipsizoo is not even
-sure whether a real person who deleted the articles or a bot." )
+sure whether a real person who deleted the articles or a bot."
 "Keeping traces obscure help the powerful to remain in power"~\cite{ForGei2012}
-- "inofficial", run and maintained by the community
-    \cite{GeiRib2010}
-    "often-unofficial technologies have fundamentally
-    transformed the nature of editing and administration in
-    Wikipedia"
-    "Of note is the fact that these tools are largely
-    unofficial and maintained by members of the Wikipedia
-    community."
 - higher entry barriers: new users have to orientate themselves in the picture and learn to use the software (decentralised mode of governance, often "impenetrable for new editors", vgl~\cite{ForGei2012})
-- gamification concerns (is fighting vandalism becoming a game where certain users aim to revert as many edits as possible in order to get a higher score; and as a consequence these same users often times enforce reverts more rigorously than recommended and also pick cases that are easy and fast to arbitrate and do not require much additional research)
-    \cite{HalRied2012}
-    "Some Wikipedians feel that such
-    motivational measures have gone
-    too far in making Wikipedia like a
-    game rather than a serious project.
-    One humorous entry even argues that
-    Wikipedia has become a MMORPG—
-    a massively multiplayer online role-
-    playing game—with “monsters”
-    (vandals) to slay, “experience”
-    (edit or revert count) to earn, and
-    “overlords” (administrators) to submit
-    to (http://en.wikipedia.org/wiki/
-    Wikipedia:MMORPG)."
-- they change the system not only in matter of scale (using bots/tools is faster, hence more reverts are possible) but in matter of substance: how everything interacts with each other
-- they enable efficient patrolling of articles by users with little to no knowledge about the particular contents (thanks to their representation of the edits/information: e.g. diffs)
-    \cite{GeiRib2010}
-    !! tools not only speed up the process but:
+
+!! tools not only speed up the process but:
     "These tools greatly lower certain barriers to participation and render editing
     activity into work that can be performed by "average
     volunteers" who may have little to no knowledge of the
     content of the article at hand"
-
+\end{comment}
 
 ---
 
@@ -138,6 +126,15 @@ If these things are not in the software, an external bot could do them. [...]
 The main difference is where it runs and who runs it.''~\cite{Livingstone2016}
 
 This thought/note is also scrutinised by Geiger~\cite{Geiger2014} who examines in detail what the difference and repercussions are of code that is part of the core software and code that run alongside it (such as bots). %TODO more detail: so what are they?
+
+- "inofficial", run and maintained by the community
+    \cite{GeiRib2010}
+    "often-unofficial technologies have fundamentally
+    transformed the nature of editing and administration in
+    Wikipedia"
+    "Of note is the fact that these tools are largely
+    unofficial and maintained by members of the Wikipedia
+    community."
 
 \begin{comment}
 %ClueBot NG
@@ -283,8 +280,23 @@ Older tools which are not much used anymore include Lupin's anti-vandal tool whi
 and VandalProof which
 ``let[s] trusted editors monitor article edits as fast as they happened in Wikipedia and revert unwanted contributions in one click''~\cite{HalRied2012}.
 
-%TODO: Note on collaboration semi-automated tools/edit filters. Maybe not the suitable chapter
+%TODO: Note on collaboration semi-automated tools/edit filters. Maybe not the suitable chapter. // But is there already collaboration or do I think it's hypothetically possible that queues can be tuned according to how often a filter was triggered?
 
+- gamification concerns (is fighting vandalism becoming a game where certain users aim to revert as many edits as possible in order to get a higher score; and as a consequence these same users often times enforce reverts more rigorously than recommended and also pick cases that are easy and fast to arbitrate and do not require much additional research)
+    \cite{HalRied2012}
+    "Some Wikipedians feel that such
+    motivational measures have gone
+    too far in making Wikipedia like a
+    game rather than a serious project.
+    One humorous entry even argues that
+    Wikipedia has become a MMORPG—
+    a massively multiplayer online role-
+    playing game—with “monsters”
+    (vandals) to slay, “experience”
+    (edit or revert count) to earn, and
+    “overlords” (administrators) to submit
+    to (http://en.wikipedia.org/wiki/
+    Wikipedia:MMORPG)."
 
 \subsection{ORES}
 
