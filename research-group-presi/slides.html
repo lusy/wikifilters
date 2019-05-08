@@ -74,7 +74,48 @@
 </section>
 <section class="slide level1">
 
-<p>Lit review bots, semi-automated tools, ores, humans</p>
+<p>Literature review:</p>
+<p>bots, semi-automated tools, ores, humans</p>
+</section>
+<section class="slide level1">
+
+<h2 id="important-to-study-algorithmic-mechamisms">Important to study algorithmic mechamisms</h2>
+<ul>
+<li class="fragment">increased relative share of edits</li>
+<li class="fragment">difference not only of scale but of substance</li>
+<li class="fragment">intransparency and gatekeeping</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="bots">Bots</h2>
+<ul>
+<li class="fragment">1st line of defence</li>
+<li class="fragment">fastest revert time</li>
+<li class="fragment">ClueBot NG, ...</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="semi-automated-tools">Semi-automated tools</h2>
+<ul>
+<li class="fragment">Huggle, Twinkle, STiki, ..</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="ores">ORES</h2>
+<ul>
+<li class="fragment">can be used by bots or semi-automated tools</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="humans">Humans</h2>
+<ul>
+<li class="fragment">watchlists</li>
+<li class="fragment">manual reverts of chance discoveries</li>
+</ul>
 </section>
 <section class="slide level1">
 
@@ -86,14 +127,98 @@
 </section>
 <section id="data" class="slide level1">
 <h1>Data</h1>
-<p>wikipedia's pages (policies, guidelines, etc.), most prominently: ... abuse filter extention tables</p>
+<ul>
+<li class="fragment">wikipedia's pages (policies, guidelines, etc.), most prominently: ...</li>
+<li class="fragment">abuse filter extention tables</li>
+</ul>
 </section>
-<section id="results" class="slide level1">
-<h1>Results</h1>
+<section id="descriptive-overview.-what-is-an-edit-filter" class="slide level1">
+<h1>Descriptive Overview. What is an edit filter?</h1>
+</section>
+<section class="slide level1">
+
+<p><img src="images/detailed-page-filter249.png" alt="Details page of Filter #249"></p>
+</section>
+<section class="slide level1">
+
+<h2 id="mediawiki-extension">MediaWiki Extension</h2>
+<ul>
+<li class="fragment">permissions</li>
+<li class="fragment">tables: <em>abuse_filter</em>, <em>abuse_filter_log</em>, <em>abuse_filter_action</em> and <em>abuse_filter_history</em></li>
+<li class="fragment">actions filters trigger: logging, warning, throttling, disallowing, revoking auto-promoted groups, blocking, removing from privileged groups, range-blocking, tagging</li>
+<li class="fragment">smth else?</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="introducing-a-new-filter">Introducing a new filter</h2>
+<p>For everybody:</p>
+<ul>
+<li class="fragment">checklist: is an edit filter the suitable solution
+</li>
+<li class="fragment">request at: <a href="https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested" class="uri">https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested</a></li>
+</ul>
+<p>For edit filter managers:</p>
+<ul>
+<li class="fragment">read the docs</li>
+<li class="fragment">run tests</li>
+<li class="fragment">Generally, always set action to logging only first</li>
+<li class="fragment">Announce at <a href="https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard" class="uri">https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard</a> and receive feedback</li>
+<li class="fragment">possibly change the filter action</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="who-can-edit-filters">Who can edit filters</h2>
+<ul>
+<li class="fragment"><em>abusefilter-modify</em> permission</li>
+<li class="fragment">March 9, 2019: 152 users in the <em>edit filter managers</em> group (and 1181 admins)</li>
+<li class="fragment">(4 users on CA Wikipedia, and the role doesn't exist on the DE, ES, RU or BG wiki)</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="how-are-problems-handled">How are problems handled</h2>
+<p>Edit Filter Noticeboard:</p>
+<ul>
+<li class="fragment">current filters behaviour: e.g. changing filter action or updating pattern</li>
+<li class="fragment">users rights discussions</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives" class="uri">https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives</a>:</p>
+<ul>
+<li class="fragment">monitored by edit filter managers</li>
+<li class="fragment">update filters</li>
+<li class="fragment">help good faith users</li>
+<li class="fragment">discourage malicious edits</li>
+</ul>
+<p>Personal security best practices for edit filter managers</p>
+</section>
+<section class="slide level1">
+
+<h2 id="tripping-a-filter-traces">Tripping a filter: Traces</h2>
+<p><img src="images/Screenshot-tags-in-revision-history.png" alt="Screenshot Tags in Revision History"></p>
+</section>
+<section class="slide level1">
+
+<p><img src="images/Screenshot-trigger-warning-filter.png" alt="Screenshot: an edit triggered multiple filters"></p>
 </section>
 <section class="slide level1">
 
 <h2 id="motivations-for-introducing-the-abuse-filter-extention">Motivations for introducing the abuse filter extention</h2>
+<p>Quote from EditFilter discussion archive</p>
+</section>
+<section class="slide level1">
+
+<p>Also from the archive: abuse filter -&gt; edit filter</p>
+</section>
+<section class="slide level1">
+
+<h2 id="collaboration-bots-filters">Collaboration bots-filters</h2>
+<p>&quot;There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here.&quot; </p>
+<ul>
+<li class="fragment">consider collaborations filters/bots (e.g. MrZ Bot which puts editors found on the abuse log often on the AIV noticeboard.) are there further exampled for this kind of collaborations?</li>
+</ul>
+<p> </p>
 </section>
 <section class="slide level1">
 
@@ -124,14 +249,6 @@ Jun 2010 : STiki initial release
 <h2 id="state-of-the-art-on-en-wikipedia">State of the Art on EN Wikipedia</h2>
 <p>Data analysis</p>
 </section>
-<section id="current-limitations" class="slide level1">
-<h1>Current Limitations</h1>
-</section>
-<section class="slide level1">
-
-<h2 id="bigger-picture-upload-filters">Bigger picture: Upload filters</h2>
-<p><img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019"> <small><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png" class="uri">https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png</a></small></p>
-</section>
 <section id="next-steps-for-finishing-the-thesis" class="slide level1">
 <h1>Next steps for finishing the thesis</h1>
 <ul>
@@ -149,6 +266,17 @@ Jun 2010 : STiki initial release
 <li class="fragment">Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?</li>
 <li class="fragment">What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?</li>
 </ul>
+</section>
+<section id="current-limitations" class="slide level1">
+<h1>Current Limitations</h1>
+<ul>
+<li class="fragment">Only EN Wikipedia</li>
+<li class="fragment">manual filter classification only conducted by me</li>
+</ul>
+</section>
+<section id="bigger-picture-upload-filters" class="slide level1">
+<h1>Bigger picture: Upload filters</h1>
+<p><img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019"> <small><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png" class="uri">https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png</a></small></p>
 </section>
 <section id="thank-you" class="slide level1">
 <h1>Thank you!</h1>

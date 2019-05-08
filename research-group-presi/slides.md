@@ -182,7 +182,10 @@ Personal security best practices for edit filter managers
 ## Tripping a filter: Traces
 
 <img src="images/Screenshot-tags-in-revision-history.png" alt="Screenshot Tags in Revision History">
-<img src="images/Screenshot-trigger-disallow.png" alt="Screenshot an edit triggered a filter set to disallow">
+
+---
+
+<img src="images/Screenshot-trigger-warning-filter.png" alt="Screenshot: an edit triggered multiple filters">
 
 ---
 
