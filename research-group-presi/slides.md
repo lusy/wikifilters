@@ -239,7 +239,169 @@ funnel diagram with filters
 
 ## State of the Art on EN Wikipedia
 
-Data analysis
+Data analysis of the abuse filter extension tables
+
+---
+
++--------------------+---------------------+------+-----+---------+----------------+
+| Field              | Type                | Null | Key | Default | Extra          |
++--------------------+---------------------+------+-----+---------+----------------+
+| af_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| af_pattern         | blob                | NO   |     | NULL    |                |
+| af_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| af_user_text       | varbinary(255)      | NO   |     | NULL    |                |
+| af_timestamp       | binary(14)          | NO   |     | NULL    |                |
+| af_enabled         | tinyint(1)          | NO   |     | 1       |                |
+| af_comments        | blob                | YES  |     | NULL    |                |
+| af_public_comments | tinyblob            | YES  |     | NULL    |                |
+| af_hidden          | tinyint(1)          | NO   |     | 0       |                |
+| af_hit_count       | bigint(20)          | NO   |     | 0       |                |
+| af_throttled       | tinyint(1)          | NO   |     | 0       |                |
+| af_deleted         | tinyint(1)          | NO   |     | 0       |                |
+| af_actions         | varbinary(255)      | NO   |     |         |                |
+| af_global          | tinyint(1)          | NO   |     | 0       |                |
+| af_group           | varbinary(64)       | NO   | MUL | default |                |
++--------------------+---------------------+------+-----+---------+----------------+
+\end{verbatim}
+  \caption{abuse\_filter schema}~\label{fig:db-schemas-af}
+\end{figure*}
+
+---
+
+\begin{figure*}
+\begin{verbatim}
+abuse_filter_log
++------------------+---------------------+------+-----+---------+----------------+
+| Field            | Type                | Null | Key | Default | Extra          |
++------------------+---------------------+------+-----+---------+----------------+
+| afl_id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| afl_filter       | varbinary(64)       | NO   | MUL | NULL    |                |
+| afl_user         | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afl_user_text    | varbinary(255)      | NO   |     | NULL    |                |
+| afl_ip           | varbinary(255)      | NO   | MUL | NULL    |                |
+| afl_action       | varbinary(255)      | NO   |     | NULL    |                |
+| afl_actions      | varbinary(255)      | NO   |     | NULL    |                |
+| afl_var_dump     | blob                | NO   |     | NULL    |                |
+| afl_timestamp    | binary(14)          | NO   | MUL | NULL    |                |
+| afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                |
+| afl_title        | varbinary(255)      | NO   |     | NULL    |                |
+| afl_wiki         | varbinary(64)       | YES  | MUL | NULL    |                |
+| afl_deleted      | tinyint(1)          | NO   |     | 0       |                |
+| afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                |
+| afl_rev_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
+| afl_log_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
++------------------+---------------------+------+-----+---------+----------------+
+\end{verbatim}
+  \caption{abuse\_filter\_log schema}~\label{fig:db-schemas-afl}
+\end{figure*}
+
+---
+
+\begin{figure*}
+\begin{verbatim}
+abuse_filter_history
++---------------------+---------------------+------+-----+---------+----------------+
+| Field               | Type                | Null | Key | Default | Extra          |
++---------------------+---------------------+------+-----+---------+----------------+
+| afh_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
+| afh_filter          | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afh_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
+| afh_user_text       | varbinary(255)      | NO   | MUL | NULL    |                |
+| afh_timestamp       | binary(14)          | NO   | MUL | NULL    |                |
+| afh_pattern         | blob                | NO   |     | NULL    |                |
+| afh_comments        | blob                | NO   |     | NULL    |                |
+| afh_flags           | tinyblob            | NO   |     | NULL    |                |
+| afh_public_comments | tinyblob            | YES  |     | NULL    |                |
+| afh_actions         | blob                | YES  |     | NULL    |                |
+| afh_deleted         | tinyint(1)          | NO   |     | 0       |                |
+| afh_changed_fields  | varbinary(255)      | NO   |     |         |                |
+| afh_group           | varbinary(64)       | YES  |     | NULL    |                |
++---------------------+---------------------+------+-----+---------+----------------+
+\end{verbatim}
+  \caption{abuse\_filter\_history schema}~\label{fig:db-schemas-afh}
+\end{figure*}
+
+---
+
+\begin{figure*}
+\begin{verbatim}
+abuse_filter_action
++-----------------+---------------------+------+-----+---------+-------+
+| Field           | Type                | Null | Key | Default | Extra |
++-----------------+---------------------+------+-----+---------+-------+
+| afa_filter      | bigint(20) unsigned | NO   | PRI | NULL    |       |
+| afa_consequence | varbinary(255)      | NO   | PRI | NULL    |       |
+| afa_parameters  | tinyblob            | NO   |     | NULL    |       |
++-----------------+---------------------+------+-----+---------+-------+
+\end{verbatim}
+
+---
+
+## What do most active filters do?
+
+\begin{table*}
+  \centering
+    \begin{tabular}{r p{10cm} p{5cm} }
+    % \toprule
+    Filter ID & Publicly available description & Actions \\
+    \hline
+      135 & repeating characters & tag, warn \\
+      30 & "large deletion from article by new editors" & tag, warn \\
+      61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & tag \\
+      18 & "test type edits from clicking on edit bar" (people don't replace Example texts when click-editing) & deleted in Feb 2012 \\
+      3 & "new user blanking articles" & tag, warn \\
+      172 & "section blanking" & tag \\
+      50 & "shouting" (contribution consists of all caps, numbers and punctuation) & tag, warn \\
+      98 & "creating very short new article" & tag \\
+      65 & "excessive whitespace" (note: "associated with ascii art and some types of vandalism") & deleted in Jan 2010 \\
+      132 & "removal of all categories" & tag, warn \\
+      225 & "vandalism in all caps" (difference to 50? seems to be swear words, but shouldn't they be catched by 50 anyway?) & disallow \\
+      189 & "BLP vandalism or libel" & tag \\
+      402 & "new article without references" & deleted in Apr 2013, before that disabled with comment "disabling, no real use" \\
+      384 & "addition of bad words or other vandalism" (seems to be a blacklist) & disallow \\
+      432 & "starting new line with lower case letters" & tag, warn //I recall there was a rule of thumb recommending not to user filters for style things? although that's not really style, but rather wrong grammar.. \\
+      380 & hidden; public comment "multiple obscenities" & disallow \\
+      351 & "text added after categories and interwiki" & tag, warn \\
+      279 & "repeated attempts to vandalise" & tag, throttle (triggered when someone hits "edit" repeatedly in a short ammount of time) \\
+      491 & "edits ending with emoticons or !" & tag, warn \\
+      636 & "unexplained removal of sourced content" & warn (that, together with 634 and 635 refutes my theory that warn always goes together with tag) \\
+      231 & "long string of characters containing no spaces" (that's surely english though^^) & tag, warn \\
+      650 & "creation of a new article without any categories" & (log only) \\
+      527 & hidden; public comments "T34234: log/throttle possible sleeper account creations" & throttle \\
+      633 & "possible canned edit summary" (apparently pre-filled on mobile though) & tag \\
+      686 & "IP adding possible unreferenced material to BLP" (BLP= biography of living people? I thought, it was forbidden to edit them without a registered account) & (log only) \\
+      712 & "possibly changing date of birth in infobox" ("possibly"? and I thought infoboxes were pre-generated from wikidata?) & (log only) \\
+      833 & "newer user possibly adding a unreferenced or improperly referenced material" & (log only) \\
+  \end{tabular}
+\end{table*}
+
+---
+
+## Descriptive statistics
+
+see jupyter notebook for diagrams
+
+---
+
+## Public and hidden filters
+
+* 2/3 of filters are hidden
+* all admins can view hidden filters
+* mailinglist for discussing private filters
+
+---
+
+## Manual classification
+
+*vandalism*, *good faith* and *maintenance*
+
+---
+
+diagram with sublables
+
+---
+
+check memos
 
 ---
 
