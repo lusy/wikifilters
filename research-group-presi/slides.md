@@ -60,6 +60,14 @@ bots, semi-automated tools, ores, humans
 
 ---
 
+## Important to study algorithmic mechamisms
+
+* increased relative share of edits
+* difference not only of scale but of substance
+* intransparency and gatekeeping
+
+---
+
 ## Bots
 
 * 1st line of defence
@@ -108,13 +116,96 @@ One thing is ostentatiously missing: edit filters
 
 ---
 
-# Results
+<img src="images/detailed-page-filter249.png" alt="Details page of Filter #249">
+
+---
+
+## MediaWiki Extension
+
+* permissions
+* tables: *abuse_filter*, *abuse_filter_log*, *abuse_filter_action* and *abuse_filter_history*
+* actions filters trigger: logging, warning, throttling, disallowing, revoking auto-promoted groups, blocking, removing from privileged groups, range-blocking, tagging
+* smth else?
+
+---
+
+## Introducing a new filter
+
+For everybody:
+
+* checklist: is an edit filter the suitable solution
+\begin{itemize}
+    \item "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
+    \item filters, after adding up, make editing slower
+    \item in depth checks should be done by a separate software that users run on their own machines
+    \item no trivial errors should be catched by filters (ala style guidelines)
+    \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
+\end{itemize}
+* request at: [https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested](https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested)
+
+For edit filter managers:
+
+* read the docs
+* run tests
+* Generally, always set action to logging only first
+* Announce at [https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard](https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard) and receive feedback
+* possibly change the filter action
+
+---
+
+## Who can edit filters
+
+* *abusefilter-modify* permission
+* March 9, 2019: 152 users in the *edit filter managers* group (and 1181 admins)
+* (4 users on CA Wikipedia, and the role doesn't exist on the DE, ES, RU or BG wiki)
+
+---
+
+## How are problems handled
+
+Edit Filter Noticeboard:
+
+* current filters behaviour: e.g. changing filter action or updating pattern
+* users rights discussions
+
+[https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives](https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives):
+
+* monitored by edit filter managers
+* update filters
+* help good faith users
+* discourage malicious edits
+
+Personal security best practices for edit filter managers
+
+---
+
+## Tripping a filter: Traces
+
+<img src="images/Screenshot-tags-in-revision-history.png" alt="Screenshot Tags in Revision History">
+<img src="images/Screenshot-trigger-disallow.png" alt="Screenshot an edit triggered a filter set to disallow">
 
 ---
 
 ## Motivations for introducing the abuse filter extention
 
 Quote from EditFilter discussion archive
+
+---
+
+Also from the archive:
+abuse filter -> edit filter
+
+---
+
+## Collaboration bots-filters
+
+"There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
+\url{https://en.wikipedia.org/wiki/User:DatBot/filters}
+
+* consider collaborations filters/bots (e.g. MrZ Bot which puts editors found on the abuse log often on the AIV noticeboard.) are there further exampled for this kind of collaborations?
+
+\url{https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism}
+\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
 
 ---
 
