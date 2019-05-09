@@ -372,7 +372,7 @@ abuse_filter_action
 
 Number of filter hits per month March 2009-March 2019
 
-<img src="images/general_stats.png" alt="Number of filter hits per month">
+<img src="images/number-filter-hits.png" alt="Number of filter hits per month">
 
 ---
 
@@ -397,103 +397,6 @@ Active Hidden Filters Actions
 ## Manual classification
 
 *vandalism*, *good faith* and *maintenance*
-
----
-
-diagram with sublables
-
-('vandalism', 263),
-('vandalism?', 162),
-  ('spam?', 41),
-  ('spam', 17),
-  ('vandalbot', 5),
-  ('vandalbot?', 2),
-  ('page_move_vandalism', 5),
-  ('page_move_vandalism?', 3),
-  ('silly_vandalism', 5),
-  ('silly_vandalism?', 2),
-  ('trolling?', 7),
-  ('hoaxing?', 4),
-  ('hoaxing', 2),
-  ('copyright', 3),
-  ('copyright?', 2),
-  ('image_vandalism', 3),
-  ('talk_page_vandalism', 3),
-  ('template_vandalism?', 1),
-  ('template_vandalism', 1),
-  ('template_spam', 2),
-  ('link_vandalism?', 1),
-  ('abuse_of_tags_vandalism?', 1),
-  ('avoidant_vandalism', 1),
-  ('avoidant_vandalism?', 1),
-  ('username_vandalism?', 1),
-
-('prank', 1)
-
-('phishing?', 1),
-('malware?', 1),
-('malware', 1),
-
-('guideline_vio?', 1),
-
-('religious_vandalism?', 3),
-('politically_motivated?', 8),
-('politically_motivated', 2),
-
-('sockpuppetry', 59),
-('sockpuppetry?', 35),
-('long_term_abuse', 35),
-('long_term_abuse?', 9),
-('abuse', 1),
-('abuse?', 21),
-('harassment?', 31),
-('harassment', 24),
-('doxxing?', 2),
-('personal_attacks', 6),
-('personal_attacks?', 4),
-('impersonation', 1),
-('not_polite', 1),
-
-('biased_pov', 17),
-('biased_pov?', 15),
-
-('conflict_of_interest', 3),
-('stockbrocker_vandalism', 3),
-('self_promotion?', 2),
-('conflict_of_interest?', 1),
-('self_promotion', 1),
-
-('seo', 8),
-('seo?', 4),
-
-('bad_style', 13),
-('bad_style?', 12),
-('edit_warring?', 3),
-
-('good_faith?', 63),
-('good_faith', 48),
-
-('lazyness', 4),
-
-('maintenance', 7),
-('maintenance?', 5),
-('maintenance? ', 1),
-
-('bug', 5),
-('bug?', 10),
-('wiki_policy?', 9),
-
-('test', 43),
-('test?', 4),
-
-('unknown', 71),
-('misc', 59),
-('misc?', 8),
-('unclear', 14),
-
----
-
-check memos
 
 ---
 
