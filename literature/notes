@@ -1440,3 +1440,72 @@ Wikipedia is not maintained merely by an increase in articles
 and quality content; the sophisticated procedures developed
 for coordinating users and dealing with conflict are vital for a
 community where people may not agree on everything."
+
+====================================================================
+\cite{GeiHalPinWal2012}
+
+- paper describes defense mechanisms on wikipedia
+- goes over socialisation tactics for newcomers in different types of organisations
+- underlines, Wikipedia is a special case, bc of being a volunteers driven project, with little formal mentoring programms, etc
+
+and describes an experiment in which wording of templated messaged for engaging new users/discouraging them from doing unproductive edits is altered in order to find optimal one which retains new collaborators
+results are inconclusive, but point towards personal message without directives seems to incent the most user talk, but maybe that's due simply to the fact that there are no other actionable links in this template.)
+also, the majority of new users studied here were unregistered
+
+"During its period of
+exponential growth, the Wikipedian community developed
+specialized socio technical defense mechanisms to protect
+itself from the negatives of massive participation: spam,
+vandalism, falsehoods, and other damage."
+// check following paper \cite{HalGeiMorRied2012} for period of exponential growth
+// compare with timeline to confirm
+
+"2006-07 -- the period in which the
+community experienced exponential growth in terms of
+both users and content"
+
+"first illustrate and describe the various defense mechanisms"
+"Next, we present re
+sults from an experiment aimed at increasing both the quan
+tity and quality of editors by altering various elements of
+these defense mechanisms,"
+
+"New mem-
+bers are thrown into the project and left to fend for them-
+selves, often learning the various rules of the project by
+breaking them."
+
+"socialization of new members increasing-
+ly takes place through the project's highly-automated de-
+fense mechanisms, with new members' first interaction
+with another Wikipedian taking the form of having one's
+contributions reverted and being sent a warning message."
+
+"Wikipedia faces a unique chal-
+lenge in that it has an astounding lack of formal gatekeep-
+ing mechanisms."
+"almost any Internet user
+has the technical ability to edit almost every encyclopedia
+article in whatever manner they see fit"
+"This model is a
+foundational principle of the Wikipedian community, and
+both communal wisdom and academic research holds that
+these lower barriers to entry do make the encyclopedia
+vulnerable to error and vandalism, but dramatically in-
+crease rates of participation (Wilkinson, 2008)."
+
+no ownership of content
+
+literature shows
+- damage is, in general, reverted very quickly
+- describes Wikipedia as an informal per review system
+- fully or semi-automated mechanisms are used for quality control
+
+"44%, almost half of all
+activity on User talk: pages, originates from highly-
+automated human and bot users – and many but not all of
+whom are engaged in counter-vandalism activity."
+
+"Task directives are highly prevalent in
+such messages, instructing new editors to do a number of
+tasks except editing encyclopedia articles again"
