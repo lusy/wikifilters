@@ -1,0 +1,19 @@
+# What is important??
+
+* filters check every edit at its publication; they are triggered *before* an edit is even published; effect is immediate
+* bots and semi-automated tools review edits *after* their publication. it takes time (however short it might be) till the edit is examined
+
+* filters were introduced (according to discussion archives) to take care of particular cases of rather obvious but pervasive vandalism that takes up a lot of time to clean up. time the corresponding editors could use better for examining less obvious cases for example
+
+* filters are part of the core software whereas bots are run on diverse dispersed decentral infrastructure (and potentially could go down at any time, see ClueBot NG paper)
+
+## filters are an "old-school" rule based system. why do they still exist in a time of fancy ml tools?
+
+* they were introduced before the ml tools came around.
+* they probably work, so no one sees a reason to shut them down
+* hypothesis: it is easier to understand what's going on than it is with a ML tool. people like to use them for simplicity and transparency reasons
+
+## edit filter managers are (at least sometimes) also bot operators. how do they decide for what they should implement a bot and for what a filter?
+
+* guidelines say: for in-depth checks and problems with a particular article bots are better (don't use up resources)
+
