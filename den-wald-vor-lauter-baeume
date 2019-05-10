@@ -2,6 +2,8 @@
 
 * filters check every edit at its publication; they are triggered *before* an edit is even published; effect is immediate
 * bots and semi-automated tools review edits *after* their publication. it takes time (however short it might be) till the edit is examined
+  -> Q: Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
+     * One answer is certainly: *before* makes sense for very blatant clear cases that take up a lot of time to be cleaned up afterwards
 
 * filters were introduced (according to discussion archives) to take care of particular cases of rather obvious but pervasive vandalism that takes up a lot of time to clean up. time the corresponding editors could use better for examining less obvious cases for example
 
@@ -12,6 +14,8 @@
 * they were introduced before the ml tools came around.
 * they probably work, so no one sees a reason to shut them down
 * hypothesis: it is easier to understand what's going on than it is with a ML tool. people like to use them for simplicity and transparency reasons
+* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
+* still, there are probably far more bot developers/operators than there are people in the edit filters managers group (check?)
 
 ## edit filter managers are (at least sometimes) also bot operators. how do they decide for what they should implement a bot and for what a filter?
 
