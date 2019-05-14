@@ -1509,3 +1509,18 @@ whom are engaged in counter-vandalism activity."
 "Task directives are highly prevalent in
 such messages, instructing new editors to do a number of
 tasks except editing encyclopedia articles again"
+
+===================================================
+\cite{PotSteGer2008}
+
+discusses vandalism from information retreival perspective
+one-class classification problem (similar to spam filters)
+distinguishes 3 types of misuse of the the encyclopedia by users: lobbyism, spam and vandalism
+
+"We present results of a new approach to detect destructive article revisions, so-called vandalism, in Wikipedia. Vandalism detection is a one-class classification problem, where vandalism edits are the target to be identified among all revisions. Interestingly, vandalism detection has not been addressed in the Information Retrieval literature by now."
+
+"We compiled a large number of vandalism edits in a corpus, which allows for the comparison of existing and new detection approaches."
+
+"Compared to the rule-based methods that are currently applied in Wikipedia, our approach increases the F -Measure performance by 49% while being faster at the same time"
+
+"We distinguish them into three groups: (i) lobbyists, who try to push their own agenda, (ii) spammers, who solicit products or services, and (iii) vandals, who deliberately destroy the work of others. "
