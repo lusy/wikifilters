@@ -1,14 +1,26 @@
 \chapter{Edit Filters as part of Wikipedia's socio-technical infrastructure}
 \label{chap:filters}
 
-\section{Genesis}
+%\section{Genesis}
 
-* what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
+``Abuse Filter is enabled'' reads the title of one of the eight stories of the March 23rd 2009 issue of English Wikipedia's newspaper, The Signpost~\cite{Signpost2009}.
+``The extension allows all edits to be checked against automatic filters and heuristics, which can be set up to look for patterns of vandalism including page move vandalism and juvenile-type vandalism, as well as common newbie mistakes,'' the article proclaims.
+%TODO something more from the signpost?
 
+The extension, or at least its end user facing parts, was later renamed to ``edit filter'' in order to not characterise/label potential false positives as ``abuse'' and thus alienate good faith editors striving to improve the encyclopedia.
+%TODO one more sentense and just wrap up the rename here?
+
+In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
+%smth else we want to understand here?
+
+\begin{comment}
 % When and why were Wikipedia edit filters introduced?
 
 Edit filters were first introduced on the English Wikipedia in 2009 under the name ``abuse filters''.
 According to Wikipedia's newspaper, The Signpost, their clear purpose was to cope with the rising(syn) amount of vandalism as well as ``common newbie mistakes'' the encyclopedia faced~\cite{Signpost2009}.
+
+* what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
+\end{comment}
 
 \section{Data}
 
