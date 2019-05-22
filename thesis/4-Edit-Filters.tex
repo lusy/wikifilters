@@ -7,8 +7,8 @@
 ``The extension allows all edits to be checked against automatic filters and heuristics, which can be set up to look for patterns of vandalism including page move vandalism and juvenile-type vandalism, as well as common newbie mistakes,'' the article proclaims.
 %TODO something more from the signpost?
 
-The extension, or at least its end user facing parts, was later renamed to ``edit filter'' in order to not characterise/label potential false positives as ``abuse'' and thus alienate good faith editors striving to improve the encyclopedia.
-%TODO one more sentense and just wrap up the rename here?
+The extension, or at least its end user facing parts, was later renamed to ``edit filter'' in order to not characterise/label potential false positives as ``abuse'' and thus alienate good faith editors striving to improve the encyclopedia~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterTalkArchive1}.
+%The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{Wikipedia:EditFilter}.
 
 In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
 %smth else we want to understand here?
@@ -32,24 +32,20 @@ Following pages were analysed in depth: <insert pages here>.
 Following other pages looked interesting or related, but were left out, mainly because of insufficient time.
 (Is there a better reasoning why I looked at the pages I looked at specifically, while left particularly these other pages for later?)
 
-* for the edit filter chapter: which pages have I studied and which I haven't (why I limited the choice there? it's not possible to study everything, but study the things I study, well!)
-(or should this go to limitations?)
-
 \section{Definition}
 
-According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly[1] to address common patterns of harmful editing.
-[1] Edit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove.''~\cite{Wikipedia:EditFilter}.
-%TODO how to quote an excerpt containing a footnote? Is this footnote important at all or can it be taken out?
+According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly to address common patterns of harmful editing''~\cite{Wikipedia:EditFilter}.
 
+A couple of keywords arouse interest here:
+who is in the edit filter manager group and how did they become part of it? what controls exactly can be set? what does ``mainly'' mean, are there other patterns addressed? and what are the patterns of harmful editing addressed by the filters?
+
+At least the ``mainly'' question is swiftly answered by the paragraph itself, since there is a footnote stating that ``[e]dit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove''~\cite{Wikipedia:EditFilter}.
+%TODO answer remaining questions
+We discuss who is in the edit filter manager group in section~\ref{} and the patterns of harmful editing are inspected in detail in the next chapter.
+Regarding the controls that can be set, we can briefly state that:
 Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
 If there is a match, the edit in question is logged and potentially, additional actions such as tagging the edit summary, issuing a warning or disallowing the edit are invoked.
-The full range of actions which the AbuseFilter extension allows are discussed in section~\label{sec:technical-layer}.
-
-Interestingly, at its introduction, the mechanism was called ``Abuse Filter'' and was later renamed to ``edit filter''.
-We can observe the legacy name in the name of the MediaWiki extension for instance.
-The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{Wikipedia:EditFilter}.
-%TODO what was the motivation behind the rename? signaling it's not only targeting vandals but also intending to assist good faith editors?
-
+Both the regex patterns and the possible edit filter actions are observed(syn!) in greater detail in the following sections.
 
 \begin{comment}
 %TODO: rephrase this as a second paragraph
