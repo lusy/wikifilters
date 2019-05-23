@@ -9,6 +9,16 @@
 
 The extension, or at least its end user facing parts, was later renamed to ``edit filter'' in order to not characterise/label potential false positives as ``abuse'' and thus alienate good faith editors striving to improve the encyclopedia~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterTalkArchive1}.
 %The new name (``edit filter'') is ``currently used for user-facing elements of the filter as some of the edits it flags are not harmful''~\cite{Wikipedia:EditFilter}.
+\begin{comment}
+\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_3#Request_for_name_change}
+
+"Could the name of this log be changed, please? I just noticed the other day that I have entries in an "abuse" log for linking to YouTube and for creating articles about Michael Jackson, which triggered a suspicion of vandalism. A few other people are voicing the same concern at AN/I, and someone suggested posting the request here. SlimVirgin talk|contribs 18:11, 2 July 2009 (UTC) "
+
+"    I would support a name change on all public-facing parts of this extension to "Edit filter". Even after we tell people that "Entries in this list do not necessarily mean the edits were abusive.", they still worry about poisoning of their well. –xenotalk 18:14, 2 July 2009 (UTC)"
+
+as well as several more comments in favour
+\end{comment}
+
 
 In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
 %smth else we want to understand here?
@@ -41,7 +51,7 @@ who is in the edit filter manager group and how did they become part of it? what
 
 At least the ``mainly'' question is swiftly answered by the paragraph itself, since there is a footnote stating that ``[e]dit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove''~\cite{Wikipedia:EditFilter}.
 %TODO answer remaining questions
-We discuss who is in the edit filter manager group in section~\ref{} and the patterns of harmful editing are inspected in detail in the next chapter.
+We discuss (who is in) the edit filter manager group in section~\ref{section:who-can-edit} and the patterns of harmful editing are inspected in detail in the next chapter.
 Regarding the controls that can be set, we can briefly state that:
 Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
 If there is a match, the edit in question is logged and potentially, additional actions such as tagging the edit summary, issuing a warning or disallowing the edit are invoked.
@@ -53,12 +63,12 @@ Both the regex patterns and the possible edit filter actions are observed(syn!) 
 Footnote 2: "The extension also allows for temporary blocking, but these features are disabled on the English Wikipedia." <-- TODO: Is there wikipedia on which it isn't disallowed?
 \end{comment}
 
-\section{Example of a filter}
+\subsection{Example of a filter}
 %or a subsection?
 
 For illustration purposes/better understanding, let us have a closer look at what a single edit filter looks like.
 Edit filter with ID 365 is public and currently enabled.
-Its public comment (``name'') reads ``Unusual changes to featured or good content''.
+Its name (``public comment'') reads ``Unusual changes to featured or good content''.
 The regex filter pattern is:
 \begin{verbatim}
 "page_namespace == 0 &
@@ -72,23 +82,36 @@ old_wikitext rlike
 ""\{\{([Ff]eatured|[Gg]ood)\s?article\}\}"""
 \end{verbatim}
 And the currently configured filter actions are: ``disallow''.
-(quote source, also refer to \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365})
-%TODO: insert screenshot
 
 So, if a user whose status is not confirmed yet tries to edit a page in the article namespace which contains ``Featured'' or ``Good article'' and they either insert a redirect, delete 3/4 of the content or add 3/4 on top, the edit is automatically disallowed.
 
 Note that an edit filter editor can easily change the action of the filter. (Or the pattern, as a matter of fact.)
+The filter was last modified on October 23rd 2018.
+All these details can be viewed on the filter's detailed page\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365}}
+or on the screenshot thereof (figure~\ref{fig:filter-details}) that I created for convenience.
+
+\begin{figure}
+\centering
+  \includegraphics[width=1\columnwidth]{pics/detailed-page-filter365-no-boarder.png}
+  \caption{Detailed page of edit filter \#365}~\label{fig:filter-details}
+\end{figure}
+%TODO stretch graphic?
 
 %************************************************************************
 
-\section{The edit filter mediawiki extension}
+\section{The AbuseFilter Mediawiki extension}
 
-At the end, from a technical perspective Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a regular expression before it's published.
+%TODO note on the name again
+
+At the end, from a technical perspective, Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a speficied/given regular expression pattern before it is published.
 Every time a filter is triggered, the action that triggered it as well as further data such as the user who triggered the filter, their ip address, and a diff of the edit (if it was an edit) is logged.
-Possibly, a further filter action is invoked as well.
-The plugin defines following possible(syn) filter actions: %TODO finish
+Most frequently, edit filters are triggered upon new edits, there are however further editor's actions that can trip an edit filter.
+These include: %TODO check jupyter nb
 
-The documentation page of the extention is here: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter}
+When a filter is triggered, beside logging it, a further filter action may be invoked as well.
+The plugin defines following possible filter actions: %TODO finish
+
+The documentation page of the extension is here: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter}
 and the code is hosted on gerrit, Wikimedia's git repository hosting service of choice: \url{https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master}.
 
 The rules format can be viewed under \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}.
@@ -98,6 +121,8 @@ The rules format can be viewed under \url{https://www.mediawiki.org/wiki/Extensi
 Data generated by the extension in stored in following database tables: \emph{abuse\_filter}, \emph{abuse\_filter\_log}, \emph{abuse\_filter\_action} and \emph{abuse\_filter\_history}~\cite{gerrit-abusefilter}.
 
 %TODO which new user permissions and which filter actions does the extension introduce?
+Following new user permissions are introduced by the abuse filter plugin
+\begin{verbatim}
 abusefilter-modify 	Modify abuse filters
 abusefilter-view 	View abuse filters
 abusefilter-log 	View the abuse log
@@ -111,8 +136,9 @@ abusefilter-log-private 	View log entries of abuse filters marked as private
 abusefilter-hide-log 	Hide entries in the abuse log
 abusefilter-hidden-log 	View hidden abuse log entries
 abusefilter-private-log 	View the AbuseFilter private details access log
+\end{verbatim}
 
-\subsection{How is a new filter introduced?}
+\section{How is a new filter introduced?}
 //maybe move to governance?
 
 The best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
@@ -140,7 +166,7 @@ on multiple occasions, there are notes on recommended order of operations, so th
 \end{itemize}
 \end{comment}
 
-\subsection{How is a new filter introduced?}
+%\section{How is a new filter introduced?}
 
 Anyone can propose a new edit filter.
 An editor who notices problematic/weird/.. behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
@@ -156,8 +182,8 @@ The Edit Filters Requests page also asks users to go through following checklist
 
 According to the best practices, any new filter should be announced on the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}} in order for other filter managers and the community to be able to review the filter and voice concerns~\cite{Wikipedia:EditFilter}.
 
-\subsection{Who can edit filters?}
-\label{subsection:who-can-edit}
+\section{Who can edit filters?}
+\label{section:who-can-edit}
 
 In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
 According to ~\cite{Wikipedia:EditFilter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
@@ -195,7 +221,7 @@ Probably it's simply admins who can modify the filters there.
 
 \section{modifying a filter}
 
-As pointed out in section~\ref{subsection:who-can-edit}, editors with the \emph{abusefilter-modify} permission can modify filters.
+As pointed out in section~\ref{section:who-can-edit}, editors with the \emph{abusefilter-modify} permission can modify filters.
 They can do so on the detailed page of a filter.
 (For example that is \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61} for filter with ID 61.)
 
@@ -325,7 +351,7 @@ The edit is not saved.
   \caption{Editor gets notified their edit triggered multiple edit filters}~\label{fig:screenshot-warn-disallow}
 \end{figure}
 
-\subsection{what happens afterwards}
+\section{what happens afterwards}
 
 If a user disagrees with the filter decision, they have the posibility of reporting a false positive
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}
@@ -395,18 +421,6 @@ Apparently, Twinkle at least has the possibility of using heuristics from the ab
 (Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
 \end{comment}
 
-\section{Rename}
-% TODO: when and why was the extension renamed
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_3#Request_for_name_change}
-
-"Could the name of this log be changed, please? I just noticed the other day that I have entries in an "abuse" log for linking to YouTube and for creating articles about Michael Jackson, which triggered a suspicion of vandalism. A few other people are voicing the same concern at AN/I, and someone suggested posting the request here. SlimVirgin talk|contribs 18:11, 2 July 2009 (UTC) "
-
-"    I would support a name change on all public-facing parts of this extension to "Edit filter". Even after we tell people that "Entries in this list do not necessarily mean the edits were abusive.", they still worry about poisoning of their well. –xenotalk 18:14, 2 July 2009 (UTC)"
-
-as well as several more comments in favour
-\end{comment}
-
 \section{Archive}
 So, after reading quite some of the discussion surrounding the introduction of the edit filter MediaWiki extention (\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1}),
 I think motivation for the filters was following:
@@ -431,6 +445,8 @@ maybe it's a historical phenomenon (in many regards):
   * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
 * perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
 * perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
+
+%TODO maybe put here the comparison table I've started as a feedback from the status presentation
 
 Question:
 Oftentimes edit filter managers are also bot operators; how would they decide when to implement an filter and when a bot?
