@@ -1144,6 +1144,91 @@ Chapter 11
 
 "technology enables perpetual and cheap monitoring of behavior" (p.200)
 
+Chapter 12
+
+"In the
+United States at least, there are few places where you can stand before the
+public and address them about some matter of public import without most
+people thinking you a nut or a nuisance. There is no speakers’ corner in every
+city; most towns have no town meeting. “America offline,” in this sense, is
+very much like America Online—not designed to give individuals access to a
+wide audience to address public matters." (p.235)
+"Only professionals get to address
+Americans on public issues—politicians, scholars, celebrities, journalists, and
+activists, most of whom are confined to single issues. The rest of us have a
+choice—listen, or be dispatched to the gulag of social lunacy."(p.235)
+
+"With the relative anonymity of cyberspace and its growing size, norms
+do not function well there. Even in cyberspaces where people know each other
+well, they are likely to be more tolerant of dissident views when they know (or
+believe, or hope) the dissident lives thousands of miles away."(p.236)
+
+"The architecture of
+cyberspace is the real protector of speech there;"(p.236)
+
+"My aim is to obsess
+about the relationship between architecture and the freedom it makes possi-
+ble, and about the significance of law in the construction of that architecture."(p.237)
+
+"I say “politics” because this building is not over. As I have argued (over
+and over again), there is no single architecture for cyberspace; there is no
+given or necessary structure to its design."
+
+"There is no reason to think, in other words, that
+this initial flash of freedom will not be short-lived. And there is certainly no
+justification for acting as if it will not."
+"Already the Net is changing from free to controlled space."
+
+"The architecture of the Internet, as it is right now,
+is perhaps the most important model of free speech since the founding."
+"If we take this meaning seriously, then the First
+Amendment will require a fairly radical restructuring of the architectures of
+speech off the Net as well. "
+
+"Publishing requires a publisher, and a publisher
+can be punished by the state. But if the essence or facts of the publication are
+published elsewhere first, then the need for constitutional protection disap-
+pears. Once the piece is published, there is no further legal justification for
+suppressing it."(p.240)
+
+Wikipedia
+"This collaboration comes with no guarantees, except the guarantee of a
+process. The most extraordinary collaborative process in the context of con-
+tent is Wikipedia. Wikipedia is a free online encyclopedia, created solely by
+volunteers. Launched at the beginning of 2001, these (literally thousands of)
+volunteers have now created over 2 million articles. There are nine major lan-
+guage versions (not including the Klingon version), with about half of the
+total articles in English.
+The aim of the Wikipedia is neutrality. The contributors edit, and reedit,
+to frame a piece neutrally. Sometimes that effort fails—particularly controver-
+sial topics can’t help but attract fierce conflict. But in the main, the work is an
+unbelievable success. With nothing more than the effort of volunteers, the
+most used, and perhaps the most useful encyclopedia ever written has been
+created through millions of uncoordinated instances of collaboration.
+Wikipedia, however, can’t guarantee its results. It can’t guarantee that, at
+any particular moment, there won’t be errors in its entries. But of course, no
+one can make that guarantee. Indeed, in one study that randomly collected
+entries from Wikipedia and from Encyclopedia Britannica, there were just as
+many errors in Britannica as in Wikipedia. 28
+But Wikipedia is open to a certain kind of risk that Britannica is not—
+maliciousness. In May 2005, the entry to an article about John Seigenthaler Sr.
+was defaced by a prankster. Because not many people were monitoring the
+entry, it took four months before the error was noticed and corrected. Seigen-
+thaler wasn’t happy about this. He, understandably, complained that it was the
+architecture of Wikipedia that was to blame.
+Wikipedia’s architecture could be different. But the lesson here is not its
+failures. It is instead the extraordinary surprise of Wikipedia’s success. There
+is an unprecedented collaboration of people from around the world work-
+ing to converge upon truth across a wide range of topics. That, in a sense, is
+what science does as well. It uses a different kind of “peer review” to police
+its results. That “peer review” is no guarantee either—South Koreans, for
+example, were quite convinced that one of their leading scientists, Hwang
+Woo-Suk, had discovered a technique to clone human stem cells. They
+believed it because peer-reviewed journals had reported it. But whether
+right to believe it or not, the journals were wrong. Woo-Suk was a fraud, and
+he hadn’t cloned stem cells, or anything else worth the attention of the
+world." (243-244)
+
 ======================================================================
 \cite{Geiger2014}
 
@@ -1524,3 +1609,4 @@ distinguishes 3 types of misuse of the the encyclopedia by users: lobbyism, spam
 "Compared to the rule-based methods that are currently applied in Wikipedia, our approach increases the F -Measure performance by 49% while being faster at the same time"
 
 "We distinguish them into three groups: (i) lobbyists, who try to push their own agenda, (ii) spammers, who solicit products or services, and (iii) vandals, who deliberately destroy the work of others. "
+difficulty of contributing to community rules – especially for newcomers."
