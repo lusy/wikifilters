@@ -1609,4 +1609,73 @@ distinguishes 3 types of misuse of the the encyclopedia by users: lobbyism, spam
 "Compared to the rule-based methods that are currently applied in Wikipedia, our approach increases the F -Measure performance by 49% while being faster at the same time"
 
 "We distinguish them into three groups: (i) lobbyists, who try to push their own agenda, (ii) spammers, who solicit products or services, and (iii) vandals, who deliberately destroy the work of others. "
+
+===================================================
+\cite{HalGeiMorRied2013}
+
+"recent research has shown that the number of active
+contributors in Wikipedia has been declining steadily for years, and suggests that a sharp
+decline in the retention of newcomers is the cause"
+
+"a massive growth in participation have ironically crippled the very growth they were designed
+to manage"
+
+"community’s formal mechanisms for norm
+articulation are shown to have calcified against changes – especially changes proposed by
+newer editors."
+
+"open collaboration systems need to maintain an inner circle of highly
+invested contributors to manage and direct the group. However, with statistical predictability, all
+contributors to such systems will eventually stop contributing"
+
+"The success of an open collaboration project appears to be highly correlated with the number of
+participants it maintains"
+
+"Some newcomers must move from the periphery of
+the community to the center"
+
+"The community grew from
+hundreds of active editors in 2001 to thousands in 2004 and peaked in March of 2007 at 56,400
+active editors."
+
+"growth as a self-
+reinforcing mechanism: as Wikipedia became more valuable, the project attracted more
+contributors to increase its value."
+
+figure 1: The English Wikipedia’s editor decline. The number of active,
+registered editors (>= 5 edits/month) is plotted over time. //consider plotting such a thing myself (and get data from quarry?) if deemed relevant
+TODO: check https://meta.wikimedia.org/wiki/Wikilytics if I need editors stats
+
+Lit overview: explanations for the decline:
+1) increasing completion of the articles
+2) failed socialisation of newcomers
+3) "right-sizing": main work is done, no need for so many editors
+refutes against 1) and 3): vast majority of articles are below the community's standards for "good" articles
+
+"underrepresented
+groups still find it challenging to join. For instance, one study found that only 9% of edits are
+made by female editors, and that articles of particular interest to women are shorter than articles
+of interest to men (Lam, 2011). Until editors are representative of the population of potential
+contributors, it is difficult to argue that the socialization practices are sufficiently effective"
+
+Def desirable newcomer: "trying to contribute productively (i.e. acting
+in good-faith) and, therefore, likely will become valuable contributors if they remain in the
+community."
+"the proportion of desirable newcomers who arrive
+at Wikipedia has been holding steady in recent years, a decreasing fraction of these newcomers
+survive past their initial contributions."
+
+community's goals changed during the period of exponential growth
+
+"resulted in a new Wikipedia, in which newcomers are rudely greeted by
+automated quality control systems and are overwhelmed by the complexity of the rule system."
+
+contributions of the paper:
+1) First, we implicate Wikipedia’s primary quality control mechanism (Stvilia, 2005), the rejection of
+unwanted contributions, as a strong, negative predictor of the retention of high quality
+newcomers and show that these newcomers’ contributions are being rejected at an increasing
+rate. Next, we show how algorithmic tools, which were built to make the work of controlling the
+quality of Wikipedia’s content more efficient, exacerbate the effect of rejection on desirable
+newcomer retention and circumvent Wikipedia’s conflict resolution process. Finally, we show
+how calcification has made Wikipedia’s policy environment less adaptable and increased the
 difficulty of contributing to community rules – especially for newcomers."
