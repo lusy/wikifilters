@@ -1671,11 +1671,50 @@ community's goals changed during the period of exponential growth
 automated quality control systems and are overwhelmed by the complexity of the rule system."
 
 contributions of the paper:
-1) First, we implicate Wikipedia’s primary quality control mechanism (Stvilia, 2005), the rejection of
+"1) we implicate Wikipedia’s primary quality control mechanism (Stvilia, 2005), the rejection of
 unwanted contributions, as a strong, negative predictor of the retention of high quality
 newcomers and show that these newcomers’ contributions are being rejected at an increasing
-rate. Next, we show how algorithmic tools, which were built to make the work of controlling the
+rate
+2) we show how algorithmic tools, which were built to make the work of controlling the
 quality of Wikipedia’s content more efficient, exacerbate the effect of rejection on desirable
-newcomer retention and circumvent Wikipedia’s conflict resolution process. Finally, we show
-how calcification has made Wikipedia’s policy environment less adaptable and increased the
+newcomer retention and circumvent Wikipedia’s conflict resolution process.
+3) we show how calcification has made Wikipedia’s policy environment less adaptable and increased the
 difficulty of contributing to community rules – especially for newcomers."
+
+"Wikipedia’s open contribution system constitutes an informal
+peer review where all contributions are initially accepted;"
+
+"the definition of “unwanted” contribution has certainly
+changed over time. While presenting at Wikimania in 2006, Jimmy Wales urged Wikipedians to
+change their focus from quantity to quality."
+"shift from Wikipedia as
+a catch-all for encyclopedia-like content to a more restrictive project."
+
+"external pressures for Wikipedia to tighten its review process. After high profile
+cases of libel"
+
+"the length of the article at the time of contribution was a significant predictor of
+rejection."
+
+"Hypothesis: Rejection & retention. Increasing rates of rejection have caused a decrease in
+the retention of desirable newcomers."
+
+"Hypothesis: Tool use & consequences. The use of algorithmic tools to reject newcomer
+contributions is exacerbating the decrease in desirable newcomer retention."
+
+"In 2006, Wikipedia administrator Tawker initiated a new
+genre: the vandal fighter bot." //TODO: Would be interesting for timeline; however I cant find which bot it was
+"using a simple text pattern matcher."
+"After years of iteration, vandal fighter bots are in wide use
+in mid-2012. ClueBot NG uses machine learning and neural network approaches to identify and
+reject over 40,000 acts of vandalism a month, with a median time to revert of five seconds."
+//TODO median time can be used in the funnel diagram
+
+"Human-computation tools [..] catch the damage the bots miss"
+"re-introduce human judgment into the vandal fighting task."
+
+"These algorithmic tools have apparently made quality control both more efficient and more
+effective. Previous work has shown that the duration during which vandalism is visible in an
+article has been decreasing (Kittur, 2007; Priedhorsky, 2007). These tools also reduce the
+amount of volunteer effort that must be devoted to rejecting unwanted contributions"
+//argument in favour of not only a difference of scale, but also of substance
