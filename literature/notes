@@ -1702,6 +1702,9 @@ the retention of desirable newcomers."
 "Hypothesis: Tool use & consequences. The use of algorithmic tools to reject newcomer
 contributions is exacerbating the decrease in desirable newcomer retention."
 
+"Hypothesis: Norm formalization & calcification: Formalization of norms has made it more
+difficult for newer generations of editors to shape the official rules of Wikipedia."
+
 "In 2006, Wikipedia administrator Tawker initiated a new
 genre: the vandal fighter bot." //TODO: Would be interesting for timeline; however I cant find which bot it was
 "using a simple text pattern matcher."
@@ -1718,3 +1721,45 @@ effective. Previous work has shown that the duration during which vandalism is v
 article has been decreasing (Kittur, 2007; Priedhorsky, 2007). These tools also reduce the
 amount of volunteer effort that must be devoted to rejecting unwanted contributions"
 //argument in favour of not only a difference of scale, but also of substance
+
+"As the editor community grew implicit norms were formalized into a
+growing corpus of official rules and procedures (Butler 2008), and rule creation and enforcement
+became increasingly decentralized"
+"Formally documenting
+community practices facilitated wider dissemination in the expanding community"
+"new rules were created to meet emergent needs."
+
+". By 2005, three primary types of documented norms had
+emerged: policies, guidelines and essays. Formal norms (policies and guidelines) reflect
+community consensus, and can be enforced. Informal norms (essays) are not enforceable rules
+per se and need not reflect consensus, but do often reflect community concerns"
+
+"formalization of implicit norms into rules, and the embedding of these rules in technologies
+such as bots and templates," //code is law
+
+"gradual decline in
+participation by newer editors in the areas of Wikipedia dedicated to drafting and discussing
+policy, indicating that senior Wikipedians may now be more responsible for curating and
+interpreting community policy than ever before."
+
+"decline-era newcomers may face entrenched social practices and
+technologically-embedded processes that are no longer open to re-negotiation"
+"policy calcification and increasing centralization of policy"
+
+"This means that rejection was likely to be a demotivator
+to newcomers who joined the project long before retention of newcomers became an issue."
+"We also found that over the lifetime of Wikipedia the probability that contributions made by
+desirable newcomers are rejected has increased."
+"these rejections were due to misunderstandings about the norms of the community"
+"This result suggests that “unwanted” but
+not intentionally damaging contributions may have been handled differently in the past."
+
+"One such way of dealing with imperfect contributions without sacrificing quality is to “massage”
+them into a form that is valuable for an article. Perhaps the increasing use of tools that afford
+only two possible reactions – accept or reject – are making it more likely that contributions are
+rejected outright."
+
+"For editors who revert manually, the rate of reciprocation has
+dropped slightly, from a peak of 67% in 2005 to 56% in 2010. The overall rate of reciprocation
+has dropped dramatically, since none of the major bots are programmed to reciprocate BRD
+initiations." //reciprocation = answer to posts on their talk pages initiated by reverted editors
