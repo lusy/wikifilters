@@ -146,7 +146,7 @@ Examples of type of edits that are supposed to be targeted:
 
 %TODO sift again through Archive notes and refine the section
 
-\section{Building a filter}
+\section{Building a filter: the internal perspective}
 %internal perspective
 \subsection{How is a new filter introduced?}
 //maybe move to governance?
@@ -260,7 +260,17 @@ and the filter can be modified if the viewing editor has the right permissions
 statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58\%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is; is it per filter or for all enabled filters together?
 \end{comment}
 
-\section{Runtime}
+\subsection{Urgent situations}
+
+There are several provisions for urgent situations (which I think should be scrutinised extra carefully since ``urgent situations'' have historically always been an excuse for cuts in civil liberties).
+For instance, generally, every new filter should be tested extensively in logging mode only (without any further actions) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
+As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
+Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
+%TODO move this to the introducing a filter part, where it's mentioned for the first time that filters should be "log only" in the beginning; move verything else to further studies/long list of interesting questions
+In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
+Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
+
+\section{Filters during runtime: the external perspective}
 %external perspective
 \subsection{What happens when a filter gets triggered?}
 
@@ -390,16 +400,6 @@ If such an account is compromised, it loses its edit filter manager rights and g
 //interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
 \end{comment}
 
-
-\section{Urgent situations}
-
-There are several provisions for urgent situations (which I think should be scrutinised extra carefully since ``urgent situations'' have historically always been an excuse for cuts in civil liberties).
-For instance, generally, every new filter should be tested extensively in logging mode only (without any further actions) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
-As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
-Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
-%TODO move this to the introducing a filter part, where it's mentioned for the first time that filters should be "log only" in the beginning; move verything else to further studies/long list of interesting questions
-In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
-Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
 
 \section{Edit filters' role in the quality control frame}
 \subsection{Alternatives}
