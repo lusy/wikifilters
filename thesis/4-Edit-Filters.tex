@@ -209,7 +209,12 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
 Probably it's simply admins who can modify the filters there.
 \end{comment}
 
-%\subsection{Modifying a filter}
+\subsection{Modifying a filter}
+% I may have found smth for theis subsection
+It is not uncommon, that the action(s) a particular filter triggers change over time.
+As of the guidelines for introducing new filters, every filter should be enabled in ``log only'' mode at the beginning.
+After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
+Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
 
 \begin{comment}
 this subsection used to describe a filter's detailed page; I moved all of it to "example of an edit filter". Not sure whether there is some significant information that by all means has to be included in this section in particular.
@@ -226,14 +231,14 @@ In ``urgent situations'' however (how are these defined? who determines they are
 Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
 
 \section{Filters during runtime: the external perspective}
-%external perspective
 \subsection{What happens when a filter gets triggered?}
 
 There are several actions by editors that may trigger an edit filter.
-Editing is the most common of them, but there are also filters targetting account creation, deletions, moving pages or uploading content. %TODO src? other than entries from the abuse_filter_log table?
+Editing is the most common of them, but there are also filters targetting account creation, deletions, moving pages or uploading content. %TODO src? other than entries from the abuse_filter_log table? see also AbuseFilter MediaWiki Extension section
+% bzw think about how much of this is a unnecessary repetition and get rid of it
 
 When an edit filter's regex pattern matches an editor's action, an entry is created in the \emph{abuse\_filter\_log} table and an additional action (or actions) may be invoked.
-The documentation of the Abuse Filter extension provides us a complete list of the possible edit filter actions~\cite{Mediawiki:AbuseFilterActions}:
+The documentation of the AbuseFilter extension provides us a complete list of the possible edit filter actions~\cite{Mediawiki:AbuseFilterActions}:
 \begin{itemize}
     \item Logging: ``All filter matches are logged in the abuse log. This cannot be turned off.''
     \item Warning: ``The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.'' A link to the false positives page~\cite{Wikipedia:EditFilterFalsePositives} is also provided.
@@ -248,12 +253,7 @@ The documentation of the Abuse Filter extension provides us a complete list of t
     \item Tagging: ``The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.''
 \end{itemize}
 
-It is not uncommon, that the action(s) a particular filter triggers change over time.
-As of the guidelines for introducing new filters, every filter should be enabled in ``log only'' mode at the beginning.
-When it was deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
-Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
-
-Range-blocking, blocking, removing from priviledged groups and revoking autopromoted groups haven't been used on the EN Wikipedia for the last year. %TODO: why?
+Range-blocking, blocking, removing from priviledged groups and revoking autopromoted groups haven't been used on the EN Wikipedia in recent years. %TODO: why? look for talk page archives around the last time they were used. Maybe there was a particular incident
 To be more precise, the last time a filter action other than ``log only'', ``tag'', ``warn'' or ``disallow'' was triggered on the EN Wikipedia was in 2012.
 There are two distinct filter actions in the \emph{abuse\_filter\_log} table: ``blockautopromote'' and ``aftv5flagabuse''.
 No idea what exactly they mean.
@@ -276,20 +276,6 @@ Edit filters should only be set to disallow to prevent edits that substantially 
 - "throttle"
 - \url{https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11} mentions "block" as a possible action in the legend
 
-9 different actions possible according to the extension docu (are users whose edits tripped the filters notified for all of them?)
-\url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Actions}
-    2.1 Logging: All filter matches are logged in the abuse log. This cannot be turned off.  (so, every filter trigger is always being logged?)
-    2.2 Warning: The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.
-    2.3 Throttling: The filter will only match if a rate limit is tripped. You can specify the number of actions to allow, the period of time in which these actions must occur, and how those actions are grouped.
-
-The groupings are which sets of people should have aggregate (shared) throttles. That is, if you type "user", then the same user must match the filter a certain number of times in a certain period of time. You may also combine groups with commas to specify that throttle matches sharing all criteria will be aggregated. For example, using "ip,page", X filter matches in Y seconds from the same IP address to the same page will be required to trip the remainder of the actions.
-(So this is something like, do this and that if the user has always received X warnings?)
-    2.4 Disallowing: Actions matching the filter will be prevented, and a descriptive error message will be shown.
-    2.5 Revoking auto-promoted groups: Actions matching the filter will cause the user in question to be barred from receiving any extra groups from \$wgAutopromote for a period ranging from 3 to 7 days (random). This can be restored at the debug tools page.
-    2.6 Blocking: Users matching the filter will be blocked indefinitely, with a descriptive block summary indicating the rule that was triggered.
-    2.7 Removing from privileged groups: Users matching the filter will be removed from all privileged groups (sysop, bureaucrat, etc). A descriptive summary will be used, detailing the rule that was triggered.
-    2.8 Range-blocking:Somewhat of a "nuclear option", the entire /16 range from which the rule was triggered will be blocked for 1 week.
-    2.9 Tagging: The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.
 \end{comment}
 
 What happens when an editor triggers an edit filter? Do they notice this at all?
