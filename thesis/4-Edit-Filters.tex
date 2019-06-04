@@ -57,7 +57,7 @@ Both the regex patterns and the possible edit filter actions are observed(syn!) 
 
 For illustration purposes/better understanding, let us have a closer look at what a single edit filter looks like.
 Edit filter with ID 365 is public and currently enabled.
-Its name (``public comment'') reads ``Unusual changes to featured or good content''.
+Its name (``public comments'') reads ``Unusual changes to featured or good content''.
 The regex filter pattern is:
 \begin{verbatim}
 "page_namespace == 0 &
@@ -78,6 +78,11 @@ Note that an edit filter editor can easily change the action of the filter. (Or 
 The filter was last modified on October 23rd 2018.
 All these details can be viewed on the filter's detailed page\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365}}
 or on the screenshot thereof (figure~\ref{fig:filter-details}) that I created for convenience.
+
+Further information the filter detailed page displays is:
+number of filter hits; some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes); comments (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
+links to last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
+and actions to take when the filter matches;
 
 \begin{figure}
 \centering
@@ -147,9 +152,7 @@ Examples of type of edits that are supposed to be targeted:
 %TODO sift again through Archive notes and refine the section
 
 \section{Building a filter: the internal perspective}
-%internal perspective
 \subsection{How is a new filter introduced?}
-//maybe move to governance?
 
 The best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
 According to the page, these steps should be followed:
@@ -166,17 +169,7 @@ Performance/efficiency seem to be fairly important for the edit filter system;
 on multiple occasions, there are notes on recommended order of operations, so that the filter evaluates as resource sparing as possible~\cite{Wikipedia:EditFilterInstructions} or invitations to consider whether an edit filter is the most suitable mechanism for solving a particular issue at all~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterRequested}.
 
 
-\begin{comment}
-    That used to be the intro for the governance/social chapter
-\begin{itemize}
-    \item who can propose a filter?
-    \item who can introduce a new filter?
-    \item what happens in case of false positives
-    \item Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
-\end{itemize}
-\end{comment}
-
-%\section{How is a new filter introduced?}
+% Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
 
 Anyone can propose a new edit filter.
 An editor who notices problematic/weird/.. behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
@@ -190,7 +183,6 @@ The Edit Filters Requests page also asks users to go through following checklist
     \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
 \end{itemize}
 
-According to the best practices, any new filter should be announced on the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}} in order for other filter managers and the community to be able to review the filter and voice concerns~\cite{Wikipedia:EditFilter}.
 
 \subsection{Who can edit filters?}
 \label{section:who-can-edit}
@@ -204,21 +196,10 @@ The formal process for requesting the \emph{abusefilter-modify} permission is to
 %TODO who can raise the issue to the noticeboard?
 A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
 
-
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"The assignment of the edit filter manager user right to non-admins is highly restricted. It should only be requested by and given to highly trusted users, when there is a clear and demonstrated need for it."
-    // does the 2. sentence refer to highly trusted users outside of the sysop group, or generally to highly trusted users? (although better everyone in sysop be "highly trusted"!)
-
-Note: only 7 or so (check jupyter nb!) out of the 153 edit filter managers on EN Wiki are not admins! but they do have some other user privileges
-
-"demonstrated knowledge of the extension's syntax and in understanding and crafting regular expressions is absolutely essential"
-
-* Can filter editors introduce each filter they feel like introducing? Or is a community consensus due when a new filter is introduced?
-\end{comment}
-
 A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
-As of March 9, 2019, there are 152 users in the ``edit filter managers'' group (for comparison, as of the same date there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}).
+As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\footnote{\url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers&offset=&limit=250&username=&group=abusefilter&wpsubmit=&wpFormIdentifier=mw-listusers-form}}.
+(For comparison, as of March 9, 2019 there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}.)
+Out of the 154 edit filter managers only 11 are not administrators.
 
 \begin{comment}
 CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
@@ -226,38 +207,12 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
 -- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
 -- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
 Probably it's simply admins who can modify the filters there.
-    If I understood correctly, on EN Wiki it's also mostly admins who have the \emph{abusefilter-modify} permission, although it's far from all of them who have it.
 \end{comment}
 
-\subsection{Modifying a filter}
-
-As pointed out in section~\ref{section:who-can-edit}, editors with the \emph{abusefilter-modify} permission can modify filters.
-They can do so on the detailed page of a filter.
-(For example that is \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61} for filter with ID 61.)
-
-For each filter, a detailed page exists where following information can be viewed (by everybody for public filters and by editors with proper rights for hidden filters):
-filter id; public description; filter hits; some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes); code (conditions) of the filter; notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
-links to last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
-and actions to take when the filter matches;
-%TODO: screenshot on a big screen!
+%\subsection{Modifying a filter}
 
 \begin{comment}
-%TODO not sure whether that's the proper place for the description of a filter details page.
-% and if not whether this subsection should exist at all
-each filter has a designated page: e.g. \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/61}
-where following information can be viewed:
-Filter id; public description; filter hits; statistics; code (conditions); notes (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
-links to: last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
-Actions to take when matched:
-Trigger actions only if the user trips a rate limit
-Trigger these actions after giving the user a warning
-Prevent the user from performing the action in question
-Revoke the user's autoconfirmed status
-Tag the edit in contributions lists and page histories
-
-and the filter can be modified if the viewing editor has the right permissions
-
-statistics are info such as "Of the last 1,728 actions, this filter has matched 10 (0.58\%). On average, its run time is 0.34 ms, and it consumes 3 conditions of the condition limit." // not sure what the condition limit is; is it per filter or for all enabled filters together?
+this subsection used to describe a filter's detailed page; I moved all of it to "example of an edit filter". Not sure whether there is some significant information that by all means has to be included in this section in particular.
 \end{comment}
 
 \subsection{Urgent situations}
