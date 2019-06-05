@@ -5,7 +5,7 @@
 * filters: BEFORE an edit is published; everything else: AFTER
 * filters: REGEX!
 * die wichtigsten erkenntnisse mehrmals erwähnen: intro, schluss, tralala; nicht dass sie unter gehen weil ich von lautern Bäumen den Wald nicht mehr sehe
-* do bots check also entire article text and not only single edits? as a clever person with malicious intentions I could split my malicious stuff into several edits to make it more difficult to discover
+* do bots check also entire article text and not only single edits? as a clever person with malicious intentions I could split my malicious stuff into several edits to make it more difficult to discover -- unklar. ich hab das gefühl, die sind schon edit-basiert
 
 
 # Papers I still want to read
