@@ -9,24 +9,23 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-There's an inscription in Code 2.0:
-"Code 2.0
-TO WIKIPEDIA, THE ONE SURPRISE THAT TEACHES MORE THAN EVERYTHING HERE." (p.v)~\cite{Lessig2006}
+``Code 2.0 TO WIKIPEDIA, THE ONE SURPRISE THAT TEACHES MORE THAN EVERYTHING HERE.'' reads one of the inscriptions of Lawrence Lessig's ``Code Version 2.0'' (p.v)~\cite{Lessig2006}.
+And although I'm not quite sure what exactly Lessig meant by this regarding the update of his famous book, I readily agree that Wikipedia is important because it teaches us stuff.
+Not only in the literal sense, because it is, well, an encyclopedia.
+Being an open encyclopedia, which has grown to be one of the biggest open collaborative projects in the world, studying its complex governance, community building and algorithmic systems can teach us a lot about other, less open systems.
 
-Comment: Wikipedia is important because it teaches us stuff. We can look at it and see things and maybe infer how other, less open systems work.
+%TODO verify all these claims and numbers
+Since its conception in 2001, when nobody believed it was ever going to be a serious encyclopedia, the project has grown steadily.
+At the latest, with the exponential surge in the numbers of users and edits around 2006, the community began realising that they needed a more automated quality control process.
+The same year, the first anti vandal bots were introduced, followed by semi-automated tools such as Twinkle (in 2007) and Huggle (in the beginnings of 2008).
+In 2009, yet another mechanism was introduced(syn)/announced/implemented.
+Its core developer, Andrew Garrett, known on Wikipedia as User:Werdna, has called it ``abuse filter'', and according to EN Wikipedia's newspaper, The Signpost, its purpose was to ``allow[] all edits to be checked against automatic filters and heuristics, which can be set up to look for patterns of vandalism including page move vandalism and juvenile-type vandalism, as well as common newbie mistakes''.
+%TODO decide whether to cite the Signpost here already, since it appears again in chapter4
 
-%\section{Genesis}
 \begin{comment}
 Don't make it a separate subsection, but use it to introduce the topic with a story, the way Geiger does.
 If the genesis doesn't make sense here, move it to Edit filters
 \end{comment}
-
-% When and why were Wikipedia edit filters introduced?
-
-Edit filters were first introduced on the English Wikipedia in 2009 under the name ``abuse filters''.
-Their clear purpose was to cope with the rising(syn) amount of vandalism as well as ``common newbie mistakes'' the encyclopedia faced~\cite{Signpost2009}.
-
-% TODO: when and why was the extension renamed
 
 %************************************************************************
 \section{Subject and Context}
@@ -38,10 +37,15 @@ Their clear purpose was to cope with the rising(syn) amount of vandalism as well
 \end{itemize}
 %************************************************************************
 
-The present work can be embedded in the context of (algorithmic) quality-control mechanisms on Wikipedia.
-There is a whole ecosystem (syn?) of actors struggling to maintain the anyone-can-edit encyclopedia as good^^ and free of malicious, spam and ? content as possible.
+The aim of the present work is to provide a comprehensive overview of Wikipedia's abuse filter extension, which was later renamed so that its end user facing part is nowadays known as Edit Filter.
+
+
+This inquiry can be embedded in the context of (algorithmic) quality-control mechanisms on Wikipedia.
+There is a whole ecosystem (syn?) of actors struggling to maintain the anyone-can-edit encyclopedia as good^^ and free of malicious, spam and ?(hoax?) content as possible.
 We want to be able to better understand the role of edit filters in the vandal fighting network of humans, bots, semi-automated tools, and the machine learning framework ORES.
-After all, edit filters were introduced to Wikipedia at a time when bots and semi-automated tools already existed and were involved in quality control: in 2009 (compare timeline, Twinkle's page is from Jan 2007, Huggle's from beginning of 2008; bot's have been around longer, but first records, at least by me so far, of vandal fighting bots come from 2006 ). %TODO: when was the other stuff introduced
+%After all, edit filters were introduced to Wikipedia at a time when bots and semi-automated tools already existed and were involved in quality control: in 2009 (compare timeline, Twinkle's page is from Jan 2007, Huggle's from beginning of 2008; bot's have been around longer, but first records, at least by me so far, of vandal fighting bots come from 2006 ). %TODO: when was the other stuff introduced
+Why were filters introduced, when other mechanisms existed already?
+
 Moreover, there seems to be a gap in the scientific literature on the subject.
 
 \section{Aims of this work}
@@ -85,8 +89,8 @@ Questions from Confluence
 The remaining part of this thesis is organised in the following manner:
 Chapter~\ref{chap:background} situates the topic in the academic discourse and examines some key notions relevant for the subsequent analysis.
 In chapter~\ref{chap:methods}, I discuss scientific methods that helped me to accomplish the analysis (syn!).
-Next, I describe the edit filter mechanism in general: how and why it was conceived, how it looks like/works from from a technical and a social governance perspective.
-A detailed analysis (syn!) of the current state of all implemented edit filters on English Wikipedia follows (syn) is presented in chapter~\ref{chap:overview-en-wiki}.
+Next, I describe the edit filter mechanism in general: how and why it was conceived, how it works and how it can be embedded in Wikipedia's quality control frame.
+A detailed analysis (syn!) of the current state of all implemented edit filters on English Wikipedia is presented in chapter~\ref{chap:overview-en-wiki}.
 We discuss the findings and the limitations of the inquiry in chapter~\ref{chap:discussion}.
 Finally, the analysis (syn!) is wrapped up in the conclusion where also directions for possible future investigations are given.
 
