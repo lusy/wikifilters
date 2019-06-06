@@ -4,12 +4,22 @@
 
 ---
 
-* Signpost
+* Signpost/Intro
 * overview over the presi so people can follow more easily
 * Motivation: why do we want to study this: confluence questions
 * funnel diagramm without filters: explain state of scientific literature on it
 * key findings (high level)
 * data analysis: what of this is really relevant
+
+---
+
+## Overview
+
+* Motivation
+* State of the literature/Literature: What does the scientific community know
+* What is an edit filter and why was it introduced?/Documentation: What is an edit filter and why was it introduced according to Wikipedia's/MediaWiki pages?
+* Data Analysis: Edit filters on English Wikipedia
+* Open questions
 
 ---
 
@@ -27,6 +37,10 @@ What task(s) do they take care of?
 How are they different from other existing mechanisms?
 What is their role in Wikipedia's complex socio-technical system?
 
+  Q1 We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
+  Q2 Which type of tasks do these filters take over in comparison to the other mechanisms? How these tasks evolve over time (are they changes in the type, number, etc.)?
+  Q3 Since filters are classical rule-based systems, what are suitable areas of application for such rule-based system in contrast to the other ML-based approaches.
+
 ---
 
 > "The edit filter is a tool that allows editors in the *edit filter manager* group to set controls mainly to address common patterns of harmful editing."
@@ -38,13 +52,6 @@ What is their role in Wikipedia's complex socio-technical system?
 <img src="images/funnel-diagramm-no-filters.JPG" alt="Funnel diagramm of all vandal fighting mechanisms (no filters)">
 
 One thing is ostentatiously missing: edit filters
-
----
-
-# Data
-
-* wikipedia's pages (policies, guidelines, etc.)
-* abuse filter extension tables
 
 ---
 
@@ -184,7 +191,6 @@ Active Hidden Filters Actions
 ---
 
 * Precision/Recall: False Positives? were filters shut down, bc they matched more False positives than they had real value?
-* Do filters work the desired way/help for a smoother Wikipedia service or is it a lot of work to maintain them and the usefulness is questionable?
 * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
 
 ---
