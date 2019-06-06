@@ -1,7 +1,7 @@
 * How have edit filters's tasks evolved over time? (abuse_filter_history table)
 
 * What are the differences between how filters are governed on EN Wikipedia compared to other language versions?
-* Are there filters targetting harassment?
+* Are there filters targetting harassment?: look into https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard/Archive_2#Exploring_how_the_Edit_filter_can_be_used_to_combat_harassment
 * Ethnographic analysis (e.g. IVs with edit filter managers/admins/users whose edits have been disallowed would be really interesting)
 * What is to be learned from studying the regex patterns in more detail?
 * what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
@@ -15,3 +15,4 @@
 * What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
 * GT is good for tackling controversial questions: e.g. are filters with disallow action a too severe interference with the editing process that has way too much negative consequences? (e.g. driving away new comers?)
 * What are the urgent situations in which edit filter managers are given the freedom to act as they see fit and ignore best practices of filter adoption? Who determines they are urgent?
+* is there a qualitative difference between complaints of bots and complaints of filters?

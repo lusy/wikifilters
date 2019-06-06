@@ -1,5 +1,6 @@
 # What is important??
 
+* filters allow for regex based handling of edits and other editors' actions
 * filters check every edit at its publication; they are triggered *before* an edit is even published; effect is immediate
 * bots and semi-automated tools review edits *after* their publication. it takes time (however short it might be) till the edit is examined
   -> Q: Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
