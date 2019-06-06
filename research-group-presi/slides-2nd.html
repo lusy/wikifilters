@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="HCC Research Group Meeting June 2019">
+  <title>You shall not publish: Edit filters on EN Wikipedia</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">You shall not publish: Edit filters on EN Wikipedia</h1>
+  <p class="author">HCC Research Group Meeting June 2019</p>
+  <p class="date">Lusy</p>
+</section>
+
+<section class="slide level1">
+
+<p><img src="images/editors-rise-decline.png" height="500" alt="Rise and decline in numbers of editors on EN Wikipedia"> <small>Source: Halfaker et al. &quot;The Rise and Decline of an Open Collaboration System: How Wikipedia’s reaction to popularity is causing its decline&quot;</small></p>
+</section>
+<section class="slide level1">
+
+<h2 id="overview">Overview</h2>
+<ul>
+<li class="fragment">Motivation</li>
+<li class="fragment">State of the literature/Literature: What does the scientific community know</li>
+<li class="fragment">Documentation: What is an edit filter and why was it introduced according to Wikipedia's/MediaWiki pages?</li>
+<li class="fragment">Data Analysis: Edit filters on English Wikipedia</li>
+<li class="fragment">Open questions</li>
+</ul>
+</section>
+<section id="motivation" class="slide level1">
+<h1>Motivation</h1>
+<ul>
+<li class="fragment">What is the role of filters among existing (algorithmic) quality-control mechanisms (bots, semi-automated tools, ORES, humans)? Which type of tasks do filters take over?</li>
+<li class="fragment">How have these tasks evolved over time (are they changes in the type, number, etc.)?</li>
+<li class="fragment">What are suitable areas of application for rule-based systems such as filters in contrast to the other ML-based approaches?</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="state-of-the-literature">State of the Literature</h2>
+<p><img src="images/funnel-diagramm-no-filters.JPG" alt="Funnel diagramm of all vandal fighting mechanisms (no filters)"></p>
+<ul>
+<li class="fragment">One thing is ostentatiously missing: edit filters</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="what-is-an-edit-filter">What is an edit filter</h2>
+<ul>
+<li class="fragment">MediaWiki extension</li>
+<li class="fragment">regex based filtering of edits and other actions (e.g. account creation, page deletion or move, upload)</li>
+<li class="fragment">triggers <em>before</em> an edit is published</li>
+<li class="fragment">different actions can be defined</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="motivations-for-its-introduction">Motivations for its introduction</h2>
+<ul>
+<li class="fragment">disallow certain types of obvious pervasive (perhaps automated) vandalism directly</li>
+<li class="fragment">takes more than a single click to revert</li>
+<li class="fragment">human editors can use their time more productively elsewhere</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="edit-filters-in-the-quality-control-mechanisms-frame">Edit filters in the quality control mechanisms frame</h2>
+<ul>
+<li class="fragment">the question of infrastructure</li>
+<li class="fragment">guidelines say: for in-depth checks and problems with a particular article bots are better (don't use up resources)</li>
+<li class="fragment">they were introduced before the ml tools came around.</li>
+<li class="fragment">they probably work, so no one sees a reason to shut them down</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<ul>
+<li class="fragment">hypothesis: Wikipedia is a diy project driven by volunteers; they work on whatever they like to work</li>
+<li class="fragment">hypothesis: it is easier to understand what's going on than it is with a ML tool. people like to use them for simplicity and transparency reasons</li>
+<li class="fragment">hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires &quot;only&quot; understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.</li>
+</ul>
+</section>
+<section id="data-analysis-edit-filters-on-en-wikipedia" class="slide level1">
+<h1>Data Analysis: Edit Filters on EN Wikipedia</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="what-do-most-active-filters-do">What do most active filters do?</h2>
+<pre><code>135  repeating characters &amp; tag, warn
+30   &quot;large deletion from article by new editors&quot; &amp; tag, warn
+61   &quot;new user removing references&quot; &amp; tag
+18   &quot;test type edits from clicking on edit bar&quot; &amp; deleted in Feb 2012
+3    &quot;new user blanking articles&quot; &amp; tag, warn</code></pre>
+</section>
+<section class="slide level1">
+
+<h2 id="descriptive-statistics">Descriptive statistics</h2>
+<p><img src="images/general_stats.png" class="left" alt="General filter statistics"></p>
+<pre><code>all filters: 954
+public filters: 361
+Active public filters: 110
+disabled (but not deleted) public filters: 35
+deleted public filters: 216
+hidden filters: 593
+active hidden filters: 91
+disabled (but not deleted) hidden filters: 118
+deleted hidden filters: 384</code></pre>
+</section>
+<section class="slide level1">
+
+<p>Number of filter hits per month March 2009-March 2019</p>
+<p><img src="images/number-filter-hits.png" alt="Number of filter hits per month"></p>
+</section>
+<section class="slide level1">
+
+<p>Filters Actions</p>
+<p><img src="images/all-filters-actions.png" alt="Filters Actions of all Filters"></p>
+</section>
+<section class="slide level1">
+
+<p>Active Public Filters Actions</p>
+<p><img src="images/active-public-filters-actions.png" alt="Filters actions of active public filters"></p>
+</section>
+<section class="slide level1">
+
+<p>Active Hidden Filters Actions</p>
+<p><img src="images/active-hidden-filters-actions.png" alt="Filters actions of active hidden filters"></p>
+</section>
+<section class="slide level1">
+
+<h2 id="manual-classification">Manual classification</h2>
+<p><em>vandalism</em>, <em>good faith</em> and <em>maintenance</em></p>
+<ul>
+<li class="fragment">difficult to distinguish</li>
+<li class="fragment">a lot of subcategories</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<p>Vandalism</p>
+<pre><code>id  hits     public comment 
+46  356945   &quot;Poop&quot; vandalism
+365 85470      Unusual changes to featured or good content
+16  2005       Prolific socker I</code></pre>
+</section>
+<section class="slide level1">
+
+<p>Good Faith</p>
+<pre><code>id  hits    public comment 
+180 175939  Large unwikified new article
+98  39401     Creating very short new article</code></pre>
+</section>
+<section class="slide level1">
+
+<p>maintenance</p>
+<pre><code>id  hits  public comment 
+577 1566  VisualEditor bugs: Strange icons
+345 13832   Extraneous formatting from browser extension
+942 1573    Log edits to protected pages</code></pre>
+</section>
+<section id="open-questions" class="slide level1">
+<h1>Open Questions</h1>
+</section>
+<section class="slide level1">
+
+<h2 id="current-limitations">Current Limitations</h2>
+<ul>
+<li class="fragment">Only EN Wikipedia</li>
+<li class="fragment">manual filter classification only conducted by me</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h2 id="bigger-picture-upload-filters">Bigger picture: Upload filters</h2>
+<p><img src="images/Blackout_of_wikipediade_by_Wikimedia_Deutschland_-_March_2019.png" height="500" alt="blackout German Wikipedia March 2019"> <small><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png" class="uri">https://upload.wikimedia.org/wikipedia/commons/c/c5/Blackout_of_wikipedia.de_by_Wikimedia_Deutschland_-_March_2019.png</a></small></p>
+</section>
+<section id="thank-you" class="slide level1">
+<h1>Thank you!</h1>
+<p>These slides are licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.</p>
+<p><img src="images/Cc-by_new_white.svg" alt="by" /> <img src="images/Cc-sa_white.svg" alt="sa" /></p>
+</section>
+<section id="questions-comments-thoughts" class="slide level1">
+<h1>Questions? Comments? Thoughts?</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+
+        ],
+
+        slideNumber: true
+      });
+
+      Reveal.configure({ slideNumber: 'c/t' });
+
+    </script>
+    </body>
+</html>
