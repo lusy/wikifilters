@@ -343,6 +343,44 @@ If such an account is compromised, it loses its edit filter manager rights and g
 
 
 \section{Edit filters' role in the quality control frame}
+
+                     | Filters                          | Bots                          |  Semi-Automated tools   |  ORES
+--------------------------------------------------------------------------------------------------------------------------------------------
+                     |                                  |                               |                         |
+                     | - based on REGEXes               | - rule/ML based               | - rule/ML based         | - ML framework
+properties           | - part of the "software"/        | - "bespoke code": run on      | - heuristics obfusca-   | - can be used by other tools
+                     |   platform (MediaWiki ext)       |   user's infrastructure       |   ted by the interface  | 
+                     | - public filters are directly    | - no requirement for the code |   (but often configura- |
+                     |   visible for everyone           |   to be made public           |   ble)                  |
+                     |   interested                     | - you can relatively easily   |                         |
+                     |                                  |   get all the filters; you    |                         |
+                     |                                  |   easily get all the bots     |                         |
+                     |                                  |                               |                         |
+---------------------|-------------------------------------------------------------------------------------------------------------------------
+                     |                                  |                               |                         | 
+                     | - edit filter managers           | - no special persmissions/    | - *rollback* perm       | - mostly Scoring platform
+                     |  group (EN Wiki)                 |   rights needed               |                         |   team (?)
+Who does this?       |  (abusefilter-modify perm)       | - a bot gets a bot flag       |                         |
+                     |                                  |                               |                         |
+---------------------|-----------------------------------------------------------------------------------------------------------
+                     |                                  |                               |                         |
+                     | - become an edit filter manager  | - get an approval to run the  | - learn the tool        | - understand ML
+What are the hurdles | - you have to *only* understand  |   bot from the BAG            | - install Windows^^     | - formal requirements to 
+to participate       |   REGEXes (relatively simple?    | - programming knowledge       |   (some don't support   |   develop ORES?
+                     |   although relatively fast quite | - understand APIs, ..         |   other OS)             |
+                     |   confusing)                     | - (but there is a lot to      | - get the rollback perm |
+                     |                                  |   understand with all the     |                         |
+                     |                                  |   mechanisms)                 |                         |
+                     |                                  |                               |                         |
+-------------------------------------------------------------------------------------------------------------------------------------
+                     |                                  |                               |                         |
+                     | - censorship infrastructure?     | - "botophobia"                | - gamification          |
+Concerns             | - powerful, can in theory block  |                               |                         |
+                     |   editors based on hidden        |                               |                         |
+                     |   filters                        |                               |                         |
+                     |                                  |                               |                         |
+-----------------------------------------------------------------------------------------------------------------------
+
 \subsection{Alternatives}
 %TODO: where should this go? Already kind of mentioned in the introducing a filter part
 
