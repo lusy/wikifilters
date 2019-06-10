@@ -234,14 +234,15 @@ Here, the filter editor responsible should monitor the filter and the logs in or
 \subsection{What happens when a filter gets triggered?}
 
 There are several actions by editors that may trigger an edit filter.
-Editing is the most common of them, but there are also filters targetting account creation, deletions, moving pages or uploading content. %TODO src? other than entries from the abuse_filter_log table? see also AbuseFilter MediaWiki Extension section
+Editing is the most common of them, but there are also filters targetting account creation, deletions, moving pages or uploading content\footnote{\url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format\#Variables_from_AbuseFilter}}.
+%TODO src as a footnote or a proper ref?
 % bzw think about how much of this is a unnecessary repetition and get rid of it
 
 When an edit filter's regex pattern matches an editor's action, an entry is created in the \emph{abuse\_filter\_log} table and an additional action (or actions) may be invoked.
 The documentation of the AbuseFilter extension provides us a complete list of the possible edit filter actions~\cite{Mediawiki:AbuseFilterActions}:
 \begin{itemize}
     \item Logging: ``All filter matches are logged in the abuse log. This cannot be turned off.''
-    \item Warning: ``The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.'' A link to the false positives page~\cite{Wikipedia:EditFilterFalsePositives} is also provided.
+    \item Warning: ``The user is warned that their edit may not be appreciated, and is given the opportunity to submit it again. You may specify a specific system message containing the warning to display.'' A link to the false positives page~\cite{Wikipedia:EditFilterFalsePositives} is also provided. (the editor who tripped the filter is provided with the opportunity to revise their edit and re-submit it)
     \item Throttling: ``The filter will only match if a rate limit is tripped. You can specify the number of actions to allow, the period of time in which these actions must occur, and how those actions are grouped.
          The groupings are which sets of people should have aggregate (shared) throttles. That is, if you type "user", then the same user must match the filter a certain number of times in a certain period of time. You may also combine groups with commas to specify that throttle matches sharing all criteria will be aggregated. For example, using "ip,page", X filter matches in Y seconds from the same IP address to the same page will be required to trip the remainder of the actions.''
          (So this is something like, do this and that if a user edits a particular page X times for a Y period of time. In this sense: throttling always has to be paired with another action?)
@@ -253,32 +254,16 @@ The documentation of the AbuseFilter extension provides us a complete list of th
     \item Tagging: ``The edit or change can be 'tagged' with a particular tag, which will be shown on Recent Changes, contributions, logs, new pages, history, and everywhere else. These tags are styleable, so you can have items with a certain tag appear in a different colour or similar.''
 \end{itemize}
 
-Range-blocking, blocking, removing from priviledged groups and revoking autopromoted groups haven't been used on the EN Wikipedia in recent years. %TODO: why? look for talk page archives around the last time they were used. Maybe there was a particular incident
-To be more precise, the last time a filter action other than ``log only'', ``tag'', ``warn'' or ``disallow'' was triggered on the EN Wikipedia was in 2012.
+Range-blocking, blocking, removing from priviledged groups and revoking autopromoted groups haven't been used on the EN Wikipedia in recent years. %TODO: why? look for talk page archives around the last time they were used. Maybe there was a particular incident; nothing concerning autopromote in the EdiFilter talk page around 2012
+To be more precise, the last time a filter action other than ``log only'', ``tag'', ``warn'' or ``disallow'' was triggered on the EN Wikipedia was in 2012. %TODO Refer to data analysis
 There are two distinct filter actions in the \emph{abuse\_filter\_log} table: ``blockautopromote'' and ``aftv5flagabuse''.
+% Following 4 filters have blockautopromote as an action (note that this could have changed since 2012!): 115, 267, 334, 21;
 No idea what exactly they mean.
 
 Guidelines specifically call for careful use of ``disallow''.
 Only severe cases for which ``substantially all good-faith editors would agree are undesirable'' or specific cases for which consensus has been reached should be disallowed~\cite{Wikipedia:EditFilter}.
 
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-What do filters do?/What actions they trigger (vgl DEF) in order of graveness:
-- disallow -- editor is informed, if their edit is being disallowed and offered the option to report a false positive;
-  "It is also possible to have a user's autoconfirmed status revoked if a user trips the filter."
-  caution to use it seldomly and after a thorough discussion on what is a undesirable edit
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-Edit filters should only be set to disallow to prevent edits that substantially all good-faith editors would agree are undesirable, or where a clear consensus has been reached that a specific type of edit should not be allowed. Any doubts regarding setting a filter to disallow should be discussed with other edit filter managers.
-- warn -- editor is informed that their edit may be problematic and given the option to save or abort the edit (and in report the false positive trigerred by the filter)
-- add a tag - "edit is tagged for review by patrollers." -- TODO who are patrollers? are there some in lang versions other than EN?
-  "Patrols are a specialized type of WikiProject used in the English Wikipedia to watch over a class of pages and take any appropriate actions. Most patrol actions are performed by individual Wikipedians, but some are performed by bots—computer programs or preprogrammed scripts that make automated edits without a need for real time human decision-making. " https://en.wikipedia.org/wiki/Wikipedia:Patrols
-- log the edit - "In this case, the edit is merely added to the AbuseLog. When testing new filters, this is the suggested setting to use."
-- "throttle"
-- \url{https://tools.wmflabs.org/ptwikis/Filters:enwiki::102&11:102&11} mentions "block" as a possible action in the legend
-
-\end{comment}
-
-What happens when an editor triggers an edit filter? Do they notice this at all?
+\subsection{What happens when an editor triggers an edit filter? Do they notice this at all?}
 
 As described in the previous section, a variety of different actions may occur when a filter gets tripped.
 If a filter is set to ``warn'' or ``disallow'', the editor is notified that they hit a filter by a warning message (see~\ref{fig:screenshot-warn-disallow}).
@@ -289,6 +274,7 @@ or, complain on the FalsePositives page and publish the change anyway in case of
 On the other hand, when the filter action is set to "tag" or "log" only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
 Tagged edits are marked as such in the page's revision history (see~\ref{fig:tags-in-history})
 and all edits that trigger an edit filter are listed in the AbuseLog (\url{https://en.wikipedia.org/wiki/Special:AbuseLog}) (see~\ref{fig:screenshot-abuse-log}).
+%TODO How about throttling
 
 \begin{figure}
 \centering
