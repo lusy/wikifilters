@@ -330,42 +330,63 @@ If such an account is compromised, it loses its edit filter manager rights and g
 
 \section{Edit filters' role in the quality control frame}
 
+Let us review in this section what we have learnt so far and how edit filters fit in Wikipedia's quality control ecosystem.
+%TODO: explain table with text
+
+So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-with-filters.JPG}
+  \caption{Edit filters' role in the quality control frame}~\label{fig:funnel-with-filters}
+\end{figure}
+
+\begin{comment}
+\begin{longtable}{ l | c | c | c | c }
+    & Filters & Bots & Semi-Automated tools & ORES \\
+\end{longtable}
+\end{comment}
+
+\begin{verbatim}
                      | Filters                          | Bots                          |  Semi-Automated tools   |  ORES
 --------------------------------------------------------------------------------------------------------------------------------------------
                      |                                  |                               |                         |
                      | - based on REGEXes               | - rule/ML based               | - rule/ML based         | - ML framework
-properties           | - part of the "software"/        | - "bespoke code": run on      | - heuristics obfusca-   | - can be used by other tools
-                     |   platform (MediaWiki ext)       |   user's infrastructure       |   ted by the interface  | 
-                     | - public filters are directly    | - no requirement for the code |   (but often configura- |
+properties           | - part of the "software"/        | - "bespoke code": run on      | - heuristics obfusca-   | - not used directly, but can
+                     |   platform (MediaWiki ext)       |   user's infrastructure       |   ted by the interface  |   instead be incorporated in
+                     | - public filters are directly    | - no requirement for the code |   (but often configura- |   other tools
                      |   visible for everyone           |   to be made public           |   ble)                  |
-                     |   interested                     | - you can relatively easily   |                         |
-                     |                                  |   get all the filters; you    |                         |
-                     |                                  |   easily get all the bots     |                         |
+                     |   interested                     | - you can relatively easily   | - mostly based on a     |
+                     | - trigger *before* an edit is    |   get all the filters; you    |   centralised queue     |
+                     |   published                      |   cannot easily get all bots  | - trigger after an edit |
+                     |                                  | - trigger after an edit is    |   is published          |
+                     |                                  |   published                   |                         |
                      |                                  |                               |                         |
----------------------|-------------------------------------------------------------------------------------------------------------------------
-                     |                                  |                               |                         | 
+---------------------|------------------------------------------------------------------------------------------------------------------------
+                     |                                  |                               |                         |
                      | - edit filter managers           | - no special persmissions/    | - *rollback* perm       | - mostly Scoring platform
                      |  group (EN Wiki)                 |   rights needed               |                         |   team (?)
 Who does this?       |  (abusefilter-modify perm)       | - a bot gets a bot flag       |                         |
                      |                                  |                               |                         |
----------------------|-----------------------------------------------------------------------------------------------------------
+---------------------|------------------------------------------------------------------------------------------------------------------------
                      |                                  |                               |                         |
                      | - become an edit filter manager  | - get an approval to run the  | - learn the tool        | - understand ML
-What are the hurdles | - you have to *only* understand  |   bot from the BAG            | - install Windows^^     | - formal requirements to 
+What are the hurdles | - you have to *only* understand  |   bot from the BAG            | - install Windows^^     | - formal requirements to
 to participate       |   REGEXes (relatively simple?    | - programming knowledge       |   (some don't support   |   develop ORES?
                      |   although relatively fast quite | - understand APIs, ..         |   other OS)             |
                      |   confusing)                     | - (but there is a lot to      | - get the rollback perm |
                      |                                  |   understand with all the     |                         |
                      |                                  |   mechanisms)                 |                         |
                      |                                  |                               |                         |
--------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
                      |                                  |                               |                         |
-                     | - censorship infrastructure?     | - "botophobia"                | - gamification          |
-Concerns             | - powerful, can in theory block  |                               |                         |
+                     | - censorship infrastructure?     | - "botophobia"                | - gamification          | - general ML concerns:
+Concerns             | - powerful, can in theory block  |                               |                         |   hard to understand
                      |   editors based on hidden        |                               |                         |
                      |   filters                        |                               |                         |
                      |                                  |                               |                         |
------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+\end{verbatim}
 
 \subsection{Alternatives}
 %TODO: where should this go? Already kind of mentioned in the introducing a filter part
