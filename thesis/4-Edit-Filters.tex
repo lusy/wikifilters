@@ -388,29 +388,26 @@ Concerns             | - powerful, can in theory block  |                       
 ------------------------------------------------------------------------------------------------------------------------------------------------
 \end{verbatim}
 
-\subsection{Alternatives}
-%TODO: where should this go? Already kind of mentioned in the introducing a filter part
+\subsection{Alternatives to Edit Filters}
 
-Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is signaled to edit filter managers and editors proposing new filters.
-%TODO: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
-"Each filter takes time to run, making editing (and to some extent other things) slightly slower. The time is only a few milliseconds per filter, but with enough filters that adds up. When the system is near its limit, adding a new filter may require removing another filter in order to keep the system within its limits."
-\end{comment}
+Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is offered to edit filter managers and editors proposing new filters.
 For example, there is the page protection mechanism that addresses problems on a single page.
 Also, title and spam blacklists exist and these might be the way to handle problems with page titles or link spam~\cite{Wikipedia:EditFilter}.
+Moreover, it is adviced to run in-depth checks (for single articles) separately, e.g. by using bots~\cite{Wikipedia:EditFilterRequested}.
 
-%************************************************************************
 
 \subsection{Collaboration with bots (and semi-automated tools)}
 
-"There is a bot reporting users tripping certain filters at WP:AIV and WP:UAA; you can specify the filters here."
-\url{https://en.wikipedia.org/wiki/User:DatBot/filters}
+So far we have juxtaposed the single quality control mechanisms and compared them separetly.
+It is however worth mentioning that they not only operate alongside each other but also cooperate on occasions.
+%TODO see Geiger's paper (banning of a vandal?) where the process of tracing the same malicious editor throughout Wikipedia and reverting their eidts with various tools (and issuing them warnings) leads to the (temporary) block of the editor
 
-* consider collaborations filters/bots (e.g. MrZ Bot which puts editors found on the abuse log often on the AIV noticeboard.) are there further exampled for this kind of collaborations?
-
-\url{https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
+For instance, DatBot~\cite{Wikipedia:DatBot} monitors the abuse log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}}
+and reports users tripping certain filters to WP:AIV (Administrator intervention against vandalism)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism}} and WP:UAA (usernames for administrator attention)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Usernames_for_administrator_attention}}.
+It is the successor of Mr.Z-bot\footnote{\url{https://en.wikipedia.org/wiki/User:Mr.Z-bot}}.
+which used to report users from the abuse log to WP:AIV, but has been inactive since 2016 and therefore recently deactivated.
+%\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
+%TODO are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter"
 
 Apparently, Twinkle at least has the possibility of using heuristics from the abuse filter log for its queues.
 %TODO check. how about other tools
@@ -420,6 +417,8 @@ Apparently, Twinkle at least has the possibility of using heuristics from the ab
 \subsection{TOR}
 (Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
 \end{comment}
+
+%************************************************************************
 
 \section{Fazit}
 %Conclusion, resume, bottom line

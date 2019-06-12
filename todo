@@ -26,6 +26,9 @@ for fun
 
 # Next steps
 
+* are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter"
+* consider adding permalinks with exact revision ID as sources!
+* https://en.wikipedia.org/wiki/Category:Wikipedia_bot_operators
 * an idea for the presi/written text: begin and end every part (section/paragraph) with a question: what question do I want to answer here? what question is still open?
 * How many of the edit filter managers also run bots. How do they decide in which case to implement a bot and in which a filter?
 * Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
