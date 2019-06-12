@@ -410,7 +410,12 @@ which used to report users from the abuse log to WP:AIV, but has been inactive s
 %TODO are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter"
 
 Apparently, Twinkle at least has the possibility of using heuristics from the abuse filter log for its queues.
-%TODO check. how about other tools
+% is that so? the only place I can find abuse filters mentioned with Twinkle is in the source code: https://github.com/azatoth/twinkle/blob/master/morebits.js#L2636; and I'm not quite sure what this part of the code does.
+\begin{comment}
+%TODO check other tools
+
+So, Huggle let the user define their own queue, but only along predefined parameters. So it's not really possible right now to hook it up to the AbuseLog
+\end{comment}
 
 \begin{comment}
     Not sure where this fits in
