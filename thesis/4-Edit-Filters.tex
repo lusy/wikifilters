@@ -428,22 +428,27 @@ So, Huggle let the user define their own queue, but only along predefined parame
 \section{Fazit}
 %Conclusion, resume, bottom line
 
+In short, in this chapter we found/worked out following salient characteristics of edit filters: ....
+Why does this system continue to exist in times of fancier (syn!) machine learning based tools?
+
+
 maybe it's a historical phenomenon (in many regards):
 * perhaps there were differences that are not essential anymore, such as:
   * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
   * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
 * perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
 * perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
-
-%TODO maybe put here the comparison table I've started as a feedback from the status presentation
+* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
 
 Question:
-Oftentimes edit filter managers are also bot operators; how would they decide when to implement an filter and when a bot?
+Oftentimes edit filter managers are also bot operators; how would they decide when to implement a filter and when a bot?
+%TODO: ask people! (on IRC?)
 
 \begin{comment}
 \url{http://www.aaronsw.com/weblog/whorunswikipedia}
 "But what’s less well-known is that it’s also the site that anyone can run. The vandals aren’t stopped because someone is in charge of stopping them; it was simply something people started doing. And it’s not just vandalism: a “welcoming committee” says hi to every new user, a “cleanup taskforce” goes around doing factchecking. The site’s rules are made by rough consensus. Even the servers are largely run this way — a group of volunteer sysadmins hang out on IRC, keeping an eye on things. Until quite recently, the Foundation that supposedly runs Wikipedia had no actual employees.
 This is so unusual, we don’t even have a word for it. It’s tempting to say “democracy”, but that’s woefully inadequate. Wikipedia doesn’t hold a vote and elect someone to be in charge of vandal-fighting. Indeed, “Wikipedia” doesn’t do anything at all. Someone simply sees that there are vandals to be fought and steps up to do the job."
+//yeah, I'd call it "do-ocracy"
 
 \end{comment}
 
