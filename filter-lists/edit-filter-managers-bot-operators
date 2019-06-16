@@ -160,6 +160,32 @@ You can use this bot yourself by browsing the history of any page, and clicking 
 Under the hood, Cyberbot has an immense, and ever growing, database, where each URL is saved along with details with, and archive snapshots, either queried from the Wayback Machine, or collected elsewhere on Wikipedia. On top of that, the bot is highly customizable to suit the wiki's needs. Several options can be customized, such as which sources to touch, which pages to scan, and whether or not to scan live links and act on that information. IABot is still in ongoing development, to support additional wikis, but is complete for the English Wikipedia.
     Vandalism related: no
 
+----------------------------------
+
+User: Dragons flight https://en.wikipedia.org/wiki/User:Dragons_flight
+DFBot https://en.wikipedia.org/wiki/User:DFBot
+    Tasks:
+    It does simple things like summarize RFA. Dragons flight 09:44, 18 December 2005 (UTC)
+    Update: I have set out on a rather ambititous project to generate summaries of WP:AFD. Dragons flight 07:27, 8 January 2006 (UTC)
+    Update 2: And now there is the category tracker too.
+    Vandalism related: no
+
+----------------------------------
+
+User: Drilnoth https://en.wikipedia.org/wiki/User:Drilnoth
+Seems to at least historically have been a bot operator. User has barnstars for Drilbot awarded on their user page.
+However, no User:Drilbot page exists today.
+
+----------------------------------
+
+User: Galobtter https://en.wikipedia.org/wiki/User:Galobtter
+Galobot https://en.wikipedia.org/wiki/User:Galobot
+    Tasks:
+    linterrorfixer 	here 	1 	 Completed 	Fix lint (html formatting) errors of the kind Special:LintErrors/multiple-unclosed-formatting-tags for <tt>, <s>, <u>, <b>, <i>, <code>, and <strike>. ~6000 edits done
+    articlesbylintcount 	here 	Not needed 	clock Continuous 	Update Articles by Lint Errors every three days at 12:30 (UTC)
+    brokenfilelinknotifier 	here 	2 	 Withdrawn 	Message users who add links to non-existent files in articles
+    htmlclassreplacer 	here 	3 	 Completed 	Replace uses of "letterhead" class with template
+    Vandalism related: no
 
 ----------------------------------
 
@@ -215,9 +241,58 @@ see User:cyberpower678 for https://en.wikipedia.org/wiki/User:InternetArchiveBot
 
 ------------------------------------------
 
+User: Kingpin13 https://en.wikipedia.org/wiki/User:Kingpin13
+https://en.wikipedia.org/wiki/User:Kingpin13/bots
+SDPatrolBot https://en.wikipedia.org/wiki/User:SDPatrolBot
+    Tasks:
+    Replaces speedy deletion tags removed by page creator (continuous) ☑ Approved ☑ Active
+    Tags blanked previously CSD-tagged pages for CSD G7 (continuous) ☑ Approved ☑ Active
+    Notifies users of removed PRODs (continuous) ☑ Approved ☒ Inactive
+    Removing speedies from namespaces where they don't apply (continuous) ☑ Approved ☒ Inactive
+    Tags pages under CSD G3 and CSD G10 (continuous) ☑ Approved ☒ Inactive
+    Vandalism related: no
+
+SDPatrolBot II https://en.wikipedia.org/wiki/User:SDPatrolBot_II
+    Tasks:
+    Warns users about CSD nominations of pages they have created (continuous) ☑ Approved ☒ Inactive
+    Vandalism related?: no
+
+KingpinBot https://en.wikipedia.org/wiki/User:KingpinBot
+    Tasks:
+    Adds WikiProject banners to article talk pages with Plugin++ (when requested) ☑ Approved ☑ Active
+    Delivers newsletters/notices to WikiProject members (when requested) ☑ Approved ☑ Active
+    Archives requests for permissions subpages (daily) ☑ Approved ☑ Active
+    Updates User:Jennavecia/AFDBIO (daily) ☑ Approved ☑ Active
+    Removes blocked usernames from CAT:UAA and CAT:UWCOI (daily) ☑ Approved ☑ Active
+    Updates the log of users who have voted on the ArbCom 2011 elections though the secure poll (one-off) ☑ Approved  Done
+    Vandalism related: kind od, it does maintenance tasks for blocked user names
+
+SPPatrolBot https://en.wikipedia.org/wiki/User:SPPatrolBot
+    Tasks:
+    Various logging of actions taken regarding sticky prod (BLPPROD), and warning users about articles tagged under BLPPROD (continuous) ☑ Approved Semi-active
+    Vandalism related?: not really?
+
+ListManBot https://en.wikipedia.org/wiki/User:ListManBot
+    Tasks:
+    Removes admin accounts from Wikipedia:AutoWikiBrowser/CheckPage (AWBCP) (weekly) ☑ Approved ☑ Active
+    Renames users who have had a user name change at AWBCP (weekly) ☑ Approved ☑ Active
+    Sorts listed users at AWBCP alphabetically (weekly) ☑ Approved ☑ Active
+    Removes deleted images from MediaWiki:Bad image list (weekly) ☑ Approved ☑ Active
+    Sorts images listed at bad image list alphabetically (weekly) ☑ Approved ☑ Active
+    Vandalism related?: partially? bad images maintenance
+
+
+------------------------------------------
+
 User: Legoktm https://en.wikipedia.org/wiki/User:Legoktm
 Legobot https://en.wikipedia.org/wiki/User:Legobot
 see User:Chris G, who is operating it as well, according to https://en.wikipedia.org/wiki/User:Chris_G/Bots (where it is listed as "One bot")
+
+------------------------------------------
+
+User: Lourdes https://en.wikipedia.org/wiki/User:Lourdes
+LourdesBot https://en.wikipedia.org/wiki/User:LourdesBot
+    Tasks: forcelinkupdates WP:TFA Title once every day
 
 ------------------------------------------
 
@@ -228,6 +303,17 @@ Lucasbfrbot https://en.wikipedia.org/wiki/User:Lucasbfrbot
     Manual: random AWB cleanup.
     Unsupervised: a User:StatusBot clone. It can be disabled by editing User:Lucasbfrbot/Statusbot (and write "disabled" there). Disabled until the community agrees to let that kind of bot run.
     Vandalism related: no
+
+------------------------------------------
+
+User: Mr. Stradivarius https://en.wikipedia.org/wiki/User:Mr._Stradivarius
+StradBot https://en.wikipedia.org/wiki/User:StradBot
+    Tasks:
+    The following tasks are semi-automatic: Redirect talk pages of subpages of Module:Find sources to Module talk:Find sources to promote centralised discussion.
+    Old tasks:
+    Update deprecated parameters of Module:List. These are tracked in the hidden tracking category Category:List templates with deprecated parameters.
+    Un-substituting {{sockpuppet}} templates that are generating errors from Module:UserLinks. These are tracked in the hidden tracking category Category:UserLinks transclusions with errors.
+    Vandalism related: kind of, tackles sockpuppet templates
 
 ------------------------------------------
 
@@ -260,6 +346,55 @@ MusikBot https://en.wikipedia.org/wiki/User:MusikBot
 
 User: NJA https://en.wikipedia.org/wiki/User:NJA
 Listed as bot operator, but no bots linked on user page
+
+------------------------------------------
+
+User: Plastikspork https://en.wikipedia.org/wiki/User:Plastikspork
+SporkBot https://en.wikipedia.org/wiki/User:SporkBot
+    Tasks:
+    Orphan/substitute templates listed at WP:TFD/H. (templates for discussion)
+    Vandalism related: no
+
+------------------------------------------
+
+User: Rich Farmbrough
+No bots currently listed on the user page though
+
+------------------------------------------
+
+https://en.wikipedia.org/wiki/User:Ritchie333
+Has contributed to Pywikibot, but not actively running any bots at the moment?
+
+------------------------------------------
+
+User: Rschen7754 https://en.wikipedia.org/wiki/User:Rschen7754
+Rschen7754bot https://en.wikipedia.org/wiki/User:Rschen7754bot
+    Tasks: sometimes delivering the WP:USRD newsletter
+    Vandalism related: no
+
+------------------------------------------
+
+User: SQL https://en.wikipedia.org/wiki/User_talk:SQL
+SQLBot https://en.wikipedia.org/wiki/User:SQLBot
+    Tasks: Clear stale AIV reports (6 hours+)
+    Vandalism related: kindof. Does maintenance for AIV
+
+User also plays around with ORES: https://en.wikipedia.org/wiki/User:SQL/AFC-Ores
+
+------------------------------------------
+
+User: Salix alba https://en.wikipedia.org/wiki/User:Salix_alba
+Texvc2LaTeXBot https://en.wikipedia.org/wiki/User:Texvc2LaTeXBot
+    Tasks:
+    fix deprecated latex syntax
+    Vandalism related: no
+
+------------------------------------------
+
+User: Samwalton9 https://en.wikipedia.org/wiki/User:Samwalton9
+SW9Bot https://en.wikipedia.org/wiki/User:SW9Bot
+    "Currently only for testing purposes, no idea if this will ever become an actual functioning bot."
+    Vandalism related: no
 
 ------------------------------------------
 
@@ -330,6 +465,21 @@ ProcseeBot https://en.wikipedia.org/wiki/User:ProcseeBot
 
 ------------------------------------------
 
+User: Tedder https://en.wikipedia.org/wiki/User:Tedder
+TedderBot https://en.wikipedia.org/wiki/User:TedderBot
+    Tasks:
+    ongoing
+        AOP - All Oregon Pages - updates Wikipedia:WikiProject Oregon/Admin and Wikipedia:WikiProject Oregon/Admin2
+        CurrentPruneBot - remove {{current}} templates from stale articles.
+    one-shot
+        TranscludeReplace - update transcluded template names (typically, update one project name to another) REMINDER to Tedder: Contact BRFA before running this, it's a trivial task. ([1])
+        User:TedderBot/AnimeVoiceLink - link anime voices
+    retired
+        NewPageSearch - replace User:AlexNewArtBot ("looks at New Articles and puts relevant articles into the New Articles lists of Portals and Projects")
+    Vandalism related: no
+
+------------------------------------------
+
 User: The Earwig https://en.wikipedia.org/wiki/User:The_Earwig
 BAG member
 EarwigBot https://en.wikipedia.org/wiki/User:EarwigBot
@@ -357,6 +507,20 @@ EarwigBot https://en.wikipedia.org/wiki/User:EarwigBot
 
 ------------------------------------------
 
+User: Thehelpfulone https://en.wikipedia.org/wiki/User:Thehelpfulone
+Thehelpfulbot https://en.wikipedia.org/wiki/User:Thehelpfulbot
+    Tasks:
+    Automated
+        Adding reference sections and tags to articles from this cat where needed. BRFA
+        Simple and regex find/replace tasks for Wikipedia:WikiProject Topic outline and any other articles that need it. BRFA
+        Fixing double redirects BRFA
+        Renaming subcategories in Category:Wikipedia bots from an old name to a new one. BRFA
+    Manual
+        Newsletter delivery when requested. BRFA
+    Vandalism related: no
+
+------------------------------------------
+
 User: This, that and the other https://en.wikipedia.org/wiki/User:This,_that_and_the_other
 TTObot https://en.wikipedia.org/wiki/User:TTObot
     Tasks:
@@ -371,6 +535,12 @@ TTObot https://en.wikipedia.org/wiki/User:TTObot
         Considering a mass TFD, but turned off by the prospect of tagging? Help is at hand!
         If you are planning to make a mass deletion nomination, you can harness the functionality of this bot by asking at This, that and the other's talk page.
     Vandalism related?: not really?
+
+------------------------------------------
+
+User: Versageek https://en.wikipedia.org/wiki/User:Versageek
+XLinkBot https://en.wikipedia.org/wiki/User:XLinkBot
+see User:Beetstra
 
 ------------------------------------------
 
@@ -406,12 +576,6 @@ SocksBot https://en.wikipedia.org/wiki/User:SocksBot
 EyeEightDestroyerBot https://en.wikipedia.org/wiki/User:EyeEightDestroyerBot https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/EyeEightDestroyerBot
     Tasks: As requested on BOTREQ, this is an adminbot that will delete 25000 specific images under CSD F8. (one-time run) (images are available on commons, and thus deleted from Wikipedia)
     Vandalism related?: no
-
-------------------------------------------
-
-User: Versageek https://en.wikipedia.org/wiki/User:Versageek
-XLinkBot https://en.wikipedia.org/wiki/User:XLinkBot
-see User:Beetstra
 
 ------------------------------------------
 
