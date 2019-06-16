@@ -1,0 +1,308 @@
+# Edit filter managers who are also bot operators
+
+
+User: Aaron Schulz https://en.wikipedia.org/wiki/User:Aaron_Schulz
+VoABot https://en.wikipedia.org/wiki/User:VoABot
+    Tasks:
+    A) This bot automatically cleans up WP:RfPP (requests for page protection). It makes it so that each "current" section can have no more than 3 consecutive 6+ hour old fullfilled/denied requests. They are moved to the fullfilled/denied section, which can only have no more than 15 requests unless they are less than 12 hours old. The extra ones are removed. Additionally, entries with certain formatting mistakes are fixed.
+    B) This bot keeps the list of admins JS list variable up to date at User:VoABot/adminlist.js. This avoids slower and more server using HTTP request checks when users get history stats from User:Voice of All/History/monobook.js. This is used by this bot for RfPP clearing and by VoABot II as the whitelist.
+    C) This bot keeps the list of bots JS list variable up to date at User:VoABot/botlist.js. This avoids slower and more server using HTTP request checks when users get history stats from User:Voice of All/History/monobook.js.
+    Vandalism related?: kind of; requests for page protection.. but it's more maintenance on the page than direct
+
+VoABot II https://en.wikipedia.org/wiki/User:VoABot_II
+    Tasks:
+    The purpose of this approved bot is to patrol articles and prevent banned users/trolls with revolving IPs/proxies from disrupting articles too much. This is useful against both long-term steady vandalism of certain pages or vandalbot attacks on many random pages. Semi-protection cannot be used for random page vandalism and it can be needlessly limiting if long-term use is applied to pages just to stop shared IP vandals. Additionally, "throwaway" accounts can make semi-protection end up as full protection.
+
+General shared IP vandalism and spam patrol and page move patrol are also included. Similarly, move-protection is useless against random page move attacks.
+    A) In the case where banned users continue to use sockpuppet accounts/shared IPs/open proxies to add edits clearly rejected by consensus to the point where long term protection is required, VoABot II may be programmed to watch those pages and revert those edits instead. Such edits are considered blacklisted. IP ranges can also be blacklisted from the bot's watchlist. This is reserved only for special cases.
+
+    B) VoABot II patrols recent changes and checks all edits by logged-out AOL, other shared IP users, and IPs that are acting as hosts (open ports). Any detected vandalism is reverted. This is done to avoid IP revolving spammers that hit multiple pages at random.
+
+    C) The move log is patrolled by VoABot II for page moves to inappropriate names by possible vandals. Such page moves will be reverted.
+    Vandalism related?: yes
+
+
+User: Beetstra https://en.wikipedia.org/wiki/User:Beetstra
+XLinkBot https://en.wikipedia.org/wiki/User:XLinkBot
+    Tasks:
+    XLinkBot is primarily intended to deal with domains which may have a legit use on-wiki, but are frequently misused by new and anonymous users (or have a history of being misused). The bot allows established users to add links, while reverting links added by others. IP's and new users can still edit a page that contains links on the bot's revert list, they won't be reverted unless they add or change a link themselves.
+
+    XLinkBot can also serve as a good "step-up" to, or "step-down" from, the Mediawiki:Spam-blacklist, allowing time to see if the URL continues to be abused.
+
+    The Override list and the HardOverride list should only be used for short-term issues. If URLs are being abused to the point that the override is necessary on a long-term basis - they should be placed on the Mediawiki:Spam-blacklist.
+
+    Sites which are completely inappropriate for Wikipedia belong on the Mediawiki:Spam-blacklist rather than the RevertList.
+
+    At the request of the community, we have extended the ability to modify XLinkBot's revert list and revert behavior to all English Wikipedia admins. This can be done by editing the XLinkBot control pages noted below.
+    Vandalism related: yes
+
+CheMoBot https://en.wikipedia.org/wiki/User:CheMoBot
+    Tasks:
+    Extract infoboxes from mainspace pages, and saving them on subpages of a Wikiproject for verifying the data in there. From then reporting changes to mainpage infoboxes (when 'verified' data gets changed) to a report page under the same wikiproject for manual review.
+    Keeping an eye on verifyable numerical data in infoboxes (e.g. 'boilingPtC = 100' for water (molecule) in the {{chembox}}, or 'birth_date = May 29, 1917' for John F. Kennedy in the {{Infobox President}}
+    Vandalism related?: I'd say yes, it verifies, whether data in infoboxes makes sense
+
+COIBot https://en.wikipedia.org/wiki/User:COIBot
+    Tasks:
+    COIBot is a bot that tries to track edits that are made by users who may have a conflict of interest. (see bot page for longer version)
+    Vandalism related?: kind of, there are definitely also edit filters I've labeled as COI...
+
+----------------------------------
+
+User: JJMC89 https://en.wikipedia.org/wiki/User:JJMC89
+JJMC89 bot https://en.wikipedia.org/wiki/User:JJMC89_bot
+    Tasks:
+    Category double redirect fixer 	Running weekly 	Here 	Yes 	9 June 2019 	Fix double category redirects
+    Commons POTD importer 	Running daily 	Delete or redirect 	Yes 	N/A 	Import Commons picture of the day
+    Coordinate parameters fixer 	Inactive 	Here 	Yes 	27 February 2017 	Correct coordinate parameters issues from the enwiki ghel report
+    Draftification reports 	Running daily 	No 	Yes 	N/A 	Report article moves to Draft or User
+    Inactive admins 	Running daily 	Blank 	No 	7 April 2018 	Report and notify inactive admins
+    Inactive interface admins 	Running monthly 	No 	Yes 	17 October 2018 	Report inactive interface admins
+    MassMessage list updater 	Running daily 	Here 	Yes 	25 March 2017 	Update MassMessage lists based on user groups from logs.
+    NFCCE 	Running 	Here 	No 	18 May 2017 	Enforce WP:NFCC#10c and WP:NFCC#9
+    Wikidata ID remover 	Runs upon request 	Edit to interrupt 	Yes 	19 August 2016 	Remove external link template parameters that have been migrated to Wikidata
+    Wikinews importer 	Running hourly 	No 	Yes 	17 May 2016 	Import dynamically-generated Wikinews
+    Vandalism related: rather not
+
+JJMC89 bot II https://en.wikipedia.org/wiki/User:JJMC89_bot_II
+    Tasks:
+    Infotalk editnotice 	Running daily 	Here 	Yes 	3 February 2017 	Deploy {{Wikipedia information pages talk page editnotice}} for talk pages of Wikipedia information pages.
+    Vandalism related: no
+
+JJMC89 bot III https://en.wikipedia.org/wiki/User:JJMC89_bot_III
+    Tasks:
+    CFDW 	Running 	No 	Partial 	27 April 2019 	Process WP:CFD/W (Categories for discussion/Working) and its subpages
+    Vandalism related: no
+
+Magic links bot https://en.wikipedia.org/wiki/User:Magic_links_bot
+    Tasks:
+    Magic links replacer 	Active 	Here 	Yes 	22 May 2017 	Replace magic links with templates per local RfC and MediaWiki RfC.
+    ISBN ISBN → {{ISBN|ISBN}}
+    PMID PMID → {{PMID|PMID}}
+    Vandalism related: no
+
+------------------------------------------
+
+User: Jarry1250 https://en.wikipedia.org/wiki/User:Jarry1250
+BAG Member
+LivingBot https://en.wikipedia.org/wiki/User:LivingBot
+    Tasks:
+    (BRFA 6) Revitalise the announcements page by letting WikiProjects sign up for an automated process.
+    (BRFA 9) Update WP:Good articles/recent every 15 minutes.
+    (BRFA 15) Keep count for the WikiCup; and for connected purposes.
+    (BRFA 19) Perform simple tasks relating to publishing The Signpost
+    (BRFA 20) Perform simple tasks relating to publishing The Signpost: notifying users
+    Vandalism related: no
+
+------------------------------------------
+
+User: Legoktm https://en.wikipedia.org/wiki/User:Legoktm
+Listed in the category bot operators, but no bot is linked on the user page
+
+------------------------------------------
+
+User: Luk https://en.wikipedia.org/wiki/User:Luk
+Lucasbfrbot https://en.wikipedia.org/wiki/User:Lucasbfrbot
+    Tasks:
+    semi-supervised: Browse Category:Images on Wikimedia Commons to discover instances where the same image is on WP and commons under different names. Replace the Wikipedia version by the Commons version. Source code (of the main routine)
+    Manual: random AWB cleanup.
+    Unsupervised: a User:StatusBot clone. It can be disabled by editing User:Lucasbfrbot/Statusbot (and write "disabled" there). Disabled until the community agrees to let that kind of bot run.
+    Vandalism related: no
+
+------------------------------------------
+
+User: MusikAnimal https://en.wikipedia.org/wiki/User:MusikAnimal
+BAG member
+MusikBot https://en.wikipedia.org/wiki/User:MusikBot
+    Tasks
+    PermClerk 	Approved 	Bot clerking at WP:PERM 	GitHub 	Continuous 	☑ Running
+    AWBListMan 	Approved 	Maintains the AWB CheckPage and counts users with access. Runs as MusikBot II 	GitHub 	Weekly 	☑ Running
+    FilterMonitor 	Approved 	Reports functional changes to edit filters on a watchable page 	GitHub 	Bihourly 	☑ Running
+    ECPMonitor 	Not needed 	Reports pages recently put under extended confirmed protection 	GitHub 	Bihourly 	☑ Running
+    RotateTDYK 	Approved 	Rotates date headers at T:TDYK 	GitHub 	Daily 	☑ Running
+    TAFIWeekly 	Approved 	Carries out the weekly maintenance duties of the WP:TAFI project 	GitHub 	Weekly 	☑ Running
+    TAFIDaily 	Approved 	Carries out the day to day maintenance duties of the WP:TAFI project 	GitHub 	Twice daily 	☑ Running
+    FixPP 	Approved 	Repairs protection templates on pages in the invalid category 	GitHub 	Continuous 	☑ Running
+    BLPCat 	Approved 	Replaces certain categories on BLPs to the BLP-specific counterpart. 	GitHub 	Daily 	☑ Running
+    StaleFilters 	Not needed 	Reports enabled edit filters with no hits in the past 30 days 	GitHub 	Daily 	☑ Running
+    AbuseFilterIRC 	Not needed 	Relays all edit filter hits to #wikipedia-en-abuse-log-all connect and allows you to subscribe to notifications when specific filters are tripped. 	GitHub 	Continuous 	☑ N/A
+    StaleDrafts 	Approved 	Reports stale non-AfC pages in the draftspace 	GitHub 	Daily 	☑ Running
+    NPPChart 	Approved 	Populates historical data of NPP backlog size for use in on-wiki charts. 	GitHub 	Every 4 hours 	☑ Running
+    CopyPatrol 	Not needed 	Maintains a WikiProjects database for pages in the toollabs:copypatrol feed 	GitHub 	Continuous 	☑ Running
+    TFATagger 	Approved 	Tags Today's Featured Article with {{Current TFA}} 	GitHub 	Daily 	☒ Inactive
+    MassPageMover 	Approved 	Mass moving of pages based on configuration 	GitHub 	As needed 	☑ Done
+    ACCMonitor 	Not needed 	Reports inactive account creators 	GitHub 	As needed 	☑ Done
+    RestoreHistories 	Approved 	Restores deleted revisions of a list of IP talk pages 	GitHub 	One-time 	☑ Done
+    SoundSearch 	Approved 	Finds music files of notable composers on Commons that aren't being used on enwiki 	GitHub 	One-time 	☑ Done
+    Vandalism related?: not really, several tasks that monitor edit filters though (FilterMonitor, StaleFilters, AbuseFilterIRC)
+
+------------------------------------------
+
+User: NJA https://en.wikipedia.org/wiki/User:NJA
+Listed as bot operator, but no bots linked on user page
+
+------------------------------------------
+
+User: Scottywong https://en.wikipedia.org/wiki/User:Scottywong
+Snotbot https://en.wikipedia.org/wiki/User:Snotbot
+    Tasks:
+    Task 1
+    Snotbot monitors the backlog at Special:Newpages and identifies articles that have not been patrolled for 30 days after creation. Such articles are normally deleted from the Newpages queue and are never patrolled. When an unpatrolled, 30+ day old article is found, Snotbot adds the {{New unreviewed article}} template to the top of the article, allowing it to be tracked at Category:Unreviewed new articles. The bot also posts a list of these articles on the monthly index page at Wikipedia:New pages patrol/Unpatrolled articles.
+    Note: This task has been suspended indefinitely.
+    Task 2
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 2
+    Snotbot tagged all image files on video game articles with {{WikiProject Video games}} so that the Wikiproject can track and maintain these images more efficiently (about 20,000 images total). This script may be used in the future to tag image files for other WikiProjects.
+    Task 3
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 3
+    Snotbot replaced all section headings of "==Plot synopsis==" with "==Plot==". This script may be used in the future to find and replace text in selected articles.
+    Task 5
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 5
+    Snotbot finds articles with improper heading hierarchies and fixes them. Headers should always increment sequentially and not skip levels. For instance, a ==Level 2== header should never be immediately followed by a ====Level 4==== header. Proper hierarchy is important for accessibility.
+    Task 9
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 9
+    Snotbot analyzes the list of articles that are currently tagged for rescue by the Article Rescue Squadron and compiles a table with information about them. The table is located at Wikipedia:Article Rescue Squadron/Article list. This task is no longer active.
+    Task 10
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 10
+    Snotbot checks recent AfD's to ensure that they have been transcluded to the daily log, and that the articles under discussion still have an AfD template on them. It also creates two reports:
+        User:Snotbot/AfD report - lists potentially problematic pages that the bot couldn't deal with
+        User:Snotbot/Current AfD's - sortable table of all currently open AfD's and some statistics about them
+    Task 12
+    See also: Wikipedia:Bots/Requests for approval/Snotbot 12
+    Snotbot clerks WP:RFPP (requests for page protection) and automatically archives old threads. This task has editable parameters which can be viewed/edited on User:Snotbot/RFPP. This task can also be temporarily stopped by editing User:Snotbot/RFPP.
+    Other tasks
+        Snotbot updates the New Page Patrol DefCon userbox, which alerts editors when the Special:NewPages queue is approaching its limit.
+        Snotbot created a list of articles on scientists and correlated it with Science's recently released Science Hall of Fame (SHOF) list. See Wikipedia:WikiProject Biography/Science and academia/Science Hall of Fame for the list.
+        Snotbot periodically updates a summary table for open unblock requests.
+
+    Vandalism related?: kind of: helps patrolling/reviewing newly created articles
+
+------------------------------------------
+
+User:Shirik https://en.wikipedia.org/wiki/User:Shirik
+TorNodeBot https://en.wikipedia.org/wiki/User:TorNodeBot
+    Tasks:
+    TorNodeBot is a bot that monitors the Tor network and ensures that Wikipedia exit nodes (those nodes in the Tor network that can be the last "hop" and route data to its final destination) can not edit, in accordance with our policy on Open proxies. The TorBlock extension is supposed to handle this automatically, but tends to miss several exit nodes and goes down on occasion. TorNodeBot fills in the gaps left open by the extension. This bot runs continuously and applies blocks when all of the following 3 conditions are met:
+
+        The node is present in the Tor directory service as an exit node router
+        The node is responding to requests and can route to Wikipedia's sandbox
+        The node is not blocked already by the TorBlock extension
+
+When all three of these conditions are met, a temporary block is placed on the node.
+    Vandalism related?: maybe indirectly, since users with malicious motivations may try to hide their IPs
+
+------------------------------------------
+
+User: Slakr https://en.wikipedia.org/wiki/User:Slakr
+SineBot https://en.wikipedia.org/wiki/User:SineBot
+    Tasks:
+    SineBot is a recent changes patrolling bot that uses api.php to spot edits made on certain pages the moment they happen.
+    It will automatically add {{Unsigned}}, {{UnsignedIP}}, and {{Undated}} templates to comments left by registered and IP users, respectively.
+    Except on pages that are frequently modified, the bot will normally give editors a grace period (a minute or so) to sign and date unsigned/undated comments before assuming that a particular editor forgot to sign.
+    It runs continuously (except, obviously, for maintenance).
+    If a particular user makes three or more unsigned comments in a 24 hour period, the bot will place a single {{uw-tilde}} advice message on his/her talk page.
+    Reports obvious vandalism and suspected personal attacks to various anti-vandalism IRC channels.
+    Vandalism related: yes, see last task
+
+ProcseeBot https://en.wikipedia.org/wiki/User:ProcseeBot
+    Tasks:
+    ProcseeBot automatically blocks proxies due to both the local policy against open proxies on Wikipedia and Wikimedia's global policy against open proxies. It seeds information from public proxy lists and checks to make sure the proxy is open and usable, and if so, proceeds to block it.
+    Vandalism related?: kinda, similar to TorNodeBot
+
+------------------------------------------
+
+User: The Earwig https://en.wikipedia.org/wiki/User:The_Earwig
+BAG member
+EarwigBot https://en.wikipedia.org/wiki/User:EarwigBot
+    Tasks
+    1 	AfC copyvio bot 	Reported possible copyright violations in Articles for creation submissions (formerly to User:EarwigBot/AfC copyvios, later with {{AfC suspected copyvio}}). Replaced by a web tool.
+    2 	AfC statistics bot 	Updates Wikipedia:WikiProject Articles for creation/Statistics hourly, featuring pending and recently declined or accepted submissions.
+    3 	AfC category maintenance bot 	Creates daily, monthly, and yearly categories at Category:AfC submissions by date. Runs daily at midnight UTC, creating categories three days in advance.
+    4 	{{WikiProject Russian History}} removal 	Removed duplicate instances of {{WikiProject Russian History}}, per this BOTREQ.
+    5 	Category:Undated AfC submissions cleanup 	Timestamps pages in Category:Undated AfC submissions to clear the category. Runs weekly on Sundays. (Task 7 has been merged into this task.)
+    6 	WP:USPE WikiProject Tagging 	Tagged articles that were within the scope of WikiProject Presidential Elections with {{WikiProject United States presidential elections}}.
+    8 	AfC category delinking 	Delinks mainspace categories (and templates transcluding categories) from pages in Category:Declined AfC submissions. Runs weekly on Mondays.
+    9 	Wrong MIME type tagging 	Tagged files whose extensions did not agree with their MIME types with {{rename media}}. Made unnecessary as MediaWiki now requires file extensions to match their MIME types.
+    10 	{{DYK talk}} deprecation 	Merged {{DYK talk}} into {{ArticleHistory}}.
+    11 	{{catmore}} replacement 	Would have replaced transclusions of {{main}} in the category namespace with {{catmore}}.
+    12 	BLP tagging 	Adds |blp=yes to {{WPBS}} on talk pages of living people when necessary. It runs weekly on Tuesdays.
+    13 	Image display resizing 	Corrected upscaled portraits in {{Infobox person}}. Made unnecessary by improved image handling in infoboxes and MediaWiki.
+    14 	WikiProject tagging 	Tags talk pages of articles with WikiProject banners by request. All tagging runs are started manually, and require consensus from the WikiProject. Both lists of pages and list of categories (subcategories included or not included) can be tagged. The bot also has the option of auto-assessing the banner it is adding based on other banners on the talk page. Request at User talk:The Earwig.
+    15 	{{Infobox criminal}} parameter renaming 	Replaced deprecated parameters in {{Infobox criminal}}.
+    16 	Book-related WikiProject notification 	Notified WikiProjects with Wikipedia Books about recent book modifications.
+    17 	{{Infobox ship image}} cleanup 	Removed File:No Photo Available.svg from {{Infobox ship image}}.
+    18 	FEED daily page creation 	Created daily pages for WP:FEED, like Wikipedia:Requests for feedback/2010 July 2, before the project was shut down.
+    19 	DRN clerk bot 	Carried out clerking tasks for the dispute resolution noticeboard (managing the {{DR case status}} template, leaving notices (with {{DRN-notice}} and {{DRN stale notice}}) as cases develop, and updating {{DRN case status}}).
+    20 	{{Infobox station}} merging 	Replaced {{Infobox China station}} and {{Infobox Japan station}} with {{Infobox station}} following two template discussions (China, Japan) and a previous BRFA.
+    Vandalism related: task 1 reports possible copyright vios, I've labeled some filters as copyright vio related
+
+------------------------------------------
+
+User: This, that and the other https://en.wikipedia.org/wiki/User:This,_that_and_the_other
+TTObot https://en.wikipedia.org/wiki/User:TTObot
+    Tasks:
+    Mass tagging of templates being nominated for TFD and MFD
+        This bot account is used to run the masstag script, which applies a given tag en masse to a given set of pages. The approval extends solely to the following cases:
+            Tagging with the {{tfd}} tag for mass TFD nominations;
+            Tagging with the {{mfd}} tag for userboxes in the Template namespace which are involved in mass MFD nominations;
+            Removing the {{tfd}} or {{mfd}} tags on templates which are being kept after a TFD or MFD discussion;
+            Adding {{tfd end}} on the talk pages of templates which are being kept after a TFD discussion.
+        Hence, the bot will only edit in the Template and Template talk namespaces.
+        A function overview with more detail is available at the BRFA for this bot.
+        Considering a mass TFD, but turned off by the prospect of tagging? Help is at hand!
+        If you are planning to make a mass deletion nomination, you can harness the functionality of this bot by asking at This, that and the other's talk page.
+    Vandalism related?: not really?
+
+------------------------------------------
+
+User: X!
+BAG member
+Yetanotherbot https://en.wikipedia.org/wiki/User:Yetanotherbot (merged SoxBot I and SoxBot II)
+    Tasks:
+    Clone of HBC AIV helperbot. Monitors WP:AIV (Administrators' intervention against vandalism) and checks if reported users are blocked. If a user is blocked the bot will remove the entry with an edit summary explaining why, for how long, what type of block, and how many remaining reports are left. The bot also has several other, related tasks:
+    Combine multiple entries for the same user/IP address
+    Add and remove the {{adminbacklog}} template as needed
+    Mark IP addresses in special IP ranges with descriptive comments
+    Reset the instruction block as necessary when it is changed
+    Vandalism related?: kind of; it does maintenance tasks related to AIV
+
+SoxBot III https://en.wikipedia.org/wiki/User:SoxBot_III
+    Tasks: Anti-testing bot. (Source is right here) (not quite sure what this means; that it searches for and reverts test edits?)
+    Vandalism related?: if my assumption is correct, then kindof; there are also filters that catch test edits
+
+SoxBot IV https://en.wikipedia.org/wiki/User:SoxBot_IV
+    Tasks: Clean the sandbox every 12 hours, or immediately if the header is removed.
+    Vandalism relatted?: no
+
+MPUploadBot https://en.wikipedia.org/wiki/User:MPUploadBot
+    Tasks:
+    Uploads images on the Main Page from Commons and protects them
+    Protects templates on Today's and Tomorrow's main pages
+    Vandalism related?: probably yes, since it protects templates and images
+
+SocksBot https://en.wikipedia.org/wiki/User:SocksBot
+    Tasks: no decription found, and no request for approval; super secret sock puppet investigations? (ah, it says, not approved yet and page was last edited in 2016; so it appears to be abandoned)
+    Vandalism related?: if I'm correct, then yes
+
+EyeEightDestroyerBot https://en.wikipedia.org/wiki/User:EyeEightDestroyerBot https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/EyeEightDestroyerBot
+    Tasks: As requested on BOTREQ, this is an adminbot that will delete 25000 specific images under CSD F8. (one-time run) (images are available on commons, and thus deleted from Wikipedia)
+    Vandalism related?: no
+
+------------------------------------------
+
+User: Versageek https://en.wikipedia.org/wiki/User:Versageek
+XLinkBot https://en.wikipedia.org/wiki/User:XLinkBot
+see User:Beetstra
+
+------------------------------------------
+
+User: xaosflux https://en.wikipedia.org/wiki/User:Xaosflux
+Fluxbot https://en.wikipedia.org/wiki/User:Fluxbot
+    Tasks:
+    1. Processing WP:CFDS (categories for discussion/speedy) and WP:CFDW (categories for discussion/working) replacements. (approved)
+    2. Processing userbox migrations. (approved)
+    3. Subst'ing misc templates that are primarily meant to be subst'ed, but were not (e.g. {{mfd bottom}}). (approved)
+    4. Delivering one off runs of Project member notifications (mostly replaced by MassMessage). (approved)
+    5. Running repairs of syntax errors introduced by other bot runs. (approved)
+    6. Supervised cleanups of Category:Pages using invalid self-closed HTML tags (approved)
+        ([[User:Fluxbot#Task6|Task6]]) HTML cleanup of [[:Category:Pages using invalid self-closed HTML tags]]
+    Vandalism related?: not really; it's rather maintenance tasks
