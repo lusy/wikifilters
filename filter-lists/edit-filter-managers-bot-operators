@@ -21,6 +21,23 @@ General shared IP vandalism and spam patrol and page move patrol are also includ
     C) The move log is patrolled by VoABot II for page moves to inappropriate names by possible vandals. Such page moves will be reverted.
     Vandalism related?: yes
 
+-------------------------------------------------------
+
+User:Addshore https://en.wikipedia.org/wiki/User:Addshore
+Addbot https://en.wikipedia.org/wiki/User:Addbot
+    Tasks: no description found on page; but was smth along the lines of deleteing interwiki language links, since these moved to Wikidata?
+    Vandalism related?: no
+
+-------------------------------------------------------
+
+User: Anomie https://en.wikipedia.org/wiki/User:Anomie
+BAG Member
+AnomieBOT https://en.wikipedia.org/wiki/User:AnomieBOT
+    Tasks: https://en.wikipedia.org/wiki/User:AnomieBOT/TaskList
+    (really way too long to list here)
+    Vandalism related?: a ton of maintenance tasks, none of the directly related to vandalism
+
+-------------------------------------------------------
 
 User: Beetstra https://en.wikipedia.org/wiki/User:Beetstra
 XLinkBot https://en.wikipedia.org/wiki/User:XLinkBot
@@ -46,6 +63,103 @@ COIBot https://en.wikipedia.org/wiki/User:COIBot
     Tasks:
     COIBot is a bot that tries to track edits that are made by users who may have a conflict of interest. (see bot page for longer version)
     Vandalism related?: kind of, there are definitely also edit filters I've labeled as COI...
+
+----------------------------------
+
+User: Chris G https://en.wikipedia.org/wiki/User:Chris_G
+AntiAbuseBot https://en.wikipedia.org/wiki/User:AntiAbuseBot
+    Tasks:
+    Watches the rc feed for actions that match known vandals and takes necessary action (e.g. send off an alert on irc, revert the edit, revert the edit and block the user or just block the user), currently I have it setup with regexes that match grawp and also some spambots. Also I have been running this bot under my main account for some time now.
+
+    Interestingly, there is a discussion on the bot's request for approval page (https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/AntiAbuseBot), stating that it would become obsolete once abuse filters are implemented: "When the abuse filter is installed I'll happily shut the bot down, however it hasn't been installed yet (much to my disappointment) and it could be quite some time before it is installed so I feel there is a need for this bot, and I would rather get it properly approved than run it under my main account like I have been --Chris 04:18, 9 January 2009 (UTC)"
+
+Chris G Bot 3 https://en.wikipedia.org/wiki/User:Chris_G_Bot_3
+    Tasks: This bot archives threads at WP:CHU/S (changing username simple) (WP:CHU/U (changing username/usurpations) is archived by AnomieBOT). It checks if threads need archiving every hour. The bot will only archive a thread if {{done}} or {{notdone}} is present and has been placed by a flagged 'crat (see here for a list of current 'crats). {{done}} threads are archived when the last timestamp in the thread is older than 12 hours. {{notdone}} threads are archived when the timestamp is older than 36 hours. If you have any bugs, questions, comments etc please leave me a message. The source code can be seen here.
+
+The bot can also be configured to clerk WP:CHU. To do this simply replace the text on /clerk with true
+
+Chris G Bot https://en.wikipedia.org/wiki/User:Chris_G_Bot
+    Tasks: This bot tags images that do not have a valid copyright tag for deletion per WP:CSD#F4. Please note that copyright tags should not be substituted as this means that the bot cannot read it correctly.
+    Vandalism related?: not really, but I think there are edit filters tackling similar tasks
+
+Chris G Bot 2 https://en.wikipedia.org/wiki/User:Chris_G_Bot_2
+    (Clone of the PockBot)
+    Tasks: The purpose of PockBot is to produce for a given wikipedia category, a table listing all articles within that category (and all subcategories of that category), as well as the status of those articles. This is of use for editors in monitoring new stub articles within their categories and bringing them swiftly up to full article status, as well as providing visitors to the category with a "todo" list of articles needing work.
+Given a wikipedia category page to start from, it finds all articles listed in that category as well as all subcategories of that category. For every subcategory it pulls a list of articles. For all articles retrieved (a list of all articles in that category and its subcategories) it then retrieves the CLASS flag for each page from wikipedia. It then presents these results in tabulated form.
+    Vandalism related: no
+
+Orphaned talkpage deletion bot https://en.wikipedia.org/wiki/User:Orphaned_talkpage_deletion_bot
+    Tasks: This bot deletes orphaned talkpages per WP:CSD#G8.
+    Vandalism related: no
+
+Orphaned image deletion bot https://en.wikipedia.org/wiki/User:Orphaned_image_deletion_bot
+    Tasks:
+    This bot deleted orphaned fair use images per WP:CSD#F5. It will only delete an image if:
+    There is no {{hangon}} tag
+    The image is orphaned
+    The image has a fair use licensing tag and no free licensing tag
+    and the image has been tagged for deletion for at least 7 days
+    Vandalism related?: no
+
+Yet Another Redirect Cleanup Bot https://en.wikipedia.org/wiki/User:Yet_Another_Redirect_Cleanup_Bot
+    Tasks:
+    This bot deletes broken redirects per WP:CSD#G8.
+    Vandalism related: no
+
+Legobot/One bot https://en.wikipedia.org/wiki/User:Legobot
+    Tasks:
+    Task 1 	 Substituting Templates 	    -Inactive
+    Task 3 	 Help with Wikipedia:CFD and Wikipedia:UCFD 	    -Inactive
+    Task 5 	 Replacing deprecated templates with {{coord}} (BOTREQ) 	    -Inactive
+    Task 6 	 Moving pages per Bot request 	    -Inactive
+    Task 7 	 Tagging for Wikipedia:WikiProject Iran football and other projects per request 	    -Inactive
+    Task 8 	 Creating watchlist for Wikipedia:CFL 	    -Inactive
+    Task 10	 Updating Wikipedia:PUI#Holding cell 	    -Inactive
+    Task 13	 Creates a list of incorrectly moved pages for WP:AFC 	    -Inactive
+    Task 14	 Creates/modifies redirects related to digraphs & trigraphs. 	    -Inactive
+    Task 15	 Replacement for User:HBC Archive Indexerbot 	    -Active
+    Task 16	 Moves pages per RM 	    -Inactive
+    Task 17	 Create un-punctuated redirects for SCOTUS cases. 	    -Inactive
+    Task 18	 Adds |oldid= to {{GA}} when missing 	    -Active
+    Task 19	 Populating Category:Transport infrastructure by year of completion 	    -Inactive
+    Task 20	 Marks broken redirects for speedy deletion 	    -Active
+    Task 21	 Removing all uses of {{has-NFUR}} and other related functions 	    -Inactive
+    Task 22	 Adds |image has rationale=yes to files with a valid NFUR 	    -Inactive
+    Task 23	 Tag http://ap.google.* links with {{dead link}} 	    -Inactive
+    Task 25	 Moves {{ODNBsub}} outside of {{cite xxx}}. 	    -Inactive
+    Task 27	 Creating Palestine related redirects 	    -Inactive
+    Task 28	 Convert langlinks to Wikidata 	    -Inactive
+    Task 33	 Take over of RFC bot (task 1, task 2), GA bot, One bot and Chris G Bot 3 	    -Active
+             RFC bot task 1: "I quote from its user page: "The function of the MessedRobot II is to raise attention of discussions that are taking place on the lesser-well known areas of Wikipedia. By tagging a discussion page with {{wider attention}}, the MessedRobot II will heed and proceed to add that page to its list, which can be transcluded onto pages including the community portal, user pages, and possibly more!""
+             RFC bot task 2: "To post on users' talk, asking them to comment on RFCs. The service is strictly opt-in via Wikipedia:Requests for comment/Comment duty."
+             GA bot: "Maintenance of the good article nominations process."
+             One bot: "Miscellaneous maintenance tasks" //^^ very precise
+    Vandalism related?: not really, as far I can see
+
+----------------------------------
+
+User:Cobi https://en.wikipedia.org/wiki/User:Cobi
+BAG member
+ClueBots https://en.wikipedia.org/wiki/User:ClueBot_Commons/Bots
+    ClueBot reverted vandalism, but is now defunct.
+    ClueBot II does various tasks.
+    ClueBot III is an advanced archive bot.
+    ClueBot IV clerks WP:OP (open proxies)
+    ClueBot VI clerks usurpations at WP:CHUU. (change username usurpations)
+    ClueBot NG reverts vandalism.
+    Vandalism related: duh.
+
+----------------------------------
+
+User: cyberpower678 https://en.wikipedia.org/wiki/User:Cyberpower678
+InternetArchiveBot https://en.wikipedia.org/wiki/User:InternetArchiveBot
+    Tasks: InternetArchiveBot (abbreviated as IABot), is an advanced bot designed to combat link rot, as well as fix inconsistencies in sources such as improper template usage, or invalid archives.
+
+You can use this bot yourself by browsing the history of any page, and clicking on the "Fix dead links" link in the "External tools" section at the top of the page.
+
+Under the hood, Cyberbot has an immense, and ever growing, database, where each URL is saved along with details with, and archive snapshots, either queried from the Wayback Machine, or collected elsewhere on Wikipedia. On top of that, the bot is highly customizable to suit the wiki's needs. Several options can be customized, such as which sources to touch, which pages to scan, and whether or not to scan live links and act on that information. IABot is still in ongoing development, to support additional wikis, but is complete for the English Wikipedia.
+    Vandalism related: no
+
 
 ----------------------------------
 
@@ -96,8 +210,14 @@ LivingBot https://en.wikipedia.org/wiki/User:LivingBot
 
 ------------------------------------------
 
+User: Kaldari https://en.wikipedia.org/wiki/User:Kaldari
+see User:cyberpower678 for https://en.wikipedia.org/wiki/User:InternetArchiveBot
+
+------------------------------------------
+
 User: Legoktm https://en.wikipedia.org/wiki/User:Legoktm
-Listed in the category bot operators, but no bot is linked on the user page
+Legobot https://en.wikipedia.org/wiki/User:Legobot
+see User:Chris G, who is operating it as well, according to https://en.wikipedia.org/wiki/User:Chris_G/Bots (where it is listed as "One bot")
 
 ------------------------------------------
 
