@@ -198,6 +198,12 @@ ClueBots https://en.wikipedia.org/wiki/User:ClueBot_Commons/Bots
     ClueBot NG reverts vandalism.
     Vandalism related: duh.
 
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Cobi&filter=
+* 197, Duplicate section - introduced by Cobi on 26 June 2009 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=197; disabled by Prodego on 27 June 2009  with the comment "Please, don't use the abuse filter for this, it isn't abuse. Disabled to reduce number of edits hitting the condition limit -Prodego" (explanation for the filter was "This is to find duplicate sections added (clicking save on the new section page twice). -- Cobi"); 8 July 2009 marked as deleted by Ruslik0
+* 246, "Imma let you finish ..." new meme -- introduced by Cobi as new filter on 16 September 2009 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=246 (hidden); it never hit anything, and was consequently made public by Prodego on 27.9.2009.
+
+16 September 2009 was also the last time User:Cobi edited something on a public edit filter. So unless they're active in the creation of hidden filters (which we cannot easily verify), we can guess that they lost interest in filters altogether. ClueBot NG is introduced in October 2010.
 ----------------------------------
 
 User: cyberpower678 https://en.wikipedia.org/wiki/User:Cyberpower678
