@@ -21,6 +21,8 @@ General shared IP vandalism and spam patrol and page move patrol are also includ
     C) The move log is patrolled by VoABot II for page moves to inappropriate names by possible vandals. Such page moves will be reverted.
     Vandalism related?: yes
 
+Which filters the editor has worked on? Can't find conclusive data
+
 -------------------------------------------------------
 
 User:Addshore https://en.wikipedia.org/wiki/User:Addshore
@@ -63,6 +65,41 @@ COIBot https://en.wikipedia.org/wiki/User:COIBot
     Tasks:
     COIBot is a bot that tries to track edits that are made by users who may have a conflict of interest. (see bot page for longer version)
     Vandalism related?: kind of, there are definitely also edit filters I've labeled as COI...
+
+Which filters has the editor worked on?
+* 172, Section blanking --> Beetstra seem to have introduced the filter https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=172
+  it is set to tag "Section blanking"
+* 126, Youtube links --> seems related to what XLinkBot is doing; Beetstra seems to also be the editor who introduced the filter: https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=126
+  BRFA for original XLinkBot (then SquelchBot) was filed on 11 January 2008 by Versageek
+  BRFA for XLinkBot 2 (most recent?) was filed on 17 January 2009 by Beetstra
+  according to above cited filter history link, edit filter 126 was initially introduced by Beetstra on 1 April 2009; the comments on the filter suggest that it was introduced to support XLinkBot: "Continuous insertion of youtube movies, undoing XLinkBot reverts, etc. etc."; the filter was initially hidden and set to "disallow";
+  Does this signal towards a pattern of a bot notices something, or more malicious editors keep reverting bot's edits which eventually results in implementing a filter which disallows the action from the beginning.
+* 129, Possible tireless sock creating film pages of non-existing films --> introduced by Beetstra https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=129; was tagging hits with "Tag: Nonsense movies?" and deleted by User:NawlinWiki on 2.2.2012
+* 323, Undoing anti-vandalism bot --> filter for edits that undo edits by XLinkBot and ClueBot NG (historically couple of others as well); was introduced by Tim1357 on 26.4.2010 as a hidden filter and was tagging hits with "Tag: reverting anti-vandal bot"; Beetstra added XLinkBot to the check on 16.11.2010 https://en.wikipedia.org/wiki/Special:AbuseFilter/history/323/diff/prev/6618
+  So this is an example of using filters to support bot work
+* 76, Adding email address -- filter was warning if an email address was added to a article namespace page; it was introduced on 21.3.2009 and marked as deleted on 30.8.2009; Beetstra's contributions to the filter: turning off the warning, since recognised the regex as not precise enough (e.g. catching also urls containing "@"); adding "XLinkBot" to the accounts that are allowed to be ignored by the filter
+  So, this again is an example of constructing a filter in such a way that it collaborates with an existing bot
+* 643,Persistent sockpuppetry - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 892, RS linked through proxy (not quite sure what RS means) - Beetstra introduced the filter on 5.12.2017 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=892 and updated the filter action to "Warn: Abusefilter-warning-proxy-link" 5 days later and to "disallow" on 9.1.2018
+* 639,persistent block evasion - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 455,Bahrani - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 910, Maureen Wroblewitz spammer - is a typical example of a filter targetting a particular case (with particular page?) -- Beetstra introduced the filter on 4.4.2018 as hidden; https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=910 ; was actually also the only edit filter manager to ever contribute to this filter; Beetstra marked the filter as deleted on 14.7.2018 when apparently the incidents were not occuring anymore; a filter that was created to respond to a particular incident, ran for a while (approx 3 months) and was disabled again.
+* 911,Wrestling social networking spammer - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 933,Deepak Khumar - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 317,Sentry Gun - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 758,Block evading editor - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 603,Special case of reverting XLinkBot reverts - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details; however XLinkBot is mentioned in the description and this is again an example of building a filter to support a particular existing bot
+* 108, Hangon Tag - Beetstra reordered conditions for optimisation reasons: https://en.wikipedia.org/wiki/Special:AbuseFilter/history/108/diff/prev/1084 (filter was later deleted by User:Prodego with the remark that this type of warning already happens elsewhere and this is not what filters are supposed to be used for)
+* 612,Wrestling pusher - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 162,Thermal bag - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 791,Spam(bot|mer)s continuously hitting the spam blacklist - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 85,Beetstra - speed testing rules - although filter is hidden, the description points us towards a typical filter for testing purposes
+* 893, Predatory open access journals - introduced by Beetstra on 6.12.2017 and deleted again the same day https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=893 (probably doubling since filter 891 is already  named "Predatory open access journals" and was introduced on 3.12.2017 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=891 ; Beetstra added some additional domains to check to this filter on 11.12.2017 https://en.wikipedia.org/wiki/Special:AbuseFilter/history/891/diff/prev/18262); since both filters were introduced so close in time to one another I can imagine that there was an incident/discussion/request for such a filter and two different people went on and implemented it without coordinating with eachother.
+* 130,Kaveh L. Afrasiabi - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 907,St. Bernard (dog) -- enabled by Beetstra on 21.3.2018 because of a particular incident (as it seems), but never actually tripped. disabled again on 30.12.2018 by Galobtter https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=907
+* 160,"Punchbowl, New South Wales" - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
+
+
 
 ----------------------------------
 
