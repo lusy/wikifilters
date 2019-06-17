@@ -113,6 +113,8 @@ AntiAbuseBot https://en.wikipedia.org/wiki/User:AntiAbuseBot
 
     Interestingly, there is a discussion on the bot's request for approval page (https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/AntiAbuseBot), stating that it would become obsolete once abuse filters are implemented: "When the abuse filter is installed I'll happily shut the bot down, however it hasn't been installed yet (much to my disappointment) and it could be quite some time before it is installed so I feel there is a need for this bot, and I would rather get it properly approved than run it under my main account like I have been --Chris 04:18, 9 January 2009 (UTC)"
 
+    Bot appears to be inactive; last changes it made were from 17.1.2011 https://en.wikipedia.org/wiki/Special:Contributions/AntiAbuseBot
+
 Chris G Bot 3 https://en.wikipedia.org/wiki/User:Chris_G_Bot_3
     Tasks: This bot archives threads at WP:CHU/S (changing username simple) (WP:CHU/U (changing username/usurpations) is archived by AnomieBOT). It checks if threads need archiving every hour. The bot will only archive a thread if {{done}} or {{notdone}} is present and has been placed by a flagged 'crat (see here for a list of current 'crats). {{done}} threads are archived when the last timestamp in the thread is older than 12 hours. {{notdone}} threads are archived when the timestamp is older than 36 hours. If you have any bugs, questions, comments etc please leave me a message. The source code can be seen here.
 
@@ -175,6 +177,13 @@ Legobot/One bot https://en.wikipedia.org/wiki/User:Legobot
              GA bot: "Maintenance of the good article nominations process."
              One bot: "Miscellaneous maintenance tasks" //^^ very precise
     Vandalism related?: not really, as far I can see
+
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Chris+G&filter=
+* 78, Cross-wiki malbot vandals - Chris G introduced the filter on 21.3.2009 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=78 ; filter was disabled on 26.04.2009 since apparently nothing was tripping it at the time and deleted on 17.5.2009 to never reappear again (last filter hit was on 30.03.2009 https://en.wikipedia.org/wiki/Special:AbuseLog?wpSearchUser=&wpSearchPeriodStart=&wpSearchPeriodEnd=&wpSearchTitle=&wpSearchImpact=0&wpSearchAction=any&wpSearchActionTaken=&wpSearchFilter=78)
+* 184,abusive edit summaries - as of 6.01.2019 (the date our data set originates from), Chris G was the last editor to modify this filter. It is however hidden, so we don't know any details
+* 511,test filter - typical test filter by the Chris G Testaccount. Hidden but yeah.
 
 ----------------------------------
 
