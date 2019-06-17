@@ -67,6 +67,8 @@ COIBot https://en.wikipedia.org/wiki/User:COIBot
     Vandalism related?: kind of, there are definitely also edit filters I've labeled as COI...
 
 Which filters has the editor worked on?
+https://en.wikipedia.org/w/index.php?title=Special:AbuseFilter/history/0&dir=prev&user=Beetstra&filter=
+* 48, Oft-inappropriate external links - created by Beetstra on 18.3.2009 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=48; looks like testing stuff similar to what XLinkBot is doing; filter is disabled the same day it's created since " Turned off, this rule seriously slows down the wiki.  Needs to be checked" and never re-enabled; marked as deleted on 25.3.2009
 * 172, Section blanking --> Beetstra seem to have introduced the filter https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=172
   it is set to tag "Section blanking"
 * 126, Youtube links --> seems related to what XLinkBot is doing; Beetstra seems to also be the editor who introduced the filter: https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=126
@@ -98,8 +100,9 @@ Which filters has the editor worked on?
 * 130,Kaveh L. Afrasiabi - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
 * 907,St. Bernard (dog) -- enabled by Beetstra on 21.3.2018 because of a particular incident (as it seems), but never actually tripped. disabled again on 30.12.2018 by Galobtter https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=907
 * 160,"Punchbowl, New South Wales" - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
-
-
+* 81, Badcharts -- only one edit, disabling the filter for couple of hours, since percieved as too slow and potentially able to cause a timeout (filter was deleted 6 year later in June 2015)
+* 61, New user removing references - introduced by Beetstra on 19 March 2010 (who never touched it again). This is the filter with highest hitcount in the history of edit filters; was disabled between 3.3.2012 (with the argument there are too many false positives; which could explain the high hitcount as well^^) and 3.5.2015. Up and running today.
+* 627, Promotional text added by user to draft in own user(-talk) page or in draft namespace -- introduced by Beetstra as a hidden filter on 18 August 2014 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=627 ; according to comments: "Split from Edit Filter 354"; made public by Rich Farmbrough on 6 August 2015, apparently according to a discussion
 
 ----------------------------------
 
