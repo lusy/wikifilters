@@ -410,6 +410,147 @@ MusikBot https://en.wikipedia.org/wiki/User:MusikBot
     SoundSearch 	Approved 	Finds music files of notable composers on Commons that aren't being used on enwiki 	GitHub 	One-time 	☑ Done
     Vandalism related?: not really, several tasks that monitor edit filters though (FilterMonitor, StaleFilters, AbuseFilterIRC)
 
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=MusikAnimal&filter=
+Public filters:
+* 1, General test filter - start as filter to try out smth specific ("Block moving pages to titles containing "HAGGER"") and ended up as a sandbox filter for everyone; was renamed to "general test filter" on 31 July 2013; MusikAnimal edited it for the first time on  29 January 2015; not really of particular interest
+* 3, New user blanking articles - edited 3 times by MusikAnimal, updating variable names (for performance reasons or because deprecated?); adding conditions for performance reasons (! "confirmed" in user_groups); reducing text size limit
+* 5, User self-renaming or moving user talk pages into article talk space -- renaming variables
+* 9, Personal attacks by unregistered or new user -- renaming variables
+* 11, You/He/She/It sucks
+* 12, Replacing a page with obscenities
+* 29, New user removing speedy deletion templates
+* 30, Large deletion from article by new editors
+* 33, Talk page blanking by unregistered/new user
+* 39, School libel and vandalism
+* 46, "Poop" vandalism
+* 50, Shouting
+* 59, New user removing templates on image description
+* 61, New user removing references
+* 80, Link spamming
+* 98, Creating very short new article
+* 113, Misplaced #redirect in articles
+* 117, removal of Category:Living people
+* 149, User adds link containing username
+* 174, New user removing XfD template
+* 180, Large unwikified new article
+* 225, Vandalism in all caps
+* 231, Long string of characters containing no spaces
+* 249, New user conducting large scale reverts
+* 260, Common vandal phrases
+* 285, Common Vandalism
+* 320, "Your mom" Vandalism
+* 323, Undoing anti-vandalism bot
+* 342, Redirect becoming article
+* 344, Prevent full page blanking
+* 345, Extraneous formatting from browser extension
+* 365, Unusual changes to featured or good content
+* 380, Multiple obscenities
+* 384, Addition of bad words or other vandalism
+* 420, Large removal of talk page content by IP
+* 423, WikiLove
+* 432, Starting new line with lowercase letters
+* 479, Adding example.jpg to article space
+* 485, Prevent malicious edits by browser extensionPrevent malicious edits by browser extension
+* 524, Interwiki bot
+* 531, Interwiki Removal
+* 532, Interwiki Addition
+* 550, nowiki tags inserted into an article
+* 554, top100 blog charts
+* 573, Multiple blank lines
+* 582, IE 8/9 XSS Filter Bug
+* 586, New user reviewing AfC submissions
+* 589, Possible recreation of deleted material
+* 602, Arbitration discretionary sanctions alerts
+* 606, ANI restoration bug
+* 613, Signing in article
+* 614, Yolo swag and other vandalism trends
+* 625, Yolo Swag 2
+* 626, Deletion by a non-administrator
+* 631, Extraneous toolbar markup
+* 633, Possible canned edit summary
+* 635, OTRS template added by non-OTRS member
+* 636, Unexplained removal of sourced content
+* 642, OTRS template added by non-OTRS member (global)
+* 644, Mitrabarun Mitra
+* 646, Incorrectly adding images
+* 647, New user removing XfD template
+* 655, Large plot section addition
+* 663, Techno genre warrior
+* 664, Test edits
+* 669, Service Kompor
+* 675, Thems the facts vandalism
+* 677, April Fools disruption
+* 680, Adding emoji unicode characters
+* 687, Possible word replacement extension
+* 689, Chicken fucker vandalism
+* 694, Moves to or from the Module namespace
+* 698, 500 edits / 30 days editing restriction
+* 702, Warning against clipboard hijacking
+* 715, IP notification on RFP/C
+* 716, New user tagging article as FA/GA
+* 719, Empty ref vandal
+* 720, Rothwell-Smith spam
+* 728, Huggle
+* 744, Removal of TemplateData
+* 747, Removal or addition of [[WP:PP-30-500|pp-30-500]] by non-admin
+* 748, pp-30-500 editing restriction
+* 753, wikilinks removed by a new user or IP
+* 765, Unnecessary syntax in translated articles
+* 766, Alt-right labeling
+* 770, Causing death vandal
+* 777, End date present vandal
+* 780, Addition of interlanguage links
+* 782, Content Translation Edits
+* 783, Adding {{persondata}}
+* 784, Harambe vandalism
+* 788, IP removing report from RFPP
+* 794, iPlayer Programme link
+* 803, Prevent new users from editing other's user pages
+* 804, Mentions of Trump by new users
+* 812, Unreasonably large addition of content
+* 813, Bee movie script
+* 828, Redirecting talk page
+* 831, Yanchilin spammer
+* 833, Newer user possibly adding unreferenced or improperly referenced material
+* 840, Indexing user pages
+* 841, Unofficial sports transaction
+* 843, Prevent new users from creating redirects to [[Donald Trump]]
+* 846, LTA tracking
+* 848, Large contributions test filter
+* 850, New user moving page to project space
+* 851, Carlos Gardel vandalism
+* 854, Airport ref removal
+* 856, Non-admin removing revdel templates
+* 858, Anime vandal filter
+* 860, Ryan Ross vandalism
+* 862, Arabic string spam
+* 867, Large creations by inexperienced user
+* 869, Adding "Daily Mail" to articles
+* 878, New user removing COI template
+* 879, Possible broken proxy
+* 887, Excessive repetition in usernames
+* 890, Random typing in username
+* 891, Predatory open access journals
+* 892, RS linked through proxy
+* 894, Possible Self-Published Sources
+* 899, Adding "The Sun" or "Dailystar" to BLPs
+* 904, Long edit summaries
+* 905, bots that may ping users
+* 907, St. Bernard (dog)
+* 912, Possible "fortnite" vandalism
+* 921, Suspicious claims of nazism
+* 928, Transclusion of userpages
+* 930, Prevent indexing userspaces by newer users
+* 932, Adding "theknot.com" into BLP articles
+* 934, Unconfirmed users creating mainspace articles
+* 971, Additions of missing files
+* 994, Article created as template
+
+Interestingly, we could say the XLinkBot dev is a bot person, who has implemented a couple of minor filter (changes) to facilitate the work of XLinkBot.
+In contrast, MusikAnimal seems to be a filter person, who has implemented a couple of bots that track (and help facilitate) filter work. (And a couple of others, entirely unrelated bots).
+MusikAnimal is a quite active edit filter manager who seems to do a lot of maintenance work on a great number of filters.
+
 ------------------------------------------
 
 User: NJA https://en.wikipedia.org/wiki/User:NJA
