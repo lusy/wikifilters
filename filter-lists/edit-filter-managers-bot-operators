@@ -320,7 +320,7 @@ KingpinBot https://en.wikipedia.org/wiki/User:KingpinBot
     Updates User:Jennavecia/AFDBIO (daily) ☑ Approved ☑ Active
     Removes blocked usernames from CAT:UAA and CAT:UWCOI (daily) ☑ Approved ☑ Active
     Updates the log of users who have voted on the ArbCom 2011 elections though the secure poll (one-off) ☑ Approved  Done
-    Vandalism related: kind od, it does maintenance tasks for blocked user names
+    Vandalism related: kind of, it does maintenance tasks for blocked user names
 
 SPPatrolBot https://en.wikipedia.org/wiki/User:SPPatrolBot
     Tasks:
@@ -336,6 +336,15 @@ ListManBot https://en.wikipedia.org/wiki/User:ListManBot
     Sorts images listed at bad image list alphabetically (weekly) ☑ Approved ☑ Active
     Vandalism related?: partially? bad images maintenance
 
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Kingpin13&filter=
+no public filters listed.
+privated filters where Kingping13 was the last modifying editor:
+* 543,,7777104,Kingpin13,20130402134200,0,,XKCD April Fools' Day 2013 vandalism,1,754,0,1,,0,default
+* 412,,7777104,Kingpin13,20110518202040,0,,Image added,1,30,0,1,,0,default
+* 334,,7777104,Kingpin13,20100531204443,0,,Grawp page move vandalism,1,1,0,1,"disallow,blockautopromote",0,default
+Can't say much about the relation between the bots and the filters the editor has worked on, since the filters are all hidden.
 
 ------------------------------------------
 
@@ -369,6 +378,10 @@ StradBot https://en.wikipedia.org/wiki/User:StradBot
     Update deprecated parameters of Module:List. These are tracked in the hidden tracking category Category:List templates with deprecated parameters.
     Un-substituting {{sockpuppet}} templates that are generating errors from Module:UserLinks. These are tracked in the hidden tracking category Category:UserLinks transclusions with errors.
     Vandalism related: kind of, tackles sockpuppet templates
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Mr.+Stradivarius&filter=
+no filters listed? I can't find out of the notice board archives when the user was granted edit filter manager rights, so cannot say whether they never edited a filter because they have not been there long (although that would not make particular sense either, since mostly editors are granted permissions out of a particular occasion..)
 
 ------------------------------------------
 
