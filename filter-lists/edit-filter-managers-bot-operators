@@ -1034,6 +1034,26 @@ EyeEightDestroyerBot https://en.wikipedia.org/wiki/User:EyeEightDestroyerBot htt
     Tasks: As requested on BOTREQ, this is an adminbot that will delete 25000 specific images under CSD F8. (one-time run) (images are available on commons, and thus deleted from Wikipedia)
     Vandalism related?: no
 
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=X%21&filter=
+Public
+* 11, You/He/She/It sucks - X! introduced the filter and gave it "warn" as action on day2 after the activation of the extension: 18 March 2009; never touched it again; filter still active; it issues warnings, was briefly set to "disallow" between 27 April 2010-30 April 2010; and was hidden between 12 September 2010-21 August 2012; Shirik was the editor who removed the "disallow" action and set it to "tag", since there were false positives (according to comment); still running
+* 40, Detect deaths - only 4 hits^^; introduced by X! on 18.3.2009; it was marked as deleted on 25.3.2009, after being disabled twice
+* 67, Sockpuppetry at AfD discussions - never triggered; introduced on 19.3.2009 with "throttle" as action; deleted on 8.4.2009
+* 122, Changing Username malformed requests - introduced by X! on 31.3.2009; never tripped anything; deleted by Prodego on 4.4.2009 with the comment "-Too specific, disabled and deleted, performance. -Prodego"
+* 148, Users creating autobiographies -- introduced by X! on 21.4.2009, actions: "tag", "warn"; still running (brief disabled time 13.2.2016-22.2.2016, bc of a possible technical issue, then re-enabled, initially with tagging only)
+* 201, PLWHA Spam (today: KoH test filter); -- X! suggested on 22.7.2009 that the spam blacklist should be used for whatever the filter was trying to filter at the time
+* 211, Warn users about entering email addresses - introduced by X! on 22.7.2009; disabled by Prodego 20.8.2009, since it was log only (and subsequently deleted on 28.9.2009); had 40 hits;
+* 314, User creates article ending with a / - introduced by X! on 3.4.2010; filter was eventually switched off, in order to save conditions, since the problem was deemed not that big; (there were 532 hits altogether)
+* 323, Undoing Antivandal Bot - introduced on 26.4.2010 by Tim1357, X! updated the conditions the next day and added "tag" as filter action;
+* 345, Tim1357 Codespill Test Filter (name of the filter at the time -- 19.7.2010, today that's the "Extraneuos formatting from browser extension") -- X! updated the pattern, so that bots are excluded
+
+Hidden: -
+
+Editor was active with edit filters between 18.3.2009 and 19.7.2010; They mainly introduced a couple of filters (so the most filters they worked on were actually introduced by them), the majority of which were disabeld/deleted again pretty fast after their creations (exceptions: 11, 148 <-- still running today);
+If my assumptions about the bots are correct and they indeed target sockpuppetry,it's interesting that the editor has 0 hidden filters.
+User page states editor is not very active anymore: https://en.wikipedia.org/w/index.php?title=User:X!&oldid=615028788
+
 ------------------------------------------
 
 User: xaosflux https://en.wikipedia.org/wiki/User:Xaosflux
