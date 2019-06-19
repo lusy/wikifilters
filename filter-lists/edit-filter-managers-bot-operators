@@ -839,23 +839,23 @@ Public filters:
 * 98, Creating very short new article -- switched on on 24.3.2009, an hour later "warn" is added as a filter action; disabled on 22 October 2009 with the comment "There is nothing wrong with a short article, lets not patronize. People can work in steps. Disable - P" (which I agree with) and re-enabled on 2 November 2009 albeit with "tag" as action, since User:Cenarium deemed it useful to be able to track the short newly created articles; Shirik edited the filter twice to optimise conditions/repair a typo
 * 129, Possible tireless sock creating film pages of non-existing films - created by Beetstra on 3 April 2009, who also added a "tag" action on 5.4.2009; Shirik optimised conditions
 * 135, Repeating characters - Shirik optimised the conditions and added new ones tested in a different filter (292)
-* 148, Users creating autobiographies
-* 167, Botched submissions to Articles for creation
-* 225, Vandalism in all caps
-* 260, Common vandal phrases
-* 280, New user altering images
-* 285, Common Vandalism
-* 289, New user creating interrogative pages
-* 290, 172 Filter
-* 292, Repeating characters in edit summary
-* 302, Possible COI
-* 303, COI Page Creation
-* 304, Rayman vandalism
-* 308, Malformed Mediation Cabal Requests
-* 314, User creates article ending with a /
-* 329, SPI disruption
-* 338, Vuvuzela vandalism
-* 343, Keemstar vandalism
+* 148, Users creating autobiographies - Shirik optimised conditions
+* 167, Botched submissions to Articles for creation - Shirik optimised pattern
+* 225, Vandalism in all caps - there was a back and forth with disabling/changing the action from "disallow" to "warn" because of false positives; after a month the "disallow" action was restored since an editor reviewed the log and found no false positives in the last 100 hits; Shirik updated swear words blacklist and the made the regex more strict (users have to be "confirmed" instead of "autoconfirmed" in order to be allowed to do this)
+* 260, Common vandal phrases -- Shirik: "Reverted changes by Tim1357 due to high rate of false positives. Looking into what happened. -- Shirik 26 Apr 2010"; was hidden for quite a while before made public by MusikAnimal with "Public per [[Special:Permalink/784131724#Privacy of general vandalism filters]] and the guideline ~MA" on 6 June 2017; updated swear words black list
+* 280, New user altering images - created and only ever touched by Shirik; was there for about 3 weeks, before Shirik deleted it on 31.1.2010; decided to disable/delete it, because of high condition count, false positives and deleted per request.
+* 285, Common Vandalism - introduced 19.1.2010 by Shirik, initially hidden, subsequently made public (3.6.2010), probably on the grounds of genera vandalism filters, see above; Shirik was quite active on the filter, updated conditions, etc. Disabled by MusikAnimal that everything is convered in other filters "Disabling. Merged one rule into 384, now everything this filter captures should be handled by 380, 384, 614 and others ~MA 2016.09.11"
+* 289, New user creating interrogative pages - introduced by Shirik on 7.2.2010 (reason: sounds like a how-to guide); Shirik tinkered on it for awhile; disabled on 14.4.2011, due to condition limit; marked as deleted on 4.4.2013
+* 290, 172 Filter -- introduced by Shirik on 8 February 2010, and disabled, again by Shirik on 14.2.2010 on the ground of the relevant pages being protected
+* 292, Repeating characters in edit summary -- "Merged to #135 to save desparately-needed conditions. - Shirik 12 Feb 2010" (mentioned already on 135) -- was enabled for an hour only before merged to 135
+* 302, Possible COI - implemented by shirik bc of a particular incident probaly; deactivated and deleted by Shirik again, on grounds of insufficient activity
+* 303, COI Page Creation -- similar to above filter; same IP targeted
+* 304, Rayman vandalism -- introduced by Shirik on grounds of a particular incident ("Per WP:EF/R, prolific sock introducing deliberate inaccuracies. Log only for testing. -- Shirik 11 Mar 2010") on 12.3.2010; and disabled again + deleted on 20.3.2010 due to no hits
+* 308, Malformed Mediation Cabal Requests - introduced by Shirik on 18.3.2010. disabled by Prodego on 21.3.2010 with "The abusefilter is intended to stop abusive edits. This is neither problematic, nor abusive. Disable - P"; deleted by Shirik on 23.3.2010
+* 314, User creates article ending with a / - Shirik optimised conditions here; filter was eventually switched off, in order to save conditions, since the problem was deemed not that big; (there were 532 hits altogether)
+* 329, SPI disruption -- introduced by Shirik on 10.5.2010 with the announcement "will be disabled soon"; never tripped; deleted by Shirik on 11.5.2010
+* 338, Vuvuzela vandalism -- introduced by Shirik on 15.6.2010; active for 3 days, 5 hits; disabled again by Shirik on 18.6.2010, due to low activity; (Shirik also made it hidden -> public a couple of hours after introducing it)
+* 343, Keemstar vandalism -- created by Shirik on 15.7.2010 due to a particular incident; 10 hits; deleted by NuclearWarfare on 20.9.2010
 
 Hidden filters the editor was last to modify:
 * 215,AnonTalk 2
@@ -873,7 +873,7 @@ Hidden filters the editor was last to modify:
 * 349,Dudley Attacks
 * 469,Shirik's Test Filter
 
-Relatively active edit filter manager. Was the last editor to modify a number of hidden filters and has worked on quite some public filters, updating patterns, to accomodate new behaviour or in the attempt to reduce false positives; also in order to accommodate to the condition limit for filters (for which I'm still not quite certain how it works)
+Relatively active edit filter manager (or was quite active; all changes made by them come from 2010). Was the last editor to modify a number of hidden filters and has worked on quite some public filters, updating patterns, to accomodate new behaviour or in the attempt to reduce false positives; also in order to accommodate to the condition limit for filters (for which I'm still not quite certain how it works)
 
 
 ------------------------------------------
