@@ -894,6 +894,17 @@ ProcseeBot https://en.wikipedia.org/wiki/User:ProcseeBot
     ProcseeBot automatically blocks proxies due to both the local policy against open proxies on Wikipedia and Wikimedia's global policy against open proxies. It seeds information from public proxy lists and checks to make sure the proxy is open and usable, and if so, proceeds to block it.
     Vandalism related?: kinda, similar to TorNodeBot
 
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Slakr&filter=
+Public:
+* 167, Botched submissions to Articles for creation - disabled temporarily by Slakr in order to update a condition; condition updated, enabled again (within a day)
+
+Hidden:
+* 923,Possible Nigerian phone scams
+
+kay.. so not really active as an edit filter manager...
+
 ------------------------------------------
 
 User: Tedder https://en.wikipedia.org/wiki/User:Tedder
