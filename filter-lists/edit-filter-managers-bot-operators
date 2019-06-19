@@ -547,9 +547,163 @@ Public filters:
 * 971, Additions of missing files
 * 994, Article created as template
 
+Hidden filters (user was the last to modify)
+* 2,Test filter: for testing private filters
+* 34,New or unregistered user blanking someone else's user or user talk page
+* 56,Inappropriate CSS code in article space
+* 68,Pagemove throttle for new users
+* 139,Fixed position vandalism
+* 213,Saban troll
+* 247,Adding emails in articles
+* 257,Sonichu and other repeat vandalism
+* 261,Page creation throttle for new users
+* 264,Specific-page vandalism
+* 287,Sanders conspiracies
+* 294,Personal attacks
+* 390,Dynamic IP vandalism
+* 311,Lewis Hamilton racism
+* 341,Persistent talk page abuse from IP ranges
+* 405,Verizon vandal
+* 426,TV station sockpuppeteer
+* 434,Roman vandal
+* 464,Possible open proxy
+* 466,Userspace & talk page spamming
+* 467,Sakaisinai7
+* 468,Fixing vandal
+* 476,Kingdom of Sardinia
+* 477,Chinese pattern spambots
+* 483,Users creating own talk
+* 486,Chilean vandal
+* 489,"Long term IP-hopping abuse, more"
+* 493,New Rochelle Sock
+* 501,Chinese blogpost spammer
+* 503,GISHWHES
+* 508,Long-term pattern abuse II
+* 509,Long-term pattern abuse III
+* 510,JonesManorFarm
+* 512,Long-term pattern abuse IV
+* 516,Celebrity vandal
+* 517,Train station removal
+* 518,Hoppity Hooper vandal
+* 523,Page creation spammer
+* 533,Balun link spammer
+* 534,Preuss filter
+* 535,Voobly spam
+* 538,Possible sockpuppetry
+* 541,Open proxies
+* 542,Open proxies II
+* 546,"Disruptive user from Hyogo, Japan"
+* 547,Cat Creek
+* 548,Fort Irwin National Training Center rangeblock
+* 551,Leandro Carvalho rangeblock
+* 552,Wikiassociate rangeblock
+* 555,Aaron spam
+* 558,FIFA West Germany
+* 561,Chaosname II
+* 562,Hackneyhound
+* 563,Graham W Phillips
+* 567,Disruptive CSD nominations
+* 568,SPI Clerk impersonation
+* 569,Texas film fan
+* 570,Checkmarx
+* 571,Persistent Disruption
+* 575,User moved sandbox from user space
+* 576,Dantherocker1
+* 580,Airport vandal
+* 581,Dantherocker1 II
+* 584,Improper Template Usage by New User
+* 588,Promotional usernames
+* 594,Verizon mobile vandal
+* 596,Elevator vandal
+* 597,Europefan
+* 599,FPV
+* 605,Animal Welfare issues
+* 615,Reference desk trolling
+* 620,archive removal by disruptive editors
+* 621,Spambot Filter
+* 622,Genre edit-warring
+* 623,Signing in articles II
+* 628,User talk page vandalism by sockpuppets
+* 629,Possible Spamming
+* 634,Long-term sock attack
+* 637,MusikAnimal test filter
+* 641,AP disruption
+* 645,Camp Half-Blood vandal
+* 648,Long-term abuse using Korean
+* 649,SP disruption
+* 652,Jajadelera
+* 656,Driver 3 vandal
+* 665,revescom
+* 668,GP disruption
+* 671,Raghu Acharya
+* 672,technewsprovider
+* 676,Highway vandal
+* 683,New users removing sections from the Reference Desk
+* 684,temporary vandalism
+* 685,HH disruption
+* 713,Lee Corso
+* 717,Temporary blacklisted usernames
+* 723,MusikAnimal's test filter
+* 734,McAusten
+* 737,Christ the Logos
+* 743,Prolific socker IV
+* 749,SS disruption
+* 759,Digitalravan‎
+* 760,Sandbox vandal
+* 763,Persistent vandal
+* 771,Orion LTA
+* 773,TNT's test filter
+* 774,Eolgi highway vandal
+* 785,Template doc vandalism
+* 790,Nationality inventions
+* 792,Harassment
+* 797,Synth LTA
+* 805,Compromised activity
+* 806,New account suspicious activity
+* 807,Ourmine
+* 810,Suix vandal
+* 811,Aaron Christopher
+* 813,Bee movie script
+* 815,TV vandal
+* 817,Obamacare vandalism
+* 823,Suspicious activity from new account
+* 824,Zeitgeist
+* 825,Descent category added
+* 826,Image flag vandal
+* 832,Profile sock
+* 835,Temporary vandalism II
+* 842,Talk page abuse
+* 844,Test filter
+* 845,Prevention of AIV/UAA hinderance
+* 849,Cat Creek II
+* 852,Birth/death place vandal
+* 857,DigitalRavan
+* 863,LGBT LTA
+* 865,maghsoudi
+* 866,Temporary article title watch
+* 868,Template vandalism
+* 870,nowiki phishing
+* 873,LTA 873
+* 882,LTA 882
+* 902,Article creation as newly confirmed editor
+* 908,Si Thu Moe Min
+* 918,LTA 918
+* 920,Possible sockpuppetry from EnglishEfternamn
+* 924,Supersonic Transport Vandal
+* 925,Image vandalism
+* 926,Image vandalism II
+* 931,Image vandalism I
+* 936,LTA 936
+* 937,Qwertywander long-term abuse
+* 939,Tracking 201810
+* 944,Image vandalism III
+* 951,TFA disruption
+* 952,Image vandalism IV
+
+
 Interestingly, we could say the XLinkBot dev is a bot person, who has implemented a couple of minor filter (changes) to facilitate the work of XLinkBot.
 In contrast, MusikAnimal seems to be a filter person, who has implemented a couple of bots that track (and help facilitate) filter work. (And a couple of others, entirely unrelated bots).
-MusikAnimal is a quite active edit filter manager who seems to do a lot of maintenance work on a great number of filters.
+MusikAnimal is a quite active edit filter manager who seems to do a lot of maintenance work on a great number of filters. (investigate in more detail filter work)
 
 ------------------------------------------
 
