@@ -947,6 +947,21 @@ EarwigBot https://en.wikipedia.org/wiki/User:EarwigBot
     20 	{{Infobox station}} merging 	Replaced {{Infobox China station}} and {{Infobox Japan station}} with {{Infobox station}} following two template discussions (China, Japan) and a previous BRFA.
     Vandalism related: task 1 reports possible copyright vios, I've labeled some filters as copyright vio related
 
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=The+Earwig&filter=
+Public:
+* 1, General test filter - has tested something probably^^
+* 164, Possible cut and paste moves -- enabled 2.5.2009 by Dragons Flight; on since then; tagging enabled on 29.5.2009; The Earwig changed a string in the regex pattern to small case.
+* 440, intextual.com markup - filter was enabled twice (8.11.2011-15.12.2011 and 16.7.2012-19.7.2012); The Earwig was the editor who enabled the filter the 2nd time; Gogo Dodo merged it to 345 then
+* 642, OTRS template added by non-OTRS member (global) - introduced 23.11.2014 ("warn"); on 22.1.2017 "disallow" was added to filter actions; briefly disabled on 13.4.2018 (for 2mins); The Earwig added local bots to excluded user groups (updated filter pattern to reflect more closely the problem the filter was supposed to target)
+* 733, New user creating a page in someone else's userspace - introduced by The Earwig on 2.11.2015: "Previously tested on Filter 1. Sometimes catches socking and other weirdness. - Earwig 2015-11-02"; pattern improved since then by Galobtter; still on and running, log only
+
+Hidden:
+-
+
+Filter and bot activity of the editor seemingly unrelated; None of the filters that they edited has anything to do with copyright vio..
+
 ------------------------------------------
 
 User: Thehelpfulone https://en.wikipedia.org/wiki/User:Thehelpfulone
