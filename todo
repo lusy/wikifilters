@@ -26,6 +26,8 @@ for fun
 
 # Next steps
 
+* makes something out of this comment "Reset filter, it hit the 5% limit somehow. -- Shirik 14 May 2010" https://en.wikipedia.org/wiki/Special:AbuseFilter/history/79/diff/prev/5529 : what is the 5% limit? What does it mean to reset a filter?
+* check with the history exposed endpoint what filters were introduced immediately (first couple of hours/days): https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=
 * are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter"
 * consider adding permalinks with exact revision ID as sources!
 * https://en.wikipedia.org/wiki/Category:Wikipedia_bot_operators

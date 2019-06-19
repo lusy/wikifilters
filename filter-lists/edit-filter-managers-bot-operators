@@ -745,6 +745,7 @@ SQLBot https://en.wikipedia.org/wiki/User:SQLBot
 User also plays around with ORES: https://en.wikipedia.org/wiki/User:SQL/AFC-Ores
 
 Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=SQL&filter=
 * 949, SQL Testing filter
 Otherwise they don't appear in the history at all. May have worked (but not the last modifying editor) on a bunch of hidden filters, but there is no way to know that.
 
@@ -799,6 +800,7 @@ Snotbot https://en.wikipedia.org/wiki/User:Snotbot
     Vandalism related?: kind of: helps patrolling/reviewing newly created articles
 
 Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Scottywong&filter=
 Public filters:
 * 479, Adding example.jpg to article space -- was introduced by Scottywong on 26 June 2012; filter was disabled 1.5 years later (January 2014) with the argument that it's more likely to scare newbies off rather than encourage them to fix the problem and that they are gonna fix it anyway upon seeing the example.jpg in the published article; in June 2016 the filter was marked as deleted, since the check for example.jpg was now incorporated in filter 631
 
@@ -819,6 +821,60 @@ TorNodeBot https://en.wikipedia.org/wiki/User:TorNodeBot
 
 When all three of these conditions are met, a temporary block is placed on the node.
     Vandalism related?: maybe indirectly, since users with malicious motivations may try to hide their IPs
+
+Which filters has the editor worked on?
+https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=Shirik&filter=
+Public filters:
+
+* 1, !!!!! in the article-space (then name, 29.4.2010, today that's the "General test filter")
+* 3, New user blanking articles - one of th first filters ever; used to give a warning, was set to "disallow" by Galobtter on 18 January 2019; Shirik edited once letting it monitor namespace Portal as well (present-day version only monitors the main article namespace)
+* 9, Personal attacks by unregistered or new user (filter is disabled at the moment, since 11 September 2012; used to be hidden  12 September 2010-9 September 2012); introduced on 18.3.2009 by Bjweeks; permamently set to "disallow" on 20.3.2009; Shirik added/removed (swear words) from the reference regex 2 times in Feb 2010
+* 11, You/He/She/It sucks - introduced by X! on day2 after the activation of the extension: 18 March 2009; filter still active; it issues warnings, was briefly set to "disallow" between 27 April 2010-30 April 2010; and was hidden between 12 September 2010-21 August 2012; Shirik was the editor who removed the "disallow" action and set it to "tag", since there were false positives (according to comment)
+* 12, Replacing a page with obscenities - introduced by Nihiltres on day 2: 18.3.2019; set to "warn" and "disallow"; set to "hidden" by Prodego later the same day. Set again to public by MusikAnimal on 6 June 2017 following a discussion and consensus on the privacy (or publicity^^) of general vandalism filters: https://en.wikipedia.org/w/index.php?oldid=784131724#Privacy_of_general_vandalism_filters; Shirik edited multiple times in order to update the regex to accomodate false positives on 28 January 2010; (in the meantime they also briefly took out all filter actions but logging); they also edited to update the "bad words filter list" to accomodate names of a couple of edit filter managers who were apparently targetted by trolls at the time;
+* 46, "Poop" vandalism - introduced by Nihiltres on 18 March 2009 (day2); set to "warn" the same day and to "disallow" on 19 March 2009; was briefly set to "hidden" by Tim1357 on 28 April 2010 and reverted to public on 29.4.2010 by Prodego with the comment "Should not be private. -P"; Shirik updated the regex upon several occasions in order to accomodate to recent incidents probably and disabled the filter altogether for a couple of hours on 29.4.2010 because it was consuming up too many conditions: "Disabling. We're near 5% condition limit hits and this is a candidate for the culprit. -- Shirik"; Shirik then enabled the filter again, later the same day, after updating/optimising the filter pattern
+* 61, New user removing references - introduced on day 3: 19.3.2009 by MacGyverMagic; they set it to "hidden" on  20 March 2009 which was consequently removed by Zzuuzz on 22.3.2009 bc deemed unnecessary; filter was disabled on 3 March 2012 and marked as "deleted" on 4 April 2013; it was enabled again on 3 May 2015 by Rich Farmbrough in "log only" mode; on 22 October 2016 Cenarium set filter action to "Tag: references removed"; Shirik updated the edit delta on  25 January 2010 in order to accomodate particulare cases of sockpuppetry
+* 79, New user removing reference grouping tags - Shirik's contribution on 14.5.2010 is "Reset filter, it hit the 5% limit somehow. -- Shirik 14 May 2010" https://en.wikipedia.org/wiki/Special:AbuseFilter/history/79/diff/prev/5529 (not quite sure what the 5% limit is or how does one reset a filter and what it means)
+* 81, Badcharts - Shirik optimised the regex (and re-enabled the filter) on 24.4.2010, which was disabled on 21.4.2010 on grounds of being too expensive
+* 82, Nowiki on urls - Shirik marked the filter as deleted on 2 May 2010, since it was apparently supereseded by filter 278
+* 98, Creating very short new article -- switched on on 24.3.2009, an hour later "warn" is added as a filter action; disabled on 22 October 2009 with the comment "There is nothing wrong with a short article, lets not patronize. People can work in steps. Disable - P" (which I agree with) and re-enabled on 2 November 2009 albeit with "tag" as action, since User:Cenarium deemed it useful to be able to track the short newly created articles; Shirik edited the filter twice to optimise conditions/repair a typo
+* 129, Possible tireless sock creating film pages of non-existing films - created by Beetstra on 3 April 2009, who also added a "tag" action on 5.4.2009; Shirik optimised conditions
+* 135, Repeating characters - Shirik optimised the conditions and added new ones tested in a different filter (292)
+* 148, Users creating autobiographies
+* 167, Botched submissions to Articles for creation
+* 225, Vandalism in all caps
+* 260, Common vandal phrases
+* 280, New user altering images
+* 285, Common Vandalism
+* 289, New user creating interrogative pages
+* 290, 172 Filter
+* 292, Repeating characters in edit summary
+* 302, Possible COI
+* 303, COI Page Creation
+* 304, Rayman vandalism
+* 308, Malformed Mediation Cabal Requests
+* 314, User creates article ending with a /
+* 329, SPI disruption
+* 338, Vuvuzela vandalism
+* 343, Keemstar vandalism
+
+Hidden filters the editor was last to modify:
+* 215,AnonTalk 2
+* 283,Copyright violations in edit summaries
+* 284,Image vandalism
+* 286,Tokusatsu Vandal
+* 297,Jeske's Test Filter
+* 299,Personal attacks
+* 300,Cross-posting
+* 309,Unusual change of URLs
+* 318,School attacks
+* 321,Shirik's test filter
+* 332,J.delanoy vandal
+* 348,Rapid insertion of external links
+* 349,Dudley Attacks
+* 469,Shirik's Test Filter
+
+Relatively active edit filter manager. Was the last editor to modify a number of hidden filters and has worked on quite some public filters, updating patterns, to accomodate new behaviour or in the attempt to reduce false positives; also in order to accommodate to the condition limit for filters (for which I'm still not quite certain how it works)
+
 
 ------------------------------------------
 
