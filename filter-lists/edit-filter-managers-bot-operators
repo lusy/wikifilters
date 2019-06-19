@@ -744,6 +744,10 @@ SQLBot https://en.wikipedia.org/wiki/User:SQLBot
 
 User also plays around with ORES: https://en.wikipedia.org/wiki/User:SQL/AFC-Ores
 
+Which filters has the editor worked on?
+* 949, SQL Testing filter
+Otherwise they don't appear in the history at all. May have worked (but not the last modifying editor) on a bunch of hidden filters, but there is no way to know that.
+
 ------------------------------------------
 
 User: Salix alba https://en.wikipedia.org/wiki/User:Salix_alba
@@ -793,6 +797,14 @@ Snotbot https://en.wikipedia.org/wiki/User:Snotbot
         Snotbot periodically updates a summary table for open unblock requests.
 
     Vandalism related?: kind of: helps patrolling/reviewing newly created articles
+
+Which filters has the editor worked on?
+Public filters:
+* 479, Adding example.jpg to article space -- was introduced by Scottywong on 26 June 2012; filter was disabled 1.5 years later (January 2014) with the argument that it's more likely to scare newbies off rather than encourage them to fix the problem and that they are gonna fix it anyway upon seeing the example.jpg in the published article; in June 2016 the filter was marked as deleted, since the check for example.jpg was now incorporated in filter 631
+
+Hidden filters: (user was the last to modify it)
+* 482,Using comments to evade edit filter
+
 
 ------------------------------------------
 
