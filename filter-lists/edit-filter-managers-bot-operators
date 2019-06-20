@@ -101,7 +101,7 @@ https://en.wikipedia.org/w/index.php?title=Special:AbuseFilter/history/0&dir=pre
 * 907,St. Bernard (dog) -- enabled by Beetstra on 21.3.2018 because of a particular incident (as it seems), but never actually tripped. disabled again on 30.12.2018 by Galobtter https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=907
 * 160,"Punchbowl, New South Wales" - as of 6.01.2019 (the date our data set originates from), Beetstra was the last editor to modify this filter. It is however hidden, so we don't know any details
 * 81, Badcharts -- only one edit, disabling the filter for couple of hours, since percieved as too slow and potentially able to cause a timeout (filter was deleted 6 year later in June 2015)
-* 61, New user removing references - introduced by Beetstra on 19 March 2010 (who never touched it again). This is the filter with highest hitcount in the history of edit filters; was disabled between 3.3.2012 (with the argument there are too many false positives; which could explain the high hitcount as well^^) and 3.5.2015. Up and running today.
+* 61, New user removing references - Beetstra edited on 19 March 2010 (and never touched it again). This is the filter with highest hitcount in the history of edit filters; was disabled between 3.3.2012 (with the argument there are too many false positives; which could explain the high hitcount as well^^) and 3.5.2015. Up and running today.
 * 627, Promotional text added by user to draft in own user(-talk) page or in draft namespace -- introduced by Beetstra as a hidden filter on 18 August 2014 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=627 ; according to comments: "Split from Edit Filter 354"; made public by Rich Farmbrough on 6 August 2015, apparently according to a discussion
 
 ----------------------------------
@@ -417,18 +417,18 @@ Public filters:
 * 3, New user blanking articles - edited 3 times by MusikAnimal, updating variable names (for performance reasons or because deprecated?); adding conditions for performance reasons (! "confirmed" in user_groups); reducing text size limit
 * 5, User self-renaming or moving user talk pages into article talk space -- renaming variables
 * 9, Personal attacks by unregistered or new user -- renaming variables
-* 11, You/He/She/It sucks
-* 12, Replacing a page with obscenities
-* 29, New user removing speedy deletion templates
-* 30, Large deletion from article by new editors
-* 33, Talk page blanking by unregistered/new user
-* 39, School libel and vandalism
-* 46, "Poop" vandalism
-* 50, Shouting
-* 59, New user removing templates on image description
-* 61, New user removing references
-* 80, Link spamming
-* 98, Creating very short new article
+* 11, You/He/She/It sucks - renaming variables
+* 12, Replacing a page with obscenities - made filter public as per [[Special:Permalink/784131724#Privacy of general vandalism filters]] on 6.6.2017 (filter was created on day 2: 18.3.2009)
+* 29, New user removing speedy deletion templates - filter was never disabled since its introduction on 18.3.2009, only actions have varied between tag/warn/and a ~2 month period with log only in 2009; MA updated pattern once (mostly cosmetic? took out a pair of brackets and few new lines)
+* 30, Large deletion from article by new editors - never disabled since intro on 18.3.2009; MA updated variables and took out some parenthesis/new lines in the pattern ones
+* 33, Talk page blanking by unregistered/new user - never disabled since intro on 18.3.2009; MA updated variables and took out some parenthesis/new lines in the pattern ones
+* 39, School libel and vandalism - never disabled since intro on 18.3.2009; was hidden 19.3.2009-20.3.2009; 10.4.2011-12.4.2012; MA updated variables and took out some parenthesis/new lines in the pattern ones
+* 46, "Poop" vandalism - introduced by Nihiltres on 18 March 2009 (day2); set to "warn" the same day and to "disallow" on 19 March 2009; was briefly set to "hidden" by Tim1357 on 28 April 2010 and reverted to public on 29.4.2010 by Prodego with the comment "Should not be private. -P"; MA updated variables and took out some parenthesis/new lines in the pattern ones and took out the "warn" action on 23.10.2018 (so now it's "disallow" only)
+* 50, Shouting - never disabled since intro on 18.3.2009; hidden 18.3.2009-19.3.2009; MA updated variables and took out some parenthesis/new lines in the pattern ones
+* 59, New user removing templates on image description - never disabled since intro on 19.3.2009; MA updated variables and took out some parenthesis/new lines in the pattern ones
+* 61, New user removing references - introduced on 19.3.2009; disabled on 19.3.2009 for couple of hours and twice on 27.3.2009 for a couple of minutes, also 3.3.2012-3.5.2015 (and deleted 4.3.2013-3.5.2015), the last time with "Disable. Most of the hits are false positives. -Sole Soul"; hidden 20.3.2009-22.3.2009 (" Also hiding, to avoid people exploiting any holes. - MacGyverMagic" - "removed private flag, unnecessary"); MA updated variables and whitespace and simplified the regex, so that it was dealing with references only
+* 80, Link spamming - introduced 22.3.2009 and never disabled since (except for 6mins on 22.3.2009); actions have varied between "throttle", "warn", "tag" and combinations thereof; MA re-aranged conditions for speed, updated actions and updated pattern (to check for https as well);
+* 98, Creating very short new article - introduced 24.3.2009, active today; disabled for 22.10.2009-2.11.2009 "There is nothing wrong with a short article, lets not patronize. People can work in steps. Disable - P" (re-enabled with "tag" only instead of a warning); MA updated pattern to narrow down targetted users
 * 113, Misplaced #redirect in articles
 * 117, removal of Category:Living people
 * 149, User adds link containing username
@@ -545,7 +545,7 @@ Public filters:
 * 932, Adding "theknot.com" into BLP articles
 * 934, Unconfirmed users creating mainspace articles
 * 971, Additions of missing files
-* 994, Article created as template
+* 994, Article created as template - created by MA on 25.5.2019 (ah, so it's brand new, not in the initial data set); re-spawned because of cases caught by another filter ("Seems to be the new thing. I've seen quite a few via Special:AbuseFilter/600. This filter is more refined to capture only what is likely articles. Log-only ~MA")
 
 Hidden filters (user was the last to modify)
 * 2,Test filter: for testing private filters
@@ -701,9 +701,10 @@ Hidden filters (user was the last to modify)
 * 952,Image vandalism IV
 
 
+MusikAnimal has been an active edit filter editor since 16.5.2014
 Interestingly, we could say the XLinkBot dev is a bot person, who has implemented a couple of minor filter (changes) to facilitate the work of XLinkBot.
 In contrast, MusikAnimal seems to be a filter person, who has implemented a couple of bots that track (and help facilitate) filter work. (And a couple of others, entirely unrelated bots).
-MusikAnimal is a quite active edit filter manager who seems to do a lot of maintenance work on a great number of filters. (investigate in more detail filter work)
+MusikAnimal is a quite active edit filter manager who seems to do a lot of maintenance work (I'd say they may be labeled a filter gnome https://en.wikipedia.org/wiki/Wikipedia:WikiGnome) on a great number of filters (I have the feeling that at some point variable names were updated and MA was the editor who did a lot of the update/cleanup work)
 
 ------------------------------------------
 
