@@ -63,37 +63,42 @@ Example
 'politically_motivated'
 
 ### Hardcore vandalism (the really malicious cases)
-('sockpuppetry', 59), ('sockpuppetry?', 35), ('long_term_abuse', 35), ('long_term_abuse?', 9), ('abuse', 1), ('abuse?', 21), ('harassment?', 31), ('harassment', 24), ('doxxing?', 2), ('personal_attacks', 6), ('personal_attacks?', 4), ('impersonation', 1), ('not_polite', 1),
+'sockpuppetry'
+'long_term_abuse'
+'abuse'
+'harassment'
+'doxxing'
+'personal_attacks'
+'impersonation'
+'not_polite'
 
 
 'spam'
 'prank'
 
-('phishing?', 1), ('malware?', 1), ('malware', 1),
+'phishing'
+'malware'
 
 'copyright violation'
-('guideline_vio?', 1),
+'guideline_vio'
+'bad_style'
+'lazyness'
+'edit_warring'
+'wiki_policy'
 
+'biased_pov'
+'conflict_of_interest'
+'stockbrocker_vandalism'
+'self_promotion'
+'seo'
 
+'good_faith'
 
+'maintenance'
+'bug'
+'test'
 
-('biased_pov', 17), ('biased_pov?', 15),
-
-('conflict_of_interest', 3), ('stockbrocker_vandalism', 3), ('self_promotion?', 2), ('conflict_of_interest?', 1), ('self_promotion', 1),
-
-('seo', 8), ('seo?', 4),
-
-('bad_style', 13), ('bad_style?', 12), ('edit_warring?', 3),
-
-('good_faith?', 63), ('good_faith', 48),
-
-('lazyness', 4),
-
-('maintenance', 7), ('maintenance?', 5), ('maintenance? ', 1),
-
-('bug', 5), ('bug?', 10), ('wiki_policy?', 9),
-
-('test', 43), ('test?', 4),
-
-('unknown', 71), ('misc', 59), ('misc?', 8), ('unclear', 14),
+'unknown'
+'misc'
+'unclear'
 
