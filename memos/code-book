@@ -20,10 +20,21 @@ Such non-descriptive hidden filters I labeled with 'hidden_vandalism'. (The seco
 And then again, there were also cases where I could not determine any suitable label, since I didn't understand the regex pattern or could not press it into a category.
 These were labeled 'unknown'.
 
+For a number of filters, it was particularly difficult to determine whether they were targeting vandalism or good faith edits.
+The only thing that would have distinguished between the two would be the editor's motivation, which we have no way of knowing.
+During the first labeling session, I tended to label such filters with 'vandalism?', 'good_faith?'.
+
+For the cross-validation labeling (2nd time), I intend to stick myself to the "assume good faith" guideline %TODO: quote
+and only label as vandalism cases where we cannot assume good faith anymore.
+One characteristic/feature which guided me here is the filter action which represents the judgement of the edit filter manager(s).
+Since communication is crucial when assuming good faith, all ambiguous cases which have "warn" as a filter action, will receive a 'good_faith' label.
+On the other hand, I will label all filters set to "disallow" as 'vandalism' or a particular type thereof, since the filter action is a clear sign that at least the edit filter managers have decided that seeking a dialog with the offending editor is no longer an option.
+
 The second time, I labeled the whole data set again, this time using the here quoted compiled code book and assigned to every filter every label I deemed appropriate, without looking at the labels I assigned the first time around.
 I then compared the labels from both coding sessions. %TODO And did what?; how big was the divergence between both coding sessions?; should I select one, most specific label possible? or allow for multiple labels? what should I do with the cases where it's not clear whether it's vandalism or good faith?
 %TODO quote M's methodology book
 
+During the cross-validation labelling (2nd labeling), I 
 
 Def
 Example
