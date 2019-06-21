@@ -1,0 +1,88 @@
+# Code book
+
+Following codes were used for labeling the filter data set.
+\footnote{I use the words "codes"/"tags"/"labels" interchangeably.}
+
+On the one hand, for vandalism related labels, I used the different vandalism types pinpoined/identified by the community in https://en.wikipedia.org/wiki/Wikipedia:Vandalism_types .
+On the other, based on coding methodologies applied by Grounded Theory scholars, I let the labels emerge during coding.
+
+Unfortunately, multiple coders were not available, so, in order to ensure at least intra-coder integrity, I labeled the dataset twice.
+The first time, I looked through it paying special attention to the name of the filters, the comments, as well as the regular expression pattern constituting the filter and identified one or several possible labels.
+In ambiguous cases, I either labeled the filter with the code which I deemed most appropriate and a question mark, or assigned all possible labels.
+There were also cases for which I could not gather any insight relying on the name, comments and pattern, since the filters were hidden from public view and the name was not descriptive enough.
+However, I think it is safe to assume that all hidden filters target a form of (more or less grave) vandalism, since the guidelines suggest that filters should not be hidden unless dealing with cases of persistent and specific vandalism where it could be expected that the vandalising editors will actively look for the filter pattern in their attempts to circumvent the filter. %TODO: quote needed
+Some of the hidden filters deal with cases of personal attacks.
+These are hidden to protect the persons involved. %TODO quote needed
+
+%TODO disclose links to 1st and 2nd labelling
+Such non-descriptive hidden filters I labeled with 'hidden_vandalism'. (The second time)
+
+And then again, there were also cases where I could not determine any suitable label, since I didn't understand the regex pattern or could not press it into a category.
+These were labeled 'unknown'.
+
+The second time, I labeled the whole data set again, this time using the here quoted compiled code book and assigned to every filter every label I deemed appropriate, without looking at the labels I assigned the first time around.
+I then compared the labels from both coding sessions. %TODO And did what?; how big was the divergence between both coding sessions?; should I select one, most specific label possible? or allow for multiple labels? what should I do with the cases where it's not clear whether it's vandalism or good faith?
+%TODO quote M's methodology book
+
+
+Def
+Example
+
+
+## Cluster Vandalism
+
+'vandalbot'
+'page_move_vandalism'
+'silly_vandalism'
+'trolling'
+'hoaxing'
+'image_vandalism'
+'talk_page_vandalism'
+'template_vandalism'
+'template_spam'
+'link_vandalism'
+'abuse_of_tags_vandalism'
+'avoidant_vandalism'
+'username_vandalism'
+'general vandalism' -- vandalism for which none of the more specific tags applied
+'hidden_vandalism'
+
+### Politically motivated vandalism
+'religious_vandalism'
+'politically_motivated'
+
+### Hardcore vandalism (the really malicious cases)
+('sockpuppetry', 59), ('sockpuppetry?', 35), ('long_term_abuse', 35), ('long_term_abuse?', 9), ('abuse', 1), ('abuse?', 21), ('harassment?', 31), ('harassment', 24), ('doxxing?', 2), ('personal_attacks', 6), ('personal_attacks?', 4), ('impersonation', 1), ('not_polite', 1),
+
+
+'spam'
+'prank'
+
+('phishing?', 1), ('malware?', 1), ('malware', 1),
+
+'copyright violation'
+('guideline_vio?', 1),
+
+
+
+
+('biased_pov', 17), ('biased_pov?', 15),
+
+('conflict_of_interest', 3), ('stockbrocker_vandalism', 3), ('self_promotion?', 2), ('conflict_of_interest?', 1), ('self_promotion', 1),
+
+('seo', 8), ('seo?', 4),
+
+('bad_style', 13), ('bad_style?', 12), ('edit_warring?', 3),
+
+('good_faith?', 63), ('good_faith', 48),
+
+('lazyness', 4),
+
+('maintenance', 7), ('maintenance?', 5), ('maintenance? ', 1),
+
+('bug', 5), ('bug?', 10), ('wiki_policy?', 9),
+
+('test', 43), ('test?', 4),
+
+('unknown', 71), ('misc', 59), ('misc?', 8), ('unclear', 14),
+
