@@ -6,26 +6,32 @@ Following codes were used for labeling the filter data set.
 On the one hand, for vandalism related labels, I used the different vandalism types pinpoined/identified by the community in https://en.wikipedia.org/wiki/Wikipedia:Vandalism_types . %TODO: I need arguments why I haven't taken this 1:1
 On the other, based on coding methodologies applied by Grounded Theory scholars, I let the labels emerge during coding.
 
-Unfortunately, multiple coders were not available, so, in order to ensure at least intra-coder integrity, I labeled the dataset twice.
-The first time, I looked through it paying special attention to the name of the filters, the comments, as well as the regular expression pattern constituting the filter and identified one or several possible labels.
+I labeled the dataset twice.
+One motivation herefor was to return to it once I've gained better insight into the data and more detailed understanding of it and use this newly gained knowledge in order to re-evaluate ambiguous cases.
+Another motivation for this second round of labeling was to ensure at least some intra-coder integrity, since, unfortunately, multiple coders were not available.
+
+The first time, I looked through the data paying special attention to the name of the filters, the comments, as well as the regular expression pattern constituting the filter and identified one or several possible labels.
 In ambiguous cases, I either labeled the filter with the code which I deemed most appropriate and a question mark, or assigned all possible labels.
 There were also cases for which I could not gather any insight relying on the name, comments and pattern, since the filters were hidden from public view and the name was not descriptive enough.
-However, I think it is safe to assume that all hidden filters target a form of (more or less grave) vandalism, since the guidelines suggest that filters should not be hidden unless dealing with cases of persistent and specific vandalism where it could be expected that the vandalising editors will actively look for the filter pattern in their attempts to circumvent the filter. %TODO: quote needed
+However, upon some further reflection, I think it is safe to assume that all hidden filters target a form of (more or less grave) vandalism, since the guidelines suggest that filters should not be hidden unless dealing with cases of persistent and specific vandalism where it could be expected that the vandalising editors will actively look for the filter pattern in their attempts to circumvent the filter. %TODO: quote needed
+Therefore, during the second round of labeling I intend to label all such cases as 'hidden_vandalism'.
+
+%TODO maybe take this out here
 Some of the hidden filters deal with cases of personal attacks.
 These are hidden to protect the persons involved. %TODO quote needed
 
 %TODO disclose links to 1st and 2nd labelling
-Such non-descriptive hidden filters I labeled with 'hidden_vandalism'. (The second time)
 
 And then again, there were also cases where I could not determine any suitable label, since I didn't understand the regex pattern or could not press it into a category.
-These were labeled 'unknown'.
+During the 1st labeling, these were labeled 'unknown', 'unclear' or 'not sure'.
+For the second round, I intend to unify them under 'unknown'.
 
 For a number of filters, it was particularly difficult to determine whether they were targeting vandalism or good faith edits.
 The only thing that would have distinguished between the two would be the editor's motivation, which we have no way of knowing.
 During the first labeling session, I tended to label such filters with 'vandalism?', 'good_faith?'.
 
-For the cross-validation labeling (2nd time), I intend to stick myself to the "assume good faith" guideline %TODO: quote
-and only label as vandalism cases where we cannot assume good faith anymore.
+For the cross-validation labeling (2nd time), I intend to stick to the "assume good faith" guideline myself %TODO: quote
+and only label as vandalism cases where we definitely can no longer assume good faith.
 %TODO compare also with revising codes as the analysis goes along according to Grounded Theory
 One characteristic/feature which guided me here is the filter action which represents the judgement of the edit filter manager(s).
 Since communication is crucial when assuming good faith, all ambiguous cases which have "warn" as a filter action, will receive a 'good_faith' label.
@@ -34,8 +40,6 @@ On the other hand, I will label all filters set to "disallow" as 'vandalism' or 
 The second time, I labeled the whole data set again, this time using the here quoted compiled code book and assigned to every filter every label I deemed appropriate, without looking at the labels I assigned the first time around.
 I then compared the labels from both coding sessions. %TODO And did what?; how big was the divergence between both coding sessions?; should I select one, most specific label possible? or allow for multiple labels? what should I do with the cases where it's not clear whether it's vandalism or good faith?
 %TODO quote M's methodology book
-
-During the cross-validation labelling (2nd labeling), I 
 
 Def
 Example <-- examples so far come from the 1st round of labeling
