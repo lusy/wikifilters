@@ -26,6 +26,7 @@ During the first labeling session, I tended to label such filters with 'vandalis
 
 For the cross-validation labeling (2nd time), I intend to stick myself to the "assume good faith" guideline %TODO: quote
 and only label as vandalism cases where we cannot assume good faith anymore.
+%TODO compare also with revising codes as the analysis goes along according to Grounded Theory
 One characteristic/feature which guided me here is the filter action which represents the judgement of the edit filter manager(s).
 Since communication is crucial when assuming good faith, all ambiguous cases which have "warn" as a filter action, will receive a 'good_faith' label.
 On the other hand, I will label all filters set to "disallow" as 'vandalism' or a particular type thereof, since the filter action is a clear sign that at least the edit filter managers have decided that seeking a dialog with the offending editor is no longer an option.
@@ -167,63 +168,76 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
 ## Disruptive editing which is not outright vandalism
 
 'copyright violation'
-  Def:
-  Examples
+  Def: Filters targeting potential copyright violations: e.g. images without license information, ..
+  Examples: 798 "Possible copyvio for image upload"; 278 "Possible copyright violations"
 
-'guideline_vio'
-  Def:
-  Examples
 
 'bad_style'
-  Def:
-  Examples
+  Def: Filters targeting edits deviating from what is percieved a good encyclopedic style (def?)
+  Examples: 899 "Adding "The Sun" or "Dailystar" to BLPs" (presumably, bc they are unreliable sources;); 491 "Edits ending with emoticons or !"; 253 "Signing a non-discussion page"
 'lazyness'
-  Def:
-  Examples
+  Def: Slacking on orthography norms (this is something that shouldn't be handled by filters, according to guidelines); smth else?
+  Examples: 18 "Test type edits from clicking on edit bar" (not quite sure why I have labeled this 'lazyness'); 292 "Repeating characters in edit summary"; 432 "Starting new line with lowercase letters"
 'edit_warring'
-  Def:
-  Examples
+  Def: Filters targeting edits that revert each other
+  Examples: 622 "Genre edit-warring"; 419 "User removing himself from AIV" (first labeling, I would actually simply label this 'vandalism' upon second inspection)
 'wiki_policy'
-  Def:
-  Examples
+  Def: Filters target edits violating Wikipedia's policies
+  Examples: 930 "Prevent indexing userspaces by newer users"; 272 "Page author removing CSD tags"
+'guideline_vio'
+  Def: Filters target edits violating Wikipedia's guidelines %TODO do we need this one and the previous? I would rather merge them.
+  Examples: 55 "Signing articles" (which is also labeled 'bad_style'); it is also the only filter with a 'guideline_vio' label from the 1st round of labeling
+
 
 'biased_pov'
-  Def:
-  Examples
+  Def: Hm.. I have the feeling all the filters here should be relabeled..
+  Examples: 148 "Users creating autobiographies" (which should be rather "self_promotion", I think); 894 "Possible Self-Published Sources" (maybe 'self_promotion' is also more suitable here?); 878 "New user removing COI template"
 'conflict_of_interest'
-  Def:
-  Examples
+  Def: Filter targets people editing articles about themselves or organisations they are affilitated to or receive money from. (Compare 'stockbrocker_vandalism', not sure whether we need both)
+  Examples: same as "stockbrocker_vandalism", so we are merging them
 'stockbrocker_vandalism'
-  Def:
-  Examples
+  Def: not quite sure how this label emerged, it does not seem to be one of the Vandalism Types in the Wikipedia Vandalism Typology %TODO: merge with 'conflict of interest'
+  Examples: 302 "Possible COI"; 588 "Promotional usernames"
 'self_promotion'
-  Def:
-  Examples
+  Def: specifically promoting one-self, it is kind of part of the 'conflict_of_interest'
+  Examples: 214 "Creating articles with title contained in username" (this is actually one of the 3 filters with this as a label candidate, so I think we can savely merge it with 'conflict_of_interest' without significantly losing facettes)
 'seo'
-  Def:
-  Examples
+  Def: Filters targeting SEO edits (mostly, explicitely mentioned in the filter name)
+  Examples: 36 "SEO push University of Atlanta"; 682 "SEO/Attack page"; 554 "top100 blog charts" (bc of this and the Daily Mail sources, I am contemplating creating a 'unreliable_sources' label)
+
+## Good faith
 
 'good_faith'
-  Def:
-  Examples
+  Def: In ambigous cases, e.g. editor blanking sections, we assume good faith as long as there are not any indicators to the contrary. One such indicator would be the filter action: filters set to "warn" try to communicate with the editors, point out potential pitfalls to them and give them the opportunity to update and publish the edit (or publish the edit regardles, if they think all is good). Filters set to "disallow" on the other hand, do not seek to guide an editor but rather protect the encyclopedia from harmful content.
+  Examples: 180	"Large unwikified new article"; 98 "Creating very short new article"; 657 "Adding an external link to a disambiguation page" (used to be labeled 'good_faith?', but since actions are "warn,tag", according to my newly defined guidelines, this is a good_faith filter)
 
-'maintenance'
-  Def:
-  Examples
+## Maintenance
+
 'bug'
-  Def:
-  Examples
+  Def: Filters targeting software bugs from MediaWiki, browser extensions, etc which sometimes cause eroneou syntax
+  Examples: 577 "VisualEditor bugs: Strange icons"; 606 "ANI restoration bug";
 'test'
   Def: Various test filters (of single edit filter managers or jointly used)
-  Examples:
+  Examples: 398 "Test filter 398"; 358 "Od Mishehu's test filter"; 424 "Repeatedly blocked user --  testing-only rule for filter 425"
+'general_maintenance' (used to be 'maintenance' upon 1st labeling)
+  Def: Filters taking care of other maintenance tasks (It looks like, I will have problems to distinguish between this one and 'general_tracking')
+  Examples: 728 "Huggle"; 942 "Log edits to protected pages"; 199 "Unflagged Bots"
+
+## Unknown
 
 'unknown'
-  Def:
-  Examples
+  Def: Cannot determine at all what the filter is doing (but hidden filters with no clear names should be labeled "hidden_vandalism", since it's pretty clear they target vandalism)
+  Examples: various; as far as I can see though, all of them are getting re-labeled to "hidden_vandalism"
 'misc'
-  Def:
-  Examples
+  Def: Cannot fit the filter into any category (it is not that functionality is unclear but I couldn't think of a suitable label)
+  Examples: 388 "Unusual redirect III" (which is hidden, so according to new def, should be re-labeled "hidden_vandalism"), 688 "Beals" (same); 708 "SPI page moves"; 152 "External links with referal tags"
 'unclear'
-  Def:
-  Examples
+  Def: I'd say that is similar to misc and both should be merged
+  Examples: 362 "New user creating page", 300 "Cross-posting"
+
+## Contemplating to introduce
+
+'general_tracking'
+  Def: There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is
+  Examples: 362 "New user creating page" would fit better in here I think
 
