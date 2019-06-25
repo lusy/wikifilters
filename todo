@@ -34,7 +34,7 @@ for fun
 * an idea for the presi/written text: begin and end every part (section/paragraph) with a question: what question do I want to answer here? what question is still open?
 * How many of the edit filter managers also run bots. How do they decide in which case to implement a bot and in which a filter?
 * Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
-* do bots check also entire article text and not only single edits? as a clever person with malicious intentions I could split my malicious stuff into several edits to make it more difficult to discover -- unklar. ich hab das gefühl, die sind schon edit-basiert
+* do bots check also entire article text and not only single edits? as a clever person with malicious intentions I could split my malicious stuff into several edits to make it more difficult to discover -- unklar. ich hab das gefühl, die sind schon edit-basiert; confirmed by C.
 * how stable is the edit filter managers group? how often are new editors accepted? (who/how nominates them? maybe there aren't very many accepted, but then again if only 2 apply and both are granted the right, can you then claim it's exclusive?) -- I think it's somewhat stable. In the last 3 months nothing has changed; for instance, mid-end 2017 there was somewhat high traffic of people requesting edit-filter-helper permissions, since it was newly implemented around that time (before that you could only get the full edit filter manager or nothing at all); it also seems that since then the practice was established that people would request edit filter helper first and only then be perhaps promoted to edit filter manager
 
 
