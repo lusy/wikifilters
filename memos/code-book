@@ -95,7 +95,7 @@ Example <-- examples so far come from the 1st round of labeling
 ### Content related vandalism
 
 'silly_vandalism'
-  Def: blatant, immediately obvious vandalism, such as inserting repeating characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page); obscenities? %TODO where do we put obscenities?
+  Def: blatant, immediately obvious vandalism, such as inserting repeating characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page); obscenities? %TODO where do we put obscenities? and stuff like ALL CAPS?
   Examples: 338 "Vuvuzela vandalism", 135 "Repeating characters"
 
 'trolling'
@@ -109,6 +109,9 @@ Example <-- examples so far come from the 1st round of labeling
 'prank'
   Def: We probably don't need this, see below for the only filter in this category
   Examples: 396 "Don't delete the main page" (which was never tripped by the way^^)
+
+'profanity_vandalism'
+  Def: included during 2nd labeling for marking filters dealing with inserting profanities into articles in general, without them being targeted at a person (that is the difference to 'personal_attacks')
 
 ### Politically motivated vandalism
 'religious_vandalism'
@@ -228,6 +231,20 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
   Examples: 180	"Large unwikified new article"; 98 "Creating very short new article"; 657 "Adding an external link to a disambiguation page" (used to be labeled 'good_faith?', but since actions are "warn,tag", according to my newly defined guidelines, this is a good_faith filter)
 
 TODO: label cases additionally with scope/area the filter is targeting
+
+'good_faith_refs'
+'good_faith_deletion'
+'good_faith_orthography'
+'good_faith_article_creation'
+'good_faith_external_resources'
+'good_faith_template'
+'good_faith_wiki_syntax'
+'good_faith_test_edits'
+Introducing because of filter 18 "Test type edits from clicking on edit bar"
+'good_faith_edit_summary'
+'good_faith_revert'
+'good_faith_wiki_ĺinks'
+
 
 ## Maintenance
 
