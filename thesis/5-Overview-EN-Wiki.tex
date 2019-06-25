@@ -17,7 +17,7 @@ question"
 \end{comment}
 
 The \emph{abuse\_filter} and \emph{abuse\_filter\_action} tables from \emph{enwiki\_p} were downloaded on 6.01.2019 via quarry~\footnote{\url{https://quarry.wmflabs.org/}}.
-The complete files can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
+The complete dataset can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
 
 These tables, along with \emph{abuse\_filter\_log} and \emph{abuse\_filter\_history}, are created and used by the AbuseFilter MediaWiki extension~\cite{gerrit-abusefilter}.
 Selected queries have been run against the \emph{abuse\_filter\_log} table as well.
@@ -123,14 +123,15 @@ abuse_filter_action
     \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?; This includes deleted filters
     \item what do the most active filters do?: see~\ref{tab:most-active-actions}
     \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
-        Interestingly, there was a guideline somewhere stating that no trivial behaviour should trip filters (e.g. starting every paragraph with a small letter;) I actually think, a bot fixing this would be more appropriate.
+        Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
+        %TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
+        I actually think, a bot fixing this would be more appropriate.
     \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
         when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
         Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
     \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
     \item percentage of triggered filters/all edits; break down triggered filters according to typology: TODO still need the complete abuse\_filter\_log table!; and probably further dumps in order to know total number of edits
     \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
-    \item what gets classified as vandalism? has this changed over time? TODO: (look at words and patterns triggered by the vandalism filters; read vandalism policy page); pay special attention to filters labeled as vandalism by the edit filter editors (i.e. in the public description) vs these I labeled as vandalism
 \end{itemize}
 
 \textbf{Questions on abuse\_filter table}
@@ -144,8 +145,8 @@ abuse_filter_action
     \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
     \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
     \item what are the values in the "group" column? what do they mean?
-    \item which are the most frequently triggered filters of all time?
-    \item is it new filters that get triggered most frequently? or are there also very active old ones?
+    \item which are the most frequently triggered filters of all time? \ref{tab:most-active-actions}
+    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
     \item how many different edit filter editors are there (af\_user)?
     \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
 \end{itemize}
@@ -414,7 +415,7 @@ data is still not enough for us to talk about a tendency towards introducing mor
   \centering
     \begin{tabular}{r p{10cm} p{5cm} }
     % \toprule
-    Filter ID & Publicly available description & Actions \\
+    Filter ID & Publicly available description & Actions \\ %TODO maybe add hitcount?
     \hline
       135 & repeating characters & tag, warn \\
       30 & "large deletion from article by new editors" & tag, warn \\
@@ -465,6 +466,7 @@ Multiple filters have the comment "let's see whether this hits something", which
 The first noticeable typology is along the line public/private filters.
 
 It is calling attention that nearly 2/3 of all edit filters are not viewable by the general public.
+%TODO: remark that it was to investigate this historically; or is there still an easy way to do this?
 
 The guidelines call for hiding filters ``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
 Further, they suggest caution in filter naming and giving just simple description of the overall disruptive behaviour rather than naming specificuser that is causing the disruptions.
@@ -483,7 +485,7 @@ It is signaled, that the mailing list is meant for sensitive cases only and all 
 \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
 "Non-admins in good standing who wish to review a proposed but hidden filter may message the mailing list for details."
 // what is "good standing"?
-// what are the arguments for hiding a filter? --> particularly obnoctious vandals can see how their edits are being filtered and circumvent them; security through obscurity
+// what are the arguments for hiding a filter? --> particularly obnoctious vandals can see how their edits are being filtered and circumvent them; security through obscurity -- compare also comments on the TalkPage; this is not crypto.
 // are users still informed if their edit triggers a hidden filter? - most certainly; the warnings logic has nothing to do with whether the filter is hidden or not
 
 "For all filters, including those hidden from public view, a brief description of what the rule targets is displayed in the log, the list of active filters, and in any error messages generated by the filter. " //yeah, well, that's the public comment, aka name of the filter
@@ -496,13 +498,13 @@ It is signaled, that the mailing list is meant for sensitive cases only and all 
 
 Apart from filter typologies that can be derived directly from the DB schema (available fields/existing features), we propose a manual classification of the types of edits edit filters found on the EN Wikipedia target (there are edit filters with different purposes).
 
-Based on the GT methodology, we scrutinised all filters, with their patterns, comments and actions.
+Based on the GT methodology, I scrutinised all filters, with their patterns, comments and actions. %TODO define more precisely what exactly are we studying
 We found 3 big clusters of filters that we labeled ``vandalism'', ``good faith'' and ``maintenance''.
-It was not always a straightforward desicion to determine what type of edits a certain filter is targeting.
+It was not always a straightforward decision to determine what type of edits a certain filter is targeting.
 This was of course, particularly challenging for private filters where only the public comment (name) of the filter was there to guide us.
 On the other hand, guidelines state up-front that filters should be hidden only in cases of particularly persistent vandalism, in so far it is probably safe to establish that all hidden filters target some type of vandalism.
 However, the classification was difficult for public filters as well, since oftentimes what makes the difference between a good-faith and a vandalism edit is not the content of the edit but the intention of the editor.
-While there are cases of juvenile vandalism (putting random swear words in articles) or characters repetiton vandalism which are pretty obvious, that is not the case for sections or articles blanking for example.
+While there are cases of juvenile vandalism (putting random swear words in articles) or characters repetiton vandalism which are pretty obvious, that is not the case for sections or articles blanking for example. %TODO explain why
 In such ambiguous cases, we can be guided by the action the filter triggers (if it is ``disallow'' the filter is most probably targeting vandalism).
 At the end, we labeled most ambiguous cases with both ``vandalism'' and ``good faith''.
 
@@ -567,12 +569,13 @@ In principle, one can open quite a few subcategories here (also check https://en
 Some vandalism types seem to be more severe than others (*sock puppetry* or persistant *long term* vandals).
 For these, often times, the implemented filters are **private**.
 This means, only edit filter editors can view the exact filter pattern or the comments of these.
-Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}.
+Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}. %TODO compare with https://en.wikipedia.org/w/index.php?title=Wikipedia:About&oldid=891256910 about transparency as a value
 There are also private filters targetting personal attack or abuse cases.
-Here, filters are private in order to protect affected person(s)~\cite{Wikipedia:EditFilter}.
+Here, filters are private in order to protect the affected person(s)~\cite{Wikipedia:EditFilter}.
 
 The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
-In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extention, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
+In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extension, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
+    (This was met by the community with a strong resistence, especially since at the time one of the most discussed features was the ability of filters to (temporarily) block users. Editors involved in the discussion felt strongly that no fully automated agent should be able to block human editors.)
 
 According to https://en.wikipedia.org/wiki/Wikipedia:Vandalism following (mostly disruptive) behaviours are **not vandalism**:
 - boldly editing
@@ -629,7 +632,7 @@ One of the strategies to spot vandalism is "Watching for edits tagged by the abu
 \begin{comment}
 # Good faith edits
 
-Good faith is a term used by the Wikipedia community itself.
+*Good faith* is a term used by the Wikipedia community itself.
 Most prominently in the phrase "Always assume good faith".
 
 As I recently learned, apparently this guideline arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
@@ -640,14 +643,15 @@ In an attempt to fix this issue, "Assume good faith" rose to a prominent positio
 (Specifically, the page was created on March 3rd, 2004 and was originally refering to good faith during edit wars.
 An expansion of the page from December 29th 2004 starts refering to vandalism. https://en.wikipedia.org/w/index.php?title=Wikipedia:Assume_good_faith&oldid=8915036)
 
-Today, in vandalism comabting (?), there are cautious guidelines and several escalation levels, before an editor is banned. (TODO: elaborate, maybe move to vandalism)
+Today, in vandalism combating (?), there are guidelines that plead for caution and several escalation levels, before an editor is banned. (TODO: elaborate, maybe move to vandalism)
 Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
 ("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
 Not all disruptive behaviour is vandalism, the guidelines suggest~\cite{Wikipedia:Vandalism}.
 
-Examples of "good faith" edits that are non the less disruptive are not complying with Wiki syntax (mostly because of being unfamiliar with it), deleting a page instead of moving it, using improper redirects or publishing test changes.
+Examples of "good faith" edits that are non the less disruptive are not complying with Wiki syntax (mostly because of being unfamiliar with it), deleting a page instead of moving it, using improper redirects or publishing test changes; also because of being unaware of proper procedure.
 
 Edit warring is not vandalism either~\cite{Wikipedia:Vandalism}.
+Despite sometimes being highly disruptive.
 
 Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
 Based on content of the edit alone, it might be frankly impossible.
@@ -661,13 +665,16 @@ Only if the disrupting editor proves to be uncooperating, ignores warnings and c
 - result in:
   - broken syntax
   - disregarding established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.)
-  - non encyclopedic edits (e.g. without sources/with improper sourcers; badly styled; or with a skewed point of view)
+  - non encyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view)
 
 - there is also the guideline "be bold" (or similar), so one could expect to be able to for example add unwikified text, which is then corrected by somebody else
+This tended to be the case in the early days of Wikipedia.
+Messy edits were done and others took them and re-modelled them.
+    Since the rise of algorithmic quality contorl mechanisms though, edits are more often than not considered on an accept/reject basis but no "modelling" them into "proper" encyclopedic pieces of writing takes place anymore. %TODO find out which paper was making this case
 
 ## Examples
 
-Some of the filters in the "good faith" category target (public comment of the filter):
+Some of the filters in the "good faith" category target (public comment of the filter): %TODO vgl 2nd presi
 - test edits
 - misplaced "#redirect" in articles
 - moves to or from Module namespace
@@ -717,11 +724,12 @@ In general, it is highly unlikely that an established Wikipedia editor should at
 # Filters with maintenance purpose
 
 Some of the encountered edit filters on the EN Wikipedia were targeting neither vandalism nor good faith edits.
-These had rather their focus on (semi-)automating routine (clean up) tasks.
+These had rather their focus on (semi-)automated routine (clean up) tasks.
 
-Some of the filters I labeled as "maintenance" were for instance recording cases of broken syntax caused by a faulty browser extention. (filter id!)
+    Some of the filters I labeled as "maintenance" were for instance recording cases of broken syntax caused by a faulty browser extension (Filter 345)
 Others were targeting bugs such as.. 
 
+%TODO compare also with 2nd presi
 577 -> "VisualEditor bugs: Strange icons"
 345 -> "Extraneous formatting from browser extension"
 313 -> "Skype Toolbar Formatting"
