@@ -51,6 +51,8 @@ Example <-- examples so far come from the 1st round of labeling
 
 ## Cluster Vandalism
 
+### Structure related
+
 'bot_vandalism'
   Def: vandalism caused by an automated agent; we know that's what's being targeted because of description in name or notes of the filter
   Examples: 277 "possible vandalbot"; 276 "scripted anomtalk/spoofed IP vandalism"
@@ -59,24 +61,12 @@ Example <-- examples so far come from the 1st round of labeling
   Def: vandalism involving moving a page, mostly to some nonsensical name (Wikipedia typology: "Renaming pages (referred to as "page-moving") to disruptive, irrelevant, or otherwise inappropriate terms.")
   Examples: 883 "Page moves to bad words or other vandalism"; 334 "Grawp page move vandalism"
 
-'silly_vandalism'
-  Def: blatant, immediately obvious vandalism, such as inserting repeating characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page); obscenities? %TODO where do we put obscenities?
-  Examples: 338 "Vuvuzela vandalism", 135 "Repeating characters"
-
-'trolling'
-  Def: "Trolling" is explicitely referenced in the filter name
-  Examples: 896 "ANI trolling", 615 "Reference desk trolling"
-
-'hoaxing'
-  Def: deliberately inserting false information (From Wikipedia typology: "Adding plausible misinformation to articles; Use of fictitious references")
-  Examples: ?
-
 'image_vandalism'
   Def: "Uploading shock images that do not belong at all on Wikipedia; Inappropriately placing explicit images legitimately used on Wikipedia on pages where they do not belong"
   Examples: 952 "Image vandalism IV"; 428 "Image abuse";
 
 'talk_page_vandalism'
-  Def: Malicious activity taking place at talk pages: i.e. modifiyng or removing other users' comments from discussions
+  Def: Malicious activity taking place at talk pages: e.g. modifiyng or removing other users' comments from discussions
   Examples: 842 "Talk page abuse";
 
 'template_vandalism'
@@ -88,10 +78,11 @@ Example <-- examples so far come from the 1st round of labeling
     Adding external links to non-notable or irrelevant sites
     Adding spam links
     Adding external links that may belong on another Wikipedia page, but have no relevance to the subject matter of the page to which they are added"
-  Examples: none sofar, I do have explicit categories for seo and self promotion..
+  Examples: none sofar, I do have explicit categories for seo and self promotion.. %TODO: do I need this cat? delete?
 
 'abuse_of_tags_vandalism'
-  Def: not quite sure whether I need the tag
+  Def: not quite sure whether I need the tag; also not quite sure what it is.
+  Only example: 747 "Removal or addition of [[WP:PP-30-500|pp-30-500]] by non-admin"
 
 'avoidant_vandalism'
   Def: According to Wikipedia Vandalism Typology: "Removal of tags such as {{afd}} and {{copyvio}} in order to conceal deletion candidates or avert deletion of such content. (This does NOT avert deletion. This actually increases the chance that the article will be deleted.); Removal of a {{speedy deletion}} tag from an article one created him/herself. Only the {{hangon}} tag can be placed there by the creator to avert deletion.; Removal of recent warnings from one's own user talk page of vandalism or other serious violations"
@@ -101,13 +92,23 @@ Example <-- examples so far come from the 1st round of labeling
   Def: According to Wikipedia Vandalism Typology: "Creating accounts with usernames that contain deliberately offensive or disruptive terms is considered vandalism, whether the account is used or not. For Wikipedia's policy on what is considered inappropriate for a username, see Wikipedia:Username policy. See also Wikipedia:Sock puppet." (although they call this "Malicious account creation "); in theory there shouldn't be very many filters of that sort, since there is a username blacklist which would be the more appropriate mechanism to take care of this.
   Examples: 827 "Abusive username activity" (unfortunately hidden, so we don't know what the activity is)
 
-'general vandalism'
- Def: vandalism for which none of the more specific tags applied
- Example:
+### Content related vandalism
 
-'hidden_vandalism'
- Def: Tag for hidden filters where a more specific tag could not be determined
- Example:
+'silly_vandalism'
+  Def: blatant, immediately obvious vandalism, such as inserting repeating characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page); obscenities? %TODO where do we put obscenities?
+  Examples: 338 "Vuvuzela vandalism", 135 "Repeating characters"
+
+'trolling'
+  Def: "Trolling" is explicitely referenced in the filter name %TODO look for additional def
+  Examples: 896 "ANI trolling", 615 "Reference desk trolling"
+
+'hoaxing'
+  Def: deliberately inserting false information (From Wikipedia typology: "Adding plausible misinformation to articles; Use of fictitious references")
+  Examples: ?
+
+'prank'
+  Def: We probably don't need this, see below for the only filter in this category
+  Examples: 396 "Don't delete the main page" (which was never tripped by the way^^)
 
 ### Politically motivated vandalism
 'religious_vandalism'
@@ -121,6 +122,7 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
 ### Hardcore vandalism (the really malicious cases)
 'sockpuppetry'
   Def: Filter contains "sock", "sockpuppets", "sockpuppetry" or similar in their name ('af_public_comments') or maybe notes ("af_comments"); expected to be mostly hidden filters (which may have been made public upon deletion or being disabled for example)
+  Sockpuppetry is often long term abuse, aber not necessarily all long term abuse involves sock puppetry
   Examples: 16 "Prolific socker I"; 114 "sleeper socks";
 
 'long_term_abuse'
@@ -139,7 +141,7 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
   Examples: 120 "Real life info" (not quite sure though, since filter is hidden)
 
 'personal_attacks'
-  Def: what is the difference between this and harassment? Maybe use harassment only for cases explicitely worded as such? If we cannot find sufficient justification for having both labels, merge!
+  Def: what is the difference between this and harassment? Maybe use harassment only for cases explicitely worded as such? If we cannot find sufficient justification for having both labels, merge! %maybe put all the obscenities and swear words here; but what if it is not targeted towards a user?
   Examples: 299 "Personal attacks"; 693 "Drake Bell attack";
 
 'impersonation'
@@ -150,6 +152,15 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
   Def: Interaction with others turning non-civil without becoming directly a personal attack? Do we really need this tag if we'll only label one filter with it?
   Examples: 521 "Feedback: All caps" (single example)
 
+### General vandalism
+
+'general vandalism'
+ Def: vandalism for which none of the more specific tags applied
+ Example:
+
+'hidden_vandalism'
+ Def: Tag for hidden filters where a more specific tag could not be determined
+ Example:
 
 ### Spam/malware/etc.
 
@@ -159,10 +170,6 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
     Adding external links to site(s) that have ads from which the user benefits, even if the site has information relevant to the article");
   I've so far labeled "spam" foremost filters which contain the word in their name
   Examples: 862 "Arabic string spam";  523 "Page creation spammer";
-
-'prank'
-  Def: We probably don't need this, see below for the only filter in this category
-  Examples: 396 "Don't delete the main page" (which was never tripped by the way^^)
 
 'phishing'
   Def: Probably stuff that had "phishing" in their name
@@ -179,7 +186,6 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
   Def: Filters targeting potential copyright violations: e.g. images without license information, ..
   Examples: 798 "Possible copyvio for image upload"; 278 "Possible copyright violations"
 
-
 'bad_style'
   Def: Filters targeting edits deviating from what is percieved a good encyclopedic style (def?)
   Examples: 899 "Adding "The Sun" or "Dailystar" to BLPs" (presumably, bc they are unreliable sources;); 491 "Edits ending with emoticons or !"; 253 "Signing a non-discussion page"
@@ -189,6 +195,7 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
 'edit_warring'
   Def: Filters targeting edits that revert each other
   Examples: 622 "Genre edit-warring"; 419 "User removing himself from AIV" (first labeling, I would actually simply label this 'vandalism' upon second inspection)
+
 'wiki_policy'
   Def: Filters target edits violating Wikipedia's policies
   Examples: 930 "Prevent indexing userspaces by newer users"; 272 "Page author removing CSD tags"
@@ -196,6 +203,7 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
   Def: Filters target edits violating Wikipedia's guidelines %TODO do we need this one and the previous? I would rather merge them.
   Examples: 55 "Signing articles" (which is also labeled 'bad_style'); it is also the only filter with a 'guideline_vio' label from the 1st round of labeling
 
+### SEO/COI/POV problems
 
 'biased_pov'
   Def: Hm.. I have the feeling all the filters here should be relabeled..
@@ -218,6 +226,8 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
 'good_faith'
   Def: In ambigous cases, e.g. editor blanking sections, we assume good faith as long as there are not any indicators to the contrary. One such indicator would be the filter action: filters set to "warn" try to communicate with the editors, point out potential pitfalls to them and give them the opportunity to update and publish the edit (or publish the edit regardles, if they think all is good). Filters set to "disallow" on the other hand, do not seek to guide an editor but rather protect the encyclopedia from harmful content.
   Examples: 180	"Large unwikified new article"; 98 "Creating very short new article"; 657 "Adding an external link to a disambiguation page" (used to be labeled 'good_faith?', but since actions are "warn,tag", according to my newly defined guidelines, this is a good_faith filter)
+
+TODO: label cases additionally with scope/area the filter is targeting
 
 ## Maintenance
 
