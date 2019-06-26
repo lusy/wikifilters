@@ -149,56 +149,56 @@
 147	796	1	0	1	0	0	default	20190103105102	throttle,disallow	6029	Possible Ref Desk disruption	hidden_vandalism	
 148	97	0	0	0	1	0	default	20090807112403		5973	Personal attacks by new user	personal_attacks	
 149	869	0	0	1	0	0	default	20180828225237	warn	5855	"Adding ""Daily Mail"" to articles"	bad_style	unreliable_sources
-150	294	1	0	1	0	0	default	20150818185048	disallow	5395	Personal attacks		
-151	702	0	0	1	0	0	default	20171210235420	warn	5302	Warning against clipboard hijacking		
-152	152	0	0	0	1	0	default	20090928230917		5148	External links with referal tags		
-153	139	1	0	1	0	0	default	20181023224247	disallow	5135	Fixed position vandalism		
-154	463	1	0	0	1	0	default	20140303202236	disallow	4965	Feedback: Adding email addresses		
-155	632	0	0	1	0	0	default	20150714131905	tag	4839	Creating blank pages		
-156	874	1	0	1	0	0	default	20181219190423	disallow	4745	Long term abuse username / impersonation creations		
-157	894	0	0	1	0	0	default	20180913023553	warn	4625	Possible Self-Published Sources		
-158	887	0	0	1	0	0	default	20181105103817	warn,disallow	4589	Excessive repetition in usernames		
-159	895	1	0	0	0	0	default	20180927230229		4577	Possible spambot username		
-160	5	0	0	1	0	0	default	20181018194804	warn,tag	4558	User self-renaming or moving user talk pages into article talk space		
-161	524	0	0	0	1	0	default	20160614033823		4502	Interwiki bot		
-162	435	0	0	0	1	0	default	20120906154650	warn	4380	Non-confirmed user adding protection template to a page		
-163	789	1	0	0	0	0	default	20180412180509		4375	BethNaught's test filter		
-164	464	1	0	1	0	0	default	20160614010306	warn	4290	Possible open proxy		
-165	68	1	0	1	0	0	default	20181023224224	throttle,disallow	3905	Pagemove throttle for new users		
-166	238	0	0	0	1	0	default	20100217195031		3857	New article without normal opening sentence		
-167	573	0	0	0	1	0	default	20160614034544		3718	Multiple blank lines		
-168	497	0	0	0	1	0	feedback	20130108151106	disallow	3660	Feedback: Common Vandalism 5		
-169	17	1	0	0	1	0	default	20170509184817	tag	3563	Prolific socker II		
-170	670	0	0	0	1	0	default	20150407175738		3514	New user removing references		
-171	860	0	0	1	0	0	default	20181112215348	disallow	3451	Ryan Ross vandalism		
-172	105	0	0	0	1	0	default	20090928191623		3379	Hypothetical album releases		
-173	494	0	0	0	1	0	feedback	20130108151035	disallow	3325	Feedback: Common Vandalism 2		
-174	502	0	0	0	1	0	feedback	20130424011002	disallow	3280	Feedback: Extremely long words		
-175	777	0	0	1	0	0	default	20171210164915		3149	End date present vandal		
-176	579	1	0	1	0	0	default	20180923065811		3112	Possible sockpuppet account creations		
-177	850	0	0	1	0	0	default	20170420153045	warn	3112	New user moving page to project space		
-178	322	1	0	0	1	0	default	20120203223448	throttle	3091	Null edits by new editors		
-179	289	0	0	0	1	0	default	20150212173453	warn	3051	New user creating interrogative pages		
-180	268	1	0	0	1	0	default	20150212173449	warn	2964	Red link vandalism		
-181	264	1	0	1	0	0	default	20170511025503	disallow	2919	Specific-page vandalism		
-182	52	1	0	1	0	0	default	20181006230705	disallow	2890	Edit summary vandalism II		
-183	590	0	0	0	0	0	default	20170414185610		2850	Unicode replacement characters		
-184	176	0	0	0	1	0	default	20090928230931		2820	user space link added in article space		
-185	721	1	0	1	0	0	default	20171002133237	disallow	2770	Armenian football vandal or similar		
-186	593	0	0	0	1	0	default	20140102185042		2764	Monitor addition of archive.org		
-187	495	0	0	0	1	0	feedback	20130108151045	disallow	2697	Feedback: Common Vandalism 3		
-188	479	0	0	0	1	0	default	20160614033123	warn	2692	Adding example.jpg to article space		
-189	783	0	0	1	0	0	default	20170418154458	warn	2677	Adding {{persondata}}		
-190	496	0	0	0	1	0	feedback	20130108151054	disallow	2658	Feedback: Common Vandalism 4		
-191	403	1	0	0	1	0	default	20130404080817		2605	Inappropriate use of userpage		
-192	53	0	0	0	1	0	default	20090423131929		2595	trademark/copyright symbols		
-193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages		
-194	242	1	0	1	0	0	default	20150219194933	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle		
-195	898	1	0	1	0	0	default	20180414083948		2343	Cyp test filter		
-196	904	0	0	0	1	0	default	20180406183614		2338	Long edit summaries		
-197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter		
-198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?		
-199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism		
+150	294	1	0	1	0	0	default	20150818185048	disallow	5395	Personal attacks	personal_attacks	
+151	702	0	0	1	0	0	default	20171210235420	warn	5302	Warning against clipboard hijacking	good_faith	or good_faith_hijacking ? Or maybe maintenance?
+152	152	0	0	0	1	0	default	20090928230917		5148	External links with referal tags	general_tracking	was only enabled for 4 months; “WP:RAF.  Create a log of external links with referal id tags in them.  Disable, appears to be inactive (log only filter). If you are using this filter, please let me know, and I'll reenable it -Prodego “
+153	139	1	0	1	0	0	default	20181023224247	disallow	5135	Fixed position vandalism	hidden_vandalism	
+154	463	1	0	0	1	0	default	20140303202236	disallow	4965	Feedback: Adding email addresses	doxxing	
+155	632	0	0	1	0	0	default	20150714131905	tag	4839	Creating blank pages	good_faith_article_creation	in the meantime deleted: “Disable and delete. Filter is broken in that it tags edits that blank the page to 0 bytes, and since ACTPERM there are very few blank pages created, with Filter 98 tagging short article creations covering pretty much all that this does. -Galobtter 20190114”
+156	874	1	0	1	0	0	default	20181219190423	disallow	4745	Long term abuse username / impersonation creations	long_term_abuse	additional tags: ‘impersonation’, ‘username_vandalism’
+157	894	0	0	1	0	0	default	20180913023553	warn	4625	Possible Self-Published Sources	wiki_policy	or bad_style, biased_pov, conflict_of_interest
+158	887	0	0	1	0	0	default	20181105103817	warn,disallow	4589	Excessive repetition in usernames	username_vandalism	
+159	895	1	0	0	0	0	default	20180927230229		4577	Possible spambot username	hidden_vandalism	
+160	5	0	0	1	0	0	default	20181018194804	warn,tag	4558	User self-renaming or moving user talk pages into article talk space	good_faith_move	
+161	524	0	0	0	1	0	default	20160614033823		4502	Interwiki bot	bot_vandalism	is what seems to have been targeted, in the meantime obsolete: “Disabled, all bad interwiki bots are long gone – addshore”
+162	435	0	0	0	1	0	default	20120906154650	warn	4380	Non-confirmed user adding protection template to a page	good_faith_template	bc of action and comment “Many of those are good faith users who think that adding the template will protect the page. Log only. -Sole Soul”
+163	789	1	0	0	0	0	default	20180412180509		4375	BethNaught's test filter	test	
+164	464	1	0	1	0	0	default	20160614010306	warn	4290	Possible open proxy	wiki_policy	open proxies are forbidden: https://en.wikipedia.org/wiki/Wikipedia:WikiProject_on_open_proxies
+165	68	1	0	1	0	0	default	20181023224224	throttle,disallow	3905	Pagemove throttle for new users	page_move_vandalism	as per disallow action and title; otherwise ‘hidden_vandalism’
+166	238	0	0	0	1	0	default	20100217195031		3857	New article without normal opening sentence	good_faith_article_creation	or good_faith_content ? Or good_faith_style ? Or simply bad_style ?
+167	573	0	0	0	1	0	default	20160614034544		3718	Multiple blank lines	good_faith	or general_maintenance ? See comment “Looks for multiple blank lines.  Appears to happen more often with VisualEditor.”
+168	497	0	0	0	1	0	feedback	20130108151106	disallow	3660	Feedback: Common Vandalism 5	personal_attacks	
+169	17	1	0	0	1	0	default	20170509184817	tag	3563	Prolific socker II	sockpuppetry	
+170	670	0	0	0	1	0	default	20150407175738		3514	New user removing references	good_faith_refs	
+171	860	0	0	1	0	0	default	20181112215348	disallow	3451	Ryan Ross vandalism	silly_vandalism	or general_vandalism ?
+172	105	0	0	0	1	0	default	20090928191623		3379	Hypothetical album releases	wiki_policy	“(WP:RAF) Detect the addition of hypothetical future album releases that usually violate WP:CRYSTAL and/or WP:V”
+173	494	0	0	0	1	0	feedback	20130108151035	disallow	3325	Feedback: Common Vandalism 2	personal_attacks	
+174	502	0	0	0	1	0	feedback	20130424011002	disallow	3280	Feedback: Extremely long words	silly_vandalism	
+175	777	0	0	1	0	0	default	20171210164915		3149	End date present vandal	wiki_policy	"I actually don’t see the edits as vandalism, but maybe bad style? Why aren’t you supposed to do this? Because it’s unencyclopedic, since it’s unclear when “present” is? Then it’s  policy violation or bad style “Repurposed for a vandal that replaces end dates with ""present"" ~MA” – so filter used to have a somewhat different function"
+176	579	1	0	1	0	0	default	20180923065811		3112	Possible sockpuppet account creations	sockpuppetry	
+177	850	0	0	1	0	0	default	20170420153045	warn	3112	New user moving page to project space	good_faith_move	
+178	322	1	0	0	1	0	default	20120203223448	throttle	3091	Null edits by new editors	hidden_vandalism	
+179	289	0	0	0	1	0	default	20150212173453	warn	3051	New user creating interrogative pages	bad_style	
+180	268	1	0	0	1	0	default	20150212173449	warn	2964	Red link vandalism	hidden_vandalism	or, in theory: ‘link_vandalism’ bc of the name
+181	264	1	0	1	0	0	default	20170511025503	disallow	2919	Specific-page vandalism	hidden_vandalism	
+182	52	1	0	1	0	0	default	20181006230705	disallow	2890	Edit summary vandalism II	hidden_vandalism	
+183	590	0	0	0	0	0	default	20170414185610		2850	Unicode replacement characters	bug	dunno, it’s a unicode question mark in a square.. that’s probably in there by mistake because something else went wrong..
+184	176	0	0	0	1	0	default	20090928230931		2820	user space link added in article space	good_faith	maybe a special category for mixing up user and article space? I think this happens somewhat often..
+185	721	1	0	1	0	0	default	20171002133237	disallow	2770	Armenian football vandal or similar	hidden_vandalism	
+186	593	0	0	0	1	0	default	20140102185042		2764	Monitor addition of archive.org	general_tracking	I’m not quite certain why is this an issue; I thought archive.org is a legit archiving mechanism?
+187	495	0	0	0	1	0	feedback	20130108151045	disallow	2697	Feedback: Common Vandalism 3	personal_attacks	or profanity_vandalism ; but since it’s in feedback, I’d say it’s more personal
+188	479	0	0	0	1	0	default	20160614033123	warn	2692	Adding example.jpg to article space	good_faith	it’s not exactly test edit (or not necessarily); it’s most probably an oversight
+189	783	0	0	1	0	0	default	20170418154458	warn	2677	Adding {{persondata}}	good_faith_template	apparently a deprecated template or similar, but some long-term editors still attempt to add it
+190	496	0	0	0	1	0	feedback	20130108151054	disallow	2658	Feedback: Common Vandalism 4	personal_attacks	
+191	403	1	0	0	1	0	default	20130404080817		2605	Inappropriate use of userpage	hidden_vandalism	
+192	53	0	0	0	1	0	default	20090423131929		2595	trademark/copyright symbols	spam	or copyright_violation, see comments “These should almost never be used in articles and are usually spam and/or copyvios”
+193	840	0	0	0	0	0	default	20181008213422		2532	Indexing user pages	self_promotion	or promotion in general, see “Support this, as a good way to catch low-flying promotional content. CrowCaw 00:01, 20 February 2017 (UTC)” https://en.wikipedia.org/w/index.php?oldid=766629914#User_space_indexing
+194	242	1	0	1	0	0	default	20150219194933	throttle,disallow	2531	Redirecting a substantial existing page - new user throttle	hidden_vandalism	
+195	898	1	0	1	0	0	default	20180414083948		2343	Cyp test filter	test	
+196	904	0	0	0	1	0	default	20180406183614		2338	Long edit summaries	general_tracking	“I think we have enough data. Disabling ~MA”: so this was just in order to get sense for something
+197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter	test	
+198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?	spam	
+199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism	hidden_vandalism	
 200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters		
 201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates		
 202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words		
