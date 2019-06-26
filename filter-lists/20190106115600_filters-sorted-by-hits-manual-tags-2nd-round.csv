@@ -199,56 +199,56 @@
 197	861	0	0	1	0	0	default	20181224172959		2256	Crow test filter	test	
 198	732	1	0	0	1	0	default	20170402074526	disallow	2195	Chinese spam attack?	spam	
 199	233	1	0	0	1	0	default	20101104003357	disallow	2189	Targeted user talk vandalism	hidden_vandalism	
-200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters		
-201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates		
-202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words		
-203	236	1	0	0	1	0	default	20110316135512		2116	Wknight94 test filter		
-204	35	0	0	0	1	0	default	20090511155617		2093	New user changing a redirect		
-205	23	1	0	0	1	0	default	20160812194609		2075	Some vandal phrases		
-206	935	1	0	1	0	0	default	20180923090952		2056	"""ntsamr""-pattern spambot filter"		
-207	637	1	0	0	0	0	default	20190103014127		2040	MusikAnimal test filter		
-208	16	1	0	0	1	0	default	20170509184759	throttle,disallow	2005	Prolific socker I		
-209	273	1	0	0	1	0	default	20120808231233	disallow	1980	Repeated obscenities		
-210	813	1	0	1	0	0	default	20170605190253	disallow	1879	Bee movie script		
-211	766	0	0	1	0	0	default	20181209191741	warn,tag	1866	Alt-right labeling		
-212	667	1	0	1	0	0	default	20181007162410		1843	Wikipedia:Long-term abuse/Best known for IP		
-213	768	1	0	1	0	0	default	20171028174754	disallow	1781	AIV disruption		
-214	826	1	0	1	0	0	default	20170206164424	throttle,disallow	1748	Image flag vandal		
-215	179	1	0	0	1	0	default	20120808231218	disallow	1617	Ongoing attacks		
-216	756	1	0	0	0	0	default	20190104181541	disallow	1601	Banned user vandalism		
-217	926	1	0	1	0	0	default	20190103224137	disallow	1574	Image vandalism II		
-218	942	0	0	1	0	0	default	20181128042048		1573	Log edits to protected pages		
-219	577	0	0	0	1	0	default	20150212173614		1566	VisualEditor bugs: Strange icons		
-220	24	0	0	0	1	0	default	20150212173232		1538	Sneaky link vandalism		
-221	280	0	0	0	1	0	default	20100131230039		1525	New user altering images		
-222	257	1	0	0	1	0	default	20170511024816	disallow	1505	Sonichu and other repeat vandalism		
-223	620	1	0	0	1	0	default	20160614035352		1498	archive removal by disruptive editors		
-224	740	1	0	1	0	0	default	20171106152842		1461	Template hijacking		
-225	408	1	0	0	1	0	default	20120808231552		1441	really long talk post		
-226	921	0	0	1	0	0	default	20180703035104	tag	1422	Suspicious claims of nazism		
-227	475	0	0	0	1	0	feedback	20131003210159		1390	Feedback: Vandalism or libel		
-228	358	1	0	0	0	0	default	20151220123259		1358	Od Mishehu's test filter		
-229	619	1	0	0	0	0	default	20150204222535		1326	Possible covert vandalism		
-230	652	1	0	0	0	0	default	20180412165059	warn,disallow	1326	Jajadelera		
-231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism		
-232	151	0	0	0	1	0	default	20150212173345		1294	Inappropriate Redirects		
-233	891	0	0	1	0	0	default	20180328194850	warn,tag	1289	Predatory open access journals		
-234	892	0	0	1	0	0	default	20181023224029	disallow	1245	RS linked through proxy		
-235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict		
-236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities		
-237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers		
-238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism		
-239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users		
-240	793	1	0	1	0	0	default	20190105142358	disallow	1155	Common spam/scam phone numbers		
-241	675	0	0	0	1	0	default	20160614040653	disallow	1107	Thems the facts vandalism		
-242	877	1	0	0	0	0	default	20180814223233		1084	test filter 4		
-243	253	0	0	0	1	0	default	20091127160929	warn	1015	Signing a non-discussion page		
-244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles		
-245	755	1	0	0	0	0	default	20190104181502		981	LTA trolling		
-246	7	1	0	0	1	0	default	20160812192554		972	AnonTalk		
-247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users		
-248	879	0	0	1	0	0	default	20181219090944	warn	943	Possible malformed edit		
-249	815	1	0	1	0	0	default	20170831173447	disallow	936	TV vandal		
+200	239	0	0	0	1	0	default	20091127160915	disallow	2189	Huge repeating/nonsense characters	silly_vandalism	
+201	159	1	0	0	1	0	default	20170402073529	throttle,disallow	2171	Mascot Guy Sock Candidates	sockpuppetry	
+202	472	0	0	0	1	1	default	20140303202248		2133	Feedback: Addition of bad words	profanity_vandalism	
+203	236	1	0	0	1	0	default	20110316135512		2116	Wknight94 test filter	test	
+204	35	0	0	0	1	0	default	20090511155617		2093	New user changing a redirect	good_faith_redirect	
+205	23	1	0	0	1	0	default	20160812194609		2075	Some vandal phrases	hidden_vandalism	
+206	935	1	0	1	0	0	default	20180923090952		2056	"""ntsamr""-pattern spambot filter"	hidden_vandalism	or ‘bot_vandalism’; or ‘spam’
+207	637	1	0	0	0	0	default	20190103014127		2040	MusikAnimal test filter	test	
+208	16	1	0	0	1	0	default	20170509184759	throttle,disallow	2005	Prolific socker I	sockpuppetry	
+209	273	1	0	0	1	0	default	20120808231233	disallow	1980	Repeated obscenities	profanity_vandalism	or hidden_vandalism
+210	813	1	0	1	0	0	default	20170605190253	disallow	1879	Bee movie script	silly_vandalism	not hidden anymore, merged to 614
+211	766	0	0	1	0	0	default	20181209191741	warn,tag	1866	Alt-right labeling	politically_motivated	
+212	667	1	0	1	0	0	default	20181007162410		1843	Wikipedia:Long-term abuse/Best known for IP	long_term_abuse	
+213	768	1	0	1	0	0	default	20171028174754	disallow	1781	AIV disruption	hidden_vandalism	
+214	826	1	0	1	0	0	default	20170206164424	throttle,disallow	1748	Image flag vandal	hidden_vandalism	or ‘image_vandalism’ ? (not quite sure what ‘image flag’ is
+215	179	1	0	0	1	0	default	20120808231218	disallow	1617	Ongoing attacks	hidden_vandalism	
+216	756	1	0	0	0	0	default	20190104181541	disallow	1601	Banned user vandalism	hidden_vandalism	
+217	926	1	0	1	0	0	default	20190103224137	disallow	1574	Image vandalism II	image_vandalism	as per name
+218	942	0	0	1	0	0	default	20181128042048		1573	Log edits to protected pages	general_tracking	
+219	577	0	0	0	1	0	default	20150212173614		1566	VisualEditor bugs: Strange icons	bug	
+220	24	0	0	0	1	0	default	20150212173232		1538	Sneaky link vandalism	link_vandalism	as per name
+221	280	0	0	0	1	0	default	20100131230039		1525	New user altering images	good_faith_image	or general_tracking ?
+222	257	1	0	0	1	0	default	20170511024816	disallow	1505	Sonichu and other repeat vandalism	hidden_vandalism	
+223	620	1	0	0	1	0	default	20160614035352		1498	archive removal by disruptive editors	hidden_vandalism	
+224	740	1	0	1	0	0	default	20171106152842		1461	Template hijacking	template_vandalism	
+225	408	1	0	0	1	0	default	20120808231552		1441	really long talk post	hidden_vandalism	the name sound quite innocent though^^
+226	921	0	0	1	0	0	default	20180703035104	tag	1422	Suspicious claims of nazism	politically_motivated	or personal_attacks ?
+227	475	0	0	0	1	0	feedback	20131003210159		1390	Feedback: Vandalism or libel	personal_attacks	
+228	358	1	0	0	0	0	default	20151220123259		1358	Od Mishehu's test filter	test	
+229	619	1	0	0	0	0	default	20150204222535		1326	Possible covert vandalism	hidden_vandalism	
+230	652	1	0	0	0	0	default	20180412165059	warn,disallow	1326	Jajadelera	hidden_vandalism	
+231	194	0	0	0	1	0	default	20090721035726		1309	Michael Jackson new page vandalism	general_vandalism	filter created on MJ’s death day, since vandalism was apparently expected (not sure how to classify it); a lot of hits seem to be false positives though
+232	151	0	0	0	1	0	default	20150212173345		1294	Inappropriate Redirects	good_faith_redirect	
+233	891	0	0	1	0	0	default	20180328194850	warn,tag	1289	Predatory open access journals	good_faith_refs	
+234	892	0	0	1	0	0	default	20181023224029	disallow	1245	RS linked through proxy	wiki_policy	link_vandalism or spam ? Comments suggest it’s not on purpose..
+235	119	0	0	0	1	0	default	20090928191653		1243	Macedonia naming conflict	politically_motivated	or possibly edit_warring? Look at pattern!
+236	474	0	0	0	1	1	default	20160911183030	disallow	1222	Feedback: Comment with only obscenities	personal_attacks	
+237	47	1	0	0	1	0	default	20160813233958	disallow	1206	Prolific sockpuppeteers	sockpuppetry	
+238	684	1	0	0	0	0	default	20181018171737	disallow	1192	temporary vandalism	hidden_vandalism	
+239	930	0	0	1	0	0	default	20181023224118	disallow	1165	Prevent indexing userspaces by newer users	self_promotion	Compare with 840; or promotion in general, see “Support this, as a good way to catch low-flying promotional content. CrowCaw 00:01, 20 February 2017 (UTC)” https://en.wikipedia.org/w/index.php?oldid=766629914#User_space_indexing
+240	793	1	0	1	0	0	default	20190105142358	disallow	1155	Common spam/scam phone numbers	hidden_vandalism	'hoaxing’ ? ‘spam’ ? What would it be, if the numbers were not hidden?
+241	675	0	0	0	1	0	default	20160614040653	disallow	1107	Thems the facts vandalism	trolling	see https://news.clickhole.com/man-on-a-mission-this-man-is-adding-and-them-s-the-fa-1825121199
+242	877	1	0	0	0	0	default	20180814223233		1084	test filter 4	test	
+243	253	0	0	0	1	0	default	20091127160929	warn	1015	Signing a non-discussion page	wiki_policy	
+244	134	0	0	0	1	0	default	20090708123137		991	Template deletion notifications transcluded into articles	unclear	I don’t quite understand this one; is the problem that users didn’t want template to be evaluated in articles?; could be ‘good_faith_template’, ‘template_vandalism’, ‘bug’, ‘general_maintenance’ or ‘general_tracking’
+245	755	1	0	0	0	0	default	20190104181502		981	LTA trolling	long_term_abuse	or “trolling”
+246	7	1	0	0	1	0	default	20160812192554		972	AnonTalk	hidden_vandalism	
+247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users	personal_attacks	
+248	879	0	0	1	0	0	default	20181219090944	warn	943	Possible malformed edit	good_faith_wiki_syntax	
+249	815	1	0	1	0	0	default	20170831173447	disallow	936	TV vandal	hidden_vandalism	
 250	341	1	0	0	1	0	default	20160614031549	disallow	925	Persistent talk page abuse from IP ranges		
 251	600	1	0	0	0	0	default	20150602162717	tag	924	Adding Image to Template		
 252	934	0	0	0	1	0	default	20181107195116	disallow	915	Unconfirmed users creating mainspace articles		
