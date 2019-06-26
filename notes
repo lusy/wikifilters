@@ -1890,3 +1890,15 @@ In the vast majority of cases, Deny recognition and Revert, block, ignore are mo
         The user has been abusing Wikipedia over a long duration of time.
         The user account has a history of repeated egregious disruption, and despite indefinite block or ban, continues vandalism and/or abuse beyond the point of any usual blocked user.
         There is a significant chance that the information will be of value against future repetition."
+
+
+============================================================================
+Investigating pick in filter hits beginnings of 2016
+
+Looking at january 2016:
+
+till now it comes to attention that a lot of accounts named something resembling <FirstnameLastname4RandomLetters> were trying to create an account  (while logged in?) (or maybe it was just that the creation of these particular accounts itself was denied); this triggers filter 527 ("T34234: log/throttle possible sleeper account creations
+")
+There are in the meantime over 5 pages of them, it is definitely happening automatically
+
+TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
