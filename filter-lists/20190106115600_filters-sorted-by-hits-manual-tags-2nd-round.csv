@@ -249,26 +249,26 @@
 247	834	1	0	0	1	1	default	20170204214625		961	Possible attacks on other users	personal_attacks	
 248	879	0	0	1	0	0	default	20181219090944	warn	943	Possible malformed edit	good_faith_wiki_syntax	
 249	815	1	0	1	0	0	default	20170831173447	disallow	936	TV vandal	hidden_vandalism	
-250	341	1	0	0	1	0	default	20160614031549	disallow	925	Persistent talk page abuse from IP ranges		
-251	600	1	0	0	0	0	default	20150602162717	tag	924	Adding Image to Template		
-252	934	0	0	0	1	0	default	20181107195116	disallow	915	Unconfirmed users creating mainspace articles		
-253	529	0	0	0	1	0	default	20150625141130	warn,disallow	913	chartnews		
-254	534	1	0	0	0	0	default	20151231173918	disallow	912	Preuss filter		
-255	859	1	0	0	1	0	default	20181104194110	disallow	856	LTA #859		
-256	477	1	0	0	1	0	default	20160614032941	warn	854	Chinese pattern spambots		
-257	899	0	0	1	0	0	default	20180412201446		826	"Adding ""The Sun"" or ""Dailystar"" to BLPs"		
-258	739	1	0	1	0	0	default	20170416123534	disallow	821	User talk vandal		
-259	398	1	0	0	0	0	default	20180426150503	throttle	802	Test filter 398		
-260	485	0	0	0	1	0	default	20160614033239	warn	797	Prevent malicious edits by browser extension		
-261	422	1	0	0	0	0	default	20150625143905	disallow	794	Possible template vandalism		
-262	388	1	0	0	1	0	default	20150212173548		783	Unusual redirect III		
-263	405	1	0	0	1	0	default	20160614032241		776	Verizon vandal		
-264	708	0	0	0	0	0	default	20151104174320		765	SPI page moves		
-265	543	1	0	0	1	0	default	20130402134200		754	XKCD April Fools' Day 2013 vandalism		
-266	872	1	0	0	0	0	default	20180711125807	disallow	748	SK Sock		
-267	941	1	0	0	0	0	default	20181114151253	disallow	747	proxy abuse		
-268	812	0	0	1	0	0	default	20161212220959	disallow	726	Unreasonably large addition of content		
-269	915	1	0	1	0	0	default	20190104181216		719	Personal testing filter for Cyberpower678		
+250	341	1	0	0	1	0	default	20160614031549	disallow	925	Persistent talk page abuse from IP ranges	talk_page_vandalism	or ‘hidden_vandalism’ ?
+251	600	1	0	0	0	0	default	20150602162717	tag	924	Adding Image to Template	hidden_vandalism	
+252	934	0	0	0	1	0	default	20181107195116	disallow	915	Unconfirmed users creating mainspace articles	general_vandalism	
+253	529	0	0	0	1	0	default	20150625141130	warn,disallow	913	chartnews	wiki_policy	'unreliable_sources’ ?
+254	534	1	0	0	0	0	default	20151231173918	disallow	912	Preuss filter	hidden_vandalism	
+255	859	1	0	0	1	0	default	20181104194110	disallow	856	LTA #859	long_term_abuse	
+256	477	1	0	0	1	0	default	20160614032941	warn	854	Chinese pattern spambots	bot_vandalism	or ‘spam’; or ‘hidden_vandalism’
+257	899	0	0	1	0	0	default	20180412201446		826	"Adding ""The Sun"" or ""Dailystar"" to BLPs"	wiki_policy	'unreliable_sources’; or ‘biased_pov’
+258	739	1	0	1	0	0	default	20170416123534	disallow	821	User talk vandal	talk_page_vandalism	or ‘hidden_vandalism’ ? Or ‘personal_attacks’ since it’s on user talk page
+259	398	1	0	0	0	0	default	20180426150503	throttle	802	Test filter 398	test	
+260	485	0	0	0	1	0	default	20160614033239	warn	797	Prevent malicious edits by browser extension	silly_vandalism	bc of pattern that gets added; otherwise I would’ve given it ‘bug’
+261	422	1	0	0	0	0	default	20150625143905	disallow	794	Possible template vandalism	template_vandalism	
+262	388	1	0	0	1	0	default	20150212173548		783	Unusual redirect III	hidden_vandalism	
+263	405	1	0	0	1	0	default	20160614032241		776	Verizon vandal	hidden_vandalism	
+264	708	0	0	0	0	0	default	20151104174320		765	SPI page moves	avoidant_vandalism	bc of content; otherwise I would’ve given it ‘general_tracking’ or ‘good_faith’ smth
+265	543	1	0	0	1	0	default	20130402134200		754	XKCD April Fools' Day 2013 vandalism	hidden_vandalism	otherwise I’d say “prank” ?
+266	872	1	0	0	0	0	default	20180711125807	disallow	748	SK Sock	sockpuppetry	
+267	941	1	0	0	0	0	default	20181114151253	disallow	747	proxy abuse	hidden_vandalism	or ‘wiki_policy’ (or introduce own ‘proxy’ tag?)
+268	812	0	0	1	0	0	default	20161212220959	disallow	726	Unreasonably large addition of content	general_vandalism	or probably ‘silly_vandalism’ what else could be getting added that’s so huge
+269	915	1	0	1	0	0	default	20190104181216		719	Personal testing filter for Cyberpower678	test	
 270	762	1	0	1	0	0	default	20180126230139	disallow,tag	716	TV/Movie spammer		
 271	642	0	0	1	0	0	default	20181023194832	disallow	712	OTRS template added by non-OTRS member (global)		
 272	146	1	0	0	1	0	default	20120808231158		710	Keith Bridgeman vandalism		
