@@ -1781,5 +1781,53 @@ Wikipedia has policies and guidelines, but they are not carved in stone; their c
 
 ==========================================================================
 https://en.wikipedia.org/w/index.php?title=Wikipedia:About&oldid=891256910
+
+"Anyone with Internet access can write and make changes to Wikipedia articles, except in limited cases where editing is restricted to prevent disruption or vandalism."
+
+"English Wikipedia right now:
+
+Wikipedia is running MediaWiki
+version 1.34.0-wmf.10 (5b7d3f4).
+It has 5,877,868 content articles,
+and 48,053,456 pages in total.
+There are 882,172 uploaded files.
+There have been 898,827,431 edits.
+There are 36,606,590 registered users,
+including 1,155 administrators."
+
+". While most articles may be altered by anyone, in practice editing will be performed by a certain demographic (younger rather than older, male rather than female, rich enough to afford a computer rather than poor, et cetera) and may, therefore, show some bias. Some topics may not be covered well, while others may be covered in great depth." //at least they admit to it
+
+"Wikipedia's radical openness also means that any given article may be, at any given moment, in a bad state, such as in the middle of a large edit, or a controversial rewrite."
+
+"Censorship or imposing "official" points of view is extremely difficult to achieve and usually fails after a time. Eventually for most articles, all notable views become fairly described and a neutral point of view reached."
+
+"Wikipedia operates a full editorial dispute resolution process, one that allows time for discussion and resolution in depth, but one that also permits disagreements to last for months before poor-quality or biased edits are removed."
+
+"hierarchy of permissions and positions, some of which are listed hereafter:
+
+    Anyone can edit most of the articles here. Some articles are protected because of vandalism or edit-warring, and can only be edited by certain editors.
+    Anyone with an account that has been registered for four days or longer and has made at least ten edits becomes autoconfirmed, and gains the technical ability to do five things that non-autoconfirmed editors cannot:
+        Create pages.
+        Move pages.
+        Edit semi-protected pages.
+        Upload files.
+        Vote in certain elections (minimum edit count to receive suffrage varies depending on the election).
+    Many editors with accounts obtain access to certain tools that make editing easier and faster. Few editors learn about most of those tools, but one common privilege granted to editors in good standing is "rollback", which is the ability to undo edits more easily.
+    Administrators ("admins" or "sysops") have been approved by the community, and have access to some significant administrative tools. They can delete articles, block accounts or IP addresses, and edit fully protected articles.
+    Bureaucrats are chosen in a process similar to that for selecting administrators. There are not very many bureaucrats. They have the technical ability to add or remove admin rights and approve or revoke "bot" privileges.
+    The Arbitration Committee is analogous to Wikipedia's supreme court. They deal with disputes that remain unresolved after other attempts at dispute resolution have failed. Members of this Committee are elected by the community and tend to be selected from among the pool of experienced admins.
+    Stewards hold the top echelon of community permissions. Stewards can do a few technical things, and one almost never hears much about them since they normally only act when a local admin or bureaucrat is not available, and hence almost never on the English Wikipedia. There are very few stewards.
+    Jimmy Wales, the founder of Wikipedia, has several special roles and privileges. In most instances, however, he does not expect to be treated differently than any other editor or administrator."
+
+==========================================================================
 https://transparency.wikimedia.org/
-https://www.eff.org/deeplinks/2014/09/13-principles-week-action-wikipedia-built-transparency
+
+"Our mission is to provide free access to the sum of all human knowledge. We believe that protecting user privacy and defending against censorship are essential to the success of that mission. "
+
+==========================================================================
+https://wikimediafoundation.org/about/values/
+https://en.wikipedia.org/wiki/Wikipedia:Purpose
+
+==========================================================================
+https://en.wikipedia.org/wiki/Sockpuppet_(Internet)
+https://en.wikipedia.org/wiki/Wikipedia:Sock_puppetry
