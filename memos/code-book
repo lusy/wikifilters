@@ -141,7 +141,10 @@ Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of In
 
 'doxxing'
   Def: Disclosing private information of other people (e.g. address, contact details, details about their life not know to the public) without their consent; Often with the purpose to facilitate organised harassment
+  (According to https://en.wikipedia.org/w/index.php?title=Doxing&oldid=902687406 : "Doxing (from dox, abbreviation of documents)[1] or doxxing[2][3] is the Internet-based practice of researching and broadcasting private or identifying information (especially personally identifying information) about an individual or organization")
   Examples: 120 "Real life info" (not quite sure though, since filter is hidden)
+
+Note: according to Wikipedia this behaviour constitutes harassment: "Posting another editor's personal information is harassment, unless that person has voluntarily posted their own information, or links to such information, on Wikipedia. Personal information includes legal name, date of birth, identification numbers, home or workplace address, job title and work organisation, telephone number, email address, other contact information, or photograph, whether such information is accurate or not. " (https://en.wikipedia.org/w/index.php?title=Wikipedia:Harassment&oldid=902881999)
 
 'personal_attacks'
   Def: what is the difference between this and harassment? Maybe use harassment only for cases explicitely worded as such? If we cannot find sufficient justification for having both labels, merge! %maybe put all the obscenities and swear words here; but what if it is not targeted towards a user?
@@ -244,6 +247,8 @@ Introducing because of filter 18 "Test type edits from clicking on edit bar"
 'good_faith_edit_summary'
 'good_faith_revert'
 'good_faith_wiki_ĺinks'
+'good_faith_user_page'
+'good_faith_redirect'
 
 
 ## Maintenance

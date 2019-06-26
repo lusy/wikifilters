@@ -99,56 +99,56 @@
 97	397	1	0	1	0	0	default	20181108195959	disallow	18114	Userpage vandalism	hidden_vandalism	personal_attacks maybe too
 98	155	0	0	0	1	0	default	20090928230926		17517	Adding links to youtube	general_tracking	maybe ‘wiki_policy’? I’m not quite clear on why this is problematic
 99	782	0	0	1	0	0	default	20181023223745	disallow	16702	Content Translation Edits	unclear	I don’t understand what the problem is with this
-100	655	0	0	1	0	0	default	20160520185734	tag	16051	Large plot section addition		
-101	602	0	0	1	0	0	default	20180331105543	warn,tag	15758	Arbitration discretionary sanctions alerts		
-102	205	1	0	0	1	0	default	20110310110641		15519	Scibaby #1		
-103	106	0	0	0	1	0	default	20090830005331		14513	Date linking / delinking		
-104	2	1	0	0	0	0	default	20181008172604		14104	Test filter: for testing private filters		
-105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)		
-106	224	0	0	1	0	0	default	20170910203050	tag	13895	Copyvio tag removal		
-107	420	0	0	1	0	0	default	20181211033934	throttle,disallow	13874	Large removal of talk page content by IP		
-108	345	0	0	1	0	0	default	20160614031816	warn,tag	13832	Extraneous formatting from browser extension		
-109	733	0	0	1	0	0	default	20151102053740		13770	New user creating a page in someone else's userspace		
-110	554	0	0	1	0	0	default	20181023194722	disallow	13394	top100 blog charts		
-111	630	1	0	1	0	0	default	20150725140936	tag	13025	New users de-userfying pages		
-112	28	0	0	0	1	0	default	20100106173322		12264	New user redirecting an existing substantial page or changing a redirect		
-113	366	0	0	0	1	0	default	20110310111443		12257	Addition of seemingly random characters		
-114	819	1	0	0	0	0	default	20190104180937	throttle	12207	Derp vandal		
-115	837	0	0	1	0	0	default	20170208212523		12174	Removal of disambiguation templates by new users		
-116	102	1	0	1	0	0	default	20181128153750	disallow	11903	Abusive account names		
-117	532	0	0	0	1	0	default	20160614033920	tag	11857	Interwiki Addition		
-118	559	1	0	1	0	0	default	20170514124407		11787	archive.is additions		
-119	825	1	0	0	0	0	default	20180424212713		11749	Descent category added		
-120	77	1	0	0	1	0	default	20160818205501	warn	11528	Various ASCII Vandals		
-121	76	0	0	0	1	0	default	20150212173255	warn	11033	Adding email address		
-122	394	0	0	0	1	0	default	20120808231420		10996	Extremely short article creation		
-123	409	0	0	0	1	0	default	20120808231558		10880	news sources on BLPs		
-124	773	1	0	0	0	0	default	20181220031744		9990	TNT's test filter		
-125	890	0	0	1	0	0	default	20181207113011	warn,disallow	9932	Random typing in username		
-126	697	0	0	0	0	0	default	20151230224636		9807	User making large contribution with first edits		
-127	218	0	0	0	1	0	default	20150212173428		9802	User adding xx/xx/xxxx probably a date		
-128	483	1	0	0	1	0	default	20160614033218		9357	Users creating own talk		
-129	163	0	0	0	1	0	default	20181104190423	warn,tag	9289	Redirect to non-existent page		
-130	784	0	0	1	0	0	default	20170419165539	disallow	9265	Harambe vandalism		
-131	735	0	0	1	0	0	default	20170514124421	tag	9005	Vandalising sport infobox		
-132	531	0	0	0	1	0	default	20160614033912	tag	8856	Interwiki Removal		
-133	81	0	0	0	1	0	default	20150625141029		8491	Badcharts		
-134	878	0	0	1	0	0	default	20180416160027	tag	8290	New user removing COI template		
-135	521	0	0	0	1	0	default	20140303202349	disallow	8149	Feedback: All caps		
-136	478	1	0	1	0	0	default	20181213063717	disallow	7862	Talk page abuse		
-137	875	1	0	0	0	0	default	20190104181008	warn	7585	Derp II		
-138	912	0	0	1	0	0	default	20181230045936	warn,tag	7505	"Possible ""fortnite"" vandalism"		
-139	643	1	0	1	0	0	default	20181127140355	throttle	7109	Persistent sockpuppetry		
-140	261	1	0	0	0	0	default	20170928195215	throttle,disallow	6548	Page creation throttle for new users		
-141	183	0	0	0	0	0	default	20150212182934	warn	6545	AFC submissions in wrong namespace		
-142	473	0	0	0	1	0	default	20140303202257	disallow	6369	Feedback: Repeating characters		
-143	410	0	0	0	1	0	default	20120808231603		6285	blog added to BLPs		
-144	905	0	0	0	1	0	default	20180415235317		6267	bots that may ping users		
-145	313	0	0	0	1	0	default	20150212173457	warn	6259	Skype Toolbar Formatting		
-146	425	1	0	1	0	0	default	20170111031407		6209	Magic/astrology spambots		
-147	796	1	0	1	0	0	default	20190103105102	throttle,disallow	6029	Possible Ref Desk disruption		
-148	97	0	0	0	1	0	default	20090807112403		5973	Personal attacks by new user		
-149	869	0	0	1	0	0	default	20180828225237	warn	5855	"Adding ""Daily Mail"" to articles"		
+100	655	0	0	1	0	0	default	20160520185734	tag	16051	Large plot section addition	general_tracking	probably the justification for this is potential hoaxing, I’m not quite sure; ‘unclear’ is another possibility for a label
+101	602	0	0	1	0	0	default	20180331105543	warn,tag	15758	Arbitration discretionary sanctions alerts	unclear	if I understand correctly, the purpose of this template is to corteously alert a user they were a subject to sanctions; however, why there is a filter for this  is beyond me
+102	205	1	0	0	1	0	default	20110310110641		15519	Scibaby #1	hidden_vandalism	
+103	106	0	0	0	1	0	default	20090830005331		14513	Date linking / delinking	hoaxing	the action used to be throttle for 3 months, then the filter was disabled; point is “prevent change of dates from a user who is not a regular contributor to a page”
+104	2	1	0	0	0	0	default	20181008172604		14104	Test filter: for testing private filters	test	
+105	51	1	0	1	0	0	default	20181230024907		14060	LTA Username / LTA IP hopping disruption (Oshwah)	long_term_abuse	
+106	224	0	0	1	0	0	default	20170910203050	tag	13895	Copyvio tag removal	good_faith_deletion	potentially, it’s avoidant_vandalism
+107	420	0	0	1	0	0	default	20181211033934	throttle,disallow	13874	Large removal of talk page content by IP	talk_page_vandalism	
+108	345	0	0	1	0	0	default	20160614031816	warn,tag	13832	Extraneous formatting from browser extension	bug	
+109	733	0	0	1	0	0	default	20151102053740		13770	New user creating a page in someone else's userspace	good_faith_userpage	
+110	554	0	0	1	0	0	default	20181023194722	disallow	13394	top100 blog charts	spam	alternatives: ‘wiki_policy’ or ‘bad_style’ (or introduce ‘unreliable_sources’, since I think that’s the problem here)
+111	630	1	0	1	0	0	default	20150725140936	tag	13025	New users de-userfying pages	hidden_vandalism	
+112	28	0	0	0	1	0	default	20100106173322		12264	New user redirecting an existing substantial page or changing a redirect	general_tracking	Or maybe the intention was to catch ‘page_move_vandalism’ deleted, since: “Terrible run time + not catching much useful + filter is overwrought now = disabling.  -Wknight94”
+113	366	0	0	0	1	0	default	20110310111443		12257	Addition of seemingly random characters	good_faith_test_edits	was log only; eventually merged into filter 135
+114	819	1	0	0	0	0	default	20190104180937	throttle	12207	Derp vandal	hidden_vandalism	
+115	837	0	0	1	0	0	default	20170208212523		12174	Removal of disambiguation templates by new users	good_faith_template	
+116	102	1	0	1	0	0	default	20181128153750	disallow	11903	Abusive account names	hidden_vandalism	
+117	532	0	0	0	1	0	default	20160614033920	tag	11857	Interwiki Addition	general_tracking	or ‘unclear’; not quite sure what the intention of this filter was
+118	559	1	0	1	0	0	default	20170514124407		11787	archive.is additions	hidden_vandalism	
+119	825	1	0	0	0	0	default	20180424212713		11749	Descent category added	hidden_vandalism	
+120	77	1	0	0	1	0	default	20160818205501	warn	11528	Various ASCII Vandals	hidden_vandalism	
+121	76	0	0	0	1	0	default	20150212173255	warn	11033	Adding email address	doxxing	potentially
+122	394	0	0	0	1	0	default	20120808231420		10996	Extremely short article creation	good_faith_article_creation	was only enabled for 2 weeks
+123	409	0	0	0	1	0	default	20120808231558		10880	news sources on BLPs	bad_style	or ‘unreliable_refs’ (this is about daily mail in BLP articles)
+124	773	1	0	0	0	0	default	20181220031744		9990	TNT's test filter	test	
+125	890	0	0	1	0	0	default	20181207113011	warn,disallow	9932	Random typing in username	username_vandalism	
+126	697	0	0	0	0	0	default	20151230224636		9807	User making large contribution with first edits	good_faith	or ‘general_tracking’; or ‘conflict_of_interest’ as per comments: “Testing if this is useful to monitor; may suggest a paid article, most I've seen are created in one go in an account's first edits. --Samwalton9, 13 June 2015  This is useful, but I don't think anyone's tracking it so disabling for now. --Samwalton9, 30 Dec 2015”
+127	218	0	0	0	1	0	default	20150212173428		9802	User adding xx/xx/xxxx probably a date	unclear	never really acted upon and deleted after 3 months; Or maybe ‘good_faith’? The point is apparently that this is ambiguous as a date format
+128	483	1	0	0	1	0	default	20160614033218		9357	Users creating own talk	hidden_vandalism	although I’m really confused as to why it is bad to write on the own talk page
+129	163	0	0	0	1	0	default	20181104190423	warn,tag	9289	Redirect to non-existent page	good_faith_redirect	
+130	784	0	0	1	0	0	default	20170419165539	disallow	9265	Harambe vandalism	general_vandalism	or silly_vandalism? It is definitely viewed as vandalism by the edit filter managers, although I’m not quite sure in which category it falls..; maybe it can be part of a potential ‘meme_vandalism’ or similar
+131	735	0	0	1	0	0	default	20170514124421	tag	9005	Vandalising sport infobox	hoaxing	I think it fits best, since it’s often not really obvious that it’s bollocks
+132	531	0	0	0	1	0	default	20160614033912	tag	8856	Interwiki Removal	general_tracking	or introduce interwiki_tracking? There was the interwiki addition filter as well..
+133	81	0	0	0	1	0	default	20150625141029		8491	Badcharts	spam	or ‘unreliable_refs’; or ‘bad_style’; compare with the top100charts filter
+134	878	0	0	1	0	0	default	20180416160027	tag	8290	New user removing COI template	good_faith_template	
+135	521	0	0	0	1	0	default	20140303202349	disallow	8149	Feedback: All caps	not_polite	or personal_attacks
+136	478	1	0	1	0	0	default	20181213063717	disallow	7862	Talk page abuse	talk_page_vandalism	
+137	875	1	0	0	0	0	default	20190104181008	warn	7585	Derp II	hidden_vandalism	
+138	912	0	0	1	0	0	default	20181230045936	warn,tag	7505	"Possible ""fortnite"" vandalism"	silly_vandalism	ok, so fortnite appears to be a video game; or ‘general_vandalism’ or ‘meme_vandalism’
+139	643	1	0	1	0	0	default	20181127140355	throttle	7109	Persistent sockpuppetry	sockpuppetry	
+140	261	1	0	0	0	0	default	20170928195215	throttle,disallow	6548	Page creation throttle for new users	hidden_vandalism	I don’t have ‘page_creation_vandalism’ anyway
+141	183	0	0	0	0	0	default	20150212182934	warn	6545	AFC submissions in wrong namespace	good_faith_article_creation	or good_faith_procedure
+142	473	0	0	0	1	0	default	20140303202257	disallow	6369	Feedback: Repeating characters	silly_vandalism	
+143	410	0	0	0	1	0	default	20120808231603		6285	blog added to BLPs	bad_style	unreliable_sources
+144	905	0	0	0	1	0	default	20180415235317		6267	bots that may ping users	general_tracking	or bot_tracking?
+145	313	0	0	0	1	0	default	20150212173457	warn	6259	Skype Toolbar Formatting	bug	
+146	425	1	0	1	0	0	default	20170111031407		6209	Magic/astrology spambots	bot_vandalism	
+147	796	1	0	1	0	0	default	20190103105102	throttle,disallow	6029	Possible Ref Desk disruption	hidden_vandalism	
+148	97	0	0	0	1	0	default	20090807112403		5973	Personal attacks by new user	personal_attacks	
+149	869	0	0	1	0	0	default	20180828225237	warn	5855	"Adding ""Daily Mail"" to articles"	bad_style	unreliable_sources
 150	294	1	0	1	0	0	default	20150818185048	disallow	5395	Personal attacks		
 151	702	0	0	1	0	0	default	20171210235420	warn	5302	Warning against clipboard hijacking		
 152	152	0	0	0	1	0	default	20090928230917		5148	External links with referal tags		
