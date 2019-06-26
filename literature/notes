@@ -545,6 +545,30 @@ playing game—with “monsters”
 to (http://en.wikipedia.org/wiki/
 Wikipedia:MMORPG)."
 
+Bot taxonomy
+
+Task area                           | Example
+-----------------------------------------------------
+Content
+ injection                          | RamBot
+ monitoring                         | SpellCheckerBot
+ curating                           | Helpful Pixie Bot ("corrects ISBNs and other structural features of articles such as section capitalization")
+                                    | interlanguage bots (deprecated bc of Wikidata?)
+------------------------------------------------------
+                                    |
+Augment MediaWiki functionality     | AIV Helperbot "turns a simple page into a dynamic
+priority-based discussion queue to support administrators in their work of identifying and
+blocking vandal"                    | SineBot - signs and dates comments
+
+
+------------------------------------------------------
+
+Protection from malicious activity  | ClueBot_NG
+                                    | XLinkBot
+
+
+
+
 ==========================================
 \cite{WestKanLee2010}
 
