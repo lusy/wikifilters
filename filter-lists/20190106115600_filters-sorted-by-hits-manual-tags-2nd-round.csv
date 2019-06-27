@@ -269,46 +269,46 @@
 267	941	1	0	0	0	0	default	20181114151253	disallow	747	proxy abuse	hidden_vandalism	or ‘wiki_policy’ (or introduce own ‘proxy’ tag?)
 268	812	0	0	1	0	0	default	20161212220959	disallow	726	Unreasonably large addition of content	general_vandalism	or probably ‘silly_vandalism’ what else could be getting added that’s so huge
 269	915	1	0	1	0	0	default	20190104181216		719	Personal testing filter for Cyberpower678	test	
-270	762	1	0	1	0	0	default	20180126230139	disallow,tag	716	TV/Movie spammer		
-271	642	0	0	1	0	0	default	20181023194832	disallow	712	OTRS template added by non-OTRS member (global)		
-272	146	1	0	0	1	0	default	20120808231158		710	Keith Bridgeman vandalism		
-273	856	0	0	1	0	0	default	20180412170902		687	Non-admin removing revdel templates		
-274	99	0	0	0	1	0	default	20090408125315		686	Edits to an other user's userspace		
-275	651	1	0	1	0	0	default	20150826005013	warn,disallow	685	AfricaTanz		
-276	433	1	0	0	1	1	default	20120808231801		684	University of Oklahoma spelling vandal		
-277	624	1	0	0	0	0	default	20180424211305		680	CheckUser Sock block		
-278	946	1	0	1	0	0	default	20190104123050	throttle,warn	657	LTA 946		
-279	918	1	0	1	0	0	default	20180912233708		650	LTA 918		
-280	563	1	0	0	1	0	default	20160614034434		643	Graham W Phillips		
-281	765	0	0	0	0	0	default	20171025201214	tag	620	Unnecessary syntax in translated articles		
-282	799	1	0	1	0	0	default	20181216194154	throttle,disallow	610	Ref Desk Nazi		
-283	601	1	0	0	0	0	default	20150218071840	disallow	606	Colton Cosmic		
-284	864	1	0	1	0	0	default	20180128000704	disallow	601	Kargbo Spammer		
-285	123	0	0	0	1	0	default	20120808231142	warn,disallow	599	New users moving other users' pages		
-286	445	1	0	0	1	0	default	20130404081019	throttle,disallow	596	Disruptive user threatening self harm		
-287	519	1	0	0	0	0	default	20140407012139		588	Possible sockpuppets		
-288	587	1	0	0	1	0	default	20140102185135	warn,disallow	585	Inappropriate external links		
-289	386	1	0	0	1	0	default	20110602033814	throttle	582	Throttle IP talk page creation		
-290	880	1	0	1	0	0	default	20180626171659	disallow	572	Vote (X) for Change		
-291	269	1	0	0	1	0	default	20110310111002	warn,disallow	566	TFA Vandalism		
-292	526	0	0	0	1	0	default	20150625141156	warn	560	hot100brasil insertions		
-293	436	1	0	0	1	0	default	20170402073639		557	Sole Soul's test filter		
-294	786	1	0	0	1	0	default	20170120213451		555	LTA_Check-B13		
-295	26	0	0	0	1	0	default	20090404191112		548	Large unwikified additions by new user		
-296	369	0	0	0	1	0	default	20110310111517		545	New user editing AFD discussions		
-297	804	0	0	0	1	0	default	20161111202340		543	Mentions of Trump by new users		
-298	314	0	0	0	1	0	default	20120808231323	warn	532	User creates article ending with a /		
-299	82	0	0	0	1	0	default	20100502011556	disallow	532	Nowiki on urls		
-300	195	0	0	0	1	0	default	20150212173400		532	Michael Jackson edit vandalism		
-301	489	1	0	0	1	0	default	20160614033305		530	Long term IP-hopping abuse, more		
-302	828	0	0	1	0	0	default	20171102075753	disallow	527	Redirecting talk page		
-303	438	0	0	0	1	0	default	20130404080939	warn	521	Warn if create an article: Enter your new article name here		
-304	847	1	0	1	0	0	default	20181104193816	disallow	512	Sandbox troll (WP:LTA/SBT)		
-305	661	0	0	0	1	0	default	20150625135307	warn,disallow	495	unsourced section added to awards article		
-306	215	1	0	0	1	0	default	20100502011708	throttle,disallow	489	AnonTalk 2		
-307	809	1	0	1	0	0	default	20181111190314	disallow	487	SPI disruption		
-308	829	1	0	0	0	0	default	20171014180255		487	Possible article hijacking		
-309	742	1	0	0	0	0	default	20190105155622	throttle,disallow	487	BT UserTalkPage stalker		
+270	762	1	0	1	0	0	default	20180126230139	disallow,tag	716	TV/Movie spammer	spam	as per name
+271	642	0	0	1	0	0	default	20181023194832	disallow	712	OTRS template added by non-OTRS member (global)	unclear	Or ‘template_vandalism’? But is this always vandalism? OTRS = Open-Source Ticket Request System;
+272	146	1	0	0	1	0	default	20120808231158		710	Keith Bridgeman vandalism	hidden_vandalism	
+273	856	0	0	1	0	0	default	20180412170902		687	Non-admin removing revdel templates	good_faith_template	
+274	99	0	0	0	1	0	default	20090408125315		686	Edits to an other user's userspace	impersonation	Is maybe what they were looking for? Alternatives here: “general_vandalism”, “not_polite”, “general_tracking”; not quite sure what they were trying to achieve, but filter was recognised as unhelpful and deleted 13 days after its inception
+275	651	1	0	1	0	0	default	20150826005013	warn,disallow	685	AfricaTanz	hidden_vandalism	
+276	433	1	0	0	1	1	default	20120808231801		684	University of Oklahoma spelling vandal	hidden_vandalism	
+277	624	1	0	0	0	0	default	20180424211305		680	CheckUser Sock block	hidden_vandalism	not quite sure from the name only what exactly is meant, so stick with the more general label
+278	946	1	0	1	0	0	default	20190104123050	throttle,warn	657	LTA 946	long_term_abuse	
+279	918	1	0	1	0	0	default	20180912233708		650	LTA 918	long_term_abuse	
+280	563	1	0	0	1	0	default	20160614034434		643	Graham W Phillips	hidden_vandalism	
+281	765	0	0	0	0	0	default	20171025201214	tag	620	Unnecessary syntax in translated articles	good_faith_wiki_syntax	alternative: ‘bug’, ‘general_tracking’
+282	799	1	0	1	0	0	default	20181216194154	throttle,disallow	610	Ref Desk Nazi	hidden_vandalism	
+283	601	1	0	0	0	0	default	20150218071840	disallow	606	Colton Cosmic	hidden_vandalism	
+284	864	1	0	1	0	0	default	20180128000704	disallow	601	Kargbo Spammer	spam	as per name
+285	123	0	0	0	1	0	default	20120808231142	warn,disallow	599	New users moving other users' pages	page_move_vandalism	is in the meantime hidden;
+286	445	1	0	0	1	0	default	20130404081019	throttle,disallow	596	Disruptive user threatening self harm	hidden_vandalism	name is quite descriptive, I’m not quite sure how I’d classify this otherwise though
+287	519	1	0	0	0	0	default	20140407012139		588	Possible sockpuppets	sockpuppetry	
+288	587	1	0	0	1	0	default	20140102185135	warn,disallow	585	Inappropriate external links	hidden_vandalism	alternatively: ‘link_vandalism’, ‘spam’
+289	386	1	0	0	1	0	default	20110602033814	throttle	582	Throttle IP talk page creation	talk_page_vandalism	not quite satisfied with label, but don’t have a better idea either
+290	880	1	0	1	0	0	default	20180626171659	disallow	572	Vote (X) for Change	hidden_vandalism	
+291	269	1	0	0	1	0	default	20110310111002	warn,disallow	566	TFA Vandalism	hidden_vandalism	
+292	526	0	0	0	1	0	default	20150625141156	warn	560	hot100brasil insertions	spam	or ‘unreliable_refs’, but till now I’ve labeled suspicious charts stuff as ‘spam’
+293	436	1	0	0	1	0	default	20170402073639		557	Sole Soul's test filter	test	
+294	786	1	0	0	1	0	default	20170120213451		555	LTA_Check-B13	long_term_abuse	
+295	26	0	0	0	1	0	default	20090404191112		548	Large unwikified additions by new user	good_faith_wiki_syntax	
+296	369	0	0	0	1	0	default	20110310111517		545	New user editing AFD discussions	good_faith_deletion	although it doesn’t fit completely, maybe more like ‘general_tracking’
+297	804	0	0	0	1	0	default	20161111202340		543	Mentions of Trump by new users	general_tracking	
+298	314	0	0	0	1	0	default	20120808231323	warn	532	User creates article ending with a /	good_faith_article_creation	
+299	82	0	0	0	1	0	default	20100502011556	disallow	532	Nowiki on urls	general_vandalism	not quite sure where it best fits as a type of vandalism, but it’s definitely vandalism (“Using nowiki on URLs bypasses the blacklist and is apparently being exploited by vandals “)
+300	195	0	0	0	1	0	default	20150212173400		532	Michael Jackson edit vandalism	general_vandalism	don’t know if something could’ve fitted better; can open a “current_affairs_vandalism” category; this filter was active for ~3weeks directly following MJ’s death; and a ‘current_affairs_vandalism’ would also cover the Trump after elections filter
+301	489	1	0	0	1	0	default	20160614033305		530	Long term IP-hopping abuse, more	long_term_abuse	
+302	828	0	0	1	0	0	default	20171102075753	disallow	527	Redirecting talk page	talk_page_vandalism	
+303	438	0	0	0	1	0	default	20130404080939	warn	521	Warn if create an article: Enter your new article name here	good_faith_article_creation	
+304	847	1	0	1	0	0	default	20181104193816	disallow	512	Sandbox troll (WP:LTA/SBT)	trolling	
+305	661	0	0	0	1	0	default	20150625135307	warn,disallow	495	unsourced section added to awards article	wiki_policy	
+306	215	1	0	0	1	0	default	20100502011708	throttle,disallow	489	AnonTalk 2	hidden_vandalism	
+307	809	1	0	1	0	0	default	20181111190314	disallow	487	SPI disruption	hidden_vandalism	
+308	829	1	0	0	0	0	default	20171014180255		487	Possible article hijacking	hidden_vandalism	
+309	742	1	0	0	0	0	default	20190105155622	throttle,disallow	487	BT UserTalkPage stalker	hidden_vandalism	
 310	43	0	0	0	1	0	default	20090928191833		480	New user removing AfD comments		
 311	770	0	0	0	0	0	default	20180424233552		474	Causing death vandal		
 312	393	0	0	0	1	0	default	20110422015403		469	Ice hockey statistics		
