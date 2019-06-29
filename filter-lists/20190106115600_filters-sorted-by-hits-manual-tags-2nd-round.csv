@@ -371,49 +371,49 @@ Unfortunately this filter also applies when a user removes their own !vote. - Ru
 368	622	1	0	0	1	0	default	20160614035415	disallow	235	Genre edit-warring	edit_warring	
 369	608	1	0	0	0	0	default	20140827012916	disallow	232	Banned user	hidden_vandalism	
 370	383	1	0	0	1	0	default	20110419184841		230	proxy vandalbot	bot_vandalism	
-371	902	1	0	0	0	0	default	20180318173847		230	Article creation as newly confirmed editor		
-372	56	1	0	0	0	0	default	20181018235046	disallow	229	Inappropriate CSS code in article space		
-373	103	0	0	0	1	0	default	20090928230911	warn	229	Uncyclopedia		
-374	493	1	0	0	1	0	default	20160614033439		229	New Rochelle Sock		
-375	901	0	0	1	0	0	default	20181210211356	warn	228	Possible Drumpf plugin		
-376	757	1	0	1	0	0	default	20160515151910	disallow	228	Persistent IP-hopping troll		
-377	718	1	0	1	0	0	default	20180929200924	disallow	227	Prolific socker III		
-378	854	0	0	0	0	0	default	20180507162052	disallow	225	Airport ref removal		
-379	115	1	0	0	1	0	default	20091127160912	throttle,blockautopromote	225	sleeper socks II		
-380	920	1	0	0	0	0	default	20181220031632	throttle	225	Possible sockpuppetry from EnglishEfternamn		
-381	200	0	0	0	1	0	default	20150212173422		224	Removal of PROD templates		
-382	258	1	0	0	1	0	default	20160820182124		223	General Tojo II		
-383	744	0	0	0	0	0	default	20161229052127		222	Removal of TemplateData		
-384	19	0	0	0	1	0	default	20100106172826		221	"Replacement of ""partition of India"" with ""independence of Pakistan"""		
-385	166	1	0	0	1	0	default	20181104190546	disallow	219	Singapore vandal		
-386	710	1	0	0	0	0	default	20170512133554	disallow	219	Muhammad vandal		
-387	886	1	0	0	0	0	default	20181115202503	throttle,disallow	217	LTA socking		
-388	426	1	0	0	1	0	default	20160614032543		215	TV station sockpuppeteer		
-389	640	0	0	0	1	0	default	20150628135317	warn,disallow	213	VEVO		
-390	234	1	0	0	1	0	default	20110310110753	disallow	208	Alexcas11 sockpuppets		
-391	928	0	0	1	0	0	default	20180909185830	warn	207	Transclusion of userpages		
-392	681	1	0	0	0	0	default	20150531155632	throttle	206	possible vandalism in NS4		
-393	465	1	0	0	0	0	default	20140823212744	disallow	201	FIFA IP hopper from Lima, Peru		
-394	648	1	0	0	0	0	default	20181023224322	disallow	195	Long-term abuse using Korean		
-395	808	1	0	0	1	0	default	20170509191107	disallow	194	Dead rat/Woomoo vandal		
-396	441	1	0	0	1	0	default	20160905181512	disallow	194	Sports forum spammer		
-397	210	1	0	0	1	0	default	20090928231101		193	MGM/other studio		
-398	917	1	0	1	0	0	default	20181210172142	disallow	192	Prevent the addition of Daniel C. Boyer		
-399	287	1	0	0	0	0	default	20180412195649	disallow	190	Sanders conspiracies		
-400	885	1	0	1	0	0	default	20181219130402	disallow	190	LTA 885		
-401	469	1	0	0	1	0	default	20130718155314		190	Shirik's Test Filter		
-402	811	1	0	0	0	0	default	20180514225222	disallow	189	Aaron Christopher		
-403	597	1	0	1	0	0	default	20170912210315	disallow	189	Europefan		
-404	424	1	0	0	1	0	default	20110828130927		189	Repeatedly blocked user --  testing-only rule for filter 425		
-405	13	1	0	0	1	0	default	20160812192945	warn,disallow	188	Knave vandalism		
-406	560	0	0	0	0	0	default	20150212181334	warn	185	"The ""truly"" vandal"		
-407	865	1	0	1	0	0	default	20170718220342		182	maghsoudi		
-408	377	0	0	0	1	0	default	20110107070532		175	Large not english contributions 2 (test only)		
-409	866	1	0	0	0	0	default	20180424212727		173	Temporary article title watch		
-410	666	1	0	0	0	0	default	20160628072635	disallow	172	Aas Mohammad		
-411	689	0	0	0	1	0	default	20160614040958	warn,tag	170	Chicken fucker vandalism		
-412	161	0	0	0	1	0	default	20090617131429		169	Overlinking		
-413	790	1	0	0	0	0	default	20170325041629		162	Nationality inventions		
+371	902	1	0	0	0	0	default	20180318173847		230	Article creation as newly confirmed editor	good_faith_article_creation	
+372	56	1	0	0	0	0	default	20181018235046	disallow	229	Inappropriate CSS code in article space	hidden_vandalism	
+373	103	0	0	0	1	0	default	20090928230911	warn	229	Uncyclopedia	good_faith_refs	
+374	493	1	0	0	1	0	default	20160614033439		229	New Rochelle Sock	sockpuppetry	
+375	901	0	0	1	0	0	default	20181210211356	warn	228	Possible Drumpf plugin	silly_vandalism	I don’t know about plugin, but that’s the label this gets based on content
+376	757	1	0	1	0	0	default	20160515151910	disallow	228	Persistent IP-hopping troll	trolling	
+377	718	1	0	1	0	0	default	20180929200924	disallow	227	Prolific socker III	sockpuppetry	
+378	854	0	0	0	0	0	default	20180507162052	disallow	225	Airport ref removal	link_vandalism	
+379	115	1	0	0	1	0	default	20091127160912	throttle,blockautopromote	225	sleeper socks II	sockpuppetry	
+380	920	1	0	0	0	0	default	20181220031632	throttle	225	Possible sockpuppetry from EnglishEfternamn	sockpuppetry	
+381	200	0	0	0	1	0	default	20150212173422		224	Removal of PROD templates	good_faith_template	
+382	258	1	0	0	1	0	default	20160820182124		223	General Tojo II	hidden_vandalism	
+383	744	0	0	0	0	0	default	20161229052127		222	Removal of TemplateData	good_faith_template	
+384	19	0	0	0	1	0	default	20100106172826		221	"Replacement of ""partition of India"" with ""independence of Pakistan"""	politically_motivated	
+385	166	1	0	0	1	0	default	20181104190546	disallow	219	Singapore vandal	hidden_vandalism	
+386	710	1	0	0	0	0	default	20170512133554	disallow	219	Muhammad vandal	religiously_motivated	
+387	886	1	0	0	0	0	default	20181115202503	throttle,disallow	217	LTA socking	sockpuppetry	
+388	426	1	0	0	1	0	default	20160614032543		215	TV station sockpuppeteer	sockpuppetry	
+389	640	0	0	0	1	0	default	20150628135317	warn,disallow	213	VEVO	general_vandalism	not quite sure what the problem is, but action is disallow, hence the label
+390	234	1	0	0	1	0	default	20110310110753	disallow	208	Alexcas11 sockpuppets	sockpuppetry	
+391	928	0	0	1	0	0	default	20180909185830	warn	207	Transclusion of userpages	good_faith_template	
+392	681	1	0	0	0	0	default	20150531155632	throttle	206	possible vandalism in NS4	hidden_vandalism	NS4=Wikipedia
+393	465	1	0	0	0	0	default	20140823212744	disallow	201	FIFA IP hopper from Lima, Peru	hidden_vandalism	
+394	648	1	0	0	0	0	default	20181023224322	disallow	195	Long-term abuse using Korean	long_term_abuse	
+395	808	1	0	0	1	0	default	20170509191107	disallow	194	Dead rat/Woomoo vandal	hidden_vandalism	
+396	441	1	0	0	1	0	default	20160905181512	disallow	194	Sports forum spammer	spam	
+397	210	1	0	0	1	0	default	20090928231101		193	MGM/other studio	hidden_vandalism	
+398	917	1	0	1	0	0	default	20181210172142	disallow	192	Prevent the addition of Daniel C. Boyer	hidden_vandalism	
+399	287	1	0	0	0	0	default	20180412195649	disallow	190	Sanders conspiracies	hidden_vandalism	
+400	885	1	0	1	0	0	default	20181219130402	disallow	190	LTA 885	long_term_abuse	
+401	469	1	0	0	1	0	default	20130718155314		190	Shirik's Test Filter	test	
+402	811	1	0	0	0	0	default	20180514225222	disallow	189	Aaron Christopher	hidden_vandalism	
+403	597	1	0	1	0	0	default	20170912210315	disallow	189	Europefan	hidden_vandalism	
+404	424	1	0	0	1	0	default	20110828130927		189	Repeatedly blocked user --  testing-only rule for filter 425	hidden_vandalism	alternatively: ‘test’
+405	13	1	0	0	1	0	default	20160812192945	warn,disallow	188	Knave vandalism	hidden_vandalism	
+406	560	0	0	0	0	0	default	20150212181334	warn	185	"The ""truly"" vandal"	silly_vandalism	not quite satisfied with label, but don’t have a better idea either
+407	865	1	0	1	0	0	default	20170718220342		182	maghsoudi	hidden_vandalism	
+408	377	0	0	0	1	0	default	20110107070532		175	Large not english contributions 2 (test only)	good_faith	or ‘test’, as per name
+409	866	1	0	0	0	0	default	20180424212727		173	Temporary article title watch	hidden_vandalism	title sounds weird for the filter to be hidden
+410	666	1	0	0	0	0	default	20160628072635	disallow	172	Aas Mohammad	hidden_vandalism	most likely ‘politically_motivated’
+411	689	0	0	0	1	0	default	20160614040958	warn,tag	170	Chicken fucker vandalism	profanity_vandalism	
+412	161	0	0	0	1	0	default	20090617131429		169	Overlinking	good_faith_refs	
+413	790	1	0	0	0	0	default	20170325041629		162	Nationality inventions	hidden_vandalism	
 414	798	0	0	1	0	0	default	20161010230835		162	Possible copyvio for image upload		
 415	676	1	0	0	0	0	default	20180222215913	disallow	160	Highway vandal		
 416	722	0	0	0	0	0	default	20170207181842		158	Please Accept		
