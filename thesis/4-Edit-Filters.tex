@@ -11,42 +11,41 @@ The extension, or at least its end user facing parts, was later renamed to ``edi
 
 In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
 %smth else we want to understand here?
-
-\begin{comment}
-% When and why were Wikipedia edit filters introduced?
-
-Edit filters were first introduced on the English Wikipedia in 2009 under the name ``abuse filters''.
-According to Wikipedia's newspaper, The Signpost, their clear purpose was to cope with the rising(syn) amount of vandalism as well as ``common newbie mistakes'' the encyclopedia faced~\cite{Signpost2009}.
-
-* what's filters' genesis story? why were they implemented? (compare with Rambot story) : try to reconstruct by examining traces and old page versions
-\end{comment}
+%TODO come back at the end of the chapter and make sure, we answered these questions
 
 \section{Data}
 
 The foundations for the present chapter lie in EN Wikipedia's policies and guidelines.
-Following pages were analysed in depth: <insert pages here>.
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1}
+Following pages were analysed in depth: \\
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter} \\
+\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1} \\
+<insert pages here>
+
+%************************************************************************
 
 \section{Definition}
 
 According to EN Wikipedia's own definition, an edit filter is ``a tool that allows editors in the edit filter manager group to set controls mainly to address common patterns of harmful editing''~\cite{Wikipedia:EditFilter}.
 
-A couple of keywords arouse interest here:
-who is in the edit filter manager group and how did they become part of it? what controls exactly can be set? what does ``mainly'' mean, are there other patterns addressed? and what are the patterns of harmful editing addressed by the filters?
+A couple of keywords arouse interest here: %TODO make sure the chapter answered these questions
+Who is in the edit filter manager group and how did they become part of it?
+What controls exactly can be set?
+What does ``mainly'' mean, are there other patterns addressed?
+And what are the patterns of harmful editing addressed by the filters?
 
 At least the ``mainly'' question is swiftly answered by the paragraph itself, since there is a footnote stating that ``[e]dit filters can and have been used to track or tag certain non-harmful edits, for example addition of WikiLove''~\cite{Wikipedia:EditFilter}.
-We discuss (who is in) the edit filter manager group in section~\ref{section:who-can-edit} and the patterns of harmful editing are inspected in detail in the next chapter.
+We discuss (who is in) the edit filter manager group in section~\ref{section:who-can-edit} and the patterns of harmful editing (as well as some further non-harmful edit patterns) are inspected in detail in the next chapter.
 Regarding the controls that can be set, we can briefly state that:
 Every filter defines a regular expression pattern against which every edit made to Wikipedia is checked.
 If there is a match, the edit in question is logged and potentially, additional actions such as tagging the edit summary, issuing a warning or disallowing the edit are invoked.
-Both the regex patterns and the possible edit filter actions are observed(syn!) in greater detail in the following sections.
+Both the regex patterns and the possible edit filter actions are investigated in greater detail in the following sections.
 
 \subsection{Example of a filter}
 
 For illustration purposes/better understanding, let us have a closer look at what a single edit filter looks like.
-Edit filter with ID 365 is public and currently enabled.
-Its name (``public comments'') reads ``Unusual changes to featured or good content''.
+Edit filter with ID 365 is public and currently enabled (as of June 30th 2019).
+This means the filter is working and everyone interested can view the filter's details.
+Its description reads ``Unusual changes to featured or good content''.
 The regex filter pattern is:
 \begin{verbatim}
 "page_namespace == 0 &
@@ -69,29 +68,38 @@ All these details can be viewed on the filter's detailed page\footnote{\url{http
 or on the screenshot thereof (figure~\ref{fig:filter-details}) that I created for convenience.
 
 Further information the filter detailed page displays is:
-number of filter hits; some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes); comments (left by filter editors, generally to log changes); flags ("Hide details of this filter from public view", "enable this filter", "mark as deleted");
-links to last modified (with diff and user who modified it), edit filter's history; "export this filter to another wiki" tool;
-and actions to take when the filter matches;
+number of filter hits;
+some statistics (the average time the filter takes to check an edit, percentage of hits and how many conditions from the condition limit it consumes);%TODO what is the condition limit
+comments (left by filter editors, generally to log and explain changes);
+flags (``Hide details of this filter from public view'', ``Enable this filter'', ``Mark as deleted'');
+links to last modified (with diff and user who modified it), the edit filter's history and a tool for exporting the filter to another wiki;
+and actions to take when the filter is triggered.
 
 \begin{figure}
 \centering
-  \includegraphics[width=1\columnwidth]{pics/detailed-page-filter365-no-boarder.png}
+  \includegraphics[width=.9\paperwidth,height=.9\paperheight,keepaspectratio]{pics/detailed-page-filter365-no-boarder.png}
   \caption{Detailed page of edit filter \#365}~\label{fig:filter-details}
 \end{figure}
-%TODO stretch graphic?
+%TODO graphic still looks weird..
 
 %************************************************************************
 
-\section{The AbuseFilter\footnote{Note that the user facing elements of this extention were renamed to ``edit filter'', however the extension itself, as well as corresponding/associated permissions, tables etc. still reflect the original name.} Mediawiki extension}
+\section{The AbuseFilter\footnote{Note that the user facing elements of this extention were renamed to ``edit filter'', however the extension itself, as well as its corresponding permissions, database tables etc. still reflect the original name.} Mediawiki extension}
 
-At the end, from a technical perspective, Wikipedia's edit filters are a MediaWiki plugin that allows every edit to be checked against a speficied/given regular expression pattern before it is published.
+At the end, from a technical perspective, Wikipedia's edit filters are a MediaWiki plugin that allows every edit (and some other editor's actions) to be checked against a speficied regular expression pattern before it is published.
 
-Every time a filter is triggered, the action that triggered it as well as further data such as the user who triggered the filter, their ip address, and a diff of the edit (if it was an edit), etc. are logged.
+Every time a filter is triggered, the action that triggered it as well as further data such as the user who triggered the filter, their IP address, and a diff of the edit (if it was an edit), a timestamp, the title of the page the user was looking at, etc. are logged.
 Most frequently, edit filters are triggered upon new edits, there are however further editor's actions that can trip an edit filter.
-These include: `createaccount', `edit', `move', `delete', `autocreateaccount', `upload', `feedback', `gatheredit', `moodbar', `stashupload'.
+As of June 30th 2019, these include: `edit', `move', `delete', `createaccount', `autocreateaccount', `upload', `stashupload'\footnote{See l. 181 in \url{https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master/includes/special/SpecialAbuseLog.php}}.
+%TODO explain what the actions are, especially the less obvious ones such as `autocreateaccount'
+Historically, further editor's actions such as `feedback', `gatheredit' and `moodbar' could trigger an edit filter.
+However, this is no longer the case. %TODO explain why? I have the guess that these are not available in the software anymore (generally, not only for the edit filters)
 
-When a filter is triggered, beside logging it, a further filter action may be invoked as well.
-The plugin defines following possible filter actions: `tagging, warning, throttling, disallowing, revoking auto-promotoed groups, blocking, removing from privileged groups, range-blocking.
+When a filter is triggered, beside logging this, a further filter action may be invoked as well.
+The plugin defines following possible filter actions:
+`tag', `throttle', `warn', `blockautopromote', `block', `degroup', `rangeblock', `disallow'. (l.2808 in \url{https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master/includes/AbuseFilter.php})
+%TODO verify that none of the actions are deprecated; I have my doubts that for instance `revoking auto-promoted groups' may not be available anymore
+%TODO explain what each action means
 
 The documentation page of the extension is here: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter}
 and the code is hosted on gerrit, Wikimedia's git repository hosting service of choice: \url{https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/AbuseFilter/+/refs/heads/master}.
@@ -101,25 +109,26 @@ The rules format can be viewed under \url{https://www.mediawiki.org/wiki/Extensi
 Data generated by the extension in stored in following database tables: \emph{abuse\_filter}, \emph{abuse\_filter\_log}, \emph{abuse\_filter\_action} and \emph{abuse\_filter\_history}~\cite{gerrit-abusefilter}.
 
 Following new user permissions are introduced by the abuse filter plugin:
-\begin{verbatim}
-abusefilter-modify 	Modify abuse filters
-abusefilter-view 	View abuse filters
-abusefilter-log 	View the abuse log
-abusefilter-log-detail 	View detailed abuse log entries
-abusefilter-private 	View private data in the abuse log
-abusefilter-modify-restricted 	Modify abuse filters with restricted actions
-abusefilter-modify-global 	Create or modify global abuse filters
-abusefilter-revert 	Revert all changes by a given abuse filter
-abusefilter-view-private 	View abuse filters marked as private
-abusefilter-log-private 	View log entries of abuse filters marked as private
-abusefilter-hide-log 	Hide entries in the abuse log
-abusefilter-hidden-log 	View hidden abuse log entries
-abusefilter-private-log 	View the AbuseFilter private details access log
-\end{verbatim}
+\begin{itemize}
+    \item `abusefilter-modify': Modify abuse filters
+    \item `abusefilter-view': View abuse filters
+    \item `abusefilter-log': View the abuse log
+    \item `abusefilter-log-detail':	View detailed abuse log entries
+    \item `abusefilter-private': View private data in the abuse log
+    \item `abusefilter-modify-restricted': Modify abuse filters with restricted actions
+    \item `abusefilter-modify-global': Create or modify global abuse filters
+    \item `abusefilter-revert':	Revert all changes by a given abuse filter
+    \item `abusefilter-view-private': View abuse filters marked as private
+    \item `abusefilter-log-private': View log entries of abuse filters marked as private
+    \item `abusefilter-hide-log': Hide entries in the abuse log
+    \item `abusefilter-hidden-log':	View hidden abuse log entries
+    \item `abusefilter-private-log': View the AbuseFilter private details access log
+\end{itemize}
 
 %TODO: Flowchart of the filtering process!
 
-%Note that the user facing elements of this extention were renamed to ``edit filter'', however the extension itself, as well as corresponding/associated permissions, tables etc. still reflect the original name.
+
+%************************************************************************
 
 \section{History}
 
@@ -139,6 +148,8 @@ Examples of type of edits that are supposed to be targeted:
 \url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}
 
 %TODO sift again through Archive notes and refine the section
+
+%************************************************************************
 
 \section{Building a filter: the internal perspective}
 \subsection{How is a new filter introduced?}
@@ -223,6 +234,8 @@ Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{
 %TODO move this to the introducing a filter part, where it's mentioned for the first time that filters should be "log only" in the beginning; move verything else to further studies/long list of interesting questions
 In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
 Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
+
+%************************************************************************
 
 \section{Filters during runtime: the external perspective}
 \subsection{What happens when a filter gets triggered?}
@@ -321,6 +334,7 @@ If such an account is compromised, it loses its edit filter manager rights and g
 //interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
 \end{comment}
 
+%************************************************************************
 
 \section{Edit filters' role in the quality control frame}
 
@@ -490,6 +504,8 @@ I've compiled a list of edit filter managers who are simultaneously also bot ope
 I've further assembled the bots they run and made notes on the bots that seem to be relevant to vandalism prevention/quality assurance
 I'm currently trying to determine from document traces what filter contributions the corresponding edit filter managers had and whether they are working on filters similar to the bots they operate.
 Insight is currently minimal, since abuse\_filter\_history table is not available and we can only determine what filters an edit filter manager has worked on from limited traces such as: last modifier of the filter from abuse\_filter table; editors who signed their comments from abuse\_filter table; probably some noticeboards or talk page archives, but I haven't looked into these so far.
+
+%TODO make sure the questions at l.12 and l.28 are answered
 
 \begin{comment}
 \url{http://www.aaronsw.com/weblog/whorunswikipedia}
