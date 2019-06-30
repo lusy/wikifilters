@@ -133,11 +133,25 @@ Following new user permissions are introduced by the abuse filter plugin:
 \section{History}
 
 Now that there is a general understanding of what edit filters look like today, let us take a step back and investigate how they came to be this way.
-In order to understand the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1}}.
+In order to understand the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia_talk:Edit_filter/Archive_1&oldid=884572675}}
+for the period between the announcement that the extension is planned up until the voting process preceding its introduction.
+For a while at the beginnings of the discussion, there was some confusion among editors regarding the intended functionality of the EditFilter extension.
+During the discussion(syn!), participating editors invoked various motivations for the introduction of the extension (which sometimes contradicted each other) and argued for or against the introduction depending on these.
+The discussion (syn!) reflects a mix of ideological and practical concerns.
+%TODO elaborate a bit on the different understandings of what the extension was supposed to do
+The biggest controversies lay along the lines of filters being public-vs-private and the actions the filters were to invoke upon a match.
+An automated rights revokation or block with no manual confirmation by a real person was of particular concern to a lot of editors.
+As far as I am concerned, the later functionality was technically implemented but never really used (although there are `blockautopromote' actions triggered in the abuse\_filter\_log) %TODO investigate what exactly this means and why it hasn't happened since 2012
 
-In a nutshell, the motivation for introducing edit filters seems to have been as follows:
+As to the public-vs-private debate, initially, it was planned that all filters are hidden from public view and only editors with special permissions (the edit filter managers) were supposed to be able to view and modify the patterns and logs.
+The core developer of the extension was reasoning that its primary purpose was to fend off really persistent vandals with reasonable technical understanding who were ready to invest time and effort to circumvent anti-vandal measures
+and that it was thus unwise to make circumvention easier to them by allowing them to view the pattern according to which their edits were supressed.
+This was however met with serious resistence by the community who felt that such secret extension was contradicting Wikipedia's values of openness and transparency.
+Besides, opponents of the filters being completely private were concerned that the tool was quite powerful and hiding stuff will prevent the community from monitoring (syn) for errors and abuse.
+
+Although there were some diverging opinions on what the extension was supposed to target, in a nutshell, the motivation for its introduction seems to have been as follows:
 bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
-These were mostly obvious but pervasive cases of vandalism, possibly introduced in (semi-)automated fashion, that took some time to clean up.
+These were mostly obvious but pervasive cases of vandalism, possibly introduced in (semi-)automated fashion, that took some time and effort to clean up.
 The motivation of the extention's developers was that if a filter just disallows such vandalism, vandal fighters could use their time for checking less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.
 The extention's developers felt that admins and vandal fighters could use this valuable time more productively.
 According to the discussion archives, following types of edits were supposed to be targeted by the extension:\\
@@ -146,7 +160,7 @@ According to the discussion archives, following types of edits were supposed to 
 \url{https://en.wikipedia.org/wiki/Special:Contributions/AV-THE-3RD}\\
 \url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}\\
 
-%TODO sift again through Archive notes and refine the section
+\begin{comment}
 "It gives us the opportunity to lighten the hard restrictions we put on all users, instead placing tougher restrictions on those who are actually causing the problem.— Werdna talk 10:40, 25 June 2008 (UTC)"
 
 // so there's general discontent with bots (bot governance) that has motivated the creation of this extention?
@@ -164,15 +178,9 @@ According to the discussion archives, following types of edits were supposed to 
 
 Arguments for as restricted as possible, since 'there are precedents for disgruntled admins doing some leaking'; and motivated trolls can work an account up to admin; // I'm torn here though: every system can be abused; trolls can work accounts up to edit-filter-managers as well. So if that's our premise, we're lost from the beginning
 
-// so, according to Werdna, main targetted group are especially determined vandals in which case it makes sense to hide filters' heuristics from them. Which would also explain why 2/3 of the filters are hidden
-
-ideological and practical concerns mix
-
-A lot of controversy along the lines of
-* public/private filters
-* what actions exactly are ok to be taken by the filters; strong objections from community members about filters blocking/taking away rights etc. from editors; and although (both?) of theses functionalities ended up being implmented actually none of them is being actively used on the EN WP (where the "strictest" action applied is "disallow" and the last time a filter took an action different from disallow/tag/warn/log was "blockautopromote" and "aftv5flagabuse" (not sure what exactly this is) in 2012, see ipnb)
 
 %TODO: note on historically, all filters were supposed to be hidden
+\end{comment}
 
 %************************************************************************
 
