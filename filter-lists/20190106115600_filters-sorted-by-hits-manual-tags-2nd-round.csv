@@ -478,115 +478,115 @@ Unfortunately this filter also applies when a user removes their own !vote. - Ru
 475	450	1	0	0	1	0	default	20130404081101		96	Vandalizing date articles	hidden_vandalism	
 476	509	1	0	0	1	0	default	20160614033636	disallow	91	Long-term pattern abuse III	long_term_abuse	
 477	634	1	0	0	1	0	default	20160614035827	warn,disallow	90	Long-term sock attack	sockpuppetry	
-478	229	1	0	0	1	0	default	20091127160918	throttle,warn,disallow	90	Hidden comments by new users		
-479	625	0	0	0	1	0	default	20140928195427		89	Yolo Swag 2		
-480	516	1	0	0	1	0	default	20160614033733	disallow	88	Celebrity vandal		
-481	583	1	0	0	1	0	default	20140102182326		87	Serial sockpuppet article creations		
-482	595	1	0	0	1	0	default	20181104191245	warn,disallow	86	Animal welfare IP hopper		
-483	71	1	0	0	1	0	default	20090320184133	throttle	84	Unusually long pagemove edit summaries		
-484	844	1	0	0	0	0	default	20170716153910	disallow	84	Test filter		
-485	140	1	0	0	1	0	default	20090928231118	disallow	84	Long-term harassment case		
-486	703	0	0	0	1	0	default	20150713211356		82	Edit summary only consists of article title		
-487	725	1	0	0	0	0	default	20151114190802	disallow	82	Long term title vandal		
-488	228	1	0	0	1	0	default	20160820181427		82	AnonTalk 3		
-489	557	1	0	0	1	0	default	20161012203159	disallow	80	Freewill vandal		
-490	165	1	0	0	1	0	default	20090512070119	disallow	79	Image vandalism		
-491	800	1	0	0	0	0	default	20170315083000	disallow	78	ranpini		
-492	779	1	0	0	0	0	default	20160824134445	disallow	77	Manga EL spam		
-493	525	1	0	0	1	0	default	20140102180250	disallow	77	Sock vandal User:Danrolo		
-494	305	1	0	0	1	0	default	20100404194255	throttle,disallow	77	Potential sleeper accounts		
-495	576	1	0	0	1	0	default	20160614034611	disallow	77	Dantherocker1		
-496	116	1	0	0	1	0	default	20170402073422	disallow	77	Persistent vandal creating redirects		
-497	888	1	0	0	0	0	default	20181208131357	disallow	77	IP bot editing		
-498	131	0	0	0	1	0	default	20091127160905	warn,disallow	76	Removal of controversial images		
-499	694	0	0	1	0	0	default	20181023223653	disallow	74	Moves to or from the Module namespace		
-500	585	1	0	0	1	0	default	20140102182111	disallow	72	New user removing own name from AIV		
-501	868	1	0	1	0	0	default	20180809162025	disallow	71	Template vandalism		
-502	547	1	0	0	0	0	default	20170605190343	disallow	70	Cat Creek		
-503	922	1	0	0	0	0	default	20181104190106	disallow	70	Abusive messages on RfA-related pages		
-504	459	1	0	0	0	0	default	20160718155146	disallow	70	Long-term block evasion		
-505	584	1	0	0	1	0	default	20160614034706		65	Improper Template Usage by New User		
-506	567	1	0	0	1	0	default	20160614034452	disallow	64	Disruptive CSD nominations		
-507	581	1	0	0	1	0	default	20160614034647		64	Dantherocker1 II		
-508	14	0	0	0	1	0	default	20090325102514		63	Test to detect new pages by new users		
-509	312	1	0	0	1	0	default	20150212173501		62	External link removal		
-510	621	1	0	0	1	0	default	20160614035403	disallow	62	Spambot Filter		
-511	328	1	0	0	1	0	default	20130404080744		61	Prolific socker III		
-512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)		
-513	668	1	0	0	0	0	default	20150429015714	disallow	61	GP disruption		
-514	226	1	0	0	1	0	default	20091003121354		61	Johnali123 sockpuppets		
-515	4	1	0	0	1	0	default	20160812192142		60	Copernicus vandal		
-516	910	0	0	0	1	0	default	20180714091120		60	Maureen Wroblewitz spammer		
-517	414	1	0	0	1	0	default	20160904150257	disallow	60	M5 Vandalism		
-518	501	1	0	0	1	0	default	20160614033558		60	Chinese blogpost spammer		
-519	566	1	0	0	1	0	default	20140102181650	disallow	57	SPI Impersonation		
-520	635	0	0	0	1	0	default	20180817210724	warn	57	OTRS template added by non-OTRS member		
-521	419	0	0	0	1	0	default	20120808231716	disallow	57	User removing himself from AIV		
-522	330	1	0	0	1	0	default	20110310111130	warn	55	Attacks on editors		
-523	914	1	0	1	0	0	default	20180422210717	disallow	54	Igor Janev Spammer		
-524	293	1	0	0	1	0	default	20160824183539	disallow	53	J.delanoy attacks		
-525	193	1	0	0	1	0	default	20090928230945		53	Wknight94's test filter		
-526	750	0	0	0	0	0	default	20160823102448		51	Long term film vandal		
-527	263	1	0	0	1	0	default	20100808082040		50	Serafin - talk page abuse		
-528	510	1	0	0	1	0	default	20160614033645		50	JonesManorFarm		
-529	778	1	0	0	1	0	default	20160722100644		48	Ceb sock		
-530	816	1	0	0	1	0	default	20170120213621	disallow	47	ARBPIA vandal bot		
-531	390	1	0	0	1	0	default	20160614032112	disallow	47	Dynamic IP vandalism		
-532	204	1	0	0	1	0	default	20091023011806	disallow	47	Bangladeshi vandal		
-533	467	1	0	0	1	0	default	20160614032854	disallow	47	Sakaisinai7		
-534	594	1	0	0	1	0	default	20160614034809	disallow	46	Verizon mobile vandal		
-535	940	1	0	0	0	0	default	20181109181811	throttle,disallow	46	LTA 940		
-536	178	1	0	0	1	0	default	20090812211459	disallow	46	Crier attack vandalism		
-537	570	1	0	0	1	0	default	20160614034517	disallow	45	Checkmarx		
-538	696	1	0	0	0	0	default	20150714000934		44	Informative link spam		
-539	730	1	0	0	0	0	default	20160107192810		44	Filter to spot sock		
-540	48	0	0	0	1	0	default	20090325083005		43	Oft-inappropriate external links		
-541	191	1	0	0	1	0	default	20160820181202		43	User:ECW500		
-542	309	1	0	0	1	0	default	20100920023439	throttle	42	Unusual change of URLs		
-543	719	0	0	0	0	0	default	20150818174227	disallow	42	Empty ref vandal		
-544	480	1	0	0	1	0	default	20160911183305	disallow	42	Swamilive		
-545	508	1	0	0	1	0	default	20160614033626	disallow	42	Long-term pattern abuse II		
-546	471	1	0	0	1	0	default	20131003210147		41	Eurodance vandal		
-547	795	1	0	0	1	0	default	20170402074826	disallow	40	Ref Desk Troll		
-548	211	0	0	0	1	0	default	20090928231057		40	Warn users about entering email addresses		
-549	54	1	0	0	1	0	default	20100808081238		39	Virgin Killer vandalism		
-550	830	1	0	0	0	0	default	20190104180947	disallow	39	LTA_O_socking		
-551	953	1	0	0	0	0	default	20190104181712		39	Galobtter test filter		
-552	736	0	0	0	0	0	default	20151203092828		39	XSS Filter		
-553	629	1	0	0	0	0	default	20180403031050		38	Possible Spamming		
-554	945	1	0	1	0	0	default	20181205003231	throttle,disallow	37	proxy talk page abuse		
-555	490	1	0	0	1	0	default	20160911190243	disallow	37	Beatles IP vandal		
-556	340	1	0	0	1	0	default	20150212173520		36	Misc Vandalism, Type N+1		
-557	360	1	0	0	1	0	default	20110310111414	disallow	36	Spam Blacklist Circumvention Attempts		
-558	546	1	0	0	1	0	default	20160614034041	disallow	35	Disruptive user from Hyogo, Japan		
-559	673	0	0	0	0	0	default	20160128121223		35	Ankur Mazumder		
-560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling		
-561	760	1	0	0	0	0	default	20160628012842	disallow	34	Sandbox vandal		
-562	154	0	0	0	1	0	default	20090807113207		33	Macedonia naming conflict 2		
-563	781	1	0	0	0	0	default	20161103144540	disallow	32	LTA collection 1		
-564	553	1	0	0	1	0	default	20130611050053		32	The FIFA Vandal from Peru		
+478	229	1	0	0	1	0	default	20091127160918	throttle,warn,disallow	90	Hidden comments by new users	hidden_vandalism	
+479	625	0	0	0	1	0	default	20140928195427		89	Yolo Swag 2	silly_vandalism	or ‘meme_vandalism’ if we ever decide to introduce it
+480	516	1	0	0	1	0	default	20160614033733	disallow	88	Celebrity vandal	hidden_vandalism	
+481	583	1	0	0	1	0	default	20140102182326		87	Serial sockpuppet article creations	sockpuppetry	
+482	595	1	0	0	1	0	default	20181104191245	warn,disallow	86	Animal welfare IP hopper	hidden_vandalism	
+483	71	1	0	0	1	0	default	20090320184133	throttle	84	Unusually long pagemove edit summaries	hidden_vandalism	
+484	844	1	0	0	0	0	default	20170716153910	disallow	84	Test filter	test	
+485	140	1	0	0	1	0	default	20090928231118	disallow	84	Long-term harassment case	harassment	
+486	703	0	0	0	1	0	default	20150713211356		82	Edit summary only consists of article title	good_faith_edit_summary	
+487	725	1	0	0	0	0	default	20151114190802	disallow	82	Long term title vandal	long_term_abuse	
+488	228	1	0	0	1	0	default	20160820181427		82	AnonTalk 3	hidden_vandalism	
+489	557	1	0	0	1	0	default	20161012203159	disallow	80	Freewill vandal	hidden_vandalism	
+490	165	1	0	0	1	0	default	20090512070119	disallow	79	Image vandalism	image_vandalism	
+491	800	1	0	0	0	0	default	20170315083000	disallow	78	ranpini	hidden_vandalism	
+492	779	1	0	0	0	0	default	20160824134445	disallow	77	Manga EL spam	spam	as per name
+493	525	1	0	0	1	0	default	20140102180250	disallow	77	Sock vandal User:Danrolo	sockpuppetry	
+494	305	1	0	0	1	0	default	20100404194255	throttle,disallow	77	Potential sleeper accounts	sockpuppetry	
+495	576	1	0	0	1	0	default	20160614034611	disallow	77	Dantherocker1	hidden_vandalism	
+496	116	1	0	0	1	0	default	20170402073422	disallow	77	Persistent vandal creating redirects	hidden_vandalism	could be ‘redirect_vandalism’ (exists in Vandalism types); haven’t used it once so far though
+497	888	1	0	0	0	0	default	20181208131357	disallow	77	IP bot editing	bot_vandalism	
+498	131	0	0	0	1	0	default	20091127160905	warn,disallow	76	Removal of controversial images	image_vandalism	
+499	694	0	0	1	0	0	default	20181023223653	disallow	74	Moves to or from the Module namespace	page_move_vandalism	bc of action
+500	585	1	0	0	1	0	default	20140102182111	disallow	72	New user removing own name from AIV	avoidant_vandalism	
+501	868	1	0	1	0	0	default	20180809162025	disallow	71	Template vandalism	template_vandalism	
+502	547	1	0	0	0	0	default	20170605190343	disallow	70	Cat Creek	hidden_vandalism	
+503	922	1	0	0	0	0	default	20181104190106	disallow	70	Abusive messages on RfA-related pages	hidden_vandalism	
+504	459	1	0	0	0	0	default	20160718155146	disallow	70	Long-term block evasion	long_term_abuse	
+505	584	1	0	0	1	0	default	20160614034706		65	Improper Template Usage by New User	hidden_vandalism	
+506	567	1	0	0	1	0	default	20160614034452	disallow	64	Disruptive CSD nominations	hidden_vandalism	
+507	581	1	0	0	1	0	default	20160614034647		64	Dantherocker1 II	hidden_vandalism	
+508	14	0	0	0	1	0	default	20090325102514		63	Test to detect new pages by new users	general_tracking	
+509	312	1	0	0	1	0	default	20150212173501		62	External link removal	hidden_vandalism	
+510	621	1	0	0	1	0	default	20160614035403	disallow	62	Spambot Filter	bot_vandalism	
+511	328	1	0	0	1	0	default	20130404080744		61	Prolific socker III	sockpuppetry	
+512	660	1	0	0	0	0	default	20150128141314		61	Possibly JarlaxleArtemis (LTA)	long_term_abuse	
+513	668	1	0	0	0	0	default	20150429015714	disallow	61	GP disruption	hidden_vandalism	
+514	226	1	0	0	1	0	default	20091003121354		61	Johnali123 sockpuppets	sockpuppetry	
+515	4	1	0	0	1	0	default	20160812192142		60	Copernicus vandal	hidden_vandalism	
+516	910	0	0	0	1	0	default	20180714091120		60	Maureen Wroblewitz spammer	spam	
+517	414	1	0	0	1	0	default	20160904150257	disallow	60	M5 Vandalism	hidden_vandalism	
+518	501	1	0	0	1	0	default	20160614033558		60	Chinese blogpost spammer	spam	
+519	566	1	0	0	1	0	default	20140102181650	disallow	57	SPI Impersonation	impersonation	
+520	635	0	0	0	1	0	default	20180817210724	warn	57	OTRS template added by non-OTRS member	good_faith_template	
+521	419	0	0	0	1	0	default	20120808231716	disallow	57	User removing himself from AIV	avoidant_vandalism	
+522	330	1	0	0	1	0	default	20110310111130	warn	55	Attacks on editors	personal_attacks	
+523	914	1	0	1	0	0	default	20180422210717	disallow	54	Igor Janev Spammer	spam	
+524	293	1	0	0	1	0	default	20160824183539	disallow	53	J.delanoy attacks	personal_attacks	
+525	193	1	0	0	1	0	default	20090928230945		53	Wknight94's test filter	test	
+526	750	0	0	0	0	0	default	20160823102448		51	Long term film vandal	long_term_abuse	
+527	263	1	0	0	1	0	default	20100808082040		50	Serafin - talk page abuse	talk_page_vandalism	
+528	510	1	0	0	1	0	default	20160614033645		50	JonesManorFarm	hidden_vandalism	
+529	778	1	0	0	1	0	default	20160722100644		48	Ceb sock	sockpuppetry	
+530	816	1	0	0	1	0	default	20170120213621	disallow	47	ARBPIA vandal bot	bot_vandalism	
+531	390	1	0	0	1	0	default	20160614032112	disallow	47	Dynamic IP vandalism	hidden_vandalism	
+532	204	1	0	0	1	0	default	20091023011806	disallow	47	Bangladeshi vandal	hidden_vandalism	
+533	467	1	0	0	1	0	default	20160614032854	disallow	47	Sakaisinai7	hidden_vandalism	
+534	594	1	0	0	1	0	default	20160614034809	disallow	46	Verizon mobile vandal	hidden_vandalism	
+535	940	1	0	0	0	0	default	20181109181811	throttle,disallow	46	LTA 940	long_term_abuse	
+536	178	1	0	0	1	0	default	20090812211459	disallow	46	Crier attack vandalism	hidden_vandalism	
+537	570	1	0	0	1	0	default	20160614034517	disallow	45	Checkmarx	hidden_vandalism	
+538	696	1	0	0	0	0	default	20150714000934		44	Informative link spam	link_vandalism	
+539	730	1	0	0	0	0	default	20160107192810		44	Filter to spot sock	sockpuppetry	
+540	48	0	0	0	1	0	default	20090325083005		43	Oft-inappropriate external links	link_vandalism	
+541	191	1	0	0	1	0	default	20160820181202		43	User:ECW500	hidden_vandalism	
+542	309	1	0	0	1	0	default	20100920023439	throttle	42	Unusual change of URLs	hidden_vandalism	
+543	719	0	0	0	0	0	default	20150818174227	disallow	42	Empty ref vandal	general_vandalism	"it’s kind of a ddos actually, but I don’t have a suitable label for this; see comments: “Ongoing vandal from Belgrade, Serbia entering only ""<ref></ref>"" into articles until they are blocked. Should be temporary“"
+544	480	1	0	0	1	0	default	20160911183305	disallow	42	Swamilive	hidden_vandalism	
+545	508	1	0	0	1	0	default	20160614033626	disallow	42	Long-term pattern abuse II	long_term_abuse	
+546	471	1	0	0	1	0	default	20131003210147		41	Eurodance vandal	hidden_vandalism	
+547	795	1	0	0	1	0	default	20170402074826	disallow	40	Ref Desk Troll	trolling	
+548	211	0	0	0	1	0	default	20090928231057		40	Warn users about entering email addresses	good_faith	potential doxxing; but filter never activated to seriously prevent doxxing; action was ever only “log” and filter was deactivated after a month
+549	54	1	0	0	1	0	default	20100808081238		39	Virgin Killer vandalism	hidden_vandalism	
+550	830	1	0	0	0	0	default	20190104180947	disallow	39	LTA_O_socking	sockpuppetry	
+551	953	1	0	0	0	0	default	20190104181712		39	Galobtter test filter	test	
+552	736	0	0	0	0	0	default	20151203092828		39	XSS Filter	bug	see https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested/Archive_7#XSS_Filter_detect
+553	629	1	0	0	0	0	default	20180403031050		38	Possible Spamming	spam	
+554	945	1	0	1	0	0	default	20181205003231	throttle,disallow	37	proxy talk page abuse	talk_page_vandalism	
+555	490	1	0	0	1	0	default	20160911190243	disallow	37	Beatles IP vandal	hidden_vandalism	
+556	340	1	0	0	1	0	default	20150212173520		36	Misc Vandalism, Type N+1	hidden_vandalism	
+557	360	1	0	0	1	0	default	20110310111414	disallow	36	Spam Blacklist Circumvention Attempts	spam	
+558	546	1	0	0	1	0	default	20160614034041	disallow	35	Disruptive user from Hyogo, Japan	hidden_vandalism	
+559	673	0	0	0	0	0	default	20160128121223		35	Ankur Mazumder	sockpuppetry	as per comments: “Created per request. Prolific sockpuppeteer who repeatedly makes biographies about himself. Log only for now. --Samwalton9, 29 March 2015”
+560	896	1	0	1	0	0	default	20190104211438	disallow	34	ANI trolling	trolling	
+561	760	1	0	0	0	0	default	20160628012842	disallow	34	Sandbox vandal	hidden_vandalism	
+562	154	0	0	0	1	0	default	20090807113207		33	Macedonia naming conflict 2	politically_motivated	
+563	781	1	0	0	0	0	default	20161103144540	disallow	32	LTA collection 1	long_term_abuse	
+564	553	1	0	0	1	0	default	20130611050053		32	The FIFA Vandal from Peru	hidden_vandalism	
 565	821	1	0	0	0	0	default	20180725014748	disallow	32	Supersonic jet		
 566	678	0	0	0	0	0	default	20151223104143		32	MOS vandal		
-567	701	0	0	0	0	0	default	20150829164145		32	Image link spam		
+567	701	0	0	0	0	0	default	20150829164145		32	Image link spam	image_vandalism	
 568	241	1	0	0	1	0	default	20091003121014		32	Truth Lover sock vandal		
 569	378	1	0	0	1	0	default	20120202004442	disallow	31	Russian Science		
 570	775	1	0	0	1	0	default	20160723173128		30	MKUltra Vandal		
-571	792	1	0	0	0	0	default	20181230215124	disallow	30	Harassment		
-572	107	1	0	0	1	0	default	20090807112653		30	Continued spam of blacklisted links		
+571	792	1	0	0	0	0	default	20181230215124	disallow	30	Harassment	harassment	
+572	107	1	0	0	1	0	default	20090807112653		30	Continued spam of blacklisted links	spam	
 573	412	1	0	0	1	0	default	20110518202040		30	Image added		
 574	440	0	0	0	1	0	default	20120719063817		30	intextual.com markup		
 575	448	1	0	0	1	0	default	20130404081056	disallow	30	unblock disruption		
-576	746	1	0	0	0	0	default	20160208201022	disallow	30	Prolific socker IV (B)		
+576	746	1	0	0	0	0	default	20160208201022	disallow	30	Prolific socker IV (B)	sockpuppetry	
 577	407	1	0	0	1	0	default	20120808231546	disallow	29	Disruptive block evasion		
 578	437	0	0	0	1	0	default	20120808231808	warn	29	Title blacklist for TITLES with more than 9 caps		
 579	25	1	0	0	1	0	default	20090318150015		28	Unusual behavior from new account		
-580	911	1	0	0	1	0	default	20180724113113	disallow	28	Wrestling social networking spammer		
+580	911	1	0	0	1	0	default	20180724113113	disallow	28	Wrestling social networking spammer	spam	
 581	237	0	0	0	1	0	default	20091003121439		28	Creating page with maintenance templates		
 582	93	0	0	0	1	0	default	20090708124036		27	Web links in edit summaries		
-583	863	1	0	0	0	0	default	20180403030800		27	LGBT LTA		
-584	863	1	0	0	0	0	default	20171118220117	disallow	27	LTA 873		
+583	863	1	0	0	0	0	default	20180403030800		27	LGBT LTA	long_term_abuse	
+584	863	1	0	0	0	0	default	20171118220117	disallow	27	LTA 873	long_term_abuse	
 585	933	1	0	1	0	0	default	20181001034355	disallow	27	Deepak Khumar		
-586	45	1	0	0	1	0	default	20090322043601		26	Move to title with special characters		
+586	45	1	0	0	1	0	default	20090322043601		26	Move to title with special characters	page_move_vandalism	
 587	307	1	0	0	1	0	default	20100404201317	throttle,warn,disallow	26	Redlink/edit summary vandalism by specific user		
 588	609	1	0	0	0	0	default	20140801184723	disallow	25	Europa Universalis-related disruption		
 589	411	0	0	0	1	0	default	20110521082446	warn,disallow	25	Edit notices		
