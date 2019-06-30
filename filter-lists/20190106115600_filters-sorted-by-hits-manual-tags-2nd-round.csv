@@ -414,70 +414,70 @@ Unfortunately this filter also applies when a user removes their own !vote. - Ru
 411	689	0	0	0	1	0	default	20160614040958	warn,tag	170	Chicken fucker vandalism	profanity_vandalism	
 412	161	0	0	0	1	0	default	20090617131429		169	Overlinking	good_faith_refs	
 413	790	1	0	0	0	0	default	20170325041629		162	Nationality inventions	hidden_vandalism	
-414	798	0	0	1	0	0	default	20161010230835		162	Possible copyvio for image upload		
-415	676	1	0	0	0	0	default	20180222215913	disallow	160	Highway vandal		
-416	722	0	0	0	0	0	default	20170207181842		158	Please Accept		
-417	235	0	0	0	1	0	default	20090928231159		157	Your mom jokes		
-418	674	0	0	0	0	0	default	20161015072323	disallow	156	Long term infobox vandal		
-419	906	1	0	1	0	0	default	20180721164347	disallow	154	Alan Jackson Vandal		
-420	745	1	0	0	0	0	default	20170228011409		154	Talk page abuse		
-421	63	1	0	0	1	0	default	20091127160855	disallow	150	Abusive unblock denials		
-422	278	1	0	0	1	0	default	20120202004634		149	Possible copyright violations		
-423	104	0	0	0	1	0	default	20150212173322	warn	149	Helpme and Adminhelp		
-424	168	0	0	0	1	0	default	20090830005433	warn	148	Non-admins responding to unblock requests		
-425	542	1	0	0	1	0	default	20160614034012		147	Open proxies II		
-426	240	0	0	0	1	0	default	20091127160918		147	Used lifetime over/with/as well as existing apparatus		
-427	185	0	0	0	1	0	default	20181104190717		146	Cross-namespace move		
-428	430	1	0	0	1	0	default	20130404080919	disallow	145	Various socking spammers		
-429	737	1	0	0	0	0	default	20180314041327	disallow	145	Christ the Logos		
-430	876	1	0	0	0	0	default	20190104181014	throttle,warn	144	Derp III		
-431	785	1	0	0	0	0	default	20160818213434		139	Template doc vandalism		
-432	125	0	0	0	1	0	default	20090429124019		138	Insertion of repeated phrases		
-433	653	1	0	0	0	0	default	20150730223741	disallow	136	Infobox vandal		
-434	190	1	0	0	1	0	default	20091218070146	disallow	134	CrabCore (4chan) - [[Special:Contributions/70.122.90.204]]		
-435	743	1	0	0	0	0	default	20180212172048	disallow	133	Prolific socker IV		
-436	439	1	0	0	1	0	default	20130404080945	disallow	132	Chaosname		
-437	881	1	0	1	0	0	default	20180420054127	disallow	131	Excessive scatology		
-438	492	1	0	0	1	0	default	20120924064810		131	Check for possible persistent IP-hopping abuse		
-439	855	1	0	0	1	0	default	20181104193922	disallow	129	LTA (Georgia)		
-440	734	1	0	0	0	0	default	20171204231846	disallow	127	McAusten		
-441	848	0	0	0	0	0	default	20170505042534		126	Large contributions test filter		
-442	373	1	0	0	1	0	default	20120807052549		125	Mario96		
-443	767	1	0	1	0	0	default	20181219232350	disallow	124	Prophecy spam		
-444	564	1	0	0	1	0	default	20140102181617	disallow	123	block evasion		
-445	513	1	0	0	1	0	default	20160929181639	disallow	122	Persistent talk page abuse from IP ranges II		
-446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism		
-447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism		
-448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages		
-449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds		
-450	453	1	0	0	1	0	default	20130404081115	warn,disallow	119	Temporary block on making specific kinds of template edits		
-451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal		
-452	281	1	0	0	1	0	default	20100108215922		115	Unwatched BLPs		
-453	723	1	0	0	0	0	default	20160914172157		115	MusikAnimal's test filter		
-454	706	1	0	0	0	0	default	20160925183649	disallow	113	Dutch football vandalism		
-455	455	1	0	0	1	0	default	20120602063353	disallow	113	Bahrani		
-456	434	1	0	0	1	0	default	20160614032622		112	Roman vandal		
-457	769	1	0	0	0	0	default	20180403064325	disallow	110	AfD nomination harassment		
-458	665	1	0	0	0	0	default	20150807184304	disallow	109	revescom		
-459	797	1	0	1	0	0	default	20161009215924	disallow	108	Synth LTA		
-460	936	1	0	1	0	0	default	20181014164944	disallow	108	LTA 936		
-461	604	0	0	0	1	0	default	20140303202400		107	Keyboard mashing		
-462	663	0	0	0	0	0	default	20150726191722	disallow	107	Techno genre warrior		
-463	690	0	0	0	0	0	default	20170512133607	disallow	107	Smoothest Ashu		
-464	201	0	0	0	0	0	default	20130414054340		106	KoH test filter		
-465	288	1	0	0	1	0	default	20160824183226	disallow	105	IP reverting/wikistalking by banned user		
-466	266	1	0	0	1	0	default	20160823115247		104	Anti-fundraising trolling		
-467	506	1	0	0	1	0	default	20140102180029	disallow	104	Broadway Hoaxer		
-468	507	1	0	0	1	0	default	20160929181209	disallow	100	Vandalism		
-469	306	1	0	0	1	0	default	20120808231304	disallow	98	URL obfuscators		
-470	843	0	0	1	0	0	default	20170628192710	disallow	98	Prevent new users from creating redirects to [[Donald Trump]]		
-471	78	0	0	0	1	0	default	20090517153625		98	Cross-wiki malbot vandals		
-472	175	1	0	0	1	0	default	20091003121109		98	pioneer courthouse sockfarm vandalism		
-473	818	1	0	0	1	0	default	20170116052714	disallow	97	Old enemy		
-474	385	1	0	0	1	0	default	20120808231407	throttle,disallow	96	Prevent new users from making mass pagemoves		
-475	450	1	0	0	1	0	default	20130404081101		96	Vandalizing date articles		
-476	509	1	0	0	1	0	default	20160614033636	disallow	91	Long-term pattern abuse III		
-477	634	1	0	0	1	0	default	20160614035827	warn,disallow	90	Long-term sock attack		
+414	798	0	0	1	0	0	default	20161010230835		162	Possible copyvio for image upload	copyright_violation	
+415	676	1	0	0	0	0	default	20180222215913	disallow	160	Highway vandal	hidden_vandalism	
+416	722	0	0	0	0	0	default	20170207181842		158	Please Accept	good_faith_edit_summary	
+417	235	0	0	0	1	0	default	20090928231159		157	Your mom jokes	silly_vandalism	or ‘personal_attacks’. But it was only in logging mode and enabled for 4 days, probably got merged into another filter
+418	674	0	0	0	0	0	default	20161015072323	disallow	156	Long term infobox vandal	long_term_abuse	as per name and comments
+419	906	1	0	1	0	0	default	20180721164347	disallow	154	Alan Jackson Vandal	hidden_vandalism	
+420	745	1	0	0	0	0	default	20170228011409		154	Talk page abuse	talk_page_vandalism	as per name
+421	63	1	0	0	1	0	default	20091127160855	disallow	150	Abusive unblock denials	hidden_vandalism	
+422	278	1	0	0	1	0	default	20120202004634		149	Possible copyright violations	copyright_violation	
+423	104	0	0	0	1	0	default	20150212173322	warn	149	Helpme and Adminhelp	good_faith_template	
+424	168	0	0	0	1	0	default	20090830005433	warn	148	Non-admins responding to unblock requests	good_faith	none of the existing more specific good_faith tags cuts it and I cannot think of anything sensible
+425	542	1	0	0	1	0	default	20160614034012		147	Open proxies II	wiki_policy	
+426	240	0	0	0	1	0	default	20091127160918		147	Used lifetime over/with/as well as existing apparatus	unclear	I don’t quite get the problem targeted by this filter
+427	185	0	0	0	1	0	default	20181104190717		146	Cross-namespace move	good_faith_move	
+428	430	1	0	0	1	0	default	20130404080919	disallow	145	Various socking spammers	sockpuppetry	
+429	737	1	0	0	0	0	default	20180314041327	disallow	145	Christ the Logos	hidden_vandalism	
+430	876	1	0	0	0	0	default	20190104181014	throttle,warn	144	Derp III	hidden_vandalism	
+431	785	1	0	0	0	0	default	20160818213434		139	Template doc vandalism	template_vandalism	
+432	125	0	0	0	1	0	default	20090429124019		138	Insertion of repeated phrases	silly_vandalism	at least that’s what they’re targeting imho. What actually get caught by the filter is sometimes as innocuous as whitespaces consisting of 4 blanks.
+433	653	1	0	0	0	0	default	20150730223741	disallow	136	Infobox vandal	hidden_vandalism	
+434	190	1	0	0	1	0	default	20091218070146	disallow	134	CrabCore (4chan) - [[Special:Contributions/70.122.90.204]]	hidden_vandalism	
+435	743	1	0	0	0	0	default	20180212172048	disallow	133	Prolific socker IV	sockpuppetry	
+436	439	1	0	0	1	0	default	20130404080945	disallow	132	Chaosname	hidden_vandalism	
+437	881	1	0	1	0	0	default	20180420054127	disallow	131	Excessive scatology	hidden_vandalism	
+438	492	1	0	0	1	0	default	20120924064810		131	Check for possible persistent IP-hopping abuse	hidden_vandalism	
+439	855	1	0	0	1	0	default	20181104193922	disallow	129	LTA (Georgia)	long_term_abuse	
+440	734	1	0	0	0	0	default	20171204231846	disallow	127	McAusten	hidden_vandalism	
+441	848	0	0	0	0	0	default	20170505042534		126	Large contributions test filter	test	
+442	373	1	0	0	1	0	default	20120807052549		125	Mario96	hidden_vandalism	
+443	767	1	0	1	0	0	default	20181219232350	disallow	124	Prophecy spam	spam	
+444	564	1	0	0	1	0	default	20140102181617	disallow	123	block evasion	hidden_vandalism	
+445	513	1	0	0	1	0	default	20160929181639	disallow	122	Persistent talk page abuse from IP ranges II	talk_page_vandalism	
+446	250	1	0	0	1	0	default	20110310110912	disallow	122	Combined pagemove/edit summary vandalism	hidden_vandalism	
+447	44	1	0	0	1	0	default	20090807112546		121	MAM vandalism	hidden_vandalism	
+448	144	0	0	0	1	0	default	20100106173410		120	Hiding content of pages	good_faith_html	
+449	838	0	0	1	0	0	default	20181113040819	warn	119	Main page hello worlds	good_faith_test_edits	
+450	453	1	0	0	1	0	default	20130404081115	warn,disallow	119	Temporary block on making specific kinds of template edits	template_vandalism	as per name
+451	596	1	0	0	0	0	default	20160812035607	disallow	117	Elevator vandal	hidden_vandalism	
+452	281	1	0	0	1	0	default	20100108215922		115	Unwatched BLPs	hidden_vandalism	
+453	723	1	0	0	0	0	default	20160914172157		115	MusikAnimal's test filter	test	
+454	706	1	0	0	0	0	default	20160925183649	disallow	113	Dutch football vandalism	hidden_vandalism	
+455	455	1	0	0	1	0	default	20120602063353	disallow	113	Bahrani	hidden_vandalism	
+456	434	1	0	0	1	0	default	20160614032622		112	Roman vandal	hidden_vandalism	
+457	769	1	0	0	0	0	default	20180403064325	disallow	110	AfD nomination harassment	harassment	
+458	665	1	0	0	0	0	default	20150807184304	disallow	109	revescom	hidden_vandalism	
+459	797	1	0	1	0	0	default	20161009215924	disallow	108	Synth LTA	long_term_abuse	
+460	936	1	0	1	0	0	default	20181014164944	disallow	108	LTA 936	long_term_abuse	
+461	604	0	0	0	1	0	default	20140303202400		107	Keyboard mashing	silly_vandalism	“Deleting, AFTv5 removed from WMF wikis --Legoktm 03/03/13” // filter’s group used to be ‘feedback’; sound like pressing random keys
+462	663	0	0	0	0	0	default	20150726191722	disallow	107	Techno genre warrior	edit_warring	
+463	690	0	0	0	0	0	default	20170512133607	disallow	107	Smoothest Ashu	sockpuppetry	As per comments: “See [[Wikipedia:Sockpuppet investigations/Smoothestaashu007]]. Log only for now. --Samwalton9, 25 May 2015”
+464	201	0	0	0	0	0	default	20130414054340		106	KoH test filter	test	
+465	288	1	0	0	1	0	default	20160824183226	disallow	105	IP reverting/wikistalking by banned user	hidden_vandalism	name alone not descriptive enough for assigning ‘harassment’
+466	266	1	0	0	1	0	default	20160823115247		104	Anti-fundraising trolling	trolling	
+467	506	1	0	0	1	0	default	20140102180029	disallow	104	Broadway Hoaxer	hoaxing	
+468	507	1	0	0	1	0	default	20160929181209	disallow	100	Vandalism	hidden_vandalism	very descriptive name^^
+469	306	1	0	0	1	0	default	20120808231304	disallow	98	URL obfuscators	hidden_vandalism	
+470	843	0	0	1	0	0	default	20170628192710	disallow	98	Prevent new users from creating redirects to [[Donald Trump]]	politically_motivated	
+471	78	0	0	0	1	0	default	20090517153625		98	Cross-wiki malbot vandals	bot_vandalism	
+472	175	1	0	0	1	0	default	20091003121109		98	pioneer courthouse sockfarm vandalism	sockpuppetry	
+473	818	1	0	0	1	0	default	20170116052714	disallow	97	Old enemy	hidden_vandalism	
+474	385	1	0	0	1	0	default	20120808231407	throttle,disallow	96	Prevent new users from making mass pagemoves	page_move_vandalism	as per name, action and being hidden
+475	450	1	0	0	1	0	default	20130404081101		96	Vandalizing date articles	hidden_vandalism	
+476	509	1	0	0	1	0	default	20160614033636	disallow	91	Long-term pattern abuse III	long_term_abuse	
+477	634	1	0	0	1	0	default	20160614035827	warn,disallow	90	Long-term sock attack	sockpuppetry	
 478	229	1	0	0	1	0	default	20091127160918	throttle,warn,disallow	90	Hidden comments by new users		
 479	625	0	0	0	1	0	default	20140928195427		89	Yolo Swag 2		
 480	516	1	0	0	1	0	default	20160614033733	disallow	88	Celebrity vandal		
