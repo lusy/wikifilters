@@ -153,6 +153,25 @@ According to the discussion archives, following types of edits were supposed to 
 // the argument "bots are poorly tested and this is not is absurd before anything has happened."
 // when was the BAG and the formal process there created?
 
+"This extension has zero latency: when an edit pattern like this is detected, the account will be blocked instantly, with no time to cause disruption. Similarly, any questionable edit to the main page should incite a block-first-ask-questions-later approach. It's things like this that the extension is designed for, not to replace Clue Bot, VoABot, etc. I can make a personal promise that I will immediately remove any filter that triggers on the use of the word "nigger" - that would be foolish beyond belief. I could not agree more that secret settings are totaly incompatible with the wiki philosophy; but this extension is most definitely not. Happy‑melon 15:58, 2 July 2008 (UTC) "
+// for the record, such filter exists and is active today, id=384
+
+"This extension is designed to be used for vandals like the ones I link to below: intelligent, aggressive, destructive editors who aim to do as much damage as possible to the wiki and the people who edit it. It's not on the main field that we need this extension: the anti-vandal bots do a stunning job, and they do it at just the right level of efficiency. It's on the constant skirmishes against the handful of intelligent and malicious persistent vandals that we need every tool available just to stay ahead of their game. These are the editors who would, in the real world, be tried for crimes against humanity - the users who have demonstrated time and time again that all they want to do is do as much damage as possible. Do we allow ourselves to use prior restraint against them? No, because we don't need to - they've already done enough harm to condemn themselves many times over. Happy‑melon 21:07, 9 July 2008 (UTC)"
+
+" And yet it's not good enough - within those few seconds, damage is caused that takes ten minutes or more to clear up. With this extension, we have zero latency: we can do the same job that's being done already, without having to have a user running a script on a paid-for server that has to fetch the block token every twenty seconds to make sure it can respond as fast as inhumanly possible; and we can do it instantly, cleanly, and without any fuss"
+
+"I think here we need to remember what this extension is supposed to be used for: its primary advantage is that, being part of the site software, it has zero-latency: Misza13's anti-Grawp script can slam in a block token just 5 seconds after detecting a heuristic-matching edit pattern, but this extension can do it before the first vandal action has even been completed. It has no real advantages over anti-vandal bots other than speed and tidiness: the majority of its functions can be performed just as well by a well-written script running on an admin account. However, there are some functions, most notably rights changes, which are way beyond what an admin can imitate. I have a suspicion that a filter could easily be implemented to desysop any specific user on their next edit; or (worse still) desysop all admins as-and-when they edit. Even granting this permission only to bureucrats would be giving them a right that they don't currently have - full access to this extension gives users half the power of a steward. Consequently, the ability to set filters which invoke rights changes should, in my opinion, be assigned separately to the other permissions, and only to completely trusted users. I would say give it only to the stewards, but they do not have a local right on en.wiki that the extension can check; my second choice would be those already trusted to the level of 'oversight', which is essentially the ArbCom (and stewards if necessary). Everything else the extension offers can already be done by admins, and I can see no reason not to give them all the tools available. My personal preference, therefore, would be abusefilter-modify → 'sysop' and abusefilter-modify-rights → oversight. I'm especially keen to hear other people's views on this area. Happy‑melon 16:53, 29 June 2008 (UTC) "
+
+Arguments for as restricted as possible, since 'there are precedents for disgruntled admins doing some leaking'; and motivated trolls can work an account up to admin; // I'm torn here though: every system can be abused; trolls can work accounts up to edit-filter-managers as well. So if that's our premise, we're lost from the beginning
+
+// so, according to Werdna, main targetted group are especially determined vandals in which case it makes sense to hide filters' heuristics from them. Which would also explain why 2/3 of the filters are hidden
+
+ideological and practical concerns mix
+
+A lot of controversy along the lines of
+* public/private filters
+* what actions exactly are ok to be taken by the filters; strong objections from community members about filters blocking/taking away rights etc. from editors; and although (both?) of theses functionalities ended up being implmented actually none of them is being actively used on the EN WP (where the "strictest" action applied is "disallow" and the last time a filter took an action different from disallow/tag/warn/log was "blockautopromote" and "aftv5flagabuse" (not sure what exactly this is) in 2012, see ipnb)
+
 %TODO: note on historically, all filters were supposed to be hidden
 
 %************************************************************************
@@ -411,6 +430,9 @@ In this case, there are multiple hard-coded safeguards on the false positive rat
     So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
     Also, the extension allows multiple users to work on the same filters and there are tests. Unlike bots, which are per definition operated by one user.
 
+    "We're not targetting the 'idiots and bored kids' demographic, we're targetting the 'persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic. — Werdna • talk 07:28, 9 July 2008 (UTC)"
+
+"It is designed to target repeated behaviour, which is unequivocally vandalism. For instance, making huge numbers of page moves right after your tenth edit. For instance, moving pages to titles with 'HAGGER?' in them. All of these things are currently blocked by sekrit adminbots. This extension promises to block these things in the software, allowing us zero latency in responding, and allowing us to apply special restrictions, such as revoking a users' autoconfirmed status for a period of time."
 \end{comment}
 
 \subsection{Alternatives to Edit Filters}

@@ -1291,7 +1291,7 @@ It is not, as some seem to believe, intended to block profanity in articles (tha
 
 "But with this extension comes the ability to make more intelligent decisions. For instance, the most common way of bypassing the editcount restriction is by making trivial edits to a userpage: with this extension, we could set a pagemove filter that was independent of autoconfirmed status, requiring the ten edits to be to separate pages, to have provided substantial content, or not to have been reverted."
 
-People have really strong opinions on (agains) using filters to block editors.
+People have really strong opinions on (against) using filters to block editors.
 
 ". While blocks may generally not be punitive, blocks shouldn't made by machines, either. This is a very special case. "
 
