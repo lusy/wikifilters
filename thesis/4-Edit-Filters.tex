@@ -137,17 +137,23 @@ In order to understand the consensus building on the functionality of the extens
 
 In a nutshell, the motivation for introducing edit filters seems to have been as follows:
 bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
-(It seemed to be not completely clear what types of vandalism these were.
-As far as I understood, and what made more sense to me, above all, it was about mostly obvious but pervasive vandalism, possibly aided by bots/scripts itself, that was immediately recognisable as vandalism, but takes some time to clean up.
-Motivation of extention's devs was that if a filter just disallows such vandalism, vandal fighters could use their time for checking less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.)
+These were mostly obvious but pervasive cases of vandalism, possibly introduced in (semi-)automated fashion, that took some time to clean up.
+The motivation of the extention's developers was that if a filter just disallows such vandalism, vandal fighters could use their time for checking less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.
 The extention's developers felt that admins and vandal fighters could use this valuable time more productively.
-Examples of type of edits that are supposed to be targeted:
-\url{https://en.wikipedia.org/wiki/Special:Contributions/Omm_nom_nom_nom}
-* often: page redirect to some nonsence name
-\url{https://en.wikipedia.org/wiki/Special:Contributions/AV-THE-3RD}
-\url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}
+According to the discussion archives, following types of edits were supposed to be targeted by the extension:\\
+\url{https://en.wikipedia.org/wiki/Special:Contributions/Omm_nom_nom_nom}\\
+%redirects to nonsensical names
+\url{https://en.wikipedia.org/wiki/Special:Contributions/AV-THE-3RD}\\
+\url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}\\
 
 %TODO sift again through Archive notes and refine the section
+"It gives us the opportunity to lighten the hard restrictions we put on all users, instead placing tougher restrictions on those who are actually causing the problem.— Werdna talk 10:40, 25 June 2008 (UTC)"
+
+// so there's general discontent with bots (bot governance) that has motivated the creation of this extention?
+// the argument "bots are poorly tested and this is not is absurd before anything has happened."
+// when was the BAG and the formal process there created?
+
+%TODO: note on historically, all filters were supposed to be hidden
 
 %************************************************************************
 
@@ -367,8 +373,8 @@ properties           | - part of the "software"/        | - "bespoke code": run 
                      |   interested                     | - you can relatively easily   | - mostly based on a     |
                      | - trigger *before* an edit is    |   get all the filters; you    |   centralised queue     |
                      |   published                      |   cannot easily get all bots  | - trigger after an edit |
-                     |                                  | - trigger after an edit is    |   is published          |
-                     |                                  |   published                   |                         |
+                     | - source code of the extension   | - trigger after an edit is    |   is published          |
+                     |   is publicly viewable           |   published                   |                         |
                      |                                  |                               |                         |
 ---------------------|------------------------------------------------------------------------------------------------------------------------
                      |                                  |                               |                         |
@@ -395,6 +401,17 @@ Concerns             | - powerful, can in theory block  |                       
                      |                                  |                               |                         |
 ------------------------------------------------------------------------------------------------------------------------------------------------
 \end{verbatim}
+
+\begin{comment}
+From the Edit filter talk archives:
+"Firstly, I must note that the code of the extension itself will be public in the MediaWiki subversion repository, that the filters will be editable by anyone with the appropriate privileges, and that it would be very simple to disable any user's use of the filtering system, any particular filter, or, indeed, the entire extension. This is quite different from, say, an anti-vandalism adminbot. The code is private, and, in any case, too ugly for anybody to know how to use it properly. The code can only be stopped in real terms if somebody blocks and desysops the bot, and the bot is controlled by a private individual, with no testing.
+
+In this case, there are multiple hard-coded safeguards on the false positive rate of individual filters, and the extension itself will be well-tested. In addition, I suggest that a strong policy would be developed on what the filters can be used to do, and on what conditions they can match on: I've developed a little system which tests a filter on the last several thousand edits before allowing it to be applied globally."
+
+    So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
+    Also, the extension allows multiple users to work on the same filters and there are tests. Unlike bots, which are per definition operated by one user.
+
+\end{comment}
 
 \subsection{Alternatives to Edit Filters}
 
@@ -512,6 +529,10 @@ Insight is currently minimal, since abuse\_filter\_history table is not availabl
 "But what’s less well-known is that it’s also the site that anyone can run. The vandals aren’t stopped because someone is in charge of stopping them; it was simply something people started doing. And it’s not just vandalism: a “welcoming committee” says hi to every new user, a “cleanup taskforce” goes around doing factchecking. The site’s rules are made by rough consensus. Even the servers are largely run this way — a group of volunteer sysadmins hang out on IRC, keeping an eye on things. Until quite recently, the Foundation that supposedly runs Wikipedia had no actual employees.
 This is so unusual, we don’t even have a word for it. It’s tempting to say “democracy”, but that’s woefully inadequate. Wikipedia doesn’t hold a vote and elect someone to be in charge of vandal-fighting. Indeed, “Wikipedia” doesn’t do anything at all. Someone simply sees that there are vandals to be fought and steps up to do the job."
 //yeah, I'd call it "do-ocracy"
+
+Reflections on the archive discussion
+So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
+Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
 
 \end{comment}
 
