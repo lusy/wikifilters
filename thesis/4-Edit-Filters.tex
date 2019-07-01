@@ -133,54 +133,56 @@ Following new user permissions are introduced by the abuse filter plugin:
 \section{History}
 
 Now that there is a general understanding of what edit filters look like today, let us take a step back and investigate how they came to be this way.
-In order to understand the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia_talk:Edit_filter/Archive_1&oldid=884572675}}
+In order to understand (syn!) the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia_talk:Edit_filter/Archive_1&oldid=884572675}}
 for the period between the announcement that the extension is planned up until the voting process preceding its introduction.
+
 For a while at the beginnings of the discussion, there was some confusion among editors regarding the intended functionality of the EditFilter extension.
 During the discussion(syn!), participating editors invoked various motivations for the introduction of the extension (which sometimes contradicted each other) and argued for or against the introduction depending on these.
 The discussion (syn!) reflects a mix of ideological and practical concerns.
-%TODO elaborate a bit on the different understandings of what the extension was supposed to do
 The biggest controversies lay along the lines of filters being public-vs-private and the actions the filters were to invoke upon a match.
-An automated rights revokation or block with no manual confirmation by a real person was of particular concern to a lot of editors.
-As far as I am concerned, the later functionality was technically implemented but never really used (although there are `blockautopromote' actions triggered in the abuse\_filter\_log) %TODO investigate what exactly this means and why it hasn't happened since 2012
+An automated rights revokation or block of the offending editor with no manual confirmation by a real person was of particular concern to a lot of editors. (false positives! concern that a rule-based tool will be effective: context, irony, legitimate use ..)
+As far as I am concerned, the later functionality was technically implemented but never really used on English Wikipiedia (although there are `blockautopromote' actions triggered in the abuse\_filter\_log) %TODO investigate what exactly this means and why it hasn't happened since 2012
 
-As to the public-vs-private debate, initially, it was planned that all filters are hidden from public view and only editors with special permissions (the edit filter managers) were supposed to be able to view and modify the patterns and logs.
+As to the public-vs-private debate, the initial plan was that all filters are hidden from public view and only editors with special permissions (the edit filter managers) were supposed to be able to view and modify the patterns and consult the logs.
 The core developer of the extension was reasoning that its primary purpose was to fend off really persistent vandals with reasonable technical understanding who were ready to invest time and effort to circumvent anti-vandal measures
 and that it was thus unwise to make circumvention easier to them by allowing them to view the pattern according to which their edits were supressed.
 This was however met with serious resistence by the community who felt that such secret extension was contradicting Wikipedia's values of openness and transparency.
-Besides, opponents of the filters being completely private were concerned that the tool was quite powerful and hiding stuff will prevent the community from monitoring (syn) for errors and abuse.
+Besides, opponents of the filters being completely private were concerned that the tool was quite powerful and hiding everything (syn!) will prevent the community from monitoring (syn) for errors and abuse.
 
 Although there were some diverging opinions on what the extension was supposed to target, in a nutshell, the motivation for its introduction seems to have been as follows:
 bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
 These were mostly obvious but pervasive cases of vandalism, possibly introduced in (semi-)automated fashion, that took some time and effort to clean up.
-The motivation of the extention's developers was that if a filter just disallows such vandalism, vandal fighters could use their time for checking less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.
-The extention's developers felt that admins and vandal fighters could use this valuable time more productively.
+The motivation of the extention's developers was that if a filter just disallows such vandalism, vandal fighters could use their time more productively and check less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.
 According to the discussion archives, following types of edits were supposed to be targeted by the extension:\\
 \url{https://en.wikipedia.org/wiki/Special:Contributions/Omm_nom_nom_nom}\\
 %redirects to nonsensical names
 \url{https://en.wikipedia.org/wiki/Special:Contributions/AV-THE-3RD}\\
 \url{https://en.wikipedia.org/wiki/Special:Contributions/Fuzzmetlacker}\\
 
-\begin{comment}
-"It gives us the opportunity to lighten the hard restrictions we put on all users, instead placing tougher restrictions on those who are actually causing the problem.— Werdna talk 10:40, 25 June 2008 (UTC)"
 
-// so there's general discontent with bots (bot governance) that has motivated the creation of this extention?
-// the argument "bots are poorly tested and this is not is absurd before anything has happened."
-// when was the BAG and the formal process there created?
+%************************************************************************
+%TODO edit this part in
 
-"This extension has zero latency: when an edit pattern like this is detected, the account will be blocked instantly, with no time to cause disruption. Similarly, any questionable edit to the main page should incite a block-first-ask-questions-later approach. It's things like this that the extension is designed for, not to replace Clue Bot, VoABot, etc. I can make a personal promise that I will immediately remove any filter that triggers on the use of the word "nigger" - that would be foolish beyond belief. I could not agree more that secret settings are totaly incompatible with the wiki philosophy; but this extension is most definitely not. Happy‑melon 15:58, 2 July 2008 (UTC) "
-// for the record, such filter exists and is active today, id=384
+Further advantages of the extension highlighted by its befürwörterinnen were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
+Besides, they were reasoning, it was to be part of the core software, so there was no need for renting extra server resources where an external script/bot can run, thus ensuring immediate response and less extra work.
+The advantages over anti-vandal bots and other tools were seen to be ``speed and tidiness''.
 
-"This extension is designed to be used for vandals like the ones I link to below: intelligent, aggressive, destructive editors who aim to do as much damage as possible to the wiki and the people who edit it. It's not on the main field that we need this extension: the anti-vandal bots do a stunning job, and they do it at just the right level of efficiency. It's on the constant skirmishes against the handful of intelligent and malicious persistent vandals that we need every tool available just to stay ahead of their game. These are the editors who would, in the real world, be tried for crimes against humanity - the users who have demonstrated time and time again that all they want to do is do as much damage as possible. Do we allow ourselves to use prior restraint against them? No, because we don't need to - they've already done enough harm to condemn themselves many times over. Happy‑melon 21:07, 9 July 2008 (UTC)"
+Some of the participants of the discussion voiced doubts(syn!) as to what the difference to bots (with admin rights) is and whether the extension is needed at all.
+Apparently, there was also some discontent with bot governance mirrored in the arguments for introducing the extension:
+it was underlined that in contrast to admin bots the extension's source code was to be publicly available and well tested with more people using and monitoring its functionality (i.e. the edit filter managers) than the (in der Regel) single bot operator responsible for a bot who, apparently, was oftentimes not responding to community concerns and emergencies fast enough (or at all).
+On the other hand, there were yet again arguments, that the extension was supposed to indeed target the really malicious vandals not deterred by anti-vandalism measures already in force by preferably blocking them on the spot.
 
-" And yet it's not good enough - within those few seconds, damage is caused that takes ten minutes or more to clear up. With this extension, we have zero latency: we can do the same job that's being done already, without having to have a user running a script on a paid-for server that has to fetch the block token every twenty seconds to make sure it can respond as fast as inhumanly possible; and we can do it instantly, cleanly, and without any fuss"
+Others were asking what additional advantages the extension introduces compared to the functionality already allowing for page protection %TODO what functionality is this exactly: check autoconfirmed-confirmed-... users
+and posing restrictions such as that users should have been registered for at least X days and made at least Y not reverted edits in order to edit (particular pages?).
+Here, User:Werdna was reasoning that the Edit Filters allow for fine-tuning of such restrictions and targeting offending editors in particular without making them (the restrictions) unnecessarily though(syn) for all users.
 
-"I think here we need to remember what this extension is supposed to be used for: its primary advantage is that, being part of the site software, it has zero-latency: Misza13's anti-Grawp script can slam in a block token just 5 seconds after detecting a heuristic-matching edit pattern, but this extension can do it before the first vandal action has even been completed. It has no real advantages over anti-vandal bots other than speed and tidiness: the majority of its functions can be performed just as well by a well-written script running on an admin account. However, there are some functions, most notably rights changes, which are way beyond what an admin can imitate. I have a suspicion that a filter could easily be implemented to desysop any specific user on their next edit; or (worse still) desysop all admins as-and-when they edit. Even granting this permission only to bureucrats would be giving them a right that they don't currently have - full access to this extension gives users half the power of a steward. Consequently, the ability to set filters which invoke rights changes should, in my opinion, be assigned separately to the other permissions, and only to completely trusted users. I would say give it only to the stewards, but they do not have a local right on en.wiki that the extension can check; my second choice would be those already trusted to the level of 'oversight', which is essentially the ArbCom (and stewards if necessary). Everything else the extension offers can already be done by admins, and I can see no reason not to give them all the tools available. My personal preference, therefore, would be abusefilter-modify → 'sysop' and abusefilter-modify-rights → oversight. I'm especially keen to hear other people's views on this area. Happy‑melon 16:53, 29 June 2008 (UTC) "
+There was also disagreement regarding who was to have access to the newly developed tool.
+Some felt access should be granted more broadly in order for the tool to be effectively used.
+They were reasoning that at least all the admins should be able to use it, since they were already granted(syn!) the trust of the community.
+Others feared that the admin group was quite broad already and access should be granted as carefully as possible since the extension had the potential to cause quite a lot of damage if used maliciously and it was "not beyond some of our more dedicated trolls to "work accounts up" to admins, and then use them for their own purpose".
+This is how the right ended up to be governed.
+(Although motivated trolls can potentially work up an account to any user rights, just my 2 cents.)
 
-Arguments for as restricted as possible, since 'there are precedents for disgruntled admins doing some leaking'; and motivated trolls can work an account up to admin; // I'm torn here though: every system can be abused; trolls can work accounts up to edit-filter-managers as well. So if that's our premise, we're lost from the beginning
-
-
-%TODO: note on historically, all filters were supposed to be hidden
-\end{comment}
 
 %************************************************************************
 
