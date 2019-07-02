@@ -132,6 +132,7 @@ Following new user permissions are introduced by the abuse filter plugin:
 %************************************************************************
 
 \section{History}
+%TODO make sure there is enough explanation in the sections before to be able to follow the narrative here
 
 Now that there is a general understanding of what edit filters look like today, let us take a step back and investigate how they came to be this way.
 In order to comprehend the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia_talk:Edit_filter/Archive_1&oldid=884572675}}
@@ -141,34 +142,34 @@ For a while at the beginnings of the discussion, there was some confusion among 
 Participants invoked various motivations for the introduction of the extension (which sometimes contradicted each other) and argued for or against the filters depending on these.
 The discussion reflects a mix of ideological and practical concerns.
 The biggest controversies lay along the lines of filters being public-vs-private and the actions the filters were to invoke upon a match.
-An automated rights revokation or a block of the offending editor with no manual confirmation by a real person were of particular concern to a lot of editors (they were worried that the filters would not be able to understand context and thus block many legitimate edits resulting in too many false positives).
-As far as I understood, these were technically implemented but never really used on English Wikipiedia (although there are `blockautopromote' actions triggered in the abuse\_filter\_log). %TODO investigate what exactly this means and why it hasn't happened since 2012
+An automated rights revokation or a block of the offending editor with no manual confirmation by a real person were of particular concern to a lot of editors (they were worried that the filters would not be able to understand context thus resulting in too many false positives and blocking many legitimate edits and editors).
+As far as I understood, these features were technically implemented but never really used on English Wikipiedia (although there are `blockautopromote' actions triggered in the abuse\_filter\_log). %TODO investigate what exactly this means and why it hasn't happened since 2012
 
 As to the public-vs-private debate, the initial plan was that all filters are hidden from public view and only editors with special permissions (the edit filter managers) were supposed to be able to view and modify the patterns and consult the logs.
 The core developer of the extension was reasoning that its primary purpose was to fend off really persistent vandals with reasonable technical understanding who were ready to invest time and effort to circumvent anti-vandal measures
-and that it was thus unwise to make circumvention easier to them by allowing them to view the pattern according to which their edits were supressed.
+and that it was therefore unwise to make circumvention easier to them by allowing them to view the pattern according to which their edits were supressed.
 This was however met with serious resistence by the community who felt that such secret extension was contradicting Wikipedia's values of openness and transparency.
 Besides, opponents of the filters being completely private were concerned that the tool was quite powerful and hiding everything (syn!) will prevent the community from monitoring for errors and abuse.
 
 Related to the above discussion, there was also disagreement regarding who was to have access to the newly developed tool.
 Some felt access had to be granted more broadly in order for the tool to be effectively used.
-They were reasoning that at least all the admins should be able to use it, since they already had the trust of the community.
+They were reasoning that at least all administrators should be able to use it, since they already had the trust of the community.
 Others feared that the admin group was quite broad already and access should be granted as carefully as possible since the extension had the potential to cause quite a lot of damage if used maliciously and it was ``not beyond some of our more dedicated trolls to "work accounts up" to admins, and then use them for their own purpose''.
-This is how the right ended up to be governed.
+This narrower option is how the right ended up to be governed.
+%TODO where to put this? maybe a footnote?
 (Although motivated trolls can potentially work up an account to any user rights, just my 2 cents.)
 
-Some of the participants of the discussion voiced doubts(syn!) as to what the difference to bots (with admin rights) is and whether the extension is needed at all.
-Apparently, there was some discontent with bot governance mirrored in the arguments for introducing the extension:
-it was underlined that in contrast to admin bots the extension's source code was to be publicly available and well tested with more people using and monitoring its functionality (i.e. the edit filter managers) than the (usually) single bot operator responsible for a bot who, apparently, was oftentimes not responding to community concerns and emergencies fast enough (or at all).
+Another debated point was what the difference to bots (with admin rights) was and whether the extension was needed at all.
+Apparently, there was some discontent with bot governance mirrored in the arguments for introducing the extension.
+It was underlined that in contrast to admin bots the extension's source code was to be publicly available and well tested with more people (i.e. the edit filter managers) using and monitoring its functionality than the (usually) single bot operator responsible for a bot who, apparently, was oftentimes not responding to community concerns and emergencies fast enough (or at all).
 On the other hand, there were yet again arguments, that the extension was supposed to indeed target the really malicious vandals not deterred by anti-vandalism measures already in force by preferably blocking them on the spot.
 
-Others were asking what additional advantages the extension introduced compared to the functionality already allowing for page protection %TODO what functionality is this exactly: check autoconfirmed-confirmed-... users
-that posed restrictions such as that users had to have been registered for at least X days and have made at least Y not reverted edits in order to edit (particular pages).
+Others were asking what additional advantages the extension offered compared to semi-protection of pages which requires users to be autoconfirmed in order to be able to edit (normally meaning they have to have been registered for at least 4 days and have made at least 10 edits, but the restrictions are adjustable).
 Here, User:Werdna was reasoning that the Edit Filters allow for fine-tuning of such restrictions and targeting offending editors in particular without making constraints unnecessarily strict for all users.
 
 Although there were some diverging opinions on what the extension was supposed to target, in a nutshell, the motivation for its introduction seems to have been as follows:
-bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
-These were mostly obvious but pervasive cases of vandalism, possibly introduced in (semi-)automated fashion, that took some time and effort to clean up.
+Bots weren't reverting some kinds of vandalism fast enough, or, respectively, these vandalism edits required a human intervention and took more than a single click to get reverted.
+These were mostly obvious but pervasive cases of vandalism, possibly introduced in a (semi-)automated fashion, that took some time and effort to clean up.
 The motivation of the extention's developers was that if a filter just disallows such vandalism, vandal fighters could use their time more productively and check less obvious cases where more background knowledge/context is needed in order to decide whether an edit is vandalism or not.
 According to the discussion archives, following types of edits were supposed to be targeted by the extension:\\
 \url{https://en.wikipedia.org/wiki/Special:Contributions/Omm_nom_nom_nom}\\
