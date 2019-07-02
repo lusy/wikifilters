@@ -742,51 +742,51 @@ Updated for new ccnorm. RF 20160820”"
 737	571	1	0	0	1	0	default	20160614034525	disallow	5	Persistent Disruption	hidden_vandalism	
 738	69	1	0	0	1	0	default	20090321185406		5	Unusual title change 2	hidden_vandalism	
 739	842	1	0	0	0	0	default	20170314161944	disallow	5	Talk page abuse	talk_page_vandalism	
-740	338	0	0	0	1	0	default	20100618045125		5	Vuvuzela vandalism		
-741	858	0	0	0	1	0	default	20181211182505		5	Anime vandal filter		
-742	610	1	0	0	0	0	default	20160818173520	disallow	5	Turkish Vandal		
-743	355	1	0	0	1	0	default	20110310111343	disallow	5	Misc vandal		
-744	109	1	0	0	1	0	default	20090617081623	warn,disallow	5	Fleshlight		
-745	392	1	0	0	1	0	default	20150212181750	disallow	5	/v/		
-746	658	0	0	0	1	0	default	20150123194720	disallow	5	Disallow moving articles to the Topic namespace		
-747	952	1	0	0	1	0	default	20181230215051		5	Image vandalism IV		
-748	476	1	0	0	1	0	default	20160614032919	disallow	5	Kingdom of Sardinia		
-749	748	0	0	0	1	0	default	20160420045626		5	pp-30-500 editing restriction		
-750	286	1	0	0	1	0	default	20100204022213	warn,disallow	4	Tokusatsu Vandal		
-751	40	0	0	0	1	0	default	20090325082823		4	Detect deaths		
-752	318	1	0	0	1	0	default	20100416220302	disallow	4	School attacks		
-753	348	1	0	0	1	0	default	20100801172202		4	Rapid insertion of external links		
-754	127	0	0	0	1	0	default	20090402212520		4	Helpme tag in content namespace		
-755	646	0	0	0	1	0	default	20141202045818		4	Incorrectly adding images		
-756	924	1	0	0	1	0	default	20180719144037	disallow	4	Supersonic Transport Vandal		
-757	173	1	0	0	1	0	default	20090807113129		4	Knave		
-758	429	0	0	0	1	0	default	20110822003015		4	Possible malware attack		
-759	943	1	0	0	0	0	default	20181221050308	disallow	4	Prevent special disruption		
-760	693	0	0	0	0	0	default	20150625151023	disallow	4	Drake Bell attack		
-761	720	0	0	0	0	0	default	20151231175642		4	Rothwell-Smith spam		
-762	536	1	0	0	1	0	default	20130317180029		3	Mrpontiac1		
-763	301	1	0	0	1	0	default	20100321234837		3	Blu Aardvark abusive unblock requests		
-764	574	1	0	0	1	0	default	20130718094758	disallow	3	Vandalism		
-765	853	1	0	0	0	0	default	20170512133620	disallow	3	Quick vandalism response		
-766	882	1	0	0	1	0	default	20171010005143		3	LTA 882		
-767	387	1	0	0	1	0	default	20160904150238	disallow	3	Fake pagemove edit summaries		
-768	691	0	0	0	0	0	default	20150618161603		3	Shadows of the Void		
-769	184	1	0	0	1	0	default	20090620043823	warn,disallow	3	abusive edit summaries		
-770	707	1	0	0	0	0	default	20150719124707	disallow	3	Edit filter false positives vandalism		
-771	749	1	0	0	0	0	default	20160111160718		3	SS disruption		
-772	243	1	0	0	1	0	default	20150212173432		3	WikiMedia Viewer possible malware		
-773	244	0	0	0	1	0	default	20091003125413		3	Possibly broken proxies		
-774	251	1	0	0	1	0	default	20160820181913		3	Mark Levin Vandalism		
-775	552	1	0	0	1	0	default	20160614034140	disallow	2	Wikiassociate rangeblock		
-776	302	0	0	0	1	0	default	20100317030333		2	Possible COI		
-777	814	1	0	0	1	0	default	20170402072733		2	More refspam		
-778	73	0	0	0	1	0	default	20090320200641	throttle,warn,disallow	2	Throttle test		
-779	841	0	0	0	1	0	default	20170224013137		2	Unofficial sports transaction		
-780	589	0	0	0	1	0	default	20160614034734		2	Possible recreation of deleted material		
-781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug		
-782	362	0	0	0	1	0	default	20100922082300		2	New user creating page		
-783	628	1	0	0	1	0	default	20160614035602	disallow	2	User talk page vandalism by sockpuppets		
-784	118	0	0	0	1	0	default	20090423050115		2	The final selection of TFA's is made by Raul654, the featured article director		
+740	338	0	0	0	1	0	default	20100618045125		5	Vuvuzela vandalism	silly_vandalism	
+741	858	0	0	0	1	0	default	20181211182505		5	Anime vandal filter	silly_vandalism	
+742	610	1	0	0	0	0	default	20160818173520	disallow	5	Turkish Vandal	hidden_vandalism	
+743	355	1	0	0	1	0	default	20110310111343	disallow	5	Misc vandal	hidden_vandalism	
+744	109	1	0	0	1	0	default	20090617081623	warn,disallow	5	Fleshlight	hidden_vandalism	
+745	392	1	0	0	1	0	default	20150212181750	disallow	5	/v/	hidden_vandalism	
+746	658	0	0	0	1	0	default	20150123194720	disallow	5	Disallow moving articles to the Topic namespace	page_move_vandalism	
+747	952	1	0	0	1	0	default	20181230215051		5	Image vandalism IV	image_vandalism	
+748	476	1	0	0	1	0	default	20160614032919	disallow	5	Kingdom of Sardinia	hidden_vandalism	
+749	748	0	0	0	1	0	default	20160420045626		5	pp-30-500 editing restriction	unclear	not sure what the intention here was; actually the underlying reason is probably ‘politically_motivated’ since it was Israel/Palestina issue, but the filter itself is generic
+750	286	1	0	0	1	0	default	20100204022213	warn,disallow	4	Tokusatsu Vandal	hidden_vandalism	
+751	40	0	0	0	1	0	default	20090325082823		4	Detect deaths	general_tracking	it could be ‘hoaxing’ or ‘personal_attacks’ otherwise
+752	318	1	0	0	1	0	default	20100416220302	disallow	4	School attacks	hidden_vandalism	
+753	348	1	0	0	1	0	default	20100801172202		4	Rapid insertion of external links	link_vandalism	
+754	127	0	0	0	1	0	default	20090402212520		4	Helpme tag in content namespace	good_faith_template	
+755	646	0	0	0	1	0	default	20141202045818		4	Incorrectly adding images	good_faith_wiki_syntax	
+756	924	1	0	0	1	0	default	20180719144037	disallow	4	Supersonic Transport Vandal	hidden_vandalism	
+757	173	1	0	0	1	0	default	20090807113129		4	Knave	hidden_vandalism	
+758	429	0	0	0	1	0	default	20110822003015		4	Possible malware attack	malware	as per name
+759	943	1	0	0	0	0	default	20181221050308	disallow	4	Prevent special disruption	hidden_vandalism	
+760	693	0	0	0	0	0	default	20150625151023	disallow	4	Drake Bell attack	personal_attacks	
+761	720	0	0	0	0	0	default	20151231175642		4	Rothwell-Smith spam	spam	
+762	536	1	0	0	1	0	default	20130317180029		3	Mrpontiac1	hidden_vandalism	
+763	301	1	0	0	1	0	default	20100321234837		3	Blu Aardvark abusive unblock requests	hidden_vandalism	
+764	574	1	0	0	1	0	default	20130718094758	disallow	3	Vandalism	hidden_vandalism	
+765	853	1	0	0	0	0	default	20170512133620	disallow	3	Quick vandalism response	hidden_vandalism	
+766	882	1	0	0	1	0	default	20171010005143		3	LTA 882	long_term_abuse	
+767	387	1	0	0	1	0	default	20160904150238	disallow	3	Fake pagemove edit summaries	hidden_vandalism	
+768	691	0	0	0	0	0	default	20150618161603		3	Shadows of the Void	silly_vandalism	adding random stuff somewhere
+769	184	1	0	0	1	0	default	20090620043823	warn,disallow	3	abusive edit summaries	hidden_vandalism	
+770	707	1	0	0	0	0	default	20150719124707	disallow	3	Edit filter false positives vandalism	hidden_vandalism	
+771	749	1	0	0	0	0	default	20160111160718		3	SS disruption	hidden_vandalism	
+772	243	1	0	0	1	0	default	20150212173432		3	WikiMedia Viewer possible malware	malware	
+773	244	0	0	0	1	0	default	20091003125413		3	Possibly broken proxies	bug	
+774	251	1	0	0	1	0	default	20160820181913		3	Mark Levin Vandalism	hidden_vandalism	
+775	552	1	0	0	1	0	default	20160614034140	disallow	2	Wikiassociate rangeblock	hidden_vandalism	
+776	302	0	0	0	1	0	default	20100317030333		2	Possible COI	conflict_of_interest	
+777	814	1	0	0	1	0	default	20170402072733		2	More refspam	spam	
+778	73	0	0	0	1	0	default	20090320200641	throttle,warn,disallow	2	Throttle test	test	
+779	841	0	0	0	1	0	default	20170224013137		2	Unofficial sports transaction	wiki_policy	
+780	589	0	0	0	1	0	default	20160614034734		2	Possible recreation of deleted material	general_tracking	logs talk pages created by AnomieBot (not sure that’s a legit use of a filter^^)
+781	606	0	0	0	1	0	default	20160614035031	warn	2	ANI restoration bug	bug	
+782	362	0	0	0	1	0	default	20100922082300		2	New user creating page	general_tracking	“to see if it’s common and useful”
+783	628	1	0	0	1	0	default	20160614035602	disallow	2	User talk page vandalism by sockpuppets	sockpuppetry	
+784	118	0	0	0	1	0	default	20090423050115		2	The final selection of TFA's is made by Raul654, the featured article director	wiki_policy	
 785	379	0	0	0	1	0	default	20110119220533		2	username registrations by trademarkia		
 786	413	1	0	0	1	0	default	20120808231609		2	Adding images to userspace		
 787	669	0	0	0	1	0	default	20160614040618		2	Service Kompor		
@@ -794,13 +794,13 @@ Updated for new ccnorm. RF 20160820”"
 789	682	1	0	0	1	0	default	20181104191913	disallow	2	SEO/Attack page		
 790	431	1	0	0	1	0	default	20110903105437	disallow	2	Malaysian IP hopping vandal		
 791	687	0	0	0	1	0	default	20160614040910		2	Possible word replacement extension		
-792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling		
+792	714	1	0	0	1	0	default	20170402074415	disallow	2	Reference desk sexuality trolling	trolling	
 793	715	0	0	0	1	0	default	20170114074839	warn,disallow	2	IP notification on RFP/C		
 794	484	0	0	0	1	0	default	20150212172634	warn	2	Shutdown of ClueBot by non-admin user		
-795	487	0	0	0	1	0	default	20140303202310		2	Test filter for feedback tool oversight prevention		
+795	487	0	0	0	1	0	default	20140303202310		2	Test filter for feedback tool oversight prevention	test	
 796	805	1	0	0	1	0	default	20161213162528		1	Compromised activity		
 797	561	1	0	0	1	0	default	20160614034418	disallow	1	Chaosname II		
-798	310	1	0	0	1	0	default	20160824183625	disallow	1	Pagemove vandalism by specific vandal #2		
+798	310	1	0	0	1	0	default	20160824183625	disallow	1	Pagemove vandalism by specific vandal #2	page_move_vandalism	
 799	822	1	0	0	0	0	default	20170130055044	disallow	1	Shinji		
 800	831	0	0	0	0	0	default	20170418152852		1	Yanchilin spammer		
 801	334	1	0	0	1	0	default	20100531204443	disallow,blockautopromote	1	Grawp page move vandalism		
