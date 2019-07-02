@@ -234,18 +234,11 @@ As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\fo
 (For comparison, as of March 9, 2019 there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}.)
 Out of the 154 edit filter managers only 11 are not administrators (most of them have other privileged groups such as ``rollbacker'', ``pending changes reviewer'', ``extended confirmed user'' and similar though).
 
-\subsection{Modifying a filter}
-% TODO Should we keep this here? it's more a comment on the filters lifecycle that I also discuss in chap.5
-It is not uncommon, that the action(s) a particular filter triggers change over time.
-As of the guidelines for introducing new filters, every filter should be enabled in ``log only'' mode at the beginning.
-After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
-Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
-
 
 \subsection{Urgent situations}
 
 Throughout the documentation, there are several provisions for urgent situations.
-For instance, generally, every new filter should be tested extensively in logging mode only (without any further actions) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
+For instance, generally, every new filter should be tested extensively in logging mode only (without any further filter actions enabled) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
 As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
 Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
 %TODO move this to the introducing a filter part, where it's mentioned for the first time that filters should be "log only" in the beginning; move verything else to further studies/long list of interesting questions

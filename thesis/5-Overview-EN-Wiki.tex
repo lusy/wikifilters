@@ -522,6 +522,14 @@ CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 us
 -- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
 -- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
 Probably it's simply admins who can modify the filters there.
+
+\subsection{Modifying a filter}
+% TODO Moved from chap.4, building a filter
+It is not uncommon, that the action(s) a particular filter triggers change over time.
+As of the guidelines for implementing new filters, every filter should be enabled in ``log only'' mode at its introduction.
+After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
+Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
+
 \end{comment}
 
 * How are filter actions set
