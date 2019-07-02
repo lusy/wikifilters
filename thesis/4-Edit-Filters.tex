@@ -210,6 +210,11 @@ Performance seems to be fairly important for the edit filter system:
 On multiple occasions, there are notes on recommended order of operations, so that the filter evaluates as resource sparing as possible~\cite{Wikipedia:EditFilterInstructions} or invitations to consider whether an edit filter is the most suitable mechanism for solving a particular issue at all~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterRequested}.
 %TODO maybe that's the best place to explain the condition limit?
 
+According to the documentation, step 4 from the checklist can be skipped in ``urgent situations'' and corresponding filters can have more severe actions enabled directly. %TODO check whether comparative of "severe" is "more severe" or "severer"
+In such case, the editor introducing the filter has to closely monitor the logs for potential filter misconduct.
+However, the guidelines do not elaborate on what exactly constitutes a ``urgent situation''.
+Unfortunately, investigating potential pitfalls of this provision is beyond the scope of the present work and one of the directions for further studies suggested in section~\ref{sec:further-studies}.
+
 Edit filter managers often introduce filters based on some phenomena they have observed caught by other filters, other algorithmic quality control mechanisms or general experience.
 As all newly implemented filters, these are initially enabled in logging only mode until enough log entries are generated to evaluate whether the incident is severe and frequent enough to need a filter.
 %TODO this actually fits also in the patterns of new filters in chap.5; these are the filters introduced for couple of days/hours, then switched off to never be enabled again
@@ -234,18 +239,6 @@ As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\fo
 (For comparison, as of March 9, 2019 there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}.)
 Out of the 154 edit filter managers only 11 are not administrators (most of them have other privileged groups such as ``rollbacker'', ``pending changes reviewer'', ``extended confirmed user'' and similar though).
 
-
-\subsection{Urgent situations}
-
-Throughout the documentation, there are several provisions for urgent situations.
-For instance, generally, every new filter should be tested extensively in logging mode only (without any further filter actions enabled) until a sufficient number of edits has demonstrated that it does indeed filter what it was intended to and there aren't too many false positives.
-As a matter of fact, caution is solicited both on the edit filter description page~\cite{Wikipedia:EditFilter} and on the edit filter management page~\cite{Wikipedia:EditFilterManagement}.
-Only then the filter should have ``warn'' or ``disallow'' actions enabled~\cite{Wikipedia:EditFilter}.
-%TODO move this to the introducing a filter part, where it's mentioned for the first time that filters should be "log only" in the beginning; move verything else to further studies/long list of interesting questions
-In ``urgent situations'' however (how are these defined? who determines they are urgent?), discussions about a filter may happen after it was already implemented and set to warn/disallow edits whithout thorough testing.
-Here, the filter editor responsible should monitor the filter and the logs in order to make sure the filter does what it was supposed to~\cite{Wikipedia:EditFilter}.
-I think these cases should be scrutinised extra carefully since ``urgent situations'' have historically always been an excuse for cuts in civil liberties.
-This is however beyond the scope of the present work and one of the directions for further studies suggested in section~\ref{sec:further-studies}.
 
 %************************************************************************
 
