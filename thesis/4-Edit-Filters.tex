@@ -183,34 +183,35 @@ According to the discussion archives, following types of edits were supposed to 
 \section{Building a filter: the internal perspective}
 \subsection{How is a new filter introduced?}
 
-The best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
-According to the page, these steps should be followed:
+Only edit filter managers have the permissions necessary to implement filters, but anybody can propose new ones.
+Every editor who notices some problematic behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
+The request can then be approved and implemented by an edit filter manager (mostly after a discussion/clarification of the details).
+The Edit Filters Requests page asks users to go through the following checklist before requesting a filter:
 \begin{itemize}
+    \item problems with a single page are not suitable for an edit filter, since filters are applied to all edits;
+    \item filters, after adding up, make editing slower, so the usefulness of every single filter and condition has to be carefully considered;
+    \item in depth checks should be done by a separate software that users run on their own machines;
+    \item no trivial errors should be catched by filters (e.g. concerning style guidelines);
+    \item there are the Titles Blacklist\footnote{\url{https://en.wikipedia.org/w/index.php?title=MediaWiki:Titleblacklist&oldid=904314604}} and the Link/Spam Blacklist\footnote{\url{https://en.wikipedia.org/w/index.php?title=MediaWiki:Spam-blacklist&oldid=904319854}} which should be used if the issue at hand has to do with a problematic title or link.
+\end{itemize}
+
+For edit filter managers, the best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
+According to the page, these steps should be followed:
+\begin{enumerate}
     \item read the documentation: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}
     \item test with debugging tools: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/tools} (visible only for users who are already in the edit filter managers user group)
     \item test with the batch testing interface (also available to edit filter managers only)
     \item create a logging only filter: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/new} (edit filter manager permissions needed)
     \item announce the filter at the edit filter notice board~\cite{Wikipedia:EditFilterNoticeboard}, so other edit filter managers can comment on it
     \item finally, fully enable the filter by adding an appropriate additional edit filter action.
-\end{itemize}
+\end{enumerate}
 
-Performance/efficiency seems to be fairly important for the edit filter system;
-on multiple occasions, there are notes on recommended order of operations, so that the filter evaluates as resource sparing as possible~\cite{Wikipedia:EditFilterInstructions} or invitations to consider whether an edit filter is the most suitable mechanism for solving a particular issue at all~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterRequested}.
-
-Anyone can propose a new edit filter.
-Every editor who notices some problematic behaviour they deem needs a filter can raise the issue at \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}.
-The request can then be approved and implemented by an edit filter manager (mostly after a discussion/clarification of the details).
-The Edit Filters Requests page also asks users to go through following checklist before requesting a filter:
-\begin{itemize}
-    \item "Filters are applied to all edits. Therefore, problematic changes that apply to a single page are likely not suitable for an edit filter."
-    \item filters, after adding up, make editing slower
-    \item in depth checks should be done by a separate software that users run on their own machines
-    \item no trivial errors should be catched by filters (ala style guidelines)
-    \item there are Titles Blacklist and Link/Spam Blacklist which should be used if the issue at hand has to do with a problematic title or link.
-\end{itemize}
+Performance seems to be fairly important for the edit filter system:
+On multiple occasions, there are notes on recommended order of operations, so that the filter evaluates as resource sparing as possible~\cite{Wikipedia:EditFilterInstructions} or invitations to consider whether an edit filter is the most suitable mechanism for solving a particular issue at all~\cite{Wikipedia:EditFilter},~\cite{Wikipedia:EditFilterRequested}.
+%TODO maybe that's the best place to explain the condition limit?
 
 Edit filter managers often introduce filters based on some phenomena they have observed caught by other filters, other algorithmic quality control mechanisms or general experience.
-As all newly implemented filters, these are initially enabled in logging only mode until enough log entries are generated to evaluate whether the incident is severe and frequent enough to need a filter or not.
+As all newly implemented filters, these are initially enabled in logging only mode until enough log entries are generated to evaluate whether the incident is severe and frequent enough to need a filter.
 %TODO this actually fits also in the patterns of new filters in chap.5; these are the filters introduced for couple of days/hours, then switched off to never be enabled again
 
 
@@ -222,17 +223,16 @@ According to~\cite{Wikipedia:EditFilter} this right is given only to editors who
 Further down on the page it is clarified that it is administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
 If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
 
-The formal process for requesting the \emph{abusefilter-modify} permission is to raise it to the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
+The formal process for requesting the \emph{abusefilter-modify} permission is to raise the request at the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
 A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
 
-As of 2017%TODO Check!!
-, when the ``edit filter helpers'' group was introduced (editors in this group have .... rights),
-the usual process is that editors first request an ``edit filter helper'' permission and are later converted to full edit filter managers.
+As of 2017, when the ``edit filter helper'' group was introduced (editors in this group have the \emph{abusefilter-view-private} permission)\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_helper&oldid=878127027}},
+the usual process seems to be that editors request this right first and are later converted to full edit filter managers\footnote{That is the tendency we observe at \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276 }}.
 
 A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
 As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\footnote{\url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers&offset=&limit=250&username=&group=abusefilter&wpsubmit=&wpFormIdentifier=mw-listusers-form}}.
 (For comparison, as of March 9, 2019 there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}.)
-Out of the 154 edit filter managers only 11 are not administrators.
+Out of the 154 edit filter managers only 11 are not administrators (most of them have other privileged groups such as ``rollbacker'', ``pending changes reviewer'', ``extended confirmed user'' and similar though).
 
 \subsection{Modifying a filter}
 % TODO Should we keep this here? it's more a comment on the filters lifecycle that I also discuss in chap.5
