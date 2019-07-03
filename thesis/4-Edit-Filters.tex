@@ -329,14 +329,35 @@ So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial s
   \caption{Edit filters' role in the quality control frame}~\label{fig:funnel-with-filters}
 \end{figure}
 
-\begin{comment}
-\begin{longtable}{ l | c | c | c | c }
-               & Filters & Bots & Semi-Automated tools & ORES \\
-    properties &   
-\end{longtable}
-\end{comment}
-
 Following table summarises the aspects of Wikipedia's various algorithmic quality control mechanisms:
+\begin{landscape}
+    \begin{longtable}{ | p{3cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | }
+    \hline
+               & Filters & Bots & Semi-Automated tools & ORES \\
+    \hline
+    \multirow{7}{*}{Properties} &  based on REGEXes & rule/ML based & rule/ML based & ML framework \\
+                               &  part of the "software" (MediaWiki plugin)  &  run on user's infrastructure ("bespoke code") & extra infrastructure & not used directly, can be incorporated in other tools \\
+                               & extension is open source & no requirement for code to be public & heuristics obfuscated by the interface & open source \\
+                               & public filters directly visible for anyone interested & & & \\
+                               & trigger \emph{before} an edit is published & trigger after an edit is published & trigger after an edit is published & \\
+                               & zero latency, trigger immediately & latency varies & generally higher latency than bots & \\
+                               & collaborative effort & mostly single dev/operator (recently: bot frameworks) & few devs & few devs \\
+    \hline
+    \multirow{2}{*}{People involved} & edit filter managers (EN Wiki) & no special rights needed (except for admin bots) & \emph{rollback} permission needed & mostly Scoring Platform team \\
+                                     & & bot gets a ``bot flag'' & & \\
+    \hline
+        \multirow{2}{*}{Hurdles to participate} & gain community trust to become an edit filter manager & get approval from the BAG & get a \emph{rollback} permission& \\
+                                            & understand REGEXes & programming knowledge, understand APIs, ... & get familiar with the tool & understand ML \\
+    \hline
+        \multirow{2}{*}{Concerns} & censorship infrastructure & ``botophobia'' & gamification & general ML concerns: hard to understand \\
+                                  & powerful, can in theory block editors based on (hidden) filters & & & \\
+    \hline
+        Areas of application & & & & \\
+    \hline
+\end{longtable}
+\end{landscape}
+
+\begin{comment}
 \begin{verbatim}
                      | Filters                          | Bots                          |  Semi-Automated tools   |  ORES
 --------------------------------------------------------------------------------------------------------------------------------------------
@@ -386,9 +407,8 @@ Concerns             | - powerful, can in theory block  |                       
 Application areas    |
                      |
 ------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 \end{verbatim}
+\end{comment}
 
 \begin{comment}
 From the Edit filter talk archives:
