@@ -161,7 +161,7 @@ Participants invoked various motivations for the introduction of the extension (
 The discussion reflects a mix of ideological and practical concerns.
 The biggest controversies lay along the lines of filters being public-vs-private and the actions the filters were to invoke upon a match.
 An automated rights revokation or a block of the offending editor with no manual confirmation by a real person were of particular concern to a lot of editors (they were worried that the filters would not be able to understand context thus resulting in too many false positives and blocking many legitimate edits and editors).
-As far as I understood, these features were technically implemented but never really used on English Wikipiedia (although there are `blockautopromote' actions triggered in the abuse\_filter\_log). %TODO investigate what exactly this means and why it hasn't happened since 2012
+As far as I understood, these features were technically implemented but never really used on English Wikipiedia (although there are \emph{blockautopromote} actions triggered in the \emph{abuse\_filter\_log}). %TODO investigate what exactly this means and why it hasn't happened since 2012
 
 As to the public-vs-private debate, the initial plan was that all filters are hidden from public view and only editors with special permissions (the edit filter managers) were supposed to be able to view and modify the patterns and consult the logs.
 The core developer of the extension was reasoning that its primary purpose was to fend off really persistent vandals with reasonable technical understanding who were ready to invest time and effort to circumvent anti-vandal measures
@@ -246,7 +246,7 @@ According to~\cite{Wikipedia:EditFilter} this right is given only to editors who
 Further down on the page it is clarified that it is administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
 If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
 
-The formal process for requesting the \emph{abusefilter-modify} permission is to raise the request at the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
+The formal process for requesting the \emph{abusefilter-modify} permission is to raise the request at the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276}}.
 A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
 
 As of 2017, when the ``edit filter helper'' group was introduced (editors in this group have the \emph{abusefilter-view-private} permission)\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_helper&oldid=878127027}},
@@ -266,16 +266,17 @@ Out of the 154 edit filter managers only 11 are not administrators (most of them
 
 \subsection{What happens when an editor triggers an edit filter? Do they notice this at all?}
 
-As described in the previous section, a variety of different actions may occur when a filter gets tripped.
-If a filter is set to ``warn'' or ``disallow'', the editor is notified that they hit a filter by a warning message (see~\ref{fig:screenshot-warn-disallow}).
-These warnings describe the problem that occurred and present the editor with possible actions:
-complain on the FalsePositives page (\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}) in case of a disallow,
-or, complain on the FalsePositives page and publish the change anyway in case of a warning.
+As described section~\ref{sec:mediawiki-ext}, a variety of different actions may occur when a filter gets tripped.
+Of these, only \emph{tag}, \emph{throttle}, \emph{warn}, and \emph{disallow} seem to be used today.
+If a filter is set to \emph{warn} or \emph{disallow}, the editor is notified that they hit a filter by a warning message (see figure~\ref{fig:screenshot-warn-disallow}).
+These warnings describe the problem that occurred and present the editor with possible paths of action:
+complain on the False Positives page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter/False_positives&oldid=879367604}} in case of \emph{disallow} (the edit is not saved),
+or, complain on the False Positives page and publish the change anyway in case of \emph{warn}.
 (Of course, in case of a warning, the editor can modify their edit before publishing it.)
-On the other hand, when the filter action is set to "tag" or "log" only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
-Tagged edits are marked as such in the page's revision history (see~\ref{fig:tags-in-history})
-and all edits that trigger an edit filter are listed in the AbuseLog (\url{https://en.wikipedia.org/wiki/Special:AbuseLog}) (see~\ref{fig:screenshot-abuse-log}).
-%TODO How about throttling
+On the other hand, when the filter action is set to \emph{tag} or \emph{log} only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
+Tagged edits are marked as such in the page's revision history for example (see figure~\ref{fig:tags-in-history})
+and all edits that trigger an edit filter are listed in the Abuse Log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}} (see figure~\ref{fig:screenshot-abuse-log}).
+%TODO How about throttling: the AbuseLog is currently timing out when I try to filter entries according to action(=throttle)
 
 \begin{figure}
 \centering
@@ -286,14 +287,8 @@ and all edits that trigger an edit filter are listed in the AbuseLog (\url{https
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{pics/screenshots-filter-trigger/Screenshot-abuse-log.png}
-  \caption{Abuse Log showing all filter triggers by User Schnuppi4223}~\label{fig:screenshot-abuse-log}
+  \caption{Abuse Log showing all filter triggers by User:Schnuppi4223}~\label{fig:screenshot-abuse-log}
 \end{figure}
-
-If the filter is set to disallow, a specific template is shown to the editor: "An automated filter has identified this edit as potentially unconstructive, so it has been disallowed. If this edit is constructive, please report this error. Disruptive editing may result in a block from editing."
-"report this error" links to the FalsePositives page: \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}
-"block from editing" links to \url{https://en.wikipedia.org/wiki/Wikipedia:Blocking_policy}
-
-The edit is not saved.
 
 \begin{figure}
 \centering
@@ -301,32 +296,24 @@ The edit is not saved.
   \caption{Editor gets notified their edit triggered multiple edit filters}~\label{fig:screenshot-warn-disallow}
 \end{figure}
 
-\subsection{what happens afterwards}
-
-If a user disagrees with the filter decision, they have the posibility of reporting a false positive
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}
 
 \subsection{How are problems handled?}
 %TODO review this part with presi: help to clear up the structure
 
-There are several pages where problematic behaviour concerning edit filters as well as potential solutions are discussed.
+There are several pages where problematic behaviour concerning edit filters are reported and potential solutions are considered.
 
-For instance, current filters behaviour is discussed on the Edit Filter Noticeboard~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter_noticeboard}}.
-Issues handled here include changing the edit filter action of single filters, changing edit filter warning templates, problems with specific regexes or variables and proposals for filter deletions.
+For instance, current filters behaviour is discussed on the Edit Filter Noticeboard~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276}}.
+Issues handled here include changing the edit filter action of single filters, changing edit filter warning templates, problems with specific regexes or variables and proposals for filter deletions (or for introducing new filters).
 Furthermore, on the noticeboard discussions take place about giving edit filter manager rights to users, or withdrawing these if a misuse was observed and raising the issue with the editor directly didn't resolve the problem~\cite{Wikipedia:EditFilter}.
 
-False positives among the filter hits are reported and discussed on a separate page~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/False_positives}}.
-Edit filter managers monitor this page and improve filters based on true false positives, give advice to good faith editors who tripped a filter or discourage authors of vandalism edits to continue with them.
-%TODO who moderates the false positives page? where does the info come from that it is edit filter managers?
+False positives among the filter hits are reported and discussed on a separate page~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter/False_positives&oldid=879367604}}.
+Edit filter managers and other interested editors monitor this page and verify or disprove the reported incidents.
+Edit filter managers use true false positives to improve the filters, give advice to good faith editors who tripped a filter and discourage authors of vandalism edits who reported these as false positives from continuing with their disrtuption.
+% who moderates the false positives page? where does the info come from that it is edit filter managers? I think this info comes from observation
 
 Moreover, edit filter managers are advised to consult and comply with personal security best practices (such as choosing a strong password and using two-factor authentication).
-If such an account is compromised, it loses its edit filter manager rights and gets blocked, since this threatens site security~\cite{Wikipedia:EditFilter}.
-
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter}
-"In the unlikely event that your account is compromised, notify an administrator or bureaucrat (for administrators) immediately so they can block your account and remove any sensitive privileges to prevent damage. "
-//interessanterweise is 2factor-auth auch nur für diese speziellen Benutzer*innen erlaubt; sonst kann man die Seite nicht ansehen
-\end{comment}
+If their account is compromised, they lose their edit filter manager rights and get blocked, since this threatens site security.
+Edit filter managers are encouraged to actively report problems with their account so that in case of doubt these can be blocked~\cite{Wikipedia:EditFilter}.
 
 %************************************************************************
 
