@@ -317,10 +317,40 @@ Edit filter managers are encouraged to actively report problems with their accou
 %************************************************************************
 
 \section{Edit filters' role in the quality control frame}
+%TODO do we need this chapter and extra fazit? I'm inclined to do fazit here
+
+\begin{comment}
+    Recap questions relevant for this chapter:
+* Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
+
+Q1 We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
+\end{comment}
 
 The purpose of the present section is to review what we have learnt so far and summarise/outline how edit filters fit in Wikipedia's quality control ecosystem.
 %TODO: explain table with text
 
+Timeline
+\begin{longtable}{ r | p{.8\textwidth}}
+   Oct 2001 & automatically import entries from Easton’s Bible Dictionary by a script \\
+29 Mar 2002 & First version of \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism} (WP Vandalism is published) \\
+   Oct 2002 & RamBot \\
+       2006 & BAG was first formed \\
+13 Mar 2006 & 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded \\
+28 Jul 2006 & VoABot II ("In the case were banned users continue to use sockpuppet accounts/IPs to add edits clearly rejected by consensus to the point were long term protection is required, VoABot may be programmed to watch those pages and revert those edits instead. Such edits are considered blacklisted. IP ranges can also be blacklisted. This is reserved only for special cases.") \\
+21 Jan 2007 & Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007 \\
+24 Jul 2007 & Request for Approval of original ClueBot \\
+16 Jan 2008 & Huggle Page is first published (empty) \\
+18 Jan 2008 & Huggle Page is first filled with content \\
+23 Jun 2008 & 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention \\
+ 2 Oct 2008 & \url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter} was first archived; its last topic was the voting for/against the extention which seemed to have ended end of Sep 2008 \\
+   Jun 2010 & STiki initial release \\
+20 Oct 2010 & ClueBot NG page is created \\
+11 Jan 2015 & 1st commit to github ORES repository \\
+30 Nov 2015 & ORES paper is published
+\end{longtable}
+
+* look at Timeline: the time span in which vandal fighting bots/semi-automated tools and then edit filters were introduced, fits logically into the process after the exponential growth of Wikipedia took off and it was no more the small group that could handle things but suddenly had to face a huge workload which wasn't feasible without technical support.
+* in consecuence, edits of a lot of newcomers from that time were reverted stricter than before (with the help of the automated tools) which drove a lot of them away
 So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
 
 \begin{figure}
@@ -497,28 +527,6 @@ When all three of these conditions are met, a temporary block is placed on the n
 
 \end{comment}
 
-Timeline
-\begin{longtable}{ r | p{.8\textwidth}}
-   Oct 2001 & automatically import entries from Easton’s Bible Dictionary by a script \\
-29 Mar 2002 & First version of \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism} (WP Vandalism is published) \\
-   Oct 2002 & RamBot \\
-       2006 & BAG was first formed \\
-13 Mar 2006 & 1st version of Bots/Requests for approval is published: some basic requirements (also valid today) are recorded \\
-28 Jul 2006 & VoABot II ("In the case were banned users continue to use sockpuppet accounts/IPs to add edits clearly rejected by consensus to the point were long term protection is required, VoABot may be programmed to watch those pages and revert those edits instead. Such edits are considered blacklisted. IP ranges can also be blacklisted. This is reserved only for special cases.") \\
-21 Jan 2007 & Twinkle Page is first published (empty), filled with a basic description by beginings of Feb 2007 \\
-24 Jul 2007 & Request for Approval of original ClueBot \\
-16 Jan 2008 & Huggle Page is first published (empty) \\
-18 Jan 2008 & Huggle Page is first filled with content \\
-23 Jun 2008 & 1st version of Edit Filter page is published: User:Werdna announces they're currently developing the extention \\
- 2 Oct 2008 & \url{https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter} was first archived; its last topic was the voting for/against the extention which seemed to have ended end of Sep 2008 \\
-   Jun 2010 & STiki initial release \\
-20 Oct 2010 & ClueBot NG page is created \\
-11 Jan 2015 & 1st commit to github ORES repository \\
-30 Nov 2015 & ORES paper is published
-\end{longtable}
-
-* look at Timeline: the time span in which vandal fighting bots/semi-automated tools and then edit filters were introduced, fits logically into the process after the exponential growth of Wikipedia took off and it was no more the small group that could handle things but suddenly had to face a huge workload which wasn't feasible without technical support.
-* in consecuence, edits of a lot of newcomers from that time were reverted stricter than before (with the help of the automated tools) which drove a lot of them away
 
 %************************************************************************
 
@@ -526,17 +534,6 @@ Timeline
 %Conclusion, resume, bottom line
 
 In short, in this chapter we found/worked out following salient characteristics of edit filters: ....
-Why does this system continue to exist in times of fancier (syn!) machine learning based tools?
-
-
-maybe it's a historical phenomenon (in many regards):
-* perhaps there were differences that are not essential anymore, such as:
-  * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
-  * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
-* perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
-* perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
-* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
-
 Question:
 Oftentimes edit filter managers are also bot operators; how would they decide when to implement a filter and when a bot?
 %TODO: ask people! (on IRC?)
@@ -557,17 +554,4 @@ Reflections on the archive discussion
 So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
 Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
 
-\end{comment}
-
-\begin{comment}
-Can I answer these questions?
-
-* Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
-* I want to help people to do their work better using a technical system (e.g. the edit filters). How can I do this?
-* The edit filter system can be embedded in the vandalism prevention frame. Are there other contexts/frames for which it is relevant?
-
-* stick to research questions from Confluence, they are already carefully crafted and narrowed down as appropriate
-  Q1 We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
-  Q2 Which type of tasks do these filters take over in comparison to the other mechanisms? How these tasks evolve over time (are they changes in the type, number, etc.)?
-  Q3 Since filters are classical rule-based systems, what are suitable areas of application for such rule-based system in contrast to the other ML-based approaches.
 \end{comment}
