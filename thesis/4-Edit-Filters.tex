@@ -298,7 +298,6 @@ and all edits that trigger an edit filter are listed in the Abuse Log\footnote{\
 
 
 \subsection{How are problems handled?}
-%TODO review this part with presi: help to clear up the structure
 
 There are several pages where problematic behaviour concerning edit filters are reported and potential solutions are considered.
 
@@ -319,7 +318,7 @@ Edit filter managers are encouraged to actively report problems with their accou
 
 \section{Edit filters' role in the quality control frame}
 
-Let us review in this section what we have learnt so far and how edit filters fit in Wikipedia's quality control ecosystem.
+The purpose of the present section is to review what we have learnt so far and summarise/outline how edit filters fit in Wikipedia's quality control ecosystem.
 %TODO: explain table with text
 
 So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
@@ -332,7 +331,8 @@ So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial s
 
 \begin{comment}
 \begin{longtable}{ l | c | c | c | c }
-    & Filters & Bots & Semi-Automated tools & ORES \\
+               & Filters & Bots & Semi-Automated tools & ORES \\
+    properties &   
 \end{longtable}
 \end{comment}
 
@@ -398,44 +398,50 @@ The advantages over anti-vandal bots and other tools were seen to be ``speed and
 \end{comment}
 
 \subsection{Alternatives to Edit Filters}
+%TODO is this the most suitable place for this? If yes, write a better preamble
 
 Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is offered to edit filter managers and editors proposing new filters.
 For example, there is the page protection mechanism that addresses problems on a single page.
-Also, title and spam blacklists exist and these might be the way to handle problems with page titles or link spam~\cite{Wikipedia:EditFilter}.
-Moreover, it is adviced to run in-depth checks (for single articles) separately, e.g. by using bots~\cite{Wikipedia:EditFilterRequested}.
+suitable for handling a higher number of incidents concerning single page.
+Also, title and spam blacklists exist and these might be the way to handle disruptive page titles or link spam~\cite{Wikipedia:EditFilter}.
+Moreover, it is recommended to run in-depth checks (for single articles) separately, e.g. by using bots~\cite{Wikipedia:EditFilterRequested}.
 
 
 \subsection{Collaboration with bots (and semi-automated tools)}
 
-So far we have juxtaposed the single quality control mechanisms and compared them separetly.
+So far we have juxtaposed the single quality control mechanisms and compared them separately.
 It is however worth mentioning that they not only operate alongside each other but also cooperate on occasions.
-%TODO see Geiger's paper (banning of a vandal?) where the process of tracing the same malicious editor throughout Wikipedia and reverting their eidts with various tools (and issuing them warnings) leads to the (temporary) block of the editor
 
-For instance, DatBot~\cite{Wikipedia:DatBot} monitors the abuse log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}}
+Such collaborations are studied for instance by Geiger and Ribes~\cite{GeiRib2010} who go as far as describing them as ``distributed cognition''.
+They follow a particular series of abuse throughout Wikipedia, along the traces the disrupting editor and the quality control mechanisms deployed against their edits left.
+The researchers demonstrate how a bot (ClueBot), and several editors using the semi-automated tools Huggle and Twinkle all collaborate up until the malicious editor was banned by an administrator.
+
+During the present study, I have also observed various cases of edit filters and bots mutually facilitating each other's work.
+%TODO check whether there are other types of cooperations at all: what's the deal with Twinkle? and update here!
+% are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter" -- nice idea, but no time
+DatBot, Mr.Z-bot and MusikBot are all examples for bots conducting support tasks for filters.
+DatBot~\cite{Wikipedia:DatBot} monitors the Abuse Log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}}
 and reports users tripping certain filters to WP:AIV (Administrator intervention against vandalism)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism}} and WP:UAA (usernames for administrator attention)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Usernames_for_administrator_attention}}.
-It is the successor of Mr.Z-bot\footnote{\url{https://en.wikipedia.org/wiki/User:Mr.Z-bot}}.
+It is the successor of Mr.Z-bot\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:Mr.Z-bot&oldid=898492130}}
 which used to report users from the abuse log to WP:AIV, but has been inactive since 2016 and therefore recently deactivated.
 %\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
-%TODO are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter"
+
+MusikBot also has several tasks dedicated to monitoring different aspects of edit filter behaviour and compiling reports for anyone interested:
+The FilterMonitor task ``[r]eports functional changes of edit filters to the watchable page User:MusikBot/FilterMonitor/Recent changes. The template \verb|{{recent filter changes}}| formats this information and can be transcluded where desired''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/FilterMonitor&oldid=748920629}}.
+The StaleFilter task ``[r]eports enabled filters that have not had any hits in over 30 days, as specified by \verb|/Offset|''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/StaleFilters&oldid=763698371}}.
+The AbuseFilterIRC task ``[r]elays all edit filter hits to IRC channels and allows you to subscribe to notifications when specific filters are tripped. See \verb|#wikipedia-en-abuse-log-all| for the English Wikipedia feed''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/AbuseFilterIRC&oldid=885138803}}.
+
+On the other hand, there are also examples for filters supporting bot work:
+Filter 323 (``Undoing anti-vandalism bot'') tags edits reverting revisions by XLinkBot and ClueBot NG.
+Although it is hidden, so we cannot view any details, filter 603 is named ``Special case of reverting XLinkBot reverts'' so it is probably safe to assume that is filtering what it claims to be.
+And there are several filters (historically) configured to ignore particular bots: filter 76 (``Adding email address'') exempting XLinkBot, filter 28 (``New user redirecting an existing substantial page or changing a redirect'') exempting Anybot, filter 532 (``Interwiki Addition'') exempting Cydebot are some examples thereof.
+There are also filters configured to ignore all bots: filter 368 (``Making large changes when marking the edit as minor''), filter 702 (``Warning against clipboard hijacking''), filter 122(``Changing Username malformed requests'').
 
 \begin{comment}
-    https://en.wikipedia.org/wiki/User:MusikBot/FilterMonitor
-    "Reports functional changes of edit filters to the watchable page User:MusikBot/FilterMonitor/Recent changes. The template {{recent filter changes}} formats this information and can be transcluded where desired."
-
-    https://en.wikipedia.org/wiki/User:MusikBot/StaleFilters
-    "StaleFilters: Reports enabled filters that have not had any hits in over 30 days, as specified by /Offset. "
-
-    https://en.wikipedia.org/wiki/User:MusikBot/AbuseFilterIRC
-    "AbuseFilterIRC: Relays all edit filter hits to IRC channels and allows you to subscribe to notifications when specific filters are tripped. See #wikipedia-en-abuse-log-all connect for the English Wikipedia feed. "
-\end{comment}
-
 Apparently, Twinkle at least has the possibility of using heuristics from the abuse filter log for its queues.
-% is that so? the only place I can find abuse filters mentioned with Twinkle is in the source code: https://github.com/azatoth/twinkle/blob/master/morebits.js#L2636; and I'm not quite sure what this part of the code does.
-\begin{comment}
-%TODO check other tools
-
-So, Huggle let the user define their own queue, but only along predefined parameters. So it's not really possible right now to hook it up to the AbuseLog
+%TODO is that so? the only place I can find abuse filters mentioned with Twinkle is in the source code: https://github.com/azatoth/twinkle/blob/master/morebits.js#L2636; and I'm not quite sure what this part of the code does.
 \end{comment}
+
 
 \begin{comment}
     Not sure where this fits in
