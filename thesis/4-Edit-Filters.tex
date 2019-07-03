@@ -336,6 +336,7 @@ So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial s
 \end{longtable}
 \end{comment}
 
+Following table summarises the aspects of Wikipedia's various algorithmic quality control mechanisms:
 \begin{verbatim}
                      | Filters                          | Bots                          |  Semi-Automated tools   |  ORES
 --------------------------------------------------------------------------------------------------------------------------------------------
@@ -344,12 +345,18 @@ So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial s
 properties           | - part of the "software"/        | - "bespoke code": run on      | - heuristics obfusca-   | - not used directly, but can
                      |   platform (MediaWiki ext)       |   user's infrastructure       |   ted by the interface  |   instead be incorporated in
                      | - public filters are directly    | - no requirement for the code |   (but often configura- |   other tools
-                     |   visible for everyone           |   to be made public           |   ble)                  |
+                     |   visible for everyone           |   to be made public           |   ble to an extent)     |
                      |   interested                     | - you can relatively easily   | - mostly based on a     |
                      | - trigger *before* an edit is    |   get all the filters; you    |   centralised queue     |
                      |   published                      |   cannot easily get all bots  | - trigger after an edit |
                      | - source code of the extension   | - trigger after an edit is    |   is published          |
                      |   is publicly viewable           |   published                   |                         |
+                     | - zero latency, triggered imme-  | - latency varies              |                         |
+                     |   diately                        |                               |                         |
+                     | - collaborative effort           | - mostly single dev/operator  |                         |
+                     |                                  |   (although in recent years a |                         |
+                     |                                  |   lot of bots rely on bot     |                         |
+                     |                                  |   frameworks)                 |                         |
                      |                                  |                               |                         |
 ---------------------|------------------------------------------------------------------------------------------------------------------------
                      |                                  |                               |                         |
@@ -375,6 +382,12 @@ Concerns             | - powerful, can in theory block  |                       
                      |   filters                        |                               |                         |
                      |                                  |                               |                         |
 ------------------------------------------------------------------------------------------------------------------------------------------------
+                     |
+Application areas    |
+                     |
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 \end{verbatim}
 
 \begin{comment}
@@ -390,8 +403,8 @@ In this case, there are multiple hard-coded safeguards on the false positive rat
 
 "It is designed to target repeated behaviour, which is unequivocally vandalism. For instance, making huge numbers of page moves right after your tenth edit. For instance, moving pages to titles with 'HAGGER?' in them. All of these things are currently blocked by sekrit adminbots. This extension promises to block these things in the software, allowing us zero latency in responding, and allowing us to apply special restrictions, such as revoking a users' autoconfirmed status for a period of time."
 
-Also from the archives, ausformuliert:
-Further advantages of the extension highlighted by its befürwörterinnen were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
+Also from the archives, ausformuliert, use towards describing the table:
+Further advantages of the extension highlighted by its proponents/supporters were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
 Besides, they were reasoning, it was to be part of the core software, so there was no need for renting extra server resources where an external script/bot can run, thus ensuring immediate response and less extra work.
 The advantages over anti-vandal bots and other tools were seen to be ``speed and tidiness''.
 
