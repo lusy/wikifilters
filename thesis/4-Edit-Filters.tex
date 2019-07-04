@@ -241,7 +241,7 @@ As all newly implemented filters, these are initially enabled in logging only mo
 \subsection{Who can edit filters?}
 \label{section:who-can-edit}
 
-In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission.
+In order to be able to set up an edit filter on their own, an editor needs to have the \emph{abusefilter-modify} permission (which makes them part of the edit filter manager group).
 According to~\cite{Wikipedia:EditFilter} this right is given only to editors who ``have the required good judgment and technical proficiency''.
 Further down on the page it is clarified that it is administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
 If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
@@ -250,13 +250,15 @@ The formal process for requesting the \emph{abusefilter-modify} permission is to
 A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
 
 As of 2017, when the ``edit filter helper'' group was introduced (editors in this group have the \emph{abusefilter-view-private} permission)\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_helper&oldid=878127027}},
-the usual process seems to be that editors request this right first and are later converted to full edit filter managers\footnote{That is the tendency we observe at \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276 }}.
+the usual process seems to be that editors request this right first and only later the full \emph{abusefilter-modify} permissions\footnote{That is the tendency we observe at \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276 }}.
 
 A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
 As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\footnote{\url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers&offset=&limit=250&username=&group=abusefilter&wpsubmit=&wpFormIdentifier=mw-listusers-form}}.
 (For comparison, as of March 9, 2019 there are 1181 admins, see \url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers/sysop}.)
 Out of the 154 edit filter managers only 11 are not administrators (most of them have other privileged groups such as ``rollbacker'', ``pending changes reviewer'', ``extended confirmed user'' and similar though).
 
+Some of the edit filter managers are also bot operators.
+The interesting patterns of collaboration between the two technologies are discussed in section~\ref{subsection:collaboration-bots-filters}.
 
 %************************************************************************
 
@@ -319,17 +321,31 @@ Edit filter managers are encouraged to actively report problems with their accou
 \section{Edit filters' role in the quality control frame}
 %TODO do we need this chapter and extra fazit? I'm inclined to do fazit here
 
+The purpose of the present section is to review what we have learnt so far and summarise/outline how edit filters fit in Wikipedia's quality control ecosystem.
+
 \begin{comment}
     Recap questions relevant for this chapter:
 * Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
 
 Q1 We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
+
+From l.12
+In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
+
+From l.29
+A couple of keywords arouse interest here: %TODO make sure the chapter answered these questions
+Who is in the edit filter manager group and how did they become part of it?
+What controls exactly can be set?
+What does ``mainly'' mean, are there other patterns addressed?
+And what are the patterns of harmful editing addressed by the filters?
 \end{comment}
 
-The purpose of the present section is to review what we have learnt so far and summarise/outline how edit filters fit in Wikipedia's quality control ecosystem.
-%TODO: explain table with text
+As the timeline in figure~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off.
+The rapidly increasing workload could not be feasibly handled manually anymore and the community turned to technical solutions.
+As shown elsewhere (cite Halfaker, someone else?), this turn (syn!) had a lot of repercussions:
+one of the most severe of them being that newcomers' edits were reverted stricter than before (accepted or rejected on a yes-no basis with the help of automated tools, instead of manually seeking to improve the contributions and ``massage'' them into an acceptable form), which in consequence drove a lot of them away.
 
-Timeline
+%TODO overlay with exponential growth diagram
 \begin{longtable}{ r | p{.8\textwidth}}
    Oct 2001 & automatically import entries from Easton’s Bible Dictionary by a script \\
 29 Mar 2002 & First version of \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism} (WP Vandalism is published) \\
@@ -347,10 +363,9 @@ Timeline
 20 Oct 2010 & ClueBot NG page is created \\
 11 Jan 2015 & 1st commit to github ORES repository \\
 30 Nov 2015 & ORES paper is published
+  \caption{Timeline: Introduction of algorithmic quality control mechanisms}~\label{fig:timeline}
 \end{longtable}
 
-* look at Timeline: the time span in which vandal fighting bots/semi-automated tools and then edit filters were introduced, fits logically into the process after the exponential growth of Wikipedia took off and it was no more the small group that could handle things but suddenly had to face a huge workload which wasn't feasible without technical support.
-* in consecuence, edits of a lot of newcomers from that time were reverted stricter than before (with the help of the automated tools) which drove a lot of them away
 So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
 
 \begin{figure}
@@ -386,6 +401,7 @@ Following table summarises the aspects of Wikipedia's various algorithmic qualit
     \hline
 \end{longtable}
 \end{landscape}
+%TODO: explain table with text, give table caption
 
 \begin{comment}
 \begin{verbatim}
@@ -471,6 +487,7 @@ Moreover, it is recommended to run in-depth checks (for single articles) separat
 
 
 \subsection{Collaboration with bots (and semi-automated tools)}
+\label{subsection:collaboration-bots-filters}
 
 So far we have juxtaposed the single quality control mechanisms and compared them separately.
 It is however worth mentioning that they not only operate alongside each other but also cooperate on occasions.
@@ -506,34 +523,14 @@ Apparently, Twinkle at least has the possibility of using heuristics from the ab
 \end{comment}
 
 
-\begin{comment}
-    Not sure where this fits in
-\subsection{TOR}
-(Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
-
-Here is where this comes from:
-https://www.mediawiki.org/wiki/Extension:TorBlock
-"The TorBlock extension automatically applies restrictions to Tor exit node's access to the wiki's front-door server."
-
-TorNodeBot https://en.wikipedia.org/wiki/User:TorNodeBot
-    Tasks:
-    TorNodeBot is a bot that monitors the Tor network and ensures that Wikipedia exit nodes (those nodes in the Tor network that can be the last "hop" and route data to its final destination) can not edit, in accordance with our policy on Open proxies. The TorBlock extension is supposed to handle this automatically, but tends to miss several exit nodes and goes down on occasion. TorNodeBot fills in the gaps left open by the extension. This bot runs continuously and applies blocks when all of the following 3 conditions are met:
-
-        The node is present in the Tor directory service as an exit node router
-        The node is responding to requests and can route to Wikipedia's sandbox
-        The node is not blocked already by the TorBlock extension
-
-When all three of these conditions are met, a temporary block is placed on the node.
-
-\end{comment}
-
-
 %************************************************************************
 
 \section{Fazit}
 %Conclusion, resume, bottom line
 
 In short, in this chapter we found/worked out following salient characteristics of edit filters: ....
+
+\begin{comment}
 Question:
 Oftentimes edit filter managers are also bot operators; how would they decide when to implement a filter and when a bot?
 %TODO: ask people! (on IRC?)
@@ -541,6 +538,7 @@ I've compiled a list of edit filter managers who are simultaneously also bot ope
 I've further assembled the bots they run and made notes on the bots that seem to be relevant to vandalism prevention/quality assurance
 I'm currently trying to determine from document traces what filter contributions the corresponding edit filter managers had and whether they are working on filters similar to the bots they operate.
 Insight is currently minimal, since abuse\_filter\_history table is not available and we can only determine what filters an edit filter manager has worked on from limited traces such as: last modifier of the filter from abuse\_filter table; editors who signed their comments from abuse\_filter table; probably some noticeboards or talk page archives, but I haven't looked into these so far.
+\end{comment}
 
 %TODO make sure the questions at l.12 and l.28 are answered
 

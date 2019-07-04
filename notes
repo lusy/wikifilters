@@ -1624,3 +1624,21 @@ till now it comes to attention that a lot of accounts named something resembling
 There are in the meantime over 5 pages of them, it is definitely happening automatically
 
 TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
+
+============================================================================
+\subsection{TOR}
+(Interesting side note: editing via TOR is disallowed altogether: "Your IP has been recognised as a TOR exit node. We disallow this to prevent abuse" or similar, check again for wording. Compare: "Users of the Tor anonymity network will show the IP address of a Tor "exit node". Lists of known Tor exit nodes are available from the Tor Project's Tor Bulk Exit List exporting tool." \url{https://en.wikipedia.org/wiki/Wikipedia:Vandalism})
+
+Here is where this comes from:
+https://www.mediawiki.org/wiki/Extension:TorBlock
+"The TorBlock extension automatically applies restrictions to Tor exit node's access to the wiki's front-door server."
+
+TorNodeBot https://en.wikipedia.org/wiki/User:TorNodeBot
+    Tasks:
+    TorNodeBot is a bot that monitors the Tor network and ensures that Wikipedia exit nodes (those nodes in the Tor network that can be the last "hop" and route data to its final destination) can not edit, in accordance with our policy on Open proxies. The TorBlock extension is supposed to handle this automatically, but tends to miss several exit nodes and goes down on occasion. TorNodeBot fills in the gaps left open by the extension. This bot runs continuously and applies blocks when all of the following 3 conditions are met:
+
+        The node is present in the Tor directory service as an exit node router
+        The node is responding to requests and can route to Wikipedia's sandbox
+        The node is not blocked already by the TorBlock extension
+
+When all three of these conditions are met, a temporary block is placed on the node.
