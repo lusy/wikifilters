@@ -319,26 +319,20 @@ Edit filter managers are encouraged to actively report problems with their accou
 %************************************************************************
 
 \section{Edit filters' role in the quality control frame}
-%TODO do we need this chapter and extra fazit? I'm inclined to do fazit here
-
-The purpose of the present section is to review what we have learnt so far and summarise/outline how edit filters fit in Wikipedia's quality control ecosystem.
 
 \begin{comment}
-    Recap questions relevant for this chapter:
-* Why are there mechanisms triggered before an edit gets published (such as edit filters), and such triggered afterwards (such as bots)? Is there a qualitative difference?
-
-Q1 We wanted to improve our understanding of the role of filters in existing algorithmic quality-control mechanisms (bots, ORES, humans).
-
 From l.12
 In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
 \end{comment}
+The purpose of the present section is to review what we have learnt so far and summarise how edit filters fit in Wikipedia's quality control ecosystem.
 
-As the timeline in figure~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off.
-The rapidly increasing workload could not be feasibly handled manually anymore and the community turned to technical solutions.
-As shown elsewhere (cite Halfaker, someone else?), this turn (syn!) had a lot of repercussions:
+As the timeline~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off in 2006 (compare figures~\ref{fig:editors-development},~\ref{fig:edits-development}).
+The surge in editors numbers and contributions implied a rapidly increasing workload for community members dedicated to quality assurance
+which could not be feasibly handled manually anymore and thus the community turned to technical solutions.
+As shown elsewhere~\cite{HalGeiMorRied2013}, this shift had a lot of repercussions:
 one of the most severe of them being that newcomers' edits were reverted stricter than before (accepted or rejected on a yes-no basis with the help of automated tools, instead of manually seeking to improve the contributions and ``massage'' them into an acceptable form), which in consequence drove a lot of them away.
+%TODO sounds ending abruptly
 
-%TODO overlay with exponential growth diagram
 \begin{table}
     \begin{tabular}{ r | p{.8\textwidth}}
    Oct 2001 & automatically import entries from Easton’s Bible Dictionary by a script \\
@@ -361,7 +355,38 @@ one of the most severe of them being that newcomers' edits were reverted stricte
     \caption{Timeline: Introduction of algorithmic quality control mechanisms}~\label{fig:timeline}
 \end{table}
 
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/editors-development.png}
+    \caption{EN Wikipedia: Editors over the years (source: \url{https://stats.wikimedia.org/v2/})}~\label{fig:editors-development}
+\end{figure}
+
+\begin{figure}
+\centering
+    \includegraphics[width=0.9\columnwidth]{pics/edits-development.png}
+    \caption{EN Wikipedia: Number of edits over the years (source: \url{https://stats.wikimedia.org/v2/})}~\label{fig:edits-development}
+\end{figure}
+
 % Comparison of the mechanisms: each of them has following salient characteristics
+\subsection{Wikipedia's algorithmic quality control mechanisms in comparison}
+
+As we can read from the timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
+Here, we review the salient features of the different quality control mechanisms and the motivation for the filters' introduction.
+A concise summary of this discussion is offered in table~\ref{table:mechanisms-comparison}.
+
+As we can read from the timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
+Here, we review the salient features of the different quality control mechanisms and the motivation for the filters' introduction.
+A concise summary of this discussion is offered in table~\ref{table:mechanisms-comparison}.
+
+So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
+Also, the extension allows multiple users to work on the same filters and there are tests. Unlike bots, which are per definition operated by one user.
+
+Further advantages of the extension highlighted by its proponents/supporters were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
+Besides, they were reasoning, it was to be part of the core software, so there was no need for renting extra server resources where an external script/bot can run, thus ensuring immediate response and less extra work.
+The advantages over anti-vandal bots and other tools were seen to be ``speed and tidiness''.
+
+So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
+Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
 
 % Discussion of the table (fließtext)
 \begin{comment}
@@ -395,16 +420,15 @@ Human editors are not very fast in general and how fast it is solving this with 
 
 \end{comment}
 
-Following table summarises the aspects of Wikipedia's various algorithmic quality control mechanisms:
 \begin{landscape}
     \begin{longtable}{ | p{3cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | }
     \hline
                & Filters & Bots & Semi-Automated tools & ORES \\
     \hline
-    \multirow{7}{*}{Properties} &  based on REGEXes & rule/ML based & rule/ML based & ML framework \\
+    \multirow{7}{*}{Properties} &  rule based (REGEX) & rule/ML based & rule/ML based & ML framework \\
                                &  part of the "software" (MediaWiki plugin)  &  run on user's infrastructure ("bespoke code") & extra infrastructure & not used directly, can be incorporated in other tools \\
-                               & extension is open source & no requirement for code to be public & heuristics obfuscated by the interface & open source \\
-                               & public filters directly visible for anyone interested & & & \\
+                               & extension is open source & no requirement for code to be public & most popular are open source & open source \\
+                               & public filters directly visible for anyone interested & & heuristics obfuscated by the interface & \\
                                & trigger \emph{before} an edit is published & trigger after an edit is published & trigger after an edit is published & \\
                                & zero latency, trigger immediately & latency varies & generally higher latency than bots & \\
                                & collaborative effort & mostly single dev/operator (recently: bot frameworks) & few devs & few devs \\
@@ -418,11 +442,11 @@ Following table summarises the aspects of Wikipedia's various algorithmic qualit
         \multirow{2}{*}{Concerns} & censorship infrastructure & ``botophobia'' & gamification & general ML concerns: hard to understand \\
                                   & powerful, can in theory block editors based on (hidden) filters & & & \\
     \hline
-        Areas of application & & & & \\
+        Areas of application & persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic (obvious vandalism which takes time to clean up) & & less obvious cases that require human judgement & \\
     \hline
+    \caption{Wikipedia's algorithmic quality control mechanisms in comparison}~\label{table:mechanisms-comparison}
 \end{longtable}
 \end{landscape}
-%TODO: explain table with text, give table caption
 
 \begin{comment}
 \begin{verbatim}
@@ -478,7 +502,8 @@ Application areas    |
 \end{comment}
 
 % When is which mechanism used
-\subsection{Alternatives to Edit Filters}
+\subsection{Application areas of the individual mechanisms}
+%\subsection{Alternatives to Edit Filters}
 %TODO is this the most suitable place for this? If yes, write a better preamble
 
 Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is offered to edit filter managers and editors proposing new filters.
@@ -510,7 +535,8 @@ So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial s
 %*********************
 
 % Collaboration of the mechanisms
-\subsection{Collaboration with bots (and semi-automated tools)}
+\subsection{Collaboration of the mechanisms}
+%\subsection{Collaboration with bots (and semi-automated tools)}
 \label{subsection:collaboration-bots-filters}
 
 So far we have juxtaposed the single quality control mechanisms and compared them separately.
@@ -547,10 +573,9 @@ Apparently, Twinkle at least has the possibility of using heuristics from the ab
 \end{comment}
 
 
-%************************************************************************
-
-\section{Fazit}
-%Conclusion, resume, bottom line
+\subsection{Conclusions}
+%Conclusion, resume, bottom line, lesson learnt
 
 In short, in this chapter we found/worked out following salient characteristics of edit filters: ....
+
 
