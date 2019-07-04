@@ -2275,3 +2275,138 @@ works, but also amateur videos using their music in the background, or musicians
 tribute to a band by playing live along with the commercial recording as a backing track"
 "This kind of content fingerprinting, being both easy
 and oblivious to nuance, encourages these kinds of shotgun tactics." //compare blog post on upload filters
+
+===================================================================
+\cite{HalKitRied2011}
+
+purpose of reverts:
+"fix mistakes, repair vandalism, and help enforce
+policy."
+
+effect of reverts on newcomers and more experienced editors;
+demotivate editors; reduce contributions vs higher quality edits
+effect of reverts according to tenure of the reverting editors;
+    reverts by anonymous editors not very impactful
+    reverts by more experienced users deminish contributions significantly
+"Essentially,
+editors reverted by anonymous editors recover to the same
+average level of activity within a couple of weeks, but those
+reverted by named editors do not recover for at least one
+month (if ever)."
+"we suspected that the long-
+term effect on reverted editors could have been due to edi-
+tors being demotivated enough to leave Wikipedia entirely."
+
+contribution: "ours is the first study we are aware of to quantify the
+impact of reverts on editor behavior."
+Findings in a nutshell:
+"(1) reverts do have a negative
+impact on editor contribution and survival, especially for
+newcomers; and (2) when editors do continue to contribute
+after a revert, the quality of their contributions increases."
+
+What can findings be used for:
+"design of intelligent tools for supporting reverts that enhance
+their beneficial effects while minimizing costs."
+
+4 Research questions:
+RQ1: How does being reverted affect the quantity
+of editor work?
+RQ2: How does being reverted affect the quality of
+editor work?
+RQ3: How does being reverted affect communica-
+tion?
+RQ4: How does experience moderate the effects of
+reverts on contribution?
+
+editing is easy for everyone: also for malicious/biased users
+so reverting is also easy -> reduces cost for fixing damage
+
+total percentage of reverts has increased over time
+
+"tasks that may pro-
+duce high group value can increase individual motivation;"
+"Getting reverted may make individuals feel that their con-
+tributions are not valued by the group and are not leading to
+positive group outcomes, resulting in demotivating effects."
+
+"being reverted could be part of the learning
+process for editors."
+
+Wikipedia’s Bold, Revert, Discuss cycle
+
+more policies and guidelines -> newcomers are reverted at higher rates
+
+Data sample: 400 000 revisions; January 2010 data dump
+200 000 samples of not reverted revisions used as a control group
+no two revisions performed by the same editor
+
+Quantity measures:
+Revisions/day
+Words added/day: number of non-stop words added to articles per day
+
+Quality measures:
+Reverts/revision: "the proportion of an editor’s revisions
+that have been reverted in a given timespan."
+PWR/word: "the average number
+of revisions that words added by an editor persist. Higher
+quality contributions should, on average, last longer."
+
+Boldness measures:
+Words changed per revision
+Establishment of words removed: the average PWR of
+words that an edit removes
+users may appear to make higher quality contributions by making "safer" edits
+
+Productivity measures:
+combines quality and quantity to estimate impact
+PWR/day:
+
+all these measures focused on articles; don't consider improvements on policy pages, etc;
+
+Measuring communication:
+- about articles: article talk page -> Article Talk revisions/day
+- personal communication between editors: user talk page -> User Talk revisions/day
+
+"editors who are reverted are less likely
+to get reverted in the future."
+
+"After a revert, old-timer editors do experience a tempo-
+rary reduction to their article activity, but they return to the
+level of activity of their not-reverted counterparts within two
+weeks of being reverted. For newbie editors, the difference
+in the activity delta is both stronger and longer-lasting. Re-
+verted newbies take more than four weeks to return to the
+activity levels of not-reverted newbies."
+
+but less experienced editors learn more from reverts and have bigger improvements in their article quality
+
+"activity
+of editors reverted by newbies will recover within two weeks,
+the activity of editors reverted by old-timers did not recover
+in the four observed weeks."
+
+"Another interpretation is that old-timers
+have an enhanced ability to identify unconstructive editors
+and chase them away" // wistful thinking
+
+interestingly:
+"Under our measure of pro-
+ductivity (PWR/day), the net effect of reverts on Wikipedia
+is positive: on average, an editor who is reverted produces
+more persistent words per day – even if we include those
+editors who withdraw from Wikipedia in the calculation!"
+"Our research suggests that overall reverting activity in
+Wikipedia is healthy and valuable,"
+"there are
+specific cases in which reverting activity might be managed
+better"
+
+"the reverting editor should be
+encouraged to provide clear feedback to help the reverted
+editor grow as a member of the community." // yeah. I bet this never happens
+"Newcomers should be reached out
+to actively to help them become socialized into Wikipedia."
+"more curmudgeonly old-timers should be
+kept away from newcomers until they have gained some ex-
+perience in the system."
