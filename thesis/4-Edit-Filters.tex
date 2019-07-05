@@ -326,7 +326,7 @@ In the present chapter, we aim to understand how edit filters work, who implemen
 \end{comment}
 The purpose of the present section is to review what we have learnt so far and summarise how edit filters fit in Wikipedia's quality control ecosystem.
 
-As the timeline~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off in 2006 (compare figures~\ref{fig:editors-development},~\ref{fig:edits-development}).
+As timeline~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off in 2006 (compare figures~\ref{fig:editors-development},~\ref{fig:edits-development}).
 The surge in editors numbers and contributions implied a rapidly increasing workload for community members dedicated to quality assurance
 which could not be feasibly handled manually anymore and thus the community turned to technical solutions.
 As shown elsewhere~\cite{HalGeiMorRied2013}, this shift had a lot of repercussions:
@@ -370,55 +370,21 @@ one of the most severe of them being that newcomers' edits were reverted stricte
 % Comparison of the mechanisms: each of them has following salient characteristics
 \subsection{Wikipedia's algorithmic quality control mechanisms in comparison}
 
-As we can read from the timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
+As we can read from timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
+Thus, the question arises why were they implemented when already other mechanisms(syn) existed?
 Here, we review the salient features of the different quality control mechanisms and the motivation for the filters' introduction.
 A concise summary of this discussion is offered in table~\ref{table:mechanisms-comparison}.
 
-As we can read from the timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
-Here, we review the salient features of the different quality control mechanisms and the motivation for the filters' introduction.
-A concise summary of this discussion is offered in table~\ref{table:mechanisms-comparison}.
+The big adavantages of the edit filter extension are that it was going to be open source, the code well tested, with framework for testing single filters before enabling them and edit filter managers being able to collaboratively develop and improve filters, were the arguments of the plugin's developers.
+They viewed this as an improvement compared(syn) to (admin) bots which would be able to cover similar cases but whose code was mostly private, not tested at all with a single developer/operator taking care of them who was often not particularly responsive in emergency cases.
+% So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
+%TODO compare with the other mechanisms for completeness.
 
-So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
-Also, the extension allows multiple users to work on the same filters and there are tests. Unlike bots, which are per definition operated by one user.
-
-Further advantages of the extension highlighted by its proponents/supporters were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
-Besides, they were reasoning, it was to be part of the core software, so there was no need for renting extra server resources where an external script/bot can run, thus ensuring immediate response and less extra work.
-The advantages over anti-vandal bots and other tools were seen to be ``speed and tidiness''.
-
-So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
-Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
-
-% Discussion of the table (fließtext)
-\begin{comment}
-From the Edit filter talk archives:
-"Firstly, I must note that the code of the extension itself will be public in the MediaWiki subversion repository, that the filters will be editable by anyone with the appropriate privileges, and that it would be very simple to disable any user's use of the filtering system, any particular filter, or, indeed, the entire extension. This is quite different from, say, an anti-vandalism adminbot. The code is private, and, in any case, too ugly for anybody to know how to use it properly. The code can only be stopped in real terms if somebody blocks and desysops the bot, and the bot is controlled by a private individual, with no testing.
-
-In this case, there are multiple hard-coded safeguards on the false positive rate of individual filters, and the extension itself will be well-tested. In addition, I suggest that a strong policy would be developed on what the filters can be used to do, and on what conditions they can match on: I've developed a little system which tests a filter on the last several thousand edits before allowing it to be applied globally."
-
-    So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
-    Also, the extension allows multiple users to work on the same filters and there are tests. Unlike bots, which are per definition operated by one user.
-
-    "We're not targetting the 'idiots and bored kids' demographic, we're targetting the 'persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic. — Werdna • talk 07:28, 9 July 2008 (UTC)"
-
-"It is designed to target repeated behaviour, which is unequivocally vandalism. For instance, making huge numbers of page moves right after your tenth edit. For instance, moving pages to titles with 'HAGGER?' in them. All of these things are currently blocked by sekrit adminbots. This extension promises to block these things in the software, allowing us zero latency in responding, and allowing us to apply special restrictions, such as revoking a users' autoconfirmed status for a period of time."
-
-Also from the archives, ausformuliert, use towards describing the table:
-Further advantages of the extension highlighted by its proponents/supporters were that it had no latency, reacting immediately when an offending edit is happening and thus not allowing abusive content to be public at all.
-Besides, they were reasoning, it was to be part of the core software, so there was no need for renting extra server resources where an external script/bot can run, thus ensuring immediate response and less extra work.
-The advantages over anti-vandal bots and other tools were seen to be ``speed and tidiness''.
-
-\end{comment}
-\begin{comment}
-\url{http://www.aaronsw.com/weblog/whorunswikipedia}
-"But what’s less well-known is that it’s also the site that anyone can run. The vandals aren’t stopped because someone is in charge of stopping them; it was simply something people started doing. And it’s not just vandalism: a “welcoming committee” says hi to every new user, a “cleanup taskforce” goes around doing factchecking. The site’s rules are made by rough consensus. Even the servers are largely run this way — a group of volunteer sysadmins hang out on IRC, keeping an eye on things. Until quite recently, the Foundation that supposedly runs Wikipedia had no actual employees.
-This is so unusual, we don’t even have a word for it. It’s tempting to say “democracy”, but that’s woefully inadequate. Wikipedia doesn’t hold a vote and elect someone to be in charge of vandal-fighting. Indeed, “Wikipedia” doesn’t do anything at all. Someone simply sees that there are vandals to be fought and steps up to do the job."
-//yeah, I'd call it "do-ocracy"
-
-Reflections on the archive discussion
-So, to summarise once again. Problem is blatant vandalism, which apparently doesn't get reverted fast enough.
-Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
-
-\end{comment}
+However, the main argument for introducing the extension remain the usecases it was supposed to take care of: the obvious persistent vandalism (often automated itself) which was easy to recognise but more difficult to clean up.
+Filters were going to do the job more neatly than bots by reacting faster, since the extension was part of the core software %TODO reformulate, sounds semantically weird
+not allowing abusive content to become public at all.
+%Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
+By being able to disallow such malicious edits from the beginning the extension was to reduce the workload of other mechanisms and free up resources for vandal fighters using semi-automated tools or monitoring pages manually to work on less obvious cases that require human judgement.
 
 \begin{landscape}
     \begin{longtable}{ | p{3cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | }
