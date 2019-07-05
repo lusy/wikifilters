@@ -378,7 +378,6 @@ A concise summary of this discussion is offered in table~\ref{table:mechanisms-c
 
 The big adavantages of the edit filter extension are that it was going to be open source, the code well tested, with framework for testing single filters before enabling them and edit filter managers being able to collaboratively develop and improve filters, were the arguments of the plugin's developers.
 They viewed this as an improvement compared to (admin) bots which would be able to cover similar cases but whose code was mostly private, not tested at all, and with a single developer/operator taking care of them who was often not particularly responsive in emergency cases.
-% So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
 (The most popular semi-automated anti-vandalism tools are also open source, their focus however lies somewhat differently, that is why probably they are not mentioned at all in this discussion.
 Transparency wise, one can criticise that the heuristics they use to compile the queues of potential malicious edits in need of attention are oftentimes obfuscated by the user interface and so the editors using them are not aware why exactly these and not other edits are displayed to them.
 The heurisics to use are configurable to an extent, however, one needs to be aware of this option. %TODO maybe move to pitfalls/concerns discussion
@@ -389,7 +388,27 @@ Filters were going to do the job more neatly than bots by reacting faster, since
 not allowing abusive content to become public at all.
 %Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
 By being able to disallow such malicious edits from the beginning, the extension was to reduce the workload of other mechanisms and free up resources for vandal fighters using semi-automated tools or monitoring pages manually to work on less obvious cases that required human judgement.
-%TODO comment on hurdles to participate and concerns
+
+%TODO clean up these paragraphs
+From all the mechanisms, it is probably the hardest to become engaged with edit filters.
+As signaled in section~\ref{section:who-can-edit}, the permissions are only granted to very carefully selected editors who have long history of participation on Wikipedia and mostly also various other special permissions.
+The numbers also demonstrate that this is the most exclusive group:
+as mentioned in section~\ref{section:who-can-edit}, there are currently 154 edit filter managers on EN Wikipedia,
+compared to at least 232 bot operators\footnote{\url{https://en.wikipedia.org/w/index.php?title=Category:Wikipedia_bot_operators&oldid=833970789}} (not all bot operators are listed in the category\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:FAQ/Categorization&oldid=887018121#Why_might_a_category_list_not_be_up_to_date?}})
+and 6130 users who have the \emph{rollback} permission\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Rollback&oldid=901761637}}.
+As to the difficulty/compteneces needed, it is probably easiest to learn to use semi-automated tools where one ``only'' has to learn the user interface of the software.
+Bots arguably require most background knowledge since on has to not only be familiar with a programming langauage but also learn to interact with Wikipedia's API, etc.
+Filters on the other hand, are arguably(syn) easier to use: here, ``only'' understanding of regular expressions is required.
+
+Critical voices express different concerns about the individual mechanisms:
+%Different pitfalls and concerns are express
+
+\begin{comment}
+    \hline
+        \multirow{2}{*}{Concerns} & censorship infrastructure & ``botophobia'' & gamification & general ML concerns: hard to understand \\
+                                  & powerful, can in theory block editors based on (hidden) filters & & & \\
+\end{comment}
+
 
 \begin{landscape}
     \begin{longtable}{ | p{3cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | }
@@ -398,7 +417,7 @@ By being able to disallow such malicious edits from the beginning, the extension
     \hline
     \multirow{7}{*}{Properties} &  rule based (REGEX) & rule/ML based & rule/ML based & ML framework \\
                                &  part of the "software" (MediaWiki plugin)  &  run on user's infrastructure ("bespoke code") & extra infrastructure & not used directly, can be incorporated in other tools \\
-                               & extension is open source & no requirement for code to be public & most popular are open source & open source \\
+                               & extension is open source & no requirement for code to be public & most popular are open source (but it's not a hard requirement) & open source \\
                                & public filters directly visible for anyone interested & & heuristics obfuscated by the interface & \\
                                & trigger \emph{before} an edit is published & trigger after an edit is published & trigger after an edit is published & \\
                                & zero latency, trigger immediately & latency varies & generally higher latency than bots & \\
@@ -410,8 +429,8 @@ By being able to disallow such malicious edits from the beginning, the extension
         \multirow{2}{*}{Hurdles to participate} & gain community trust to become an edit filter manager & get approval from the BAG & get a \emph{rollback} permission& \\
                                             & understand REGEXes & programming knowledge, understand APIs, ... & get familiar with the tool & understand ML \\
     \hline
-        \multirow{2}{*}{Concerns} & censorship infrastructure & ``botophobia'' & gamification & general ML concerns: hard to understand \\
-                                  & powerful, can in theory block editors based on (hidden) filters & & & \\
+        \multirow{2}{*}{Concerns} & automated agents blocking/desysoping human users & ``botophobia'' & gamification & general ML concerns: hard to understand \\
+                                  & hidden filters lack transparency and accountability & & & \\
     \hline
         Areas of application & persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic (obvious vandalism which takes time to clean up) & mostly obvious vandalism & less obvious cases that require human judgement & \\
     \hline
