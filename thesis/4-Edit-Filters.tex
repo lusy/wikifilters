@@ -321,17 +321,18 @@ Edit filter managers are encouraged to actively report problems with their accou
 \section{Edit filters' role in the quality control frame}
 
 \begin{comment}
+%TODO revise question with updated research questions from meeting notes 04.07.2019
 From l.12
 In the present chapter, we aim to understand how edit filters work, who implements and runs them and above all, how and why they were introduced in the first place and what the qualitative difference is between them and other algorithmic quality control mechanisms.
 \end{comment}
-The purpose of the present section is to review what we have learnt so far and summarise how edit filters fit in Wikipedia's quality control ecosystem.
+The purpose of the present section is to review what we have learnt so far about edit filters and summarise how they fit in Wikipedia's quality control ecosystem.
 
-As timeline~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off in 2006 (compare figures~\ref{fig:editors-development},~\ref{fig:edits-development}).
+As timeline~\ref{fig:timeline} shows, the time span in which algorithmic quality control mechanisms (first vandal fighting bots and semi-automated tools, and later filters) were introduced fits logically the period after the exponential growth of Wikipedia took off in 2006 (compare figures~\ref{fig:editors-development},~\ref{fig:edits-development}).
 The surge in editors numbers and contributions implied a rapidly increasing workload for community members dedicated to quality assurance
 which could not be feasibly handled manually anymore and thus the community turned to technical solutions.
 As shown elsewhere~\cite{HalGeiMorRied2013}, this shift had a lot of repercussions:
 one of the most severe of them being that newcomers' edits were reverted stricter than before (accepted or rejected on a yes-no basis with the help of automated tools, instead of manually seeking to improve the contributions and ``massage'' them into an acceptable form), which in consequence drove a lot of them away.
-%TODO sounds ending abruptly
+%TODO sounds ending abruptly; maybe a kind of a recap with historical background, compare introduction
 
 \begin{table}
     \begin{tabular}{ r | p{.8\textwidth}}
@@ -370,21 +371,25 @@ one of the most severe of them being that newcomers' edits were reverted stricte
 % Comparison of the mechanisms: each of them has following salient characteristics
 \subsection{Wikipedia's algorithmic quality control mechanisms in comparison}
 
-As we can read from timeline~\ref{fig:timeline}, filters were introduced when mechanisms such as bots and semi-automated tools were already in place.
-Thus, the question arises why were they implemented when already other mechanisms(syn) existed?
+As we can read from timeline~\ref{fig:timeline}, filters were introduced at a moment when bots and semi-automated tools were already in place.
+Thus, the question arises: Why were they implemented when already these other mechanisms existed?
 Here, we review the salient features of the different quality control mechanisms and the motivation for the filters' introduction.
 A concise summary of this discussion is offered in table~\ref{table:mechanisms-comparison}.
 
 The big adavantages of the edit filter extension are that it was going to be open source, the code well tested, with framework for testing single filters before enabling them and edit filter managers being able to collaboratively develop and improve filters, were the arguments of the plugin's developers.
-They viewed this as an improvement compared(syn) to (admin) bots which would be able to cover similar cases but whose code was mostly private, not tested at all with a single developer/operator taking care of them who was often not particularly responsive in emergency cases.
+They viewed this as an improvement compared to (admin) bots which would be able to cover similar cases but whose code was mostly private, not tested at all, and with a single developer/operator taking care of them who was often not particularly responsive in emergency cases.
 % So, this claims that filters are open source and will be a collaborative effort, unlike bots, for which there is no formal requirement that the code is public (although in recent years, it kinda is, compare BAG and approval requirements).
-%TODO compare with the other mechanisms for completeness.
+(The most popular semi-automated anti-vandalism tools are also open source, their focus however lies somewhat differently, that is why probably they are not mentioned at all in this discussion.
+Transparency wise, one can criticise that the heuristics they use to compile the queues of potential malicious edits in need of attention are oftentimes obfuscated by the user interface and so the editors using them are not aware why exactly these and not other edits are displayed to them.
+The heurisics to use are configurable to an extent, however, one needs to be aware of this option. %TODO maybe move to pitfalls/concerns discussion
+ORES is open source as well, it is kind of a meta tool though and was besides introduced some 7 years after the edit filters, so obviously people were not discussing it at the time.)
 
 However, the main argument for introducing the extension remain the usecases it was supposed to take care of: the obvious persistent vandalism (often automated itself) which was easy to recognise but more difficult to clean up.
-Filters were going to do the job more neatly than bots by reacting faster, since the extension was part of the core software %TODO reformulate, sounds semantically weird
+Filters were going to do the job more neatly than bots by reacting faster, since the extension was part of the core software, %TODO reformulate, sounds semantically weird
 not allowing abusive content to become public at all.
 %Human editors are not very fast in general and how fast it is solving this with a bot depends on how often the bot runs and what's its underlying technical infrastructure (e.g. I run it on my machine in the basement which is probably less robust than a software extension that runs on the official Wikipedia servers).
-By being able to disallow such malicious edits from the beginning the extension was to reduce the workload of other mechanisms and free up resources for vandal fighters using semi-automated tools or monitoring pages manually to work on less obvious cases that require human judgement.
+By being able to disallow such malicious edits from the beginning, the extension was to reduce the workload of other mechanisms and free up resources for vandal fighters using semi-automated tools or monitoring pages manually to work on less obvious cases that required human judgement.
+%TODO comment on hurdles to participate and concerns
 
 \begin{landscape}
     \begin{longtable}{ | p{3cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | p{4.5cm} | }
@@ -408,7 +413,7 @@ By being able to disallow such malicious edits from the beginning the extension 
         \multirow{2}{*}{Concerns} & censorship infrastructure & ``botophobia'' & gamification & general ML concerns: hard to understand \\
                                   & powerful, can in theory block editors based on (hidden) filters & & & \\
     \hline
-        Areas of application & persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic (obvious vandalism which takes time to clean up) & & less obvious cases that require human judgement & \\
+        Areas of application & persistent vandal with a known modus operandi and a history of circumventing prevention methods' demographic (obvious vandalism which takes time to clean up) & mostly obvious vandalism & less obvious cases that require human judgement & \\
     \hline
     \caption{Wikipedia's algorithmic quality control mechanisms in comparison}~\label{table:mechanisms-comparison}
 \end{longtable}
@@ -468,37 +473,15 @@ Application areas    |
 \end{comment}
 
 % When is which mechanism used
-\subsection{Application areas of the individual mechanisms}
-%\subsection{Alternatives to Edit Filters}
+%\subsection{Application areas of the individual mechanisms}
+\subsection{Alternatives to Edit Filters}
 %TODO is this the most suitable place for this? If yes, write a better preamble
 
 Since edit filters run against every edit saved on Wikipedia, it is generally adviced against rarely tripped filters and a number of alternatives is offered to edit filter managers and editors proposing new filters.
-For example, there is the page protection mechanism that addresses problems on a single page.
-suitable for handling a higher number of incidents concerning single page.
+For example, there is the page protection mechanism suitable for handling a higher number of incidents concerning single page.
 Also, title and spam blacklists exist and these might be the way to handle disruptive page titles or link spam~\cite{Wikipedia:EditFilter}.
-Moreover, it is recommended to run in-depth checks (for single articles) separately, e.g. by using bots~\cite{Wikipedia:EditFilterRequested}.
-
-%********************
-% Filters vs bots
-% Investigation of edit filter managers who are also bot operators: what do they implement when?
-\begin{comment}
-Question:
-Oftentimes edit filter managers are also bot operators; how would they decide when to implement a filter and when a bot?
-%TODO: ask people! (on IRC?)
-I've compiled a list of edit filter managers who are simultaneously also bot operators;
-I've further assembled the bots they run and made notes on the bots that seem to be relevant to vandalism prevention/quality assurance
-I'm currently trying to determine from document traces what filter contributions the corresponding edit filter managers had and whether they are working on filters similar to the bots they operate.
-Insight is currently minimal, since abuse\_filter\_history table is not available and we can only determine what filters an edit filter manager has worked on from limited traces such as: last modifier of the filter from abuse\_filter table; editors who signed their comments from abuse\_filter table; probably some noticeboards or talk page archives, but I haven't looked into these so far.
-\end{comment}
-%**********************
-So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-with-filters.JPG}
-  \caption{Edit filters' role in the quality control frame}~\label{fig:funnel-with-filters}
-\end{figure}
-%*********************
+(It is worth to note at this place, that both blacklists are also rule-based.)
+Moreover, it is recommended to run in-depth checks (e.g. for single articles) separately, for example by using bots~\cite{Wikipedia:EditFilterRequested}.
 
 % Collaboration of the mechanisms
 \subsection{Collaboration of the mechanisms}
@@ -510,7 +493,7 @@ It is however worth mentioning that they not only operate alongside each other b
 
 Such collaborations are studied for instance by Geiger and Ribes~\cite{GeiRib2010} who go as far as describing them as ``distributed cognition''.
 They follow a particular series of abuse throughout Wikipedia, along the traces the disrupting editor and the quality control mechanisms deployed against their edits left.
-The researchers demonstrate how a bot (ClueBot), and several editors using the semi-automated tools Huggle and Twinkle all collaborate up until the malicious editor was banned by an administrator.
+The researchers demonstrate how a bot (ClueBot), and several editors using the semi-automated tools Huggle and Twinkle all collaborated up until the malicious editor was banned by an administrator.
 
 During the present study, I have also observed various cases of edit filters and bots mutually facilitating each other's work.
 %TODO check whether there are other types of cooperations at all: what's the deal with Twinkle? and update here!
@@ -545,3 +528,10 @@ Apparently, Twinkle at least has the possibility of using heuristics from the ab
 In short, in this chapter we found/worked out following salient characteristics of edit filters: ....
 
 
+So, as shown in figure~\ref{fig:funnel-with-filters}, edit filters are crucial since they get active before any of the other mechanisms.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-with-filters.JPG}
+  \caption{Edit filters' role in the quality control frame}~\label{fig:funnel-with-filters}
+\end{figure}
