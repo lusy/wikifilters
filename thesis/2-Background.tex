@@ -6,14 +6,16 @@
 - code is law
 \end{comment}
 
-In the present chapter we study scientific literature on quality control mechanisms in Wikipedia in order to better understand the role of edit filters in this ecosystem.
+In the present chapter we study scientific literature on Wikipedia's quality control mechanisms in order to better understand the role of edit filters in this ecosystem.
 There are works on vandalism detection in general/detection of unencyclopedic content~\cite{PotSteGer2008}, %TODO is this significant? are there really that many "in general"?
 as well as several articles dedicated to bots and the role they play in mainataining quality on Wikipedia~\cite{GeiHal2013}, \cite{Geiger2014}, \cite{GeiHal2017}, \cite{GeiRib2010}, \cite{HalRied2012}, \cite{Livingstone2016}, \cite{MueDoHer2013}, \cite{MuellerBirn2014}...,
-a couple which discuss combating vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013} ...
+a couple which discuss fighting vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013} ...
 and also some accounts on the emerging machine learning service ORES~\cite{HalTar2015}, \cite{HalGeiMorSarWig2018}.
 Time and again, the literature refers also to more ``manual'' forms of quality control by editors using watchlists to keep an eye on articles they care about or even accidentially discovering edits made in bad faith~\cite{Livingstone2016}, \cite{AstHal2018}.
 There is one mechanism though that is very ostentatiously missing from all these reports: edit filters.
+%TODO check literature list for any more relevant sources.
 
+%TODO find where in text to reference the graphic directly
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-no-filters.JPG}
@@ -27,95 +29,38 @@ This has gradually changed since around 2009 when the first papers specifically 
 In 2010, Geiger and Ribes insistently highlighted that the scientific community could no longer ingore(syn) these mechanisms as insignificant(syn) or noise in the data~\cite{GeiRib2010}.
 For one, their (the mechanisms') relative usage has continued to increase since they were first introduced, and in an observed two-months period in 2009 bots made 16.33\% of all edits~\cite{Geiger2009}.
 
-Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012} but entry barriers for new users were gradually set higher, since they not only had to learn to use/interact with a myriad of technical tools/.. (learn wikisyntax, ..) but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
+Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012} but entry barriers for new users were gradually set higher, since they not only(syn!) had to learn to use/interact with a myriad of technical tools/.. (learn wikisyntax, ..) but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
 Ford and Geiger even cite a case where an editor was not sure whether a person deleted their articles or a bot~\cite{ForGei2012}.
 
-What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in matter of scale (using bots/tools is faster, hence more reverts are possible) but in matter of substance: how everything interacts with each other~\cite{GeiRib2010}.
+What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in matter of scale (using bots/tools is faster, hence more reverts are possible) but in matter of substance: the very way everything interacts with each other~\cite{GeiRib2010}.
 On the grounds of quality control specifically, the introduction of tools (and bots) was fairly revolutionary:
 they enabled efficient patrolling of articles by users with little to no knowledge about the particular topic.
 Thanks to Wikipedia's particular software architecture, this is possible even in the most ``manual'' quality control work (e.g. using watchlists to patrol articles): representing information changes via diffs allows editors to quickly spot content that deviates from its immediate context~\cite{GeiRib2010}.
 
-\begin{comment}
-%Why is it important we study these mechanisms?
-- their relative usage increases/has increased since they were first introduced
-    \cite{GeiRib2010}
-    "at present, bots make 16.33\% of all edits."
-    %TODO more recent data? the last month argument via recentchanges (vgl \cite{Geiger2017}) doesn't hold here; couldn't find anything useful unfortunately :(
-- the whole ecosystem is not transparent, especially for new users (see~\cite{ForGei2012}: "As it is, Kipsizoo is not even
-sure whether a real person who deleted the articles or a bot."
-"Keeping traces obscure help the powerful to remain in power"~\cite{ForGei2012}
-- higher entry barriers: new users have to orientate themselves in the picture and learn to use the software (decentralised mode of governance, often "impenetrable for new editors", vgl~\cite{ForGei2012})
-
-!! tools not only speed up the process but:
-    "These tools greatly lower certain barriers to participation and render editing
-    activity into work that can be performed by "average
-    volunteers" who may have little to no knowledge of the
-    content of the article at hand"
-
-%Numbers
-\cite{GeiRib2010}
-Check Figure 1: Edits to AIV by tool (in the meantime 10 years old. is there newer data on the topic??)
-not really, see:
-\cite{Geiger2017}
-"In the English-lan-
-guage Wikipedia, 22 of the 25 most active editors (by
-number of edits) are bot accounts, and July 2017, they
-made about 20\% of all edits to encyclopedia articles."
-Geiger's evidence:
-https://quarry.wmflabs.org/query/20703
-Percent of bot edits in previous month (enwiki, all pages)
-\begin{verbatim}
-is_bot	edits	Percentage of all edits
-0	    7619466	79.4974
-1	    1965083	20.5026
-\end{verbatim}
-
-https://quarry.wmflabs.org/query/20704
-Percent of bot edits in previous month (enwiki, articles only)
-\begin{verbatim}
-is_bot	edits	Percentage of all edits
-0	    4273810	80.2025
-1	    1054966	19.7975
-\end{verbatim}
-
-However, a month is a relatively small period and you can't make an argument about general trends based on it.
-For instance, these same quarries ran on April 12, 2019 render following results:
-https://quarry.wmflabs.org/query/35104
-Percent of bot edits in previous month (enwiki, all pages)
-\begin{verbatim}
-is_bot	edits	Percentage of all edits
-0	    6710916	89.7318
-1	    767948	10.2682
-\end{verbatim}
-
-https://quarry.wmflabs.org/query/35105
-Percent of bot edits in previous month (enwiki, articles only)
-\begin{verbatim}
-is_bot	edits	Percentage of all edits
-0	    3426624	92.1408
-1	    292274	7.8592
-\end{verbatim}
-\end{comment}
+In the following sections, we discuss the state of scientific knowledge (syn) on the individual mechanisms.
 
 
 \section{Bots}
+\label{section:bots}
 
-%todo also mention bot papers that discuss more general aspects of bots?
-According to literature, bots constitute the first line of defence against malicious edits~\cite{GeiHal2013}. %TODO but that's actually not true! edit filters are triggered first. Comment on this!
-They are also undoubtedly the vandal fighting mechanism studied most in depth by the scientific community. %TODO replace "vandal fighting" with "quality control"?
+According to literature, bots constitute the first line of defence against malicious edits~\cite{GeiHal2013}. %TODO but that's actually not true! edit filters are triggered first. Comment on this! -- tried to close the circle in conclusion of chapter 4
+They are also undoubtedly the quality control mechanism studied most in depth by the scientific community.
 
 Geiger and Ribes~\cite{GeiRib2010} define bots as
 ``fully-automated software
 agents that perform algorithmically-defined tasks involved
 with editing, maintenance, and administration in Wikipedia.''
 
-%todo summarise aspects of bot papers:
-trace enthnography and banning of vandals~\cite{GeiRib2010}
-indepth analysis of ClueBot NG, and its place within vandal fighting infrastructure~\cite{GeiHal2013}
-historical review of bots' and semi-automated tools' involvement in vandal fighting\cite{HalRied2012}
-... (smth else??)
+%TODO revise
+Different aspects of bots and their involvement in quality control(syn!) have been investigated:
+In the paper referenced above, Geiger and Ribes employ their method of trace ethnography (more on it in chapter~\ref{chap:methods}) to follow a disrupting editor around Wikipedia and comprehend the measures taken/applied in collaboration by bots (ClueBot and HBC AIV helperbot7) as well as humans using semi-automated tools (Huggle and Twinkle) up until they achieved that the malicious editor in question was banned~\cite{GeiRib2010}.
+Halfaker and Riedl offer a historical review of bots and semi-automated tools and their involvement in vandal fighting~\cite{HalRied2012} assembling a comprehensive list of tools and commenting/touching on/discussing/studying their work principle (syn!) (rule vs machine learning based).
+They also develop a bot taxonomy we will come back to in chapter~\ref{chap:overview-en-wiki}. %TODO quote bot taxonomy here?
+In~\cite{GeiHal2013}, Geiger and Halfaker conduct an indepth analysis of ClueBot NG, ClueBot's machine learning based successor, and its place within Wikipedia's vandal fighting infrastructure~\cite{GeiHal2013} concluding that quality control on Wikipedia is a robust process and most malicious edits eventually get reverted even if some of the actors (syn!) are inactive, although at a different speed.
+They discuss the mean times to revert of different mechanisms, their observations co-inciding (check spelling) with diagram~\ref{},
+and also comment on the (un)realiability of external infrastructure bots rely upon (run on private computers, which causes downtimes).
 
-Further bots involved in vandal fighting discussed by the literature include (besides ClueBot NG~\cite{GeiHal2013}, \cite{HalRied2012},)
+Further bots involved in vandal fighting discussed by the literature include (besides ClueBot~\cite{GeiRib2010} and ClueBot NG~\cite{GeiHal2013}, \cite{HalRied2012},):
 XLinkBot~\cite{HalRied2012},
 HBC AIV Helperbots~\cite{HalRied2012}, \cite{GeiRib2010},
 MartinBot, AntiVandalBot~\cite{HalRied2012},

@@ -1642,3 +1642,50 @@ TorNodeBot https://en.wikipedia.org/wiki/User:TorNodeBot
         The node is not blocked already by the TorBlock extension
 
 When all three of these conditions are met, a temporary block is placed on the node.
+
+============================================================================
+Numbers: bot activity
+
+%Numbers
+\cite{GeiRib2010}
+Check Figure 1: Edits to AIV by tool (in the meantime 10 years old. is there newer data on the topic??)
+not really, see:
+\cite{Geiger2017}
+"In the English-lan-
+guage Wikipedia, 22 of the 25 most active editors (by
+number of edits) are bot accounts, and July 2017, they
+made about 20\% of all edits to encyclopedia articles."
+Geiger's evidence:
+https://quarry.wmflabs.org/query/20703
+Percent of bot edits in previous month (enwiki, all pages)
+\begin{verbatim}
+is_bot	edits	Percentage of all edits
+0	    7619466	79.4974
+1	    1965083	20.5026
+\end{verbatim}
+
+https://quarry.wmflabs.org/query/20704
+Percent of bot edits in previous month (enwiki, articles only)
+\begin{verbatim}
+is_bot	edits	Percentage of all edits
+0	    4273810	80.2025
+1	    1054966	19.7975
+\end{verbatim}
+
+However, a month is a relatively small period and you can't make an argument about general trends based on it.
+For instance, these same quarries ran on April 12, 2019 render following results:
+https://quarry.wmflabs.org/query/35104
+Percent of bot edits in previous month (enwiki, all pages)
+\begin{verbatim}
+is_bot	edits	Percentage of all edits
+0	    6710916	89.7318
+1	    767948	10.2682
+\end{verbatim}
+
+https://quarry.wmflabs.org/query/35105
+Percent of bot edits in previous month (enwiki, articles only)
+\begin{verbatim}
+is_bot	edits	Percentage of all edits
+0	    3426624	92.1408
+1	    292274	7.8592
+\end{verbatim}
