@@ -12,6 +12,19 @@ Difference bot/filter: filters are part of the "platform". (vgl also ~\cite{Geig
 They are a MediaWiki extension, which means they are run on official Wikimedia infrastructure. (vgl \cite{Geiger2014} and "bespoke code")
 This makes them more robust and bestow them another kind of status.
 Bots on the other hand are what Stuart Geiger calls "bespoke code": they are auxiliary programms developed, mantained and run by single community members, typically (at least historically?) not on Wikimedia's infrastructure, but instead on private computers or third party servers.
+Is this difference really significant nowadays though? A lot of bots are run on the toolserver which makes the "not server-side" distinction really difficult.
+The toolserver is yet another infrastructure run and maintained by the Wikimedia foundation.
+So arguments such as reduced reliability through running on a private machine in a person's living room become kind of obsolete.
+\begin{comment}
+\cite{Geiger2014}
+"What if, from the beginning, I had decided to run my bot on the toolserver, a
+shared server funded and maintained by a group of German Wikipedians for all kinds of pur-
+poses, including bots? If so, the bot may have run the same code in the same way, producing
+the same effects in Wikipedia, but it would have been a different thing entirely."
+"when life got in the way, it was something I literally pulled the plug on
+without so much as a second thought."
+\end{comment}
+
 A key difference is also that while bots check already published edits which they eventually may decide to revert, filters are triggered before an edit ever published.
 
 * another difference bots/filters, it's easier to ddos the bot infrastructure, than the filters: buy a cluster and edit till the revert table overflows
