@@ -93,30 +93,36 @@ This led to the social understanding that ``bots ought to be better behaved than
 
 \section{Semi-automated tools}
 
-Semi-automated tools are similar to bots in the sense that they provide automated detection of potential low-quality edits.
+Semi-automated quality control tools are similar to bots in the sense that they provide automated detection of potential low-quality edits.
 The difference however is that with semi-automated tools humans do the final assessment and decide what happens with the edits in question.
 
-Semi-automated tools used for vandalism fighting on Wikipedia are discussed by:
-more popular/widely used:
-STiki~\cite{WestKanLee2010}
-\url{http://en.wikipedia.org/wiki/Wikipedia:STiki}
-Huggle~\cite{GeiHal2013},~\cite{HalRied2012},\cite{GeiRib2010}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Huggle}
-Twinkle
-\url{https://en.wikipedia.org/wiki/Wikipedia:Twinkle}
-AWB
-\url{https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser}
-less popular/older, mentioned in older accounts or not discussed at all (there are also more tools, see for example \url{https://en.wikipedia.org/wiki/Category:Wikipedia_counter-vandalism_tools})
-VandalProof~\cite{HalRied2012}
-ARV
-AIV
-Lupin's Anti-vandal tool~\cite{GeiRib2010}
-\url{https://en.wikipedia.org/wiki/User:Lupin/Anti-vandal_tool}
-"Please be aware that the original author of AVT (Lupin) is no longer active on Wikipedia. The script is very old and might stop working at any time."
-"By using the RC feed to check a wiki-page's differences against a list of common vandal terms, this tool will detect many of the commonly known acts of online vandalism. "
+There is a scientific discussion of several tools:
+Huggle\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Huggle}}, which is probably the most popular and widely used one is studied in~\cite{GeiHal2013},~\cite{HalRied2012}, and \cite{GeiRib2010}.
+Another very popular tool, Twinkle\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Twinkle}}, is mentioned by ~\cite{GeiHal2013} (it's really just a mention),~\cite{GeiRib2010}..
+STiki\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:STiki}} is presented (syn!) by its authors in~\cite{WestKanLee2010}.
+Various older (and partially inactive) tools (syn!) are also mentioned (syn!) by the literature:
+Geiger and Ribes touch on Lupin's Anti-vandal tool\footnote{\url{https://en.wikipedia.org/wiki/User:Lupin/Anti-vandal_tool}}~\cite{GeiRib2010},
+Halfaker and Riedl discuss (syn!) VandalProof~\cite{HalRied2012}.
 
-In general, previous research seems to make a distinction of degree? between ``more'' automated tools such as Huggle and STiki and ``less'' automated ones such as Twikle~\cite{GeiHal2013}.
+Some of these tools are more automated than others: Huggle and STiki for instance are able to revert an edit, issue a warning to the offending editor, and post a report on the AIV dashboard (if the user has already exhausted the warning limit) upon a single click,
+whereas the javascript based browser extension Twinkle adds contextual links to other parts of Wikipedia which facilitates fulfilment of particular tasks (rollback multiple edits, report problematic users to AIV, nominate an article for deletion)~\cite{GeiRib2010}.
+The main feature of Huggle and STiki
+is that they both compile a central queue of potentially harmful edits for all their users to check.
+The difference between both programs are the heuristics they use for their queues:
+By default, Huggle sends edits by users with warnings on their user talk page to the top of the queue, places edits by IP editors higher and ignores edits made by bots and other Huggle users altogether\cite{GeiRib2010},
+while STiki relies on the ``spatio-temporal properties of revision metadata''~\cite{WestKanLee2010} for deciding the likelihood of an edit to be vandalism.
+Huggle's queue can be reconfigured, however, some technical savvy and motivation is needed for this and thus, as~\cite{GeiRib2010} warn, it makes certain paths of action easier to take than others.
 
+Nonetheless, a trait common to all of them is that as a standard, editors need the ``rollback'' permission in order to be able to use the software~\cite{HalRied2012}. %TODO ist that so? I can't find with certainty any info about Twinkle
+
+Some critique or concerns that have been voiced regarding semi-automated anti-vandalism tools compare these to massively multiplayer online role-playing games (MMORPGs)~\cite{HalRied2012}.
+They fear(syn) that some of the users of said tools see themselves as vandal fighters on a mission to slay the greatest number of monsters (vandals) possible and by doing so excell in the ranks
+\footnote{STiki really has a leader board: \url{https://en.wikipedia.org/wiki/Wikipedia:STiki/leaderboard}}.
+This is for one a harmful way to view the project, neglecting the ``assume good faith'' guideline %TODO quote
+and also leads to such users seeking out easy to judge cases from the queues in order to move onto the next entry more swiftly
+leaving more subtle cases (syn!), which really require human judgement, to others.
+
+\begin{comment}
 %Huggle
 Huggle was initially released in 2008~\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Huggle}}.
 In order to use Huggle, editors need the ``rollback'' permission~\cite{HalRied2012}.
@@ -138,34 +144,6 @@ One of the following conditions must be fulfilled for an editor to obtain a perm
 
 According to~\cite{GeiHal2013} Huggle and STiki complement each other in their tasks, with Huggle users making swifter reverts and STiki users taking care of older edits.
 
-\begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:STiki/leaderboard}
-
-"Above all else, it should be emphasized that STiki is not a competition."
-//compare also~\cite{HalRied2012} who warn against Wikipedia becoming gamified with vandals being "monsters"
-
-" STiki users who operate the tool recklessly in the hope of inflating their statistics are not helping themselves or the project "
-
-\url{https://en.wikipedia.org/wiki/Wikipedia:STiki}
-
-"STiki is a tool available to trusted users that is used to detect and revert vandalism, spam, and other types of unconstructive edits made at Wikipedia. "
-
-"STiki chooses edits to show to end users; if a displayed edit is judged to be vandalism, spam, etc., STiki streamlines the reversion and warning process. STiki facilitates collaboration in reverting vandalism; a centrally stored lists of edits to be inspected are served to STiki users to reduce redundant effort."
-
-"STiki may only be used by editors with a Wikipedia account. Additionally, the account must meet some qualifications to reduce the probability of users misidentifying vandalism."
-
-"The account must have any one of: (1) the rollback permission/right, (2) at least 1000 article edits (in the article namespace, not to talk/user pages), or (3) special permission via the talk page. We emphasize that users must take responsibility for their actions with STiki. "
-
-"After login, users primarily interact with the GUI tool by classifying edits into one of four categories:
-vandalism
-good faith revert
-pass
-innocent "
-//interestingly, at the initial tool presentation~\cite{WestKanLee2010}, there was no "good faith" option. It seemed to have been added quite promptly after though, since the screenshot of the tool on the page has the button already and claims to have been made on 28 February 2010
-
-"Uncertainty over malice: It can be tricky to differentiate between vandalism and good-faith edits that are nonetheless unconstructive. "
-\end{comment}
-
 %Twinkle
 Twinkle, a javascript based ``user interface extension that runs inside of a standard web browser''~\cite{GeiRib2010} seems to be less automated than the previous tools~\cite{GeiHal2013}.
 It adds contextual links to other parts of Wikipedia which facilitates fulfilling particular tasks (rollback multiple edits, report problematic users to AIV, nominate an article for deletion) with a single click~\cite{GeiRib2010}.
@@ -179,24 +157,8 @@ Older tools which are not much used anymore include Lupin's anti-vandal tool whi
 ``provides a real-time in-browser feed of edits made matching certain algorithms''~\cite{GeiRib2010}
 and VandalProof which
 ``let[s] trusted editors monitor article edits as fast as they happened in Wikipedia and revert unwanted contributions in one click''~\cite{HalRied2012}.
+\end{comment}
 
-%TODO: Note on collaboration semi-automated tools/edit filters. Maybe not the suitable chapter. // But is there already collaboration or do I think it's hypothetically possible that queues can be tuned according to how often a filter was triggered?
-
-- gamification concerns (is fighting vandalism becoming a game where certain users aim to revert as many edits as possible in order to get a higher score; and as a consequence these same users often times enforce reverts more rigorously than recommended and also pick cases that are easy and fast to arbitrate and do not require much additional research)
-    \cite{HalRied2012}
-    "Some Wikipedians feel that such
-    motivational measures have gone
-    too far in making Wikipedia like a
-    game rather than a serious project.
-    One humorous entry even argues that
-    Wikipedia has become a MMORPG—
-    a massively multiplayer online role-
-    playing game—with “monsters”
-    (vandals) to slay, “experience”
-    (edit or revert count) to earn, and
-    “overlords” (administrators) to submit
-    to (http://en.wikipedia.org/wiki/
-    Wikipedia:MMORPG)."
 
 \section{ORES}
 
@@ -214,10 +176,11 @@ This last aim is crucial, since there is a body of research demonstrating how re
 Present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith.
 The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
 
+%TODO Concerns?
+
 \section{Humans}
 
-Despite steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism~\cite{Geiger2009}
-some of the quality control work is still done ``manually'' by humand editors.
+For completion, it should be noted at this point that despite the steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism~\cite{Geiger2009}, some of the quality control work is still done ``manually'' by human editors.
 These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
 On the other hand, there are also editors who engage with the classical/standard encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the editor which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
 When editors use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question via the so-called watchlists~\cite{AstHal2018}.
