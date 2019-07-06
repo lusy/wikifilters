@@ -189,32 +189,36 @@ This also gives us a hint as to what type of quality control work humans take ov
 
 \section{Conclusion}
 \cite{AstHal2018} have a diagram describing the new edit review pipeline. Filters are absent.
-%TODO move funnel diagram here
-
-\begin{comment}
-\section{Algorithmic Governance}
-
-should be mentioned here;
-it's important for framing along with Lessig's "Code is law".
-
-algorithmic governance?/socio-technical assemblage
-* humans
-* software
-* tech. infrastructure
-
-\cite{GeiHal2017}
-
-Claudia's paper:
-"“In both cases of algorithmic governance
-– software features and bots – making rules part of the infrastructure, to a certain extent, makes
-them harder to change and easier to enforce” (p. 87)"
-
-\section{Vandalism on Wikipedia}
-%TODO put here papers on vandalism
-
-Papers discussing vandalism detection from IR/ML perspective:
-- Martin Potthast, Benno Stein, and Robert Gerling. 2008. Automatic vandalism detection in Wikipedia. In European conference on information retrieval. Springer, 663–668.
-
-\end{comment}
+%TODO move funnel diagram here (descending degree of automacy
 
 So far, on grounds of literature study alone it remains unclear what the role/purpose of edit filters is.
+
+Features of the algorithmic mechanisms summarised in table:
+%TODO reduce table to 1 page! (check which entries actually result from the text
+\begin{landscape}
+    \begin{longtable}{ | p{4cm} | p{5cm} | p{5cm} | p{5cm} | }
+    \hline
+               & Bots & Semi-Automated tools & ORES \\
+    \hline
+    \multirow{7}{*}{Properties} & rule/ML based & rule/ML based & ML framework \\
+                               & run on user's infrastructure ("bespoke code") & extra infrastructure & not used directly, can be incorporated in other tools \\
+                               & no requirement for code to be public & most popular are open source (but it's not a hard requirement) & open source \\
+                               & & heuristics obfuscated by the interface & \\
+                               & trigger after an edit is published & trigger after an edit is published & \\
+                               & latency varies & generally higher latency than bots & \\
+                               & mostly single dev/operator (recently: bot frameworks) & few devs & few devs \\
+    \hline
+    \multirow{2}{*}{People involved} & no special rights needed (except for admin bots) & \emph{rollback} permission needed & mostly Scoring Platform team \\
+                                     & bot gets a ``bot flag'' & & \\
+    \hline
+        \multirow{2}{*}{Hurdles to participate} & get approval from the BAG & get a \emph{rollback} permission& \\
+                                            & programming knowledge, understand APIs, ... & get familiar with the tool & understand ML \\
+    \hline
+        \multirow{2}{*}{Concerns} & ``botophobia'' & gamification & general ML concerns: hard to understand \\
+                                  & & & \\
+    \hline
+        Areas of application & mostly obvious vandalism & less obvious cases that require human judgement & \\
+    \hline
+    \caption{Wikipedia's algorithmic quality control mechanisms in comparison}~\label{table:mechanisms-comparison-literature}
+\end{longtable}
+\end{landscape}
