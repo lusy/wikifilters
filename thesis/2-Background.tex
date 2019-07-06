@@ -57,14 +57,14 @@ In the paper referenced above, Geiger and Ribes employ their method of trace eth
 Halfaker and Riedl offer a historical review of bots and semi-automated tools and their involvement in vandal fighting~\cite{HalRied2012} assembling a comprehensive list of tools and commenting/touching on/discussing/studying their work principle (syn!) (rule vs machine learning based).
 They also develop a bot taxonomy we will come back to in chapter~\ref{chap:overview-en-wiki}. %TODO quote bot taxonomy here?
 In~\cite{GeiHal2013}, Geiger and Halfaker conduct an indepth analysis of ClueBot NG, ClueBot's machine learning based successor, and its place within Wikipedia's vandal fighting infrastructure~\cite{GeiHal2013} concluding that quality control on Wikipedia is a robust process and most malicious edits eventually get reverted even if some of the actors (syn!) are inactive, although at a different speed.
-They discuss the mean times to revert of different mechanisms, their observations co-inciding (check spelling) with diagram~\ref{},
+They discuss the mean times to revert of different mechanisms, their observations co-inciding (check spelling) with diagram~\ref{fig:funnel-no-filters},
 and also comment on the (un)realiability of external infrastructure bots rely upon (run on private computers, which causes downtimes).
 
 Further bots involved in vandal fighting discussed by the literature include (besides ClueBot~\cite{GeiRib2010} and ClueBot NG~\cite{GeiHal2013}, \cite{HalRied2012},):
-XLinkBot~\cite{HalRied2012},
-HBC AIV Helperbots~\cite{HalRied2012}, \cite{GeiRib2010},
-MartinBot, AntiVandalBot~\cite{HalRied2012},
-AWB, DumbBOT, EmausBot~\cite{GeiHal2013}.
+XLinkBot (which reverts edits containing links to domains blacklisted as spam)~\cite{HalRied2012},
+HBC AIV Helperbots (responsible for various maintenance tasks which help to keep entries on the Administrator Intervention against Vandalism (AIV) dashboard up-to-date)~\cite{HalRied2012}, \cite{GeiRib2010},
+MartinBot and AntiVandalBot (one of the first rule-based bots which detected obvious cases of vandalism)~\cite{HalRied2012},
+DumbBOT and EmausBot (which do batch cleanup tasks)~\cite{GeiHal2013}.
 
 Very crucial for the current analysis will also be Livingstone's observation in the preamble to his interview with the first large scale bot operator Ram-man that
 ``In the Wikimedia software, there are tasks that do all sorts of things [...].
@@ -73,6 +73,7 @@ The main difference is where it runs and who runs it''~\cite{Livingstone2016}.
 
 This thought/note is also scrutinised by Geiger~\cite{Geiger2014} who examines in detail what the difference and repercussions are of code that is part of the core software and code that runs alongside it (such as bots). %TODO more detail: so what are they?
 
+\begin{comment}
 - "inofficial", run and maintained by the community
     \cite{GeiRib2010}
     "often-unofficial technologies have fundamentally
@@ -81,65 +82,10 @@ This thought/note is also scrutinised by Geiger~\cite{Geiger2014} who examines i
     "Of note is the fact that these tools are largely
     unofficial and maintained by members of the Wikipedia
     community."
-
-\begin{comment}
-%ClueBot NG
-"ClueBot\_NG uses state-of-the-art machine learning techniques to review all contributions to
-
-ClueBot NG:
-\cite{GeiHal2013}
-"to scan every edit made to Wikipedia in real time"
-"Built on Bayesian neural networks and trained with data
-about what kind of edits Wikipedians regularly revert as
-vandalism"
-articles and to revert vandalism,"~\cite{HalRied2012}
-
-%XLinkBot
-"XLinkBot reverts contributions that create links to
-blacklisted domains as a way of quickly and permanently dealing with spammers."~\cite{HalRied2012}
-
-%HBC AIV Helperbots and MartinBot
-"AIV Helperbot turns a simple page into a dynamic
-priority-based discussion queue to support administrators in their work of identifying and
-blocking vandals"~\cite{HalRied2012}
-
-
-%AntiVandalBot
-~\cite{HalRied2012}
-"The first tools to redefine the
-way Wikipedia dealt with van-
-dalism were AntiVandalBot and
-VandalProof."
-
-"AntiVandalBot used a simple set
-of rules and heuristics to monitor
-changes made to articles, identify the
-most obvious cases of vandalism, and
-automatically revert them"
-
-1st vandalism fighting bot:
-"this bot made it possible, for the first
-time, for the Wikipedia community
-to protect the encyclopedia from
-damage without wasting the time
-and energy of good-faith editors"
-"it
-wasn’t very intelligent and could only
-correct the most egregious instances
-of vandalism."
-
-
-Bots not patrolling constantly but instead doing batch cleanup works~\cite{GeiHal2013}:
-AWB, DumbBOT, EmausBot
-(also from figures: VolkovBot, WikitanvirBot, Xqbot)
-
-\cite{GeiRib2010}
-"“HBC AIV helperbot7” – automatically
-removed the third vandal fighter's now-obsolete report."
-
 \end{comment}
 
 %TODO: gibts es vergleichbare concerns zu den Gamification concerns bei semi-automated tools bei anderen mechanismen?
+% comment on botophobia for bots
 
 \section{Semi-automated tools}
 
