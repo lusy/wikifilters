@@ -200,23 +200,23 @@ and VandalProof which
 
 \section{ORES}
 
-ORES is an API based FLOSS? machine learning service ``designed to improve the way editors maintain the quality of Wikipedia''~\cite{HalTar2015} and increase the transparency of the quality control process.
+ORES is an API based free libre and open source (FLOSS) machine learning service ``designed to improve the way editors maintain the quality of Wikipedia''~\cite{HalTar2015} and increase the transparency of the quality control process.
 It uses learning models to predict a quality score for each article and edit based on edit/article quality assessments manually assigned by Wikipedians.
-Potentially damaging edits are highlighted which allows editors who engage in vandal fighting to examine them in greater detail.
-The service was officially introduced in November 2015 by Aaron Halfaker (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}. %TODO footnote https://wikimediafoundation.org/role/staff-contractors/
-% http://nitens.org/taraborelli/cv
+Potentially damaging edits are highlighted, which allows editors who engage in vandal fighting to examine them in greater detail.
+The service was officially introduced in November 2015 by Aaron Halfaker\footnote{\url{https://wikimediafoundation.org/role/staff-contractors/}} (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli\footnote{\url{http://nitens.org/taraborelli/cv}} (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}.
 Its development is ongoing, coordinated and advanced by Wikimedia's Scoring Platform team.
 Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores or, new models can be trained and made available for everyone to use.
 The Scoring platform team reports that popular vandal fighting tools(syn?) such as Huggle have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
 What is unique about ORES is that all the algorithms, models, training data, and code are public, so everyone (with sufficient knowledge of the matter) can scrutinise them and reconstruct what is going on.
 This is certainly not true for machine learning services applied by commercial companies who have interest in keeping their models secret.
-Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers
-(crucial, there is a body of research demonstrating how the automated quality control mechanisms drive new editors away; present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith).
+Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers.
+This last aim is crucial, since there is a body of research demonstrating how reverts in general~\cite{HalKitRied2011} and reverts by (semi-)automated quality control mechanisms in particular drive new editors away~\cite{HalGeiMorRied2013}.
+Present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith.
 The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
 
 \section{Humans}
 
-Despite steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism %TODO quote!
+Despite steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism~\cite{Geiger2009}
 some of the quality control work is still done ``manually'' by humand editors.
 These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
 On the other hand, there are also editors who engage with the classical/standard encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the editor which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
