@@ -7,37 +7,32 @@
 \end{comment}
 
 In the present chapter we study scientific literature on Wikipedia's quality control mechanisms in order to better understand the role of edit filters in this ecosystem.
-There are works on vandalism detection in general/detection of unencyclopedic content~\cite{PotSteGer2008}, %TODO is this significant? are there really that many "in general"?
-as well as several articles dedicated to bots and the role they play in mainataining quality on Wikipedia~\cite{GeiHal2013}, \cite{Geiger2014}, \cite{GeiHal2017}, \cite{GeiRib2010}, \cite{HalRied2012}, \cite{Livingstone2016}, \cite{MueDoHer2013}, \cite{MuellerBirn2014}...,
-a couple which discuss fighting vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013} ...
-and also some accounts on the emerging machine learning service ORES~\cite{HalTar2015}, \cite{HalGeiMorSarWig2018}.
+There are works on vandalism detection in general~\cite{PotSteGer2008},
+as well as several articles dedicated to bots and the role they play in mainataining quality on Wikipedia:~\cite{GeiHal2013}, \cite{Geiger2014}, \cite{GeiHal2017}, \cite{GeiRib2010}, \cite{HalRied2012}, \cite{Livingstone2016}, \cite{MueDoHer2013}, \cite{MuellerBirn2014}, \cite{Geiger2009},
+a couple which discuss fighting vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki:~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013}, \cite{Geiger2009},
+and also some accounts on the emerging machine learning service ORES:~\cite{HalTar2015}, \cite{HalGeiMorSarWig2018}.
 Time and again, the literature refers also to more ``manual'' forms of quality control by editors using watchlists to keep an eye on articles they care about or even accidentially discovering edits made in bad faith~\cite{Livingstone2016}, \cite{AstHal2018}.
 There is one mechanism though that is very ostentatiously missing from all these reports: edit filters.
-%TODO check literature list for any more relevant sources.
-
-%TODO find where in text to reference the graphic directly
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-no-filters.JPG}
-  \caption{State of the scientific literature: edit filters are missing from the quality control frame}~\label{fig:funnel-no-filters}
-\end{figure}
-%TODO merge with rise and decline graphic from~\cite{HalGeiMorRied2013}
+%TODO: move this observation to conclusion of the chapter?
 
 At first, scientific studies on Wikipedia largely ignored algorithmic quality control mechanisms.
-Their contribution to the encyclopedia and therefore their impact were considered insignificant. %quote?
+The number of their contributions to the encyclopedia was found to be low and therefore their impact was considered insignificant~\cite{KitChiBrySuhMyt2007}.
 This has gradually changed since around 2009 when the first papers specifically dedicated to bots (and later semi-automated tools) were published.
-In 2010, Geiger and Ribes insistently highlighted that the scientific community could no longer ingore(syn) these mechanisms as insignificant(syn) or noise in the data~\cite{GeiRib2010}.
-For one, their (the mechanisms') relative usage has continued to increase since they were first introduced, and in an observed two-months period in 2009 bots made 16.33\% of all edits~\cite{Geiger2009}.
+In 2010, Geiger and Ribes insistently highlighted that the scientific community could no longer neglect these mechanisms as unimportant or noise in the data~\cite{GeiRib2010}.
+For one, the mechanisms' relative usage has continued to increase since they were first introduced, and in an observed two-months period in 2009 bots made 16.33\% of all edits~\cite{Geiger2009}.
 
-Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012} but entry barriers for new users were gradually set higher, since they not only(syn!) had to learn to use/interact with a myriad of technical tools/.. (learn wikisyntax, ..) but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
+Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012},
+but entry barriers for new users were gradually set higher~\cite{HalGeiMorRied2013}:
+They had to learn to interact with a myriad of technical tools, learn wikisyntax, but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
 Ford and Geiger even cite a case where an editor was not sure whether a person deleted their articles or a bot~\cite{ForGei2012}.
 
-What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in matter of scale (using bots/tools is faster, hence more reverts are possible) but in matter of substance: the very way everything interacts with each other~\cite{GeiRib2010}.
+What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in a matter of scale (using bots/tools is faster, hence more reverts are possible) but in a matter of substance: the very way everything interacts with each other is transformed~\cite{GeiRib2010}.
 On the grounds of quality control specifically, the introduction of tools (and bots) was fairly revolutionary:
-they enabled efficient patrolling of articles by users with little to no knowledge about the particular topic.
-Thanks to Wikipedia's particular software architecture, this is possible even in the most ``manual'' quality control work (e.g. using watchlists to patrol articles): representing information changes via diffs allows editors to quickly spot content that deviates from its immediate context~\cite{GeiRib2010}.
+They enabled efficient patrolling of articles by users with little to no knowledge about the particular topic.
+Thanks to Wikipedia's idiosyncratic software architecture, this is possible even in the most ``manual'' quality control work (i.e. using watchlists to patrol articles):
+Representing information changes via diffs allows editors to quickly spot content that deviates from its immediate context~\cite{GeiRib2010}.
 
-In the following sections, we discuss the state of scientific knowledge (syn) on the individual mechanisms.
+In the following sections, we discuss what the scientific community already knows about the individual mechanisms.
 
 
 \section{Bots}
@@ -190,6 +185,15 @@ This also gives us a hint as to what type of quality control work humans take ov
 \section{Conclusion}
 \cite{AstHal2018} have a diagram describing the new edit review pipeline. Filters are absent.
 %TODO move funnel diagram here (descending degree of automacy
+
+%TODO find where in text to reference the graphic directly
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/funnel-diagramm-no-filters.JPG}
+  \caption{State of the scientific literature: edit filters are missing from the quality control frame}~\label{fig:funnel-no-filters}
+\end{figure}
+%TODO merge with rise and decline graphic from~\cite{HalGeiMorRied2013}
+
 
 So far, on grounds of literature study alone it remains unclear what the role/purpose of edit filters is.
 
