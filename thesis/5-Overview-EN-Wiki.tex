@@ -8,6 +8,8 @@ and, as far as feasible, trace how these tasks have evolved over time.
 The data upon which the analysis is based is described in section~\ref{sec:overview-data}
 and the methods we use–in chapter 3.
 
+%TODO describe what each section is about
+
 \section{Data}
 \label{sec:overview-data}
 
@@ -115,39 +117,37 @@ abuse_filter_action
   \caption{abuse\_filter\_action schema}~\label{fig:db-schemas-afa}
 \end{figure*}
 
+\section{Descriptive statistics/Patterns}
 
-\textbf{Interesting questions}
-\begin{itemize}
-    \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?; This includes deleted filters
-    \item what do the most active filters do?: see~\ref{tab:most-active-actions}
-    \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
-        Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
-        %TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
-        I actually think, a bot fixing this would be more appropriate.
+In this section, we explore some general patterns of the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
+The scripts that generate the statistics discussed here, can be found in the jupyter notebook in the project's repository %TODO add link after repository has been cleaned up
+
+As of January 6th, 2019 there are 954 filters in this table.
+It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
+So, the above mentioned 954 filters are all filters ever made up to this date.
+This doesn't mean that it never changed what the filters are doing, since, as pointed out in chapter~\ref{}, edit filter managers can freely modify filter patterns, so at some point the filter is doing one thing and in the next moment, it is filtering a completely different phenomenon.
+This doesn't happen very often though.
+
+Tables ... show how many new filters have been introduced over the years.
+And how many filters have been active (``enabled'') over the years.
+
+We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{}.
+%TODO discuss peak! (and overall pattern)
+\begin{comment}
     \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
         when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
         Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
-    \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
-    \item percentage of triggered filters/all edits; break down triggered filters according to typology: TODO still need the complete abuse\_filter\_log table!; and probably further dumps in order to know total number of edits
-    \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
-\end{itemize}
+\end{comment}
 
-\textbf{Questions on abuse\_filter table}
-\begin{itemize}
-    \item how many filters are there altogether
-    \item how many are enabled/disabled?
-    \item how many hidden filters? how many of them are enabled
-    \item how many are marked as deleted? (how many of them are hidden?)
-    \item how many global? (what does global mean?)
-    \item how many throttled? (what does this mean?)
+The most active filters of all times (with number of hits and public description) are displayed in table~\ref{}.
+
+\begin{comment}
     \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
+    \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
     \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
-    \item what are the values in the "group" column? what do they mean?
-    \item which are the most frequently triggered filters of all time? \ref{tab:most-active-actions}
-    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
-    \item how many different edit filter editors are there (af\_user)?
     \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
-\end{itemize}
+\end{comment}
+
 
 \textbf{Questions on abuse\_filter\_log table}
 \begin{itemize}
@@ -528,6 +528,10 @@ At the end, we labeled most ambiguous cases with both ``vandalism'' and ``good f
 
 In the subsections that follow we discuss the salient properties of each manually labeled category.
 
+\begin{comment}
+    \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
+    \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
+\end{comment}
 
 Following filter categories have been identified (sometimes, a filter was labeled with more than one tag):
 %TODO make a diagramm with these
@@ -764,6 +768,13 @@ There are some 10 or so filters I manually labeled as targeting "bugs".
 Most of them do log only.
 \end{comment}
 
+\begin{comment}
+    \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
+        Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
+        %TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
+        I actually think, a bot fixing this would be more appropriate.
+\end{comment}
+
 \section{Patterns in filters creation and usage}
 * What are typical filter usage patterns?
   ** switched on for a while, then deactivated and never activated again?: 81 (bad charts), 167 (two brief disables underway), 302 (switched off on the grounds of insufficient activity); 904 (to track smth);
@@ -795,6 +806,11 @@ Most of them do log only.
   ** filter is shut down, because editors notice there are 2 (or more filters) that do nearly identical checks: 344 shut down because of 3
 
   ** "in addition to filter 148, let's see what we get - Cen" (https://en.wikipedia.org/wiki/Special:AbuseFilter/188) // this illustrates the point that edit filter managers do introduce stuff they feel like introducing just to see if it catches something
+
+\begin{comment}
+    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
+    \item how many different edit filter editors are there (af\_user)?
+\end{comment}
 
 \begin{comment}
     From filter-lists/edit-filter-managers-bot-operators

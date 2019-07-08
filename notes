@@ -1689,3 +1689,37 @@ is_bot	edits	Percentage of all edits
 0	    3426624	92.1408
 1	    292274	7.8592
 \end{verbatim}
+
+============================================================================
+\textbf{Interesting questions}
+\begin{itemize}
+    \item how many filters are there (were there over the years): 954 filters (stand: 06.01.2019); TODO: historically?; This includes deleted filters
+    \item what do the most active filters do?: see~\ref{tab:most-active-actions}
+    \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
+        Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
+        %TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
+        I actually think, a bot fixing this would be more appropriate.
+    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
+        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
+        Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
+    \item how often were (which) filters triggered: see \url{filter-lists/20190106115600_filters-sorted-by-hits.csv} and~\ref{tab:most-active-actions}; see also jupyter notebook for aggregated hitcounts over tagged categories
+    \item percentage of triggered filters/all edits; break down triggered filters according to typology: TODO still need the complete abuse\_filter\_log table!; and probably further dumps in order to know total number of edits
+    \item percentage filters of different types over the years: according to actions (I need a complete abuse\_filter\_log table for this!); according to self-assigned tags %TODO plot!
+\end{itemize}
+
+\textbf{Questions on abuse\_filter table}
+\begin{itemize}
+    \item how many filters are there altogether
+    \item how many are enabled/disabled?
+    \item how many hidden filters? how many of them are enabled
+    \item how many are marked as deleted? (how many of them are hidden?)
+    \item how many global? (what does global mean?)
+    \item how many throttled? (what does this mean?)
+    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
+    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
+    \item what are the values in the "group" column? what do they mean?
+    \item which are the most frequently triggered filters of all time? \ref{tab:most-active-actions}
+    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
+    \item how many different edit filter editors are there (af\_user)?
+    \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
+\end{itemize}
