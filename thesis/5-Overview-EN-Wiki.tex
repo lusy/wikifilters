@@ -5,10 +5,12 @@ The purpose of this chapter (syn?) is to explore the edit filters on the Englisc
 We want to gather a understanding of what types of tasks these filters take over,
 and, as far as feasible, trace how these tasks have evolved over time.
 
+%TODO describe what each section is about
 The data upon which the analysis is based is described in section~\ref{sec:overview-data}
 and the methods we use–in chapter 3.
+Section~\ref{sec:patterns} explores (syn) some patterns in the edit filters' usage and..
+And we look into the manual classification of EN Wikipedia's edit filters I've undertaken in an attempt to understand what is it that they actually filter in section~\ref{sec:manual-classification}.
 
-%TODO describe what each section is about
 
 \section{Data}
 \label{sec:overview-data}
@@ -16,156 +18,69 @@ and the methods we use–in chapter 3.
 The main part of the present analysis rests upon/is based upon/is grounded in/foundations lie the \emph{abuse\_filter} table from \emph{enwiki\_p}(the database which stores data for the EN Wikipedia), or more specifically a snapshot thereof which was downloaded on January 6th, 2019 via quarry, a web-based service offered by Wikimedia for running SQL queries against their public databases~\footnote{\url{https://quarry.wmflabs.org/}}.
 The complete dataset can be found in the repository for the present paper~\cite{github}. % TODO add a more specific link
 
-This table, along with \emph{abuse\_filter\_actions}, \emph{abuse\_filter\_log}, and \emph{abuse\_filter\_history}, are created and used by the AbuseFilter MediaWiki extension~\cite{gerrit-abusefilter-tables}.
+This table, along with \emph{abuse\_filter\_actions}, \emph{abuse\_filter\_log}, and \emph{abuse\_filter\_history}, are created and used by the AbuseFilter MediaWiki extension~\cite{gerrit-abusefilter-tables}, as discussed in section~\ref{sec:mediawiki-ext}.
 Selected queries have been run via quarry against the \emph{abuse\_filter\_log} table as well.
 Unfortunately, the \emph{abuse\_filter\_history} table which will be necessary for a complete historical analysis of the edit filters is currently not exposed to the public due to security/privacy concerns~\cite{phabricator}.
-Therefore, the present work only touches upon historical trends. %TODO how are these determined: API to abuse_filter_history; general stats from abuse_filter
+Therefore, the present work only touches upon historical trends in a qualitative fashion. %TODO how are these determined: API to abuse_filter_history; general stats from abuse_filter
 or qualitatively shows patterns.
 A comprehensive historical analysis is therefore (syn!) one of the possibilities/directions for future studies (syn).
 
-The schemas of all four tables can be viewed in figures~\ref{fig:db-schemas-af},~\ref{fig:db-schemas-afl},~\ref{fig:db-schemas-afh} and~\ref{fig:db-schemas-afa}.
+%TODO maybe move to appendix; mention tables have been discussed in~\ref{sec:mediawiki-ext} and only quote here the one for abuse\_filter since we are using the data
+A concise description of the tables has been offered in section~\ref{sec:mediawiki-ext} which discusses the AbuseFilter MediaWiki extension in more detail.
+Here, only the schema of the \emph{abuse\_filter} table has been included (figure~\ref{fig:db-schemas-af}), since that is the data the present analysis is based upon.
+For further reference, the schemas of all four tables can be viewed in figures~\ref{fig:app-db-schemas-af},~\ref{fig:app-db-schemas-afl},~\ref{fig:app-db-schemas-afh} and~\ref{fig:app-db-schemas-afa} in the appendix.
 
 \begin{figure*}
 \begin{verbatim}
 abuse_filter
-+--------------------+---------------------+------+-----+---------+----------------+
-| Field              | Type                | Null | Key | Default | Extra          |
-+--------------------+---------------------+------+-----+---------+----------------+
-| af_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
-| af_pattern         | blob                | NO   |     | NULL    |                |
-| af_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
-| af_user_text       | varbinary(255)      | NO   |     | NULL    |                |
-| af_timestamp       | binary(14)          | NO   |     | NULL    |                |
-| af_enabled         | tinyint(1)          | NO   |     | 1       |                |
-| af_comments        | blob                | YES  |     | NULL    |                |
-| af_public_comments | tinyblob            | YES  |     | NULL    |                |
-| af_hidden          | tinyint(1)          | NO   |     | 0       |                |
-| af_hit_count       | bigint(20)          | NO   |     | 0       |                |
-| af_throttled       | tinyint(1)          | NO   |     | 0       |                |
-| af_deleted         | tinyint(1)          | NO   |     | 0       |                |
-| af_actions         | varbinary(255)      | NO   |     |         |                |
-| af_global          | tinyint(1)          | NO   |     | 0       |                |
-| af_group           | varbinary(64)       | NO   | MUL | default |                |
-+--------------------+---------------------+------+-----+---------+----------------+
++--------------------+----------------+------+-----+---------+----------------+
+| Field              | Type           | Null | Key | Default | Extra          |
++--------------------+----------------+------+-----+---------+----------------+
+| af_id              | bigint(20)     | NO   | PRI | NULL    | auto_increment |
+| af_pattern         | blob           | NO   |     | NULL    |                |
+| af_user            | bigint(20)     | NO   | MUL | NULL    |                |
+| af_user_text       | varbinary(255) | NO   |     | NULL    |                |
+| af_timestamp       | binary(14)     | NO   |     | NULL    |                |
+| af_enabled         | tinyint(1)     | NO   |     | 1       |                |
+| af_comments        | blob           | YES  |     | NULL    |                |
+| af_public_comments | tinyblob       | YES  |     | NULL    |                |
+| af_hidden          | tinyint(1)     | NO   |     | 0       |                |
+| af_hit_count       | bigint(20)     | NO   |     | 0       |                |
+| af_throttled       | tinyint(1)     | NO   |     | 0       |                |
+| af_deleted         | tinyint(1)     | NO   |     | 0       |                |
+| af_actions         | varbinary(255) | NO   |     |         |                |
+| af_global          | tinyint(1)     | NO   |     | 0       |                |
+| af_group           | varbinary(64)  | NO   | MUL | default |                |
++--------------------+----------------+------+-----+---------+----------------+
 \end{verbatim}
   \caption{abuse\_filter schema}~\label{fig:db-schemas-af}
 \end{figure*}
 
-\begin{figure*}
-\begin{verbatim}
-abuse_filter_log
-+------------------+---------------------+------+-----+---------+----------------+
-| Field            | Type                | Null | Key | Default | Extra          |
-+------------------+---------------------+------+-----+---------+----------------+
-| afl_id           | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
-| afl_filter       | varbinary(64)       | NO   | MUL | NULL    |                |
-| afl_user         | bigint(20) unsigned | NO   | MUL | NULL    |                |
-| afl_user_text    | varbinary(255)      | NO   |     | NULL    |                |
-| afl_ip           | varbinary(255)      | NO   | MUL | NULL    |                |
-| afl_action       | varbinary(255)      | NO   |     | NULL    |                |
-| afl_actions      | varbinary(255)      | NO   |     | NULL    |                |
-| afl_var_dump     | blob                | NO   |     | NULL    |                |
-| afl_timestamp    | binary(14)          | NO   | MUL | NULL    |                |
-| afl_namespace    | tinyint(4)          | NO   | MUL | NULL    |                |
-| afl_title        | varbinary(255)      | NO   |     | NULL    |                |
-| afl_wiki         | varbinary(64)       | YES  | MUL | NULL    |                |
-| afl_deleted      | tinyint(1)          | NO   |     | 0       |                |
-| afl_patrolled_by | int(10) unsigned    | YES  |     | NULL    |                |
-| afl_rev_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
-| afl_log_id       | int(10) unsigned    | YES  | MUL | NULL    |                |
-+------------------+---------------------+------+-----+---------+----------------+
-\end{verbatim}
-  \caption{abuse\_filter\_log schema}~\label{fig:db-schemas-afl}
-\end{figure*}
-
-%TODO do something with the schemas, they are too wide and get cut off on the right side
-\begin{figure*}
-\begin{verbatim}
-abuse_filter_history
-+---------------------+---------------------+------+-----+---------+----------------+
-| Field               | Type                | Null | Key | Default | Extra          |
-+---------------------+---------------------+------+-----+---------+----------------+
-| afh_id              | bigint(20) unsigned | NO   | PRI | NULL    | auto_increment |
-| afh_filter          | bigint(20) unsigned | NO   | MUL | NULL    |                |
-| afh_user            | bigint(20) unsigned | NO   | MUL | NULL    |                |
-| afh_user_text       | varbinary(255)      | NO   | MUL | NULL    |                |
-| afh_timestamp       | binary(14)          | NO   | MUL | NULL    |                |
-| afh_pattern         | blob                | NO   |     | NULL    |                |
-| afh_comments        | blob                | NO   |     | NULL    |                |
-| afh_flags           | tinyblob            | NO   |     | NULL    |                |
-| afh_public_comments | tinyblob            | YES  |     | NULL    |                |
-| afh_actions         | blob                | YES  |     | NULL    |                |
-| afh_deleted         | tinyint(1)          | NO   |     | 0       |                |
-| afh_changed_fields  | varbinary(255)      | NO   |     |         |                |
-| afh_group           | varbinary(64)       | YES  |     | NULL    |                |
-+---------------------+---------------------+------+-----+---------+----------------+
-\end{verbatim}
-  \caption{abuse\_filter\_history schema}~\label{fig:db-schemas-afh}
-\end{figure*}
-
-\begin{figure*}
-\begin{verbatim}
-abuse_filter_action
-+-----------------+---------------------+------+-----+---------+-------+
-| Field           | Type                | Null | Key | Default | Extra |
-+-----------------+---------------------+------+-----+---------+-------+
-| afa_filter      | bigint(20) unsigned | NO   | PRI | NULL    |       |
-| afa_consequence | varbinary(255)      | NO   | PRI | NULL    |       |
-| afa_parameters  | tinyblob            | NO   |     | NULL    |       |
-+-----------------+---------------------+------+-----+---------+-------+
-\end{verbatim}
-  \caption{abuse\_filter\_action schema}~\label{fig:db-schemas-afa}
-\end{figure*}
-
 \section{Descriptive statistics/Patterns}
+\label{sec:patterns}
 
 In this section, we explore some general patterns of the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
-The scripts that generate the statistics discussed here, can be found in the jupyter notebook in the project's repository %TODO add link after repository has been cleaned up
+The scripts that generate the statistics discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
 
 As of January 6th, 2019 there are 954 filters in this table.
 It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
 So, the above mentioned 954 filters are all filters ever made up to this date.
-This doesn't mean that it never changed what the filters are doing, since, as pointed out in chapter~\ref{}, edit filter managers can freely modify filter patterns, so at some point the filter is doing one thing and in the next moment, it is filtering a completely different phenomenon.
+This doesn't mean that it never changed what the filters are doing, since, as pointed out in chapter~\ref{}, edit filter managers can freely modify filter patterns, so at some point the filter could be doing one thing and in the next moment, it is filtering a completely different phenomenon.
 This doesn't happen very often though.
 
 Tables ... show how many new filters have been introduced over the years.
-And how many filters have been active (``enabled'') over the years.
+And how many filters have been active (``enabled'') over the years. %TODO do I have data for this
 
-We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{}.
-%TODO discuss peak! (and overall pattern)
+Thanks to quarry, we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018 with their corresponding number of times being triggered:
+Table~\ref{tab:active-filters-count} summarises the numbers of distinct filters that got triggered over the years.
+So, the number of distinct filters that have been triggered over the years varies between 154 in year 2014 and 254 in 2018.
+This is not a terrible wide range and the probable explanation to this is the so-called condition limit.
+%TODO: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
 \begin{comment}
-    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
-        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
-        Also, there is a dip in the middle of 2014 and a notable peak at the beginning of 2016, that should be investigated further.
+\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
+"Each filter takes time to run, making editing (and to some extent other things) slightly slower. The time is only a few milliseconds per filter, but with enough filters that adds up. When the system is near its limit, adding a new filter may require removing another filter in order to keep the system within its limits."
 \end{comment}
 
-The most active filters of all times (with number of hits and public description) are displayed in table~\ref{}.
-
-\begin{comment}
-    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
-    \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
-    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
-    \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
-\end{comment}
-
-
-\textbf{Questions on abuse\_filter\_log table}
-\begin{itemize}
-    \item how often were filters with different actions triggered? (afl\_actions)
-    \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
-    \item on what articles filters get triggered most frequently (afl\_title)
-    \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
-    \item in which namespaces get filters triggered most frequently?
-\end{itemize}
-
-\textbf{Questions on abuse\_filter\_action table}
-\begin{itemize}
-    \item how many filters trigger any particular action (at the moment)?
-    \item how many different parameters are there (i.e. tags when tagging, or templates to show upon a warning)?
-\end{itemize}
-
-\textbf{Number of unique filters that were triggered each year since 2009:}
-owing to quarries we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018 with their corresponding number of times being triggered:
 \begin{table}
   \centering
   \begin{tabular}{l r }
@@ -187,265 +102,74 @@ owing to quarries we have all the filters that were triggered from the filter lo
   \caption{Count of distinct filters that got triggered each year}~\label{tab:active-filters-count}
 \end{table}
 
-data is still not enough for us to talk about a tendency towards introducing more filters (after the initial dip)
+We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{fig:filter-hits}.
+There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016.
+Here is the explanation to that:
+%TODO discuss peak! (and overall pattern)
+%TODO strectch plot so months are readable
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/number-filter-hits.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
+\end{figure}
 
-%TODO: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
 \begin{comment}
-\url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Requested}
-"Each filter takes time to run, making editing (and to some extent other things) slightly slower. The time is only a few milliseconds per filter, but with enough filters that adds up. When the system is near its limit, adding a new filter may require removing another filter in order to keep the system within its limits."
+    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
+        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
 \end{comment}
 
-\textbf{Most frequently triggered filters for each year:}
-10 most active filters per year:
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\ %TODO is the hitcount for the year or altogether till now?
-    \hline
-    135 & repeating characters & 175455 \\
-    30 & "large deletion from article by new editors" & 160302 \\
-    61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & 147377 \\
-    18 & Test type edits from clicking on edit bar & 133640 \\
-    3 & "new user blanking articles" & 95916 \\
-    172 & "section blanking" & 89710 \\
-    50 & "shouting" (contribution consists of all caps, numbers and punctuation) & 88827 \\
-    98 & "creating very short new article" & 80434 \\
-    65 & "excessive whitespace" (note: "associated with ascii art and some types of vandalism") & 74098 \\
-    132 & "removal of all categories" & 68607 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2009}~\label{tab:most-active-2009}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & 245179 \\
-    135 & repeating characters & 242018 \\
-    172 & "section blanking" & 148053 \\
-    30 & "large deletion from article by new editors" & 119226 \\
-    225 & Vandalism in all caps & 109912 \\
-    3 & "new user blanking articles" & 105376 \\
-    50 & "shouting" (contribution consists of all caps, numbers and punctuation) & 101542 \\
-    132 & "removal of all categories" & 78633 \\
-    189 & BLP vandalism or libel & 74528 \\
-    98 & "creating very short new article" & 54805 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2010}~\label{tab:most-active-2010}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & 218493 \\
-    135 & repeating characters & 185304 \\
-    172 & "section blanking" & 119532 \\
-    402 & New article without references & 109347 \\
-    30 & Large deletion from article by new editors & 89151 \\
-    3 & "new user blanking articles" & 75761 \\
-    384 & Addition of bad words or other vandalism & 71911 \\
-    225 & Vandalism in all caps & 68318 \\
-    50 & "shouting" (contribution consists of all caps, numbers and punctuation) & 67425 \\
-    432 & Starting new line with lowercase letters & 66480 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2011}~\label{tab:most-active-2011}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    135 & repeating characters & 173830 \\
-    384 & Addition of bad words or other vandalism & 144202 \\
-    432 & Starting new line with lowercase letters & 126156 \\
-    172 & "section blanking" & 105082 \\
-    30 & Large deletion from article by new editors & 93718 \\
-    3 & "new user blanking articles" & 90724 \\
-    380 & Multiple obscenities & 67814 \\
-    351 & Text added after categories and interwiki & 59226 \\
-    279 & Repeated attempts to vandalize & 58853 \\
-    225 & Vandalism in all caps & 58352 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2012}~\label{tab:most-active-2012}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    135 & repeating characters & 133309 \\
-    384 & Addition of bad words or other vandalism & 129807 \\
-    432 & Starting new line with lowercase letters & 94017 \\
-    172 & "section blanking" & 92871 \\
-    30 & Large deletion from article by new editors & 85722 \\
-    279 & Repeated attempts to vandalize & 76738 \\
-    3 & "new user blanking articles" & 70067 \\
-    380 & Multiple obscenities & 58668 \\
-    491 & Edits ending with emoticons or ! & 55454 \\
-    225 & Vandalism in all caps & 48390 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2013}~\label{tab:most-active-2013}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    384 & Addition of bad words or other vandalism & 111570 \\
-    135 & repeating characters & 111173 \\
-    279 & Repeated attempts to vandalize & 97204 \\
-    172 & "section blanking" & 82042 \\
-    432 & Starting new line with lowercase letters & 75839 \\
-    30  & Large deletion from article by new editors & 62495 \\
-    3 & "new user blanking articles" & 60656 \\
-    636 & Unexplained removal of sourced content & 52639 \\
-    231 & Long string of characters containing no spaces & 39693 \\
-    380 & Multiple obscenities & 39624 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2014}~\label{tab:most-active-2014}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    650 & Creation of a new article without any categories & 226460 \\
-    61 & New user removing references & 196986 \\
-    636 & Unexplained removal of sourced content & 191320 \\
-    527 & T34234: log/throttle possible sleeper account creations & 189911 \\
-    633 & Possible canned edit summary & 162319 \\
-    384 & Addition of bad words or other vandalism & 141534 \\
-    279 & Repeated attempts to vandalize & 110137 \\
-    135 & repeating characters & 99057 \\
-    686 & IP adding possibly unreferenced material to BLP & 95356 \\
-    172 & "section blanking" & 82874 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2015}~\label{tab:most-active-2015}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    527 & T34234: log/throttle possible sleeper account creations & 437099 \\
-    61 & New user removing references & 274945 \\
-    650 & Creation of a new article without any categories & 229083 \\
-    633 & Possible canned edit summary & 218696 \\
-    636 & Unexplained removal of sourced content & 179948 \\
-    384 & Addition of bad words or other vandalism & 179871 \\
-    279 & Repeated attempts to vandalize & 106699 \\
-    135 & repeating characters & 95131 \\
-    172 & "section blanking" & 79843 \\
-    30 & Large deletion from article by new editors & 68968 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2016}~\label{tab:most-active-2016}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    61 & New user removing references & 250394 \\
-    633 & Possible canned edit summary & 218146 \\
-    384 & Addition of bad words or other vandalism & 200748 \\
-    527 & T34234: log/throttle possible sleeper account creations & 192441 \\
-    636 & Unexplained removal of sourced content & 156409 \\
-    650 & Creation of a new article without any categories & 151604 \\
-    135 & repeating characters & 80056 \\
-    172 & "section blanking" & 70837 \\
-    712 & Possibly changing date of birth in infobox & 59537 \\
-    833 & Newer user possibly adding unreferenced or improperly referenced material & 58133 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2017}~\label{tab:most-active-2017}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{r c r }
-    % \toprule
-    Filter ID & Publicly available description & Hitcount \\
-    \hline
-    527 & T34234: log/throttle possible sleeper account creations & 358210 \\
-    61 & New user removing references & 234867 \\
-    633 & Possible canned edit summary & 201400 \\
-    384 & Addition of bad words or other vandalism & 177543 \\
-    833 & Newer user possibly adding unreferenced or improperly referenced material & 161030 \\
-    636 & Unexplained removal of sourced content & 144674 \\
-    650 & Creation of a new article without any categories & 79381 \\
-    135 & repeating characters & 75348 \\
-    686 & IP adding possibly unreferenced material to BLP & 70550 \\
-    172 & "section blanking" & 64266 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{10 most active filters in 2018}~\label{tab:most-active-2018}
-\end{table}
-
-\textbf{what do the most active filters do?}
-
+The ten most active filters of all times (with number of hits and public description) are displayed in table~\ref{tab:most-active-actions}.
+For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
+and, of course, the whole table can be consulted in the repository~\cite{github}.
 \begin{table*}
   \centering
-    \begin{tabular}{r p{10cm} p{5cm} }
+    \begin{tabular}{r r p{10cm} p{2cm} }
     % \toprule
-    Filter ID & Publicly available description & Actions \\ %TODO maybe add hitcount?
+        Filter ID & Hitcount & Publicly available description & Actions \\
     \hline
-      135 & repeating characters & tag, warn \\
-      30 & "large deletion from article by new editors" & tag, warn \\
-      61 & "new user removing references" ("new user" is handled by "!("confirmed" in user\_groups)") & tag \\
-      18 & "test type edits from clicking on edit bar" (people don't replace Example texts when click-editing) & deleted in Feb 2012 \\
-      3 & "new user blanking articles" & tag, warn \\
-      172 & "section blanking" & tag \\
-      50 & "shouting" (contribution consists of all caps, numbers and punctuation) & tag, warn \\
-      98 & "creating very short new article" & tag \\
-      65 & "excessive whitespace" (note: "associated with ascii art and some types of vandalism") & deleted in Jan 2010 \\
-      132 & "removal of all categories" & tag, warn \\
-      225 & "vandalism in all caps" (difference to 50? seems to be swear words, but shouldn't they be catched by 50 anyway?) & disallow \\
-      189 & "BLP vandalism or libel" & tag \\
-      402 & "new article without references" & deleted in Apr 2013, before that disabled with comment "disabling, no real use" \\
-      384 & "addition of bad words or other vandalism" (seems to be a blacklist) & disallow \\
-      432 & "starting new line with lower case letters" & tag, warn //I recall there was a rule of thumb recommending not to user filters for style things? although that's not really style, but rather wrong grammar.. \\
-      380 & hidden; public comment "multiple obscenities" & disallow \\
-      351 & "text added after categories and interwiki" & tag, warn \\
-      279 & "repeated attempts to vandalise" & tag, throttle (triggered when someone hits "edit" repeatedly in a short ammount of time) \\
-      491 & "edits ending with emoticons or !" & tag, warn \\
-      636 & "unexplained removal of sourced content" & warn (that, together with 634 and 635 refutes my theory that warn always goes together with tag) \\
-      231 & "long string of characters containing no spaces" (that's surely english though^^) & tag, warn \\
-      650 & "creation of a new article without any categories" & (log only) \\
-      527 & hidden; public comments "T34234: log/throttle possible sleeper account creations" & throttle \\
-      633 & "possible canned edit summary" (apparently pre-filled on mobile though) & tag \\
-      686 & "IP adding possible unreferenced material to BLP" (BLP= biography of living people? I thought, it was forbidden to edit them without a registered account) & (log only) \\
-      712 & "possibly changing date of birth in infobox" ("possibly"? and I thought infoboxes were pre-generated from wikidata?) & (log only) \\
-      833 & "newer user possibly adding a unreferenced or improperly referenced material" & (log only) \\
+       61 & 1,611,956 & new user removing references & tag \\
+      135 & 1,371,361 & repeating characters & tag, warn \\
+      527 & 1,241,576 & T34234: log/throttle possible sleeper account creations (hidden filter) & throttle \\
+      384 & 1,159,239 & addition of bad words or other vandalism & disallow \\
+      172 & 935,925 & section blanking & tag \\
+       30 & 840,871 & large deletion from article by new editors & tag, warn \\
+      633 & 808,716 & possible canned edit summary & tag \\
+      636 & 726,764 & unexplained removal of sourced content & warn \\
+        3 & 700,522 & new user blanking articles & tag, warn \\
+      650 & 695,601 &creation of a new article without any categories & (log only) \\
   \end{tabular}
   \caption{What do most active filters do?}~\label{tab:most-active-actions}
 \end{table*}
+
+%TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
+
+\begin{comment}
+    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
+    \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
+    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
+    \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
+\end{comment}
+
+
+\begin{comment}
+\textbf{Questions on abuse\_filter\_log table}
+\begin{itemize}
+    \item how often were filters with different actions triggered? (afl\_actions)
+    \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
+    \item on what articles filters get triggered most frequently (afl\_title)
+    \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
+    \item in which namespaces get filters triggered most frequently?
+\end{itemize}
+
+\textbf{Questions on abuse\_filter\_action table}
+\begin{itemize}
+    \item how many filters trigger any particular action (at the moment)?
+    \item how many different parameters are there (i.e. tags when tagging, or templates to show upon a warning)?
+\end{itemize}
+\end{comment}
+
+\textbf{what do the most active filters do?}
+
 
 Investigating pick in filter hits beginnings of 2016
 
@@ -513,6 +237,7 @@ https://en.wikipedia.org/wiki/Wikipedia_talk:Edit_filter/Archive_1
 \end{comment}
 
 \section{Types of edit filters: Manual Classification}
+\label{sec:manual-classification}
 
 Apart from filter typologies that can be derived directly from the DB schema (available fields/existing features), we propose a manual classification of the types of edits edit filters found on the EN Wikipedia target (there are edit filters with different purposes).
 
