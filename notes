@@ -1724,3 +1724,9 @@ is_bot	edits	Percentage of all edits
     \item how many different edit filter editors are there (af\_user)?
     \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
 \end{itemize}
+
+\textbf{Questions on abuse\_filter\_action table}
+\begin{itemize}
+    \item how many filters trigger any particular action (at the moment)?
+    \item how many different parameters are there (i.e. tags when tagging, or templates to show upon a warning)?
+\end{itemize}
