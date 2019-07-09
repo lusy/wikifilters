@@ -113,6 +113,7 @@ till now it comes to attention that a lot of accounts named something resembling
 There are in the meantime over 5 pages of them, it is definitely happening automatically
 
 TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
+Note: do hidden filters appear in this numbers and in the table? (They are definitely not displayed in the front end of the AbuseLog)
 \end{comment}
 %TODO strectch plot so months are readable
 \begin{figure}
@@ -128,7 +129,18 @@ TODO: download data; write script to identify actions that triggered the filters
 
 The ten most active filters of all times (with number of hits and public description) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
-and, of course, the whole table can be consulted in the repository~\cite{github}.
+and, of course, the whole \emph{abuse\_filter} table snapshot can be consulted in the repository~\cite{github}.
+
+Already, a couple of patterns draw attention when we look at the most active (syn!) filters:
+They seem to catch a combination of possibly good faith edits which were none the less unconstructive (such as removing references, section blanking or large deletions)
+and what the community has come to call ``silly vandalism''~\cite{Wikipedia:VandalismTypes}: repeating characters and inserting profanities.
+Interestingly, that's not what the developers of the extension believed it was going to be good for:
+``It is not, as some seem to believe, intended to block profanity in articles (that would be extraordinarily dim), nor even to revert page-blankings, '' claimed its core developer on July 9th 2008~\cite{Wikipedia:EditFilterTalkArchive1}.
+Rather, among the 10 most active filters, it is filter 527 ``T34234: log/throttle possible sleeper account creations'' which seems to target what most closely resembles the intended aim of the edit filter extension. %TODO explain again what the intended aim was
+
+Another assumption that proved to be wrong/didn't quite carry into effect was that ``filters in this extension would be triggered fewer times than once every few hours''.
+As a matter of fact, a quick glance at the AbuseLog~\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}} confirms that there are often multiple filter hits per minute.
+
 \begin{table*}
   \centering
     \begin{tabular}{r r p{8cm} p{2cm} }
@@ -144,19 +156,12 @@ and, of course, the whole table can be consulted in the repository~\cite{github}
       633 & 808,716 & possible canned edit summary & tag \\
       636 & 726,764 & unexplained removal of sourced content & warn \\
         3 & 700,522 & new user blanking articles & tag, warn \\
-      650 & 695,601 &creation of a new article without any categories & (log only) \\
+      650 & 695,601 & creation of a new article without any categories & (log only) \\
   \end{tabular}
   \caption{What do most active filters do?}~\label{tab:most-active-actions}
 \end{table*}
 
 %TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
-
-\begin{comment}
-It is not, as some seem to believe, intended to block profanity in articles (that would be extraordinarily dim), nor even to revert page-blankings. That's what we have ClueBot and TawkerBot for, and they do a damn good job of it. This is a different tool, for different situations, which require different responses. I conceive that filters in this extension would be triggered fewer times than once every few hours. — Werdna • talk 13:23, 9 July 2008 (UTC) "
-// longer clarification what is to be targeted. interestingly enough, I think the bulk of the things that are triggered today are precisely the ones Werdna points out as "we are not targeting them".
-And stuff is definitely triggered more often than every few hours
-%TODO Compare with most active filters
-\end{comment}
 
 \begin{comment}
     \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
