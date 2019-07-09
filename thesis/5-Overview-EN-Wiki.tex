@@ -163,8 +163,32 @@ As a matter of fact, a quick glance at the AbuseLog~\footnote{\url{https://en.wi
 
 %TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
 
+Another parameter we could observe are the currently configured filter actions for each filter.
+Figure~\ref{fig:all-filters-actions} depicts action per filter (note this includes all filters, also deleted ones and that some filters have multiple actions enabled).
+And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} the actions of all enabled public and hidden filters respectively.
+It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
+This coincides/is congruent with the community claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
+Most public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-public-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
+\end{figure}
+
 \begin{comment}
-    \item how many currently trigger which action (disallow, warn, throttle, tag, ..)?
     \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
     \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
     \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
