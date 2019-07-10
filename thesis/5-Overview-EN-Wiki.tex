@@ -62,6 +62,7 @@ abuse_filter
 In this section, we explore some general patterns of the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
 The scripts that generate the statistics discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
 
+\subsection{Filter characteristics}
 As of January 6th, 2019 there are $954$ filters in this table.
 It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
 So, the above mentioned $954$ filters are all filters ever made up to this date.
@@ -82,14 +83,42 @@ The relative proportion of these groups to each other can be viewed on figure~\r
 Tables ... show how many new filters have been introduced over the years.
 And how many filters have been active (``enabled'') over the years. %TODO do I have data for this
 
-Thanks to quarry, we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018 with their corresponding number of times being triggered:
+Another parameter we could observe are the currently configured filter actions for each filter.
+Figure~\ref{fig:all-filters-actions} depicts action per filter (note this includes all filters, also deleted ones and that some filters have multiple actions enabled).
+And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} the actions of all enabled public and hidden filters respectively.
+It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
+This coincides/is congruent with the community claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
+Most public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-public-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
+\end{figure}
+
+
+\subsection{Filter activity}
+
+Thanks to quarry, we have all the filters that were triggered from the filter log per year, from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018, with their corresponding number of times being triggered:
 Table~\ref{tab:active-filters-count} summarises the numbers of distinct filters that got triggered over the years.
-So, the number of distinct filters that have been triggered over the years varies between 154 in year 2014 and 254 in 2018.
+So, the number of distinct filters that have been triggered over the years varies between $154$ in year 2014 and $254$ in 2018.
 The explanation for this not particularly wide range of active filters lies probably in the so-called condition limit.
-According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation} the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters.
+According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation}, the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters.
 Currently, it is set to $1,000$.
 The motivation for the condition limit is to avoid performance issues since every incoming edit is checked against all currently active filters which means that the more filters are active the longer the checks take.
-However, the page also warns that counting conditions is not the ideal metric of filter performance, since there are simple comparisons that take significantly less time than a check against the \emph{all\_links} variable for instance (which needs to query the database)~\cite{Wikipedia:EditFilterDocumentation}.
+However, the page also warns that counting conditions is not the ideal metric of filter performance, since there are simple comparisons that take significantly less time than a check against the \emph{all\_links} variable for example (which needs to query the database)~\cite{Wikipedia:EditFilterDocumentation}.
 
 \begin{table}
   \centering
@@ -111,32 +140,6 @@ However, the page also warns that counting conditions is not the ideal metric of
   \end{tabular}
   \caption{Count of distinct filters that got triggered each year}~\label{tab:active-filters-count}
 \end{table}
-
-We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{fig:filter-hits}.
-There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016.
-Here is the explanation to that:
-%TODO discuss peak! (and overall pattern)
-\begin{comment}
-Looking at january 2016:
-
-till now it comes to attention that a lot of accounts named something resembling <FirstnameLastname4RandomLetters> were trying to create an account  (while logged in?) (or maybe it was just that the creation of these particular accounts itself was denied); this triggers filter 527 ("T34234: log/throttle possible sleeper account creations
-")
-There are in the meantime over 5 pages of them, it is definitely happening automatically
-
-TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
-Note: do hidden filters appear in this numbers and in the table? (They are definitely not displayed in the front end of the AbuseLog)
-\end{comment}
-%TODO strectch plot so months are readable; darn. now it's too small on the pdf. Fix it! May be rotate to landscape?
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
-  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
-\end{figure}
-
-\begin{comment}
-    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
-        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
-\end{comment}
 
 The ten most active filters of all times (with number of hits and public description) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
@@ -174,58 +177,38 @@ As a matter of fact, a quick glance at the AbuseLog~\footnote{\url{https://en.wi
 
 %TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
 
-Another parameter we could observe are the currently configured filter actions for each filter.
-Figure~\ref{fig:all-filters-actions} depicts action per filter (note this includes all filters, also deleted ones and that some filters have multiple actions enabled).
-And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} the actions of all enabled public and hidden filters respectively.
-It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
-This coincides/is congruent with the community claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
-Most public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
+We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{fig:filter-hits}.
+There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016.
+Here is the explanation to that:
+%TODO discuss peak! (and overall pattern)
+\begin{comment}
+Looking at january 2016:
 
+till now it comes to attention that a lot of accounts named something resembling <FirstnameLastname4RandomLetters> were trying to create an account  (while logged in?) (or maybe it was just that the creation of these particular accounts itself was denied); this triggers filter 527 ("T34234: log/throttle possible sleeper account creations
+")
+There are in the meantime over 5 pages of them, it is definitely happening automatically
+
+TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
+Note: do hidden filters appear in this numbers and in the table? (They are definitely not displayed in the front end of the AbuseLog) -- they do.
+\end{comment}
+
+%TODO strectch plot so months are readable; darn. now it's too small on the pdf. Fix it! May be rotate to landscape?
 \begin{figure}
 \centering
-  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
-  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
+  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
 \end{figure}
 
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-public-filters-actions.png}
-  \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
-\end{figure}
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-filters-actions.png}
-  \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
-\end{figure}
 
 \begin{comment}
     \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
-    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently?
-    \item categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment)
-\end{comment}
-
-
-\begin{comment}
-\textbf{Questions on abuse\_filter\_log table}
-\begin{itemize}
-    \item how often were filters with different actions triggered? (afl\_actions)
     \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
     \item on what articles filters get triggered most frequently (afl\_title)
     \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
     \item in which namespaces get filters triggered most frequently?
-\end{itemize}
-
+    %TODO categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment) -- check notebook
 \end{comment}
 
-
-A lot of filters are disabled/deleted bc:
-* they hit too many false positives: 14 (disabled in couple of hours)
-* they were implemented to target specific incidents and these vandalism attempts stopped :663
-* they were tested and merged into other filters
-* there were too few hits and the conditions were too expensive
-
-Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
 
 \section{Patterns in filters creation and usage}
 * What are typical filter usage patterns?
@@ -240,6 +223,15 @@ Multiple filters have the comment "let's see whether this hits something", which
   ** switched on and stayed on, with the exception of brief periods of time when the filter was deactivated (and the activated again), probably in order to update the conditions: 79, 135 (there were couple of others in Shirik's list, go back and look);
   ** irregular?
   ** switched off, bc filter was deemed inappropriate to deal with the issue at hand: 484 "Shutdown of ClueBot by non-admin user" (From the comments: " Just sysop-protect the page if you don't want non-admins messing with it. --Reaper 2012-09-06")
+
+%TODO Move to patterns of introduction of filters: this explains why some are introduced for a short while and switched off again: since they don't really catch anything
+Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
+
+A lot of filters are disabled/deleted bc:
+* they hit too many false positives: 14 (disabled in couple of hours)
+* they were implemented to target specific incidents and these vandalism attempts stopped :663
+* they were tested and merged into other filters
+* there were too few hits and the conditions were too expensive
 
 * What do filters target: general behaviour vs edits by single users
   ** there are quite some filters targeting particular users: 290 (targets an IP range), 177 ('User:Television Radio'), 663 ('Techno genre warrior

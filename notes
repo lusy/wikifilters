@@ -1730,3 +1730,22 @@ is_bot	edits	Percentage of all edits
     \item how many filters trigger any particular action (at the moment)?
     \item how many different parameters are there (i.e. tags when tagging, or templates to show upon a warning)?
 \end{itemize}
+
+\textbf{Questions on abuse\_filter\_log table}
+\begin{itemize}
+    \item how often were filters with different actions triggered? (afl\_actions)
+    \item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
+    \item on what articles filters get triggered most frequently (afl\_title)
+    \item what types of user actions trigger filters most frequently? (afl\_action) (edit, delete, createaccount, move, upload, autocreateaccount, stashupload)
+    \item in which namespaces get filters triggered most frequently?
+\end{itemize}
+
+==============================================================
+Random comments I pulled out from the text
+
+\begin{comment}
+    \item has the willingness of the community to use filters increased over time?: looking at aggregated values of number of triggered filters per year, the answer is rather it's quite constant; TODO: plot it at a finer granularity
+        when aggregating filter triggers per month, one notices that there's an overall slight upward tendency.
+        But does this mean the willingness of the community to use filters has changed? -- I'd say no: the number of filters (which can be better indicator for "willingness") is somewhat constant. The upward tendency in hits has nothing to do with "willingness"...
+    \item explore timestamp (I think it means "last modified"): have a lot of filters been modified recently? -- see data in notebook; doesn't look particularly interesting
+\end{comment}
