@@ -108,6 +108,28 @@ Most public filters on the other hand still assume good faith from the editors a
   \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
 \end{figure}
 
+%TODO What were the first filters to be implemented immediately after the launch of the extension?
+
+\subsection{Filter makers}
+
+%TODO how many different edit filter editors are there (af\_user)?
+* How stable is the filter maker community?
+  ** how many new users have become part of it over time?
+  ** Has it been the same people from the very beginning?
+  ** are there a couple of very active edit filter managers, that are also (informal) leaders?
+  ** Do edit filter managers specialize on particular types of filters (e.g. vandalism vs good faith?)
+
+Quite some of the 154 edit filter managers have a kind of "not active at the moment" banner on their user page.
+How many new editors have gotten the permission in recent time?
+Otherwise the group is apparently aging..
+
+
+CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
+
+-- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
+-- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
+Probably it's simply admins who can modify the filters there.
+
 
 \subsection{Filter activity}
 
@@ -209,39 +231,78 @@ Note: do hidden filters appear in this numbers and in the table? (They are defin
     %TODO categorise filters according to which name spaces they apply to; pay special attention to edits in user/talks name spaces (may be indication of filtering harassment) -- check notebook
 \end{comment}
 
+\begin{comment}
+    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
+\end{comment}
 
 \section{Patterns in filters creation and usage}
-* What are typical filter usage patterns?
-  ** switched on for a while, then deactivated and never activated again?: 81 (bad charts), 167 (two brief disables underway), 302 (switched off on the grounds of insufficient activity); 904 (to track smth);
-     ** switched on for a short while and then powered down: mostly stuff merged to other filters; or for which the community decides filter is not an appropriate solution (308), 199 ('Unflagged Bots'); or decides to not implement the thing (that way); 290 (disabled, since relevant pages were protected); 207 ("Copy of another one we disabled. Unneeded, a bot already sees this. -Prodego")
-     ** or switched off after a short while because there were no hits: 304, 67, 122, 401 ("Red hair" vandalism)
-     ** or switched off after a longer while, because it was not tripped frequently, in order to save conditions from the condition limit: 211 ("Disable, appears to be inactive (log only filter). If you are using this filter, please let me know, and I'll reenable it -Prodego"); 20 ("A waste of processor time, deleted -Prodego")
-     ** switched off bc merged to another filter 440 was merged in 345
-     ** on for a short while and off again bc?? (false positives is a plausible option here): 394
-  ** switched on and still on: 11 (verify), 79 (with brief periods of being disabled for couple of minutes/hours, probably in order to update the pattern), 164, 642 (if we ignore the 2min period it was disabled on 13.4.2018), 733 (2.11.2015-present), 29 (18.3.2009-present), 30 (18.3.2009-present), 33 (18.3.2009-present), 39 (18.3.2009-present), 50 (18.3.2009-present), 59 (19.3.2009-present), 80 (22.3.2009-present)
-  ** switched on for a while, deactivated for a while, activated again?: 61, 98 (was deactivated briefly since an editor found the "warn" action unfounded; re-enabled to tag), 148 ("20160213 - disabled - possible technical issue - see edit filter noticeboard - xaosflux")
-  ** switched on and stayed on, with the exception of brief periods of time when the filter was deactivated (and the activated again), probably in order to update the conditions: 79, 135 (there were couple of others in Shirik's list, go back and look);
-  ** irregular?
+
+The present section explores qualitatively/highlights patterns in the creation and usage of edit filters.
+Unfortunately, no extensive quantitative analysis of these patterns was possible, since for it, an access to the \emph{abuse\_filter\_history} table is needed.
+The table is currently not replicated via.. and no public dump is accessible via the toolserver. %TODO elaborate
+This seems to have been the case in the past, however, due to security concerns the dumps were discontinued. %TODO cite phabricator
+A short term solution to renew the public replicas was not possible, so the present chapter only shows some patterns (syn!) observed via manual browsing of different filters' history via the exposed API endpoint which allows querying the \emph{abuse\_filter\_history} table for public filters.
+
+\subsection{Usage}
+
+Following general patterns (syn!) of filter usage were observed:
+There are filters that have been switched on for a while, then deactivated and never activated again.
+Some of them had only been active very briefly before they were switched off and deleted.
+There are a couple of different reasons for that:
+The filter in question was only testing a pattern which was eventually merged in another filter (e.g.: ). 440 was merged in 345 (or was it a duplicate?)
+The edit filter managers decided not to implement the filter, because edit filters were deemed an inappropriate tool to deal with the problem at hand (e.g. ...)308), 199 ('Unflagged Bots');
   ** switched off, bc filter was deemed inappropriate to deal with the issue at hand: 484 "Shutdown of ClueBot by non-admin user" (From the comments: " Just sysop-protect the page if you don't want non-admins messing with it. --Reaper 2012-09-06")
+or decides to not implement the thing (that way); 290 (disabled, since relevant pages were protected);
+or, because there were hardly any hits, so there wasn't really a problem at all ( 304, 67, 122, 401 ("Red hair" vandalism)). %result of editors implementing a filter "just to see if it catches anything"?
+There are also cases in which filter managers implement a filter targeting the same phenomenon in parallel and without knowing of each other.
+These duplicate cases (syn!) are also merged eventually, or alternatively all but one of them are switched off: 891 and 893
+Sometimes, vandalism trends are only temporary and after a period of activity, the filters become stale.
+This is also a reason for filters to be eventually powered off in order to save conditions from the condition limit.
+Examples thereof are:302 (switched off on the grounds of insufficient activity),81 (bad charts)
+ 211 ("Disable, appears to be inactive (log only filter). If you are using this filter, please let me know, and I'll reenable it -Prodego"); 20 ("A waste of processor time, deleted -Prodego"); 663?
+There are also filters that were switched off because they weren't doing what they were supposed to and only generated a big amount of false positives: (false positives is a plausible option here): 394,  14 (disabled in couple of hours)
 
-%TODO Move to patterns of introduction of filters: this explains why some are introduced for a short while and switched off again: since they don't really catch anything
-Multiple filters have the comment "let's see whether this hits something", which brings us to the conclusion that edit filter editors have the right and do implement filters they consider necessary
+\begin{comment}
+%TODO This is a duplicate of a paragraph in 4.5.1. Does it fit better here?
+% this actually fits also in the patterns of new filters in chap.5; these are the filters introduced for couple of days/hours, then switched off to never be enabled again
+Edit filter managers often introduce filters based on some phenomena they have observed caught by other filters, other algorithmic quality control mechanisms or general experience.
+As all newly implemented filters, these are initially enabled in logging only mode until enough log entries are generated to evaluate whether the incident is severe and frequent enough to need a filter.
+\end{comment}
 
-A lot of filters are disabled/deleted bc:
-* they hit too many false positives: 14 (disabled in couple of hours)
-* they were implemented to target specific incidents and these vandalism attempts stopped :663
-* they were tested and merged into other filters
-* there were too few hits and the conditions were too expensive
+Then, there are filters switched on for a while, deactivated for a while and activated again.
+Sometimes because a pattern of vandalism is re-occuring, and sometimes–in order to fix technical issues with the filters: 61, 98 (was deactivated briefly since an editor found the "warn" action unfounded; re-enabled to tag), 148 ("20160213 - disabled - possible technical issue - see edit filter noticeboard - xaosflux")
 
-* What do filters target: general behaviour vs edits by single users
+Another group constitute enabled filters that have never been switched off since their introduction.
+  11 (verify), 79 (with brief periods of being disabled for couple of minutes/hours, probably in order to update the pattern), 164, 642 (if we ignore the 2min period it was disabled on 13.4.2018), 733 (2.11.2015-present), 29 (18.3.2009-present), 30 (18.3.2009-present), 33 (18.3.2009-present), 39 (18.3.2009-present), 50 (18.3.2009-present), 59 (19.3.2009-present), 80 (22.3.2009-present)
+There are also some filters that have always been enabled with the exception of brief periods of time when the filter was deactivated (and the activated again), probably in order to update the conditions: 79, 135 (there were couple of others in Shirik's list, go back and look);
+There seems to be a tendency that all actions but logging (which cannot be switched off) are took out, when edit filter managers are updating the regex of the filter.
+
+Oftentimes, when a hidden filter is marked as ``deleted'', it is made public. (examples!)
+
+%TODO leave this here or move to filter characteristics?
+It is not uncommon, that the action(s) a particular filter triggers change over time.
+As of the guidelines for implementing new filters, every filter should be enabled in ``log only'' mode at its introduction.
+After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
+Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO examples?
+
+\subsection{What do filters target}%: general behaviour vs edits by single users
+
+Most of the public filters target general disruptive behavious (e.g.?).
+There are however some which target particular users or particular pages.
+Arguably, (see guidelines) an edit filter may not be the ideal mechanism for this latter purpose, since every incoming edit is checked against all active filters.
+Historically, filters have been introduced to track some specific sort of behaviour which was however neither malicious nor disruptive.
+This contradicts/defies/fails the purpose of the mechanism and thus such filters have been (quite swiftly) disabled.
+Some filters target (syn!) insults in general, and there are such which target (syn!) specifically insults aimed at particular persons (often edit filter managers).
+
+\begin{comment}
   ** there are quite some filters targeting particular users: 290 (targets an IP range), 177 ('User:Television Radio'), 663 ('Techno genre warrior
 ', targets specific IP ranges)
   ** there are also some targetting particular pages (verify!), although this clashed with the guidelines: 264 "Specific-page vandalism" (it's hidden though, so we don't know what exactly it's doing); 401 ("Red hair" vandalism); there's smth with the main page; 715 "IP notification on RFP/C"
-  ** and there are some filtering in general
   ** there are also filters such as 199 (Unflagged bots) which were implemented in order to track something which was not quite malicious or abusive and were thus deemed inappropriate use of filters by the community and consequently (quite swiftly) deleted
   ** some target insults in general and some contain regexes containing very specifically insults directed towards edit filter managers (see filter 12)
+\end{comment}
 
-* How do filters emerge?
+\subsection{How do filters emerge?}
   ** an older filter is split? 79 was split out of 61, apparently; 285 is split between "380, 384, 614 and others"; 174 is split from 29
   ** several older filters are merged?
   ** or functionality of an older filter is took and extended in a newer one (479->631); (82->278); (358->633);
@@ -250,58 +311,6 @@ A lot of filters are disabled/deleted bc:
   ** filter is shut down, because editors notice there are 2 (or more filters) that do nearly identical checks: 344 shut down because of 3
 
   ** "in addition to filter 148, let's see what we get - Cen" (https://en.wikipedia.org/wiki/Special:AbuseFilter/188) // this illustrates the point that edit filter managers do introduce stuff they feel like introducing just to see if it catches something
-
-\begin{comment}
-    \item is it new filters that get triggered most frequently? or are there also very active old ones? -- we have the most active filters per year, where we can observe this. It's a mixture of older and newer filter IDs (they get an incremental ID, so it is somewhat obvious what's older and what's newer); is there a tendency to split and refine older filters?
-    \item how many different edit filter editors are there (af\_user)?
-\end{comment}
-
-\begin{comment}
-    From filter-lists/edit-filter-managers-bot-operators
-    %TODO Check there for further patterns
-* 893, Predatory open access journals - introduced by Beetstra on 6.12.2017 and deleted again the same day https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=893 (probably doubling since filter 891 is already  named "Predatory open access journals" and was introduced on 3.12.2017 https://en.wikipedia.org/wiki/Special:AbuseFilter/history?user=&filter=891 ; Beetstra added some additional domains to check to this filter on 11.12.2017 https://en.wikipedia.org/wiki/Special:AbuseFilter/history/891/diff/prev/18262); since both filters were introduced so close in time to one another I can imagine that there was an incident/discussion/request for such a filter and two different people went on and implemented it without coordinating with eachother.
-\end{comment}
-
-* How stable is the filter maker community?
-  ** how many new users have become part of it over time?
-  ** Has it been the same people from the very beginning?
-  ** are there a couple of very active edit filter managers, that are also (informal) leaders?
-  ** Do edit filter managers specialize on particular types of filters (e.g. vandalism vs good faith?)
-
-\begin{comment}
-%TODO This is a duplicate of a paragraph in 4.5.1. Does it fit better here?
-% this actually fits also in the patterns of new filters in chap.5; these are the filters introduced for couple of days/hours, then switched off to never be enabled again
-Edit filter managers often introduce filters based on some phenomena they have observed caught by other filters, other algorithmic quality control mechanisms or general experience.
-As all newly implemented filters, these are initially enabled in logging only mode until enough log entries are generated to evaluate whether the incident is severe and frequent enough to need a filter.
-
-
-Quite some of the 154 edit filter managers have a kind of "not active at the moment" banner on their user page.
-How many new editors have gotten the permission in recent time?
-Otherwise the group is apparently aging..
-
-
-CAT: https://ca.wikipedia.org/wiki/Especial:Usuaris/abusefilter (currently: 4 users)
-
--- auf Spanisch/Deutsch/Russisch existiert die Rolle nicht; interessant zu wissen, ob sie iwo subsumiert wurde
--- auf Bulgarisch übrigens auch nicht, aber da existiert auch die gesamte EditFilter seite nicht
-Probably it's simply admins who can modify the filters there.
-
-\subsection{Modifying a filter}
-% TODO Moved from chap.4, building a filter
-It is not uncommon, that the action(s) a particular filter triggers change over time.
-As of the guidelines for implementing new filters, every filter should be enabled in ``log only'' mode at its introduction.
-After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
-Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO src? other than data?
-
-\end{comment}
-
-* How are filter actions set
-  ** there's this pattern that all actions but logging (which cannot be switched off) are took out, when edit filter managers are updating the regex of the filter
-  ** there's a tendency of editors to hide filters just for the heck of it (at least there are never clear reasons given), which is then reverted by other editors with the comment that it is not needed: 148, 225 (consesus that general vandalism filters should be public \url{[Special:Permalink/784131724#Privacy of general vandalism filters]}), 260 (similar to 225), 285 (same), 12 (same), 39 (unhidden with the comment "made filter public again - these edits are generally made by really unsophisticated editors who barely know how to edit a page. --zzuuzz")
-  ** oftentimes, when a hidden filter is marked as "deleted" it is made public
-
-
-%TODO What were the first filters to be implemented immediately after the launch of the extension?
 
 \section{Public and Hidden Filters}
 
@@ -325,6 +334,8 @@ There is also a designated mailing list for discussing these: wikipedia-en-editf
 It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
 It is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
 
+%TODO decide whether to include this here or move back to actions
+  ** there's a tendency of editors to hide filters just for the heck of it (at least there are never clear reasons given), which is then reverted by other editors with the comment that it is not needed: 148, 225 (consesus that general vandalism filters should be public \url{[Special:Permalink/784131724#Privacy of general vandalism filters]}), 260 (similar to 225), 285 (same), 12 (same), 39 (unhidden with the comment "made filter public again - these edits are generally made by really unsophisticated editors who barely know how to edit a page. --zzuuzz")
 
 \section{Types of edit filters: Manual Classification}
 \label{sec:manual-classification}
