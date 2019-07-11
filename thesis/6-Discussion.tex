@@ -22,7 +22,17 @@ Bot development on the other hand (syn!) is a little more challenging:
 A developer needs resonable knowledge of at least one programming language and on top of that has to make themself familiar with stuff like the Wikimedia API, ....
 Moreover, since regular expressions are still somewhat human readable and understandable (syn!) in contrast to a lot of popular machine learning algorithms, it is easier to hold rule based systems and their developers accountable.
 
-% Part of the software vs externally run
+\begin{comment}
+maybe it's a historical phenomenon (in many regards):
+* perhaps there were differences that are not essential anymore, such as:
+  * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
+  * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
+* perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
+* perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
+* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
+\end{comment}
+
+% The infrastructure question: Part of the software vs externally run
 One difference between bots and filters underlined several times was that as a MediaWiki extension edit filters are part of the core software whereas bots are running on external infrastructure which makes them generally less reliable.
 Nowadays, we can ask ourselves whether this is a significant difference (syn!) anymore:
 a lot of bots are run on the toolserver which is also provided and maintained by the Wikimedia Foundation (the same people/organisation who run the Wikipedia servers), so in consequence just as reliable and available as the encyclopedia itself.
@@ -80,29 +90,13 @@ propriate moderator tools."
 %***************************************
 \cite{GeiRib2010}
 
-"these tools makes certain pathways of action easier for vandal
+"these tools make certain pathways of action easier for vandal
 fighters and others harder"
 
 "Ultimately, these tools take their users
-through standardized scripts of action in which it always
+through stan dardized scripts of action in which it always
 possible to act otherwise, but such deviations demand
 inventiveness and time."
-
-%\subsection{Harassment and bullying}
-* where is the thesis going?
-  * should there be some recommended guidelines based on the insights?
-  * or some design recommendations?
-  * or maybe just a framework for future research: what are questions we just opened?; we still don't know the answer to and should be addressed by future research?
-
-Why does this system continue to exist in times of fancier (syn!) machine learning based tools?
-
-maybe it's a historical phenomenon (in many regards):
-* perhaps there were differences that are not essential anymore, such as:
-  * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
-  * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
-* perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
-* perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
-* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
 
 \begin{comment}
 Use as an argument in favor of filter came to be this way organically
