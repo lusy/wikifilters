@@ -9,7 +9,7 @@
 7	636	0	0	1	0	0	default	20181231024947	warn	726764	Unexplained removal of sourced content	good_faith_deletion	
 8	3	0	0	1	0	0	default	20181018194624	warn,tag	700522	New user blanking articles	good_faith_deletion	in the meantime, the filter is set to “disallow” (18.1.2019), which will rather render it ‘general_vandalism’ (since there isn’t a ‘blanking_vandalism’ or similar code at the moment
 9	650	0	0	1	0	0	default	20160721182156		695601	Creation of a new article without any categories	general_tracking	in the meantime handled by https://en.wikipedia.org/wiki/Special:NewPagesFeed
-10	279	0	0	1	0	0	default	20190104180929	throttle,tag	616212	Repeated attempts to vandalize	unclear / hidden_vandalism	undecided between unclear and hidden_vandalism; filter is hidden at the moment, I have an older version whose pattern seems to throttle edits by all non-confirmed users
+10	279	0	0	1	0	0	default	20190104180929	throttle,tag	616212	Repeated attempts to vandalize	unclear	undecided between unclear and hidden_vandalism; filter is hidden at the moment, I have an older version whose pattern seems to throttle edits by all non-confirmed users
 11	432	0	0	1	0	0	default	20160614010135	warn,tag	558578	Starting new line with lowercase letters	good_faith_orthography	although there’s the comment “Test whether starting a new line with small letters is unique to vandalism. […] Exceeded my expectations. High catch rate with nearly no FPs. Turn to warn and tag for now. -Sole Soul”
 12	225	0	0	1	0	0	default	20180807154519	disallow	482872	Vandalism in all caps	profanity_vandalism	judging the comments, the filter has changed substantially
 13	50	0	0	1	0	0	default	20181018234925	warn,tag	480960	Shouting	not_polite	alternative tags: ‘general_vandalism’, ‘good_faith_orthography’

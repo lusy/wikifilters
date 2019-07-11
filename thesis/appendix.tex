@@ -173,14 +173,14 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
   Def: Interaction with others turning non-civil without becoming directly a personal attack? Do we really need this tag if we'll only label one filter with it?
   Examples: 521 "Feedback: All caps" (single example)
 
+'hidden\_vandalism'
+ Def: Tag for hidden filters where a more specific tag could not be determined
+ Example:
+
 \subsubsection{General vandalism}
 
 'general vandalism'
  Def: vandalism for which none of the more specific tags applied
- Example:
-
-'hidden\_vandalism'
- Def: Tag for hidden filters where a more specific tag could not be determined
  Example:
 
 \subsection{Spam/malware/etc.}
@@ -279,6 +279,12 @@ Introducing because of filter 18 "Test type edits from clicking on edit bar"
 'general\_maintenance' (used to be 'maintenance' upon 1st labeling)
   Def: Filters taking care of other maintenance tasks (It looks like, I will have problems to distinguish between this one and 'general\_tracking')
   Examples: 728 "Huggle"; 942 "Log edits to protected pages"; 199 "Unflagged Bots"
+\subsection{Contemplating to introduce}
+
+'general\_tracking' %TODO move to maintenance
+  Def: There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is
+  Examples: 362 "New user creating page" would fit better in here I think
+
 
 \subsection{Unknown}
 
@@ -291,12 +297,6 @@ Introducing because of filter 18 "Test type edits from clicking on edit bar"
 'unclear'
   Def: I'd say that is similar to misc and both should be merged
   Examples: 362 "New user creating page", 300 "Cross-posting"
-
-\subsection{Contemplating to introduce}
-
-'general\_tracking'
-  Def: There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is
-  Examples: 362 "New user creating page" would fit better in here I think
 
 
 \section{Extra figures and tables}
@@ -394,12 +394,12 @@ abuse_filter_action
   \caption{abuse\_filter\_action schema}~\label{fig:app-db-schemas-afa}
 \end{figure*}
 
-
+%TODO add column "manual tags" (see jupyter NB)
 \begin{table}
   \centering
   \begin{tabular}{r c r }
     % \toprule
-    Filter ID & Publicly available description & Hitcount \\ %TODO is the hitcount for the year or altogether till now?
+    Filter ID & Publicly available description & Hitcount \\ % is the hitcount for the year or altogether till now?-- for the year, of course
     \hline
     135 & repeating characters & 175455 \\
     30 & "large deletion from article by new editors" & 160302 \\
