@@ -1,53 +1,63 @@
 \chapter{Discussion and Limitations}
 \label{chap:discussion}
 
+The purpose of this chapter is to reflect upon what we have learnt so far and describe/outline some limitations of the present study.
+
 \section{Discussion}
 
-* Till now the whole inquiry is largely descriptive. It's fine the status quo is captured but then we should go a step further and ask "so what"? What do we have from that? Explain the data
-  * maybe we won't be able to explain a lot of it and we can open it further as interesting questions to be looked into by ethnographers
+% Why are there still rule-based systems in ML time?
+One urgent question that is still open is:
+Why are there still very well established up-and-running rule based systems in times of fancy(syn) machine learning algorithms?
+Research has long demonstrated higher precision and better results of machine learning methods. %TODO find quotes!
+Several explanations of this phenomenon come to mind.
+For one, Wikipedia's edit filters are an established system which works and does its work reasonably well, so there is no need (syn) to change it. (``never touch a running system)
+It has been organically weaven in Wikipedia's quality control ecosystem with historical needs to which it responded and people at the time believing the mechanism to be the right solution to the problem they had.
+We could ask why was it introduced in the first place when there were already other mechanisms (and possibly already the first ML based bots) %TODO check timeline
+A very plausible explanation here is that since Wikipedia is a volunteer project a lot of stuff probably happens because at some precise moment there are particular people who are familiar with some concrete technologies so they construct a solution using the technologies they are good at using (or want to use).
 
-* think about what values we embed to what systems and how; --> Lessig
+Another interesting reflection is that rule based systems are arguably easier to implement and above all to understand by humans which is why they still enjoy popularity today.
+On the one hand, overall less technical knowledge is needed in orderto implement a single filter:
+An edit filter manager has to ``merely'' understand regular expressions.
+Bot development on the other hand (syn!) is a little more challenging:
+A developer needs resonable knowledge of at least one programming language and on top of that has to make themself familiar with stuff like the Wikimedia API, ....
+Moreover, since regular expressions are still somewhat human readable and understandable (syn!) in contrast to a lot of popular machine learning algorithms, it is easier to hold rule based systems and their developers accountable.
 
-Difference bot/filter: filters are part of the "platform". (vgl also ~\cite{Geiger2014} and criticism towards the view of a hollistic platform)
-They are a MediaWiki extension, which means they are run on official Wikimedia infrastructure. (vgl \cite{Geiger2014} and "bespoke code")
-This makes them more robust and bestow them another kind of status.
-Bots on the other hand are what Stuart Geiger calls "bespoke code": they are auxiliary programms developed, mantained and run by single community members, typically (at least historically?) not on Wikimedia's infrastructure, but instead on private computers or third party servers.
-Is this difference really significant nowadays though? A lot of bots are run on the toolserver which makes the "not server-side" distinction really difficult.
-The toolserver is yet another infrastructure run and maintained by the Wikimedia foundation.
-So arguments such as reduced reliability through running on a private machine in a person's living room become kind of obsolete.
-\begin{comment}
-\cite{Geiger2014}
-"What if, from the beginning, I had decided to run my bot on the toolserver, a
-shared server funded and maintained by a group of German Wikipedians for all kinds of pur-
-poses, including bots? If so, the bot may have run the same code in the same way, producing
-the same effects in Wikipedia, but it would have been a different thing entirely."
-"when life got in the way, it was something I literally pulled the plug on
-without so much as a second thought."
-\end{comment}
+% Part of the software vs externally run
+One difference between bots and filters underlined several times was that as a MediaWiki extension edit filters are part of the core software whereas bots are running on external infrastructure which makes them generally less reliable.
+Nowadays, we can ask ourselves whether this is a significant difference (syn!) anymore:
+a lot of bots are run on the toolserver which is also provided and maintained by the Wikimedia Foundation (the same people/organisation who run the Wikipedia servers), so in consequence just as reliable and available as the encyclopedia itself.
+The argument that someone powered off the basement computer on which they were running bot X is just not as relevant anymore.
 
+% general discussion on "platform" and what the metaphor hides? (e.g. bot develorpers' frustration that their work is rendered invisible?)
+
+% before vs after
 A key difference is also that while bots check already published edits which they eventually may decide to revert, filters are triggered before an edit ever published.
+One may argue that nowadays this is not a significant difference.
+Whether a disruptive edit is outright disallowed or caught 2 seconds after its publication by ClueBot NG doesn't have a tremendous impact on the readers:
+the vast majority of them will never see the edit either way.
+% so?
 
-* another difference bots/filters, it's easier to ddos the bot infrastructure, than the filters: buy a cluster and edit till the revert table overflows
+% more on bots vs filters
+Above all the distinction of bots vs filters: what tasks are handled by which mechanism and why? slides (syn!) into the foreground over and over aagain.
+After all the investigations I would venture the claim that from end result perspective it probably doesn't make a terrible difference at all.
+As mentioned in the paragraph above, whether malicious content is directly disallowed or reverted 2 seconds later (in which time probably who 3 user have seen it, or not) is hardly a qualitative difference for Wikipedia's readers.
+I would argue though that there are other stakeholders for whom the choice of mechanism makes a bigger difference:
+the operators of the quality control mechanisms and the users whose edits are being targeted.
+The difference (syn!) for edit filter managers vs bot developers is that the architecture of the edit filter plugin fosters collaboration which results in a better system (with more eyeballs all bugs are.. ???)
+Any edit filter manager can modify a filter causing problems and the development of a single filter is mostly a collaborative (syn!) process.
+Just a view on the history of most filters reveal that they have been updated multiple times by various users.
+In contrast, bots' source code is often not publicly available and they mostly run by one operator only, so no real peer review of the code is practiced and the community has time and again complained of unresponsive bot operators in emergency cases.
 
-% Aim: I want to know why are there filters? How do they fit in the quality control ecosystem?
-Distinction filters/Bots: what tasks are handled by bots and what by filters (and why)? What difference does it make for admins? For users whose edits are being targeted? %TODO: good question, but move to analysis, since we won't be able to answer this on grounds of literature review only
+The choice of mechanism makes a difference for the editor whose edits have been classified as disruptive as well.
+Filters assuming good faith seek communication with the editor by issueing warnings which provide some feedback for the editor and allow them to modify their edit (hopefully in a constructive fashion) and publish it again.
+Bots on the other hand simply revert everything their algorithms find malicious.
+In case of good faith edits, this would mean that an editor wishing to dispute this decision should open a discussion (on the bot's talk page?) and research has shown that attempts to initiate discussions with (semi-)automated quality control agents have in general quite poor response rates % TODO quote
+% that's positive! editors get immmediate feedback and can adjust their (good faith) edit and publish it! which is psychologically better than publish something and have it reverted in 2 days
 
-\begin{itemize}
-    \item What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
-    \item Filter are classical rule-based systems. What are suitable areas of application for such rule-based system in contrast to ML systems?
-\end{itemize}
+% censorship infrastructure concerns: maybe discuss in the conclusion
 
-Discuss results:
-so I've now explored and gathered understanding on Background(Context), general workings of the edit filter system and the state of the art of edit filters on the EN Wikipedia.
-So what? What important/interesting insights have I gathered when contemplating all of this together?
-
-* also comment on negative results!
-
-* why get certain filters (and not others?)
-* do filters solve effectively the task they were conjured up to life to fulfil?
-* what kinds of biases/problems are there?
-* who is allowed to edit edit filters?
-
+% think about what values we embed in what systems and how; --> Lessig
+\begin{comment}
 Alternative approaches to community management:
 compare with Surviving the Eternal September paper~\cite{KieMonHill2016}
 "importance of strong
@@ -63,24 +73,11 @@ on board and help them clearly communicate norms."
 "designers should support an ecosystem of accessible and ap-
 propriate moderator tools."
 
+\end{comment}
+
+% TODO also comment on negative results! (what negative results do I have?)
+
 %***************************************
-
-* a realisation: number of filters cannot grow endlessly, every edit is checked against all of them and this consumes computing power! (signaled in various places) (and apparently haven't been chucked with Moore's law). is this the reason why number of filters has been more or less constanst over the years?
-* there seems to be a hard condition limit for filters: so the active ones are best of! which filters are best-of? a theory: "I've combated so and so many occurances of vandalism X with my bot. Let us implement a filter for this"
-
-* Claudia thinks it's easier to implement a filter than a bot (less technical knowledge needed)
-* Filter trigger before a publication, Bots trigger afterwads
-  ** that's positive! editors get immmediate feedback and can adjust their (good faith) edit and publish it! which is psychologically better than publish something and have it reverted in 2 days
-* thought: filter are human centered! (if a bot edits via the API, can it trigger a filter? Actually, I think yes, there were a couple of filters with something like "vandalbot" in their public comment)
-
-Claudia: * A focus on the Good faith policies/guidelines is a historical development. After the huge surge in edits Wikipedia experienced starting 2005 the community needed a means to handle these (and the proportional amount of vandalism). They opted for automatisation. Automated system branded a lot of good faith edits as vandalism, which drove new comers away. A policy focus on good faith is part of the intentions to fix this.
-
- could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
-
- From the talk archive:
-//and one more user under the same impression
-"The fact that Grawp-style vandalism is easily noticeable and revertible is precisely why we need this extension: because currently we have a lot of people spending a lot of time finding and fixing this stuff when we all have better things to be doing. If we have the AbuseFilter dealing with this simple, silly, yet irritating, vandalism; that gives us all more time to be looking for and fixing the subtle vandalism you mention. This extension is not designed to catch the subtle vandalism, because it's too hard to identify directly. It's designed to catch the obvious vandalism to leave the humans more time to look for the subtle stuff. Happy‑melon 16:35, 9 July 2008 (UTC) "
-// and this is the most sensible explaination so far
 \cite{GeiRib2010}
 
 "these tools makes certain pathways of action easier for vandal
@@ -115,6 +112,44 @@ This is so unusual, we don’t even have a word for it. It’s tempting to say �
 //yeah, I'd call it "do-ocracy"
 
 \end{comment}
+
+%***************************************
+\begin{comment}
+
+* Till now the whole inquiry is largely descriptive. It's fine the status quo is captured but then we should go a step further and ask "so what"? What do we have from that? Explain the data
+  * maybe we won't be able to explain a lot of it and we can open it further as interesting questions to be looked into by ethnographers
+
+
+* think about what values we embed in what systems and how; --> Lessig
+
+Difference bot/filter: filters are part of the "platform". (vgl also ~\cite{Geiger2014} and criticism towards the view of a hollistic platform)
+They are a MediaWiki extension, which means they are run on official Wikimedia infrastructure. (vgl \cite{Geiger2014} and "bespoke code")
+This makes them more robust and bestow them another kind of status.
+Bots on the other hand are what Stuart Geiger calls "bespoke code": they are auxiliary programms developed, mantained and run by single community members, typically (at least historically?) not on Wikimedia's infrastructure, but instead on private computers or third party servers.
+Is this difference really significant nowadays though? A lot of bots are run on the toolserver which makes the "not server-side" distinction really difficult.
+The toolserver is yet another infrastructure run and maintained by the Wikimedia foundation.
+So arguments such as reduced reliability through running on a private machine in a person's living room become kind of obsolete.
+
+\cite{Geiger2014}
+"What if, from the beginning, I had decided to run my bot on the toolserver, a
+shared server funded and maintained by a group of German Wikipedians for all kinds of pur-
+poses, including bots? If so, the bot may have run the same code in the same way, producing
+the same effects in Wikipedia, but it would have been a different thing entirely."
+"when life got in the way, it was something I literally pulled the plug on
+without so much as a second thought."
+
+* another difference bots/filters, it's easier to ddos the bot infrastructure, than the filters: buy a cluster and edit till the revert table overflows -- mh. I can also edit till the AbuseLog overflows...
+
+* why get certain filters (and not others?)
+* do filters solve effectively the task they were conjured up to life to fulfil?
+* what kinds of biases/problems are there?
+
+Claudia: * A focus on the Good faith policies/guidelines is a historical development. After the huge surge in edits Wikipedia experienced starting 2005 the community needed a means to handle these (and the proportional amount of vandalism). They opted for automatisation. Automated system branded a lot of good faith edits as vandalism, which drove new comers away. A policy focus on good faith is part of the intentions to fix this.
+
+ could be that the high hit count was made by false positives, which will have led to disabling the filter (TODO: that's a very interesting question actually; how do we know the high number of hits were actually leggit problems the filter wanted to catch and no false positives?)
+--  we can't really? unless we study the edits themselves; I did this exemplarily for edits from the peak period in 2016; they were not false positives but a big spam wave.
+\end{comment}
+
 
 \section{Limitations}
 
