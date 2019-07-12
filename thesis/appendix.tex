@@ -123,14 +123,21 @@ Example <-- examples so far come from the 1st round of labeling
 'profanity\_vandalism'
   Def: included during 2nd labeling for marking filters dealing with inserting profanities into articles in general, without them being targeted at a person (that is the difference to 'personal\_attacks')
 
+
 \subsubsection{Politically motivated vandalism}
-'religious\_vandalism'
+'religiously\_motivated'
 Def: Disruptions on topics related to religion
 Examples: 131 "Removal of controversial images" (see content; however this could fall under "image\_vandalism" as well)
 
 'politically\_motivated'
 Def: Disruptions on explicitely politic matters
 Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of India" with "independence of Pakistan""
+
+\subsubsection{General vandalism}
+
+'general\_vandalism'
+ Def: vandalism for which none of the more specific tags applied
+ Example:
 
 \subsubsection{Hardcore vandalism (the really malicious cases)}
 'sockpuppetry'
@@ -177,11 +184,6 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
  Def: Tag for hidden filters where a more specific tag could not be determined
  Example:
 
-\subsubsection{General vandalism}
-
-'general vandalism'
- Def: vandalism for which none of the more specific tags applied
- Example:
 
 \subsection{Spam/malware/etc.}
 
@@ -203,7 +205,7 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
 
 \subsection{Disruptive editing which is not outright vandalism}
 
-'copyright violation'
+'copyright\_violation'
   Def: Filters targeting potential copyright violations: e.g. images without license information, ..
   Examples: 798 "Possible copyvio for image upload"; 278 "Possible copyright violations"
 
@@ -261,11 +263,14 @@ TODO: label cases additionally with scope/area the filter is targeting
 Introducing because of filter 18 "Test type edits from clicking on edit bar"
 'good\_faith\_edit\_summary'
 'good\_faith\_revert'
-'good\_faith\_wiki\_ĺinks'
-'good\_faith\_user\_page'
+'good\_faith\_wiki\_links'
+'good\_faith\_userpage'
 'good\_faith\_redirect'
 'good\_faith\_html'
 'good\_faith\_categories'
+'good\_faith\_move'
+'good\_faith\_image'
+'good\_faith\_edits'
 
 
 \subsection{Maintenance}
@@ -279,9 +284,8 @@ Introducing because of filter 18 "Test type edits from clicking on edit bar"
 'general\_maintenance' (used to be 'maintenance' upon 1st labeling)
   Def: Filters taking care of other maintenance tasks (It looks like, I will have problems to distinguish between this one and 'general\_tracking')
   Examples: 728 "Huggle"; 942 "Log edits to protected pages"; 199 "Unflagged Bots"
-\subsection{Contemplating to introduce}
 
-'general\_tracking' %TODO move to maintenance
+'general\_tracking'
   Def: There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is
   Examples: 362 "New user creating page" would fit better in here I think
 
