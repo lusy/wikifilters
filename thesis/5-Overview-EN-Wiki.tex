@@ -365,6 +365,46 @@ However, the classification was difficult for public filters as well, since ofte
 While there are cases of juvenile vandalism (putting random swear words in articles) or characters repetiton vandalism which are pretty obvious, that is not the case for sections or articles blanking for example.
 For these, from the edit alone there is no way of knowing whether the deletion was malicious or the editor conducting it just wasn't familiar with say the correct procedure for moving an article.
 
+\begin{comment}
+# Filter according to editor motivation
+
+In some sense, the broader categories "vandalism" and "good faith" have something in common.
+They are both **motivations** out of which the editors act when composing their corresponding edits.
+As already signaled, on grounds of the edit contents alone, it is often not easy to distinguish whether we have to do with a "vandalism" or with a "good faith" edit.
+
+So, very different (contrasting?) motivations may result in identical edits.
+Does it make sense to label filters on these grounds then?
+In ambiguous cases (there are also the relatively inambiguous ones such as the infamous "poop" vandalism), there is no easy way to tell the motivation of the editor (that is, unless a communication with the editor is attempted and it's pointed out that their edits are disruptive and how to go about it in order to make a constructive contribution), neither for edit filter managers nor for us as researchers.
+
+In a way, "vandalism" and "good faith" cover all the possible experiences along the "motivation" axis:
+one of them refers to the edits made out of good and the other to the ones made out of bad intentions.
+
+("The road to hell is paved with good intentions.")
+
+## Open questions
+
+If discerning motivation is difficult, and, we want to achieve different results, depending on the motivation, that lead us to the question whether filtering is the proper mechanism to deal with disruptive edits.
+
+# Memo new users
+
+When comparing the *vandalism* and *good faith* memos, it comes to attention that both type of edits are usually performed by new(ly/recently registered) users (or IP addresses).
+
+A user who just registered an account is most probably inexperienced with Wikipedia, not familiar with all policies and guidelines and perhaps nor with MediaWiki syntax.
+
+It is also quite likely (to be verified against literature!) that majority of vandalism edits come from the same type of newly/recently registered accounts.
+In general, it is highly unlikely that an established Wikipedia editor should at once jeopardise the encyclopedia's purpose and start vandalising.
+
+Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
+("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
+
+Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
+Based on content of the edit alone, it might be frankly impossible.
+This is also signaled for example on the STiki page ("Uncertainty over malice: It can be tricky to differentiate between vandalism and good-faith edits that are nonetheless unconstructive.")~\cite{Wikipedia:STiki}
+Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor. (TODO: where is this suggested?)
+Only if the disrupting editor proves to be uncooperating, ignores warnings and continues disruptive behaviour, their edits are to be labelled "vandalism".
+
+\end{comment}
+
 %TODO compare with code book and kick the paragraph out
 In such ambiguous cases, we can be guided by the action the filter triggers (if it is ``disallow'' the filter is most probably targeting vandalism).
 At the end, we labeled most ambiguous cases with both ``vandalism'' and ``good faith''.
@@ -447,18 +487,24 @@ Filters targeting such behaviours (syn) were identified and grouped in the ``dis
 - Deletion nominations: "Good-faith nominations of articles (or templates, non-article pages, etc) are not vandalism."
 \end{comment}
 
-Several of these behaviours could actually be conceived as **good faith** edits.
-And, for several of them (as noted in the **good faith memo**), it is not immediately distinguishable whether it's a **good faith** or a **vandalism** edit.
-Ultimately, the "only" difference between the two arises from the motivation/context of the edit.
-
 
 \subsection{Good Faith}
+
+The second big cluster identified (syn!) were filters targeting ``good faith'' edits.
+``Good faith'' is a term adopted by the Wikipedia community itself, most prominently in the guideline ``assume good faith''~\cite{Wikipedia:GoodFaith}.
+%"Most people try to help the project, not hurt it. If this were untrue, a project like Wikipedia would be doomed from the beginning. "
+Filters from this cluster mostly target unconstructive edits done by new editors, not familiar with syntax, norms, or guidelines which result in broken syntax, disregard of established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.) or non encyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view).
+
+%TODO decide what to do with this; I think it's already mentioned somewhere
 \begin{comment}
-# Good faith edits
+- there is also the guideline "be bold" (or similar), so one could expect to be able to for example add unwikified text, which is then corrected by somebody else
+This tended to be the case in the early days of Wikipedia.
+Messy edits were done and others took them and re-modelled them.
+    Since the rise of algorithmic quality contorl mechanisms though, edits are more often than not considered on an accept/reject basis but no "modelling" them into "proper" encyclopedic pieces of writing takes place anymore. %TODO find out which paper was making this case
+\end{comment}
 
-*Good faith* is a term used by the Wikipedia community itself.
-Most prominently in the phrase "Always assume good faith".
-
+%TODO decide what to do with this paragraph; most of it should be mentioned already
+\begin{comment}
 As I recently learned, apparently this guideline arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
 It rather arose at a time when, after a significant growth in Wikipedia, it wasn't manageable to govern the project (and most importantly fight emergent vandalism which grew proportionally to the project's growth) manually anymore.
 To counteract vandalism, a number of automated measures was applied.
@@ -466,81 +512,16 @@ These, however, had also unforseen negative consequences: they drove newcomers a
 In an attempt to fix this issue, "Assume good faith" rose to a prominent position among Wikipedia's Guidelines.
 (Specifically, the page was created on March 3rd, 2004 and was originally refering to good faith during edit wars.
 An expansion of the page from December 29th 2004 starts refering to vandalism. https://en.wikipedia.org/w/index.php?title=Wikipedia:Assume_good_faith&oldid=8915036)
-
-Today, in vandalism combating (?), there are guidelines that plead for caution and several escalation levels, before an editor is banned. (TODO: elaborate, maybe move to vandalism)
-Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
-("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
-Not all disruptive behaviour is vandalism, the guidelines suggest~\cite{Wikipedia:Vandalism}.
-
-Examples of "good faith" edits that are non the less disruptive are not complying with Wiki syntax (mostly because of being unfamiliar with it), deleting a page instead of moving it, using improper redirects or publishing test changes; also because of being unaware of proper procedure.
-
-Edit warring is not vandalism either~\cite{Wikipedia:Vandalism}.
-Despite sometimes being highly disruptive.
-
-Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
-Based on content of the edit alone, it might be frankly impossible.
-This is also signaled for example on the STiki page ("Uncertainty over malice: It can be tricky to differentiate between vandalism and good-faith edits that are nonetheless unconstructive.")~\cite{Wikipedia:STiki}
-Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor. (TODO: where is this suggested?)
-Only if the disrupting editor proves to be uncooperating, ignores warnings and continues disruptive behaviour, their edits are to be labelled "vandalism".
-
-## Properties/Characteristics
-
-- mostly done by new editors, not familiar with syntax, norms, guidelines
-- result in:
-  - broken syntax
-  - disregarding established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.)
-  - non encyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view)
-
-- there is also the guideline "be bold" (or similar), so one could expect to be able to for example add unwikified text, which is then corrected by somebody else
-This tended to be the case in the early days of Wikipedia.
-Messy edits were done and others took them and re-modelled them.
-    Since the rise of algorithmic quality contorl mechanisms though, edits are more often than not considered on an accept/reject basis but no "modelling" them into "proper" encyclopedic pieces of writing takes place anymore. %TODO find out which paper was making this case
-
-## Examples
-
-Some of the filters in the "good faith" category target (public comment of the filter): %TODO vgl 2nd presi
-- test edits
-- misplaced "#redirect" in articles
-- moves to or from Module namespace
-- Large creations by inexperienced users
-- creation of a new article without any categories
-- new user removing references
-- Adding "example.jpg" to article space
-
-## https://en.wikipedia.org/wiki/Wikipedia:Assume_good_faith
-"Most people try to help the project, not hurt it. If this were untrue, a project like Wikipedia would be doomed from the beginning. "
 \end{comment}
 
-\subsection{Editors' motivation}
-\begin{comment}
-# Filter according to editor motivation
+The focus of these filters lies in the communication with the disrupting editors:
+a lot of the filters issue warnings intending to guide the editors towards ways of modifying their contribution to become a constructive one.
 
-In some sense, the broader categories "vandalism" and "good faith" have something in common.
-They are both **motivations** out of which the editors act when composing their corresponding edits.
-As already signaled, on grounds of the edit contents alone, it is often not easy to distinguish whether we have to do with a "vandalism" or with a "good faith" edit.
+The coding of filters from this cluster took into consideration/reflects the area the editor was intending to contribute to or respectively that they (presumably) unintentionally disrupted.
 
-So, very different (contrasting?) motivations may result in identical edits.
-Does it make sense to label filters on these grounds then?
-In ambiguous cases (there are also the relatively inambiguous ones such as the infamous "poop" vandalism), there is no easy way to tell the motivation of the editor (that is, unless a communication with the editor is attempted and it's pointed out that their edits are disruptive and how to go about it in order to make a constructive contribution), neither for edit filter managers nor for us as researchers.
+Some filters with labels pertaining (syn!) to the ``good faith'' cluster target (syn!) for example unwikified edits, publishing test changes, or improper use of templates.
+% unaware of proper procedure
 
-In a way, "vandalism" and "good faith" cover all the possible experiences along the "motivation" axis:
-one of them refers to the edits made out of good and the other to the ones made out of bad intentions.
-
-("The road to hell is paved with good intentions.")
-
-## Open questions
-
-If discerning motivation is difficult, and, we want to achieve different results, depending on the motivation, that lead us to the question whether filtering is the proper mechanism to deal with disruptive edits.
-
-# Memo new users
-
-When comparing the *vandalism* and *good faith* memos, it comes to attention that both type of edits are usually performed by new(ly/recently registered) users (or IP addresses).
-
-A user who just registered an account is most probably inexperienced with Wikipedia, not familiar with all policies and guidelines and perhaps nor with MediaWiki syntax.
-
-It is also quite likely (to be verified against literature!) that majority of vandalism edits come from the same type of newly/recently registered accounts.
-In general, it is highly unlikely that an established Wikipedia editor should at once jeopardise the encyclopedia's purpose and start vandalising.
-\end{comment}
 
 \subsection{Maintenance}
 
@@ -577,6 +558,7 @@ Most of them do log only.
         I actually think, a bot fixing this would be more appropriate.
 \end{comment}
 
+\subsection{Manual classification: outlook/concluding remarks}
 %TODO What were the first filters to be implemented immediately after the launch of the extension?
 The extension was launched on March 17th, 2009.
 Filter 1 is implemented in the late hours of that day.
