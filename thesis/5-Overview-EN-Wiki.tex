@@ -522,41 +522,23 @@ The coding of filters from this cluster took into consideration/reflects the are
 Some filters with labels pertaining (syn!) to the ``good faith'' cluster target (syn!) for example unwikified edits, publishing test changes, or improper use of templates.
 % unaware of proper procedure
 
+%TODO do something with this
+\begin{comment}
+Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
+%TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
+I actually think, a bot fixing this would be more appropriate.
+\end{comment}
 
 \subsection{Maintenance}
 
-\begin{comment}
-# Filters with maintenance purpose
-
 Some of the encountered edit filters on the EN Wikipedia were targeting neither vandalism nor good faith edits.
-These had rather their focus on (semi-)automated routine (clean up) tasks.
+Rather, they had their focus on (semi-)automated routine (clean up) tasks.
 
-    Some of the filters I labeled as "maintenance" were for instance recording cases of broken syntax caused by a faulty browser extension (Filter 345)
-Others were targeting bugs such as.. 
+Some of the filters from the ``maintenance'' cluster were for instance targeting bugs such as broken syntax caused by a faulty browser extension.
+Or there were such which simply tracked particular behaviours (such as mobile edits or edits made by unflagged bots) for various purposes.
 
-%TODO compare also with 2nd presi
-577 -> "VisualEditor bugs: Strange icons"
-345 -> "Extraneous formatting from browser extension"
-313 -> "Skype Toolbar Formatting"
-199 -> "Unflagged Bots"
-505 -> "Tag mobile edits"
-728 -> "Huggle"
-209 -> "arwiki interwiki problem"
+The maintenance cluster differs conceptually from the ``vandalism'' and ``good faith'' ones in so far that filters in it don't target particular **intents** of the editors whose edits are triggering the filter, but rather "side"-occurances that mostly went wrong.
 
-The maintenance parent category differs conceptually from the other 2 in so far that filters in it don't target particular **intents** of the editors whose edits are triggering the filter, but rather "side"-occurances that mostly went wrong.
-
-## Bugs
-
-There are some 10 or so filters I manually labeled as targeting "bugs".
-Most of them do log only.
-\end{comment}
-
-\begin{comment}
-    \item get a sense of what gets filtered (more qualitative): TODO: refine after sorting through manual categories; preliminary: vandalism; unintentional suboptimal behavior from new users who don't know better ("good faith edits") such as blanking an article/section; creating an article without categories; adding larger texts without references; large unwikified new article (180); or from users who are too lazy (to write proper edit summaries; editing behaviours and styles not suitable for an encyclopedia (poor grammar/not commiting to orthography norms; use of emoticons and !; ascii art?); "unexplained removal of sourced content" (636) may be an attempt to silence a view point the editor doesn't like; self-promotion(adding unreferenced material to BLP; "users creating autobiographies" 148;); harassment; sockpuppetry; potential copyright violations; that's more or less it actually. There's a third bigger cluster of maintenance stuff, such as tracking bugs or other problems, trying to sort through bot edits and such. For further details see the jupyter notebook.
-        Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
-        %TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
-        I actually think, a bot fixing this would be more appropriate.
-\end{comment}
 
 \subsection{Manual classification: outlook/concluding remarks}
 %TODO What were the first filters to be implemented immediately after the launch of the extension?
