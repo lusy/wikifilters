@@ -64,7 +64,7 @@ So, if a user whose status is not confirmed yet tries to edit a page in the arti
 
 Note that an edit filter editor can easily change the action of the filter. (Or the pattern, as a matter of fact.)
 The filter was last modified on October 23rd 2018.
-All these details can be viewed on the filter's detailed page\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseFilter/365}}
+All these details can be viewed on the filter's detailed page~\cite{Wikipedia:EditFilter365}
 or on the screenshot thereof (figure~\ref{fig:filter-details}) that I created for convenience.
 
 Further information the filter detailed page displays is:
@@ -121,7 +121,7 @@ The documentation of the AbuseFilter extension provides us comprehensive definit
 % Isn't it rather that rangeblock, degroup and block have never been used on EN Wikipedia, at least according to the logs?
 To be more precise, the last time filter actions other than \emph{log}, \emph{tag}, \emph{warn} or \emph{disallow} were triggered on the EN Wikipedia was in 2012 and these were \emph{blockautopromote} and \emph{aftv5flagabuse}. %TODO Refer to data analysis or make a quarry to back this
 % Following 4 filters have blockautopromote as an action (note that this could have changed since 2012!): 115, 267, 334, 21;
-\emph{aftv5flagabuse} is a deprecated action related to the now deprecated Article Feedback MediaWiki extension (or Article Feedback Tool, Version 5) which purpose was to involve readers more actively in article quality assessment\footnote{\url{https://www.mediawiki.org/w/index.php?title=Extension:ArticleFeedbackv5&oldid=3136840}}.
+\emph{aftv5flagabuse} is a deprecated action related to the now deprecated Article Feedback MediaWiki extension (or Article Feedback Tool, Version 5) which purpose was to involve readers more actively in article quality assessment~\cite{Wikipedia:ArticleFeedback}.
 (However, during the testing phase, reader feedback was found mostly not particularly helpful and hence the extension was discontinued.)
 
 Guidelines specifically call for careful use of \emph{disallow}.
@@ -153,7 +153,7 @@ For additional reference, the format for the regex rules~\cite{Mediawiki:AbuseFi
 %TODO make sure there is enough explanation in the sections before to be able to follow the narrative here
 
 Now that there is a general understanding of what edit filters look like today, let us take a step back and investigate how they came to be this way.
-In order to comprehend the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia_talk:Edit_filter/Archive_1&oldid=884572675}}
+In order to comprehend the consensus building on the functionality of the extension, I sifted through the archives of the Edit Filter talk page~\cite{Wikipedia:EditFilterTalkArchive1}
 for the period between the announcement that the extension is planned up until the voting process preceding its introduction.
 
 For a while at the beginnings of the discussion, there was some confusion among editors regarding the intended functionality of the edit filters.
@@ -210,13 +210,13 @@ The Edit Filters Requests page asks users to go through the following checklist 
     \item filters, after adding up, make editing slower, so the usefulness of every single filter and condition has to be carefully considered;
     \item in depth checks should be done by a separate software that users run on their own machines;
     \item no trivial errors should be catched by filters (e.g. concerning style guidelines);
-    \item there are the Titles Blacklist\footnote{\url{https://en.wikipedia.org/w/index.php?title=MediaWiki:Titleblacklist&oldid=904314604}} and the Link/Spam Blacklist\footnote{\url{https://en.wikipedia.org/w/index.php?title=MediaWiki:Spam-blacklist&oldid=904319854}} which should be used if the issue at hand has to do with a problematic title or link.
+    \item there are the Titles Blacklist~\cite{Mediawiki:TitleBlacklist} and the Link/Spam Blacklist~\cite{Mediawiki:SpamBlacklist} which should be used if the issue at hand has to do with a problematic title or link.
 \end{itemize}
 
 For edit filter managers, the best practice way for introducing a new filter is described under \url{https://en.wikipedia.org/wiki/Wikipedia:Edit_filter/Instructions}.
 According to the page, these steps should be followed:
 \begin{enumerate}
-    \item read the documentation: \url{https://www.mediawiki.org/wiki/Extension:AbuseFilter/Rules_format}
+    \item read the documentation~\cite{Mediawiki:AbuseFilterRules}
     \item test with debugging tools: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/tools} (visible only for users who are already in the edit filter managers user group)
     \item test with the batch testing interface (also available to edit filter managers only)
     \item create a logging only filter: \url{https://en.wikipedia.org/wiki/Special:AbuseFilter/new} (edit filter manager permissions needed)
@@ -246,11 +246,11 @@ According to~\cite{Wikipedia:EditFilter} this right is given only to editors who
 Further down on the page it is clarified that it is administrators who can assign the permission to users (also to themselves) and they should only assign it to non-admins in exceptional cases, ``to highly trusted users, when there is a clear and demonstrated need for it''.
 If editors wish to be given this permission, they can hone and prove their skills by helping with requested edit filters and false positives~\cite{Wikipedia:EditFilter}.
 
-The formal process for requesting the \emph{abusefilter-modify} permission is to raise the request at the edit filter noticeboard~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276}}.
+The formal process for requesting the \emph{abusefilter-modify} permission is to raise the request at the edit filter noticeboard~\cite{Wikipedia:EditFilterNoticeboard}.
 A discussion is held there, usually for 7 days, before a decision is reached~\cite{Wikipedia:EditFilter}.
 
-As of 2017, when the ``edit filter helper'' group was introduced (editors in this group have the \emph{abusefilter-view-private} permission)\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_helper&oldid=878127027}},
-the usual process seems to be that editors request this right first and only later the full \emph{abusefilter-modify} permissions\footnote{That is the tendency we observe at \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276 }}.
+As of 2017, when the ``edit filter helper'' group was introduced (editors in this group have the \emph{abusefilter-view-private} permission)~\cite{Wikipedia:EditFilterHelper},
+the usual process seems to be that editors request this right first and only later the full \emph{abusefilter-modify} permissions\footnote{That is the tendency we observe at the Edit filter noticeboard~\cite{Wikipedia:EditFilterNoticeboard}}.
 
 A list of the current edit filter managers for the EN Wikipedia can be found here: \url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter}.
 As of May 10, 2019, there are 154 users in the ``edit filter managers'' group\footnote{\url{https://en.wikipedia.org/w/index.php?title=Special:ListUsers&offset=&limit=250&username=&group=abusefilter&wpsubmit=&wpFormIdentifier=mw-listusers-form}}.
@@ -272,7 +272,7 @@ As described section~\ref{sec:mediawiki-ext}, a variety of different actions may
 Of these, only \emph{tag}, \emph{throttle}, \emph{warn}, and \emph{disallow} seem to be used today.
 If a filter is set to \emph{warn} or \emph{disallow}, the editor is notified that they hit a filter by a warning message (see figure~\ref{fig:screenshot-warn-disallow}).
 These warnings describe the problem that occurred and present the editor with possible paths of action:
-complain on the False Positives page\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter/False_positives&oldid=879367604}} in case of \emph{disallow} (the edit is not saved),
+complain on the False Positives page~\cite{Wikipedia:EditFilterFalsePositives} in case of \emph{disallow} (the edit is not saved),
 or, complain on the False Positives page and publish the change anyway in case of \emph{warn}.
 (Of course, in case of a warning, the editor can modify their edit before publishing it.)
 On the other hand, when the filter action is set to \emph{tag} or \emph{log} only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
@@ -303,11 +303,11 @@ and all edits that trigger an edit filter are listed in the Abuse Log\footnote{\
 
 There are several pages where problematic behaviour concerning edit filters are reported and potential solutions are considered.
 
-For instance, current filters behaviour is discussed on the Edit Filter Noticeboard~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter_noticeboard&oldid=904205276}}.
+For instance, current filters behaviour is discussed on the Edit Filter Noticeboard~\cite{Wikipedia:EditFilterNoticeboard}.
 Issues handled here include changing the edit filter action of single filters, changing edit filter warning templates, problems with specific regexes or variables and proposals for filter deletions (or for introducing new filters).
 Furthermore, on the noticeboard discussions take place about giving edit filter manager rights to users, or withdrawing these if a misuse was observed and raising the issue with the editor directly didn't resolve the problem~\cite{Wikipedia:EditFilter}.
 
-False positives among the filter hits are reported and discussed on a separate page~\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter/False_positives&oldid=879367604}}.
+False positives among the filter hits are reported and discussed on a separate page~\cite{Wikipedia:EditFilterFalsePositives}.
 Edit filter managers and other interested editors monitor this page and verify or disprove the reported incidents.
 Edit filter managers use true false positives to improve the filters, give advice to good faith editors who tripped a filter and discourage authors of vandalism edits who reported these as false positives from continuing with their disrtuption.
 % who moderates the false positives page? where does the info come from that it is edit filter managers? I think this info comes from observation
@@ -519,9 +519,9 @@ During the present study, I have also observed various cases of edit filters and
 %TODO check whether there are other types of cooperations at all: what's the deal with Twinkle? and update here!
 % are there further examples of such collaborations: consider scripting smth that parses the bots descriptions from https://en.wikipedia.org/wiki/Category:All_Wikipedia_bots and looks for "abuse" and "filter" -- nice idea, but no time
 DatBot, Mr.Z-bot and MusikBot are all examples for bots conducting support tasks for filters.
-DatBot~\cite{Wikipedia:DatBot} monitors the Abuse Log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}}
-and reports users tripping certain filters to WP:AIV (Administrator intervention against vandalism)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Administrator_intervention_against_vandalism}} and WP:UAA (usernames for administrator attention)\footnote{\url{https://en.wikipedia.org/wiki/Wikipedia:Usernames_for_administrator_attention}}.
-It is the successor of Mr.Z-bot\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:Mr.Z-bot&oldid=898492130}}
+DatBot~\cite{Wikipedia:DatBot} monitors the Abuse Log~\cite{Wikipedia:AbuseLog}
+and reports users tripping certain filters to WP:AIV (Administrator intervention against vandalism)\cite{Wikipedia:AIV} and WP:UAA (usernames for administrator attention)~\cite{Wikipedia:UAA}.
+It is the successor of Mr.Z-bot~\cite{Wikipedia:MrZBot}
 which used to report users from the abuse log to WP:AIV, but has been inactive since 2016 and therefore recently deactivated.
 %\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
 
