@@ -22,6 +22,9 @@ Bot development on the other hand (syn!) is a little more challenging:
 A developer needs resonable knowledge of at least one programming language and on top of that has to make themself familiar with stuff like the Wikimedia API, ....
 Moreover, since regular expressions are still somewhat human readable and understandable (syn!) in contrast to a lot of popular machine learning algorithms, it is easier to hold rule based systems and their developers accountable.
 
+Filters are a simple mechanism (simple to implement) that swiftly takes care of cases that are simple to recognise as undesirable.
+ML needs training data (expensive), it's not simple to implement.
+
 \begin{comment}
 maybe it's a historical phenomenon (in many regards):
 * perhaps there were differences that are not essential anymore, such as:
@@ -86,6 +89,8 @@ propriate moderator tools."
 \end{comment}
 
 % TODO also comment on negative results! (what negative results do I have?)
+
+% TODO comment on: so what's the role of the filters, why were they introduced (to get over with obvious persistent vandalism which was difficult to clean up, most probably automated) -- are they fulfilling this purpose?
 
 %***************************************
 \cite{GeiRib2010}
@@ -200,3 +205,5 @@ also
 %TODO Do edit filter managers specialize on particular types of filters (e.g. vandalism vs good faith?) -- abuse\_filter\_history table is needed for this
 
 * talk to edit filter managers (especially such who are simultaneously also bot operators)
+
+* What proportion of work do filters take over: compare filter hits with number of all edits and reverts via other quality control mechanisms

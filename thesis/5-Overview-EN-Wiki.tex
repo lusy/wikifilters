@@ -11,6 +11,8 @@ and the methods we use–in chapter 3.
 Section~\ref{sec:patterns} explores (syn) some patterns in the edit filters' usage and..
 And we look into the manual classification of EN Wikipedia's edit filters I've undertaken in an attempt to understand what is it that they actually filter in section~\ref{sec:manual-classification}.
 
+%TODO tell a story with the chapter: what do filters do? How have their tasks evolved over time (if feasible) --> maybe tell it along the peak: it is an extraordinary situation, where we can see it is exactly X and Y and Z what filters do
+
 %TODO check whether to discuss this bunch of random questions and where
 \begin{comment}
     \item how often were filters with different actions triggered? (afl\_actions) (over time) --> abuse\_filter\_log
@@ -91,7 +93,7 @@ The relative proportion of these groups to each other can be viewed on figure~\r
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{pics/general_stats.png}
-  \caption{EN Wikipedia edit filters: hidden, disabled and deleted filters}~\label{fig:general-stats}
+  \caption{There are 954 edit filters on EN Wikipedia}~\label{fig:general-stats}
 \end{figure}
 
 \subsection{Filter actions}
@@ -165,6 +167,13 @@ It is signaled, that the mailing list is meant for sensitive cases only and all 
   ** there's a tendency of editors to hide filters just for the heck of it (at least there are never clear reasons given), which is then reverted by other editors with the comment that it is not needed: 148, 225 (consesus that general vandalism filters should be public \url{[Special:Permalink/784131724#Privacy of general vandalism filters]}), 260 (similar to 225), 285 (same), 12 (same), 39 (unhidden with the comment "made filter public again - these edits are generally made by really unsophisticated editors who barely know how to edit a page. --zzuuzz")
 
 Oftentimes, when a hidden filter is marked as ``deleted'', it is made public. (examples!)
+
+$2/3$ of all filters are hidden.
+However, if we look at the enabled filters only, there are actually more public enabled than hidden enabled filters (or more or less the same amount)! (110 vs 91).
+This leads us to the hypothesis that it is rather that hidden filters have higher fluctuation rates, i.e. that they target specific phenomena that are over after a particular period of time after which the filters get disabled and eventually–deleted.
+This makes sense when we compare it to the hidden vs public filter policy: hidden filters for particular cases and very determined filters, public filters for general patterns.
+
+%TODO check hits: public vs hidden
 
 
 
@@ -553,13 +562,20 @@ The maintenance cluster differs conceptually from the ``vandalism'' and ``good f
 
 \section{Manual tags discussion/manual tags + activity}
 
+
 \subsection{Manual tags distribution}
-%TODO discuss figure
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{pics/manual-tags-distribution.png}
   \caption{Edit filters manual tag distribution}~\label{fig:manual-tags}
 \end{figure}
+
+%TODO discuss figure
+\begin{comment}
+* maybe just plot the parent categories and have a closer look at one of them exemplarily
+* maybe merge parent categories and only work with ``vandalism'', ``good faith'' and ``maintenance'' (and ``unknown'')
+\end{comment}
+
 
 \subsection{What filters were implemented immediately after the launch + manual tags}
 %TODO What were the first filters to be implemented immediately after the launch of the extension?
