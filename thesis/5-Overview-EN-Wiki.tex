@@ -75,14 +75,14 @@ abuse_filter
 \label{sec:patterns}
 
 In this section, we explore some general traits/patterns of/trends in the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
-The scripts that generate the statistics discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
+The scripts that generate the statistics (syn?) discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
 
 \subsection{Filter characteristics}
 % General stats
 As of January 6th, 2019 there are $954$ filters in the \emph{abuse\_filter} table.
 It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
 So, the above mentioned $954$ filters are all filters ever made up to this date.
-This doesn't mean that it never changed what the single filters are doing, since, as pointed out in chapter~\ref{}, edit filter managers can freely modify filter patterns, so at some point the filter could be doing one thing and in the next moment it can be filtering a completely different phenomenon.
+This doesn't mean that it never changed what the single filters are doing, since edit filter managers can freely modify filter patterns, so at some point the filter could be doing one thing and in the next moment it can be filtering a completely different phenomenon.
 There are cases of filters being ``repurposed'' or modified to filter for example a more general occurance/phenomenon.
 This doesn't happen very often though.
 $361$ of all filters are public, the remaining $593$–hidden.
@@ -97,28 +97,34 @@ The relative proportion of these groups to each other can be viewed on figure~\r
 \end{figure}
 
 \subsection{Filter actions}
-Another parameter we could observe are the currently configured filter actions for each filter.
-Figure~\ref{fig:all-filters-actions} depicts action per filter (note this includes all filters, also deleted ones and that some filters have multiple actions enabled).
+An interesting parameter we could observe are the currently configured filter actions for each filter.
+Figure~\ref{fig:all-active-filters-actions} depicts the frequency of signle actions for all enabled filters (note some filters have multiple actions enabled).
 And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} show the actions of all enabled public and hidden filters respectively.
 It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
-This coincides/is congruent with the community claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
+This coincides/is congruent with the community's claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
 Most public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
 
 \begin{figure}
 \centering
-  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
-  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
+  \includegraphics[width=0.9\columnwidth]{pics/all-active-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-active-filters-actions}
 \end{figure}
+
+%\begin{figure}
+%\centering
+%  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
+%  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
+%\end{figure}
 
 \begin{figure}
 \centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-public-filters-actions.png}
+  \includegraphics[width=0.9\columnwidth]{pics/active-public-actions-big.png}
   \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
 \end{figure}
 
 \begin{figure}
 \centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-filters-actions.png}
+  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-actions-big.png}
   \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
 \end{figure}
 
