@@ -175,7 +175,17 @@ This makes sense when we compare it to the hidden vs public filter policy: hidde
 
 %TODO check hits: public vs hidden
 
+\begin{comment}
+This means, only edit filter editors can view the exact filter pattern or the comments of these.
+Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}. %TODO compare with https://en.wikipedia.org/w/index.php?title=Wikipedia:About&oldid=891256910 about transparency as a value
 
+The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
+In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extension, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
+    (This was met by the community with a strong resistence, especially since at the time one of the most discussed features was the ability of filters to (temporarily) block users. Editors involved in the discussion felt strongly that no fully automated agent should be able to block human editors.)
+
+There are also private filters targetting personal attack or abuse cases.
+Here, filters are private in order to protect the affected person(s)~\cite{Wikipedia:EditFilter}.
+\end{comment}
 
 \section{Filter activity}
 
@@ -441,173 +451,53 @@ While there are cases of juvenile vandalism (putting random swear words in artic
 For these, from the edit alone there is no way of knowing whether the deletion was malicious or the editor conducting it just wasn't familiar with say the correct procedure for moving an article.
 \end{comment}
 
-\subsection{Editors' motivation}
 \begin{comment}
-# Filter according to editor motivation
-
-In some sense, the broader categories "vandalism" and "good faith" have something in common.
-They are both **motivations** out of which the editors act when composing their corresponding edits.
-As already signaled, on grounds of the edit contents alone, it is often not easy to distinguish whether we have to do with a "vandalism" or with a "good faith" edit.
-
-So, very different (contrasting?) motivations may result in identical edits.
-Does it make sense to label filters on these grounds then?
-In ambiguous cases (there are also the relatively inambiguous ones such as the infamous "poop" vandalism), there is no easy way to tell the motivation of the editor (that is, unless a communication with the editor is attempted and it's pointed out that their edits are disruptive and how to go about it in order to make a constructive contribution), neither for edit filter managers nor for us as researchers.
-
-In a way, "vandalism" and "good faith" cover all the possible experiences along the "motivation" axis:
-one of them refers to the edits made out of good and the other to the ones made out of bad intentions.
-
-("The road to hell is paved with good intentions.")
-
-%TODO decide whether following two paragraphs are redundant with a lot of stuff already and get rid of them
+%TODO where to put this?
 Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
 ("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
-
-Oftentimes, it isn't a trivial task to distinguish good faith from vandalism edits.
-Based on content of the edit alone, it might be frankly impossible.
-This is also signaled for example on the STiki page ("Uncertainty over malice: It can be tricky to differentiate between vandalism and good-faith edits that are nonetheless unconstructive.")~\cite{Wikipedia:STiki}
-Following the guideline, a patrolling editor (or whoever reads) should asume good faith first and seek a converstation with the disrupting editor. (TODO: where is this suggested?)
-Only if the disrupting editor proves to be uncooperating, ignores warnings and continues disruptive behaviour, their edits are to be labelled "vandalism".
-
 \end{comment}
 
 
-In the subsections that follow the salient properties of each manually labeled category are discussed.
+The subsections that follow discuss the salient properties of each of the main clusters of manually assigned codes.
 
 \subsection{Vandalism}
-malicious
 
 The vast majority of edit filters on EN Wikipedia could be said to target (different forms of) vandalism, i.e. maliciously intended disruptive editing.
-Examples thereof are filters for juvenile types of vandalism (inserting swear or obscene words or nonsence sequences of characters into articles), for hoaxing (inserting obvious or less obvious false information in articles) or for template vandalism (modifying a template in a disruptive way which is quite severe, since templates are displayed on various pages).
-A more elaborate subclassification was conducted; all codes belonging to the vandalism cluster together with definition and examples can be consulted in the code book attached in the appendix~\ref{}.
+Some examples thereof are filters for juvenile types of vandalism (inserting swear or obscene words or nonsence sequences of characters into articles), for hoaxing (inserting obvious or less obvious false information in articles), for template vandalism (modifying a template in a disruptive way which is quite severe, since templates are displayed on various pages), or for spam (inserting links to promotional content, often not related to the content being edited).
+All codes belonging to the vandalism cluster together with definition and examples can be consulted in the code book attached in the appendix~\ref{app:code_book}.
 
-Some vandalism types seem to be more severe than others (sock puppetry or persistant long term vandals).
+Some vandalism types seem to be more severe than others (sock puppetry or persistent long term vandals).
 It's mostly in these cases that the implemented filters are hidden.
-
-%TODO where is the best place for this? I've got the feeling it's explained somewhere already and here it's quite late
-\begin{comment}
-This means, only edit filter editors can view the exact filter pattern or the comments of these.
-Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}. %TODO compare with https://en.wikipedia.org/w/index.php?title=Wikipedia:About&oldid=891256910 about transparency as a value
-
-The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
-In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extension, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
-    (This was met by the community with a strong resistence, especially since at the time one of the most discussed features was the ability of filters to (temporarily) block users. Editors involved in the discussion felt strongly that no fully automated agent should be able to block human editors.)
-\end{comment}
-
-There are also private filters targetting personal attack or abuse cases.
-Here, filters are private in order to protect the affected person(s)~\cite{Wikipedia:EditFilter}.
-
-\subsection{Hardcore vandalism}
-A dedicated subcluster of ``hardcore vandalism'' was defined (syn!) for these cases.
-
-%TODO what to make out of this? It's kind of interesting but doesn't really serve any purpose..
-\begin{comment}
-motivations:
-- seeking attention
-- misusing the encyclopedia for own purposes (self-promotion, seo..)
-- spreading wrong information
-- defacing topics
-\end{comment}
-
-\begin{comment}
-%TODO decide what to do with all of this. Probably just leave out
-## Consequences of vandalism, vandalism management
-https://en.wikipedia.org/wiki/Wikipedia:Vandalism
-"Vandalism is prohibited. While editors are encouraged to warn and educate vandals, warnings are by no means a prerequisite for blocking a vandal (although administrators usually only block when multiple warnings have been issued). "
-
-"Upon discovering vandalism, revert such edits, using the undo function or an anti-vandalism tool. Once the vandalism is undone, warn the vandalizing editor. Notify administrators at the vandalism noticeboard of editors who continue to vandalize after multiple warnings, and administrators should intervene to preserve content and prevent further disruption by blocking such editors. Users whose main or sole purpose is clearly vandalism may be blocked indefinitely without warning."
-
-% TODO maybe keep this part, not exactly clear where
-One of the strategies to spot vandalism is "Watching for edits tagged by the abuse filter. However, many tagged edits are legitimate, so they should not be blindly reverted. That is, do not revert without at least reading the edit." //mention of filters!
-
-"Warn the vandal. Access the vandal's talk page and warn them. A simple note explaining the problem with their editing is sufficient. If desired, a series of warning templates exist to simplify the process of warning users, but these templates are not required. These templates include
-
-    Level one: {{subst:uw-vandalism1}} This is a gentle caution regarding unconstructive edits; it encourages new editors to use a sandbox for test edits. This is the mildest warning.
-    Level two: {{subst:uw-vandalism2}} This warning is also fairly mild, though it explicitly uses the word 'vandalism' and links to this Wikipedia policy.
-    Level three: {{subst:uw-vandalism3}} This warning is sterner. It is the first to warn that further disruptive editing or vandalism may lead to a block.
-    Level four: {{subst:uw-vandalism4}} This is the sharpest vandalism warning template, and indicates that any further disruptive editing may lead to a block without warning."
-\end{comment}
-
-\subsection{Disruptive Editing}
-
-According to https://en.wikipedia.org/wiki/Wikipedia:Vandalism various behaviours are (highly) disruptive albeit not vandalism.
-Filters targeting such behaviours (syn) were identified and grouped in the ``disruptive editing'' cluster. %TODO elaborate with code book
-
-\begin{comment}
-- boldly editing
-- copyright violation
-- disruptive editing or stubbornness --> edit warring
-- edit summary omission
-- editing tests by experimenting users: "Such edits, while prohibited, are treated differently from vandalism"
-- harassment or personal attacks: "Personal attacks and harassment are not allowed. While some harassment is also vandalism, such as user page vandalism, or inserting a personal attack into an article, harassment in itself is not vandalism and should be handled differently."
-- Incorrect wiki markup and style
-- lack of understanding of the purpose of wikipedia: "editing it as if it were a different medium—such as a forum or blog—in a way that it appears as unproductive editing or borderline vandalism to experienced users."
-- misinformation, accidental
-- NPOV contraventions (Neutral point of view)
-- nonsense, accidental: "sometimes honest editors may not have expressed themselves correctly (e.g. there may be an error in the syntax, particularly for Wikipedians who use English as a second language)."
-- Policy and guideline pages, good-faith changes to: "If people misjudge consensus, it would not be considered vandalism;"
-- Reversion or removal of unencyclopedic material, or of edits covered under the biographies of living persons policy: "Even factually correct material may not belong on Wikipedia, and removing such content when it is not in line with Wikipedia's standards is not vandalism."
-- Deletion nominations: "Good-faith nominations of articles (or templates, non-article pages, etc) are not vandalism."
-\end{comment}
-
-\subsection{Spam}
-
-\subsection{Point of view problems}
-
+Labels refering to such types of vandalism form the separate subcluster ``hardcore vandalism''. %TODO think about naming
+It should be mentioned at this point that I also classified ``harassment'' and ``personal attacks'' as ``hardcore vandalism'', since these types of edits are highly harmful and often dealt with by hidden filters, although according to~\cite{Wikipedia:Vandalism} both behaviours are disruptive editing rather than vandalism.
 
 \subsection{Good Faith}
-(mostly) disruptive, but not necessarily made with bad intentions
 
-The second big cluster identified (syn!) were filters targeting ``good faith'' edits.
-``Good faith'' is a term adopted by the Wikipedia community itself, most prominently in the guideline ``assume good faith''~\cite{Wikipedia:GoodFaith}.
-%"Most people try to help the project, not hurt it. If this were untrue, a project like Wikipedia would be doomed from the beginning. "
-Filters from this cluster mostly target unconstructive edits done by new editors, not familiar with syntax, norms, or guidelines which result in broken syntax, disregard of established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.) or non encyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view).
-
-%TODO decide what to do with this; I think it's already mentioned somewhere
-\begin{comment}
-- there is also the guideline "be bold" (or similar), so one could expect to be able to for example add unwikified text, which is then corrected by somebody else
-This tended to be the case in the early days of Wikipedia.
-Messy edits were done and others took them and re-modelled them.
-    Since the rise of algorithmic quality contorl mechanisms though, edits are more often than not considered on an accept/reject basis but no "modelling" them into "proper" encyclopedic pieces of writing takes place anymore. %TODO find out which paper was making this case
-\end{comment}
-
-%TODO decide what to do with this paragraph; most of it should be mentioned already
-\begin{comment}
-As I recently learned, apparently this guideline arose/took such a central position not from the very beginning of the existence of the collaborative encyclopedia.
-It rather arose at a time when, after a significant growth in Wikipedia, it wasn't manageable to govern the project (and most importantly fight emergent vandalism which grew proportionally to the project's growth) manually anymore.
-To counteract vandalism, a number of automated measures was applied.
-These, however, had also unforseen negative consequences: they drove newcomers away~\cite{HalKitRied2011}(quote literature) (since their edits were often classified as "vandalism", because they were not familiar with guidelines / wiki syntax / etc.)
-In an attempt to fix this issue, "Assume good faith" rose to a prominent position among Wikipedia's Guidelines.
-(Specifically, the page was created on March 3rd, 2004 and was originally refering to good faith during edit wars.
-An expansion of the page from December 29th 2004 starts refering to vandalism. https://en.wikipedia.org/w/index.php?title=Wikipedia:Assume_good_faith&oldid=8915036)
-\end{comment}
+The second biggest cluster identified were filters targeting (mostly) disruptive, but not necessarily made with bad intentions edits.
+The adopted name ``good faith'' is a term used/utilised by the Wikipedia community itself, most prominently in the guideline ``assume good faith''~\cite{Wikipedia:GoodFaith}.
+Filters from this cluster mostly target unconstructive edits done by new editors, not familiar with syntax, norms, or guidelines which results in broken syntax, disregard of established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.) or norms (e.g. copyright violations),  or unencyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view).
 
 The focus of these filters lies in the communication with the disrupting editors:
 a lot of the filters issue warnings intending to guide the editors towards ways of modifying their contribution to become a constructive one.
 
 The coding of filters from this cluster took into consideration/reflects the area the editor was intending to contribute to or respectively that they (presumably) unintentionally disrupted.
 
-Some filters with labels pertaining (syn!) to the ``good faith'' cluster target (syn!) for example unwikified edits, publishing test changes, or improper use of templates.
-% unaware of proper procedure
-
-%TODO do something with this
-\begin{comment}
-Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
-%TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
-I actually think, a bot fixing this would be more appropriate.
-\end{comment}
 
 \subsection{Maintenance}
-Tracking bugs, etc.
 
 Some of the encountered edit filters on the EN Wikipedia were targeting neither vandalism nor good faith edits.
 Rather, they had their focus on (semi-)automated routine (clean up) tasks.
-
 Some of the filters from the ``maintenance'' cluster were for instance targeting bugs such as broken syntax caused by a faulty browser extension.
 Or there were such which simply tracked particular behaviours (such as mobile edits or edits made by unflagged bots) for various purposes.
 
-The maintenance cluster differs conceptually from the ``vandalism'' and ``good faith'' ones in so far that filters in it don't target particular **intents** of the editors whose edits are triggering the filter, but rather "side"-occurances that mostly went wrong.
+The ``maintenance'' cluster differs conceptually from the ``vandalism'' and ``good faith'' ones in so far that the logic behind it isn't editors' intention, but rather "side"-occurances that mostly went wrong.
+
+I've also grouped in this cluster various test filters (of single editors or such being recycled by all editors).
 
 \subsection{Unknown}
+
+This is an auxiliary cluster comprising the ``unknown'' and ``misc'' tags %TODO allign with code book, right now there are 3 tags in the unknown cluster
+used to code all filters where the functionality stayed completely opaque for the observer or although it was comprehensible what the filter was doing still no more suitable label emerged.
 
 \section{Manual tags discussion/manual tags + activity}
 
@@ -640,6 +530,14 @@ some concrete users/cases (hidden filters, e.g. 4,21) and sockpuppetry (16,17)
 \subsection{Combine most active filters with manual tags}
 
 \section{Fazit}
+
+
+%TODO do something with this
+\begin{comment}
+Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
+%TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
+I actually think, a bot fixing this would be more appropriate.
+\end{comment}
 
 \begin{comment}
 ## Open questions
