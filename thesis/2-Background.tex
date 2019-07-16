@@ -1,53 +1,50 @@
-\chapter{Background: Quality-control mechanisms on Wikipedia}
+\chapter{Quality-control mechanisms on Wikipedia}
 \label{chap:background}
-
-\begin{comment}
-- algorithmic governance
-- code is law
-\end{comment}
 
 In the present chapter we study scientific literature on Wikipedia's quality control mechanisms in order to better understand the role of edit filters in this ecosystem.
 There are works on vandalism detection in general~\cite{PotSteGer2008},
-as well as several articles dedicated to bots and the role they play in mainataining quality on Wikipedia:~\cite{GeiHal2013}, \cite{Geiger2014}, \cite{GeiHal2017}, \cite{GeiRib2010}, \cite{HalRied2012}, \cite{Livingstone2016}, \cite{MueDoHer2013}, \cite{MuellerBirn2014}, \cite{Geiger2009},
-a couple which discuss fighting vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki:~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013}, \cite{Geiger2009},
+as well as several articles dedicated to bots and the role they play in mainataining quality on Wikipedia:~\cite{GeiHal2013}, \cite{Geiger2014}, \cite{GeiHal2017}, \cite{GeiRib2010}, \cite{HalRied2012}, \cite{Livingstone2016}, \cite{MueDoHer2013}, \cite{MuellerBirn2014}, \cite{Geiger2009};
+a couple which discuss fighting vandalism by means of semi-automated tools such as Huggle, Twinkle and STiki:~\cite{GeiRib2010}, \cite{HalRied2012}, \cite{WestKanLee2010}, \cite{GeiHal2013}, \cite{Geiger2009};
 and also some accounts on the emerging machine learning service ORES:~\cite{HalTar2015}, \cite{HalGeiMorSarWig2018}.
 Time and again, the literature refers also to more ``manual'' forms of quality control by editors using watchlists to keep an eye on articles they care about or even accidentially discovering edits made in bad faith~\cite{Livingstone2016}, \cite{AstHal2018}.
 There is one mechanism though that is very ostentatiously missing from all these reports: edit filters.
-%TODO: move this observation to conclusion of the chapter?
 
-At first, scientific studies on Wikipedia largely ignored algorithmic quality control mechanisms.
+Back in the day, scientific studies on Wikipedia tended to ignore algorithmic quality control mechanisms altogether.
 The number of their contributions to the encyclopedia was found to be low and therefore their impact was considered insignificant~\cite{KitChiBrySuhMyt2007}.
-This has gradually changed since around 2009 when the first papers specifically dedicated to bots (and later semi-automated tools) were published.
+This has gradually changed since around 2009 when the first papers specifically dedicated to bots (and later semi-automated tools such as Huggle and Twinkle) were published.
 In 2010, Geiger and Ribes insistently highlighted that the scientific community could no longer neglect these mechanisms as unimportant or noise in the data~\cite{GeiRib2010}.
-For one, the mechanisms' relative usage has continued to increase since they were first introduced, and in an observed two-months period in 2009 bots made 16.33\% of all edits~\cite{Geiger2009}.
-
-Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012},
-but entry barriers for new users were gradually set higher~\cite{HalGeiMorRied2013}:
-They had to learn to interact with a myriad of technical tools, learn wikisyntax, but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
-Ford and Geiger even cite a case where an editor was not sure whether a person deleted their articles or a bot~\cite{ForGei2012}.
+For one, the mechanisms' relative usage has continued to increase since they were first introduced~\cite{Geiger2009}.
 
 What is more, Geiger and Ribes argue, the algorithmic quality control mechanisms change the system not only in a matter of scale (using bots/tools is faster, hence more reverts are possible) but in a matter of substance: the very way everything interacts with each other is transformed~\cite{GeiRib2010}.
-On the grounds of quality control specifically, the introduction of tools (and bots) was fairly revolutionary:
+On the grounds of quality control specifically, the introduction of algorithmic mechanisms was fairly revolutionary:
 They enabled efficient patrolling of articles by users with little to no knowledge about the particular topic.
 Thanks to Wikipedia's idiosyncratic software architecture, this is possible even in the most ``manual'' quality control work (i.e. using watchlists to patrol articles):
 Representing information changes via diffs allows editors to quickly spot content that deviates from its immediate context~\cite{GeiRib2010}.
 
-In the following sections, we discuss what the scientific community already knows about the individual mechanisms.
+Others were worried it was getting increasingly intransparent how the encyclopedia functions and not only ``[k]eeping traces obscure help[ed] the powerful to remain in power''~\cite{ForGei2012},
+but entry barriers for new users were gradually set higher~\cite{HalGeiMorRied2013}:
+They had to learn to interact with a myriad of technical tools, learn wiki syntax, but also navigate their ground in a complex system with a decentralised socio-technical mode of governance~\cite{Geiger2017}.
+Ford and Geiger even cite a case in which an editor was not sure whether a person deleted their articles or a bot~\cite{ForGei2012}.
 
+In the following sections, we discuss what the scientific community already knows about the different mechanisms.
 
-\section{Bots}
+\section{Automated}
+
+\subsection{Bots}
 \label{section:bots}
-
-According to literature, bots constitute the first ``line of defence'' against malicious edits~\cite{GeiHal2013}. %TODO but that's actually not true! edit filters are triggered first. Comment on this! -- tried to close the circle in conclusion of chapter 4
+According to the literature, bots constitute the first ``line of defence'' against malicious edits~\cite{GeiHal2013}.
 They are also undoubtedly the quality control mechanism studied most in-depth by the scientific community.
 
 Geiger and Ribes~\cite{GeiRib2010} define bots as
 ``fully-automated software
 agents that perform algorithmically-defined tasks involved
-with editing, maintenance, and administration in Wikipedia''.
+with editing, maintenance, and administration in Wikipedia''
+\footnote{Not all bots are completely automated:
+There are batch scripts started manually and there are also bots that still need a final click by a human.
+However, the ones we focus on here–the rapid response anti-vandalism agents such as ClueBot NG~\cite{Wikipedia:ClueBotNG} and XLinkBot~\cite{Wikipedia:XLinkBot}–work in a fully automated fashion.}.
 
 Different aspects of bots and their involvement in quality control have been investigated:
-In the paper referenced above, the researchers employ their method of trace ethnography (more on it in chapter~\ref{chap:methods}) to follow a disrupting editor around Wikipedia and comprehend the measures taken in collaboration by bots (ClueBot and HBC AIV helperbot7) as well as humans using semi-automated tools (Huggle and Twinkle) up until they achieved that the malicious editor in question was banned~\cite{GeiRib2010}.
+In the paper referenced above, the researchers employ their method of trace ethnography (more on it in chapter~\ref{chap:methods}) to follow a disrupting editor around Wikipedia and comprehend the measures taken in collaboration by bots (ClueBot~\cite{Wikipedia:ClueBot} and HBC AIV helperbot7~\cite{Wikipedia:HBCAIVHelperbot}) as well as humans using semi-automated tools (Huggle~\cite{Wikipedia:Huggle} and Twinkle~\cite{Wikipedia:Twinkle}) up until they achieved that the malicious editor in question was banned~\cite{GeiRib2010}.
 Halfaker and Riedl offer a historical review of bots and semi-automated tools and their involvement in vandal fighting~\cite{HalRied2012}, assembling a comprehensive list of tools and touching on their working principle (rule vs machine learning based).
 They also develop a bot taxonomy we will come back to in chapter~\ref{chap:overview-en-wiki}. %TODO quote bot taxonomy here?
 In~\cite{GeiHal2013}, Geiger and Halfaker conduct an in-depth analysis of ClueBot NG, ClueBot's machine learning based successor, and its place within Wikipedia's vandal fighting infrastructure concluding that quality control on Wikipedia is a robust process and most malicious edits eventually get reverted even with some of the actors (temporaly) inactive, although at a different speed.
@@ -66,18 +63,8 @@ If these things are not in the software, an external bot could do them. [...]
 The main difference is where it runs and who runs it''~\cite{Livingstone2016}.
 This thought is also scrutinised by Geiger~\cite{Geiger2014} who examines in detail what the difference and repercussions are of code that is part of the core software and code that runs alongside it (such as bots) which he calls ``bespoke code''.
 Geiger pictures Wikipedia as a big socio-technical assemblage of software pieces and social processes, often completely intransparent for an outside observer who is not able to identify the single components of this system and how they interact with one another to provide the end result to the public.
-He underlines that components which are not strictly part of the server-side codebase but run by various volunteers (which is well true for the most parts of Wikipedia, it is a community project) on their private infrastructure constitute the major part of Wikipedia and also that they can experience a downtime at any moment.
+He underlines that components which are not strictly part of the server-side codebase but run by various volunteers (which is well true for the most parts of Wikipedia, it is a community project) on their private infrastructure constitute the major part of Wikipedia and also that they can experience a downtime at any moment. %TODO this may have been largely true in 2014, but there is a trend towards centralisation (bots run on the toolserver, etc).
 The vital tasks they perform, such as vandalism fighting, are often taken for granted, much to their developers' aggravation.
-
-\begin{comment}
-\cite{GeiRib2010}
-"often-unofficial technologies have fundamentally
-transformed the nature of editing and administration in
-Wikipedia"
-"Of note is the fact that these tools are largely
-unofficial and maintained by members of the Wikipedia
-community."
-\end{comment}
 
 %Concerns
 A final aspect in the bot discussion relevant here are the concerns of the community.
@@ -85,8 +72,24 @@ People have been long sceptical (and some still are) about the employment of ful
 Above all, there is a fear of bots (especially such with admin permissions) running rampant and their operators not reacting fast enough to prevent the damage.
 This led to the social understanding that ``bots ought to be better behaved than people''~\cite{Geiger2011} which still plays a crucial role in bot development today.
 
+\subsection{ORES}
 
-\section{Semi-automated tools}
+ORES is an API based free libre and open source (FLOSS) machine learning service ``designed to improve the way editors maintain the quality of Wikipedia'' \cite{HalTar2015} and increase the transparency of the quality control process.
+It uses learning models to predict a quality score for each article and edit based on edit/article quality assessments manually assigned by Wikipedians.
+Potentially damaging edits are highlighted, which allows editors who engage in vandal fighting to examine them in greater detail.
+The service was officially introduced in November 2015 by Aaron Halfaker\footnote{\url{https://wikimediafoundation.org/role/staff-contractors/}} (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli\footnote{\url{http://nitens.org/taraborelli/cv}} (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}.
+Its development is ongoing, coordinated and advanced by Wikimedia's Scoring Platform team.
+Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores or, new models can be trained and made available for everyone to use.
+The Scoring platform team reports that popular vandal fighting tools such as Huggle have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
+What is unique about ORES is that all the algorithms, models, training data, and code are public, so everyone (with sufficient knowledge of the matter) can scrutinise them and reconstruct what is going on.
+This is certainly not true for machine learning services applied by commercial companies who have interest in keeping their models secret.
+Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers.
+This last aim is crucial, since there is a body of research demonstrating how reverts in general~\cite{HalKitRied2011} and reverts by (semi-)automated quality control mechanisms in particular drive new editors away~\cite{HalGeiMorRied2013}.
+Present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith.
+The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
+
+%TODO Concerns?
+\section{Semi-automated}
 
 Semi-automated quality control tools are similar to bots in the sense that they provide automated detection of potential low-quality edits.
 The difference however is that with semi-automated tools humans do the final assessment and decide what happens with the edits in question.
@@ -153,39 +156,24 @@ and VandalProof which
 \end{comment}
 
 
-\section{ORES}
-
-ORES is an API based free libre and open source (FLOSS) machine learning service ``designed to improve the way editors maintain the quality of Wikipedia'' \cite{HalTar2015} and increase the transparency of the quality control process.
-It uses learning models to predict a quality score for each article and edit based on edit/article quality assessments manually assigned by Wikipedians.
-Potentially damaging edits are highlighted, which allows editors who engage in vandal fighting to examine them in greater detail.
-The service was officially introduced in November 2015 by Aaron Halfaker\footnote{\url{https://wikimediafoundation.org/role/staff-contractors/}} (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli\footnote{\url{http://nitens.org/taraborelli/cv}} (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}.
-Its development is ongoing, coordinated and advanced by Wikimedia's Scoring Platform team.
-Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores or, new models can be trained and made available for everyone to use.
-The Scoring platform team reports that popular vandal fighting tools such as Huggle have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
-What is unique about ORES is that all the algorithms, models, training data, and code are public, so everyone (with sufficient knowledge of the matter) can scrutinise them and reconstruct what is going on.
-This is certainly not true for machine learning services applied by commercial companies who have interest in keeping their models secret.
-Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers.
-This last aim is crucial, since there is a body of research demonstrating how reverts in general~\cite{HalKitRied2011} and reverts by (semi-)automated quality control mechanisms in particular drive new editors away~\cite{HalGeiMorRied2013}.
-Present authors also signal that these tools still tend to reject the majority of newcomers' edits as made in bad faith.
-The researchers also warn that wording is tremendously important for the perception of edits and people who authored them: labels such as ``good'' or ``bad'' are not helpful.
-
-%TODO Concerns?
-
-\section{Humans}
+\section{Manual}
 
 For completion, it should be noted at this point that despite the steady increase of the proportion of fully and semi-automated tools usage for fighting vandalism~\cite{Geiger2009}, some of the quality control work is still done ``manually'' by human editors.
 These are, on one hand, editors who use the ``undo'' functionality from within the page's revision history.
 On the other hand, there are also editors who engage with the classic encyclopedia editing mechanism (click the ``edit'' button on an article, enter changes in the dialog which opens, write an edit summary for the edit, click ``save'') rather than using further automated tools to aid them.
 When Wikipedians use these mechanisms for vandalism fighting, oftentimes they haven't noticed the vandalising edits by chance but rather have been actively watching the pages in question via the so-called watchlists~\cite{AstHal2018}.
-This also gives us a hint as to what type of quality control work humans take over: less obvious and less rapid, editors who patrol pages via watchlists have some relationship to/deeper expertise on the topic. %TODO quote needed. according to~\cite{AstHal2018} along the funnel, increasingly complex judgement is required
+This also gives us a hint as to what type of quality control work humans take over: less obvious and less rapid, requiring more complex judgement~\cite{AstHal2018}.
+Editors who patrol pages via watchlists often have some relationship to/deeper expertise on the topic.
 %TODO vgl also funnel diagram incoming edits quality assurance by Halfaker
 
 \section{Conclusion}
 
-For clarity, I have summarised the various aspects of algorithmic quality control mechanisms we discussed in the present chapter in table~\ref{table:mechanisms-comparison-literature}.
+For clarity, the various aspects of algorithmic quality control mechanisms discussed in the present chapter are summarised in table~\ref{table:mechanisms-comparison-literature}.
 Their work can be fittingly illustrated by figure~\ref{fig:funnel-no-filters}, proposed in a similar fashion also by~\cite{AstHal2018}.
 %TODO what I haven't discussed so far is the temporal/pipeline dimension
-One thing is certain: so far, on grounds of literature study alone it remains unclear what the role/purpose of edit filters is.
+One thing is certain: so far, on grounds of literature study alone, it remains unclear what the role of edit filters is.
+In order to uncover this, various Wikipedia's pages, among other things policies, guidelines, documentation and discussions, are studied in chapter~\ref{chap:filters} and filter data from the English Wikipedia is analysed in chapter~\ref{chap:overview-en-wiki}.
+But first, chapter~\ref{chap:methods} introduces the applied methodology.
 
 %TODO is it better to introduce the graphic earlier?
 \begin{figure}
