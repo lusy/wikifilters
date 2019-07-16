@@ -30,6 +30,9 @@ In the following sections, we discuss what the scientific community already know
 
 \section{Automated}
 
+Two types of mechanisms are discussed in this section: bots and the Wikipedia machine learning service ORES~\cite{ORES}.
+While bots can be fully or semi-automated (with a human decision needed for taking a final action), most of the major bots applied for quality control are autonomous.
+
 \subsection{Bots}
 \label{section:bots}
 According to the literature, bots constitute the first ``line of defence'' against malicious edits~\cite{GeiHal2013}.
@@ -74,13 +77,13 @@ This led to the social understanding that ``bots ought to be better behaved than
 
 \subsection{ORES}
 
-ORES is an API based free libre and open source (FLOSS) machine learning service ``designed to improve the way editors maintain the quality of Wikipedia'' \cite{HalTar2015} and increase the transparency of the quality control process.
+ORES~\cite{ORES} is an API based free libre and open source (FLOSS) machine learning service ``designed to improve the way editors maintain the quality of Wikipedia'' \cite{HalTar2015} and increase the transparency of the quality control process.
 It uses learning models to predict a quality score for each article and edit based on edit/article quality assessments manually assigned by Wikipedians.
 Potentially damaging edits are highlighted, which allows editors who engage in vandal fighting to examine them in greater detail.
 The service was officially introduced in November 2015 by Aaron Halfaker\footnote{\url{https://wikimediafoundation.org/role/staff-contractors/}} (principal research scientist at the Wikimedia Foundation) and Dario Taraborelli\footnote{\url{http://nitens.org/taraborelli/cv}} (Head of Research at Wikimedia Foundation at the time)~\cite{HalTar2015}.
 Its development is ongoing, coordinated and advanced by Wikimedia's Scoring Platform team.
-Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores or, new models can be trained and made available for everyone to use.
-The Scoring platform team reports that popular vandal fighting tools such as Huggle have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
+Since ORES is API based, in theory a myriad of services can be developed that use the predicted scores, or new models can be trained and made available for everyone to use.
+The Scoring Platform team reports that popular vandal fighting tools such as Huggle (see next section) have already adopted ORES scores for the compilation of their queues~\cite{HalTar2015}.
 What is unique about ORES is that all the algorithms, models, training data, and code are public, so everyone (with sufficient knowledge of the matter) can scrutinise them and reconstruct what is going on.
 This is certainly not true for machine learning services applied by commercial companies who have interest in keeping their models secret.
 Halfaker and Taraborelli express the hope that ORES would help hone quality control mechanisms on Wikipedia, and by decoupling the damage prediction from the actual decision how to deal with an edit make the encyclopedia more welcoming towards newcomers.
@@ -90,6 +93,7 @@ The researchers also warn that wording is tremendously important for the percept
 
 %TODO Concerns?
 \section{Semi-automated}
+\label{section:semi-automated}
 
 Semi-automated quality control tools are similar to bots in the sense that they provide automated detection of potential low-quality edits.
 The difference however is that with semi-automated tools humans do the final assessment and decide what happens with the edits in question.
@@ -97,13 +101,13 @@ The difference however is that with semi-automated tools humans do the final ass
 There is a scientific discussion of several tools:
 Huggle~\cite{Wikipedia:Huggle}, which is probably the most popular and widely used one, is studied in~\cite{GeiHal2013},~\cite{HalRied2012}, and \cite{GeiRib2010}.
 Another very popular tool, Twinkle~\cite{Wikipedia:Twinkle}, is commented on by~\cite{GeiHal2013},~\cite{GeiRib2010}, and~\cite{HalGeiMorRied2013}.
-STiki~\cite{Wikipedia:STiki} is presented by its authors in~\cite{WestKanLee2010} and also discussed (syn!) by~\cite{GeiHal2013}.
-Various older (and partially inactive) applications are also mentioned by the literature:
+STiki~\cite{Wikipedia:STiki} is presented by its authors in~\cite{WestKanLee2010} and also discussed by~\cite{GeiHal2013}.
+Various older (and partially inactive) applications are mentioned by the literature as well:
 Geiger and Ribes~\cite{GeiRib2010} touch on Lupin's Anti-vandal tool~\cite{Wikipedia:LupinAntiVandal},
 Halfaker and Riedl talk about VandalProof~\cite{HalRied2012}.
 
 Some of these tools are more automated than others: Huggle and STiki for instance are able to revert an edit, issue a warning to the offending editor, and post a report on the AIV dashboard (if the user has already exhausted the warning limit) upon a single click.
-The javascript based browser extension Twinkle on the other hand adds contextual links to other parts of Wikipedia which facilitates fulfilment of particular tasks such as rollback multiple edits, report problematic users to AIV, nominate an article for deletion~\cite{GeiRib2010}.
+The javascript based browser extension Twinkle on the other hand adds contextual links to other parts of Wikipedia which facilitates fulfilment of particular tasks such as rollback multiple edits, report problematic users to AIV, or nominate an article for deletion~\cite{GeiRib2010}.
 The main feature of Huggle and STiki is that they both compile a central queue of potentially harmful edits for all their users to check.
 The difference between both programs are the heuristics they use for their queues:
 By default, Huggle sends edits by users with warnings on their user talk page to the top of the queue, places edits by IP editors higher and ignores edits made by bots and other Huggle users altogether\cite{GeiRib2010}.
@@ -116,7 +120,7 @@ The concern is that some of the users of said tools see themselves as vandal fig
 \footnote{STiki actually has a leader board: \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:STiki/leaderboard&oldid=905145147}}.
 This is for one a harmful way to view the project, neglecting the ``assume good faith'' guideline~\cite{Wikipedia:GoodFaith}
 and also leads to such users seeking out easy to judge instancies from the queues in order to move onto the next entry more swiftly and gather more points
-leaving more subtle cases, which really require human judgement, to others.
+leaving more subtle cases which really require human judgement to others.
 
 \begin{comment}
 %Huggle
@@ -170,8 +174,9 @@ Editors who patrol pages via watchlists often have some relationship to/deeper e
 
 For clarity, the various aspects of algorithmic quality control mechanisms discussed in the present chapter are summarised in table~\ref{table:mechanisms-comparison-literature}.
 Their work can be fittingly illustrated by figure~\ref{fig:funnel-no-filters}, proposed in a similar fashion also by~\cite{AstHal2018}.
-%TODO what I haven't discussed so far is the temporal/pipeline dimension
-One thing is certain: so far, on grounds of literature study alone, it remains unclear what the role of edit filters is.
+What strikes about this diagram is that it foregrounds the temporal dimension of quality control work done on Wikipedia demonstrating that as a general rule bots are the first mechanisms to intercept a potentially harmful edit, less obviously disruptive edits are often caught by semi-automated quality control tools and really subtle cases are uncovered by manually reviewing humans or sometimes not at all.
+
+One thing is certain: So far, on grounds of literature study alone, it remains unclear what the role of edit filters is.
 In order to uncover this, various Wikipedia's pages, among other things policies, guidelines, documentation and discussions, are studied in chapter~\ref{chap:filters} and filter data from the English Wikipedia is analysed in chapter~\ref{chap:overview-en-wiki}.
 But first, chapter~\ref{chap:methods} introduces the applied methodology.
 
@@ -182,7 +187,8 @@ But first, chapter~\ref{chap:methods} introduces the applied methodology.
   \caption{State of the scientific literature: edit filters are missing from the quality control frame}~\label{fig:funnel-no-filters}
 \end{figure}
 
-%TODO reduce table to 1 page! (check which entries actually result from the text
+%TODO check which entries actually result from the text!!
+% and get rid of the empty page that follows
 \begin{landscape}
     \begin{longtable}{ | p{4cm} | p{5.5cm} | p{5.5cm} | p{5.5cm} | }
     \hline
