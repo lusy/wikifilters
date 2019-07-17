@@ -148,50 +148,36 @@ A lot of hidden filters target specific users/problems.
 
 \subsection{Public and Hidden Filters}
 
-The first noticeable typology is along the line public/private filters.
+As signaled in section~\ref{section:4-history}, historically it was planed to make all edit filters hidden from the general public.
+The community discussions rebutted that so a guideline was drafted calling for
+hiding filters ``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
+This is however not always complied with and edit filter managers do end up hiding filters that target general vandalism despite consensus that these should be public~\cite{Wikipedia:PrivacyGeneralVandalism}.
+Such cases are usually made public eventually (examples hereof are filters 225 ``Vandalism in all caps'', 260 ``Common vandal phrases'', or 12 ``Replacing a page with obscenities'').
+Also, oftentimes when a hidden filter is marked as ``deleted'', it is made public. %TODO examples?
 
-It draws attention that currently nearly $2/3$ of all edit filters are not viewable by the general public (compare figure~\ref{fig:general-stats}).
+Still, it draws attention that currently nearly $2/3$ of all edit filters are not viewable by the general public (compare figure~\ref{fig:general-stats}).
 Unfortunately, without the full \emph{abuse\_filter\_history} table we cannot know how this ration has developed historically.
 However, the numbers fit the assertion of the extension's core developer according to whom edit filters target particularly determined vandals.
 
-Although the initial plan was to make all filters hidden, the community discussions rebutted that so a guideline was drafted calling for
-hiding filters ``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
-Further, caution in filter naming is suggested for hidden filters and editors are encouraged to give such filters just simple description of the overall disruptive behaviour rather than naming a specific user that is causing the disruptions.
-(The later is not always complied with, there are indeed filters named after the accounts causing a disruption.)
-
-% TODO this whole paragraph seems redundant with chapter 4
-Only edit filter editors (who have the \emph{abusefilter-modify} permission) and editors with the \emph{abusefilter-view-private} permission can view hidden filters.
-The later is given to edit filter helpers - editors interested in helping with edit filters who still do not meet certain criteria in order to be granted the full \emph{abusefilter-modify} permission, editors working with edit filters on other wikis interested in learning from the filter system on English Wikipedia, and Sockpuppet investigation clerks~\cite{Wikipedia:EditFilterHelper}.
-As of March 17, 2019, there are 16 edit filter helpers on EN Wikipedia~\footnote{\url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter-helper}}.
-Also, all administrators are able to view hidden filters.
-
-There is also a designated mailing list for discussing these: wikipedia-en-editfilters@lists.wikimedia.org.
-It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
-It is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
-
-%TODO decide whether to include this here or move back to actions
-  ** there's a tendency of editors to hide filters just for the heck of it (at least there are never clear reasons given), which is then reverted by other editors with the comment that it is not needed: 148, 225 (consesus that general vandalism filters should be public \url{[Special:Permalink/784131724#Privacy of general vandalism filters]}), 260 (similar to 225), 285 (same), 12 (same), 39 (unhidden with the comment "made filter public again - these edits are generally made by really unsophisticated editors who barely know how to edit a page. --zzuuzz")
-
-Oftentimes, when a hidden filter is marked as ``deleted'', it is made public. (examples!)
-
-$2/3$ of all filters are hidden.
-However, if we look at the enabled filters only, there are actually more public enabled than hidden enabled filters (or more or less the same amount)! (110 vs 91).
+On the other hand, if we look at the enabled filters only, there are actually more or less the same number of public enabled and hidden enabled filters ($110$ vs $91$).
 This leads us to the hypothesis that it is rather that hidden filters have higher fluctuation rates, i.e. that they target specific phenomena that are over after a particular period of time after which the filters get disabled and eventually–deleted.
-This makes sense when we compare it to the hidden vs public filter policy: hidden filters for particular cases and very determined filters, public filters for general patterns.
+This makes sense when we compare it to the hidden vs public filter policy: hidden filters for particular cases and very determined vandals, public filters for general patterns.
 
 %TODO check hits: public vs hidden
 
-\begin{comment}
-This means, only edit filter editors can view the exact filter pattern or the comments of these.
-Although this clashes with the overall *transparency* of the project (is there a guideline subscribing to this value? couldn't find a specific mention), the reasoning here is that otherwise, persistent vandals will be able to check for the pattern of the filter targetting their edits and just find a new way around it~\cite{Wikipedia:EditFilter}. %TODO compare with https://en.wikipedia.org/w/index.php?title=Wikipedia:About&oldid=891256910 about transparency as a value
+%TODO this seems out of place
+Further, caution in filter naming is suggested for hidden filters and editors are encouraged to give such filters just simple description of the overall disruptive behaviour rather than naming a specific user that is causing the disruptions.
+(The latter is not always complied with, there are indeed filters named after the accounts causing a disruption.)
 
-The current state is also an "improvement" compared to the initially proposed visibility level of edit filters.
-In the initial version of the EditFilters Page (https://en.wikipedia.org/w/index.php?title=Wikipedia:Edit_filter&oldid=221158142) Andrew Garrett (User:Werdna), the author of the AbuseFilter MediaWiki extension, was suggesting that all filters should be private and only a group of previously approved users should be able to view them.
-    (This was met by the community with a strong resistence, especially since at the time one of the most discussed features was the ability of filters to (temporarily) block users. Editors involved in the discussion felt strongly that no fully automated agent should be able to block human editors.)
+% TODO this whole paragraph seems redundant with chapter 4
+Only edit filter editors (who have the \emph{abusefilter-modify} permission) and editors with the \emph{abusefilter-view-private} permission can view hidden filters.
+The latter is given to edit filter helpers–editors interested in helping with edit filters who still do not meet certain criteria in order to be granted the full \emph{abusefilter-modify} permission, editors working with edit filters on other wikis interested in learning from the filter system on English Wikipedia, and Sockpuppet investigation clerks~\cite{Wikipedia:EditFilterHelper}.
+As of March 17, 2019, there are 16 edit filter helpers on EN Wikipedia~\footnote{\url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter-helper}}.
+Also, all administrators are able to view hidden filters.
 
-There are also private filters targetting personal attack or abuse cases.
-Here, filters are private in order to protect the affected person(s)~\cite{Wikipedia:EditFilter}.
-\end{comment}
+There is also a designated mailing list for discussing these.
+It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
+Furthermore, it is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
 
 \section{Filter activity}
 
