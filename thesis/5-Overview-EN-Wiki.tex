@@ -185,7 +185,7 @@ Furthermore, it is signaled, that the mailing list is meant for sensitive cases 
 Thanks to quarry, we have all the filters that were triggered from the filter log per year, % I do have the whole table actually, don't I?
 from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018, with their corresponding number of times being triggered:
 Table~\ref{tab:active-filters-count} summarises the numbers of distinct filters that got triggered over the years.
-So, the number of distinct filters that have been triggered over the years (syn!) varies between $154$ in year 2014 and $254$ in 2018.
+So, this figure varies between $154$ in year 2014 and $254$ in 2018.
 The explanation for this not particularly wide range of active filters lies probably in the so-called condition limit.
 According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation}, the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters.
 Currently, it is set to $1,000$.
@@ -214,18 +214,32 @@ However, the page also warns that counting conditions is not the ideal metric of
 \end{table}
 
 \subsection{Most active filters of all times}
-The ten most active filters of all times (with number of hits and public description) are displayed in table~\ref{tab:most-active-actions}.
+The ten most active filters of all times (with number of hits, public description, and enabled filter actions) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
 
-Already, a couple of patterns draw attention when we look at the most active (syn!) filters:
+Already, a couple of patterns draw attention when we look at the table:
 They seem to catch a combination of possibly good faith edits which were none the less unconstructive (such as removing references, section blanking or large deletions)
-and what the community has come to call ``silly vandalism''~\cite{Wikipedia:VandalismTypes}: repeating characters and inserting profanities.
+and what the community has come to call ``silly vandalism''~\cite{Wikipedia:VandalismTypes} (see also code book in appendix~\ref{app:code_book}: repeating characters and inserting profanities.
 Interestingly, that's not what the developers of the extension believed it was going to be good for:
 ``It is not, as some seem to believe, intended to block profanity in articles (that would be extraordinarily dim), nor even to revert page-blankings, '' claimed its core developer on July 9th 2008~\cite{Wikipedia:EditFilterTalkArchive1Clarification}.
-Rather, among the 10 most active filters, it is filter 527 ``T34234: log/throttle possible sleeper account creations'' which seems to target what most closely resembles the intended aim of the edit filter extension. %TODO explain again what the intended aim was
+Rather, among the 10 most active filters, it is filter 527 ``T34234: log/throttle possible sleeper account creations'' which seems to target what most closely resembles the intended aim of the edit filter extension, namely to take care of obvious but persistent and difficult to clean up vandalism.
+%TODO compare with num hits/month for each parent cluster (vandalism, good faith, maintenance, unknown)
+\begin{comment}
+    Possible storyline:
+    At the beginning the idea/motivation was to disallow directly gregarious vandalism.
+    However, with difficulty to distinguish motivation and rising difficulty to keep desirable newcomers in the community, a more cautious behaviour was adopted, trying (as elsewhere as well) to assume good faith for ambiguous edits and to guide the editors towards a constructive contribution (e.g. via warnings).
+    (So, there was a subtle transition in what the filters were applied for)
+    See whether this theory is backed by the number of good faith filters (and the trends in their hit numbers)
+
+%TODO reorder chapter and do manual tagging at the beginning; then assume a "from-the-general-picture-to-specific-occurences" approach:
+    here,
+    general: discuss the temporal trends in filter usage (num hits/month for each parent cluster)
+    specific: and then have a look at the most active filters (of all times and if applicable per year) (also directly with what is their assigned manual tag)
+\end{comment}
 
 Another assumption that proved to be wrong/didn't quite carry into effect was that ``filters in this extension would be triggered fewer times than once every few hours''.
 As a matter of fact, a quick glance at the AbuseLog~\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}} confirms that there are often multiple filter hits per minute.
+%TODO compute means --> we can conclude from these numbers that the mechanism is quite actively used
 
 \begin{table*}
   \centering
@@ -255,27 +269,27 @@ As a matter of fact, a quick glance at the AbuseLog~\footnote{\url{https://en.wi
 %TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
 
 \subsection{Filter hits per month (+peak)}
-We can follow/track/backtrack the number of filter hits over the years (syn) on figure~\ref{fig:filter-hits}.
+We can backtrack the number of filter hits over the years on figure~\ref{fig:filter-hits}.
 There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016.
+%TODO There is also a certain periodicity to the graph, with smaller dips in the sommer months (june, july, august) and smaller peaks in autumn/winter (mostly Oct/Nov); either point this out as an interesting direction for further studies or find an explanation approach as well
+% It would be interesting to compare this with overall number of edits; maybe there're just fewer edits in the northern hemisphere summer, since people are on vacation; hence there are also fewer edits that trip filters
 Here is the explanation to that:
-%TODO discuss peak! (and overall pattern)
 \begin{comment}
 Looking at january, feb, march 2016 vs sept 2016
-- high number of account creation attempts
-- a lot of (viagra) spam
-- a bunch of very active russian IPs publishing the spam
-- the exact moment seems arbitrary
+    - high number of throttled account creation attempts (around 70.000 in January; the number however accounts for only half the difference between January 2016 and September 2016)
+- a bunch of users (mostly IP editors) with markedly high hit numbers:
+    a random check of some of them proved there quite some IPs of a Russian registry all of which were trying to publish the same (viagra) spam links
+    however these most active editors account for about 1/100 of all filter hits;
+    %TODO look at the peak from various perspectives: public vs hidden; filter actions; editor's actions (already mentioned in 1st point); manual tags
+- for a spam wave the exact moment seems arbitrary
+- %TODO compute aggregated numbers for all months of the peak and months outside and see whether something comes to attention
+- there is no obvious pattern or other abnormality in the pages on which the filters are triggered
 
+%TODO sift through talk archives from this period: is the peak mentioned?
 
-till now it comes to attention that a lot of accounts named something resembling <FirstnameLastname4RandomLetters> were trying to create an account  (while logged in?) (or maybe it was just that the creation of these particular accounts itself was denied); this triggers filter 527 ("T34234: log/throttle possible sleeper account creations
-")
-There are in the meantime over 5 pages of them, it is definitely happening automatically
-
-TODO: download data; write script to identify actions that triggered the filters (accountcreations? edits?) and what pages were edited
-Note: do hidden filters appear in this numbers and in the table? (They are definitely not displayed in the front end of the AbuseLog) -- they do.
 \end{comment}
 
-%TODO strectch plot so months are readable; darn. now it's too small on the pdf. Fix it! May be rotate to landscape?
+%TODO stretch plot so months are readable; darn. now it's too small on the pdf. Fix it! May be rotate to landscape?
 \begin{figure}
 \centering
   \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
@@ -286,10 +300,13 @@ Note: do hidden filters appear in this numbers and in the table? (They are defin
 \section{History}
 
 The present section explores qualitatively/highlights patterns in the creation and usage of edit filters.
-Unfortunately, no extensive quantitative analysis of these patterns was possible, since for it, an access to the \emph{abuse\_filter\_history} table is needed.
-The table is currently not replicated via.. and no public dump is accessible via the toolserver. %TODO elaborate
-This seems to have been the case in the past, however, due to security concerns the dumps were discontinued. %TODO cite phabricator
-A short term solution to renew the public replicas was not possible, so the present chapter only shows some patterns (syn!) observed via manual browsing of different filters' history via the exposed API endpoint which allows querying the \emph{abuse\_filter\_history} table for public filters.
+Unfortunately, no extensive quantitative analysis of these patterns was possible, since for it, an access to the \emph{abuse\_filter\_history} table of the AbuseFilter plugin (compare section~\ref{sec:mediawiki-ext}) is needed.
+Unlike the other tables of the extension, the \emph{abuse\_filter\_history} table is currently not replicated and no public dump is accessible via Wikimedia's cloud service Toolforge~\cite{Wikimedia:Toolforge}.
+This seems to have been the case in the past, however, due to security concerns the dumps were discontinued.
+A short term solution to renew the public replicas was attempted but unfortunately haven't been successful yet.
+That is why the present chapter only shows some tendencies observed via manual browsing of different filters' history via the exposed API endpoint which allows querying the \emph{abuse\_filter\_history} table for public filters~\cite{Wikipedia:AbuseFilterHistory}.
+The discussions surrounding this issue and its progress can be viewed in the following ticket on Wikimedia's issue tracker:~\cite{phabricator}.
+Hence, exploring historical patterns in detail remains one of the directions for future studies.
 
 \subsection{Filter Usage/Activity}
 
