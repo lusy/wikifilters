@@ -18,7 +18,7 @@ The purpose of the coding was to gain insight into the specific tasks filters ar
 
 \begin{longtable}{ | p{5cm} | p{9cm} | }
     \hline
-        \multicolumn{2}{|l|}{Vandalism} \\
+        \multicolumn{2}{|l|}{\textbf{Vandalism}} \\
     \hline
         \multicolumn{2}{|l|}{Structure related} \\
     \hline
@@ -46,7 +46,7 @@ The purpose of the coding was to gain insight into the specific tasks filters ar
     \hline
     \multirow{2}{*}{username\_vandalism} & According to Wikipedia Vandalism Typology ('malicious account creation'): "Creating accounts with usernames that contain deliberately offensive or disruptive terms is considered vandalism, whether the account is used or not."~\cite{Wikipedia:VandalismTypes}; in theory there shouldn't be very many filters of that sort, since there is a username blacklist which would be the more appropriate mechanism to take care of this. \\
                                      & Examples: 827 "Abusive username activity" (unfortunately hidden, so we don't know what the activity is)\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Content related} \\
     \hline
     \multirow{2}{*}{hoaxing} & deliberately inserting false information (From Wikipedia typology: "Adding plausible misinformation to articles; Use of fictitious references") \\
@@ -65,7 +65,7 @@ The purpose of the coding was to gain insight into the specific tasks filters ar
                                 According to \url{https://en.wikipedia.org/w/index.php?title=Internet_troll&oldid=902578463} :
   "In Internet slang, a troll is a person who starts quarrels or upsets people on the Internet to distract and sow discord by posting inflammatory and digressive,[1] extraneous, or off-topic messages in an online community (such as a newsgroup, forum, chat room, or blog) with the intent of provoking readers into displaying emotional responses[2] and normalizing tangential discussion,[3] whether for the troll's amusement or a specific gain. "\\
                                      & Examples: 896 "ANI trolling", 615 "Reference desk trolling"\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Ideologically motivated} \\
     \hline
     \multirow{2}{*}{politically\_motivated} & Disruptions on explicitely politic matters\\
@@ -73,7 +73,7 @@ The purpose of the coding was to gain insight into the specific tasks filters ar
     \hline
     \multirow{2}{*}{religiously\_motivated} & Disruptions on topics related to religion\\
                                      & Examples: 131 "Removal of controversial images" (see content; however this could fall under "image\_vandalism" as well)\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{General vandalism} \\
     \hline
     \multirow{2}{*}{bot\_vandalism} & Vandalism caused by an automated agent\\
@@ -81,7 +81,7 @@ The purpose of the coding was to gain insight into the specific tasks filters ar
     \hline
     \multirow{2}{*}{general\_vandalism} & vandalism for which none of the more specific tags applied\\
                                      & Examples: ?\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Hardcore vandalism (the really malicious cases)} \\
     \hline
     \multirow{2}{*}{abuse} & Filter contains "abuse", "abusive" or similar in its name; \\%TODO do we really need the category
@@ -117,7 +117,7 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
   Filter contains "sock", "sockpuppets", "sockpuppetry" or similar in their name ('af\_public\_comments') or maybe notes ("af\_comments"); expected to be mostly hidden filters (which may have been made public upon deletion or being disabled for example)
   Sockpuppetry is often long term abuse, but not necessarily all long term abuse involves sock puppetry \\
                                      & Examples: 16 "Prolific socker I"; 114 "sleeper socks";\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Spam/malware/etc.} \\
     \hline
     \multirow{2}{*}{malware} & Malware is explicitely mentioned in the filter's name \\%TODO maybe combine phishing and malware
@@ -132,10 +132,10 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
     Adding external links to site(s) that have ads from which the user benefits, even if the site has information relevant to the article");
   I've so far labeled "spam" foremost filters which contain the word in their name\\
                                      & Examples: 862 "Arabic string spam";  523 "Page creation spammer";\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{} \\
-    \hline
-        \multicolumn{2}{|l|}{Good faith} \\
+    \hline \hline
+        \multicolumn{2}{|l|}{\textbf{Good faith}} \\
     \hline
         \multicolumn{2}{|l|}{Policy violations} \\
     \hline
@@ -156,7 +156,7 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
     \hline
     \multirow{2}{*}{wiki\_policy} & Filters target edits violating Wikipedia's policies\\
                                      & 930 "Prevent indexing userspaces by newer users"; 272 "Page author removing CSD tags"\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Point of view problems} \\
     \hline
     \multirow{2}{*}{biased\_pov} & Hm.. I have the feeling all the filters here should be relabeled..\\
@@ -170,7 +170,7 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
     \hline
     \multirow{2}{*}{seo} & Filters targeting SEO edits (mostly, explicitely mentioned in the filter name)\\
                                      & Examples: 36 "SEO push University of Atlanta"; 682 "SEO/Attack page"; 554 "top100 blog charts" (bc of this and the Daily Mail sources, I am contemplating creating a 'unreliable\_sources' label)\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{Structure related} \\
     \hline
     \multirow{2}{*}{good\_faith} & \\
@@ -222,7 +222,7 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
                                      & Examples:18 "Test type edits from clicking on edit bar"\\
     \hline
     \multirow{2}{*}{good\_faith\_userpage} & \\
-                                     & Examples:18 "Test type edits from clicking on edit bar"\\
+                                     & Examples:\\
     \hline
     \multirow{2}{*}{good\_faith\_wiki\_links} & \\
                                      & Examples:\\
@@ -231,8 +231,8 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
                                      & Examples:\\
     \hline
         \multicolumn{2}{|l|}{} \\
-    \hline
-        \multicolumn{2}{|l|}{Maintenance} \\
+    \hline \hline
+        \multicolumn{2}{|l|}{\textbf{Maintenance}} \\
     \hline
     \multirow{2}{*}{bug} & Filters targeting software bugs from MediaWiki, browser extensions, etc which sometimes cause eroneous syntax\\
                                      & Examples: 577 "VisualEditor bugs: Strange icons"; 606 "ANI restoration bug";\\
@@ -245,10 +245,10 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
     \hline
     \multirow{2}{*}{test} & Various test filters (of single edit filter managers or jointly used)\\
                                      & Examples: 398 "Test filter 398"; 358 "Od Mishehu's test filter"; 424 "Repeatedly blocked user --  testing-only rule for filter 425"\\
-    \hline
+    \hline \hline
         \multicolumn{2}{|l|}{} \\
-    \hline
-        \multicolumn{2}{|l|}{Unknown} \\
+    \hline \hline
+        \multicolumn{2}{|l|}{\textbf{Unknown}} \\
     \hline
     \multirow{2}{*}{misc} & Cannot fit the filter into any category (it is not that functionality is unclear but I couldn't think of a suitable label)\\
                                      & Examples: 388 "Unusual redirect III" (which is hidden, so according to new def, should be re-labeled "hidden\_vandalism"), 688 "Beals" (same); 708 "SPI page moves"; 152 "External links with referal tags"\\
