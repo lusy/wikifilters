@@ -295,7 +295,7 @@ or, complain on the False Positives page and publish the change anyway in case o
 (Of course, in case of a warning, the editor can modify their edit before publishing it.)
 On the other hand, when the filter action is set to \emph{tag} or \emph{log} only, the editor doesn't really notice they tripped a filter unless they are looking more closely.
 Tagged edits are marked as such in the page's revision history for example (see figure~\ref{fig:tags-in-history})
-and all edits that trigger an edit filter are listed in the Abuse Log\footnote{\url{https://en.wikipedia.org/wiki/Special:AbuseLog}} (see figure~\ref{fig:screenshot-abuse-log}).
+and all edits that trigger an edit filter are listed in the Abuse Log~\cite{Wikipedia:AbuseLog} (see figure~\ref{fig:screenshot-abuse-log}).
 %TODO How about throttling: the AbuseLog is currently timing out when I try to filter entries according to action(=throttle)
 
 \begin{figure}
@@ -420,8 +420,8 @@ From all the mechanisms, it is probably the hardest to become engaged with edit 
 As signaled in section~\ref{section:who-can-edit}, the permissions are only granted to very carefully selected editors who have long history of participation on Wikipedia and mostly also various other special permissions.
 The numbers also demonstrate that this is the most exclusive group:
 as mentioned in section~\ref{section:who-can-edit}, there are currently 154 edit filter managers on EN Wikipedia,
-compared to at least 232 bot operators\footnote{\url{https://en.wikipedia.org/w/index.php?title=Category:Wikipedia_bot_operators&oldid=833970789}} (not all bot operators are listed in the category\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:FAQ/Categorization&oldid=887018121#Why_might_a_category_list_not_be_up_to_date?}})
-and 6130 users who have the \emph{rollback} permission\footnote{\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Rollback&oldid=901761637}}.
+compared to at least 232 bot operators~\cite{Wikipedia:BotOperators} (most likely not all bot operators are listed in the category~\cite{Wikipedia:FAQCategory})
+and 6130 users who have the \emph{rollback} permission~\cite{Wikipedia:Rollback}.
 As to the difficulty/compteneces needed, it is probably easiest to learn to use semi-automated tools where one ``only'' has to learn the user interface of the software.
 Bots arguably require most background knowledge since on has to not only be familiar with a programming langauage but also learn to interact with Wikipedia's API, etc.
 Filters on the other hand, are arguably(syn) easier to use: here, ``only'' understanding of regular expressions is required.
@@ -552,9 +552,9 @@ which used to report users from the abuse log to WP:AIV, but has been inactive s
 %\url{https://en.wikipedia.org/wiki/Wikipedia:Bots/Requests_for_approval/Mr.Z-bot_7}
 
 MusikBot also has several tasks dedicated to monitoring different aspects of edit filter behaviour and compiling reports for anyone interested:
-The FilterMonitor task ``[r]eports functional changes of edit filters to the watchable page User:MusikBot/FilterMonitor/Recent changes. The template \verb|{{recent filter changes}}| formats this information and can be transcluded where desired''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/FilterMonitor&oldid=748920629}}.
-The StaleFilter task ``[r]eports enabled filters that have not had any hits in over 30 days, as specified by \verb|/Offset|''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/StaleFilters&oldid=763698371}}.
-The AbuseFilterIRC task ``[r]elays all edit filter hits to IRC channels and allows you to subscribe to notifications when specific filters are tripped. See \verb|#wikipedia-en-abuse-log-all| for the English Wikipedia feed''\footnote{\url{https://en.wikipedia.org/w/index.php?title=User:MusikBot/AbuseFilterIRC&oldid=885138803}}.
+The FilterMonitor task ``[r]eports functional changes of edit filters to the watchable page User:MusikBot/FilterMonitor/Recent changes. The template \verb|{{recent filter changes}}| formats this information and can be transcluded where desired''~\cite{Wikipedia:MusikBotFilterMonitor}.
+The StaleFilter task ``[r]eports enabled filters that have not had any hits in over 30 days, as specified by \verb|/Offset|''~\cite{Wikipedia:MusikBotStaleFilters}.
+The AbuseFilterIRC task ``[r]elays all edit filter hits to IRC channels and allows you to subscribe to notifications when specific filters are tripped. See \verb|#wikipedia-en-abuse-log-all| for the English Wikipedia feed''~\cite{Wikipedia:MusikBotAbuseFilterIRC}.
 
 On the other hand, there are also examples for filters supporting bot work:
 Filter 323 (``Undoing anti-vandalism bot'') tags edits reverting revisions by XLinkBot and ClueBot NG.
