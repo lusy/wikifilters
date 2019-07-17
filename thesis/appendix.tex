@@ -16,149 +16,125 @@ This section provides a detailed overview of all the codes\footnote{Here, I use 
 The purpose of the coding was to gain insight into the specific tasks filters are applied for on English Wikipedia.
 
 
-%TODO put all the labels in a table?
-\subsection{Cluster Vandalism}
-
-\subsubsection{Structure related}
-
-'page\_move\_vandalism'
-  Def: vandalism involving moving a page (i.e. renaming the page), mostly to some nonsensical name
-  (Wikipedia typology: "Renaming pages (referred to as "page-moving") to disruptive, irrelevant, or otherwise inappropriate terms.")
-  Examples: 883 "Page moves to bad words or other vandalism"; 334 "Grawp page move vandalism"
-
-'image\_vandalism'
-  Def: "Uploading shock images that do not belong at all on Wikipedia; Inappropriately placing explicit images legitimately used on Wikipedia on pages where they do not belong"~\cite{Wikipedia:VandalismTypes}
-  Examples: 952 "Image vandalism IV"; 428 "Image abuse";
-
-'talk\_page\_vandalism'
-  Def: Malicious activity taking place at talk pages: e.g. modifiyng or removing other users' comments from discussions
-  Examples: 842 "Talk page abuse";
-
-'template\_vandalism'
-  Def: "Modifying a template in a harmful or disruptive manner. This is especially serious, because it'll negatively impact the appearance of multiple pages. Some templates appear on hundreds of pages."~\cite{Wikipedia:VandalismTypes}
-  Examples: 203 "Template spam from 88.105.0.0/16";
-
-'link\_vandalism'
-  Def: According to Wikipedia Vandalism Typology: "Modifying internal or external links within a page so that they appear the same in the finished version but link to a page/site that they are not intended to (e.g. spam, self-promotion, an explicit image, a shock site, or some other irrelevant page)
+\begin{longtable}{ | p{4cm} | p{10cm} | }
+    \hline
+        \multicolumn{2}{|l|}{Vandalism} \\
+    \hline
+        \multicolumn{2}{|l|}{Structure related} \\
+    \hline
+    \multirow{2}{*}{avoidant\_vandalism} & According to Wikipedia Vandalism Typology: "Removal of tags such as \verb|{{afd}}| and \verb|{{copyvio}}| in order to conceal deletion candidates or avert deletion of such content. (This does NOT avert deletion. This actually increases the chance that the article will be deleted.); Removal of a \verb|{{speedy deletion}}| tag from an article one created him/herself. Only the \verb|{{hangon}}| tag can be placed there by the creator to avert deletion.; Removal of recent warnings from one's own user talk page of vandalism or other serious violations"~\cite{Wikipedia:VandalismTypes} \\
+                                     & Examples: not satisfied with the one thing a dubbed "avoidant\_vandalism?" so far.\\
+    \hline
+    \multirow{2}{*}{image\_vandalism} & "Uploading shock images that do not belong at all on Wikipedia; Inappropriately placing explicit images legitimately used on Wikipedia on pages where they do not belong"~\cite{Wikipedia:VandalismTypes} \\
+                                     & Examples: 952 "Image vandalism IV"; 428 "Image abuse";\\
+    \hline
+    \multirow{2}{*}{link\_vandalism} & According to Wikipedia Vandalism Typology: "Modifying internal or external links within a page so that they appear the same in the finished version but link to a page/site that they are not intended to (e.g. spam, self-promotion, an explicit image, a shock site, or some other irrelevant page)
     Adding external links to non-notable or irrelevant sites
     Adding spam links
-    Adding external links that may belong on another Wikipedia page, but have no relevance to the subject matter of the page to which they are added"~\cite{Wikipedia:VandalismTypes}
-  Examples: none sofar, I do have explicit categories for seo and self promotion.. %TODO: do I need this cat? delete?
-
-'avoidant\_vandalism'
-  Def: According to Wikipedia Vandalism Typology: "Removal of tags such as {{afd}} and {{copyvio}} in order to conceal deletion candidates or avert deletion of such content. (This does NOT avert deletion. This actually increases the chance that the article will be deleted.); Removal of a {{speedy deletion}} tag from an article one created him/herself. Only the {{hangon}} tag can be placed there by the creator to avert deletion.; Removal of recent warnings from one's own user talk page of vandalism or other serious violations"~\cite{Wikipedia:VandalismTypes}
-  Examples: not satisfied with the one thing a dubbed "avoidant\_vandalism?" so far.
-
-'username\_vandalism' (called 'malicious account creation' by~\cite{Wikipedia:VandalismTypes})
-  Def: According to Wikipedia Vandalism Typology: "Creating accounts with usernames that contain deliberately offensive or disruptive terms is considered vandalism, whether the account is used or not."~\cite{Wikipedia:VandalismTypes}; in theory there shouldn't be very many filters of that sort, since there is a username blacklist which would be the more appropriate mechanism to take care of this.
-  Examples: 827 "Abusive username activity" (unfortunately hidden, so we don't know what the activity is)
-
-\subsubsection{Content related vandalism}
-
-'silly\_vandalism'
-  Def: blatant, immediately obvious vandalism, such as inserting repeating random characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page);
-  Examples: 338 "Vuvuzela vandalism", 135 "Repeating characters"
-
-'trolling'
-  Def: "Trolling" is explicitely referenced in the filter name
-  According to \url{https://en.wikipedia.org/w/index.php?title=Internet_troll&oldid=902578463} :
-  "In Internet slang, a troll is a person who starts quarrels or upsets people on the Internet to distract and sow discord by posting inflammatory and digressive,[1] extraneous, or off-topic messages in an online community (such as a newsgroup, forum, chat room, or blog) with the intent of provoking readers into displaying emotional responses[2] and normalizing tangential discussion,[3] whether for the troll's amusement or a specific gain. "
-  Examples: 896 "ANI trolling", 615 "Reference desk trolling"
-
-'hoaxing'
-  Def: deliberately inserting false information (From Wikipedia typology: "Adding plausible misinformation to articles; Use of fictitious references")
-  Examples: ?
-
-'prank'
-  Def: Edit or action is meant as a joke. %We probably don't need this, see below for the only filter in this category; also it's also kind of covered by the silly vandalism def (acording to the typology)
-  Examples: 396 "Don't delete the main page" (which was never tripped by the way^^)
-
-'profanity\_vandalism'
-  Def: included during 2nd labeling for marking filters dealing with inserting profanities into articles in general, without them being targeted at a person (that is the difference to 'personal\_attacks')
-
-
-\subsubsection{Politically motivated vandalism}
-'religiously\_motivated'
-Def: Disruptions on topics related to religion
-Examples: 131 "Removal of controversial images" (see content; however this could fall under "image\_vandalism" as well)
-
-'politically\_motivated'
-Def: Disruptions on explicitely politic matters
-Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of India" with "independence of Pakistan""
-
-\subsubsection{General vandalism}
-
-\textbf{'bot\_vandalism'}\\
- Def: Vandalism caused by an automated agent\\
- Examples: 277 "possible vandalbot"; 276 "scripted anomtalk/spoofed IP vandalism"\\
-
-'general\_vandalism'
- Def: vandalism for which none of the more specific tags applied
- Example:
-
-\subsubsection{Hardcore vandalism (the really malicious cases)}
-'sockpuppetry'
-  Def: Sockpuppetry is the usage of multiple accounts to "mislead, deceive, vandalize or disrupt; to create the illusion of greater support for a position; to stir up controversy; or to circumvent a block, ban, or sanction"~\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Sock_puppetry&oldid=903464918}
-  Filter contains "sock", "sockpuppets", "sockpuppetry" or similar in their name ('af\_public\_comments') or maybe notes ("af\_comments"); expected to be mostly hidden filters (which may have been made public upon deletion or being disabled for example)
-  Sockpuppetry is often long term abuse, but not necessarily all long term abuse involves sock puppetry
-  Examples: 16 "Prolific socker I"; 114 "sleeper socks";
-
-'long\_term\_abuse'
-  Def:
-  "The user has been abusing Wikipedia over a long duration of time. The user account has a history of repeated egregious disruption, and despite indefinite block or ban, continues vandalism and/or abuse beyond the point of any usual blocked user." from \url{https://en.wikipedia.org/wiki/Wikipedia:Long_term_abuse}
-  Filters that had "Long term abuse" or "LTA" or similar in their name ('af\_public\_comments'); expected to be mostly hidden filters
-  Example: 51 "LTA Username / LTA IP hopping disruption (Oshwah)"; 937 "Qwertywander long-term abuse";
-
-'abuse'
-  Def: Filter contains "abuse", "abusive" or similar in its name; %TODO do we really need the category
-
-'harassment'
-  Def: Filter contains "harassment" in their name/comments
-  Wikipedia's Policies define harassment (related to Wikipedia) the following way: "[...] stop other editors from enjoying Wikipedia by making threats, repeated annoying and unwanted contacts, repeated personal attacks, intimidation, or posting personal information. [...] "Usually (but not always), the purpose is to make the target feel threatened or intimidated\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Harassment&oldid=886343748}
-  Examples: 792 "Harassment"; 330 "Attacks on editors";
-
-'doxxing'
-  Def: Disclosing private information of other people (e.g. address, contact details, details about their life not know to the public) without their consent; Often with the purpose to facilitate organised harassment and it is thus viewed by Wikipedia as specific form of harassment.
+    Adding external links that may belong on another Wikipedia page, but have no relevance to the subject matter of the page to which they are added"~\cite{Wikipedia:VandalismTypes} \\
+                               & Examples: none sofar, I do have explicit categories for seo and self promotion..\\ %TODO: do I need this cat? delete?
+    \hline
+    \multirow{2}{*}{page\_move\_vandalism} & vandalism involving moving a page (i.e. renaming the page), mostly to some nonsensical name
+  (Wikipedia typology: "Renaming pages (referred to as "page-moving") to disruptive, irrelevant, or otherwise inappropriate terms.") \\
+                               & Examples: 883 "Page moves to bad words or other vandalism"; 334 "Grawp page move vandalism"  \\
+    \hline
+    \multirow{2}{*}{talk\_page\_vandalism} & Malicious activity taking place at talk pages: e.g. modifiyng or removing other users' comments from discussions \\
+                                     & Examples: 842 "Talk page abuse";\\
+    \hline
+    \multirow{2}{*}{template\_vandalism} & "Modifying a template in a harmful or disruptive manner. This is especially serious, because it'll negatively impact the appearance of multiple pages. Some templates appear on hundreds of pages."~\cite{Wikipedia:VandalismTypes} \\
+                                     & Examples: 203 "Template spam from 88.105.0.0/16";\\
+    \hline
+    \multirow{2}{*}{username\_vandalism} & According to Wikipedia Vandalism Typology ('malicious account creation'): "Creating accounts with usernames that contain deliberately offensive or disruptive terms is considered vandalism, whether the account is used or not."~\cite{Wikipedia:VandalismTypes}; in theory there shouldn't be very many filters of that sort, since there is a username blacklist which would be the more appropriate mechanism to take care of this. \\
+                                     & Examples: 827 "Abusive username activity" (unfortunately hidden, so we don't know what the activity is)\\
+    \hline
+        \multicolumn{2}{|l|}{Content related} \\
+    \hline
+    \multirow{2}{*}{hoaxing} & deliberately inserting false information (From Wikipedia typology: "Adding plausible misinformation to articles; Use of fictitious references") \\
+                                     & Examples: ?\\
+    \hline
+    \multirow{2}{*}{prank} &  Edit or action is meant as a joke. \\%We probably don't need this, see below for the only filter in this category; also it's also kind of covered by the silly vandalism def (acording to the typology)
+                                     & Examples: 396 "Don't delete the main page" (which was never tripped by the way^^)\\
+    \hline
+    \multirow{2}{*}{} & included during 2nd labeling for marking filters dealing with inserting profanities into articles in general, without them being targeted at a person (that is the difference to 'personal\_attacks') \\
+                                     & Examples: ?\\
+    \hline
+    \multirow{2}{*}{silly\_vandalism} & blatant, immediately obvious vandalism, such as inserting repeating random characters or other intentional nonsence, such as "Baby carrots are yummy in my tummy." (Edit on the Veganism-Page); \\
+                                     & Examples: 338 "Vuvuzela vandalism", 135 "Repeating characters"\\
+    \hline
+    \multirow{2}{*}{trolling} & "Trolling" is explicitely referenced in the filter name;
+                                According to \url{https://en.wikipedia.org/w/index.php?title=Internet_troll&oldid=902578463} :
+  "In Internet slang, a troll is a person who starts quarrels or upsets people on the Internet to distract and sow discord by posting inflammatory and digressive,[1] extraneous, or off-topic messages in an online community (such as a newsgroup, forum, chat room, or blog) with the intent of provoking readers into displaying emotional responses[2] and normalizing tangential discussion,[3] whether for the troll's amusement or a specific gain. "\\
+                                     & Examples: 896 "ANI trolling", 615 "Reference desk trolling"\\
+    \hline
+        \multicolumn{2}{|l|}{Ideologically motivated} \\
+    \hline
+    \multirow{2}{*}{politically\_motivated} & Disruptions on explicitely politic matters\\
+                                     & Examples: 154 "Macedonia naming conflict 2"; 19 "Replacement of "partition of India" with "independence of Pakistan""\\
+    \hline
+    \multirow{2}{*}{religiously\_motivated} & Disruptions on topics related to religion\\
+                                     & Examples: 131 "Removal of controversial images" (see content; however this could fall under "image\_vandalism" as well)\\
+    \hline
+        \multicolumn{2}{|l|}{General vandalism} \\
+    \hline
+    \multirow{2}{*}{bot\_vandalism} & Vandalism caused by an automated agent\\
+                                     & Examples: 277 "possible vandalbot"; 276 "scripted anomtalk/spoofed IP vandalism"\\
+    \hline
+    \multirow{2}{*}{general\_vandalism} & vandalism for which none of the more specific tags applied\\
+                                     & Examples: ?\\
+    \hline
+        \multicolumn{2}{|l|}{Hardcore vandalism (the really malicious cases)} \\
+    \hline
+    \multirow{2}{*}{abuse} & Filter contains "abuse", "abusive" or similar in its name; \\%TODO do we really need the category
+                                     & Examples: ?\\
+    \hline
+    \multirow{2}{*}{doxxing} & Disclosing private information of other people (e.g. address, contact details, details about their life not know to the public) without their consent; Often with the purpose to facilitate organised harassment and it is thus viewed by Wikipedia as specific form of harassment.
   (According to \url{https://en.wikipedia.org/w/index.php?title=Doxing&oldid=902687406} : "Doxing (from dox, abbreviation of documents)[1] or doxxing[2][3] is the Internet-based practice of researching and broadcasting private or identifying information (especially personally identifying information) about an individual or organization")
-  Examples: 120 "Real life info" (not quite sure though, since filter is hidden)
-
-Note: according to Wikipedia this behaviour constitutes harassment: "Posting another editor's personal information is harassment, unless that person has voluntarily posted their own information, or links to such information, on Wikipedia. Personal information includes legal name, date of birth, identification numbers, home or workplace address, job title and work organisation, telephone number, email address, other contact information, or photograph, whether such information is accurate or not. " (\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Harassment&oldid=902881999})
-
-'personal\_attacks'
-  Def: Insults directed towards particular persons (be it other editors or persons who are the subject matter of an article)
-  \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:No_personal_attacks&oldid=900682398} defines a detailed list of what is considered a personal attack
-  Examples: 299 "Personal attacks"; 693 "Drake Bell attack";
-
-'impersonation'
-  Def: Labels filters that target cases where an editor is trying to pose as another editor. Mostly "impersonation" is metioned in the filter name/comments
-  Examples: 568 "SPI Clerk impersonation";
-
-'not\_polite'
-  Def: Interaction with others turning non-civil without becoming directly a personal attack? Do we really need this tag if we'll only label one filter with it?
-  Examples: 521 "Feedback: All caps" (single example)
-
-'hidden\_vandalism'
- Def: Tag for hidden filters where a more specific tag could not be determined
- Example:
-
-
-\subsubsection{Spam/malware/etc.}
-
-'spam'
-  Def: There is a "Spam" type of vandalism in the Wikipedia Vandalism Typology. However, I've got the feeling that I'm mostly labeling the cases listed there as "self promotion" or similar (although maybe not; This is the def: "    Adding text to any page that promotes an interest that benefits the user, except in user space in a manner allowable under Wikipedia's guidelines
+Note: according to Wikipedia this behaviour constitutes harassment: "Posting another editor's personal information is harassment, unless that person has voluntarily posted their own information, or links to such information, on Wikipedia. Personal information includes legal name, date of birth, identification numbers, home or workplace address, job title and work organisation, telephone number, email address, other contact information, or photograph, whether such information is accurate or not. " (\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Harassment&oldid=902881999}) \\
+                                     & Examples: 120 "Real life info" (not quite sure though, since filter is hidden)\\
+    \hline
+    \multirow{2}{*}{harassment} & Filter contains "harassment" in their name/comments
+                                  Wikipedia's Policies define harassment (related to Wikipedia) the following way: "[...] stop other editors from enjoying Wikipedia by making threats, repeated annoying and unwanted contacts, repeated personal attacks, intimidation, or posting personal information. [...] "Usually (but not always), the purpose is to make the target feel threatened or intimidated\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Harassment&oldid=886343748}\\
+                                     & Examples: 792 "Harassment"; 330 "Attacks on editors";\\
+    \hline
+    \multirow{2}{*}{hidden\_vandalism} & Tag for hidden filters where a more specific tag could not be determined\\
+                                     & Examples: ?\\
+    \hline
+    \multirow{2}{*}{impersonation} & Labels filters that target cases where an editor is trying to pose as another editor. Mostly "impersonation" is metioned in the filter name/comments\\
+                                     & Examples: 568 "SPI Clerk impersonation";\\
+    \hline
+    \multirow{2}{*}{long\_term\_abuse} & "The user has been abusing Wikipedia over a long duration of time. The user account has a history of repeated egregious disruption, and despite indefinite block or ban, continues vandalism and/or abuse beyond the point of any usual blocked user." from \url{https://en.wikipedia.org/wiki/Wikipedia:Long_term_abuse}
+  Filters that had "Long term abuse" or "LTA" or similar in their name ('af\_public\_comments'); expected to be mostly hidden filters\\
+                                     & Example: 51 "LTA Username / LTA IP hopping disruption (Oshwah)"; 937 "Qwertywander long-term abuse";\\
+    \hline
+    \multirow{2}{*}{not\_polite} & Interaction with others turning non-civil without becoming directly a personal attack? Do we really need this tag if we'll only label one filter with it?\\
+                                     & Examples: 521 "Feedback: All caps" (single example)\\
+    \hline
+    \multirow{2}{*}{personal\_attacks} & Insults directed towards particular persons (be it other editors or persons who are the subject matter of an article)
+  \url{https://en.wikipedia.org/w/index.php?title=Wikipedia:No_personal_attacks&oldid=900682398} defines a detailed list of what is considered a personal attack\\
+                                     & Examples: 299 "Personal attacks"; 693 "Drake Bell attack";\\
+    \hline
+    \multirow{2}{*}{sockpuppetry} & Sockpuppetry is the usage of multiple accounts to "mislead, deceive, vandalize or disrupt; to create the illusion of greater support for a position; to stir up controversy; or to circumvent a block, ban, or sanction"~\url{https://en.wikipedia.org/w/index.php?title=Wikipedia:Sock_puppetry&oldid=903464918}
+  Filter contains "sock", "sockpuppets", "sockpuppetry" or similar in their name ('af\_public\_comments') or maybe notes ("af\_comments"); expected to be mostly hidden filters (which may have been made public upon deletion or being disabled for example)
+  Sockpuppetry is often long term abuse, but not necessarily all long term abuse involves sock puppetry \\
+                                     & Examples: 16 "Prolific socker I"; 114 "sleeper socks";\\
+    \hline
+        \multicolumn{2}{|l|}{Spam/malware/etc.} \\
+    \hline
+    \multirow{2}{*}{malware} & Malware is explicitely mentioned in the filter's name \\%TODO maybe combine phishing and malware
+                                     & Examples: 243 "WikiMedia Viewer possible malware"; 429 "Possible malware attack" <-- only two instances\\
+    \hline
+    \multirow{2}{*}{phishing} & Probably stuff that had "phishing" in their name\\
+                                     & Examples: 870 "nowiki phishing" <- only instance\\
+    \hline
+    \multirow{2}{*}{spam} & There is a "Spam" type of vandalism in the Wikipedia Vandalism Typology. However, I've got the feeling that I'm mostly labeling the cases listed there as "self promotion" or similar (although maybe not; This is the def: "    Adding text to any page that promotes an interest that benefits the user, except in user space in a manner allowable under Wikipedia's guidelines
   Alternative: inserting links to promotional content, often not related to the content being edited (from chapter 5)
     Adding external links to site(s) that promote an interest from which the user benefits
     Adding external links to site(s) that have ads from which the user benefits, even if the site has information relevant to the article");
-  I've so far labeled "spam" foremost filters which contain the word in their name
-  Examples: 862 "Arabic string spam";  523 "Page creation spammer";
-
-'phishing'
-  Def: Probably stuff that had "phishing" in their name
-  Examples: 870 "nowiki phishing" <- only instance
-
-'malware'
-  Def: Malware is explicitely mentioned in the filter's name %TODO maybe combine phishing and malware
-  Examples: 243 "WikiMedia Viewer possible malware"; 429 "Possible malware attack" <-- only two instances
+  I've so far labeled "spam" foremost filters which contain the word in their name\\
+                                     & Examples: 862 "Arabic string spam";  523 "Page creation spammer";\\
+    \hline
+    \caption{Code book}~\label{table:code-book}
+\end{longtable}
 
 \subsection{Good faith}
 
