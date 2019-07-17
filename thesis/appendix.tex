@@ -16,7 +16,7 @@ This section provides a detailed overview of all the codes\footnote{Here, I use 
 The purpose of the coding was to gain insight into the specific tasks filters are applied for on English Wikipedia.
 
 
-\begin{longtable}{ | p{4cm} | p{10cm} | }
+\begin{longtable}{ | p{5cm} | p{9cm} | }
     \hline
         \multicolumn{2}{|l|}{Vandalism} \\
     \hline
@@ -133,105 +133,134 @@ Note: according to Wikipedia this behaviour constitutes harassment: "Posting ano
   I've so far labeled "spam" foremost filters which contain the word in their name\\
                                      & Examples: 862 "Arabic string spam";  523 "Page creation spammer";\\
     \hline
+        \multicolumn{2}{|l|}{} \\
+    \hline
+        \multicolumn{2}{|l|}{Good faith} \\
+    \hline
+        \multicolumn{2}{|l|}{Policy violations} \\
+    \hline
+    \multirow{2}{*}{bad\_style} & Filters targeting edits deviating from what is percieved a good encyclopedic style (def?)\\
+                                     & Examples: 899 "Adding "The Sun" or "Dailystar" to BLPs" (presumably, bc they are unreliable sources;); 491 "Edits ending with emoticons or !"; 253 "Signing a non-discussion page"\\
+    \hline
+    \multirow{2}{*}{copyright\_violation} & Filters targeting potential copyright violations: e.g. images without license information, ..\\
+                                     & Examples: 798 "Possible copyvio for image upload"; 278 "Possible copyright violations"\\
+    \hline
+    \multirow{2}{*}{edit\_warring} & Filters targeting edits that revert each other \\
+                                     & Examples: 622 "Genre edit-warring"; 419 "User removing himself from AIV" (first labeling, I would actually simply label this 'vandalism' upon second inspection)\\
+    \hline
+    \multirow{2}{*}{guideline\_vio} &  Filters target edits violating Wikipedia's guidelines \\%TODO do we need this one and the previous? I would rather merge them.
+                                     & Examples: 55 "Signing articles" (which is also labeled 'bad\_style'); it is also the only filter with a 'guideline\_vio' label from the 1st round of labeling\\
+    \hline
+    \multirow{2}{*}{lazyness} & Slacking on orthography norms (this is something that shouldn't be handled by filters, according to guidelines); smth else?\\
+                                     & Examples: 18 "Test type edits from clicking on edit bar" (not quite sure why I have labeled this 'lazyness'); 292 "Repeating characters in edit summary"; 432 "Starting new line with lowercase letters"\\
+    \hline
+    \multirow{2}{*}{wiki\_policy} & Filters target edits violating Wikipedia's policies\\
+                                     & 930 "Prevent indexing userspaces by newer users"; 272 "Page author removing CSD tags"\\
+    \hline
+        \multicolumn{2}{|l|}{Point of view problems} \\
+    \hline
+    \multirow{2}{*}{biased\_pov} & Hm.. I have the feeling all the filters here should be relabeled..\\
+                                     & Examples: 148 "Users creating autobiographies" (which should be rather "self\_promotion", I think); 894 "Possible Self-Published Sources" (maybe 'self\_promotion' is also more suitable here?); 878 "New user removing COI template"\\
+    \hline
+    \multirow{2}{*}{conflict\_of\_interest} & Filter targets people editing articles about themselves or organisations they are affilitated to or receive money from.\\
+                                     & Examples: 302 "Possible COI"; 588 "Promotional usernames"\\
+    \hline
+    \multirow{2}{*}{self\_promotion} & specifically promoting one-self, it is kind of part of the 'conflict\_of\_interest'\\
+                                     & Examples: 214 "Creating articles with title contained in username" (this is actually one of the 3 filters with this as a label candidate, so I think we can savely merge it with 'conflict\_of\_interest' without significantly losing facettes)\\
+    \hline
+    \multirow{2}{*}{seo} & Filters targeting SEO edits (mostly, explicitely mentioned in the filter name)\\
+                                     & Examples: 36 "SEO push University of Atlanta"; 682 "SEO/Attack page"; 554 "top100 blog charts" (bc of this and the Daily Mail sources, I am contemplating creating a 'unreliable\_sources' label)\\
+    \hline
+        \multicolumn{2}{|l|}{Structure related} \\
+    \hline
+    \multirow{2}{*}{good\_faith} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_article\_creation} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_categories} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_deletion} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_edits} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_edit\_summary} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_external\_resources} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_html} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_image} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_move} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_orthography} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_redirect} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_refs} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_revert} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_template} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_test\_edits} & \\
+                                     & Examples:18 "Test type edits from clicking on edit bar"\\
+    \hline
+    \multirow{2}{*}{good\_faith\_userpage} & \\
+                                     & Examples:18 "Test type edits from clicking on edit bar"\\
+    \hline
+    \multirow{2}{*}{good\_faith\_wiki\_links} & \\
+                                     & Examples:\\
+    \hline
+    \multirow{2}{*}{good\_faith\_wiki\_syntax} & \\
+                                     & Examples:\\
+    \hline
+        \multicolumn{2}{|l|}{} \\
+    \hline
+        \multicolumn{2}{|l|}{Maintenance} \\
+    \hline
+    \multirow{2}{*}{bug} & Filters targeting software bugs from MediaWiki, browser extensions, etc which sometimes cause eroneous syntax\\
+                                     & Examples: 577 "VisualEditor bugs: Strange icons"; 606 "ANI restoration bug";\\
+    \hline
+    \multirow{2}{*}{general\_maintenance} & Filters taking care of other maintenance tasks (It looks like, I will have problems to distinguish between this one and 'general\_tracking')\\
+                                     & Examples: 728 "Huggle"; 942 "Log edits to protected pages"; 199 "Unflagged Bots"\\
+    \hline
+    \multirow{2}{*}{general\_tracking} & There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is\\
+                                     & Examples: 362 "New user creating page" would fit better in here I think\\
+    \hline
+    \multirow{2}{*}{test} & Various test filters (of single edit filter managers or jointly used)\\
+                                     & Examples: 398 "Test filter 398"; 358 "Od Mishehu's test filter"; 424 "Repeatedly blocked user --  testing-only rule for filter 425"\\
+    \hline
+        \multicolumn{2}{|l|}{} \\
+    \hline
+        \multicolumn{2}{|l|}{Unknown} \\
+    \hline
+    \multirow{2}{*}{misc} & Cannot fit the filter into any category (it is not that functionality is unclear but I couldn't think of a suitable label)\\
+                                     & Examples: 388 "Unusual redirect III" (which is hidden, so according to new def, should be re-labeled "hidden\_vandalism"), 688 "Beals" (same); 708 "SPI page moves"; 152 "External links with referal tags"\\
+    \hline
+    \multirow{2}{*}{unclear} & I'd say that is similar to misc and both should be merged\\
+                                     & Examples: 362 "New user creating page", 300 "Cross-posting"\\
+    \hline
+    \multirow{2}{*}{unknown} & Cannot determine at all what the filter is doing (but hidden filters with no clear names should be labeled "hidden\_vandalism", since it's pretty clear they target vandalism)\\
+                                     & Examples: various; as far as I can see though, all of them are getting re-labeled to "hidden\_vandalism"\\
+    \hline
     \caption{Code book}~\label{table:code-book}
 \end{longtable}
-
-\subsection{Good faith}
-
-'good\_faith'
-  Def: In ambigous cases, e.g. editor blanking sections, we assume good faith as long as there are not any indicators to the contrary. One such indicator would be the filter action: filters set to "warn" try to communicate with the editors, point out potential pitfalls to them and give them the opportunity to update and publish the edit (or publish the edit regardles, if they think all is good). Filters set to "disallow" on the other hand, do not seek to guide an editor but rather protect the encyclopedia from harmful content.
-  Examples: 180	"Large unwikified new article"; 98 "Creating very short new article"; 657 "Adding an external link to a disambiguation page" (used to be labeled 'good\_faith?', but since actions are "warn,tag", according to my newly defined guidelines, this is a good\_faith filter)
-
-\subsubsection{Policy violations}
-%\subsection{Disruptive editing which is not outright vandalism}
-
-'copyright\_violation'
-  Def: Filters targeting potential copyright violations: e.g. images without license information, ..
-  Examples: 798 "Possible copyvio for image upload"; 278 "Possible copyright violations"
-
-'bad\_style'
-  Def: Filters targeting edits deviating from what is percieved a good encyclopedic style (def?)
-  Examples: 899 "Adding "The Sun" or "Dailystar" to BLPs" (presumably, bc they are unreliable sources;); 491 "Edits ending with emoticons or !"; 253 "Signing a non-discussion page"
-'lazyness'
-  Def: Slacking on orthography norms (this is something that shouldn't be handled by filters, according to guidelines); smth else?
-  Examples: 18 "Test type edits from clicking on edit bar" (not quite sure why I have labeled this 'lazyness'); 292 "Repeating characters in edit summary"; 432 "Starting new line with lowercase letters"
-'edit\_warring'
-  Def: Filters targeting edits that revert each other
-  Examples: 622 "Genre edit-warring"; 419 "User removing himself from AIV" (first labeling, I would actually simply label this 'vandalism' upon second inspection)
-
-'wiki\_policy'
-  Def: Filters target edits violating Wikipedia's policies
-  Examples: 930 "Prevent indexing userspaces by newer users"; 272 "Page author removing CSD tags"
-'guideline\_vio'
-  Def: Filters target edits violating Wikipedia's guidelines %TODO do we need this one and the previous? I would rather merge them.
-  Examples: 55 "Signing articles" (which is also labeled 'bad\_style'); it is also the only filter with a 'guideline\_vio' label from the 1st round of labeling
-
-\subsubsection{SEO/COI/POV problems}
-
-'biased\_pov'
-  Def: Hm.. I have the feeling all the filters here should be relabeled..
-  Examples: 148 "Users creating autobiographies" (which should be rather "self\_promotion", I think); 894 "Possible Self-Published Sources" (maybe 'self\_promotion' is also more suitable here?); 878 "New user removing COI template"
-'conflict\_of\_interest'
-  Def: Filter targets people editing articles about themselves or organisations they are affilitated to or receive money from.
-  Examples: 302 "Possible COI"; 588 "Promotional usernames"
-'self\_promotion'
-  Def: specifically promoting one-self, it is kind of part of the 'conflict\_of\_interest'
-  Examples: 214 "Creating articles with title contained in username" (this is actually one of the 3 filters with this as a label candidate, so I think we can savely merge it with 'conflict\_of\_interest' without significantly losing facettes)
-'seo'
-  Def: Filters targeting SEO edits (mostly, explicitely mentioned in the filter name)
-  Examples: 36 "SEO push University of Atlanta"; 682 "SEO/Attack page"; 554 "top100 blog charts" (bc of this and the Daily Mail sources, I am contemplating creating a 'unreliable\_sources' label)
-
-%TODO: label cases additionally with scope/area the filter is targeting
-\subsubsection{Structure related}
-'good\_faith\_refs'
-'good\_faith\_deletion'
-'good\_faith\_orthography'
-'good\_faith\_article\_creation'
-'good\_faith\_external\_resources'
-'good\_faith\_template'
-'good\_faith\_wiki\_syntax'
-'good\_faith\_test\_edits'
-Introducing because of filter 18 "Test type edits from clicking on edit bar"
-'good\_faith\_edit\_summary'
-'good\_faith\_revert'
-'good\_faith\_wiki\_links'
-'good\_faith\_userpage'
-'good\_faith\_redirect'
-'good\_faith\_html'
-'good\_faith\_categories'
-'good\_faith\_move'
-'good\_faith\_image'
-'good\_faith\_edits'
-
-
-\subsection{Maintenance}
-
-'bug'
-  Def: Filters targeting software bugs from MediaWiki, browser extensions, etc which sometimes cause eroneou syntax
-  Examples: 577 "VisualEditor bugs: Strange icons"; 606 "ANI restoration bug";
-'test'
-  Def: Various test filters (of single edit filter managers or jointly used)
-  Examples: 398 "Test filter 398"; 358 "Od Mishehu's test filter"; 424 "Repeatedly blocked user --  testing-only rule for filter 425"
-'general\_maintenance' (used to be 'maintenance' upon 1st labeling)
-  Def: Filters taking care of other maintenance tasks (It looks like, I will have problems to distinguish between this one and 'general\_tracking')
-  Examples: 728 "Huggle"; 942 "Log edits to protected pages"; 199 "Unflagged Bots"
-
-'general\_tracking'
-  Def: There are various filters introduced with the aim to track certain behaviour in order to determin whether it occurs frequently and how problematic it is
-  Examples: 362 "New user creating page" would fit better in here I think
-
-
-\subsection{Unknown}
-
-'unknown'
-  Def: Cannot determine at all what the filter is doing (but hidden filters with no clear names should be labeled "hidden\_vandalism", since it's pretty clear they target vandalism)
-  Examples: various; as far as I can see though, all of them are getting re-labeled to "hidden\_vandalism"
-'misc'
-  Def: Cannot fit the filter into any category (it is not that functionality is unclear but I couldn't think of a suitable label)
-  Examples: 388 "Unusual redirect III" (which is hidden, so according to new def, should be re-labeled "hidden\_vandalism"), 688 "Beals" (same); 708 "SPI page moves"; 152 "External links with referal tags"
-'unclear'
-  Def: I'd say that is similar to misc and both should be merged
-  Examples: 362 "New user creating page", 300 "Cross-posting"
 
 
 \section{Extra figures and tables}
