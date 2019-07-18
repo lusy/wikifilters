@@ -4,36 +4,23 @@
 The purpose of this chapter is to reflect upon what we have learnt so far and describe/outline some limitations of the present study.
 
 \section{Discussion}
+%TODO get rid of section title?
 
-% Why are there still rule-based systems in ML time?
-One urgent question that is still open is:
-Why are there still very well established up-and-running rule based systems in times of fancy(syn) machine learning algorithms?
-Research has long demonstrated higher precision and better results of machine learning methods. %TODO find quotes!
-Several explanations of this phenomenon come to mind.
-For one, Wikipedia's edit filters are an established system which works and does its work reasonably well, so there is no need (syn) to change it. (``never touch a running system)
-It has been organically weaven in Wikipedia's quality control ecosystem with historical needs to which it responded and people at the time believing the mechanism to be the right solution to the problem they had.
-We could ask why was it introduced in the first place when there were already other mechanisms (and possibly already the first ML based bots) %TODO check timeline
-A very plausible explanation here is that since Wikipedia is a volunteer project a lot of stuff probably happens because at some precise moment there are particular people who are familiar with some concrete technologies so they construct a solution using the technologies they are good at using (or want to use).
+I started this inquiry with following questions: %TODO format questions appropriately
+Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?
+%-- chapter 4 (and 2)
+Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?
+%-- chapter 6 (discussion)
 
-Another interesting reflection is that rule based systems are arguably easier to implement and above all to understand by humans which is why they still enjoy popularity today.
-On the one hand, overall less technical knowledge is needed in orderto implement a single filter:
-An edit filter manager has to ``merely'' understand regular expressions.
-Bot development on the other hand (syn!) is a little more challenging:
-A developer needs resonable knowledge of at least one programming language and on top of that has to make themself familiar with stuff like the Wikimedia API, ....
-Moreover, since regular expressions are still somewhat human readable and understandable (syn!) in contrast to a lot of popular machine learning algorithms, it is easier to hold rule based systems and their developers accountable.
+Q2 Which type of tasks do filters take over? %-- chapter 5
+Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)? %-- chapter 5 (can be significantly expanded)
 
-Filters are a simple mechanism (simple to implement) that swiftly takes care of cases that are simple to recognise as undesirable.
-ML needs training data (expensive), it's not simple to implement.
+For the rest of the section I go over each of them and summarise the findings.
 
-\begin{comment}
-maybe it's a historical phenomenon (in many regards):
-* perhaps there were differences that are not essential anymore, such as:
-  * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
-  * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
-* perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
-* perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
-* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
-\end{comment}
+%TODO maybe just format bold and get rid of the subsection
+\subsection{Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)}
+
+Why were filters introduced when other systems were already in place?
 
 % The infrastructure question: Part of the software vs externally run
 One difference between bots and filters underlined several times was that as a MediaWiki extension edit filters are part of the core software whereas bots are running on external infrastructure which makes them generally less reliable.
@@ -66,6 +53,43 @@ Filters assuming good faith seek communication with the editor by issueing warni
 Bots on the other hand simply revert everything their algorithms find malicious.
 In case of good faith edits, this would mean that an editor wishing to dispute this decision should open a discussion (on the bot's talk page?) and research has shown that attempts to initiate discussions with (semi-)automated quality control agents have in general quite poor response rates % TODO quote
 % that's positive! editors get immmediate feedback and can adjust their (good faith) edit and publish it! which is psychologically better than publish something and have it reverted in 2 days
+
+\subsection{Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?}
+%* What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
+
+Research has long demonstrated higher precision and better results of machine learning methods. %TODO find quotes!
+Several explanations of this phenomenon come to mind.
+For one, Wikipedia's edit filters are an established system which works and does its work reasonably well, so there is no need (syn) to change it. (``never touch a running system)
+It has been organically weaven in Wikipedia's quality control ecosystem with historical needs to which it responded and people at the time believing the mechanism to be the right solution to the problem they had.
+We could ask why was it introduced in the first place when there were already other mechanisms (and possibly already the first ML based bots) %TODO check timeline
+A very plausible explanation here is that since Wikipedia is a volunteer project a lot of stuff probably happens because at some precise moment there are particular people who are familiar with some concrete technologies so they construct a solution using the technologies they are good at using (or want to use).
+
+Another interesting reflection is that rule based systems are arguably easier to implement and above all to understand by humans which is why they still enjoy popularity today.
+On the one hand, overall less technical knowledge is needed in orderto implement a single filter:
+An edit filter manager has to ``merely'' understand regular expressions.
+Bot development on the other hand (syn!) is a little more challenging:
+A developer needs resonable knowledge of at least one programming language and on top of that has to make themself familiar with stuff like the Wikimedia API, ....
+Moreover, since regular expressions are still somewhat human readable and understandable (syn!) in contrast to a lot of popular machine learning algorithms, it is easier to hold rule based systems and their developers accountable.
+
+Filters are a simple mechanism (simple to implement) that swiftly takes care of cases that are simple to recognise as undesirable.
+ML needs training data (expensive), it's not simple to implement.
+
+
+\begin{comment}
+maybe it's a historical phenomenon (in many regards):
+* perhaps there were differences that are not essential anymore, such as:
+  * on which infrastructure does it run (part of the core software vs own computers of the bot operators)
+  * filters are triggered *before* an edit is even published, whereas bots (and tools) can revert an edit post factum. Is this really an important difference in times when bots need a couple of seconds to revert an edit?
+* perhaps the extension was implemented because someone was capable of implementing and working well with this type of systems so they just went and did it (do-ocracy; Wikipedia as a collaborative volunteer project);
+* perhaps it still exists in times of fancier machine learning based tools (or bots) because rule-based systems are more transparent/easily understandable for humans and writing a regex is simpler than coding a bot.
+* hypothesis: it is easier to set up a filter than program a bot. Setting up a filter requires "only" understanding of regular expressions. Programming a bot requires knowledge of a programming language and understanding of the API.
+\end{comment}
+
+\subsection{Q2 Which type of tasks do filters take over?}
+
+\subsection{Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)?}
+
+
 
 % censorship infrastructure concerns: maybe discuss in the conclusion
 
