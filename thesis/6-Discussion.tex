@@ -211,7 +211,7 @@ Throughout the analysis, a variety of intriguing questions arose which couldn't 
 Here, a comprehensive list of all these pointers for possible future studies is provided.
 
 \begin{enumerate}
-    \item \textbf{How have edit filters's tasks evolved over time?}: Unfortunately, no detailed historical analysis of the filters was possible, since the database table storing changes to individual filters (\emph{abuse\_filter\_history}) is not currently replicated (see section~\ref{}). When a dump becomes available (compare issue~\cite{phabricator}), an extensive analysis (sym) of filter creation and activation patterns, together with .. will be possible (syn).
+    \item \textbf{How have edit filters's tasks evolved over time?}: Unfortunately, no detailed historical analysis of the filters was possible, since the database table storing changes to individual filters (\emph{abuse\_filter\_history}) is not currently replicated (see section~\ref{sec:overview-data}). A patch aiming to renew the replication of the table is currently under review~\cite{gerrit-tables-replication}. When a dump becomes available, an extensive analysis (sym) of filter creation and activation patterns, together with .. will be possible (syn).
         (Actually there is some historical stuff: e.g. temporal overview of hits, broken down by filter action... Beware however, it is the *current* filter action they were plotted with and it is very possible that the corresponding filters had a different action switched on some time ago. %TODO check whether that's actually true
         (or another visibility level, different regex pattern which would've resulted in a different manual tag)
     \item \textbf{What are the differences between how filters are governed on EN Wikipedia compared to other language versions?}: Different Wikipedia language versions each have a local community behind them. %TODO quote?
@@ -221,7 +221,7 @@ Here, a comprehensive list of all these pointers for possible future studies is 
         According to the edit filter noticeboard archives~\cite{Wikipedia:EditFilterNoticeboardHarassment} there have been some attempts to combat harassment by means of filters.
         An evaluation of the usefulness and success of the mechanism at this task would be really interesting.
     \item \textbf{When an editor (edit filter manager who is also a bot operator) will implement a bot and when a filter} - ethnographic inquiry
-    \item \textbf{Repercussions on affected editors}: What are the consequences of edit filters on editors whose edits are filtered? Frustration? Allienation? Do they understand what is going on?....
+    \item \textbf{Repercussions on affected editors}: What are the consequences of edit filters on editors whose edits are filtered? Frustration? Allienation? Do they understand what is going on? Or are for example edit filter warnings helpful and the editors appreciate the hints they have been given and use them to improve their collaboration?
     \item \textbf{Is it possible to study the regex patterns in a more systematic fashion? What is to be learnt from this?}%is this really interesting?
     \item \textbf{(How) has the notion of ``vandalism'' on Wikipedia evolved over time?}: By comparing older and newer filters, or respectively updates in filter patterns we could investigate whether there is a qualitative change in the interpretation of the ``vandalism'' notion on Wikipedia.
     \item \textbf{False Positives?}: were filters shut down, bc they matched more False positives than they had real value?
@@ -229,5 +229,5 @@ Here, a comprehensive list of all these pointers for possible future studies is 
 %* is there a qualitative difference between complaints of bots and complaints of filters?
     \item \textbf{Is there a qualitative difference between the tasks/patterns of public and hidden filters?}: We know of one general guideline/rule of a thumb (cite!) according to that general filters are to be public while filters targeting particular users are hidden. Is there something more to be learnt from an actual examination of hidden filters? One will have to request access to them for research purposes, sign an NDA, etc.
     \item \textbf{Do edit filter managers specialize on particular types of filters (e.g. vandalism vs good faith?)} \emph{abuse\_filter\_history } table is needed for this
-    \item \textbf{What proportion of work do filters take over}: compare filter hits with number of all edits and reverts via other quality control mechanisms
+    \item \textbf{What proportion of quality control work do filters take over?}: compare filter hits with number of all edits and reverts via other quality control mechanisms
 \end{enumerate}
