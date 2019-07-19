@@ -33,25 +33,23 @@ A comprehensive historical analysis is therefore one of the directions for futur
 A concise description of the tables has been offered in section~\ref{sec:mediawiki-ext} which discusses the AbuseFilter MediaWiki extension in more detail.
 For further reference, the schemas of all four tables can be viewed in figures~\ref{fig:app-db-schemas-af},~\ref{fig:app-db-schemas-afl},~\ref{fig:app-db-schemas-afh} and~\ref{fig:app-db-schemas-afa} in the appendix.
 
-
+%TODO think about the name of the section
 \section{Types of edit filters: Manual Classification}
 \label{sec:manual-classification}
 
-The aim of this section is to get a better understanding of what exactly it is that edit filters are filtering.
-Based on the grounded theory methodology presented in chapter~\ref{chap:methods}, I applied emergent coding to all filters, scrutinising their patterns, comments and actions.
+In order to get a better understanding of what exactly it is that edit filters are filtering, I applied a grounded theory inspired emergent coding(see chapter~\ref{chap:methods}) to all filters, scrutinising their patterns, comments and actions.
+Three big clusters of codes were identified, namely ``vandalism'', ``good faith'', and ``maintenance'', as well as the auxiliary cluster ``unknown''.
+These are discussed in more detail later in this section, but first the coding itself is presented.
 
-Three big clusters of filters were identified, namely ``vandalism'', ``good faith'', and ``maintenance'' (and the auxiliary cluster ``unknown''). %TODO define what each of them are; I actually work with 8 main clusters in the end; Unify this
-These are discussed in more detail later in this section.
+\subsection{Coding process and challenges}
 
-\subsection{Labeling process and challenges}
-
-As already mentioned, I started coding strongly influenced by the coding methodologies applied by grounded theory scholars (see chapter~\ref{chap:methods}) and let the labels emerge during the process.
+As already mentioned, I started coding strongly influenced by the coding methodologies applied by grounded theory scholars (see section~\ref{sec:gt}) and let the labels emerge during the process.
 I looked through the data paying special attention to the name of the filters (``af\_public\_comments'' field of the \emph{abuse\_filter} table), the comments (``af\_comments''), the regular expression pattern constituting the filter (``af\_pattern''), and the designated filter actions (``af\_actions'').
 
 The assigned codes emerged from the data: some of them being literal quotes of terms used in the decription or comments of a filter, while others summarised the perceived filter functionality.
 In addition to that, for vandalism related labels, I used some of the vandalism types identified by the community in~\cite{Wikipedia:VandalismTypes}.
 However, this typology was regarded more as an inspiration instead of being adopted 1:1 since some of the types were quite general whereas more specific categories seemed to render more insights.
-For instance, I haven't applied the ``addition of text'' category since it seemed more insightful/useful(syn!) to have more specific labels such as ``hoaxing'' or ``silly\_vandalism'' (check the code book in the appendix~\ref{app:code_book} for definitions).
+For instance, I haven't applied the ``addition of text'' category since it seemed more useful to have more specific labels such as ``hoaxing'' or ``silly\_vandalism'' (check the code book in the appendix~\ref{app:code_book} for definitions).
 Moreover, I found some of the proposed types redundant.
 For example, ``sneaky vandalism'' seems to overlap partially with ``hoaxing'' and partially with ``sockpuppetry'', ``link vandalism'' mostly overlaps with ``spam'' or ``self promotion'' (although not always), and for some reason, ``personal attacks'' are listed twice.
 
@@ -60,14 +58,14 @@ The motivation therefor was to return to it once I've gained better insight into
 This mode of labeling is congruous with the simultaneous coding and data analysis suggested by grounded theorists (compare section~\ref{sec:gt}).
 
 %1st labeling
-Following challenges were encountered during the first round of labeling.
+Following challenges were encountered during the first round of labeling:
 There were some ambiguous cases which I either tagged with the code I deemed most appropriate and a question mark, or assigned all possible labels (or both).
 There were also cases for which I could not gather any insight relying on the name, comments and pattern, since the filters were hidden from public view and the name was not descriptive enough.
 However, upon some further reflection, I think it is safe to assume that all hidden filters target a form of (more or less grave) vandalism, since the guidelines suggest that filters should not be hidden in the first place unless dealing with cases of persistent and specific vandalism where it could be expected that the vandalising editors will actively look for the filter pattern in their attempts to circumvent the filter\cite{Wikipedia:EditFilter}.
 Therefore, during the second round of labeling I tagged all hidden filters for which there weren't any more specific clues (for example in the name of the filter) as ``hidden\_vandalism''.
 And then again, there were also cases, not necessarily hidden, where I could not determine any suitable label, since I didn't understand the regex pattern, and/or none of the existing categories seemed to fit, and/or I couldn't think of an insightful new category to assign.
-During the first labeling, these were labeled 'unknown', 'unclear' or 'not sure'.
-For the second round, I have unified all of them under 'unclear'.
+During the first labeling, these were labeled ``unknown'', ``unclear'' or ``not sure''.
+For the second round, I have unified all of them under ``unclear''.
 
 For a number of filters, it was particularly difficult to determine whether they were targeting vandalism or good faith edits.
 The only thing that would have distinguished between the two would have been the contributing editor's motivation, which we had no way of knowing.
@@ -78,9 +76,8 @@ One feature which guided me here was the filter action which represents the judg
 Since communication is crucial when assuming good faith, all ambiguous cases which have a less ``grave'' filter action such as ``tag'' or ``warn'' (which seeks to give feedback and thereby effect/influence a constructive contribution) have received a ``good\_faith'' label.
 On the other hand, filters set to ``disallow'' were tagged as ``vandalism'' or a particular type thereof, since the filter action is a clear sign that at least the edit filter managers have decided that seeking a dialog with the offending editor is no longer an option. %TODO check whether that's really the case
 
-%TODO compare also with revising codes as the analysis goes along according to Grounded Theory
 For the second round of labeling, I tagged the whole dataset again using the compiled code book (see \ref{app:code_book}) and assigned to every filter exactly one label–the one deemed most appropriate (although oftentimes alternative possibilites were listed as notes), without looking at the labels I assigned the first time around.
-I intended to compare the labels from both coding sessions and focus on more ambiguous (syn) cases, re-evaluting them using all available information (patterns, public comments, labels from both sessions + any notes I made along the line).
+I intended to compare the labels from both coding sessions and focus on more ambiguous cases, re-evaluting them using all available information (patterns, public comments, labels from both sessions, as well as any notes I made along the line).
 Unfortunately, there was no time, so the analysis of the present section is based upon the second round of labeling.
 Comparing codes from both labeling sessions and refining the coding is one of the possibilities for future research. %TODO (re-formulate!)
 
@@ -97,56 +94,148 @@ While there are cases of juvenile vandalism (putting random swear words in artic
 For these, from the edit alone there is no way of knowing whether the deletion was malicious or the editor conducting it just wasn't familiar with say the correct procedure for moving an article.
 \end{comment}
 
-\begin{comment}
-%TODO where to put this?
-Users are urged to use the term "vandalism" carefully, since it tends to offend and drive people away.
-("When editors are editing in good faith, mislabeling their edits as vandalism makes them less likely to respond to corrective advice or to engage collaboratively during a disagreement,"~\cite{Wikipedia:Vandalism})
-\end{comment}
-
-
-The subsections that follow discuss the salient properties of each of the main clusters of manually assigned codes.
+%TODO axial coding: sounds a bit lame still?
+At the end, an axial coding phase took place in which the identified codes were sorted and unified into broader categories which seemed to relate the single labels to each other.
+As signaled at the beginning of the section, following four categories were identified (syn): ``vandalism'', ``good faith'', ``maintenance'', and ``unknown''.
+The subsections that follow discuss the salient properties of each of them.
 
 \subsection{Vandalism}
 
 The vast majority of edit filters on EN Wikipedia could be said to target (different forms of) vandalism, i.e. maliciously intended disruptive editing.
-Some examples thereof are filters for juvenile types of vandalism (inserting swear or obscene words or nonsence sequences of characters into articles), for hoaxing (inserting obvious or less obvious false information in articles), for template vandalism (modifying a template in a disruptive way which is quite severe, since templates are displayed on various pages), or for spam (inserting links to promotional content, often not related to the content being edited).
-All codes belonging to the vandalism cluster together with definition and examples can be consulted in the code book attached in the appendix~\ref{app:code_book}.
+Some examples thereof are filters for juvenile types of vandalism (inserting swear or obscene words or nonsence sequences of characters into articles), for hoaxing (inserting obvious or less obvious false information in articles), for template vandalism (modifying a template in a disruptive way which is quite severe, since templates are displayed on various pages), or for spam (inserting links to promotional content, often not related to the content being edited). %TODO stick to one terminology; no "juvenile" vandalism otherwise
+All codes belonging to the vandalism category together with definition and examples can be consulted in the code book attached in the appendix~\ref{app:code_book}.
 
-Some vandalism types seem to be more severe than others (sock puppetry or persistent long term vandals).
-It's mostly in these cases that the implemented filters are hidden.
-Labels refering to such types of vandalism form the separate subcluster ``hardcore vandalism''. %TODO think about naming
-It should be mentioned at this point that I also classified ``harassment'' and ``personal attacks'' as ``hardcore vandalism'', since these types of edits are highly harmful and often dealt with by hidden filters, although according to~\cite{Wikipedia:Vandalism} both behaviours are disruptive editing rather than vandalism.
+Some vandalism types seem to be more severe than others (e.g. sock puppetry or persistent long term vandals).
+It is mostly in these cases that the implemented filters are hidden.
+Labels refering to such types of vandalism form their own subcategory: ``hardcore vandalism''. %TODO think about naming
+It should be mentioned at this point that I also classified ``harassment'' and ``personal attacks'' as ``hardcore vandalism'', since these types of edits are highly harmful and often dealt with by hidden filters, although according to~\cite{Wikipedia:Vandalism} both behaviours are disruptive editing rather than vandalism and should generally be handled differently.
 
 \subsection{Good Faith}
 
-The second biggest cluster identified were filters targeting (mostly) disruptive, but not necessarily made with bad intentions edits.
+The second biggest category identified (syn!) were filters targeting (mostly) disruptive but not necessarily made with bad intentions edits.
 The adopted name ``good faith'' is a term used/utilised by the Wikipedia community itself, most prominently in the guideline ``assume good faith''~\cite{Wikipedia:GoodFaith}.
-Filters from this cluster mostly target unconstructive edits done by new editors, not familiar with syntax, norms, or guidelines which results in broken syntax, disregard of established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.) or norms (e.g. copyright violations),  or unencyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view).
+Filters from this category mostly target unconstructive edits done by new editors, not familiar with syntax, norms, or guidelines which results in broken syntax, disregard of established processes (e.g. deleting something without running it through an Articles for Deletion process, etc.) or norms (e.g. copyright violations),  or unencyclopedic edits (e.g. without sources/with improper sources; badly styled; or with a skewed point of view).
 
 The focus of these filters lies in the communication with the disrupting editors:
 a lot of the filters issue warnings intending to guide the editors towards ways of modifying their contribution to become a constructive one.
 
-The coding of filters from this cluster took into consideration/reflects the area the editor was intending to contribute to or respectively that they (presumably) unintentionally disrupted.
+Codes from this category often take into consideration the area the editor was intending to contribute to or respectively that they (presumably) unintentionally disrupted.
 
 
 \subsection{Maintenance}
 
 Some of the encountered edit filters on the EN Wikipedia were targeting neither vandalism nor good faith edits.
 Rather, they had their focus on (semi-)automated routine (clean up) tasks.
-Some of the filters from the ``maintenance'' cluster were for instance targeting bugs such as broken syntax caused by a faulty browser extension.
-Or there were such which simply tracked particular behaviours (such as mobile edits or edits made by unflagged bots) for various purposes.
+These form the ``maintenance'' category.
+Some of the filters target for instance bugs such as broken syntax caused by a faulty browser extension.
+Or there are such which simply track particular behaviours (such as mobile edits or edits made by unflagged bots) for various purposes.
 
-The ``maintenance'' cluster differs conceptually from the ``vandalism'' and ``good faith'' ones in so far that the logic behind it isn't editors' intention, but rather "side"-occurances that mostly went wrong.
+The ``maintenance'' category differs conceptually from the ``vandalism'' and ``good faith'' ones in so far that the logic behind it isn't editors' intention, but rather ``side''-occurances that mostly went wrong.
 
-I've also grouped in this cluster various test filters (of single editors or such being recycled by all editors).
+I've also grouped here various test filters (used by individual editors or share used by all editors).
 
 \subsection{Unknown}
 
-This is an auxiliary cluster comprising the ``unknown'' and ``misc'' tags %TODO allign with code book, right now there are 3 tags in the unknown cluster
-used to code all filters where the functionality stayed completely opaque for the observer or although it was comprehensible what the filter was doing still no more suitable label emerged.
+This is an auxiliary category comprising the ``unknown'' and ``misc'' codes %TODO allign with code book, right now there are 3 tags in the unknown cluster
+used to code all filters where the functionality stayed completely opaque for the observer or although it was comprehensible what the filter was doing still no better fitting label emerged.
 
-\section{Manual tags discussion/manual tags + activity}
+%************************************************************
 
+%\section{Descriptive statistics/Patterns/General traits of the filters}
+\section{Filter characteristics}
+\label{sec:patterns}
+
+In this section, we explore some general traits/patterns of/trends in the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
+The scripts that generate the statistics (syn?) discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
+
+
+\subsection{General traits}
+
+As of January 6th, 2019 there are $954$ filters in the \emph{abuse\_filter} table.
+It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
+So, the above mentioned $954$ filters are all filters ever made up to this date.
+This doesn't mean that it never changed what the single filters are doing, since edit filter managers can freely modify filter patterns, so at some point the filter could be doing one thing and in the next moment it can be filtering a completely different phenomenon.
+There are cases of filters being ``repurposed'' or modified to filter for example a more general occurance/phenomenon.
+This doesn't happen very often though.
+Mostly, if a filter is not useful anymore it is just disabled and eventually deleted and new filters are implemented for current problems.
+
+$361$ of all filters are public, the remaining $593$–hidden.
+$110$ of the public ones are active, $35$ are disabled, but not marked as deleted, and $216$ are flagged as deleted.
+Out of the $593$ hidden filters $91$ are active, $118$ are disabled (not deleted), and $384$ are deleted.
+The relative proportion of these groups to each other can be viewed on figure~\ref{fig:general-stats}.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/general-stats-donut.png}
+  \caption{There are 954 edit filters on EN Wikipedia}~\label{fig:general-stats}
+\end{figure}
+
+\subsection{Public and Hidden Filters}
+
+As signaled in section~\ref{section:4-history}, historically it was planed to make all edit filters hidden from the general public.
+The community discussions rebutted that so a guideline was drafted calling for hiding filters
+``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
+This is however not always complied with and edit filter managers do end up hiding filters that target general vandalism despite consensus that these should be public~\cite{Wikipedia:PrivacyGeneralVandalism}.
+Such cases are usually made public eventually (examples hereof are filters 225 ``Vandalism in all caps'', 260 ``Common vandal phrases'', or 12 ``Replacing a page with obscenities'').
+Also, oftentimes when a hidden filter is marked as ``deleted'', it is made public. %TODO examples?
+%TODO this seems out of place
+Further, caution in filter naming is suggested for hidden filters and editors are encouraged to give such filters just simple description of the overall disruptive behaviour rather than naming a specific user that is causing the disruptions.
+(The latter is not always complied with, there are indeed filters named after the accounts causing a disruption.)
+
+Still, it draws attention that currently nearly $2/3$ of all edit filters are not viewable by the general public (compare figure~\ref{fig:general-stats}).
+Unfortunately, without the full \emph{abuse\_filter\_history} table we cannot know how this ration has developed historically.
+However, the numbers fit the assertion of the extension's core developer according to whom edit filters target particularly determined vandals.
+
+On the other hand, if we look at the enabled filters only, there are actually more or less the same number of public enabled and hidden enabled filters ($110$ vs $91$).
+This leads to the hypothesis that it is rather that hidden filters have higher fluctuation rates, i.e. that they target specific phenomena that are over after a particular period of time after which the filters get disabled and eventually–deleted.
+This makes sense when we compare it to the hidden vs public filter policy: hidden filters for particular cases and very determined vandals, public filters for general patterns which reflect more timeless patterns.
+
+
+\subsection{Filter actions}
+
+Another interesting parameter we could observe are the currently configured filter actions for each filter.
+Figure~\ref{fig:all-active-filters-actions} depicts the actions configured for all enabled filters.
+And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} show the actions of all enabled public and hidden filters respectively.
+It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
+This is congruent with the community's claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
+A lot of public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/all-active-filters-actions.png}
+  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-active-filters-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-public-actions-big.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-actions-big.png}
+  \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
+\end{figure}
+
+\subsection{What do filters target}
+%: general behaviour vs edits by single users + manual tags
+
+As indicated in section~\ref{}, most of the public filters target disruptive behaviours in general (e.g. filter 384 disallows ``Addition of bad words or other vandalism'' by any non-confirmed user), while hidden filters are usually aimed at specific users.
+There are however some public filter which target particular users or particular pages.
+Arguably, (see guidelines) an edit filter may not be the ideal mechanism for this latter purpose, since every incoming edit is checked against all active filters.
+In addition, time and again various filters have been introduced to track some specific sort of behaviour which was however neither malicious nor disruptive.
+This contradicts/defies/fails the purpose of the mechanism and thus such filters have been (quite swiftly) disabled.
+Some filters target (syn!) insults in general, and there are such which target (syn!) specifically insults aimed at particular persons (often edit filter managers).
+
+A lot of hidden filters target specific users/problems.
+\begin{comment}
+  ** there are quite some filters targeting particular users: 290 (targets an IP range), 177 ('User:Television Radio'), 663 ('Techno genre warrior
+', targets specific IP ranges)
+  ** there are also some targetting particular pages (verify!), although this clashed with the guidelines: 264 "Specific-page vandalism" (it's hidden though, so we don't know what exactly it's doing); 401 ("Red hair" vandalism); there's smth with the main page; 715 "IP notification on RFP/C"
+  ** there are also filters such as 199 (Unflagged bots) which were implemented in order to track something which was not quite malicious or abusive and were thus deemed inappropriate use of filters by the community and consequently (quite swiftly) deleted
+  ** some target insults in general and some contain regexes containing very specifically insults directed towards edit filter managers (see filter 12)
+\end{comment}
 
 \subsection{Manual tags distribution}
 \begin{figure}
@@ -174,116 +263,6 @@ personal attacks (filter 9,11) and obscenities (12)
 some concrete users/cases (hidden filters, e.g. 4,21) and sockpuppetry (16,17)
 
 \subsection{Combine most active filters with manual tags}
-
-%\section{Descriptive statistics/Patterns/General traits of the filters}
-\section{Filter characteristics}
-\label{sec:patterns}
-
-In this section, we explore some general traits/patterns of/trends in the edit filters on Engish Wikipedia, or respectively the data from the \emph{abuse\_filter} table.
-The scripts that generate the statistics (syn?) discussed here, can be found in the jupyter notebook in the project's repository. %TODO add link after repository has been cleaned up
-
-\subsection{General traits}
-% General stats
-As of January 6th, 2019 there are $954$ filters in the \emph{abuse\_filter} table.
-It should be noted, that if a filter gets deleted, merely a flag is set to indicate so, but no entries are removed from the database.
-So, the above mentioned $954$ filters are all filters ever made up to this date.
-This doesn't mean that it never changed what the single filters are doing, since edit filter managers can freely modify filter patterns, so at some point the filter could be doing one thing and in the next moment it can be filtering a completely different phenomenon.
-There are cases of filters being ``repurposed'' or modified to filter for example a more general occurance/phenomenon.
-This doesn't happen very often though.
-$361$ of all filters are public, the remaining $593$–hidden.
-$110$ of the public ones are active, $35$ are disabled, but not marked as deleted, and $216$ are flagged as deleted.
-Out of the $593$ hidden filters $91$ are active, $118$ are disabled (not deleted), and $384$ are deleted.
-The relative proportion of these groups to each other can be viewed on figure~\ref{fig:general-stats}.
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/general-stats-donut.png}
-  \caption{There are 954 edit filters on EN Wikipedia}~\label{fig:general-stats}
-\end{figure}
-
-\subsection{Public and Hidden Filters}
-
-As signaled in section~\ref{section:4-history}, historically it was planed to make all edit filters hidden from the general public.
-The community discussions rebutted that so a guideline was drafted calling for
-hiding filters ``only where necessary, such as in long-term abuse cases where the targeted user(s) could review a public filter and use that knowledge to circumvent it.''~\cite{Wikipedia:EditFilter}.
-This is however not always complied with and edit filter managers do end up hiding filters that target general vandalism despite consensus that these should be public~\cite{Wikipedia:PrivacyGeneralVandalism}.
-Such cases are usually made public eventually (examples hereof are filters 225 ``Vandalism in all caps'', 260 ``Common vandal phrases'', or 12 ``Replacing a page with obscenities'').
-Also, oftentimes when a hidden filter is marked as ``deleted'', it is made public. %TODO examples?
-
-Still, it draws attention that currently nearly $2/3$ of all edit filters are not viewable by the general public (compare figure~\ref{fig:general-stats}).
-Unfortunately, without the full \emph{abuse\_filter\_history} table we cannot know how this ration has developed historically.
-However, the numbers fit the assertion of the extension's core developer according to whom edit filters target particularly determined vandals.
-
-On the other hand, if we look at the enabled filters only, there are actually more or less the same number of public enabled and hidden enabled filters ($110$ vs $91$).
-This leads us to the hypothesis that it is rather that hidden filters have higher fluctuation rates, i.e. that they target specific phenomena that are over after a particular period of time after which the filters get disabled and eventually–deleted.
-This makes sense when we compare it to the hidden vs public filter policy: hidden filters for particular cases and very determined vandals, public filters for general patterns.
-
-%TODO check hits: public vs hidden
-
-%TODO this seems out of place
-Further, caution in filter naming is suggested for hidden filters and editors are encouraged to give such filters just simple description of the overall disruptive behaviour rather than naming a specific user that is causing the disruptions.
-(The latter is not always complied with, there are indeed filters named after the accounts causing a disruption.)
-
-% TODO this whole paragraph seems redundant with chapter 4
-Only edit filter editors (who have the \emph{abusefilter-modify} permission) and editors with the \emph{abusefilter-view-private} permission can view hidden filters.
-The latter is given to edit filter helpers–editors interested in helping with edit filters who still do not meet certain criteria in order to be granted the full \emph{abusefilter-modify} permission, editors working with edit filters on other wikis interested in learning from the filter system on English Wikipedia, and Sockpuppet investigation clerks~\cite{Wikipedia:EditFilterHelper}.
-As of March 17, 2019, there are 16 edit filter helpers on EN Wikipedia~\footnote{\url{https://en.wikipedia.org/wiki/Special:ListUsers/abusefilter-helper}}.
-Also, all administrators are able to view hidden filters.
-
-There is also a designated mailing list for discussing these.
-It is specifically indicated that this is the communication channel to be used when dealing with harassment (by means of edit filters)~\cite{Wikipedia:EditFilter}.
-Furthermore, it is signaled, that the mailing list is meant for sensitive cases only and all general discussions should be held on-wiki~\cite{Wikipedia:EditFilter}.
-\subsection{Filter actions}
-An interesting parameter we could observe are the currently configured filter actions for each filter.
-Figure~\ref{fig:all-active-filters-actions} depicts the frequency of signle actions for all enabled filters (note some filters have multiple actions enabled).
-And figures~\ref{fig:active-public-actions} and~\ref{fig:active-hidden-actions} show the actions of all enabled public and hidden filters respectively.
-It is noticeable that the most common action for the enabled hidden filters is ``disallow'' whereas most enabled public filters are set to ``tag'' or ``tag,warn''.
-This coincides/is congruent with the community's claim that hidden filters target particularly perstistent vandalism, which is best outright disallowed.
-Most public filters on the other hand still assume good faith from the editors and try to dissuade them from engaging in disruptive behaviour by using warnings or just tag conspicious behaviour for further investigation.
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/all-active-filters-actions.png}
-  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-active-filters-actions}
-\end{figure}
-
-%\begin{figure}
-%\centering
-%  \includegraphics[width=0.9\columnwidth]{pics/all-filters-actions.png}
-%  \caption{EN Wikipedia edit filters: Filters actions for all filters}~\label{fig:all-filters-actions}
-%\end{figure}
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-public-actions-big.png}
-  \caption{EN Wikipedia edit filters: Filters actions for enabled public filters}~\label{fig:active-public-actions}
-\end{figure}
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/active-hidden-actions-big.png}
-  \caption{EN Wikipedia edit filters: Filters actions for enabled hidden filters}~\label{fig:active-hidden-actions}
-\end{figure}
-
-\subsection{What do filters target}
-%: general behaviour vs edits by single users + manual tags
-
-Most of the public filters target disruptive behaviours in general (e.g. filter 384 disallows ``Addition of bad words or other vandalism'' by any non-confirmed user).
-There are however some which target particular users or particular pages.
-Arguably, (see guidelines) an edit filter may not be the ideal mechanism for this latter purpose, since every incoming edit is checked against all active filters.
-In addition, time and again various filters have been introduced to track some specific sort of behaviour which was however neither malicious nor disruptive.
-This contradicts/defies/fails the purpose of the mechanism and thus such filters have been (quite swiftly) disabled.
-Some filters target (syn!) insults in general, and there are such which target (syn!) specifically insults aimed at particular persons (often edit filter managers).
-
-A lot of hidden filters target specific users/problems.
-\begin{comment}
-  ** there are quite some filters targeting particular users: 290 (targets an IP range), 177 ('User:Television Radio'), 663 ('Techno genre warrior
-', targets specific IP ranges)
-  ** there are also some targetting particular pages (verify!), although this clashed with the guidelines: 264 "Specific-page vandalism" (it's hidden though, so we don't know what exactly it's doing); 401 ("Red hair" vandalism); there's smth with the main page; 715 "IP notification on RFP/C"
-  ** there are also filters such as 199 (Unflagged bots) which were implemented in order to track something which was not quite malicious or abusive and were thus deemed inappropriate use of filters by the community and consequently (quite swiftly) deleted
-  ** some target insults in general and some contain regexes containing very specifically insults directed towards edit filter managers (see filter 12)
-\end{comment}
-
 \subsection{Who trips filters}
 
 - IPs and (newly) registered users
