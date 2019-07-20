@@ -436,6 +436,7 @@ And the most triggered page in March (apart from the user login page) was the us
 \end{figure}
 
 \subsection{Most active filters of all times}
+\label{sec:most-active-all-times}
 
 The ten most active filters of all times (with number of hits, public description, enabled filter actions, and the manual tag and parent category assigned during the coding described in section~\ref{sec:manual-classification}) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
@@ -568,29 +569,37 @@ Sometimes, when a wave of particularly persistent vandalism arises, a filter is 
   ** "in addition to filter 148, let's see what we get - Cen" (https://en.wikipedia.org/wiki/Special:AbuseFilter/188) // this illustrates the point that edit filter managers do introduce stuff they feel like introducing just to see if it catches something
 
 
-\section{Fazit}
+\section{Conclusions}
+
+This chapter explored the edit filters on the Englisch Wikipedia in an attempt to determine what types of tasks these filters take over,
+and how these tasks have evolved over time.
+
+Different characteristics of the edit filters, as well as their activity through the years were scrutinised.
+Three main types of filter tasks were identified: preventing/tracking vandalism, guiding good faith but nonetheless disruptive edits towards a more constructive contribution, and various maintenance jobs such as tracking bugs or other conspicuous behaviour.
+Filters aimed at particularly malicious users or behaviours are as a general rule hidden, whereas filters targeting general patterns are viewable by anyone interested.
+We've determined that hidden filters seem to fluctuate more, which makes sense given their main area of application.
+Public filters often target (syn) silly vandalism or test type edits, as well as spam.
+The latter, above all when implemented (syn) in an automated fashion, together with disallowing edits by very determined vandals handled by hidden filters are in accord with the initial aim with which the filters were introduced (compare section~\ref{section:4-history}).
+Interestingly, the mechanism also ended up being quite active in preventing silly (e.g. inserting series of repeating characters) or profanity vandalism, which the community initially didn't think of as part of the filters' assignment (see section~\ref{sec:most-active-all-times}).
+The third area in which filters are quite active are various types of blankings (mostly by new users) where the filters issue warnings pointing towards possible alternatives the editor may want to achieve or the proper procedure for deleting articles for instance.
+
+The number of active filters stayed somewhat stable over time which is most probably to be attributed to the condition limit (see section~\ref{sec:filter-activity}).
+However, this doesn't seem to be further disturbing the operation of the mechanism as a whole,
+and %TODO better word
+the edit filter managers use it as a performance heuristic to optimise conditions on individual filter, or routinely clean up (and disable) stale filters.
+
+Regarding the temporal filter activity trends, it was ascertained that a sudden peak in filter activity (syn) took place in the end of 2015–beginnings of 2016, after which the overall filter hit numbers stayed higher than they used to be before this occurence.
+Although there were some pointers towards what happened there:
+a surge in account creation attempts and possibly a big spam wave (the latter has to be verified in a systematic fashion),
+no really satisfying explanation of the phenomenon could be established.
+This remains one of the possible direction for future studies.
+
+
+%TODO is it really important to have this here?
+In their 2012 paper Halfaker and Riedl propose a bot taxonomy according to which Wikipedia bots could be classified in one of the following task areas: content injection, monitoring, or curating; augmenting MediaWiki functionality; or protection from malicious activity~\cite{HalRied2012}.
+And although there are no filters that inject or curate content, there are definitely filters whose aim is to protect the encyclopedia from malicious activity, and such that augment MediaWiki's functionality e.g. by providing warning messages (with hopefully helpful feedback) or by tagging certain behaviours to be aggregated on dashboards for later examination.
 
 \begin{comment}
-Maybe smth along the lines that filters cooperate with other mechanisms (which can be actually a more suitable fazit for chap4) %TODO check
-    and through analysis this cooperation can be further improved (e.g. by studying on which pages filters are tripped most frequently the pages in question can be (semi-)protected)
-I think the community also does this already (partially).
-\end{comment}
-
-%TODO do something with this
-\begin{comment}
-Interestingly, there was a guideline somewhere stating that no trivial formatting mistakes should trip filters\cite{Wikipedia:EditFilterRequested}
-%TODO (what exactly are trivial formatting mistakes? starting every paragraph with a small letter; or is this orthography and trivial formatting mistakes references only Wiki syntax? I think though they are similar in scale and impact)
-I actually think, a bot fixing this would be more appropriate.
-\end{comment}
-
-\begin{comment}
-## Open questions
-
-If discerning motivation is difficult, and, we want to achieve different results, depending on the motivation, that lead us to the question whether filtering is the proper mechanism to deal with disruptive edits.
-
-%TODO doesn't really seem related, maybe get rid of it altogether
-    Well, on the other hand, I'd say there are filters that seem to be there in order to protect from malicious activity (the vandalism filters) and such that kind of enhance the MediaWiki functionality: by providing warning messages (with hopefully helpful feedback) or by tagging behaviours to be aggregated on dashboards for later examination
-Vgl \cite{HalRied2012}
 Bot taxonomy
 
 Task area                           | Example
@@ -606,11 +615,8 @@ Augment MediaWiki functionality     | AIV Helperbot "turns a simple page into a 
 priority-based discussion queue to support administrators in their work of identifying and
 blocking vandal"                    | SineBot - signs and dates comments
 
-
 ------------------------------------------------------
 
 Protection from malicious activity  | ClueBot_NG
                                     | XLinkBot
-
-
 \end{comment}
