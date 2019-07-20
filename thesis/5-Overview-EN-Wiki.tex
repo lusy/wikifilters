@@ -499,7 +499,7 @@ As a matter of fact, a quick glance at the AbuseLog~\cite{Wikipedia:AbuseLog} co
 
 The present section explores qualitatively/highlights patterns in the creation and usage of edit filters.
 Unfortunately, no extensive quantitative analysis of these patterns was possible, since for it, an access to the \emph{abuse\_filter\_history} table of the AbuseFilter plugin (compare section~\ref{sec:mediawiki-ext}) is needed.
-Unlike the other tables of the extension, the \emph{abuse\_filter\_history} table is currently not replicated and no public dump is accessible via Wikimedia's cloud service Toolforge~\cite{Wikimedia:Toolforge}.
+Unlike the other tables of the extension, the \emph{abuse\_filter\_history} table is currently not replicated and no public dump is accessible via Wikimedia's cloud service Toolforge~\cite{Wikimedia:ToolforgeDatabases}.
 This seems to have been the case in the past, however, due to security concerns the dumps were discontinued.
 A short term solution to renew the public replicas was attempted but unfortunately haven't been successful yet.
 That is why the present chapter only shows some tendencies observed via manual browsing of different filters' history via the exposed API endpoint which allows querying the \emph{abuse\_filter\_history} table for public filters~\cite{Wikipedia:AbuseFilterHistory}.
@@ -550,13 +550,6 @@ Another group constitute enabled filters that have never been switched off since
   164, 642 (if we ignore the 2min period it was disabled on 13.4.2018), 733 (2.11.2015-present), 29 (18.3.2009-present), 30 (18.3.2009-present), 33 (18.3.2009-present), 39 (18.3.2009-present), 50 (18.3.2009-present), 59 (19.3.2009-present), 80 (22.3.2009-present)
 There are also some filters that have always been enabled with the exception of brief periods of time when the filter was deactivated (and the activated again), probably in order to update the conditions: 79, 135 (there were couple of others in Shirik's list, go back and look);
 There seems to be a tendency that all actions but logging (which cannot be switched off) are took out, when edit filter managers are updating the regex of the filter.
-
-\subsection{Triggered actions change over time}
-%TODO leave this here or move to filter characteristics?
-It is not uncommon, that the action(s) a particular filter triggers change over time.
-As of the guidelines for implementing new filters, every filter should be enabled in ``log only'' mode at its introduction.
-After it has been deemed that the filter actually acts as desired, usually additional actions are switched on~\cite{Wikipedia:EditFilterInstructions}.
-Sometimes, when a wave of particularly persistent vandalism arises, a filter is temporarily set to ``warn'' or ``disallow'' and the actions are removed again as soon as the filter is not tripped very frequently anymore. %TODO examples?
 
 \subsection{How do filters emerge?}
   ** an older filter is split? 79 was split out of 61, apparently; 285 is split between "380, 384, 614 and others"; 174 is split from 29

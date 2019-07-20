@@ -11,43 +11,57 @@ Q4: How have these tasks evolved over time (are they changes in the type, number
 
 In what follows, I go over each of them and summarise the findings.
 
-\section{Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?}
+\section{Q1 What is the role of edit filters among existing quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?}
 
-Why were filters introduced when other systems were already in place?
+When edit filters were introduced in 2009, various other mechanisms that took care of quality control on Wikipedia had already been in place for some time.
+However, the community felt the need for an agent (mechanism, syn) preventing obvious but pervasive and difficult to clean up vandalism as early as possible.
+This was supposed to take workload off the other mechanisms along the quality control process (syn) (see figure~\ref{funnel}), especially off human editors who could then use their time more productively elsewhere, namely to check less obvious (syn) cases.
+%TODO is there another important findind from chapter 4's conclusion that is missing here?
+
+It seems obvious/natural/... to compare the edit filters, being a competely automated mechanism, with bots.
+What did the filters accomplish differently?
+% before vs after
+A key distinction is that while bots check already published edits which they eventually may decide to revert, filters are triggered before an edit ever published.
+One may argue that nowadays this is not a significant difference.
+Whether a disruptive edit is outright disallowed or caught 2 seconds after its publication by ClueBot NG doesn't have a tremendous impact on the readers:
+the vast majority of them will never see the edit either way.
+Still, there are various examples of hoaxes that didn't survive long on Wikipedia but the couple of seconds before they were reverted were sufficient for the corrupted version to be indexed by various/multiple/... news aggregators and search engines. %TODO find them!
 
 % The infrastructure question: Part of the software vs externally run
-One difference between bots and filters underlined several times was that as a MediaWiki extension edit filters are part of the core software whereas bots are running on external infrastructure which makes them generally less reliable.
-Nowadays, we can ask ourselves whether this is a significant difference (syn!) anymore:
-a lot of bots are run on the toolserver which is also provided and maintained by the Wikimedia Foundation (the same people/organisation who run the Wikipedia servers), so in consequence just as reliable and available as the encyclopedia itself.
+Another difference between bots and filters underlined several times in community discussions was that as a MediaWiki extension edit filters are part of the core software whereas bots are running on external infrastructure which makes them both slower and generally less reliable.
+(Compare Geiger's account about running a bot on a workstation in his apartment which he simply pulled the plug on when he was moving out~\cite{Geiger2014}.)
+Nowadays, we can ask ourselves whether this is still of significance:
+A lot of bots are run on Toolforge~\cite{Wikimedia:Toolforge}, a cloud service providing a hosting environment for a variety of applications (bots, analytics, etc.) run by volunteers who work on Wikimedia projects.
+The service is maintained by the Wikimedia Foundation the same way the Wikipedia servers are, so in consequence just as reliable and available as the encyclopedia itself.
 The argument that someone powered off the basement computer on which they were running bot X is just not as relevant anymore.
 
 % general discussion on "platform" and what the metaphor hides? (e.g. bot develorpers' frustration that their work is rendered invisible?)
 
-% before vs after
-A key difference is also that while bots check already published edits which they eventually may decide to revert, filters are triggered before an edit ever published.
-One may argue that nowadays this is not a significant difference.
-Whether a disruptive edit is outright disallowed or caught 2 seconds after its publication by ClueBot NG doesn't have a tremendous impact on the readers:
-the vast majority of them will never see the edit either way.
-% so?
-
 % more on bots vs filters
+% collaboration possible on filters?
+% who edits filters (edit filter managers, above all trusted admins) and who edits bots (in theory anyone approved by the BAG)
 Above all the distinction of bots vs filters: what tasks are handled by which mechanism and why? slides (syn!) into the foreground over and over aagain.
 After all the investigations I would venture the claim that from end result perspective it probably doesn't make a terrible difference at all.
-As mentioned in the paragraph above, whether malicious content is directly disallowed or reverted 2 seconds later (in which time probably who 3 user have seen it, or not) is hardly a qualitative difference for Wikipedia's readers.
+As mentioned in the paragraph above, whether malicious content is directly disallowed or reverted 2 seconds later (in which time probably who 3 user have seen it, or not) is hardly a qualitative difference for Wikipedia's readers. %TODO (although I'm making a slightly different point in the paragraph above, clean up!)
 I would argue though that there are other stakeholders for whom the choice of mechanism makes a bigger difference:
 the operators of the quality control mechanisms and the users whose edits are being targeted.
-The difference (syn!) for edit filter managers vs bot developers is that the architecture of the edit filter plugin fosters collaboration which results in a better system (with more eyeballs all bugs are.. ???)
+The difference (syn!) for edit filter managers vs bot developers is that the architecture of the edit filter plugin supposedly fosters collaboration which results in a better system (compare with the famous ``given enough eyeballs, all bugs are shallow''~\cite{Raymond1999}).
 Any edit filter manager can modify a filter causing problems and the development of a single filter is mostly a collaborative (syn!) process.
-Just a view on the history of most filters reveal that they have been updated multiple times by various users.
-In contrast, bots' source code is often not publicly available and they mostly run by one operator only, so no real peer review of the code is practiced and the community has time and again complained of unresponsive bot operators in emergency cases.
+Just a view on the history of most filters reveals that they have been updated multiple times by various users.
+In contrast, bots' source code is often not publicly available and they are mostly run by one operator only, so no real peer review of the code is practiced and the community has time and again complained of unresponsive bot operators in emergency cases.
+(On the other hand, more and more bots are based on code from various bot development frameworks such as pywikibot~\cite{pywikibot}, so this is not completely valid either.)
+On the other hand, it seems far more difficult/restrictive to become an edit filter manager: there are only very few of them, the vast majority admins or in exceptional cases very trusted users.
+A bot operator on the other hand (syn) only needs an approval by the BAG and can get going.
 
-The choice of mechanism makes a difference for the editor whose edits have been classified as disruptive as well.
-Filters assuming good faith seek communication with the editor by issueing warnings which provide some feedback for the editor and allow them to modify their edit (hopefully in a constructive fashion) and publish it again.
-Bots on the other hand simply revert everything their algorithms find malicious.
-In case of good faith edits, this would mean that an editor wishing to dispute this decision should open a discussion (on the bot's talk page?) and research has shown that attempts to initiate discussions with (semi-)automated quality control agents have in general quite poor response rates % TODO quote
+The choice of mechanism also makes a difference for the editor whose edits have been deemed disruptive.
+Filters assuming good faith seek communication with the editor by issuing warnings which provide some feedback for the editor and allow them to modify their edit (hopefully in a constructive fashion) and publish it again.
+Bots on the other hand (syn) simply revert everything their algorithms find malicious. %TODO in theory a bot can be programmed to leave a message on the user's talk page. It is still a revert first-ask questions later approach
+In case of good faith edits, this would mean that an editor wishing to dispute this decision should open a discussion (on the bot's talk page?) and research has shown that attempts to initiate discussions with (semi-)automated quality control agents have in general quite poor response rates ~\cite{HalGeiMorRied2013}.
 % that's positive! editors get immmediate feedback and can adjust their (good faith) edit and publish it! which is psychologically better than publish something and have it reverted in 2 days
 
-\section{Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?}
+%TODO Fazit?
+
+\section{Q2: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?}
 %* What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
 
 Research has long demonstrated higher precision and better results of machine learning methods. %TODO find quotes!
@@ -89,9 +103,9 @@ If discerning motivation is difficult, and, we want to achieve different results
 
 \end{comment}
 
-\section{Q2 Which type of tasks do filters take over?}
+\section{Q3: Which type of tasks do filters take over?}
 
-\section{Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)?}
+\section{Q4: How have these tasks evolved over time (are they changes in the type, number, etc.)?}
 
 
 
@@ -178,6 +192,8 @@ Claudia: * A focus on the Good faith policies/guidelines is a historical develop
 \end{comment}
 
 % Ethical discussion: open science vs thick descriptions which put individuals on the spot
+
+%***************************************
 
 \section{Limitations}
 
