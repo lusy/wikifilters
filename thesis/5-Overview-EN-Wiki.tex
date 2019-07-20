@@ -289,10 +289,11 @@ Thanks to quarry~\footnote{\url{https://quarry.wmflabs.org/}}, we have the numbe
 from 2009 (when filters were first introduced/the MediaWiki extension was enabled) until the end of 2018: see table~\ref{tab:active-filters-count}.
 This figure varies between $154$ in year 2014 and $254$ in 2018.
 The explanation for this not particularly wide range of active filters lies probably in the so-called condition limit.
-According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation}, the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters.
+According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation}, the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters per incoming edit.
 Currently, it is set to $1,000$.
-The motivation for the condition limit is to avoid performance issues since every incoming edit is checked against all currently enabled filters which means that the more filters are active the longer the checks take.
+The motivation for this heuristic is to avoid performance issues since every incoming edit is checked against all currently enabled filters which means that the more filters are active the longer the checks take.
 However, the page also warns that counting conditions is not the ideal metric of filter performance, since there are simple comparisons that take significantly less time than a check against the \emph{all\_links} variable for example (which needs to query the database)~\cite{Wikipedia:EditFilterDocumentation}.
+Nevertheless, the condition limit seems to still be the heuristic used for filter performance optimisation today.
 
 \begin{table}
   \centering
@@ -315,52 +316,91 @@ However, the page also warns that counting conditions is not the ideal metric of
   \caption{Count of distinct filters triggered each year}~\label{tab:active-filters-count}
 \end{table}
 
-\subsection{Filter hits per month (+peak)}
+\subsection{Filter hits per month}
 
 We can backtrack the number of filter hits over the years on figure~\ref{fig:filter-hits}.
 There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016, after which the overall number of filter hits stayed higher.
 There is also a certain periodicity to the graph, with smaller dips in the northern hemisphere's summer months (June, July, August) and smaller peaks in autumn/winter (mostly October/November).
-We can observe this same tendency less markedly, but to an extent for the overall number of edits (see figure~\ref{fig:edits-development}). %TODO nah, there isn't really a tendency here.
-Maybe there're just fewer edits in the northern hemisphere summer, since people are on vacation; hence there are also fewer edits that trip filters.
-It seems though that above all editors tripping filters are on vacation^^.
+This tendency cannot be really observed for the overall number of edits though (see figure~\ref{fig:edits-development}).
+It seems that above all editors tripping filters are on vacation.
 
-Three possible explanation of the hits surge and subsequent higher hit numbers come to mind:
-1. the filter hits mirror the overall edits pattern from this time.
-2. there was a general rise in vandalism in this period.
-3. there was a change in the edit filter software/ a bug that caused the peak (a lot of false positives) and/or allowed a greater number of filters to be activated.
+\begin{landscape}
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
+\end{figure}
+\end{landscape}
 
-I've undertaken following steps in an attempt to verify or refute each of these speculations.
-1. I've compared the filter hits pattern with the overall number of edits of the time.
-No correspondance, or respectively no noticeable patterns(syn) in the edit counts were found/could be determined (see figure~\ref{fig:edits-development}).
-2. In order to verify this assumption, it would be great to compare the filters hits patterns with revert patterns of others quality control mechanisms.
-Unfortunately, computing these numbers is time-consuming, and determining whether an account doing a revert is a bot (or an editor using a semi-automated tool) is not a trivial task:
+Regarding the hits surge and subsequent higher hit numbers, three possible explanations come to mind:
+\begin{enumerate}
+    \item the filter hits mirror the overall edits pattern from this time;
+    \item there was a general rise in vandalism in this period;
+    \item or there was a change in the edit filter software that allowed more filters to be activated, or a bug that caused the peak (in the form of a lot of false positives).
+\end{enumerate}
+
+I've undertaken following steps in an attempt to verify or refute each of these speculations:\\
+
+\textbf{The filter hits mirror the overall edits pattern from this time} \\
+I've compared the filter hits pattern with the overall number of edits of the time (May 2015–May 2016).
+No correspondance could be determined (see figure~\ref{fig:edits-development}).
+\\
+\\
+\textbf{There was a general rise in vandalism in this period}\\
+In order to verify this assumption, it would be great to compare the filters hits patterns with revert patterns of other quality control mechanisms.
+Unfortunately, computing these numbers is time-consuming and not completely trivial.
 One needs a dump of English Wikipedia's edit history data for the period in question;
 then one has to determine the reverts in this data set;
-The dumps are large, it takes time and computing power to compute this: according to Geiger and Halfaker: April 2017 database dump offered by the Wikimedia Foundation was 93GB compressed and it took a week to extract reverts out of it on a 16 core Xeon workstation.
-To save time, I have recycled Geiger and Halfaker's dataset.
-If one is to do this step properly, a fresh dump should be obtained and the reverts should be extracted from it (e.g. by using the \emph{mwreverts} python library, used also bei Geiger and Halfaker).
-Additionally, caution is needed when comparing the numbers: as G\&H point out with their paper~\cite{GeiHal2017}, some reverts are instances of productive collaboration (between bots for instance), so we cannot translate reverts directly into malicious activity.
+and then, more specifically, one needs to extract reverts done by quality control actors.
+Last step is crucial, since not every revert signifies a malicious edit is being reverted.
+This point is aptly illustrated by~\cite{GeiHal2017} who have demonstrated that reverts can mean productive collaborative work between different actors(syn!).
 
-A dump is needed; a list of bot accounts is needed (no trivial either, since there is no consistent policy regarding bot accounts; only *some* of them have bot flag or "bot" in their account name; flag is removed when bot is no longer active) %TODO compare with Geiger Halfaker and their bot-bot revert study
-So this is still something that can be explored further.
+The dumps are large and it takes time and computing power to obtain them and extract reverts.
+According to Geiger and Halfaker who have done this for their replication study~\cite{GeiHal2017}, the April 2017 database dump offered by the Wikimedia Foundation was 93GB compressed and it took a week to extract reverts out of it on a 16 core Xeon workstation.
+They also list the challenges they faced in determining bot accounts and their reverts.
 
-3. This explanation sounded very plausible/tempting.
-Another piece of data that seemed to support it was the break down of the filters hits data according to triggered filter action.
-As demonstrated on figure~\ref{fig:filter-hits-actions}, there was above all a significant peak in the logs by ``log only'' filters.
+If one is to verify the current assumption (syn) properly, following steps are necessary:
+\begin{enumerate}
+    \item a fresh dump should be obtained
+    \item reverts should be extracted from it (e.g. by using the \emph{mwreverts} python library, used also by Geiger and Halfaker
+    \item reverts should be narrowed down to accounts known for doing quality-control work (for example by pre-compiling a list of anti-vandal bots); reverts (or respectively edits in general) done via Huggle and Twinkle are somewhat easy to identify since both tools leave a small code in the edit summary of their edits ("HG" for Huggle and "TW" for Twinkle)%TODO verify that's still the case
+\end{enumerate}
+
+Since time was scarce, I have run a first check of this assumption using the 2017 reverts dataset compiled by Geiger and Halfaker's for their study
+\footnote{Both researchers have placed a great value on reproducibility and have published their complete datasets, as well as scripts they used for their analyses for others to use and verify: \url{https://github.com/halfak/are-the-bots-really-fighting}.}.
+Figure~\ref{fig:reverts} shows the total number of reverts, as well as reverts done by bots over time computed by Geiger and Halfaker.
+The filter hits pattern of 2015–2016 with the peak in filter hits and subsequent higher number of overall hits is not mirrored by the revert numbers
+\footnote{Just for completenes, the spike in March 2013 is the batch action by AddBot removing interwiki links, since these were handled by Wikidata discussed in the introduction of Geiger and Halfaker's paper. It didn't have anything to do with vandalism.}
+(note that the y-axis of both the revert and the filter hit plots is of the same magnitude).
+As cautioned earlier, not every revert can be equated with cleaning up a disruptive edit, however, figure~\ref{fig:reverts} demonstrates that either quality control reverts constitute a relatively small portion of all reverts being done,
+or that there wasn't a general surge in vandalism around this time.
+(Or that only vandalism caught by filters peaked, which sounds somewhat improbable.)
+\\
+\\
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/reverts.png}
+  \caption{EN Wikipedia: Revert number for the period July 2001–April 2017}~\label{fig:reverts}
+\end{figure}
+
+\textbf{There was a change in the edit filter software that allowed more filters to be activated, or a bug that caused false positives}\\
+Since so far, neither of the other hypothesis could be verifies, this explanation sounds likely.
+Another piece of data that seems to support it is the breakdown of the filter hits according to triggered filter action.
+As demonstrated on figure~\ref{fig:filter-hits-actions}, there was above all a significant hits peak caused by ``log only'' filters.
 As discussed in section~\ref{sec:introduce-a-filter}, it is an established praxis to introduce new filters in ``log only'' mode and only switch on additional filter actions after a monitoring period that demonstrated that the filters function as desired/intended.
 Hence, it sounds plausible that new filters in logging mode were introduced, which were then switched off after a significant number of false positives occured.
-However, upon closer observation/contemplation, this hypothesis could not be confirmed.
-The most often triggered filters in the period Jan-March 2016 are mostly the most triggered filters of all times and nearly all of them have been around for a while in 2016.
-Also, no bug or a comparable incident with the software was found upon an inspection of the extension's issue tracker~\cite{phab-abusefilter-2015}, or commit messages of the commits to the software done during this period~\cite{gerrit-abusefilter-source}.
+However, upon closer scritiny, this could not be confirmed.
+The most frequently triggered filters in the period Jan-March 2016 are mainly the most triggered filters of all times and nearly all of them have been around for a while in 2016.
+Also, no bug or a comparable incident with the software was found upon an inspection of the extension's issue tracker~\cite{phab-abusefilter-2015}, or commit messages of the commits to the software done during this period (May 2015–May 2016)~\cite{gerrit-abusefilter-source}.
 Moreover, no mention of the hits surge was found in the noticeboard~\cite{Wikipedia:EditFilterNoticeboard} and edit filter talk page archives~\cite{Wikipedia:EditFilterTalkArchive2016}.
 The in section~\ref{sec:filter-activity} mentioned condition limit has not changed either, as far as I can tell from the issue tracker, the commits and discussion archives, so the possible explanation that simply more filters have been at work since 2016 seems to be refuted as well.
 The only somewhat telling/interesting patterns/phenomena that seem to shed some light on the matter are the breakdown of hits according to the editor's action which triggered them: there is an obvious surge in the attempted account creations in this period (see figure~\ref{fig:filter-hits-editors-actions}).
 As a matter of fact, they could also be the explanation for the peak of log only hits–the most frequently tripped filter for the period January–March 2016 is filter 527 ``T34234: log/throttle possible sleeper account creations''.
-It is a throttle (only) filter so everytime an edit matches its regex pattern, a ``log only'' entry is created in the abuse log.
+It is a throttle (only) filter, so everytime an edit matches its regex pattern, a ``log only'' entry is created in the abuse log.
 %it disallows every X attempt, only logging the rest of the account creations. %I think in its current form, it does not actually disallow anything, a ``disallow'' action should be enabled for this and the filter action is only 'throttle'; so in this form, it seems to simply log account creations
 
 Another explanation that seemed worth persuing was to look into the editors who tripped filters and their corresponding edits.
-For the period Jan-March2016 there are some very active IP editors, the top of whom (how many hits) seemed to be enaging of the (probably automated) posting of spam links only.
+For the period January-March 2016 there are some very active IP editors, the top of whom (how many hits) seemed to be enaging of the (probably automated) posting of spam links only.
 Their edits however constitue some 1-3\% of all hits from the period, so the explanation ``it was viagra spam coming from Russian IPs'' is somewhat insufficient.
 (Yes, it was viagra spam, and yes, a ``whois'' lookup proved them to really be Russian IPs.
 And, yes, whoever was editing could've also used a VPN, so I'm not opening a Russian bot fake news conspiracy theory just yet.)
@@ -377,15 +417,6 @@ There was also a severe organisational crisis in Wikimedia at the time during wh
 However, I couldn't draw a direct relationship between any of these political events and the edits which triggered edit filters.
 An investigation into the pages on which the filters were triggered proved them (the pages) to be quite innocuous:
 one of the pages where most filter hits were logged in January 2016 was skateboard and the ~660 filter hits here seem like a drop in the ocean compared to the 37X.000 hits for the whole month.
-
-
-\begin{landscape}
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
-  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
-\end{figure}
-\end{landscape}
 
 \begin{figure}
 \centering
