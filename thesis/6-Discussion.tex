@@ -1,24 +1,17 @@
-\chapter{Discussion and Limitations}
+\chapter{Discussion}
 \label{chap:discussion}
 
-The purpose of this chapter is to reflect upon what we have learnt so far and describe/outline some limitations of the present study.
-
-\section{Discussion}
-%TODO get rid of section title?
-
-I started this inquiry with following questions: %TODO format questions appropriately
-Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?
+I started this inquiry with following questions:\\ %TODO  either number the questions with Qx from the beginning and use it consistently or leave it be altogether
+Q1: What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?\\
 %-- chapter 4 (and 2)
-Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?
+Q2: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?\\
 %-- chapter 6 (discussion)
+Q3: Which type of tasks do filters take over?\\ %-- chapter 5
+Q4: How have these tasks evolved over time (are they changes in the type, number, etc.)? %-- chapter 5 (can be significantly expanded)
 
-Q2 Which type of tasks do filters take over? %-- chapter 5
-Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)? %-- chapter 5 (can be significantly expanded)
+In what follows, I go over each of them and summarise the findings.
 
-For the rest of the section I go over each of them and summarise the findings.
-
-%TODO maybe just format bold and get rid of the subsection
-\subsection{Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)}
+\section{Q1 What is the role of edit filters among existing algorithmic quality-control mechanisms on Wikipedia (bots, semi-automated tools, ORES, humans)?}
 
 Why were filters introduced when other systems were already in place?
 
@@ -54,7 +47,7 @@ Bots on the other hand simply revert everything their algorithms find malicious.
 In case of good faith edits, this would mean that an editor wishing to dispute this decision should open a discussion (on the bot's talk page?) and research has shown that attempts to initiate discussions with (semi-)automated quality control agents have in general quite poor response rates % TODO quote
 % that's positive! editors get immmediate feedback and can adjust their (good faith) edit and publish it! which is psychologically better than publish something and have it reverted in 2 days
 
-\subsection{Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?}
+\section{Q1a: Edit filters are a classical rule-based system. Why are they still active today when more sophisticated ML approaches exist?}
 %* What can we filter with a REGEX? And what not? Are regexes the suitable technology for the means the community is trying to achieve?
 
 Research has long demonstrated higher precision and better results of machine learning methods. %TODO find quotes!
@@ -96,9 +89,9 @@ If discerning motivation is difficult, and, we want to achieve different results
 
 \end{comment}
 
-\subsection{Q2 Which type of tasks do filters take over?}
+\section{Q2 Which type of tasks do filters take over?}
 
-\subsection{Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)?}
+\section{Q2a: How have these tasks evolved over time (are they changes in the type, number, etc.)?}
 
 
 
@@ -223,15 +216,14 @@ I've further assembled the bots they run and made notes on the bots that seem to
 I'm currently trying to determine from document traces what filter contributions the corresponding edit filter managers had and whether they are working on filters similar to the bots they operate.
 Insight is currently minimal, since abuse\_filter\_history table is not available and we can only determine what filters an edit filter manager has worked on from limited traces such as: last modifier of the filter from abuse\_filter table; editors who signed their comments from abuse\_filter table; probably some noticeboards or talk page archives, but I haven't looked into these so far.
 \end{comment}
-%**********************
 
 %************************************************************************
 
 \section{Directions for future studies}
 \label{sec:further-studies}
 
-Throughout the analysis, a variety of intriguing questions arose which couldn't be addressed, above all due to insufficient time.
-Here, a comprehensive list of all these pointers for possible future studies is provided.
+Throughout the thesis, a variety of intriguing questions arose which couldn't be addressed due to various reasons, above all–insufficient time.
+Here, a comprehensive list of all these pointers for possible future research is provided.
 
 \begin{enumerate}
     \item \textbf{How have edit filters's tasks evolved over time?}: Unfortunately, no detailed historical analysis of the filters was possible, since the database table storing changes to individual filters (\emph{abuse\_filter\_history}) is not currently replicated (see section~\ref{sec:overview-data}). A patch aiming to renew the replication of the table is currently under review~\cite{gerrit-tables-replication}. When a dump becomes available, an extensive analysis (sym) of filter creation and activation patterns, together with .. will be possible (syn).
