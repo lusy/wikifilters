@@ -279,15 +279,15 @@ It is also quite likely (to be verified against literature!) that majority of va
 In general, it is rather unlikely that an established Wikipedia editor should at once jeopardise the encyclopedia's purpose and start vandalising.
 Although apparently there are determined trolls who ``work accounts up'' to admin and then run rampant.
 
+%TODO mention filters discriminate towards new users: ``!(""confirmed"" in user_groups)'' is the first condition for a lot of them
 
 \section{Filter activity}
 \label{sec:filter-activity}
 
 \subsection{Distinct filters over the years}
-Thanks to quarry, we have all the filters that were triggered from the filter log per year, % I do have the whole table actually, don't I?
-from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018, with their corresponding number of times being triggered:
-Table~\ref{tab:active-filters-count} summarises the numbers of distinct filters that got triggered over the years.
-So, this figure varies between $154$ in year 2014 and $254$ in 2018.
+Thanks to quarry~\footnote{\url{https://quarry.wmflabs.org/}}, we have the numbers of all distinct filters triggered per year
+from 2009 (when filters were first introduced/the MediaWiki extension was enabled) until the end of 2018: see table~\ref{tab:active-filters-count}.
+This figure varies between $154$ in year 2014 and $254$ in 2018.
 The explanation for this not particularly wide range of active filters lies probably in the so-called condition limit.
 According to the edit filters' documentation~\cite{Wikipedia:EditFilterDocumentation}, the condition limit is a hard-coded treshold of total available conditions that can be evaluated by all active filters.
 Currently, it is set to $1,000$.
@@ -298,7 +298,7 @@ However, the page also warns that counting conditions is not the ideal metric of
   \centering
   \begin{tabular}{l r }
     % \toprule
-    Year & Num of distinct filters \\
+    Year & Number of distinct filters \\
     \hline
     2009 & 220 \\
     2010 & 163 \\
@@ -312,23 +312,107 @@ However, the page also warns that counting conditions is not the ideal metric of
     2018 & 254 \\
     % \bottomrule
   \end{tabular}
-  \caption{Count of distinct filters that got triggered each year}~\label{tab:active-filters-count}
+  \caption{Count of distinct filters triggered each year}~\label{tab:active-filters-count}
 \end{table}
 
-\subsection{Most active filters of all times}
-%TODO + manual tags
+\subsection{Filter hits per month (+peak)}
 
-The ten most active filters of all times (with number of hits, public description, and enabled filter actions) are displayed in table~\ref{tab:most-active-actions}.
+We can backtrack the number of filter hits over the years on figure~\ref{fig:filter-hits}.
+There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016, after which the overall number of filter hits stayed higher.
+There is also a certain periodicity to the graph, with smaller dips in the northern hemisphere's summer months (June, July, August) and smaller peaks in autumn/winter (mostly October/November).
+We can observe this same tendency less markedly, but to an extent for the overall number of edits (see figure~\ref{fig:edits-development}). %TODO nah, there isn't really a tendency here.
+Maybe there're just fewer edits in the northern hemisphere summer, since people are on vacation; hence there are also fewer edits that trip filters.
+It seems though that above all editors tripping filters are on vacation^^.
+
+Three possible explanation of the hits surge and subsequent higher hit numbers come to mind:
+1. the filter hits mirror the overall edits pattern from this time.
+2. there was a general rise in vandalism in this period.
+3. there was a change in the edit filter software/ a bug that caused the peak (a lot of false positives) and/or allowed a greater number of filters to be activated.
+
+I've undertaken following steps in an attempt to verify or refute each of these speculations.
+1. I've compared the filter hits pattern with the overall number of edits of the time.
+No correspondance, or respectively no noticeable patterns(syn) in the edit counts were found/could be determined (see figure~\ref{fig:edits-development}).
+2. In order to verify this assumption, it would be great to compare the filters hits patterns with revert patterns of others quality control mechanisms.
+Unfortunately, computing these numbers is time-consuming, and determining whether an account doing a revert is a bot (or an editor using a semi-automated tool) is not a trivial task:
+One needs a dump of English Wikipedia's edit history data for the period in question;
+then one has to determine the reverts in this data set;
+The dumps are large, it takes time and computing power to compute this: according to Geiger and Halfaker: April 2017 database dump offered by the Wikimedia Foundation was 93GB compressed and it took a week to extract reverts out of it on a 16 core Xeon workstation.
+To save time, I have recycled Geiger and Halfaker's dataset.
+If one is to do this step properly, a fresh dump should be obtained and the reverts should be extracted from it (e.g. by using the \emph{mwreverts} python library, used also bei Geiger and Halfaker).
+Additionally, caution is needed when comparing the numbers: as G\&H point out with their paper~\cite{GeiHal2017}, some reverts are instances of productive collaboration (between bots for instance), so we cannot translate reverts directly into malicious activity.
+
+A dump is needed; a list of bot accounts is needed (no trivial either, since there is no consistent policy regarding bot accounts; only *some* of them have bot flag or "bot" in their account name; flag is removed when bot is no longer active) %TODO compare with Geiger Halfaker and their bot-bot revert study
+So this is still something that can be explored further.
+
+3. This explanation sounded very plausible/tempting.
+Another piece of data that seemed to support it was the break down of the filters hits data according to triggered filter action.
+As demonstrated on figure~\ref{fig:filter-hits-actions}, there was above all a significant peak in the logs by ``log only'' filters.
+As discussed in section~\ref{sec:introduce-a-filter}, it is an established praxis to introduce new filters in ``log only'' mode and only switch on additional filter actions after a monitoring period that demonstrated that the filters function as desired/intended.
+Hence, it sounds plausible that new filters in logging mode were introduced, which were then switched off after a significant number of false positives occured.
+However, upon closer observation/contemplation, this hypothesis could not be confirmed.
+The most often triggered filters in the period Jan-March 2016 are mostly the most triggered filters of all times and nearly all of them have been around for a while in 2016.
+Also, no bug or a comparable incident with the software was found upon an inspection of the extension's issue tracker~\cite{phab-abusefilter-2015}, or commit messages of the commits to the software done during this period~\cite{gerrit-abusefilter-source}.
+Moreover, no mention of the hits surge was found in the noticeboard~\cite{Wikipedia:EditFilterNoticeboard} and edit filter talk page archives~\cite{Wikipedia:EditFilterTalkArchive2016}.
+The in section~\ref{sec:filter-activity} mentioned condition limit has not changed either, as far as I can tell from the issue tracker, the commits and discussion archives, so the possible explanation that simply more filters have been at work since 2016 seems to be refuted as well.
+The only somewhat telling/interesting patterns/phenomena that seem to shed some light on the matter are the breakdown of hits according to the editor's action which triggered them: there is an obvious surge in the attempted account creations in this period (see figure~\ref{fig:filter-hits-editors-actions}).
+As a matter of fact, they could also be the explanation for the peak of log only hits–the most frequently tripped filter for the period January–March 2016 is filter 527 ``T34234: log/throttle possible sleeper account creations''.
+It is a throttle (only) filter so everytime an edit matches its regex pattern, a ``log only'' entry is created in the abuse log.
+%it disallows every X attempt, only logging the rest of the account creations. %I think in its current form, it does not actually disallow anything, a ``disallow'' action should be enabled for this and the filter action is only 'throttle'; so in this form, it seems to simply log account creations
+
+Another explanation that seemed worth persuing was to look into the editors who tripped filters and their corresponding edits.
+For the period Jan-March2016 there are some very active IP editors, the top of whom (how many hits) seemed to be enaging of the (probably automated) posting of spam links only.
+Their edits however constitue some 1-3\% of all hits from the period, so the explanation ``it was viagra spam coming from Russian IPs'' is somewhat insufficient.
+(Yes, it was viagra spam, and yes, a ``whois'' lookup proved them to really be Russian IPs.
+And, yes, whoever was editing could've also used a VPN, so I'm not opening a Russian bot fake news conspiracy theory just yet.)
+
+
+Significant Geo/Socio-political events from the time, which triggered a lot of media (and Internet) attention and desinformation campaigns
+- 2016 US elections
+- Brexit referendum
+- the so-called ``refugee crisis'' in Europe
+
+There was also a severe organisational crisis in Wikimedia at the time during which a lot of staff left and eventually the executive director stepped down.
+
+
+However, I couldn't draw a direct relationship between any of these political events and the edits which triggered edit filters.
+An investigation into the pages on which the filters were triggered proved them (the pages) to be quite innocuous:
+one of the pages where most filter hits were logged in January 2016 was skateboard and the ~660 filter hits here seem like a drop in the ocean compared to the 37X.000 hits for the whole month.
+
+
+\begin{landscape}
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
+\end{figure}
+\end{landscape}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/patterns-filterhits-actions.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month according to filter action}~\label{fig:filter-hits-actions}
+\end{figure}
+
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/patterns-filterhits-editor-actions.png}
+  \caption{EN Wikipedia edit filters: Number of hits per month according to triggering editor's action}~\label{fig:filter-hits-editors-actions}
+\end{figure}
+
+\subsection{Most active filters of all times}
+
+The ten most active filters of all times (with number of hits, public description, enabled filter actions, and the manual tag and parent category assigned during the coding described in section~\ref{sec:manual-classification}) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
 
 Already, a couple of patterns draw attention when we look at the table:
-They seem to catch a combination of possibly good faith edits which were none the less unconstructive (such as removing references, section blanking or large deletions)
-and what the community has come to call ``silly vandalism''~\cite{Wikipedia:VandalismTypes} (see also code book in appendix~\ref{app:code_book}: repeating characters and inserting profanities.
+The most active filters seem to catch a combination of possibly good faith edits which were none the less unconstructive (such as removing references, section blanking or large deletions)
+and what the community has come to call ``silly vandalism''~\cite{Wikipedia:VandalismTypes} (see also code book in appendix~\ref{app:code_book}): repeating characters and inserting profanities.
 Interestingly, that's not what the developers of the extension believed it was going to be good for:
 ``It is not, as some seem to believe, intended to block profanity in articles (that would be extraordinarily dim), nor even to revert page-blankings, '' claimed its core developer on July 9th 2008~\cite{Wikipedia:EditFilterTalkArchive1Clarification}.
 Rather, among the 10 most active filters, it is filter 527 ``T34234: log/throttle possible sleeper account creations'' which seems to target what most closely resembles the intended aim of the edit filter extension, namely to take care of obvious but persistent and difficult to clean up vandalism.
-%TODO compare with num hits/month for each parent cluster (vandalism, good faith, maintenance, unknown)
+
 \begin{comment}
+%TODO compare with num hits/month for each parent cluster (vandalism, good faith, maintenance, unknown)
     Possible storyline:
     At the beginning the idea/motivation was to disallow directly gregarious vandalism.
     However, with difficulty to distinguish motivation and rising difficulty to keep desirable newcomers in the community, a more cautious behaviour was adopted, trying (as elsewhere as well) to assume good faith for ambiguous edits and to guide the editors towards a constructive contribution (e.g. via warnings).
@@ -345,7 +429,7 @@ Another assumption that proved to be wrong/didn't quite carry into effect was th
 As a matter of fact, a quick glance at the AbuseLog~\cite{Wikipedia:AbuseLog} confirms that there are often multiple filter hits per minute.
 %TODO compute means --> we can conclude from these numbers that the mechanism is quite actively used
 
-\begin{table*}
+\begin{table*}[t]
   \centering
     \begin{tabular}{p{1cm} r p{5cm} p{2cm} p{3cm}}
     % \toprule
@@ -371,64 +455,6 @@ As a matter of fact, a quick glance at the AbuseLog~\cite{Wikipedia:AbuseLog} co
 
 % Most active filters per year
 %TODO compare with table and with most active filters per year: is it old or new filters that get triggered most often? (I'd say it's a mixture of both and we can now actually answer this question with the history API, it shows us when a filter was first created)
-
-\subsection{Filter hits per month (+peak)}
-We can backtrack the number of filter hits over the years on figure~\ref{fig:filter-hits}.
-There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016, after which the overall number of filter hits stayed higher.
-There is also a certain periodicity to the graph, with smaller dips in the northern hemisphere's summer months (June, July, August) and smaller peaks in autumn/winter (mostly October/November).
-We can observe this same tendency less markedly, but to an extent for the overall number of edits (see figure~\ref{}). %TODO nah, there isn't really a tendency here.
-Maybe there're just fewer edits in the northern hemisphere summer, since people are on vacation; hence there are also fewer edits that trip filters.
-It seems though that above all editors tripping filters are on vacation^^.
-
-Three possible explanation of the hits surge and subsequent higher hit numbers come to mind:
-1. the filter hits mirror the overall edits pattern from this time.
-2. there was a general rise in vandalism in this period.
-3. there was a change in the edit filter software/ a bug that caused the peak (a lot of false positives) and/or allowed a greater number of filters to be activated.
-
-I've undertaken following steps on each of these explanation paths.
-1. I've compared the filter hits pattern with the overall number of edits of the time. No correspondance, or respectively no noticeable patterns(syn) in the edit counts were found/could be determined. (see figure~\ref{fig:edits-development})
-2. In order to verify this assumption, it would be great to compare the filters hits patterns with anti-vandal bots and semi-automated tool' reverts patterns.
-Unfortunately, no numbers are readily available, and assembling a dataset to answer this question is a no trivial task:
-A dump is needed; a list of bot accounts is needed (no trivial either, since there is no consistent policy regarding bot accounts; only *some* of them have bot flag or "bot" in their account name; flag is removed when bot is no longer active) %TODO compare with Geiger Halfaker and their bot-bot revert study
-So this is still something that can be explored further.
-3. This explanation sounded very plausible/tempting.
-Another piece of data that seemed to support it was the break down of the filters hits data according to triggered filter action.
-As demonstrated on figure~\ref{}, there was above all a significant peak in the logs by ``log only'' filters.
-As discussed in section~\ref{}, it is an established praxis to introduce new filters in ``log only'' mode and only switch on additional filter actions after a monitoring period that demonstrated that the filters function as desired/intended.
-Hence, it sounds plausible that new filters in logging mode were introduced, which were then switched off after a significant number of false positives occured.
-However, upon closer observation/contemplation, this hypothesis could not be confirmed.
-The most often triggered filters in the period Jan-March 2016 are mostly the most triggered filters of all times and nearly all of them have been around for a while in 2016.
-Also, no bug or a comparable incident with the software was found upon an inspection of the extension's issue tracker~\cite{}, or commit messages of the commits to the software done during this period~\cite{gerrit}.
-Moreover, no mention of the hits surge was found in the noticeboard~\cite{} and edit filter talk page archives~\cite{}.
-The in section~\ref{} mentioned condition limit has not changed either, as far as I can tell from the issue tracker, the commits and discussion archives, so the possible explanation that simply more filters have been at work since 2016 seems to be refuted as well.
-The only somewhat telling/interesting patterns/phenomena that seem to shed some light on the matter are the breakdown of hits according to the editor's action which triggered them: there is an obvious surge in the attempted account creations in this period.
-As a matter of fact, they could also be the explanation for the peak of log only hits–filter 527 (check!) ``Log/trottle accounts..'' is a throttle filter? so it disallows every X attempt, only logging the rest of the account creations.
-Another explanation that seemed worth persuing was to look into the editors who tripped filters and their corresponding edits.
-For the period Jan-March2016 there are some very active IP editors, the top of whom (how many hits) seemed to be enaging of the (probably automated) posting of spam links only.
-Their edits however constitue some 1-3\% of all hits from the period, so the explanation ``it was viagra spam coming from Russian IPs'' is somewhat insufficient.
-(Yes, it was viagra spam, and yes, a ``whois'' lookup proved them to really be Russian IPs.
-And, yes, whoever was editing could've also used a VPN, so I'm not opening a Russian bot fake news conspiracy theory just yet.)
-
-
-Significant Geo/Socio-political events from the time, which triggered a lot of media (and Internet) attention and desinformation campaigns
-- 2016 US elections
-- Brexit referendum
-- the so-called ``refugee crisis'' in Europe
-
-There was also a severe organisational crisis in Wikimedia at the time during which a lot of staff left and eventually the executive director stepped down.
-
-
-However, I couldn't draw a direct relationship between any of these political events and the edits which triggered edit filters.
-An investigation into the pages on which the filters were triggered proved them (the pages) to be quite innocuous:
-one of the pages where most filter hits were logged in January 2016 was skateboard and the ~660 filter hits here seem like a drop in the ocean compared to the 37X.000 hits for the whole month.
-
-
-%TODO stretch plot so months are readable; darn. now it's too small on the pdf. Fix it! May be rotate to landscape?
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{pics/filter-hits-zoomed.png}
-  \caption{EN Wikipedia edit filters: Number of hits per month}~\label{fig:filter-hits}
-\end{figure}
 
 
 \section{Historical development}
