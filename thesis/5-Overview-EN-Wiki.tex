@@ -171,6 +171,7 @@ The relative proportion of these groups to each other can be viewed on figure~\r
 \end{figure}
 
 \subsection{Public and Hidden Filters}
+\label{sec:public-hidden}
 
 As signaled in section~\ref{section:4-history}, historically it was planed to make all edit filters hidden from the general public.
 The community discussions rebutted that so a guideline was drafted calling for hiding filters
@@ -222,7 +223,7 @@ A lot of public filters on the other hand still assume good faith from the edito
 %: general behaviour vs edits by single users + manual tags
 
 %TODO maybe get rid of this paragraph all together (it's partially handled by public vs private) --> merge both
-As indicated in section~\ref{}, most of the public filters target disruptive behaviours in general (e.g. filter 384 disallows ``Addition of bad words or other vandalism'' by any non-confirmed user), while hidden filters are usually aimed at specific users.
+As indicated in section~\ref{sec:public-hidden}, most of the public filters target disruptive behaviours in general (e.g. filter 384 disallows ``Addition of bad words or other vandalism'' by any non-confirmed user), while hidden filters are usually aimed at specific users.
 There are however some public filter which target particular users or particular pages.
 Arguably, (see guidelines) an edit filter may not be the ideal mechanism for this latter purpose, since every incoming edit is checked against all active filters.
 In addition, time and again various filters have been introduced to track some specific sort of behaviour which was however neither malicious nor disruptive.
@@ -238,53 +239,51 @@ A lot of hidden filters target specific users/problems.
   ** some target insults in general and some contain regexes containing very specifically insults directed towards edit filter managers (see filter 12)
 \end{comment}
 
-\subsection{Manual tags distribution}
+As figures~\ref{fig:manual-tags-all} and \ref{fig:manual-tags-active} demonstrate, the majority of filters seem to target vandalism (little surprise here).
+The second biggest category comprise the ``good faith'' filters. %TODO so?
+The proportion of vandalism related filters is higher when we look at all filters compared to the enabled ones.
+Again, this is probably due to the presumed higher fluctuation rates of hidden filters which are always vandalism related.
+It also comes to attention that the relative share of maintenance related filters is higher when we look at all filters.
+The detailed distribution of manually assigned codes and their parent categories can be view on figure~\ref{fig:manual-tags}.
+%TODO I don't have anything else to say here?
+
+%TODO make these two subfigures of the same figure
 \begin{figure}
 \centering
-  \includegraphics[width=0.9\columnwidth]{pics/manual-tags-distribution.png}
-  \caption{Edit filters manual tag distribution}~\label{fig:manual-tags}
+  \includegraphics[width=0.9\columnwidth]{pics/donut-manual-tags-all.png}
+  \caption{Manual tags parent categories distribution: all filters}~\label{fig:manual-tags-all}
 \end{figure}
 
-%TODO discuss figure
-\begin{comment}
-* maybe just plot the parent categories and have a closer look at one of them exemplarily
-\end{comment}
+\begin{figure}
+\centering
+  \includegraphics[width=0.9\columnwidth]{pics/donut-manual-tags-active.png}
+    \caption{Manual tags parent categories distribution: enabled filters (Jan 2019)}~\label{fig:manual-tags-active}
+\end{figure}
 
+\begin{landscape}
+\begin{figure}
+\centering
+  \includegraphics[width=1\columnwidth]{pics/manual-tags-distro.png}
+  \caption{Edit filters manual tag distribution}~\label{fig:manual-tags}
+\end{figure}
+\end{landscape}
 
-\subsection{What filters were implemented immediately after the launch + manual tags}
-%TODO What were the first filters to be implemented immediately after the launch of the extension?
-The extension was launched on March 17th, 2009.
-Filter 1 is implemented in the late hours of that day.
-Filters with IDs 1-80 (IDs are auto-incremented) were implemented the first 5 days after the extension was turned on (17-22.03.2009).
-So, apparently the most urgent problems the initial edit filter managers perceived were:
-page move vandalism (what Filter 1 initially targeted; it was later converted to a general test filter);
-blanking articles (filter 3)
-personal attacks (filter 9,11) and obscenities (12)
-some concrete users/cases (hidden filters, e.g. 4,21) and sockpuppetry (16,17)
-
-\subsection{Combine most active filters with manual tags}
 
 \subsection{Who trips filters}
 
-- IPs and (newly) registered users
-    %\item what types of users trigger the filters (IPs? registered?) : IPs: 16,489,266, logged in users: 6,984,897 (Stand 15.03.2019);
-
-\begin{comment}
-# Memo new users
-
-When comparing the *vandalism* and *good faith* memos, it comes to attention that both type of edits are usually performed by new(ly/recently registered) users (or IP addresses).
-
-A user who just registered an account (or who doesn't even bother to) is most probably inexperienced with Wikipedia, not familiar with all policies and guidelines and perhaps nor with MediaWiki syntax.
+As of March 15, 2019 $16,489,266$ of the filter hits were caused by IP users, whereas logged in users had tripped a filter $6,984,897$ times.
+A lot of the logged in users have newly created accounts (many filters look for newly created or not confirmed accounts in their pattern). %TODO what is confirmed exactly.
+A user who just registered an account (or who doesn't even bother to) is rather to be expected to be inexperienced with Wikipedia, not familiar with all policies and guidelines and perhaps nor with MediaWiki syntax.
 
 It is also quite likely (to be verified against literature!) that majority of vandalism edits come from the same type of newly/recently registered accounts.
 In general, it is rather unlikely that an established Wikipedia editor should at once jeopardise the encyclopedia's purpose and start vandalising.
 Although apparently there are determined trolls who ``work accounts up'' to admin and then run rampant.
-\end{comment}
+
 
 \section{Filter activity}
 \label{sec:filter-activity}
 
-\subsection{Distinct filters over the years + condition limit}
+\subsection{Distinct filters over the years}
 Thanks to quarry, we have all the filters that were triggered from the filter log per year, % I do have the whole table actually, don't I?
 from 2009 (when filters were first introduced/the MediaWiki extension was enabled) till end of 2018, with their corresponding number of times being triggered:
 Table~\ref{tab:active-filters-count} summarises the numbers of distinct filters that got triggered over the years.
@@ -317,6 +316,8 @@ However, the page also warns that counting conditions is not the ideal metric of
 \end{table}
 
 \subsection{Most active filters of all times}
+%TODO + manual tags
+
 The ten most active filters of all times (with number of hits, public description, and enabled filter actions) are displayed in table~\ref{tab:most-active-actions}.
 For a more detailed reference, the ten most active filters of each year are listed in the appendix. %TODO are there some historical trends we can read out of it?
 
@@ -346,20 +347,20 @@ As a matter of fact, a quick glance at the AbuseLog~\cite{Wikipedia:AbuseLog} co
 
 \begin{table*}
   \centering
-    \begin{tabular}{r r p{8cm} p{2cm} }
+    \begin{tabular}{p{1cm} r p{5cm} p{2cm} p{3cm}}
     % \toprule
-        Filter ID & Hitcount & Publicly available description & Actions \\
+        Filter ID & Hitcount & Publicly available description & Actions & Manual tag (parent category) \\
     \hline
-       61 & 1,611,956 & new user removing references & tag \\
-      135 & 1,371,361 & repeating characters & tag, warn \\
-      527 & 1,241,576 & T34234: log/throttle possible sleeper account creations (hidden filter) & throttle \\
-      384 & 1,159,239 & addition of bad words or other vandalism & disallow \\
-      172 & 935,925 & section blanking & tag \\
-       30 & 840,871 & large deletion from article by new editors & tag, warn \\
-      633 & 808,716 & possible canned edit summary & tag \\
-      636 & 726,764 & unexplained removal of sourced content & warn \\
-        3 & 700,522 & new user blanking articles & tag, warn \\
-      650 & 695,601 & creation of a new article without any categories & (log only) \\
+        61 & 1,611,956 & new user removing references & tag & good\_faith\_refs (good\_faith) \\
+        135 & 1,371,361 & repeating characters & tag, warn & silly\_vandalism (vandalism)\\
+        527 & 1,241,576 & T34234: log/throttle possible sleeper account creations (hidden filter) & throttle & sockpuppetry (vandalism) \\
+        384 & 1,159,239 & addition of bad words or other vandalism & disallow & profanity\_vandalism (vandalism) \\
+        172 & 935,925 & section blanking & tag & good\_faith\_deletion (good\_faith) \\
+        30 & 840,871 & large deletion from article by new editors & tag, warn & good\_faith\_deletion (good\_faith) \\
+        633 & 808,716 & possible canned edit summary & tag & general\_vandalism (vandalism) \\
+        636 & 726,764 & unexplained removal of sourced content & warn & good\_faith\_deletion (good\_faith) \\
+        3 & 700,522 & new user blanking articles & tag, warn & good\_faith\_deletion (good\_faith) \\
+        650 & 695,601 & creation of a new article without any categories & (log only) & general\_tracking (maintenance) \\
   \end{tabular}
   \caption{What do most active filters do?}~\label{tab:most-active-actions}
 \end{table*}
@@ -375,7 +376,7 @@ As a matter of fact, a quick glance at the AbuseLog~\cite{Wikipedia:AbuseLog} co
 We can backtrack the number of filter hits over the years on figure~\ref{fig:filter-hits}.
 There is a dip in the number of hits in late 2014 and quite a surge in the beginnings of 2016, after which the overall number of filter hits stayed higher.
 There is also a certain periodicity to the graph, with smaller dips in the northern hemisphere's summer months (June, July, August) and smaller peaks in autumn/winter (mostly October/November).
-We can observe this same tendency less markedly, but to an extent for the overall number of edits (see figure~\ŗef{}). %TODO nah, there isn't really a tendency here.
+We can observe this same tendency less markedly, but to an extent for the overall number of edits (see figure~\ref{}). %TODO nah, there isn't really a tendency here.
 Maybe there're just fewer edits in the northern hemisphere summer, since people are on vacation; hence there are also fewer edits that trip filters.
 It seems though that above all editors tripping filters are on vacation^^.
 
@@ -441,6 +442,17 @@ A short term solution to renew the public replicas was attempted but unfortunate
 That is why the present chapter only shows some tendencies observed via manual browsing of different filters' history via the exposed API endpoint which allows querying the \emph{abuse\_filter\_history} table for public filters~\cite{Wikipedia:AbuseFilterHistory}.
 The discussions surrounding this issue and its progress can be viewed in the following ticket on Wikimedia's issue tracker:~\cite{phabricator}.
 Hence, exploring historical patterns in detail remains one of the directions for future studies.
+
+\subsection{What filters were implemented immediately after the launch + manual tags}
+%TODO What were the first filters to be implemented immediately after the launch of the extension?
+The extension was launched on March 17th, 2009.
+Filter 1 is implemented in the late hours of that day.
+Filters with IDs 1-80 (IDs are auto-incremented) were implemented the first 5 days after the extension was turned on (17-22.03.2009).
+So, apparently the most urgent problems the initial edit filter managers perceived were:
+page move vandalism (what Filter 1 initially targeted; it was later converted to a general test filter);
+blanking articles (filter 3)
+personal attacks (filter 9,11) and obscenities (12)
+some concrete users/cases (hidden filters, e.g. 4,21) and sockpuppetry (16,17)
 
 \subsection{Filter Usage/Activity}
 %TODO decide how this fits into the overall narrative; write some kind of a fazit from this observations; also, decided whether this is the best representation or shouldn't they form a list rather
